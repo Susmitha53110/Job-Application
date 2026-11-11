@@ -7,7 +7,7 @@
 - ramp_day: 0
 - daily_limit: 0
 - last_run_date: 2026-11-11
-- last_run_summary: "Dry run packet for Tebra, People Data Labs, Troveo AI ready. No submits."
+- last_run_summary: "Dry-run packet + filled ATS previews for Tebra/PDL/Troveo ready. Awaiting approval, LinkedIn, sponsorship answers, START/END. Submitted: 0."
 - timezone: America/Chicago
 - window_start: null
 - window_end: null
