@@ -12,6 +12,7 @@ from .morning_run import readiness_report
 from .proof import require_proof_for_applied, write_proof_manifest
 from .salary import set_salary
 from .setup_gate import check_setup, write_needs_me_packet
+from .watchlist import poll_watchlist, write_watchlist_report
 from .window import check_apply_window
 
 
@@ -24,6 +25,7 @@ def main(argv: list[str] | None = None) -> int:
     p_dry.add_argument("--limit", type=int, default=3)
     sub.add_parser("window", help="Check whether the CT apply window is open")
     sub.add_parser("hunt", help="Hunt Greenhouse/Ashby/Rippling for filter-pass jobs")
+    sub.add_parser("watchlist", help="Poll target-company ATS watchlist for mid-level hits")
     sub.add_parser("ready", help="Write morning readiness report (window/salary/queue)")
     p_daily = sub.add_parser("daily", help="Run daily hunt/readiness/report cycle")
     p_daily.add_argument("--dry", action="store_true", help="Force prepare-only (no submit guidance)")
@@ -65,6 +67,31 @@ def main(argv: list[str] | None = None) -> int:
                     }
                     for j in jobs
                 ],
+                indent=2,
+            )
+        )
+        return 0
+
+    if args.cmd == "watchlist":
+        jobs = poll_watchlist()
+        report = write_watchlist_report(jobs)
+        print(
+            json.dumps(
+                {
+                    "count": len(jobs),
+                    "report": str(report),
+                    "jobs": [
+                        {
+                            "company": j.company,
+                            "title": j.title,
+                            "posted_at": j.posted_at,
+                            "location": j.location,
+                            "url": j.url,
+                            "source": j.source,
+                        }
+                        for j in jobs
+                    ],
+                },
                 indent=2,
             )
         )

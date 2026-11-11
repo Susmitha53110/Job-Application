@@ -271,6 +271,7 @@ def hunt_rippling(board_slug: str, max_age_days: int = 4) -> list[JobPosting]:
 
 def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     from .job_search import search_arbeitnow, search_remotive
+    from .watchlist import poll_watchlist
 
     jobs: list[JobPosting] = []
     jobs.extend(hunt_greenhouse(max_age_days=max_age_days))
@@ -304,6 +305,7 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
         )
     )
     jobs.extend(hunt_rippling("curve-dental", max_age_days=max_age_days))
+    jobs.extend(poll_watchlist(max_age_days=max_age_days))
     for q in ("data engineer", "analytics engineer", "snowflake data engineer", "databricks data engineer"):
         try:
             jobs.extend(search_remotive(q, limit=25, max_age_days=max_age_days))

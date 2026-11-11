@@ -13,11 +13,13 @@ Agent is authorized for real ATS work. No confirmed `applied` yet.
 python3 -m agent window
 python3 -m agent daily
 python3 -m agent curve-gate
-# if curve-gate ok → computer-use with prompt from reports/YYYY-MM-DD/CURVE_GATE.md
+# if salary arrived: python3 -m agent set-salary <number>
+# if curve-gate ok / SUBMIT_NOW.md exists → computer-use with that prompt
 # then: python3 -m agent proof --company "Curve Dental" --role "Data Engineer" --url <url> --file <proof>
+python3 -m agent watchlist
 ```
 
 ## Queue
 - Curve Dental: submit kit ready, score override on
 - Consumer Edge / Keebo: skip
-- No new ≥7 mid-level ≤4d US-remote DE hits found tonight
+- Watchlist mid-level poll (~18:00 CT): **only Curve** still passes US-remote ≤4d
