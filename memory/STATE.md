@@ -7,7 +7,7 @@
 - ramp_day: 0
 - daily_limit: 0
 - last_run_date: 2026-11-11
-- last_run_summary: "Filters locked: US+remote+open+posted≤4d. Schedule 08:00–12:00 America/Chicago daily. Prior dry-run jobs re-screened; Tebra fails 4-day rule."
+- last_run_summary: "Evening hunt after window: Curve Dental qualifies on US/remote/open/posted-today but honest score 5.6 (dbt/Fivetran + Snowflake years gap) → would skip unless override. No ≥7 fits with verified ≤4d dates yet. Timer set for 08:00 CT."
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
