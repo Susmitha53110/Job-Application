@@ -83,6 +83,9 @@ DEFAULT_GH_BOARDS = [
     "oscarhealth",
     "lyrahealth",
     "springhealth",
+    "sezzle",
+    "machinifyinc",
+    "zipcolimited",
 ]
 
 
@@ -294,6 +297,8 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
                 "atlan",
                 "datafold",
                 "bigeye",
+                "mux",
+                "clera",
             ],
             max_age_days=max_age_days,
         )

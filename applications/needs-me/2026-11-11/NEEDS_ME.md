@@ -14,4 +14,5 @@
 4. Confirm EST-hours commitment for Consumer Edge Staff roles (also 8+ years stretch — currently skip)
 
 ## Outside window now
-≈16:30 CT — first real submits scheduled for **2026-11-12 08:00 CT**. See `APPLY_QUEUE.md` and `../2026-11-12/MORNING_CHECKLIST.md`.
+≈17:25 CT — first real submits scheduled for **2026-11-12 08:00 CT**.  
+See `APPLY_QUEUE.md`, `../2026-11-12/MORNING_CHECKLIST.md`, and `../2026-11-12/Curve_Dental_SUBMIT_KIT.md`.

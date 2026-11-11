@@ -7,6 +7,7 @@ import sys
 from .ats_hunt import hunt_all
 from .dry_run import run_dry_run
 from .morning_run import readiness_report
+from .proof import require_proof_for_applied, write_proof_manifest
 from .setup_gate import check_setup, write_needs_me_packet
 from .window import check_apply_window
 
@@ -21,6 +22,12 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("window", help="Check whether the CT apply window is open")
     sub.add_parser("hunt", help="Hunt Greenhouse/Ashby/Rippling for filter-pass jobs")
     sub.add_parser("ready", help="Write morning readiness report (window/salary/queue)")
+    p_proof = sub.add_parser("proof", help="Write proof manifest for an apply attempt")
+    p_proof.add_argument("--company", required=True)
+    p_proof.add_argument("--role", required=True)
+    p_proof.add_argument("--url", required=True)
+    p_proof.add_argument("--notes", default="")
+    p_proof.add_argument("--file", action="append", default=[], help="Proof file path (repeatable)")
 
     args = parser.parse_args(argv)
 
@@ -57,6 +64,19 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "ready":
         print(json.dumps(readiness_report(), indent=2))
+        return 0
+
+    if args.cmd == "proof":
+        status = require_proof_for_applied(args.file)
+        path = write_proof_manifest(
+            company=args.company,
+            role=args.role,
+            url=args.url,
+            status=status,
+            notes=args.notes,
+            proof_files=args.file,
+        )
+        print(json.dumps({"status": status, "manifest": str(path), "proof_files": args.file}, indent=2))
         return 0
 
     if args.cmd == "dry-run":

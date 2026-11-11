@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "Evening readiness ~17:20 CT: window closed; salary MISSING; Curve override on; hunt still only Curve+ConsumerEdge+Keebo ≤4d US-remote. PerfectServe/BaseOps/WorkOS fail 4-day rule. morning_run ready report written. First submits still target 2026-11-12 08:00 CT once salary is in Memory."
+- last_run_summary: "~17:25 CT: window closed; salary MISSING; Curve still open+override. Extra hunt (Sezzle/Machinify/Mux/Clera/PerfectServe/WWR) found no new ≤4d US-remote mid-level DE. Curve Rippling submit kit + proof CLI ready for 2026-11-12 08:00 CT."
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

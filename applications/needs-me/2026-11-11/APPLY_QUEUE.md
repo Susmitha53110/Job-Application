@@ -38,10 +38,13 @@ Ramp day 1 limit: **10**.
 - Posted: 2026-11-10 · US Remote
 - JD: **Visa support will not be provided** → **SKIP** for F1-OPT reality despite sponsorship answer No
 
-## Evening hunt notes (2026-11-11 ~16:30 CT)
+## Evening hunt notes (2026-11-11)
 - API/ATS scan: only Curve + Consumer Edge + Keebo pass US/remote/open/≤4d among Greenhouse/Ashby/Rippling boards checked
-- Base Operations / WorkOS Ashby postings are older than 4 days → fail-closed skip
+- Base Operations / WorkOS / PerfectServe / Machinify / Mux Ashby-Greenhouse dates older than 4 days → fail-closed skip
+- Sezzle Data Engineer II / Senior (Greenhouse) → LATAM locations only, not US remote
+- Clera Senior DE (Ashby) → visa sponsorship not available → skip for F1-OPT
 - Indeed blocked by Cloudflare in browser hunt
+- Curve Rippling form fields extracted → see `../2026-11-12/Curve_Dental_SUBMIT_KIT.md`
 
 ## Action at 08:00 CT 2026-11-12
 1. Run `applications/needs-me/2026-11-12/MORNING_CHECKLIST.md`

@@ -18,9 +18,10 @@
 1. **Curve Dental — Data Engineer** (filter-pass dry-run; Susmitha approved this packet)
    - URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
    - Score override: **authorized** for this approved filter-pass packet (b=5.6)
+   - **Submit kit (exact Rippling fields):** `Curve_Dental_SUBMIT_KIT.md`
    - Preview: `../2026-11-11/filled-previews/Curve_Dental_Data_Engineer_FILLED_PREVIEW.md`
    - Resume: `resumes/tailored/2026-11-11/Susmitha_Curve_Dental_Data_Engineer.docx`
-   - After submit: save confirmation under `applications/applied/2026-11-12/`
+   - After submit: save confirmation under `applications/applied/2026-11-12/` then `python3 -m agent proof --company "Curve Dental" --role "Data Engineer" --url <url> --file <proof>`
 2. Hunt more ≥7 mid-level US-remote ≤4d ATS roles via `python3 -m agent.ats_hunt`
 3. Consumer Edge Staff (b=2.5, 8+ yrs) → skip unless Susmitha overrides
 4. Keebo → skip (visa support will not be provided)
