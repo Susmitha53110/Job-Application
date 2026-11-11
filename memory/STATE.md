@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "daily_apply 2026-11-11: window=False; salary=MISSING; hunt=4; ready=0; needs_me=2"
+- last_run_summary: "~18:00 CT: salary MISSING; window closed; watchlist mid-level poll = Curve only; set-salary + SUBMIT_NOW path ready for 2026-11-12 08:00 CT"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
