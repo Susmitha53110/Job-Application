@@ -107,12 +107,16 @@ def is_us_remote(location: str, description: str = "", *, source: str = "") -> b
             "us based",
             "remote - us",
             "remote us",
+            "us - remote",
+            "us remote",
+            "remote (us",
+            "remote (u.s",
             "remote - united states",
             "anywhere in the us",
             "within the united states",
             "us only",
         )
-    )
+    ) or bool(re.search(r"\bus[\s\-–—]?remote\b|\bremote[\s\-–—]?us\b", blob))
     # Remotive: require US/Worldwide/America style candidate location
     if source == "remotive":
         loc = location.lower()

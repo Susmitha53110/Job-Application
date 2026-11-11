@@ -1,6 +1,6 @@
 # Filled application PREVIEW — Curve Dental / Data Engineer
 
-**Status: NOT SUBMITTED.** Dry-run only.
+**Status: AUTHORIZED — not submitted yet.** Awaiting salary number + 08:00–12:00 CT window.
 
 - ATS: Rippling
 - URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
@@ -8,7 +8,8 @@
 - Location: Remote (United States)
 - Resume (a): `resumes/tailored/2026-11-11/Susmitha_Curve_Dental_Data_Engineer.docx`
 - Scores: **5.6 / 5.6 / 7.3**
-- Recommendation: Would SKIP unless override (b<7) — still flag Snowflake years stretch
+- Packet approval: Susmitha approved this filter-pass dry-run → **score bar overridden for Curve only**
+- Remaining gap: Snowflake tenure stretch + missing production dbt/Fivetran — disclose honestly if asked
 
 ## Proposed answers
 | Field | Answer |

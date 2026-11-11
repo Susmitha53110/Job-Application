@@ -1,26 +1,30 @@
-# Evening hunt — 2026-11-11 (after 12:00 CT window)
+# Evening hunt — 2026-11-11
 
-Outside apply window; preparation only. **No submits.**
+Window closed (after 12:00 CT). Preparing for **2026-11-12 08:00 CT**.
 
-## Hard filters in force
-US only · Remote only · Open only · Posted ≤ 4 days · company ATS only
+## Approvals locked this evening
+- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- Sponsorship answer: **No**
+- Real ATS work after dry-run: **yes**
+- Next filter-pass dry-run packet: **Curve Dental** approved (score override for this packet)
 
-## Qualifying candidate found
-### Curve Dental — Data Engineer
-- ATS: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
-- `createdOn`: **2026-11-11T09:43:45-08:00** → PASS ≤4 days
-- Location: Remote (United States) → PASS
-- Open: application live → PASS
-- Scores (orig / tailored a / +hedged c): **5.6 / 5.6 / 7.3**
-- Live-run recommendation: **Would SKIP unless override** (honest b < 7)
-- Main gaps: required **dbt** + **Fivetran/Airbyte**; JD asks **≥2 years production Snowflake** vs Optum Snowflake since May 2025 (~6 months)
-- Artifacts: tailored docx, catch note, filled preview under `reports/` / `resumes/` / `applications/needs-me/`
+## API / ATS results (US · remote · open · ≤4 days)
+| Company | Role | Posted | Score b | Decision |
+|---------|------|--------|---------|----------|
+| Curve Dental | Data Engineer | 2026-11-11 | 5.6 | **Apply when salary + window** (approved override) |
+| Consumer Edge | Staff Data Engineer | 2026-11-09 | 2.5 | Skip / stretch (8+ yrs) |
+| Keebo | Senior Data Engineer | 2026-11-10 | n/a | Skip (no visa support) |
 
-## Still blocked before any submit
-- LinkedIn URL
-- Sponsorship Yes/No policy (F1-OPT)
-- Dry-run approval / override rules
-- Salary expectation number when asked
+## Fail-closed skips (date)
+- Base Operations Data Engineer (Ashby) — published 2026-10-29
+- WorkOS Data Engineer (Ashby) — published 2026-10-06
+- Discord / Samsara / Cloudflare DE listings — first_published older than 4 days or not US-remote
 
-## Next
-Continue hunt at **08:00 America/Chicago** tomorrow for ≥3 US-remote open DE roles with verified ≤4-day dates and honest score b ≥ 7.
+## Tooling added
+- `agent/window.py` — CT window gate
+- `agent/ats_hunt.py` — Greenhouse / Ashby / Rippling hunter with fail-closed dates
+- `applications/FORM_ANSWERS.md` — form bank
+- `applications/needs-me/2026-11-12/MORNING_CHECKLIST.md`
+
+## Blocker for submits
+Salary expectations number still unset.

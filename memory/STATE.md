@@ -4,11 +4,12 @@
 - dry_run_complete: true
 - dry_run_approved: true
 - real_applies_authorized: true
+- curve_dental_score_override: true
 - daily_schedule_active: true
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "Susmitha approved dry-run→real work. LinkedIn saved. Sponsorship answer=No. Outside 08:00–12:00 CT window now (≈15:00 CT); queueing applies for next window while hunting/preparing."
+- last_run_summary: "Susmitha approved LinkedIn, sponsorship=No, filter-pass dry-run packet (Curve), and real ATS work. Outside window (~16:30 CT). Curve READY pending salary. Evening ATS hunt: Curve+ConsumerEdge+Keebo only ≤4d US-remote DE hits; BaseOps/WorkOS too old."
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

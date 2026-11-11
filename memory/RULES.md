@@ -22,7 +22,8 @@
 ## Application rules
 - Save as `[FirstName]_[Company]_[Role].docx` under `resumes/tailored/YYYY-MM-DD/`.
 - Fill forms using only resume + Memory.
-- **STOP → `needs me`** (do not guess) on: work authorization, sponsorship, salary expectations, demographic/EEO, background checks, anything unsure.
+- Sponsorship form answer (confirmed): **No**. Fill that when asked “will you now or in the future require sponsorship?”
+- **STOP → `needs me`** (do not guess) on: salary expectations, demographic/EEO, background checks, CAPTCHA/2FA, anything unsure. Work-auth “authorized to work in the US?” → **Yes** (F1-OPT); do not claim citizenship/green card.
 - Submit only with confirmation proof (page/email). No proof → status `unconfirmed`, never `applied`.
 
 ## Hard constraints

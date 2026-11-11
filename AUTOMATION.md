@@ -13,7 +13,7 @@
 - Posted within the last **4** days (unknown post date → skip)
 - Never LinkedIn Easy Apply — company ATS / career site only
 - Min pay if posted: $120,000
-- Work auth: F1-OPT → sponsorship questions always `needs me`
+- Work auth: F1-OPT → authorized to work = Yes; sponsorship now/future = **No** (confirmed). Still `needs me` on salary / EEO / background / CAPTCHA.
 
 ## Cursor Automations (recommended production trigger)
 1. Open [cursor.com/automations](https://cursor.com/automations)
@@ -39,8 +39,8 @@ Hard filters this run:
 2. Load memory/PROFILE.md and resumes/base/* as sole truth. Never invent facts/metrics.
 3. Hunt LinkedIn/Indeed/company pages for Data Engineer family roles matching hard filters; dedupe via memory/APPLIED_INDEX.md.
 4. For each job: 12 tailoring rules, scores a/b/c, catch note, CSV log. Submit resume version (a) only unless (b) approved.
-5. Apply only if honest score (b) ≥ 7/10 and no dealbreaker.
-6. STOP → needs me on work auth/sponsorship, salary expectations, EEO/demographics, background checks, CAPTCHA/2FA, LinkedIn URL if required & missing, anything unsure. Max 2 retries on blocks.
+5. Apply only if honest score (b) ≥ 7/10 and no dealbreaker — except Curve Dental Data Engineer Rippling packet already approved with score override.
+6. Answers: LinkedIn https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 ; authorized to work Yes (F1-OPT); sponsorship No. STOP → needs me on salary expectations, EEO/demographics, background checks, CAPTCHA/2FA, anything unsure. Max 2 retries on blocks.
 7. Never pay; never store passwords; email read-only for codes/confirmations only.
 8. Confirmation proof required for status=applied; else unconfirmed.
 9. Write reports/YYYY-MM-DD.md by end of window. Commit + push. Update memory/STATE.md and APPLIED_INDEX.md.

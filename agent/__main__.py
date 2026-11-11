@@ -4,8 +4,10 @@ import argparse
 import json
 import sys
 
+from .ats_hunt import hunt_all
 from .dry_run import run_dry_run
 from .setup_gate import check_setup, write_needs_me_packet
+from .window import check_apply_window
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -15,6 +17,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("check-setup", help="Validate Memory profile + base resume")
     p_dry = sub.add_parser("dry-run", help="Prepare 3 jobs without submitting")
     p_dry.add_argument("--limit", type=int, default=3)
+    sub.add_parser("window", help="Check whether the CT apply window is open")
+    sub.add_parser("hunt", help="Hunt Greenhouse/Ashby/Rippling for filter-pass jobs")
 
     args = parser.parse_args(argv)
 
@@ -23,6 +27,31 @@ def main(argv: list[str] | None = None) -> int:
         packet = write_needs_me_packet(result)
         print(json.dumps({"ok": result.ok, "blockers": result.blockers, "warnings": result.warnings, "needs_me": str(packet)}, indent=2))
         return 0 if result.ok else 2
+
+    if args.cmd == "window":
+        status = check_apply_window()
+        print(json.dumps({"open": status.open, "now": status.now_local.isoformat(), "reason": status.reason}, indent=2))
+        return 0 if status.open else 3
+
+    if args.cmd == "hunt":
+        jobs = hunt_all()
+        print(
+            json.dumps(
+                [
+                    {
+                        "company": j.company,
+                        "title": j.title,
+                        "posted_at": j.posted_at,
+                        "location": j.location,
+                        "url": j.url,
+                        "source": j.source,
+                    }
+                    for j in jobs
+                ],
+                indent=2,
+            )
+        )
+        return 0
 
     if args.cmd == "dry-run":
         out = run_dry_run(limit=args.limit)

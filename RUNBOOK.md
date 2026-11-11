@@ -11,9 +11,9 @@ Read `memory/SETUP_STATUS.md` first. If setup is blocked, do **not** apply — r
 6. For each candidate job, run the 12 tailoring rules in order.
 7. Skip immediately on dealbreaker failure; log `skipped` + reason.
 8. Build version (a) reorder-only `.docx` and version (b) hedged (do not submit b without approval).
-9. Score a/b/c; apply only if honest (b) ≥ 7/10 **and** this is not a first-run dry-run waiting on approval.
+9. Score a/b/c; apply only if honest (b) ≥ 7/10 **and** this is not a first-run dry-run waiting on approval (exception: Curve Dental Rippling packet approved with score override).
 10. Prefer company ATS / career site. Never LinkedIn Easy Apply.
-11. On form uncertainty → `needs me` with exact action for Susmitha.
+11. Form answers: LinkedIn from Memory; sponsorship **No**; authorized to work **Yes** (F1-OPT). On salary / EEO / background / CAPTCHA / other uncertainty → `needs me`.
 12. On submit: keep confirmation proof under `applications/applied/YYYY-MM-DD/`. No proof → `unconfirmed`.
 13. Append one CSV row per job; write catch note + interview prep (8+) files.
 14. By END TIME: write `reports/YYYY-MM-DD.md` daily report sections 1–7.
