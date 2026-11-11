@@ -35,16 +35,12 @@ Hard filters this run:
 - Apply only on company ATS/career site — never LinkedIn Easy Apply
 - Window: 08:00–12:00 America/Chicago; stop by noon CT
 
-1. Read memory/SETUP_STATUS.md and memory/STATE.md. If dry_run_approved is false, prepare/update dry-run packet only — do not submit.
-2. Load memory/PROFILE.md and resumes/base/* as sole truth. Never invent facts/metrics.
-3. Hunt LinkedIn/Indeed/company pages for Data Engineer family roles matching hard filters; dedupe via memory/APPLIED_INDEX.md.
-4. For each job: 12 tailoring rules, scores a/b/c, catch note, CSV log. Submit resume version (a) only unless (b) approved.
-5. Apply only if honest score (b) ≥ 7/10 and no dealbreaker — except Curve Dental Data Engineer Rippling packet already approved with score override.
-6. Answers: LinkedIn https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 ; authorized to work Yes (F1-OPT); sponsorship No. STOP → needs me on salary expectations, EEO/demographics, background checks, CAPTCHA/2FA, anything unsure. Max 2 retries on blocks.
-7. Never pay; never store passwords; email read-only for codes/confirmations only.
-8. Confirmation proof required for status=applied; else unconfirmed.
-9. Write reports/YYYY-MM-DD.md by end of window. Commit + push. Update memory/STATE.md and APPLIED_INDEX.md.
-10. If usage is low, stop early and report honest counts.
+1. `python3 -m agent daily` then `python3 -m agent curve-gate`.
+2. If salary missing (`applications/needs-me/SALARY.md`), STOP needs-me for salary; still hunt/prepare.
+3. If curve-gate ok: computer-use submit using prompt in `reports/*/CURVE_GATE.md` / submit kit; resume (a); sponsorship No; text consent No; skip voluntary EEO.
+4. Hunt more ≥7 mid-level US-remote ≤4d ATS roles; tailor per RULES; dedupe APPLIED_INDEX.
+5. Skip Keebo / Consumer Edge Staff unless override.
+6. Proof via `python3 -m agent proof`. Commit + push. Stop by 12:00 CT.
 ```
 
 ## In-chat timer
