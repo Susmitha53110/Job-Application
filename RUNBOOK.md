@@ -6,7 +6,7 @@ Read `memory/SETUP_STATUS.md` first. If setup is blocked, do **not** apply — r
 1. Load Memory: `memory/PROFILE.md`, `memory/RULES.md`, `memory/APPLIED_INDEX.md`, `logs/applications.csv`.
 2. Confirm base resume exists in `resumes/base/` (single source of truth). Parse it; never invent facts.
 3. Compute today's daily limit from ramp day count in `memory/STATE.md`.
-4. Search LinkedIn, Indeed, and company career pages for target roles posted within the configured window.
+4. Search LinkedIn, Indeed, and company career pages for target roles with hard filters: **United States only**, **Remote only**, **open positions only**, **posted within last 4 days** (skip if post date unknown). Only work inside **08:00–12:00 America/Chicago**, every day Mon–Sun.
 5. Deduplicate against `memory/APPLIED_INDEX.md` and prior log rows.
 6. For each candidate job, run the 12 tailoring rules in order.
 7. Skip immediately on dealbreaker failure; log `skipped` + reason.

@@ -67,3 +67,10 @@ Master list: `applications/needs-me/2026-11-11/NEEDS_ME.md`
 
 ## What to reply
 Approve/reject Tebra, PDL, Troveo; paste LinkedIn URL; sponsorship Yes/No policy; START/END times; Tebra salary number; confirm Remote vs hybrid Austin.
+
+---
+
+## Update later same day — filters + schedule locked
+Susmitha set: **US only · Remote only · Open only · Posted ≤ 4 days · daily Mon–Sun 08:00–12:00 CT**.
+
+Prior three dry-run jobs are now logged as **skipped** under the new recency/US-remote rules (see `FILTER_AND_SCHEDULE_UPDATE.md`). No submits. Next hunt runs in the 08:00 CT window.

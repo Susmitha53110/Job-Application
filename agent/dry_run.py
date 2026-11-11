@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 
 from . import paths
-from .job_search import filter_jobs, search_arbeitnow, search_remotive
+from .job_search import DEFAULT_MAX_AGE_DAYS, filter_jobs, search_arbeitnow, search_remotive
 from .process_job import process_job
 from .resume_parse import load_base_resume
 from .setup_gate import check_setup, find_base_resume, write_needs_me_packet
@@ -77,7 +77,15 @@ def run_dry_run(limit: int = 3) -> dict:
         uniq.append(j)
 
     skip = ["clearance", "ts/sci", "staffing agency", "citizenship required", "us citizen only"]
-    filtered = filter_jobs(uniq, min_pay=120000, skip_keywords=skip, require_remoteish=True)
+    filtered = filter_jobs(
+        uniq,
+        min_pay=120000,
+        skip_keywords=skip,
+        max_age_days=DEFAULT_MAX_AGE_DAYS,
+        us_only=True,
+        remote_only=True,
+        open_only=True,
+    )
 
     # Prefer titles with data engineer
     filtered.sort(key=lambda j: (0 if "data engineer" in j.title.lower() else 1, j.title.lower()))

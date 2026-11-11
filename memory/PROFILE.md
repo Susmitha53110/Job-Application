@@ -23,9 +23,12 @@
 
 ## Targets
 - Roles: Data Engineer; Analytics Engineer; Azure Data Engineer; Snowflake Data Engineer; Databricks Data Engineer (**CONFIRM** — inferred from resume)
-- Location preference: Remote preferred, then hybrid in Austin, TX (**CONFIRM**)
+- Location preference: **Remote only** · **United States only**
+- Geography hard filter: United States only (skip non-US locations / non-US-eligible remote)
+- Work mode hard filter: Remote only (skip hybrid/on-site-only)
+- Openings hard filter: **open positions only** (skip closed/filled)
 - Seniority / years range: 3–6 years / mid-level Data Engineer (**CONFIRM**)
-- Posted within: last 7 days
+- Posted within: last **4** days (fail closed if post date unknown)
 - Minimum pay (only if posted): $120,000 / year
 - Skip / dealbreakers:
   - Security clearance required
@@ -34,6 +37,7 @@
   - Roles that explicitly refuse any future visa sponsorship if they are not workable on F1-OPT (**CONFIRM** — see work auth)
   - Jobs already applied to; duplicate postings
   - Posted pay below $120,000 when pay is listed
+  - Non-US jobs, non-remote jobs, closed postings, posts older than 4 days
 
 ## Work authorization
 - F1-OPT (currently authorized to work in the US on Optional Practical Training)
@@ -41,9 +45,11 @@
 - Do not claim US citizenship or permanent residence.
 
 ## Schedule
-- Daily window: **CONFIRM** START/END — Time zone: Central Time (US)
+- Daily window: **8:00 AM – 12:00 PM** America/Chicago (Central Time)
+- Days: **Monday–Sunday** (every day)
 - Daily limit ramp: Days 1–3 = 10; Days 4–6 = 15; then up to 20–25
 - Quality over quantity; apply to fewer if cannot finish cleanly
+- Do not start applies outside the window; stop cleanly by 12:00 PM CT
 
 ## Application channels
 - Find on: LinkedIn, Indeed, and company career pages
