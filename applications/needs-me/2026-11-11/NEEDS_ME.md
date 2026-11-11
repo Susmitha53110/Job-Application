@@ -1,23 +1,17 @@
-# Needs me — 2026-11-11
+# Needs me — 2026-11-11 (post-approval)
 
-## Schedule (SET)
-- Daily **Mon–Sun 08:00–12:00 America/Chicago**
-- Hard filters: US only · Remote only · Open only · Posted ≤ 4 days
+## Resolved
+- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- Sponsorship answer: **No**
+- Dry-run → real work: **approved**
+- Schedule: Mon–Sun 08:00–12:00 CT
 
 ## Still blocking submits
-1. **LinkedIn URL**
-2. **Sponsorship Yes/No policy** (F1-OPT)
-3. Approve/override policy for jobs with honest score b < 7 but strong otherwise
-4. Salary expectation numbers when forms require them
-5. EEO answers when shown
+1. **Salary expectations number** for forms (Curve Dental and most ATS require it). Your posted-min filter is $120k — reply with the exact figure to enter (e.g. 120000 or 135000).
+2. EEO / demographics when shown (default: Prefer not to disclose unless you say otherwise)
+3. Background check Yes/No if asked
+4. Confirm whether to **override score &lt;7** for Curve Dental (filter-pass dry-run packet) or wait for ≥7 fits only
+5. Confirm EST-hours commitment for Consumer Edge Staff roles (also 8+ years stretch)
 
-## Curve Dental (new dry-run under filters)
-- Passes US/remote/open/posted-today
-- Honest score **5.6** → default skip unless you override
-- Stretch: JD wants 2+ years Snowflake; yours since May 2025
-- Gaps: dbt, Fivetran/Airbyte
-- Preview: `filled-previews/Curve_Dental_Data_Engineer_FILLED_PREVIEW.md`
-- Stops on form: sponsorship, salary, EEO
-
-## Prior dry-run jobs
-Tebra / PDL / Troveo remain **skipped** under 4-day / unverifiable-date rules.
+## Outside window now
+≈15:00 CT — first real submits scheduled for **2026-11-12 08:00 CT**. See `APPLY_QUEUE.md`.

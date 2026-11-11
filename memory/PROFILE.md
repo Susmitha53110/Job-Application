@@ -8,6 +8,7 @@
 - Application email: Susmithachowdary67@gmail.com
 - Phone: 9132073787
 - Location: 1601 Scottsdale Ln, Austin, Texas, 78754
+- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 
 ## Experience & education
 - Current/most recent role + years: Data Engineer, 5 years
@@ -41,8 +42,10 @@
 
 ## Work authorization
 - F1-OPT (currently authorized to work in the US on Optional Practical Training)
-- **STOP → needs me** on every sponsorship / visa / future work-auth question. Do not guess H-1B or green-card answers.
+- **Sponsorship answer (confirmed by Susmitha 2026-11-11): No** — use this on “will you now or in the future require sponsorship?” questions.
+- Authorized to work in the US currently: **Yes** (F1-OPT)
 - Do not claim US citizenship or permanent residence.
+- Still **STOP → needs me** on EEO/demographics, background checks, and salary expectations unless Susmitha provided a number for that job.
 
 ## Schedule
 - Daily window: **8:00 AM – 12:00 PM** America/Chicago (Central Time)

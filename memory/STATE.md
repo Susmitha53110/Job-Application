@@ -1,13 +1,14 @@
 # Runtime state
 
-- setup_complete: false
+- setup_complete: true
 - dry_run_complete: true
-- dry_run_approved: false
+- dry_run_approved: true
+- real_applies_authorized: true
 - daily_schedule_active: true
-- ramp_day: 0
-- daily_limit: 0
+- ramp_day: 1
+- daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "Evening hunt after window: Curve Dental qualifies on US/remote/open/posted-today but honest score 5.6 (dbt/Fivetran + Snowflake years gap) → would skip unless override. No ≥7 fits with verified ≤4d dates yet. Timer set for 08:00 CT."
+- last_run_summary: "Susmitha approved dry-run→real work. LinkedIn saved. Sponsorship answer=No. Outside 08:00–12:00 CT window now (≈15:00 CT); queueing applies for next window while hunting/preparing."
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -16,8 +17,11 @@
 - us_only: true
 - remote_only: true
 - open_positions_only: true
+- linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- sponsorship_answer: "No"
 - applications_requested_today: 0
 - applications_succeeded_today: 0
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
+- next_apply_window: "2026-11-12 08:00 America/Chicago"

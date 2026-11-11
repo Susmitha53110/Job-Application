@@ -20,9 +20,10 @@
 | Location | Austin, Texas, United States |
 | Resume | Upload tailored (a) |
 | Cover letter | Skip |
+| LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
 | Pronouns | Skip / NEEDS ME |
 | Current company | Optum |
-| Will you require sponsorship now or in future? | **NEEDS ME** (F1-OPT) |
+| Will you require sponsorship now or in future? | **No** (confirmed by Susmitha 2026-11-11) |
 | Years of related experience | 5 |
 | Home office with reliable internet? | **Yes** (confirm) |
 | Describe a data platform you built/improved | See draft below |
