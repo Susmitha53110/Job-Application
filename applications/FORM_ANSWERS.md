@@ -26,8 +26,9 @@ Updated: 2026-11-11 after Susmitha approval.
 | Resume file | `resumes/tailored/YYYY-MM-DD/Susmitha_<Company>_<Role>.docx` (version a) |
 | Cover letter | Skip unless required |
 | How did you hear about us? | Company careers / ATS research |
-| Salary expectations | **NEEDS ME** — awaiting Susmitha’s number |
-| EEO / demographics | Prefer not to disclose / **NEEDS ME** if forced choice |
+| Salary expectations | **NEEDS ME** — awaiting Susmitha’s number (see `applications/needs-me/SALARY.md`) |
+| EEO / demographics | Prefer not to disclose / skip voluntary sections |
+| Text message consent | **No** |
 | Background check willingness | **NEEDS ME** |
 | Website / GitHub | Blank unless provided |
 

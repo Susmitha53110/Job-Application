@@ -22,6 +22,13 @@
 | Location (city only) | Austin |
 | Resume | Upload tailored (a) `.docx` |
 | Cover letter | Skip |
+| Text message consent | **No** — I do not consent |
+| EEO / demographics | Skip (voluntary) — Prefer not to disclose if forced |
+
+## Browser prep check (2026-11-11 evening)
+- Job still **OPEN**; no CAPTCHA; no login wall; single-page Rippling form
+- Resume upload accepts `.doc` / `.docx` / `.pdf` (use tailored `.docx`)
+- Do **not** submit outside 08:00–12:00 CT
 
 ## Questionnaire (from Rippling API)
 | Question | Answer |

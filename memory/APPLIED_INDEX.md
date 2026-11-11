@@ -11,3 +11,4 @@
 2026-11-11 | Consumer Edge | Staff Data Engineer | https://job-boards.greenhouse.io/consumeredge/jobs/6252515004 | dry-run
 2026-11-11 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped
 2026-11-11 | Consumer Edge | Staff Data Engineer | https://job-boards.greenhouse.io/consumeredge/jobs/6252515004 | dry-run
+2026-11-11 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped

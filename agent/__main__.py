@@ -5,6 +5,7 @@ import json
 import sys
 
 from .ats_hunt import hunt_all
+from .daily_apply import run_daily
 from .dry_run import run_dry_run
 from .morning_run import readiness_report
 from .proof import require_proof_for_applied, write_proof_manifest
@@ -22,6 +23,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("window", help="Check whether the CT apply window is open")
     sub.add_parser("hunt", help="Hunt Greenhouse/Ashby/Rippling for filter-pass jobs")
     sub.add_parser("ready", help="Write morning readiness report (window/salary/queue)")
+    p_daily = sub.add_parser("daily", help="Run daily hunt/readiness/report cycle")
+    p_daily.add_argument("--dry", action="store_true", help="Force prepare-only (no submit guidance)")
     p_proof = sub.add_parser("proof", help="Write proof manifest for an apply attempt")
     p_proof.add_argument("--company", required=True)
     p_proof.add_argument("--role", required=True)
@@ -64,6 +67,13 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.cmd == "ready":
         print(json.dumps(readiness_report(), indent=2))
+        return 0
+
+    if args.cmd == "daily":
+        # Outside window always prepare-only; --dry forces prepare-only even in-window
+        window = check_apply_window()
+        force_dry = bool(args.dry) or (not window.open)
+        print(json.dumps(run_daily(dry=force_dry), indent=2))
         return 0
 
     if args.cmd == "proof":
