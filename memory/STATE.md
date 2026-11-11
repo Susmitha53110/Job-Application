@@ -1,15 +1,18 @@
 # Runtime state
 
 - setup_complete: false
-- dry_run_complete: false
+- dry_run_complete: true
 - dry_run_approved: false
 - daily_schedule_active: false
 - ramp_day: 0
 - daily_limit: 0
-- last_run_date: null
-- last_run_summary: "Setup scaffolding only; waiting on profile + resume."
-- timezone: "[TIME ZONE]"
-- window_start: "[START TIME]"
-- window_end: "[END TIME]"
-- applications_requested_today: 0
+- last_run_date: 2026-11-11
+- last_run_summary: "Dry run packet for Tebra, People Data Labs, Troveo AI ready. No submits."
+- timezone: America/Chicago
+- window_start: null
+- window_end: null
+- applications_requested_today: 3
 - applications_succeeded_today: 0
+- candidate_name: Susmitha Chowdary
+- work_authorization: F1-OPT
+- min_pay_usd: 120000
