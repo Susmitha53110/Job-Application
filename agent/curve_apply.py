@@ -7,7 +7,8 @@ from pathlib import Path
 
 from . import paths
 from .job_search import _get_json, within_max_age
-from .morning_run import _curve_override, _salary_from_memory
+from .morning_run import _curve_override
+from .salary import salary_from_memory
 from .window import check_apply_window
 
 
@@ -80,7 +81,7 @@ def evaluate_curve_gate() -> CurveGate:
     window = check_apply_window()
     if not window.open:
         blockers.append(window.reason)
-    salary = _salary_from_memory()
+    salary = salary_from_memory()
     if not salary:
         blockers.append("Salary expectations number missing in Memory/FORM_ANSWERS")
     if not _curve_override():

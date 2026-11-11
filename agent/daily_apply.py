@@ -7,10 +7,11 @@ from pathlib import Path
 from . import paths
 from .ats_hunt import hunt_all
 from .log_writer import append_applied_index, append_log_row
-from .morning_run import readiness_report, _salary_from_memory, CURVE_URL
+from .curve_apply import evaluate_curve_gate, write_gate_report
+from .morning_run import readiness_report, CURVE_URL
 from .process_job import process_job
-from .proof import require_proof_for_applied, write_proof_manifest
 from .resume_parse import load_base_resume
+from .salary import salary_from_memory
 from .setup_gate import find_base_resume
 from .window import check_apply_window
 
@@ -79,9 +80,11 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     """
     day = day or date.today().isoformat()
     window = check_apply_window()
-    salary = _salary_from_memory()
+    salary = salary_from_memory()
     ready_payload = readiness_report(day=day)
     hunt = hunt_all()
+    gate = evaluate_curve_gate()
+    gate_report = write_gate_report(day=day)
 
     applied: list[str] = []
     unconfirmed: list[str] = []
@@ -158,20 +161,43 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                 }
             )
 
-    # Curve guidance
-    if window.open and salary and not dry:
+    # Curve guidance / submit-now marker
+    submit_now = paths.REPORTS / day / "SUBMIT_NOW.md"
+    if gate.ok and not dry:
         notes.append(
-            "Curve Dental is authorized to submit now using "
-            "applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md — "
-            "use computer-use on Rippling ATS, then record proof via `python3 -m agent proof`."
+            "Curve Dental READY TO SUBMIT — run computer-use with prompt from "
+            f"{gate_report}; then `python3 -m agent proof`."
+        )
+        submit_now.write_text(
+            "\n".join(
+                [
+                    f"# SUBMIT NOW — {day}",
+                    "",
+                    "Curve Dental Data Engineer is fully gated green.",
+                    f"- URL: {gate.url}",
+                    f"- Salary: {gate.salary}",
+                    f"- Gate report: {gate_report}",
+                    "",
+                    "## Computer-use prompt",
+                    "```",
+                    gate.computer_use_prompt,
+                    "```",
+                    "",
+                ]
+            ),
+            encoding="utf-8",
         )
     else:
         notes.append("Curve Dental remains queued: approved packet + submit kit ready.")
+        if submit_now.exists():
+            submit_now.unlink()
 
     payload = {
         "window_open": window.open,
         "salary": salary,
         "hunt_count": len(hunt),
+        "curve_gate_ok": gate.ok,
+        "curve_blockers": gate.blockers,
         "ready": ready_payload.get("ready"),
         "applied": applied,
         "unconfirmed": unconfirmed,
@@ -179,6 +205,8 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         "needs_me": needs_me,
         "notes": " | ".join(notes),
         "readiness_report": ready_payload.get("report"),
+        "curve_gate_report": str(gate_report),
+        "submit_now": str(submit_now) if gate.ok and not dry else None,
     }
     report = write_daily_report(day, payload)
     payload["daily_report"] = str(report)

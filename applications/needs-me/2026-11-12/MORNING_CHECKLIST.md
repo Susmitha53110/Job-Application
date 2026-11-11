@@ -9,7 +9,7 @@
 6. Confirmed answers: LinkedIn · sponsorship **No** · work auth Yes (F1-OPT)
 
 ## Still blocking ALL submits until answered
-- Salary expectations number (enter exact figure Susmitha provides)
+- Salary expectations number — unlock with `python3 -m agent set-salary <number>` after Susmitha replies (see `../SALARY.md`)
 - EEO / demographics if forced choice beyond Prefer not to disclose
 - Background check Yes/No if asked
 - CAPTCHA / login wall → needs me, move on

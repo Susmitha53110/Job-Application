@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "Nightly ~17:53 CT: curve-gate blocked on window+salary; form still open. Extra candidates (Constant Contact Principal, Rackner federal, Intertwine Public Trust, SentiLink old) skipped. APPLIED_INDEX normalized; curve apply runner ready for 08:00 CT."
+- last_run_summary: "daily_apply 2026-11-11: window=False; salary=MISSING; hunt=4; ready=0; needs_me=2"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

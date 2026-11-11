@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import re
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -10,6 +9,7 @@ from .ats_hunt import hunt_all
 from .job_search import JobPosting, within_max_age
 from .process_job import process_job
 from .resume_parse import load_base_resume
+from .salary import salary_from_memory
 from .setup_gate import find_base_resume
 from .window import check_apply_window
 
@@ -28,21 +28,7 @@ class ReadyItem:
 
 
 def _salary_from_memory() -> str | None:
-    texts = []
-    for p in (paths.PROFILE, paths.STATE, paths.APPLICATIONS / "FORM_ANSWERS.md"):
-        if p.exists():
-            texts.append(p.read_text(encoding="utf-8"))
-    blob = "\n".join(texts)
-    # Explicit expectation lines only — never invent
-    m = re.search(
-        r"(?im)^(?:[-*]\s*)?(?:salary expectations?(?: number)?|expected salary|salary_expectation)\s*[:=]\s*\$?\s*([0-9]{2,3}(?:,?[0-9]{3})?)\b",
-        blob,
-    )
-    if m:
-        return m.group(1).replace(",", "")
-    if re.search(r"(?i)salary expectations?\s*[:=]\s*\*\*NEEDS ME\*\*", blob):
-        return None
-    return None
+    return salary_from_memory()
 
 
 def _curve_override() -> bool:

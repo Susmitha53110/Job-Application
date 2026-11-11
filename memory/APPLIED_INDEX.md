@@ -20,3 +20,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | Rackner | Data Integration Engineer — Federal Health IT | https://job-boards.greenhouse.io/rackner/jobs/4752876005 | skipped | federal background investigation
 2026-11-11 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | skipped | Principal / 12+ years
 2026-11-11 | Intertwine Associates | AI / Data Engineer (Mid-Level) | https://ats.rippling.com/intertwine-associates/jobs/9d6d3dc6-7f4d-436b-991e-d4a46bdbe1ce | skipped | createdOn too old; citizenship/Public Trust language
+2026-11-11 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped
+2026-11-11 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped

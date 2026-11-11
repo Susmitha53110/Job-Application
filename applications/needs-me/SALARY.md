@@ -11,4 +11,10 @@ or
 
 `Salary expectations: 135000`
 
-Agent will write it into `applications/FORM_ANSWERS.md` and Memory, then submit in the next **08:00–12:00 America/Chicago** window.
+Agent will run:
+
+```bash
+python3 -m agent set-salary 120000
+```
+
+That writes Memory + `FORM_ANSWERS.md`, then Curve can submit in the next **08:00–12:00 America/Chicago** window via `python3 -m agent curve-gate` / computer-use.
