@@ -1,11 +1,12 @@
 # Morning apply checklist — 2026-11-12 08:00 CT
 
 ## Gate checks (in order)
-1. `python3 -m agent.window` → must print **OPEN**
-2. Re-verify each queued URL still open + posted ≤4 days (API dates only)
-3. Ramp day 1 daily limit: **10**
-4. Resume version **(a)** only
-5. Confirmed answers: LinkedIn · sponsorship **No** · work auth Yes (F1-OPT)
+1. `python3 -m agent window` → must show `"open": true`
+2. `python3 -m agent ready` → readiness report; submit only items with empty blockers
+3. Re-verify each queued URL still open + posted ≤4 days (API dates only)
+4. Ramp day 1 daily limit: **10**
+5. Resume version **(a)** only
+6. Confirmed answers: LinkedIn · sponsorship **No** · work auth Yes (F1-OPT)
 
 ## Still blocking ALL submits until answered
 - Salary expectations number (enter exact figure Susmitha provides)

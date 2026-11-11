@@ -75,6 +75,14 @@ DEFAULT_GH_BOARDS = [
     "branch",
     "workos",
     "adyen",
+    "perfectserve",
+    "flatironhealth",
+    "talkspace",
+    "natera",
+    "veracyte",
+    "oscarhealth",
+    "lyrahealth",
+    "springhealth",
 ]
 
 
@@ -125,11 +133,12 @@ def hunt_greenhouse(boards: list[str] | None = None, max_age_days: int = 4) -> l
                 continue
             loc = ((detail.get("location") or {}).get("name") if isinstance(detail.get("location"), dict) else "") or ""
             desc = _strip_html(detail.get("content") or "")
-            if not is_us_remote(str(loc), desc, source="greenhouse"):
+            title = detail.get("title") or j.get("title") or ""
+            if not is_us_remote(str(loc), desc, source="greenhouse", title=title):
                 continue
             out.append(
                 JobPosting(
-                    title=detail.get("title") or j.get("title") or "",
+                    title=title,
                     company=detail.get("company_name") or board,
                     url=detail.get("absolute_url") or j.get("absolute_url") or "",
                     location=str(loc),
@@ -160,11 +169,12 @@ def hunt_ashby(orgs: list[str], max_age_days: int = 4) -> list[JobPosting]:
             loc = j.get("location") or ""
             wt = j.get("workplaceType") or ""
             desc = _strip_html(j.get("descriptionPlain") or j.get("descriptionHtml") or "")
-            if not is_us_remote(f"{loc} {wt}", desc, source="ashby"):
+            title = j.get("title") or ""
+            if not is_us_remote(f"{loc} {wt}", desc, source="ashby", title=title):
                 continue
             out.append(
                 JobPosting(
-                    title=j.get("title") or "",
+                    title=title,
                     company=org,
                     url=j.get("jobUrl") or j.get("applyUrl") or "",
                     location=str(loc),
@@ -236,11 +246,12 @@ def hunt_rippling(board_slug: str, max_age_days: int = 4) -> list[JobPosting]:
             if isinstance(desc_html, dict):
                 desc_html = " ".join(str(v) for v in desc_html.values())
         desc = _strip_html(str(desc_html))
-        if not remote_us and not is_us_remote(location, desc, source="rippling"):
+        full_title = detail.get("name") or title
+        if not remote_us and not is_us_remote(location, desc, source="rippling", title=full_title):
             continue
         out.append(
             JobPosting(
-                title=detail.get("name") or title,
+                title=full_title,
                 company=company,
                 url=detail.get("url") or item.get("url") or f"https://ats.rippling.com/{board_slug}/jobs/{jid}",
                 location=location,
@@ -256,6 +267,8 @@ def hunt_rippling(board_slug: str, max_age_days: int = 4) -> list[JobPosting]:
 
 
 def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
+    from .job_search import search_arbeitnow, search_remotive
+
     jobs: list[JobPosting] = []
     jobs.extend(hunt_greenhouse(max_age_days=max_age_days))
     jobs.extend(
@@ -286,6 +299,15 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
         )
     )
     jobs.extend(hunt_rippling("curve-dental", max_age_days=max_age_days))
+    for q in ("data engineer", "analytics engineer", "snowflake data engineer", "databricks data engineer"):
+        try:
+            jobs.extend(search_remotive(q, limit=25, max_age_days=max_age_days))
+        except Exception:
+            pass
+        try:
+            jobs.extend(search_arbeitnow(q, limit=25, max_age_days=max_age_days))
+        except Exception:
+            pass
     # Deduplicate
     seen = set()
     uniq = []

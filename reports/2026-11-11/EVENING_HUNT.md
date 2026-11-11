@@ -26,5 +26,11 @@ Window closed (after 12:00 CT). Preparing for **2026-11-12 08:00 CT**.
 - `applications/FORM_ANSWERS.md` — form bank
 - `applications/needs-me/2026-11-12/MORNING_CHECKLIST.md`
 
+## Later evening refresh (~17:20 CT)
+- `python3 -m agent ready` → **0 ready** (window closed + salary missing)
+- Extra Greenhouse/Lever/Rippling/Remotive scan: no new mid-level ≤4d US-remote DE hits
+- PerfectServe Data Engineer first_published 2026-09-24 → skip
+- Browser hunts could not verify posting dates on ATS pages; API dates remain authoritative
+
 ## Blocker for submits
 Salary expectations number still unset.

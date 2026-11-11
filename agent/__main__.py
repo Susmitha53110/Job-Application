@@ -6,6 +6,7 @@ import sys
 
 from .ats_hunt import hunt_all
 from .dry_run import run_dry_run
+from .morning_run import readiness_report
 from .setup_gate import check_setup, write_needs_me_packet
 from .window import check_apply_window
 
@@ -19,6 +20,7 @@ def main(argv: list[str] | None = None) -> int:
     p_dry.add_argument("--limit", type=int, default=3)
     sub.add_parser("window", help="Check whether the CT apply window is open")
     sub.add_parser("hunt", help="Hunt Greenhouse/Ashby/Rippling for filter-pass jobs")
+    sub.add_parser("ready", help="Write morning readiness report (window/salary/queue)")
 
     args = parser.parse_args(argv)
 
@@ -51,6 +53,10 @@ def main(argv: list[str] | None = None) -> int:
                 indent=2,
             )
         )
+        return 0
+
+    if args.cmd == "ready":
+        print(json.dumps(readiness_report(), indent=2))
         return 0
 
     if args.cmd == "dry-run":

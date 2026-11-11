@@ -60,8 +60,8 @@ def _parse_dt(value) -> datetime | None:
         return None
 
 
-def is_us_remote(location: str, description: str = "", *, source: str = "") -> bool:
-    blob = f"{location} {description[:2000]}".lower()
+def is_us_remote(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
+    blob = f"{title} {location} {description[:2000]}".lower()
     if any(
         x in blob
         for x in (
@@ -149,7 +149,7 @@ def search_remotive(
             continue
         loc = item.get("candidate_required_location") or "Remote"
         desc = item.get("description") or ""
-        if not is_us_remote(str(loc), desc, source="remotive"):
+        if not is_us_remote(str(loc), desc, source="remotive", title=title):
             continue
         jobs.append(
             JobPosting(
@@ -198,7 +198,7 @@ def search_arbeitnow(
         desc = item.get("description") or ""
         if not item.get("remote"):
             continue
-        if not is_us_remote(str(loc), desc, source="arbeitnow"):
+        if not is_us_remote(str(loc), desc, source="arbeitnow", title=title):
             continue
         jobs.append(
             JobPosting(
@@ -254,7 +254,7 @@ def filter_jobs(
         if not within_max_age(j.posted_at, max_age_days=max_age_days):
             continue
         if us_only or remote_only:
-            if not is_us_remote(j.location, j.description, source=j.source):
+            if not is_us_remote(j.location, j.description, source=j.source, title=j.title):
                 continue
         blob = f"{j.title} {j.company} {j.location} {j.description} {j.salary_text or ''}".lower()
         if any(s in blob for s in skip_keywords):

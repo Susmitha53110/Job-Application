@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "Susmitha approved LinkedIn, sponsorship=No, filter-pass dry-run packet (Curve), and real ATS work. Outside window (~16:30 CT). Curve READY pending salary. Evening ATS hunt: Curve+ConsumerEdge+Keebo only ≤4d US-remote DE hits; BaseOps/WorkOS too old."
+- last_run_summary: "Evening readiness ~17:20 CT: window closed; salary MISSING; Curve override on; hunt still only Curve+ConsumerEdge+Keebo ≤4d US-remote. PerfectServe/BaseOps/WorkOS fail 4-day rule. morning_run ready report written. First submits still target 2026-11-12 08:00 CT once salary is in Memory."
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
