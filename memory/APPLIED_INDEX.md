@@ -20,5 +20,9 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | Rackner | Data Integration Engineer — Federal Health IT | https://job-boards.greenhouse.io/rackner/jobs/4752876005 | skipped | federal background investigation
 2026-11-11 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | skipped | Principal / 12+ years
 2026-11-11 | Intertwine Associates | AI / Data Engineer (Mid-Level) | https://ats.rippling.com/intertwine-associates/jobs/9d6d3dc6-7f4d-436b-991e-d4a46bdbe1ce | skipped | createdOn too old; citizenship/Public Trust language
+2026-11-11 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | skipped | ~7+ years stretch; honest score 2.5/10
+2026-11-11 | Extend | Senior Analytics Engineer | https://job-boards.greenhouse.io/extend/jobs/6250516004 | skipped | first_published 2026-11-06 (>4d); no immigration sponsorship
+2026-11-11 | Branch | Data Engineer | https://job-boards.greenhouse.io/branch/jobs/8044391003 | skipped | first_published 2026-10-26; requires work auth without sponsorship/transfer
 2026-11-11 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped
 2026-11-11 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped
+2026-11-11 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run

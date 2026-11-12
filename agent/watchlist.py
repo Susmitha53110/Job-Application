@@ -63,6 +63,8 @@ GREENHOUSE_WATCH = [
     "constantcontact",
     "rackner",
     "sezzle",
+    "extend",
+    "branch",
 ]
 
 ASHBY_WATCH = [
@@ -74,6 +76,7 @@ ASHBY_WATCH = [
     "clera",
     "sentilink",
     "commure",
+    "kit",
     "vanta",
     "drata",
     "persona",
