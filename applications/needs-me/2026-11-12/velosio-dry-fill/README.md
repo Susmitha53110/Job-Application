@@ -6,7 +6,8 @@
 
 ## Screenshots
 - `velosio_job_page.png` — job posting
-- `velosio_form_0_email.png` — apply lands on **Enter Your Information** (Email + Next) at  
+- `velosio_form_0_email.png`
+- `velosio_form_1_CAPTCHA_BLOCKER.png` — hCaptcha on login step — apply lands on **Enter Your Information** (Email + Next) at  
   `https://careers-velosio.icims.com/jobs/3162/login?...`  
   Protected by **hCaptcha**.
 
