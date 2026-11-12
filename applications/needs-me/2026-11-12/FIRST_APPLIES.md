@@ -5,9 +5,9 @@ Authorized real ATS work. Never Easy Apply. Do not invent salary.
 ## Order
 1. **Clera** — Senior Data Integration Engineer (b=9.7, no salary field)
 2. **Bayesian Health** — SWE Data & Analytics Platform (b=7.5, no salary field)
-3. **BetterHelp** — Senior Analytics Engineer (b=7.2; STOP if salary/EEO/CAPTCHA) — kit `BetterHelp_SUBMIT_KIT.md`
-4. **Life360** — Senior Data Engineer, Ads Data (b=7.3; STOP if salary/EEO/CAPTCHA) — kit `Life360_SUBMIT_KIT.md`
-5. **Curve Dental** — only if `python3 -m agent curve-gate` → ok
+3. **Life360** — Senior Data Engineer, Ads Data (b=7.3; auth Yes / sponsorship No) — kit `Life360_SUBMIT_KIT.md`
+4. **Curve Dental** — only if `python3 -m agent curve-gate` → ok
+5. **BetterHelp** — **SKIP / needs-me** until Susmitha decides on required 5-year no-sponsorship question (see `BetterHelp_SUBMIT_KIT.md`)
 
 ## Commands
 ```bash

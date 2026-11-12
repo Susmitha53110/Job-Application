@@ -13,19 +13,25 @@
 - Gaps: Airflow, dbt, BI, Scala, IaC — do not invent ads/ML ownership beyond resume facts.
 - Work auth: Yes (F1-OPT). Sponsorship: **No**.
 
-## Form answers (fill when applying; STOP on salary/EEO/background/CAPTCHA if present)
+## Form answers (Greenhouse API + dry-fill README)
 | Field | Answer |
 |-------|--------|
 | First name | Susmitha |
 | Last name | Chowdary |
 | Email | Susmithachowdary67@gmail.com |
 | Phone | 9132073787 |
-| Location | Austin, TX (US remote) |
-| Resume/CV | tailored `.docx` (a) / short submit copy |
+| Resume/CV | `resumes/submit/Susmitha_life360.docx` |
+| Cover Letter | blank |
 | LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
-| Authorized to work in the U.S.? | **Yes** |
+| Authorized to work where job is located? | **Yes** |
 | Require sponsorship now or in future? | **No** |
-| Salary expectation | **STOP → needs me** (not set in Memory) |
+| Existing employee Life360/Tile/Jiobit? | **Not an Existing Employee** |
+| Previously worked there? | **No** |
+| Agree to Job Applicant Privacy Policy | **Yes** (after reading on form) |
+| Veteran/EEO optional | **I don't wish to answer** if shown |
+| Salary expectation | not on question set; if appears → **STOP needs me** |
+
+Full map: `applications/needs-me/2026-11-12/life360-dry-fill/README.md`
 
 ## Proof
 Save confirmation under `applications/applied/<CT-day>/Life360_Senior_Data_Engineer_Ads_Data/` then `python3 -m agent proof …`.

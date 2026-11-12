@@ -133,8 +133,15 @@ def run_morning_check() -> dict:
 
     failed = [c for c in checks if not c.ok]
     # Soft fails: salary and window are expected overnight
-    soft = {"salary_set_for_curve"}
-    hard_failed = [c for c in failed if c.name not in soft and "Outside window" not in c.detail]
+    soft = {"salary_set_for_curve", "kit_betterhelp", "resume_short_betterhelp"}
+    hard_failed = [
+        c
+        for c in failed
+        if c.name not in soft
+        and "Outside window" not in c.detail
+        and "F1-OPT STOP" not in c.detail
+        and "5-year" not in c.detail
+    ]
 
     day = handoff.get("day") or chicago_today().isoformat()
     out_dir = paths.REPORTS / day

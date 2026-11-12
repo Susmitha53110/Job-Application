@@ -94,17 +94,12 @@ BETTERHELP = {
     ],
     "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "BetterHelp_SUBMIT_KIT.md",
     "needs_salary": False,
+    # F1-OPT cannot honestly Yes a 5-year no-sponsorship gate.
+    "hard_blockers": [
+        "BetterHelp required Q: work in US without visa sponsorship for next 5 years — F1-OPT STOP needs-me/skip (do not answer Yes)"
+    ],
     "prompt_extra": (
-        "Greenhouse form. Fill known fields only:\n"
-        "- First name: Susmitha / Last name: Chowdary\n"
-        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
-        "- Location: Austin, TX\n"
-        "- Resume: upload resumes/submit/Susmitha_betterhelp.docx\n"
-        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Authorized to work in the U.S.?: Yes\n"
-        "- Require sponsorship now or in future?: No\n"
-        "If salary expectation / EEO / background / CAPTCHA appears: STOP needs-me.\n"
-        "Do not claim hands-on dbt or Looker ownership.\n"
+        "DO NOT SUBMIT. Sponsorship 5-year gate unresolved for F1-OPT.\n"
     ),
 }
 
@@ -211,6 +206,9 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
     if spec["needs_salary"] and not salary:
         blockers.append("Salary expectations number missing in Memory/FORM_ANSWERS")
 
+    for hb in spec.get("hard_blockers") or []:
+        blockers.append(hb)
+
     resume = _newest_resume(spec["resume_globs"])
     if resume is None or not resume.exists():
         blockers.append(f"Missing tailored resume for {spec['company']}")
@@ -251,10 +249,11 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
 
 
 def evaluate_all_ready_submits() -> list[ReadySubmit]:
+    # BetterHelp stays packeted but is not in the auto-submit queue while the
+    # 5-year no-sponsorship Greenhouse question is unresolved for F1-OPT.
     return [
         evaluate_ready_submit(CLERA),
         evaluate_ready_submit(BAYESIAN),
-        evaluate_ready_submit(BETTERHELP),
         evaluate_ready_submit(LIFE360),
     ]
 
