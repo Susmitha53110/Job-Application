@@ -8,7 +8,7 @@ Updated: 2026-11-11 — standing answers from Susmitha. Do not flag these again.
 | Last name | Chowdary |
 | Full name | Susmitha Chowdary |
 | Preferred first name | Susmitha |
-| Email | Susmithachowdary67@gmail.com |
+| Email | dsusmitha55@gmail.com |
 | Phone | 9132073787 |
 | Address line 1 | 1601 Scottsdale Ln |
 | City | Austin |

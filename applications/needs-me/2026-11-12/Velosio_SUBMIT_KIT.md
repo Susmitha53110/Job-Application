@@ -23,7 +23,7 @@
 | Field | Answer |
 |-------|--------|
 | Name | Susmitha Chowdary |
-| Email | Susmithachowdary67@gmail.com |
+| Email | dsusmitha55@gmail.com |
 | Phone | 9132073787 |
 | Location | Austin, TX |
 | Resume | short `.docx` above |

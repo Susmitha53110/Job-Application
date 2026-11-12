@@ -41,7 +41,7 @@ CLERA = {
     "prompt_extra": (
         "Fill exactly:\n"
         "- Name*: Susmitha Chowdary\n"
-        "- Email*: Susmithachowdary67@gmail.com\n"
+        "- Email*: dsusmitha55@gmail.com\n"
         "- Resume*: upload the .docx\n"
         "- LinkedIn*: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
         "- Do you have work authorization to work in that country?*: Yes\n"
@@ -66,7 +66,7 @@ BAYESIAN = {
     "prompt_extra": (
         "Fill exactly:\n"
         "- Name*: Susmitha Chowdary\n"
-        "- Email*: Susmithachowdary67@gmail.com\n"
+        "- Email*: dsusmitha55@gmail.com\n"
         "- Resume*: upload the .docx\n"
         "- Are you legally authorized to work in the United States?*: Yes\n"
         "- Do you now or will you in the future require employer sponsorship?*: No\n"
@@ -97,7 +97,7 @@ BETTERHELP = {
     "prompt_extra": (
         "Greenhouse form. Fill known fields only:\n"
         "- First name: Susmitha / Last name: Chowdary\n"
-        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
+        "- Email: dsusmitha55@gmail.com / Phone: 9132073787\n"
         "- Country: United States / Location (City): Austin\n"
         "- Resume: upload resumes/submit/Susmitha_betterhelp.docx\n"
         "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
@@ -124,7 +124,7 @@ LIFE360 = {
     "prompt_extra": (
         "Greenhouse form. Fill known fields only:\n"
         "- First name: Susmitha / Last name: Chowdary\n"
-        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
+        "- Email: dsusmitha55@gmail.com / Phone: 9132073787\n"
         "- Country: United States / Location (City): Austin\n"
         "- Resume: upload resumes/submit/Susmitha_life360.docx\n"
         "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"

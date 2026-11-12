@@ -24,7 +24,7 @@ Fallback resume: /workspace/resumes/tailored/2026-11-12/Susmitha_clera_Senior_Da
 
 Fill exactly:
 - Name*: Susmitha Chowdary
-- Email*: Susmithachowdary67@gmail.com
+- Email*: dsusmitha55@gmail.com
 - Resume*: upload the .docx
 - LinkedIn*: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - Do you have work authorization to work in that country?*: Yes
@@ -56,7 +56,7 @@ Fallback resume: /workspace/resumes/tailored/2026-11-12/Susmitha_bayesianhealth_
 
 Fill exactly:
 - Name*: Susmitha Chowdary
-- Email*: Susmithachowdary67@gmail.com
+- Email*: dsusmitha55@gmail.com
 - Resume*: upload the .docx
 - Are you legally authorized to work in the United States?*: Yes
 - Do you now or will you in the future require employer sponsorship?*: No
@@ -94,7 +94,7 @@ Fallback resume: /workspace/resumes/tailored/2026-11-12/Susmitha_Life360_Senior_
 
 Greenhouse form. Fill known fields only:
 - First name: Susmitha / Last name: Chowdary
-- Email: Susmithachowdary67@gmail.com / Phone: 9132073787
+- Email: dsusmitha55@gmail.com / Phone: 9132073787
 - Country: United States / Location (City): Austin
 - Resume: upload resumes/submit/Susmitha_life360.docx
 - LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8

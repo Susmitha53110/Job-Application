@@ -18,21 +18,21 @@
 |-------|--------|
 | First name | Susmitha |
 | Last name | Chowdary |
-| Email | Susmithachowdary67@gmail.com |
+| Email | dsusmitha55@gmail.com |
 | Phone | 9132073787 |
 | Country | United States |
 | Location (City) | Austin |
 | Resume/CV | `resumes/submit/Susmitha_life360.docx` |
 | Cover Letter | blank |
 | Website | blank |
-| LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
+| LinkedIn | leave blank; if required → N/A |
 | Authorized to work where job is located? | **Yes** |
 | Require sponsorship now or in future? | **No** |
 | Existing employee Life360/Tile/Jiobit? | **Not an Existing Employee** |
 | Previously worked there? | **No** |
 | Agree to Job Applicant Privacy Policy | **Yes** (after reading on form) |
-| Veteran/EEO optional | **I don't wish to answer** if shown |
-| Salary expectation | not on question set; if appears → **STOP needs me** |
+| EEO if shown | Gender Female; Race Asian; Hispanic No; Veteran not protected; Disability No |
+| Salary expectation | if asked → **120000** |
 
 Full map: `applications/needs-me/2026-11-12/life360-dry-fill/README.md`
 

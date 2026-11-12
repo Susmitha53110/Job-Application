@@ -15,7 +15,7 @@
 1. **Resume*** — upload tailored `.docx` (a)
 2. **First name*** — Susmitha
 3. **Last name*** — Chowdary
-4. **Email*** — Susmithachowdary67@gmail.com
+4. **Email*** — dsusmitha55@gmail.com
 5. **Pronouns** — skip
 6. **Current company** — Optum
 7. **Phone number*** — +1 9132073787

@@ -5,7 +5,7 @@
 
 ## Identity
 - Full name: Susmitha Chowdary
-- Application email: Susmithachowdary67@gmail.com
+- Application email: dsusmitha55@gmail.com
 - Phone: 9132073787
 - Location: 1601 Scottsdale Ln, Austin, Texas, 78754
 - LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
