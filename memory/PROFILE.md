@@ -72,7 +72,7 @@
 
 ## Schedule
 - Daily window: **8:00 AM – 12:00 PM** America/Chicago (**Monday–Sunday**, including weekends)
-- At **08:00 CT**: one job search → tailor → fill → submit using standing answers; work through daily limit
+- At **08:00 CT**: one job search → tailor → fill → submit using standing answers; **apply target ≥20** per window (until Susmitha changes it)
 - At **12:00 CT sharp**: stop (finish only in-progress app), send daily report, go idle
 - Outside window: **do nothing** (no search, rechecks, extra timers, or GitHub/CI reactions)
 - Exactly **one** recurring timer: start at 8:00 AM CT every day (until Susmitha stops it)
@@ -96,3 +96,8 @@
 ## Headline / titles (do not change when tailoring)
 - Headline on resume: Data Engineer | Python · SQL · PySpark · Databricks · Snowflake · Azure · AWS
 - Job titles on resume: Data Engineer (Optum), Data Engineer (Citi) — never rewrite
+
+## Daily volume
+- **Minimum applications per CT window (from 2026-11-13): 20**
+- Work the full 08:00–12:00 window toward that count; stop only at 12:00 CT or when Susmitha says stop.
+- Still skip dealbreakers / excluded companies / uncovered questions (needs me).
