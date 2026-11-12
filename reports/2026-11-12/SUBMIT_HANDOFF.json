@@ -1,7 +1,7 @@
 {
   "day": "2026-11-12",
   "window_open": false,
-  "window_reason": "Outside window (now 2026-11-11 20:48 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "window_reason": "Outside window (now 2026-11-11 20:51 CST). Applies only 08:00\u201312:00 America/Chicago.",
   "salary": null,
   "ready_submits_report": "/workspace/reports/2026-11-12/READY_SUBMITS.md",
   "curve_gate_report": "/workspace/reports/2026-11-12/CURVE_GATE.md",
@@ -22,7 +22,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 20:48 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-11 20:51 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_clera_Senior_Data_Integration_Engineer.docx",
@@ -39,7 +39,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 20:48 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-11 20:51 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-12/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx",
@@ -56,7 +56,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 20:48 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-11 20:51 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx",
@@ -73,7 +73,7 @@
       "needs_salary": true,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 20:48 CST). Applies only 08:00\u201312:00 America/Chicago.",
+        "Outside window (now 2026-11-11 20:51 CST). Applies only 08:00\u201312:00 America/Chicago.",
         "Salary expectations number missing in Memory/FORM_ANSWERS"
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md",

@@ -100,6 +100,7 @@ ASHBY_WATCH = [
     "bayesianhealth",
     "instructure",
     "rula",
+    "talkiatry",
 ]
 
 RIPPLING_WATCH = [

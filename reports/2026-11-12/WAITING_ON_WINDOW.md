@@ -9,6 +9,7 @@ Outside **08:00–12:00 America/Chicago**. Real ATS submits start at **08:00 CT*
 4. **Curve Dental** — only if `python3 -m agent curve-gate` ok (salary still MISSING)
 
 ## Skip / needs-me
+- Talkiatry Analytics Engineer — scored **5.0** (dbt/BigQuery/BI gaps); logged skip
 - BetterHelp — 5-year no-sponsorship gate
 - Velosio — iCIMS login + CAPTCHA
 - Instructure Senior Analytics Engineer — Ashby near-miss (published 2026-11-06; >4d)

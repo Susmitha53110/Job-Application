@@ -337,6 +337,7 @@ DEFAULT_ASHBY_ORGS = [
     "Deepgram",
     "instructure",
     "rula",
+    "talkiatry",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [

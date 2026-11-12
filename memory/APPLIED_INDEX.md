@@ -90,3 +90,6 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | dry-run
 2026-11-11 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
 2026-11-11 | Instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | skipped_age_gt_4d_near_miss
+2026-11-12 | talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | dry-run
+2026-11-11 | Talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | skipped_score_5.0_lt_7
+2026-11-12 | talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | dry-run

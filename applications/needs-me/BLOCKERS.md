@@ -28,5 +28,6 @@ Updated: 2026-11-11 ~20:40 America/Chicago
 - Live URLs re-checked 20:37 CT (all HTTP 200)
 
 ## Skips
+Talkiatry AE honest **5.0** (dbt/BigQuery/BI) — ≤4d US-remote but below apply threshold.
 Kit AE ~5.9; Consumer Edge Staff; Keebo no-visa; Rackner federal — see `memory/APPLIED_INDEX.md`.
 Overnight 20:40 CT: hunt refreshed; ge7=5 (same queue); no new mid-level ≥7; morning packets dual-written for **2026-11-12**.
