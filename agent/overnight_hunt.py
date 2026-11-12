@@ -15,6 +15,7 @@ from .window import check_apply_window
 from .salary import salary_from_memory
 from .curve_apply import evaluate_curve_gate, write_gate_report
 from .ready_submits import evaluate_all_ready_submits, write_ready_submits_report
+from .submit_handoff import build_submit_handoff
 
 
 def run_overnight_hunt(*, day: str | None = None) -> dict:
@@ -28,6 +29,7 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
     write_gate_report(day=day)
     ready_items = evaluate_all_ready_submits()
     ready_report = write_ready_submits_report(day=day)
+    handoff = build_submit_handoff(day=day)
 
     watch = poll_watchlist()
     write_watchlist_report(watch, day=day)
@@ -70,6 +72,7 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
         f"- Curve gate ok: **{gate.ok}**",
         f"- Curve blockers: {', '.join(gate.blockers) or '(none)'}",
         f"- Ready submits report: `{ready_report}`",
+        f"- Submit handoff: `{handoff.get('handoff_json')}`",
         *[
             f"- {i.company} ready (ignoring window check in overnight): "
             f"**{i.ok or (len(i.blockers)==1 and 'Outside window' in i.blockers[0])}** blockers={i.blockers}"

@@ -1,0 +1,75 @@
+{
+  "day": "2026-11-12",
+  "window_open": false,
+  "window_reason": "Outside window (now 2026-11-11 19:54 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "salary": null,
+  "ready_submits_report": "/workspace/reports/2026-11-12/READY_SUBMITS.md",
+  "curve_gate_report": "/workspace/reports/2026-11-12/CURVE_GATE.md",
+  "runbook": "/workspace/applications/needs-me/2026-11-12/FIRST_APPLIES.md",
+  "submit_order": [
+    "clera",
+    "bayesian",
+    "curve"
+  ],
+  "queue": [
+    {
+      "order": 1,
+      "key": "clera",
+      "company": "Clera",
+      "role": "Senior Data Integration Engineer",
+      "url": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
+      "needs_salary": false,
+      "ok_now": false,
+      "blockers": [
+        "Outside window (now 2026-11-11 19:54 CST). Applies only 08:00\u201312:00 America/Chicago."
+      ],
+      "kit": "/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md",
+      "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_clera_Senior_Data_Integration_Engineer.docx",
+      "resume_short": "/workspace/resumes/submit/Susmitha_clera.docx",
+      "proof_dir": "/workspace/applications/applied/2026-11-12/Clera_Senior_Data_Integration_Engineer",
+      "computer_use_prompt": ""
+    },
+    {
+      "order": 2,
+      "key": "bayesian",
+      "company": "Bayesian Health",
+      "role": "Software Engineer, Data & Analytics Platform",
+      "url": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
+      "needs_salary": false,
+      "ok_now": false,
+      "blockers": [
+        "Outside window (now 2026-11-11 19:54 CST). Applies only 08:00\u201312:00 America/Chicago."
+      ],
+      "kit": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md",
+      "resume": "/workspace/resumes/tailored/2026-11-12/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx",
+      "resume_short": "/workspace/resumes/submit/Susmitha_bayesian.docx",
+      "proof_dir": "/workspace/applications/applied/2026-11-12/Bayesian_Health_Software_Engineer_Data_Analytics_Platform",
+      "computer_use_prompt": ""
+    },
+    {
+      "order": 3,
+      "key": "curve",
+      "company": "Curve Dental",
+      "role": "Data Engineer",
+      "url": "https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394",
+      "needs_salary": true,
+      "ok_now": false,
+      "blockers": [
+        "Outside window (now 2026-11-11 19:54 CST). Applies only 08:00\u201312:00 America/Chicago.",
+        "Salary expectations number missing in Memory/FORM_ANSWERS"
+      ],
+      "kit": "/workspace/applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md",
+      "resume": "/workspace/resumes/tailored/2026-11-12/Susmitha_Curve_Dental_Data_Engineer.docx",
+      "resume_short": "/workspace/resumes/submit/Susmitha_curve.docx",
+      "proof_dir": "/workspace/applications/applied/2026-11-12/Curve_Dental_Data_Engineer",
+      "computer_use_prompt": ""
+    }
+  ],
+  "instructions": [
+    "Submit only while window_open is true.",
+    "Never Easy Apply.",
+    "Do not invent salary.",
+    "Prefer resume_short paths under resumes/submit/.",
+    "After each confirmation, write proof files then python3 -m agent proof."
+  ]
+}

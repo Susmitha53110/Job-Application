@@ -10,12 +10,14 @@ Authorized real ATS work. Never Easy Apply. Do not invent salary.
 ## Commands
 ```bash
 python3 -m agent window
+python3 -m agent handoff
 python3 -m agent ready-submits
 python3 -m agent daily
 python3 -m agent curve-gate
 ```
 
-Use computer-use prompts from `reports/<CT-day>/READY_SUBMITS.md` and `SUBMIT_NOW.md`.
+Prefer short resumes under `resumes/submit/Susmitha_{clera,bayesian,curve}.docx` (PDF copies also available).  
+Use computer-use prompts from `reports/<CT-day>/SUBMIT_HANDOFF.json`, `READY_SUBMITS.md`, and `SUBMIT_NOW.md`.
 
 ## Proof paths
 - `applications/applied/2026-11-12/Clera_Senior_Data_Integration_Engineer/`

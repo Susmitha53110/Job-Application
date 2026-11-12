@@ -111,6 +111,8 @@ def _build_prompt(spec: dict, resume: Path, salary: str | None) -> str:
     safe = "".join(ch if ch.isalnum() or ch in "-_ " else "_" for ch in f"{spec['company']}_{spec['role']}")
     safe = safe.strip().replace(" ", "_")[:120]
     proof = f"applications/applied/{day}/{safe}"
+    short = paths.ROOT / "resumes" / "submit" / f"Susmitha_{spec['key']}.docx"
+    resume_line = str(short if short.exists() else resume)
     salary_line = ""
     if spec["needs_salary"]:
         salary_line = f"Salary expectations*: {salary}\n"
@@ -120,7 +122,8 @@ Kit: {spec['kit']}
 
 URL: {spec['url']}
 Window: must still be 08:00–12:00 America/Chicago. If outside, STOP.
-Resume file on disk: {resume}
+Resume file on disk (prefer short path): {resume_line}
+Fallback resume: {resume}
 {salary_line}
 {spec['prompt_extra']}
 Click Submit Application ONCE.
