@@ -520,9 +520,109 @@ def hunt_himalayas(*, max_age_days: int = 4, max_pages: int = 8) -> list[JobPost
     return out
 
 
+def _jsonld_jobpostings(raw_html: str) -> list[dict]:
+    """Parse all application/ld+json blocks; return JobPosting dicts only."""
+    import json
+
+    out: list[dict] = []
+    for m in re.finditer(
+        r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        raw_html,
+        re.I | re.S,
+    ):
+        try:
+            data = json.loads(m.group(1))
+        except Exception:
+            continue
+        candidates = data if isinstance(data, list) else [data]
+        for item in candidates:
+            if isinstance(item, dict) and item.get("@type") == "JobPosting":
+                out.append(item)
+    return out
+
+
+def _jsonld_applicant_countries(data: dict) -> list[str]:
+    """Normalize applicantLocationRequirements / jobLocation country codes/names."""
+    found: list[str] = []
+    skip = {"", "unavailable", "n/a", "na", "none", "null", "unknown"}
+
+    def _keep(val: str) -> bool:
+        return val.strip().lower() not in skip
+
+    req = data.get("applicantLocationRequirements")
+    reqs = req if isinstance(req, list) else ([req] if req else [])
+    for r in reqs:
+        if not isinstance(r, dict):
+            continue
+        name = str(r.get("name") or r.get("addressCountry") or "").strip()
+        if _keep(name):
+            found.append(name)
+    loc_obj = data.get("jobLocation") or {}
+    locs = loc_obj if isinstance(loc_obj, list) else ([loc_obj] if loc_obj else [])
+    for loc in locs:
+        if not isinstance(loc, dict):
+            continue
+        addr = loc.get("address") if isinstance(loc.get("address"), dict) else {}
+        country = str((addr or {}).get("addressCountry") or "").strip()
+        locality = str((addr or {}).get("addressLocality") or "").strip()
+        region = str((addr or {}).get("addressRegion") or "").strip()
+        # Prefer country; only keep locality/region when they look geo-meaningful
+        if _keep(country):
+            found.append(country)
+        for part in (locality, region):
+            if _keep(part) and part.lower() not in {c.lower() for c in found}:
+                found.append(part)
+    return found
+
+
+def _jsonld_is_us_eligible(data: dict, desc: str) -> tuple[bool, str]:
+    """Fail closed on explicit non-US applicant countries (e.g. VN / Ho Chi Minh)."""
+    countries = _jsonld_applicant_countries(data)
+    joined = " ".join(countries).lower()
+    non_us = (
+        "vietnam",
+        " ho chi minh",
+        "hồ chí minh",
+        "vn",
+        "india",
+        "philippines",
+        "brazil",
+        "mexico",
+        "argentina",
+        "colombia",
+        "peru",
+        "nigeria",
+        "kenya",
+        "poland",
+        "germany",
+        "france",
+        "uk",
+        "united kingdom",
+        "canada",
+        "australia",
+        "latam",
+    )
+    # ISO-ish short codes that are clearly not US
+    code_hits = {c.strip().upper() for c in countries if len(c.strip()) <= 3}
+    if code_hits & {"VN", "IN", "PH", "BR", "MX", "AR", "CO", "PE", "NG", "KE", "PL", "DE", "FR", "GB", "UK", "CA", "AU"}:
+        # Allow only if US is also explicitly listed as an applicant country
+        if not (code_hits & {"US", "USA"} or any("united states" in c.lower() for c in countries)):
+            return False, ",".join(countries) or "non-US applicantLocationRequirements"
+    if any(x in joined for x in non_us):
+        if not any("united states" in c.lower() or c.strip().upper() in {"US", "USA"} for c in countries):
+            return False, ",".join(countries) or "non-US location"
+    # Prefer structured country when present
+    us_structured = any(
+        c.strip().upper() in {"US", "USA"} or "united states" in c.lower() for c in countries
+    )
+    if countries and not us_structured:
+        # Structured locations exist but none are US — fail closed even if desc mentions North America
+        return False, ",".join(countries)
+    return True, ",".join(countries) or "US"
+
+
 def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 4) -> list[JobPosting]:
     """Fetch company careers pages that expose schema.org JobPosting JSON-LD."""
-    import json
     import urllib.request
 
     out: list[JobPosting] = []
@@ -533,62 +633,50 @@ def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 4) ->
                 raw_html = resp.read().decode("utf-8", "replace")
         except Exception:
             continue
-        m = re.search(
-            r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-            raw_html,
-            re.I | re.S,
-        )
-        if not m:
-            continue
-        try:
-            data = json.loads(m.group(1))
-        except Exception:
-            continue
-        if isinstance(data, list):
-            data = next((x for x in data if isinstance(x, dict) and x.get("@type") == "JobPosting"), None)
-        if not isinstance(data, dict) or data.get("@type") != "JobPosting":
-            continue
-        title = data.get("title") or ""
-        if not _title_match(title):
-            continue
-        posted = data.get("datePosted")
-        if not within_max_age(posted, max_age_days=max_age_days):
-            continue
-        desc = _strip_html(
-            " ".join(
-                str(data.get(k) or "")
-                for k in ("description", "qualifications", "responsibilities", "skills")
-            )
-        )
-        loc_obj = data.get("jobLocation") or {}
-        if isinstance(loc_obj, list) and loc_obj:
-            loc_obj = loc_obj[0]
-        addr = (loc_obj.get("address") if isinstance(loc_obj, dict) else {}) or {}
-        country = addr.get("addressCountry") if isinstance(addr, dict) else ""
-        country_s = str(country).strip() or "United States"
-        # Benefits "remote" often sits past is_us_remote's description[:2000] window —
-        # stamp Remote into location when the full JSON-LD text mentions it.
-        remote_in_page = "remote" in desc.lower() or "work from home" in desc.lower()
-        location = f"{country_s}, Remote" if remote_in_page else country_s
-        if not is_us_remote(location, desc, source="jsonld", title=title):
-            if country_s.lower() not in {"united states", "usa", "us"} and "united states" not in desc.lower():
+        for data in _jsonld_jobpostings(raw_html):
+            title = data.get("title") or ""
+            if not _title_match(title):
                 continue
-            if not remote_in_page:
+            posted = data.get("datePosted")
+            if not within_max_age(posted, max_age_days=max_age_days):
                 continue
-        out.append(
-            JobPosting(
-                title=title,
-                company=company,
-                url=(data.get("url") or page_url).rstrip("?"),
-                location=location,
-                description=desc,
-                source="jsonld",
-                posted_at=posted,
-                apply_url=(data.get("url") or page_url).rstrip("?"),
-                is_open=True,
-                country_hint="US",
+            desc = _strip_html(
+                " ".join(
+                    str(data.get(k) or "")
+                    for k in ("description", "qualifications", "responsibilities", "skills")
+                )
             )
-        )
+            us_ok, country_label = _jsonld_is_us_eligible(data, desc)
+            if not us_ok:
+                continue
+            remote_in_page = (
+                "remote" in desc.lower()
+                or "work from home" in desc.lower()
+                or "remote" in (data.get("jobLocationType") or "").lower()
+                or "remote" in country_label.lower()
+            )
+            # Only stamp Remote+US when structured eligibility already passed.
+            location = f"{country_label or 'United States'}, Remote" if remote_in_page else (country_label or "United States")
+            if not is_us_remote(location, desc, source="jsonld", title=title):
+                if not remote_in_page:
+                    continue
+                # Structured US + remote jobLocationType is enough
+                if "united states" not in location.lower() and "us" not in location.lower():
+                    continue
+            out.append(
+                JobPosting(
+                    title=title,
+                    company=company,
+                    url=(data.get("url") or page_url).rstrip("?"),
+                    location=location,
+                    description=desc,
+                    source="jsonld",
+                    posted_at=posted,
+                    apply_url=(data.get("url") or page_url).rstrip("?"),
+                    is_open=True,
+                    country_hint="US",
+                )
+            )
     return out
 
 

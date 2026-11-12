@@ -81,6 +81,12 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             "peru",
             "colombia",
             "costa rica only",
+            "vietnam",
+            "ho chi minh",
+            "philippines",
+            "nigeria",
+            "kenya",
+            "poland only",
         )
     ):
         # Allow if also explicitly US remote

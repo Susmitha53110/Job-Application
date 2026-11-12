@@ -76,3 +76,31 @@ def test_icims_login_url_pattern():
         "icims.com" in "https://careers.example.com/jobs/1".lower()
         and "/login" in "https://careers.example.com/jobs/1".lower()
     )
+
+def test_jsonld_rejects_vietnam_applicant_location():
+    from agent.ats_hunt import _jsonld_is_us_eligible
+
+    vn = {
+        "@type": "JobPosting",
+        "title": "Analytics Engineer",
+        "applicantLocationRequirements": {"@type": "Country", "name": "VN"},
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Ho Chi Minh City",
+                "addressRegion": "Ho Chi Minh City",
+            },
+        },
+    }
+    ok, label = _jsonld_is_us_eligible(vn, "North America merchants United States Canada")
+    assert ok is False
+    assert "VN" in label or "Ho Chi Minh" in label
+
+    us = {
+        "@type": "JobPosting",
+        "applicantLocationRequirements": {"@type": "Country", "name": "United States"},
+        "jobLocation": {"@type": "Place", "address": {"addressCountry": "US"}},
+    }
+    ok2, _ = _jsonld_is_us_eligible(us, "remote role")
+    assert ok2 is True
