@@ -1,0 +1,28 @@
+# Runtime state
+
+- setup_complete: true
+- dry_run_complete: true
+- dry_run_approved: true
+- real_applies_authorized: true
+- curve_dental_score_override: true
+- daily_schedule_active: true
+- ramp_day: 1
+- daily_limit: 10
+- last_run_date: 2026-11-11
+- last_run_summary: "overnight_hunt 2026-11-11T19:21-06:00: window=False; salary=MISSING; hunt=7; ge7=2; curve_gate=False"
+- timezone: America/Chicago
+- window_start: "08:00"
+- window_end: "12:00"
+- schedule_days: "Mon-Sun"
+- max_post_age_days: 4
+- us_only: true
+- remote_only: true
+- open_positions_only: true
+- linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- sponsorship_answer: "No"
+- applications_requested_today: 0
+- applications_succeeded_today: 0
+- candidate_name: Susmitha Chowdary
+- work_authorization: F1-OPT
+- min_pay_usd: 120000
+- next_apply_window: "2026-11-12 08:00 America/Chicago"

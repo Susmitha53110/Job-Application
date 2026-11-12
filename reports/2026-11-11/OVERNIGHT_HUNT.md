@@ -1,0 +1,29 @@
+# Overnight hunt — 2026-11-11 19:21 CST
+
+- Window open: **False**
+- Salary set: **MISSING**
+- Curve gate ok: **False**
+- Curve blockers: Outside window (now 2026-11-11 19:21 CST). Applies only 08:00–12:00 America/Chicago., Salary expectations number missing in Memory/FORM_ANSWERS
+- Ready submits report: `/workspace/reports/2026-11-11/READY_SUBMITS.md`
+- Clera ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 19:21 CST). Applies only 08:00–12:00 America/Chicago.']
+- Bayesian Health ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 19:21 CST). Applies only 08:00–12:00 America/Chicago.']
+- Watchlist hits: **2**
+- Hunt hits (≤4d): **7**
+- Near-miss (5–10d, watch only): **5**
+- New ≥7 packets (non-Curve): **2**
+
+## Eligible ≥7
+- clera / Senior Data Integration Engineer — [9.7, 9.7, 9.7] — https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3
+- bayesianhealth / Software Engineer, Data & Analytics Platform — [7.5, 7.5, 9.1] — https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655
+
+## All scored non-Curve
+- clera / Senior Data Integration Engineer — [9.7, 9.7, 9.7] — candidate
+- kit / Senior Analytics Engineer — [5.9, 5.9, 8.0] — skip_low_score
+- bayesianhealth / Software Engineer, Data & Analytics Platform — [7.5, 7.5, 9.1] — candidate
+
+## Near-miss watch (do not apply — age >4d)
+- MongoDB / Senior Software Engineer, Database Integration & Observability — posted 2026-11-05T14:17:34-05:00 — Austin; Boston; Chicago; Dallas; New York City; Palo Alto; San Francisco; Seattle; United States — https://www.mongodb.com/careers/job/?gh_jid=8352433
+- Machinify / Senior Data Engineer  — posted 2026-11-03T18:23:56-05:00 — Remote - US — https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009
+- NinjaOne / Senior Data Engineer | Emerging Products — posted 2026-11-04T17:05:39-05:00 — California, USA; Colorado, USA; Connecticut, USA; Florida, USA; Georgia, USA; Illinois, USA; Kansas, USA; Maine, USA; Maryland, USA; Massachusetts, USA; Melbourne, Victoria, Australia; New Jersey, USA; New South Wales, Australia; New York, USA; North Carolina, USA; Ohio, USA; Oregon, USA; Tennessee, USA; Texas, USA; Virginia, USA; Washington, USA — https://job-boards.greenhouse.io/ninjaone/jobs/4470734009
+- mux / Senior Data Engineer — posted 2026-11-03T21:57:56.538+00:00 — Remote, United States — https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe
+- lumin-digital / Senior Data Engineer — posted 2026-11-03T18:24:24.798+00:00 — Remote - United States — https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384

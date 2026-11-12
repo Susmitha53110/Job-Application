@@ -1,0 +1,30 @@
+[
+  {
+    "key": "clera",
+    "company": "Clera",
+    "role": "Senior Data Integration Engineer",
+    "url": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
+    "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_clera_Senior_Data_Integration_Engineer.docx",
+    "kit": "/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md",
+    "needs_salary": false,
+    "ok": false,
+    "blockers": [
+      "Outside window (now 2026-11-11 19:53 CST). Applies only 08:00\u201312:00 America/Chicago."
+    ],
+    "computer_use_prompt": ""
+  },
+  {
+    "key": "bayesian",
+    "company": "Bayesian Health",
+    "role": "Software Engineer, Data & Analytics Platform",
+    "url": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
+    "resume": "/workspace/resumes/tailored/2026-11-12/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx",
+    "kit": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md",
+    "needs_salary": false,
+    "ok": false,
+    "blockers": [
+      "Outside window (now 2026-11-11 19:53 CST). Applies only 08:00\u201312:00 America/Chicago."
+    ],
+    "computer_use_prompt": ""
+  }
+]
