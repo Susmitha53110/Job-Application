@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import json
 from dataclasses import asdict, dataclass
-from datetime import date
 from pathlib import Path
 
 from . import paths
@@ -50,37 +49,46 @@ PLATFORM_STORY = (
 
 
 def build_computer_use_prompt(salary: str) -> str:
+    from .window import chicago_today
+
     resume = str(_curve_resume_a())
+    day = chicago_today().isoformat()
+    proof_dir = f"applications/applied/{day}/Curve_Dental_Data_Engineer"
     return f"""
-SUBMIT Curve Dental Data Engineer on Rippling ATS. This is a REAL submit authorized by Susmitha.
+SUBMIT Curve Dental Data Engineer on Rippling ATS. REAL submit authorized by Susmitha.
+Field map: applications/needs-me/2026-11-12/CURVE_FORM_MAP.md + Curve_Dental_SUBMIT_KIT.md
 
 URL: {CURVE_URL}
 Window: must still be 08:00–12:00 America/Chicago. If outside, STOP without submitting.
+If salary is NEEDS_ME or blank, STOP without submitting.
 Resume file on disk: {resume}
 
-Fill exactly:
-- Resume: upload the .docx above
-- First name: Susmitha
-- Last name: Chowdary
-- Email: Susmithachowdary67@gmail.com
-- Pronouns: skip
-- Current company: Optum
-- Phone: +1 9132073787
-- Location: Austin
-- Sponsorship now/future: No
-- Years related experience: 5
-- Home office + reliable internet: Yes
-- Data platform story: {PLATFORM_STORY}
-- Salary expectations: {salary}
-- How did you hear: Company careers / Rippling ATS research
-- Text message consent: No
-- EEO voluntary section: leave blank / skip
+Fill in this exact order (no login/CAPTCHA expected):
+1) Resume*: upload the .docx above (.doc/.docx/.pdf accepted)
+2) First name*: Susmitha
+3) Last name*: Chowdary
+4) Email*: Susmithachowdary67@gmail.com
+5) Pronouns: skip
+6) Current company: Optum
+7) Phone number*: +1 9132073787
+8) Location*: Austin (use Austin, TX if autocomplete requires a match)
+9) Cover letter: skip
+10) Will you now or in the future require sponsorship to work in the US?*: No
+11) How many years of related experience do you have?*: 5
+12) Do you have a home office, with reliable internet, that you can work from?*: Yes
+13) Describe a data platform you built or significantly improved...*: {PLATFORM_STORY}
+14) What are your salary expectations for this role?*: {salary}
+15) How did you hear about, or where did you find, this job posting?*: Company careers / Rippling ATS research
+16) Gender (voluntary): Choose not to disclose
+17) Please identify your race (voluntary): Choose not to disclose
+18) Are you Hispanic/Latino? (voluntary): Choose not to disclose
+19) Veteran Status (voluntary): Choose not to disclose
+20) Text message consent*: select "No - I do not consent to receiving text messages"
 
-Then click Apply/Submit ONCE.
-Save proof:
-1) Screenshot confirmation page to /opt/cursor/artifacts/curve_dental_confirmation.png (or workspace applications/applied/{date.today().isoformat()}/Curve_Dental_Data_Engineer/)
-2) Copy confirmation text into applications/applied/{date.today().isoformat()}/Curve_Dental_Data_Engineer/confirmation.txt
-If CAPTCHA/login/error: STOP and report needs-me. Do not invent answers.
+Click Apply ONCE.
+Save proof under {proof_dir}/ and /opt/cursor/artifacts/curve_dental_confirmation.png
+Also write confirmation.txt with the on-screen confirmation text.
+If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent answers.
 """.strip()
 
 

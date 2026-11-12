@@ -1,6 +1,6 @@
 # Active blockers — prevents first confirmed `applied`
 
-Updated: 2026-11-11 ~19:00 America/Chicago
+Updated: 2026-11-11 ~18:35 America/Chicago
 
 ## Must clear before Curve Dental submit
 1. **Salary expectations number** — not set. Unlock:
@@ -12,10 +12,11 @@ Updated: 2026-11-11 ~19:00 America/Chicago
 ## Already ready
 - Memory profile + base resume
 - Dry-run approved + real ATS authorized
-- Curve honest score **(b)=8.1 ≥ 7** after scoring fix (dbt/BI gaps + Snowflake tenure stretch still disclosed)
-- Rippling submit kit + resume (a)
-- Form answers: LinkedIn, sponsorship **No**, text consent **No**
-- Timers: daily 08:00 CT + 07:00 CT prep once + overnight hunt every 3h UTC
+- Curve honest score **(b)=8.1 ≥ 7**
+- Live Rippling form inspected (no submit): `applications/needs-me/2026-11-12/CURVE_FORM_MAP.md`
+- Submit kit + resume (a); EEO → Choose not to disclose; text consent **No**
+- Background-check question not present on Curve form
+- Timers: overnight hunt + 07:00 CT prep + 08:00 CT daily
 
 ## Not blockers (fail-closed skips)
 Consumer Edge Staff, Keebo no-visa, older/geo/clearance posts — see `memory/APPLIED_INDEX.md`.

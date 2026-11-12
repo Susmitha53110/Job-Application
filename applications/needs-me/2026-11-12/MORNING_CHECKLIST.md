@@ -2,29 +2,31 @@
 
 ## Gate checks (in order)
 1. `python3 -m agent window` → must show `"open": true`
-2. `python3 -m agent ready` → readiness report; submit only items with empty blockers
-3. Re-verify each queued URL still open + posted ≤4 days (API dates only)
-4. Ramp day 1 daily limit: **10**
-5. Resume version **(a)** only
-6. Confirmed answers: LinkedIn · sponsorship **No** · work auth Yes (F1-OPT)
+2. `python3 -m agent curve-gate` → `"ok": true` and non-empty computer-use prompt
+3. `python3 -m agent ready` / `python3 -m agent daily`
+4. Re-verify Curve `createdOn` still ≤4 days via Rippling API
+5. Ramp day 1 daily limit: **10**
+6. Resume version **(a)** only
 
 ## Still blocking ALL submits until answered
-- Salary expectations number — unlock with `python3 -m agent set-salary <number>` after Susmitha replies (see `../SALARY.md`)
-- EEO / demographics if forced choice beyond Prefer not to disclose
-- Background check Yes/No if asked
+- **Salary expectations number** — chat `Salary expectations: <n>` or `applications/needs-me/SALARY_REPLY.md` or `python3 -m agent set-salary <n>`
 - CAPTCHA / login wall → needs me, move on
 
-## Queue order
-1. **Curve Dental — Data Engineer** (filter-pass dry-run; Susmitha approved this packet)
-   - URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
-   - Score override: **authorized** for this approved filter-pass packet (b=5.6)
-   - **Submit kit (exact Rippling fields):** `Curve_Dental_SUBMIT_KIT.md`
-   - Preview: `../2026-11-11/filled-previews/Curve_Dental_Data_Engineer_FILLED_PREVIEW.md`
-   - Resume: `resumes/tailored/2026-11-11/Susmitha_Curve_Dental_Data_Engineer.docx`
-   - After submit: save confirmation under `applications/applied/2026-11-12/` then `python3 -m agent proof --company "Curve Dental" --role "Data Engineer" --url <url> --file <proof>`
-2. Hunt more ≥7 mid-level US-remote ≤4d ATS roles via `python3 -m agent.ats_hunt`
-3. Consumer Edge Staff (b=2.5, 8+ yrs) → skip unless Susmitha overrides
-4. Keebo → skip (visa support will not be provided)
+## Curve-specific (form inspected 2026-11-11 — not submitted)
+- Full field map: `CURVE_FORM_MAP.md`
+- Submit kit: `Curve_Dental_SUBMIT_KIT.md`
+- Resume: `resumes/tailored/2026-11-12/Susmitha_Curve_Dental_Data_Engineer.docx`
+- Scores **8.1 / 8.1 / 10.0**
+- EEO: **Choose not to disclose** on each voluntary dropdown
+- Text consent: **No**
+- Background-check question: **not on this form**
+- After submit: `applications/applied/2026-11-12/Curve_Dental_Data_Engineer/` + `python3 -m agent proof …`
+
+## Also hunt
+- Mid-level US-remote ≤4d ATS roles via `python3 -m agent overnight` / `daily`
+- Kit Senior AE (b=6.7) → skip unless override
+- Keebo / Consumer Edge Staff → skip unless override
+- Near-miss 5–10d watch only — do not apply
 
 ## Proof rule
 Confirmation page/email proof required for `applied`; else `unconfirmed`.
