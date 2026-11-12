@@ -147,38 +147,52 @@ def search_remotive(
     limit: int = 30,
     max_age_days: int = DEFAULT_MAX_AGE_DAYS,
 ) -> list[JobPosting]:
-    q = urllib.parse.quote(search)
-    url = f"https://remotive.com/api/remote-jobs?search={q}&limit={limit}"
-    data = _get_json(url)
-    jobs = []
+    # Remotive's free-text search is noisy; also probe the data category feed.
+    urls = [
+        f"https://remotive.com/api/remote-jobs?search={urllib.parse.quote(search)}&limit={limit}",
+        f"https://remotive.com/api/remote-jobs?category=data&limit={limit}",
+    ]
+    jobs: list[JobPosting] = []
+    seen: set[str] = set()
     cutoff = _cutoff(max_age_days)
-    for item in data.get("jobs", []):
-        posted_dt = _parse_dt(item.get("publication_date"))
-        if posted_dt and posted_dt < cutoff:
+    for url in urls:
+        try:
+            data = _get_json(url)
+        except Exception:
             continue
-        title = item.get("title") or ""
-        title_l = title.lower()
-        if "data engineer" not in title_l and "analytics engineer" not in title_l:
-            continue
-        loc = item.get("candidate_required_location") or "Remote"
-        desc = item.get("description") or ""
-        if not is_us_remote(str(loc), desc, source="remotive", title=title):
-            continue
-        jobs.append(
-            JobPosting(
-                title=title,
-                company=item.get("company_name") or "Unknown",
-                url=item.get("url") or "",
-                location=str(loc),
-                description=desc,
-                source="remotive",
-                posted_at=posted_dt.date().isoformat() if posted_dt else None,
-                salary_text=item.get("salary") or None,
-                apply_url=item.get("url"),
-                is_open=True,
-                country_hint="US",
+        for item in data.get("jobs", []):
+            posted_dt = _parse_dt(item.get("publication_date"))
+            if posted_dt and posted_dt < cutoff:
+                continue
+            title = item.get("title") or ""
+            title_l = title.lower()
+            if "data engineer" not in title_l and "analytics engineer" not in title_l:
+                continue
+            if any(x in title_l for x in ("staff", "principal", "director", "intern")):
+                continue
+            loc = item.get("candidate_required_location") or "Remote"
+            desc = item.get("description") or ""
+            if not is_us_remote(str(loc), desc, source="remotive", title=title):
+                continue
+            key = (item.get("url") or f"{item.get('company_name')}:{title}").lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            jobs.append(
+                JobPosting(
+                    title=title,
+                    company=item.get("company_name") or "Unknown",
+                    url=item.get("url") or "",
+                    location=str(loc),
+                    description=desc,
+                    source="remotive",
+                    posted_at=posted_dt.date().isoformat() if posted_dt else None,
+                    salary_text=item.get("salary") or None,
+                    apply_url=item.get("url"),
+                    is_open=True,
+                    country_hint="US",
+                )
             )
-        )
     return jobs
 
 
