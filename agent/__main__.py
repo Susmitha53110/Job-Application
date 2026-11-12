@@ -11,6 +11,7 @@ from .dry_run import run_dry_run
 from .morning_run import readiness_report
 from .overnight_hunt import run_overnight_hunt
 from .proof import require_proof_for_applied, write_proof_manifest
+from .ready_submits import evaluate_all_ready_submits, packet_ready_except_window, write_ready_submits_report
 from .salary import set_salary
 from .setup_gate import check_setup, write_needs_me_packet
 from .watchlist import poll_watchlist, write_watchlist_report
@@ -32,6 +33,7 @@ def main(argv: list[str] | None = None) -> int:
     p_daily.add_argument("--dry", action="store_true", help="Force prepare-only (no submit guidance)")
     sub.add_parser("overnight", help="Prepare-only overnight hunt (never submits)")
     sub.add_parser("curve-gate", help="Evaluate Curve Dental submit gate + write prompt")
+    sub.add_parser("ready-submits", help="Evaluate Clera/Bayesian (no-salary) submit gates")
     p_sal = sub.add_parser("set-salary", help="Save Susmitha-provided salary expectation")
     p_sal.add_argument("amount", help="Yearly USD number, e.g. 120000")
     p_proof = sub.add_parser("proof", help="Write proof manifest for an apply attempt")
@@ -119,6 +121,33 @@ def main(argv: list[str] | None = None) -> int:
         report = write_gate_report()
         print(json.dumps({"ok": gate.ok, "blockers": gate.blockers, "salary": gate.salary, "report": str(report)}, indent=2))
         return 0 if gate.ok else 4
+
+    if args.cmd == "ready-submits":
+        items = evaluate_all_ready_submits()
+        report = write_ready_submits_report()
+        print(
+            json.dumps(
+                {
+                    "report": str(report),
+                    "items": [
+                        {
+                            "key": i.key,
+                            "company": i.company,
+                            "role": i.role,
+                            "ok": i.ok,
+                            "needs_salary": i.needs_salary,
+                            "blockers": i.blockers,
+                            "url": i.url,
+                            "resume": str(i.resume),
+                        }
+                        for i in items
+                    ],
+                },
+                indent=2,
+            )
+        )
+        # Outside window is expected overnight; succeed if packets are otherwise ready.
+        return 0 if any(packet_ready_except_window(i) for i in items) else 4
 
     if args.cmd == "set-salary":
         try:

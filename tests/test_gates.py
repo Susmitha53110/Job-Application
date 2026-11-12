@@ -40,3 +40,12 @@ def test_window_status_shape():
     status = check_apply_window()
     assert hasattr(status, "open")
     assert hasattr(status, "reason")
+
+
+def test_ready_submits_only_window_blocked_outside():
+    from agent.ready_submits import evaluate_all_ready_submits, packet_ready_except_window
+
+    items = evaluate_all_ready_submits()
+    assert len(items) >= 2
+    # Outside CT window these should still be packet-ready for morning
+    assert any(packet_ready_except_window(i) for i in items)

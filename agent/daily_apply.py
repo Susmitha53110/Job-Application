@@ -10,6 +10,7 @@ from .log_writer import append_applied_index, append_log_row
 from .curve_apply import evaluate_curve_gate, write_gate_report
 from .morning_run import readiness_report, CURVE_URL
 from .process_job import process_job
+from .ready_submits import evaluate_all_ready_submits, write_ready_submits_report
 from .resume_parse import load_base_resume
 from .salary import salary_from_memory
 from .setup_gate import find_base_resume
@@ -85,6 +86,8 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     hunt = hunt_all()
     gate = evaluate_curve_gate()
     gate_report = write_gate_report(day=day)
+    ready_items = evaluate_all_ready_submits()
+    ready_report = write_ready_submits_report(day=day)
 
     applied: list[str] = []
     unconfirmed: list[str] = []
@@ -164,33 +167,29 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
 
     # SUBMIT_NOW: in-window jobs that do not need salary, plus Curve if gated
     submit_now = paths.REPORTS / day / "SUBMIT_NOW.md"
-    no_salary_kits = [
-        (
-            "Clera",
-            "Senior Data Integration Engineer",
-            "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
-            "applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md",
-        ),
-        (
-            "Bayesian Health",
-            "Software Engineer, Data & Analytics Platform",
-            "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
-            "applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md",
-        ),
-    ]
     if window.open and not dry:
         lines = [
             f"# SUBMIT NOW — {day}",
             "",
             "Window is OPEN. Submit company ATS only (never Easy Apply). Proof required.",
             "",
-            "## Queue (no salary field on form)",
+            f"Ready-submits report: `{ready_report}`",
+            "",
         ]
-        for company, role, url, kit in no_salary_kits:
-            lines.append(f"- **{company} / {role}** — {url}")
-            lines.append(f"  - Kit: `{kit}`")
-        lines.append("")
+        any_ready = False
+        for item in ready_items:
+            lines.append(f"## {item.company} — {item.role}")
+            lines.append(f"- Ready: **{item.ok}**")
+            lines.append(f"- URL: {item.url}")
+            lines.append(f"- Kit: `{item.kit}`")
+            if item.ok:
+                any_ready = True
+                notes.append(f"{item.company} READY TO SUBMIT — use prompt below; then proof.")
+                lines.extend(["", "### Computer-use prompt", "```", item.computer_use_prompt, "```", ""])
+            else:
+                lines.extend(["", "### Blockers", *[f"- {b}" for b in item.blockers], ""])
         if gate.ok:
+            any_ready = True
             notes.append(
                 "Curve Dental READY TO SUBMIT — run computer-use with prompt from "
                 f"{gate_report}; then `python3 -m agent proof`."
@@ -218,8 +217,10 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                     "",
                 ]
             )
-        notes.append("Clera + Bayesian Health ready in-window without salary field.")
-        submit_now.write_text("\n".join(lines), encoding="utf-8")
+        if any_ready:
+            submit_now.write_text("\n".join(lines), encoding="utf-8")
+        elif submit_now.exists():
+            submit_now.unlink()
     else:
         notes.append("Outside window or dry run — prepare only. Clera/Bayesian/Curve kits ready.")
         if submit_now.exists():
@@ -231,6 +232,10 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         "hunt_count": len(hunt),
         "curve_gate_ok": gate.ok,
         "curve_blockers": gate.blockers,
+        "ready_submits": [
+            {"company": i.company, "role": i.role, "ok": i.ok, "blockers": i.blockers, "url": i.url}
+            for i in ready_items
+        ],
         "ready": ready_payload.get("ready"),
         "applied": applied,
         "unconfirmed": unconfirmed,
@@ -239,7 +244,8 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         "notes": " | ".join(notes),
         "readiness_report": ready_payload.get("report"),
         "curve_gate_report": str(gate_report),
-        "submit_now": str(submit_now) if gate.ok and not dry else None,
+        "ready_submits_report": str(ready_report),
+        "submit_now": str(submit_now) if window.open and not dry and submit_now.exists() else None,
     }
     report = write_daily_report(day, payload)
     payload["daily_report"] = str(report)

@@ -14,6 +14,7 @@ from .watchlist import poll_watchlist, write_watchlist_report
 from .window import check_apply_window
 from .salary import salary_from_memory
 from .curve_apply import evaluate_curve_gate, write_gate_report
+from .ready_submits import evaluate_all_ready_submits, write_ready_submits_report
 
 
 def run_overnight_hunt(*, day: str | None = None) -> dict:
@@ -25,6 +26,8 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
     salary = salary_from_memory()
     gate = evaluate_curve_gate()
     write_gate_report(day=day)
+    ready_items = evaluate_all_ready_submits()
+    ready_report = write_ready_submits_report(day=day)
 
     watch = poll_watchlist()
     write_watchlist_report(watch, day=day)
@@ -66,6 +69,12 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
         f"- Salary set: **{salary or 'MISSING'}**",
         f"- Curve gate ok: **{gate.ok}**",
         f"- Curve blockers: {', '.join(gate.blockers) or '(none)'}",
+        f"- Ready submits report: `{ready_report}`",
+        *[
+            f"- {i.company} ready (ignoring window check in overnight): "
+            f"**{i.ok or (len(i.blockers)==1 and 'Outside window' in i.blockers[0])}** blockers={i.blockers}"
+            for i in ready_items
+        ],
         f"- Watchlist hits: **{len(watch)}**",
         f"- Hunt hits (≤4d): **{len(hunted)}**",
         f"- Near-miss (5–10d, watch only): **{len(near)}**",
