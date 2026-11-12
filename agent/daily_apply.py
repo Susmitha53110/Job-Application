@@ -101,7 +101,7 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     if not salary:
         needs_me.append(
             "Salary expectations number missing for forms that ask (Curve Dental). "
-            "Clera + Bayesian Health forms have no salary field — submit those in-window without it. "
+            "Clera + Bayesian + Life360 forms have no salary field — submit those in-window without it. "
             "Unlock Curve via `python3 -m agent set-salary <n>` after Susmitha replies."
         )
 
