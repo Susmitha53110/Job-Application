@@ -3,12 +3,12 @@
 - Stretch: No major years stretch detected.
 - Must be true before applying:
   - All bullets remain factual from base resume
-  - F1-OPT work authorization answers will be handled by Susmitha (needs me)
+  - Work auth Yes (F1-OPT); sponsorship No (Susmitha-confirmed in Memory)
   - Posted pay >= $120k if pay is listed
   - Apply on company ATS only (never LinkedIn Easy Apply)
 - Dealbreakers checked:
   - location=remote
-  - sponsorship/visa → needs me (F1-OPT)
+  - sponsorship answer No (Memory); skip employers that forbid OPT/F1 outright
   - travel/on-site checked via JD patterns
   - min pay $120k when posted
 - Remove if I cannot back it up in an interview:
@@ -18,4 +18,4 @@
 - Version to submit: **(a) reorder-only** unless (b) approved
 - Additions flagged verify-before-applying:
   - (none)
-- Work auth: F1-OPT → any sponsorship/visa question is **needs me**
+- Work auth: F1-OPT → Authorized to work **Yes**; sponsorship answer **No** (Memory)
