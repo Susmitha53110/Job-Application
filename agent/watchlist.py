@@ -65,6 +65,9 @@ GREENHOUSE_WATCH = [
     "sezzle",
     "extend",
     "branch",
+    "ninjaone",
+    "omadahealth",
+    "komodohealth",
 ]
 
 ASHBY_WATCH = [
@@ -92,11 +95,17 @@ ASHBY_WATCH = [
     "fivetran",
     "census",
     "hightouch",
+    "lumin-digital",
+    "cruxclimate",
 ]
 
 RIPPLING_WATCH = [
     "curve-dental",
     "intertwine-associates",
+    "urban-sdk",
+    "sumersports",
+    "joinroot",
+    "accelerant",
 ]
 
 TITLE_HINTS = (

@@ -86,6 +86,11 @@ DEFAULT_GH_BOARDS = [
     "sezzle",
     "machinifyinc",
     "zipcolimited",
+    "ninjaone",
+    "zocdoc",
+    "omadahealth",
+    "komodohealth",
+    "dbtlabs",
 ]
 
 
@@ -269,42 +274,111 @@ def hunt_rippling(board_slug: str, max_age_days: int = 4) -> list[JobPosting]:
     return out
 
 
+DEFAULT_ASHBY_ORGS = [
+    "people-data-labs",
+    "troveo",
+    "workos",
+    "base-operations",
+    "notion",
+    "ramp",
+    "linear",
+    "vercel",
+    "posthog",
+    "vanta",
+    "drata",
+    "persona",
+    "plaid",
+    "airbyte",
+    "fivetran",
+    "census",
+    "hightouch",
+    "atlan",
+    "datafold",
+    "bigeye",
+    "mux",
+    "clera",
+    "kit",
+    "lumin-digital",
+    "cruxclimate",
+    "sentilink",
+    "commure",
+    "hex",
+]
+
+DEFAULT_RIPPLING_BOARDS = [
+    "curve-dental",
+    "urban-sdk",
+    "sumersports",
+    "joinroot",
+    "accelerant",
+    "intertwine-associates",
+]
+
+DEFAULT_LEVER_COMPANIES = [
+    "palantir",
+    "netflix",
+    "twitch",
+    "anduril",
+    "benchling",
+    "color",
+]
+
+
+def hunt_lever(companies: list[str] | None = None, max_age_days: int = 4) -> list[JobPosting]:
+    from datetime import datetime, timezone
+
+    out: list[JobPosting] = []
+    for company in companies or DEFAULT_LEVER_COMPANIES:
+        try:
+            data = _get_json(f"https://api.lever.co/v0/postings/{company}?mode=json")
+        except Exception:
+            continue
+        if not isinstance(data, list):
+            continue
+        for j in data:
+            title = j.get("text") or ""
+            if not _title_match(title):
+                continue
+            created = j.get("createdAt")
+            if isinstance(created, (int, float)):
+                posted = datetime.fromtimestamp(created / 1000, tz=timezone.utc).isoformat()
+            else:
+                posted = str(created) if created else None
+            if not within_max_age(posted, max_age_days=max_age_days):
+                continue
+            cats = j.get("categories") or {}
+            loc = cats.get("location") or ""
+            workplace = cats.get("workplaceType") or j.get("workplaceType") or ""
+            desc = _strip_html(j.get("descriptionPlain") or j.get("description") or "")
+            if not is_us_remote(f"{loc} {workplace}", desc, source="lever", title=title):
+                continue
+            out.append(
+                JobPosting(
+                    title=title,
+                    company=company,
+                    url=j.get("hostedUrl") or j.get("applyUrl") or "",
+                    location=str(loc),
+                    description=desc,
+                    source="lever",
+                    posted_at=posted,
+                    apply_url=j.get("applyUrl") or j.get("hostedUrl"),
+                    is_open=True,
+                    country_hint="US",
+                )
+            )
+    return out
+
+
 def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     from .job_search import search_arbeitnow, search_remotive
     from .watchlist import poll_watchlist
 
     jobs: list[JobPosting] = []
     jobs.extend(hunt_greenhouse(max_age_days=max_age_days))
-    jobs.extend(
-        hunt_ashby(
-            [
-                "people-data-labs",
-                "troveo",
-                "workos",
-                "base-operations",
-                "notion",
-                "ramp",
-                "linear",
-                "vercel",
-                "posthog",
-                "vanta",
-                "drata",
-                "persona",
-                "plaid",
-                "airbyte",
-                "fivetran",
-                "census",
-                "hightouch",
-                "atlan",
-                "datafold",
-                "bigeye",
-                "mux",
-                "clera",
-            ],
-            max_age_days=max_age_days,
-        )
-    )
-    jobs.extend(hunt_rippling("curve-dental", max_age_days=max_age_days))
+    jobs.extend(hunt_ashby(DEFAULT_ASHBY_ORGS, max_age_days=max_age_days))
+    for slug in DEFAULT_RIPPLING_BOARDS:
+        jobs.extend(hunt_rippling(slug, max_age_days=max_age_days))
+    jobs.extend(hunt_lever(max_age_days=max_age_days))
     jobs.extend(poll_watchlist(max_age_days=max_age_days))
     for q in ("data engineer", "analytics engineer", "snowflake data engineer", "databricks data engineer"):
         try:
@@ -325,6 +399,12 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
         seen.add(key)
         uniq.append(j)
     return filter_jobs(uniq, max_age_days=max_age_days)
+
+
+def hunt_near_miss(*, lookback_days: int = 10) -> list[JobPosting]:
+    """US-remote DE/AE roles 5–10 days old — watch only, never apply (fail-closed ≤4d)."""
+    wide = hunt_all(max_age_days=lookback_days)
+    return [j for j in wide if not within_max_age(j.posted_at, max_age_days=4)]
 
 
 if __name__ == "__main__":

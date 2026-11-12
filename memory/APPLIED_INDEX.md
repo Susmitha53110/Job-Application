@@ -34,3 +34,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-12 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
 2026-11-12 | kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
 2026-11-11 | kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
+2026-11-11 | kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
