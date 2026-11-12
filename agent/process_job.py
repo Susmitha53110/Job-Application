@@ -127,6 +127,13 @@ def process_job(
     except Exception as e:
         fail_reasons.append(f"Form preflight error: {e}")
 
+    # iCIMS / login-gated apply URLs → needs-me (never create accounts)
+    apply_blob = f"{job.url or ''} {job.apply_url or ''}".lower()
+    if "icims.com" in apply_blob and "/login" in apply_blob:
+        fail_reasons.append(
+            "ATS apply requires candidate login (iCIMS) — STOP needs-me; never create accounts or use Easy Apply"
+        )
+
     yrs = _years_required(job.description)
     stretch = "No major years stretch detected."
     if yrs and yrs > my_years:
