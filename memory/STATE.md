@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "Scoring fix for Ashby/Rippling prose JDs: Curve now honest b=8.1 (≥7). Kit 6.7 skip. Only salary + 08:00 CT window block first applied."
+- last_run_summary: "overnight_hunt 2026-11-11T18:24-06:00: window=False; salary=MISSING; hunt=5; ge7=0; curve_gate=False"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

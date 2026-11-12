@@ -9,6 +9,7 @@ from .curve_apply import evaluate_curve_gate, write_gate_report
 from .daily_apply import run_daily
 from .dry_run import run_dry_run
 from .morning_run import readiness_report
+from .overnight_hunt import run_overnight_hunt
 from .proof import require_proof_for_applied, write_proof_manifest
 from .salary import set_salary
 from .setup_gate import check_setup, write_needs_me_packet
@@ -29,6 +30,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("ready", help="Write morning readiness report (window/salary/queue)")
     p_daily = sub.add_parser("daily", help="Run daily hunt/readiness/report cycle")
     p_daily.add_argument("--dry", action="store_true", help="Force prepare-only (no submit guidance)")
+    sub.add_parser("overnight", help="Prepare-only overnight hunt (never submits)")
     sub.add_parser("curve-gate", help="Evaluate Curve Dental submit gate + write prompt")
     p_sal = sub.add_parser("set-salary", help="Save Susmitha-provided salary expectation")
     p_sal.add_argument("amount", help="Yearly USD number, e.g. 120000")
@@ -106,6 +108,10 @@ def main(argv: list[str] | None = None) -> int:
         window = check_apply_window()
         force_dry = bool(args.dry) or (not window.open)
         print(json.dumps(run_daily(dry=force_dry), indent=2))
+        return 0
+
+    if args.cmd == "overnight":
+        print(json.dumps(run_overnight_hunt(), indent=2))
         return 0
 
     if args.cmd == "curve-gate":

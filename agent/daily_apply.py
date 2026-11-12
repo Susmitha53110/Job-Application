@@ -13,7 +13,7 @@ from .process_job import process_job
 from .resume_parse import load_base_resume
 from .salary import salary_from_memory
 from .setup_gate import find_base_resume
-from .window import check_apply_window
+from .window import check_apply_window, chicago_today
 
 
 def _load_resume():
@@ -78,7 +78,7 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     Actual browser submits happen via computer-use follow-up using the submit kit;
     this function records readiness and proof when provided.
     """
-    day = day or date.today().isoformat()
+    day = day or chicago_today().isoformat()
     window = check_apply_window()
     salary = salary_from_memory()
     ready_payload = readiness_report(day=day)

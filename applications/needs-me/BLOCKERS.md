@@ -1,10 +1,11 @@
 # Active blockers — prevents first confirmed `applied`
 
-Updated: 2026-11-11 ~18:00 America/Chicago
+Updated: 2026-11-11 ~19:00 America/Chicago
 
 ## Must clear before Curve Dental submit
 1. **Salary expectations number** — not set. Unlock:
    - Chat: `Salary expectations: 120000` (or your number)
+   - Or paste into `applications/needs-me/SALARY_REPLY.md`
    - Or CLI after reply: `python3 -m agent set-salary 120000`
 2. **Apply window** — only **08:00–12:00 America/Chicago**. Next open: **2026-11-12 08:00 CT**.
 
@@ -14,7 +15,7 @@ Updated: 2026-11-11 ~18:00 America/Chicago
 - Curve honest score **(b)=8.1 ≥ 7** after scoring fix (dbt/BI gaps + Snowflake tenure stretch still disclosed)
 - Rippling submit kit + resume (a)
 - Form answers: LinkedIn, sponsorship **No**, text consent **No**
-- Timers: daily 08:00 CT + 07:00 CT prep once
+- Timers: daily 08:00 CT + 07:00 CT prep once + overnight hunt every 3h UTC
 
 ## Not blockers (fail-closed skips)
 Consumer Edge Staff, Keebo no-visa, older/geo/clearance posts — see `memory/APPLIED_INDEX.md`.

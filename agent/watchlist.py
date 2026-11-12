@@ -4,11 +4,11 @@ import html
 import json
 import re
 from dataclasses import asdict
-from datetime import date
 from pathlib import Path
 
 from . import paths
 from .job_search import JobPosting, _get_json, filter_jobs, is_us_remote, within_max_age
+from .window import chicago_today
 
 
 # Companies / boards aligned to Susmitha's Optum + Azure/Databricks/Snowflake stack
@@ -315,7 +315,7 @@ def poll_watchlist(*, max_age_days: int = 4) -> list[JobPosting]:
 
 
 def write_watchlist_report(jobs: list[JobPosting], day: str | None = None) -> Path:
-    day = day or date.today().isoformat()
+    day = day or chicago_today().isoformat()
     out_dir = paths.REPORTS / day
     out_dir.mkdir(parents=True, exist_ok=True)
     path = out_dir / "WATCHLIST.md"

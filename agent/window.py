@@ -1,8 +1,11 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import date, datetime
 from zoneinfo import ZoneInfo
+
+
+TZ_CHICAGO = "America/Chicago"
 
 
 @dataclass
@@ -12,9 +15,13 @@ class WindowStatus:
     reason: str
 
 
+def chicago_today() -> date:
+    return datetime.now(ZoneInfo(TZ_CHICAGO)).date()
+
+
 def check_apply_window(
     *,
-    tz_name: str = "America/Chicago",
+    tz_name: str = TZ_CHICAGO,
     start_hour: int = 8,
     end_hour: int = 12,
 ) -> WindowStatus:

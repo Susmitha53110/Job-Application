@@ -26,7 +26,35 @@ def parse_salary_from_text(blob: str) -> str | None:
     return None
 
 
-def salary_from_memory() -> str | None:
+_BARE_AMOUNT = re.compile(r"(?m)^\s*\$?\s*([0-9]{5,6}|[0-9]{2,3},[0-9]{3})\s*$")
+
+
+def ingest_salary_reply_file() -> str | None:
+    """If Susmitha drops a number into SALARY_REPLY.md/.txt, persist it via set_salary."""
+    for name in ("SALARY_REPLY.md", "SALARY_REPLY.txt"):
+        path = paths.APPLICATIONS / "needs-me" / name
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8").strip()
+        if not text or re.search(r"NEEDS\s*ME", text, re.I):
+            continue
+        amount = parse_salary_from_text(text)
+        if not amount:
+            m = _BARE_AMOUNT.search(text)
+            if m:
+                amount = m.group(1).replace(",", "")
+        if not amount:
+            continue
+        # Already set to same value — no-op
+        existing = _salary_from_authoritative()
+        if existing == amount:
+            return amount
+        set_salary(amount)
+        return amount
+    return None
+
+
+def _salary_from_authoritative() -> str | None:
     """Return salary only from authoritative Memory fields — never from example docs."""
     # 1) STATE explicit field
     if paths.STATE.exists():
@@ -55,6 +83,14 @@ def salary_from_memory() -> str | None:
             if m:
                 return m.group(1).replace(",", "")
     return None
+
+
+def salary_from_memory() -> str | None:
+    """Authoritative salary, after ingesting any drop-file reply."""
+    ingested = ingest_salary_reply_file()
+    if ingested:
+        return ingested
+    return _salary_from_authoritative()
 
 
 def set_salary(amount: str | int) -> dict:

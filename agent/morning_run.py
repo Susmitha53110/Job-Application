@@ -11,7 +11,7 @@ from .process_job import process_job
 from .resume_parse import load_base_resume
 from .salary import salary_from_memory
 from .setup_gate import find_base_resume
-from .window import check_apply_window
+from .window import check_apply_window, chicago_today
 
 
 CURVE_URL = "https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394"
@@ -38,7 +38,7 @@ def _curve_override() -> bool:
 
 
 def readiness_report(*, day: str | None = None) -> dict:
-    day = day or date.today().isoformat()
+    day = day or chicago_today().isoformat()
     window = check_apply_window()
     salary = _salary_from_memory()
     hunt = hunt_all()

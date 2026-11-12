@@ -9,7 +9,7 @@ from . import paths
 from .job_search import _get_json, within_max_age
 from .morning_run import _curve_override
 from .salary import salary_from_memory
-from .window import check_apply_window
+from .window import check_apply_window, chicago_today
 
 
 CURVE_JOB_ID = "81161b01-ae38-49d2-9ca8-3b618d31c394"
@@ -126,7 +126,7 @@ def evaluate_curve_gate() -> CurveGate:
 
 
 def write_gate_report(day: str | None = None) -> Path:
-    day = day or date.today().isoformat()
+    day = day or chicago_today().isoformat()
     gate = evaluate_curve_gate()
     out_dir = paths.REPORTS / day
     out_dir.mkdir(parents=True, exist_ok=True)

@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 import json
-from datetime import date
 from pathlib import Path
 
 from . import paths
+from .window import chicago_today
 
 
 def applied_dir(company: str, role: str, day: str | None = None) -> Path:
-    day = day or date.today().isoformat()
+    day = day or chicago_today().isoformat()
     safe = "".join(ch if ch.isalnum() or ch in "-_ " else "_" for ch in f"{company}_{role}").strip().replace(" ", "_")
     out = paths.APPLICATIONS / "applied" / day / safe[:120]
     out.mkdir(parents=True, exist_ok=True)
@@ -26,7 +26,7 @@ def write_proof_manifest(
     day: str | None = None,
 ) -> Path:
     """Record proof metadata. status must be applied|unconfirmed|needs me."""
-    day = day or date.today().isoformat()
+    day = day or chicago_today().isoformat()
     folder = applied_dir(company, role, day=day) if status in {"applied", "unconfirmed"} else (
         paths.APPLICATIONS / "needs-me" / day
     )
