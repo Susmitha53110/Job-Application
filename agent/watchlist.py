@@ -98,6 +98,8 @@ ASHBY_WATCH = [
     "lumin-digital",
     "cruxclimate",
     "bayesianhealth",
+    "instructure",
+    "rula",
 ]
 
 RIPPLING_WATCH = [

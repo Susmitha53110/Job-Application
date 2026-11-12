@@ -52,6 +52,11 @@ def test_ready_submits_only_window_blocked_outside():
     assert len(items) >= 2
     # Outside CT window these should still be packet-ready for morning
     assert any(packet_ready_except_window(i) for i in items)
+    # Prompts must stay populated so 08:00 CT computer-use can submit immediately
+    window_only = [i for i in items if packet_ready_except_window(i) and not i.ok]
+    assert window_only, "expected at least one window-only blocked packet outside CT window"
+    assert all(i.computer_use_prompt for i in window_only)
+    assert all("SUBMIT" in i.computer_use_prompt for i in window_only)
 
 
 def test_morning_go_nogo_hard_pass_outside_window():

@@ -335,6 +335,8 @@ DEFAULT_ASHBY_ORGS = [
     "hex",
     "bayesianhealth",
     "Deepgram",
+    "instructure",
+    "rula",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [
