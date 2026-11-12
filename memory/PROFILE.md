@@ -72,7 +72,8 @@
 
 ## Schedule
 - Daily window: **8:00 AM – 12:00 PM** America/Chicago (**Monday–Sunday**, including weekends)
-- At **08:00 CT**: one job search → tailor → fill → submit using standing answers; **apply target ≥20** per window (until Susmitha changes it)
+- At **08:00 CT**: one job search → build queue → tailor → fill → submit; **apply target 20–25** per window (cut to 10/day if usage >85%)
+- Efficiency + quality guard: `memory/EFFICIENCY.md` · Master facts: `memory/MASTER_FACTS.md`
 - At **12:00 CT sharp**: stop (finish only in-progress app), send daily report, go idle
 - Outside window: **do nothing** (no search, rechecks, extra timers, or GitHub/CI reactions)
 - Exactly **one** recurring timer: start at 8:00 AM CT every day (until Susmitha stops it)
@@ -98,6 +99,6 @@
 - Job titles on resume: Data Engineer (Optum), Data Engineer (Citi) — never rewrite
 
 ## Daily volume
-- **Minimum applications per CT window (from 2026-11-13): 20**
-- Work the full 08:00–12:00 window toward that count; stop only at 12:00 CT or when Susmitha says stop.
-- Still skip dealbreakers / excluded companies / uncovered questions (needs me).
+- **20–25 applications** per CT window (from 2026-11-13); **10/day** if usage >85%.
+- Work the full 08:00–12:00 window; stop only at 12:00 CT or when Susmitha says stop.
+- Skip dealbreakers / excluded companies / uncovered questions (needs me).

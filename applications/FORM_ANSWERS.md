@@ -54,7 +54,7 @@ Updated: 2026-11-11 — standing answers from Susmitha. Do not flag these again.
 
 ## Apply rules (runtime)
 - Only between **08:00–12:00 America/Chicago** unless Susmitha explicitly overrides for named jobs
-- **Daily apply target (from 2026-11-13): ≥20 confirmed applications** per window
+- **Daily apply target (from 2026-11-13): 20–25 confirmed applications** per window (10/day if usage >85%)
 - US remote open · posted ≤4 days · company ATS only · never Easy Apply
 - Honest score (b) ≥ 7 unless Memory notes an explicit override
 - After tailor + fill → **SUBMIT DIRECTLY** (no approval wait). Proof required; else `unconfirmed`

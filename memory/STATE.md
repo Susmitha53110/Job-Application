@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-12
-- last_run_summary: "daily target ≥20 applies from 2026-11-13; idle until next 08:00 CT"
+- last_run_summary: "efficiency+quality guard saved; idle until 08:00 CT; target 20-25"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -30,5 +30,8 @@
 - timer_policy: exactly_one_recurring_8am_ct
 - outside_window_policy: idle_no_hunt_no_github_react
 - timer_recreate_rule: "at 12:00 CT end-of-run ensure exactly one next 8:00 AM CT timer; recreate immediately if missing"
-- daily_apply_target: 20
+- daily_apply_target: 20-25
 - daily_apply_target_effective: 2026-11-13
+- daily_apply_target_usage_cut: 10_if_usage_gt_85pct
+- efficiency_rules: memory/EFFICIENCY.md
+- master_facts: memory/MASTER_FACTS.md
