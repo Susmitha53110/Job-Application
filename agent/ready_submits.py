@@ -120,14 +120,16 @@ LIFE360 = {
         "Greenhouse form. Fill known fields only:\n"
         "- First name: Susmitha / Last name: Chowdary\n"
         "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
+        "- Country: United States / Location (City): Austin\n"
         "- Resume: upload resumes/submit/Susmitha_life360.docx\n"
         "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
+        "- Cover Letter / Website: leave blank\n"
         "- Are you legally authorized to work in the country where the job is located?: Yes\n"
         "- Do you require sponsorship ... now or in the future?: No\n"
         "- Existing employee at Life360/Tile/Jiobit?: Not an Existing Employee\n"
         "- Previously worked for Life360/Tile/Jiobit?: No\n"
-        "- Agree to Job Applicant Privacy Policy: Yes (after reading)\n"
-        "- Optional veteran/EEO: I don't wish to answer\n"
+        "- Agree to Job Applicant Privacy Policy: Yes (after reading the linked policy)\n"
+        "- Optional Gender / Hispanic / Veteran EEO: I don't wish to answer (or leave blank)\n"
         "If salary expectation / required EEO without decline / CAPTCHA appears: STOP needs-me.\n"
         "Do not invent ads/ML ownership beyond resume facts.\n"
     ),
@@ -225,8 +227,21 @@ def _jsonld_still_open(page_url: str) -> tuple[bool, str | None, str | None]:
     return True, posted, None
 
 
+def _proof_apply_day() -> str:
+    """Calendar day used for applications/applied/<day>/ when preparing overnight."""
+    from datetime import datetime, timedelta
+    from zoneinfo import ZoneInfo
+
+    now = datetime.now(ZoneInfo("America/Chicago"))
+    if check_apply_window().open:
+        return now.date().isoformat()
+    if now.hour >= 12:
+        return (now.date() + timedelta(days=1)).isoformat()
+    return now.date().isoformat()
+
+
 def _build_prompt(spec: dict, resume: Path, salary: str | None) -> str:
-    day = chicago_today().isoformat()
+    day = _proof_apply_day()
     safe = "".join(ch if ch.isalnum() or ch in "-_ " else "_" for ch in f"{spec['company']}_{spec['role']}")
     safe = safe.strip().replace(" ", "_")[:120]
     proof = f"applications/applied/{day}/{safe}"
@@ -300,8 +315,13 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
     elif not open_ok:
         blockers.append(f"{spec['company']} not open/fresh: {err or posted}")
 
+    # Keep the full computer-use prompt even when the only blocker is the CT window,
+    # so overnight / 07:00 prep handoffs are usable the moment the window opens.
+    window_only = bool(blockers) and all(
+        ("Outside window" in b) or ("08:00" in b) for b in blockers
+    )
     prompt = ""
-    if not blockers:
+    if (not blockers or window_only) and resume != Path("(missing)"):
         prompt = _build_prompt(spec, resume, salary)
 
     return ReadySubmit(
@@ -358,7 +378,8 @@ def write_ready_submits_report(day: str | None = None) -> Path:
             "## Blockers" if item.blockers else "## Blockers",
             *([f"- {b}" for b in item.blockers] or ["- (none)"]),
             "",
-            "### Computer-use prompt" if item.ok else "### Computer-use prompt",
+            "### Computer-use prompt"
+            + (" (ready when window opens)" if (not item.ok and item.computer_use_prompt) else ""),
             "```",
             item.computer_use_prompt or "(blocked)",
             "```",

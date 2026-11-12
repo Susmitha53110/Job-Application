@@ -20,8 +20,11 @@
 | Last name | Chowdary |
 | Email | Susmithachowdary67@gmail.com |
 | Phone | 9132073787 |
+| Country | United States |
+| Location (City) | Austin |
 | Resume/CV | `resumes/submit/Susmitha_life360.docx` |
 | Cover Letter | blank |
+| Website | blank |
 | LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
 | Authorized to work where job is located? | **Yes** |
 | Require sponsorship now or in future? | **No** |
