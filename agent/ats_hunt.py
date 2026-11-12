@@ -325,6 +325,7 @@ DEFAULT_ASHBY_ORGS = [
     "commure",
     "hex",
     "bayesianhealth",
+    "Deepgram",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [

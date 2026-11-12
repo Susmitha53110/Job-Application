@@ -132,6 +132,13 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             # Still require US eligibility language in description when possible
             return us_ok or "visa" not in blob
         return us_ok
+    # Jobicy remote-jobs API: jobGeo often "USA" without the word "remote" in the short payload.
+    # Still require a US geo; treat the remote-jobs feed as remote_ok.
+    if source == "jobicy":
+        loc = location.lower().strip()
+        if loc in {"usa", "us", "united states"} or "usa" in loc or "united states" in loc:
+            return True
+        return remote_ok and us_ok
     return remote_ok and us_ok
 
 
