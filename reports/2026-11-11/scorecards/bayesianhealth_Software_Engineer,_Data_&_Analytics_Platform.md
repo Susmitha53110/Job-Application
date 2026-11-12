@@ -14,11 +14,11 @@
 - dbt
 - BI tools (Looker/Tableau/Power BI)
 - ML/MLOps workflows
-- \bpython\b
-- \bsql\b
+- BI tools
+- ML/MLOps
 
-## Keywords covered honestly after tailor: data quality
-## Gaps remaining: \bpython\b, \bsql\b, \baws\b, \bdbt\b
+## Keywords covered honestly after tailor: Python, SQL, AWS, data quality
+## Gaps remaining: dbt
 
 ## Stretch call: No major years stretch detected.
 

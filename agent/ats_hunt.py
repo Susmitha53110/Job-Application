@@ -91,6 +91,8 @@ DEFAULT_GH_BOARDS = [
     "omadahealth",
     "komodohealth",
     "dbtlabs",
+    "betterhelpcom",
+    "life360",
 ]
 
 
@@ -389,6 +391,116 @@ def hunt_lever(companies: list[str] | None = None, max_age_days: int = 4) -> lis
     return out
 
 
+# Himalayas companyName → Greenhouse board slug when known (prefer company ATS over himalayas.app).
+HIMALAYAS_GH_BOARDS = {
+    "betterhelp": "betterhelpcom",
+    "life360": "life360",
+    "talkspace": "talkspace",
+}
+
+
+def hunt_himalayas(*, max_age_days: int = 4, max_pages: int = 8) -> list[JobPosting]:
+    """Probe Himalayas public jobs API; prefer Greenhouse apply URLs when board is known."""
+    out: list[JobPosting] = []
+    cursor = None
+    for _ in range(max_pages):
+        url = "https://himalayas.app/jobs/api?limit=50"
+        if cursor:
+            url += f"&cursor={cursor}"
+        try:
+            data = _get_json(url)
+        except Exception:
+            break
+        for j in data.get("jobs") or []:
+            title = j.get("title") or ""
+            if not _title_match(title):
+                continue
+            tl = title.lower()
+            if any(x in tl for x in ("staff", "principal", "director", "manager", "intern", "extern")):
+                continue
+            pub = j.get("pubDate")
+            posted = str(pub) if pub is not None else None
+            if not within_max_age(posted, max_age_days=max_age_days):
+                continue
+            locs = j.get("locationRestrictions") or []
+            if isinstance(locs, list) and locs:
+                if not any(
+                    "united states" in str(x).lower() or str(x).lower() in {"usa", "us", "worldwide", "anywhere"}
+                    for x in locs
+                ):
+                    continue
+                loc_s = ", ".join(str(x) for x in locs)
+            else:
+                loc_s = "Remote, United States"
+            company = j.get("companyName") or "Unknown"
+            desc = j.get("description") or ""
+            if isinstance(desc, list):
+                desc = " ".join(str(x) for x in desc)
+            desc = _strip_html(str(desc))
+            apply = j.get("applicationLink") or j.get("guid") or ""
+            # Prefer company Greenhouse board when we know the slug
+            board = HIMALAYAS_GH_BOARDS.get(company.lower().replace(" ", ""))
+            if board:
+                try:
+                    listing = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs")
+                    for gj in listing.get("jobs") or []:
+                        if (gj.get("title") or "").strip().lower() != title.strip().lower():
+                            continue
+                        jid = gj.get("id")
+                        if not jid:
+                            continue
+                        detail = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{jid}")
+                        posted_gh = detail.get("first_published") or detail.get("updated_at") or posted
+                        if not within_max_age(posted_gh, max_age_days=max_age_days):
+                            continue
+                        loc = ((detail.get("location") or {}).get("name") if isinstance(detail.get("location"), dict) else "") or loc_s
+                        desc_gh = _strip_html(detail.get("content") or "") or desc
+                        apply_gh = detail.get("absolute_url") or gj.get("absolute_url") or apply
+                        if not is_us_remote(str(loc), desc_gh, source="greenhouse", title=title):
+                            continue
+                        out.append(
+                            JobPosting(
+                                title=detail.get("title") or title,
+                                company=company,
+                                url=apply_gh,
+                                location=str(loc),
+                                description=desc_gh,
+                                source="greenhouse",
+                                posted_at=posted_gh,
+                                apply_url=apply_gh,
+                                is_open=True,
+                                country_hint="US",
+                            )
+                        )
+                        break
+                    else:
+                        board = None  # fall through to himalayas link
+                except Exception:
+                    board = None
+            if board:
+                continue
+            if not is_us_remote(loc_s, desc, source="himalayas", title=title):
+                continue
+            out.append(
+                JobPosting(
+                    title=title,
+                    company=company,
+                    url=apply,
+                    location=loc_s,
+                    description=desc,
+                    source="himalayas",
+                    posted_at=posted,
+                    apply_url=apply,
+                    is_open=True,
+                    country_hint="US",
+                )
+            )
+        cursor = data.get("nextCursor")
+        if not cursor:
+            break
+    return out
+
+
 def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     from .job_search import search_arbeitnow, search_remotive
     from .watchlist import poll_watchlist
@@ -399,6 +511,10 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     for slug in DEFAULT_RIPPLING_BOARDS:
         jobs.extend(hunt_rippling(slug, max_age_days=max_age_days))
     jobs.extend(hunt_lever(max_age_days=max_age_days))
+    try:
+        jobs.extend(hunt_himalayas(max_age_days=max_age_days))
+    except Exception:
+        pass
     jobs.extend(poll_watchlist(max_age_days=max_age_days))
     for q in ("data engineer", "analytics engineer", "snowflake data engineer", "databricks data engineer"):
         try:

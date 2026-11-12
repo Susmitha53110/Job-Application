@@ -30,13 +30,15 @@ def run_morning_check() -> dict:
     gate = evaluate_curve_gate()
 
     # Files
-    for key in ("clera", "bayesian", "curve"):
+    for key in ("clera", "bayesian", "betterhelp", "life360", "curve"):
         docx = paths.ROOT / "resumes" / "submit" / f"Susmitha_{key}.docx"
         checks.append(CheckItem(f"resume_short_{key}", docx.exists(), str(docx)))
 
     kits = {
         "clera": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Clera_SUBMIT_KIT.md",
         "bayesian": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Bayesian_Health_SUBMIT_KIT.md",
+        "betterhelp": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "BetterHelp_SUBMIT_KIT.md",
+        "life360": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Life360_SUBMIT_KIT.md",
         "curve": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Curve_Dental_SUBMIT_KIT.md",
         "first_applies": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "FIRST_APPLIES.md",
         "form_map": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "CURVE_FORM_MAP.md",
@@ -60,6 +62,23 @@ def run_morning_check() -> dict:
                 data = _get_json(f"https://api.ashbyhq.com/posting-api/job-board/{org}")
                 found = any(item.url in (j.get("jobUrl") or "") for j in (data.get("jobs") or []))
                 checks.append(CheckItem(f"live_{item.key}", found, item.url))
+            elif "greenhouse.io" in item.url:
+                # Prefer board API when job id is in the URL
+                import re
+
+                m = re.search(r"/jobs/(\d+)", item.url)
+                board = "betterhelpcom" if item.key == "betterhelp" else ("life360" if item.key == "life360" else None)
+                if board and m:
+                    detail = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{m.group(1)}")
+                    checks.append(
+                        CheckItem(
+                            f"live_{item.key}",
+                            bool(detail.get("id")),
+                            item.url,
+                        )
+                    )
+                else:
+                    checks.append(CheckItem(f"live_{item.key}", True, item.url))
             else:
                 checks.append(CheckItem(f"live_{item.key}", True, item.url))
         except Exception as e:

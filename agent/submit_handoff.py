@@ -92,7 +92,7 @@ def build_submit_handoff(*, day: str | None = None) -> dict:
         "ready_submits_report": str(ready_report),
         "curve_gate_report": str(gate_report),
         "runbook": str(paths.APPLICATIONS / "needs-me" / "2026-11-12" / "FIRST_APPLIES.md"),
-        "submit_order": ["clera", "bayesian", "curve"],
+        "submit_order": [q["key"] for q in queue],
         "queue": queue,
         "instructions": [
             "Submit only while window_open is true.",

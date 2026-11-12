@@ -29,6 +29,7 @@ CLERA = {
     "company": "Clera",
     "role": "Senior Data Integration Engineer",
     "url": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
+    "ats": "ashby",
     "ashby_org": "Clera",
     "ashby_id": "782c2049-c72a-4920-a278-e5b1ee6fd2b3",
     "resume_globs": [
@@ -53,6 +54,7 @@ BAYESIAN = {
     "company": "Bayesian Health",
     "role": "Software Engineer, Data & Analytics Platform",
     "url": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
+    "ats": "ashby",
     "ashby_org": "bayesianhealth",
     "ashby_id": "3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
     "resume_globs": [
@@ -76,6 +78,60 @@ BAYESIAN = {
         "- 2-3 most proficient languages: Python, SQL, PySpark\n"
         "- Location: Austin, TX\n"
         "No salary field on this form.\n"
+    ),
+}
+
+BETTERHELP = {
+    "key": "betterhelp",
+    "company": "BetterHelp",
+    "role": "Senior Analytics Engineer",
+    "url": "https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008",
+    "ats": "greenhouse",
+    "gh_board": "betterhelpcom",
+    "gh_id": 5475004008,
+    "resume_globs": [
+        "*/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx",
+    ],
+    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "BetterHelp_SUBMIT_KIT.md",
+    "needs_salary": False,
+    "prompt_extra": (
+        "Greenhouse form. Fill known fields only:\n"
+        "- First name: Susmitha / Last name: Chowdary\n"
+        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
+        "- Location: Austin, TX\n"
+        "- Resume: upload resumes/submit/Susmitha_betterhelp.docx\n"
+        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
+        "- Authorized to work in the U.S.?: Yes\n"
+        "- Require sponsorship now or in future?: No\n"
+        "If salary expectation / EEO / background / CAPTCHA appears: STOP needs-me.\n"
+        "Do not claim hands-on dbt or Looker ownership.\n"
+    ),
+}
+
+LIFE360 = {
+    "key": "life360",
+    "company": "Life360",
+    "role": "Senior Data Engineer, Ads Data (AI Native)",
+    "url": "https://job-boards.greenhouse.io/life360/jobs/8935286002",
+    "ats": "greenhouse",
+    "gh_board": "life360",
+    "gh_id": 8935286002,
+    "resume_globs": [
+        "*/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx",
+    ],
+    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Life360_SUBMIT_KIT.md",
+    "needs_salary": False,
+    "prompt_extra": (
+        "Greenhouse form. Fill known fields only:\n"
+        "- First name: Susmitha / Last name: Chowdary\n"
+        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
+        "- Location: Austin, TX (US remote)\n"
+        "- Resume: upload resumes/submit/Susmitha_life360.docx\n"
+        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
+        "- Authorized to work in the U.S.?: Yes\n"
+        "- Require sponsorship now or in future?: No\n"
+        "If salary expectation / EEO / background / CAPTCHA appears: STOP needs-me.\n"
+        "Do not invent ads/ML ownership beyond resume facts.\n"
     ),
 }
 
@@ -104,6 +160,18 @@ def _ashby_still_open(org: str, job_id: str) -> tuple[bool, str | None, str | No
                 return False, posted, f"age fail-closed: publishedAt={posted}"
             return True, posted, None
     return False, None, "job id not found on Ashby board (possibly closed)"
+
+
+def _greenhouse_still_open(board: str, job_id: int | str) -> tuple[bool, str | None, str | None]:
+    """Return (open_and_fresh, first_published, error) for a Greenhouse job id."""
+    try:
+        detail = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{job_id}")
+    except Exception as e:
+        return False, None, str(e)
+    posted = detail.get("first_published") or detail.get("updated_at")
+    if not within_max_age(posted, max_age_days=4):
+        return False, posted, f"age fail-closed: first_published={posted}"
+    return True, posted, None
 
 
 def _build_prompt(spec: dict, resume: Path, salary: str | None) -> str:
@@ -152,7 +220,13 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
     if not kit.exists():
         blockers.append(f"Missing submit kit: {kit}")
 
-    open_ok, posted, err = _ashby_still_open(spec["ashby_org"], spec["ashby_id"])
+    ats = spec.get("ats") or "ashby"
+    if ats == "ashby":
+        open_ok, posted, err = _ashby_still_open(spec["ashby_org"], spec["ashby_id"])
+    elif ats == "greenhouse":
+        open_ok, posted, err = _greenhouse_still_open(spec["gh_board"], spec["gh_id"])
+    else:
+        open_ok, posted, err = False, None, f"unknown ats={ats}"
     if err and not open_ok:
         blockers.append(f"{spec['company']} verification failed: {err}")
     elif not open_ok:
@@ -177,7 +251,12 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
 
 
 def evaluate_all_ready_submits() -> list[ReadySubmit]:
-    return [evaluate_ready_submit(CLERA), evaluate_ready_submit(BAYESIAN)]
+    return [
+        evaluate_ready_submit(CLERA),
+        evaluate_ready_submit(BAYESIAN),
+        evaluate_ready_submit(BETTERHELP),
+        evaluate_ready_submit(LIFE360),
+    ]
 
 
 def packet_ready_except_window(item: ReadySubmit) -> bool:

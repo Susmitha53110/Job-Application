@@ -1,7 +1,7 @@
 {
   "day": "2026-11-12",
   "window_open": false,
-  "window_reason": "Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "window_reason": "Outside window (now 2026-11-11 20:05 CST). Applies only 08:00\u201312:00 America/Chicago.",
   "salary": null,
   "ready_submits_report": "/workspace/reports/2026-11-12/READY_SUBMITS.md",
   "curve_gate_report": "/workspace/reports/2026-11-12/CURVE_GATE.md",
@@ -9,6 +9,8 @@
   "submit_order": [
     "clera",
     "bayesian",
+    "betterhelp",
+    "life360",
     "curve"
   ],
   "queue": [
@@ -21,7 +23,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-11 20:05 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_clera_Senior_Data_Integration_Engineer.docx",
@@ -38,7 +40,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-11 20:05 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-12/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx",
@@ -48,6 +50,40 @@
     },
     {
       "order": 3,
+      "key": "betterhelp",
+      "company": "BetterHelp",
+      "role": "Senior Analytics Engineer",
+      "url": "https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008",
+      "needs_salary": false,
+      "ok_now": false,
+      "blockers": [
+        "Outside window (now 2026-11-11 20:05 CST). Applies only 08:00\u201312:00 America/Chicago."
+      ],
+      "kit": "/workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md",
+      "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx",
+      "resume_short": "/workspace/resumes/submit/Susmitha_betterhelp.docx",
+      "proof_dir": "/workspace/applications/applied/2026-11-12/BetterHelp_Senior_Analytics_Engineer",
+      "computer_use_prompt": ""
+    },
+    {
+      "order": 4,
+      "key": "life360",
+      "company": "Life360",
+      "role": "Senior Data Engineer, Ads Data (AI Native)",
+      "url": "https://job-boards.greenhouse.io/life360/jobs/8935286002",
+      "needs_salary": false,
+      "ok_now": false,
+      "blockers": [
+        "Outside window (now 2026-11-11 20:05 CST). Applies only 08:00\u201312:00 America/Chicago."
+      ],
+      "kit": "/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md",
+      "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx",
+      "resume_short": "/workspace/resumes/submit/Susmitha_life360.docx",
+      "proof_dir": "/workspace/applications/applied/2026-11-12/Life360_Senior_Data_Engineer_Ads_Data_AI_Native",
+      "computer_use_prompt": ""
+    },
+    {
+      "order": 5,
       "key": "curve",
       "company": "Curve Dental",
       "role": "Data Engineer",
@@ -55,7 +91,7 @@
       "needs_salary": true,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.",
+        "Outside window (now 2026-11-11 20:05 CST). Applies only 08:00\u201312:00 America/Chicago.",
         "Salary expectations number missing in Memory/FORM_ANSWERS"
       ],
       "kit": "/workspace/applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md",

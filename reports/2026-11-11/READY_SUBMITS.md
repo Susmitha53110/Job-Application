@@ -9,7 +9,7 @@ Jobs that can be computer-use submitted when the CT window is open.
 - Resume: `/workspace/resumes/tailored/2026-11-11/Susmitha_clera_Senior_Data_Integration_Engineer.docx`
 - Kit: `/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-11 19:53 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt
 ```
@@ -23,7 +23,35 @@ Jobs that can be computer-use submitted when the CT window is open.
 - Resume: `/workspace/resumes/tailored/2026-11-12/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx`
 - Kit: `/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-11 19:53 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.
+
+### Computer-use prompt
+```
+(blocked)
+```
+
+## BetterHelp — Senior Analytics Engineer
+- Ready: **False**
+- Needs salary: **False**
+- URL: https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008
+- Resume: `/workspace/resumes/tailored/2026-11-11/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx`
+- Kit: `/workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md`
+## Blockers
+- Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.
+
+### Computer-use prompt
+```
+(blocked)
+```
+
+## Life360 — Senior Data Engineer, Ads Data (AI Native)
+- Ready: **False**
+- Needs salary: **False**
+- URL: https://job-boards.greenhouse.io/life360/jobs/8935286002
+- Resume: `/workspace/resumes/tailored/2026-11-11/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx`
+- Kit: `/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md`
+## Blockers
+- Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt
 ```
