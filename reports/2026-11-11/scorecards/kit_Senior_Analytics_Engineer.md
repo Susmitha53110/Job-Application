@@ -6,19 +6,19 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 6.7 | raw 16.142857142857142/24.0 |
-| (b) Reorder-only | 6.7 | apply if ≥ 7 |
-| (c) + hedged additions | 8.8 | do not submit without approval |
+| (a) Original | 5.9 | raw 14.142857142857142/24.0 |
+| (b) Reorder-only | 5.9 | apply if ≥ 7 |
+| (c) + hedged additions | 8.0 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - dbt
 - BI tools (Looker/Tableau/Power BI)
-- redshift
-- BI tools
-- dashboards
+- \bredshift\b
+- \bpython\b
+- \bsql\b
 
-## Keywords covered honestly after tailor: Python, SQL, git
-## Gaps remaining: redshift, dbt
+## Keywords covered honestly after tailor: (see score)
+## Gaps remaining: \bpython\b, \bsql\b, \bredshift\b, \bdbt\b, \bgit\b
 
 ## Stretch call: JD asks for 7+ years; Susmitha has ~5. Call this a **stretch** — do not hide the gap in the score.
 

@@ -7,16 +7,17 @@ from .jd_tier import TieredJd
 from .resume_parse import Resume
 
 
+# Keep in sync with jd_tier.TECH_PATTERNS — word boundaries avoid "scala"∈"scalable".
 TECH_PATTERNS = [
-    r"python", r"sql", r"pyspark", r"spark", r"scala", r"java", r"bash",
-    r"databricks", r"snowflake", r"delta\s*lake", r"adf|azure data factory",
-    r"adls", r"azure", r"aws", r"glue", r"s3", r"athena", r"redshift",
-    r"bigquery", r"airflow", r"dbt", r"dagster", r"prefect", r"kafka",
-    r"flink", r"oracle", r"parquet", r"avro", r"ci/?cd", r"git",
-    r"dimensional modeling|star schema|snowflake schema", r"scd",
-    r"etl|elt", r"data quality", r"hipaa|phi", r"looker|tableau|power\s*bi",
-    r"feature store|feature engineering", r"mlops|machine learning",
-    r"pinecone|milvus|weaviate", r"terraform|infrastructure-as-code|iac",
+    r"\bpython\b", r"\bsql\b", r"\bpyspark\b", r"\bspark\b", r"\bscala\b", r"\bjava\b", r"\bbash\b",
+    r"\bdatabricks\b", r"\bsnowflake\b", r"delta\s*lake", r"\badf\b|azure data factory",
+    r"\badls\b", r"\bazure\b", r"\baws\b", r"\bglue\b", r"\bs3\b", r"\bathena\b", r"\bredshift\b",
+    r"\bbigquery\b", r"\bairflow\b", r"\bdbt\b", r"\bdagster\b", r"\bprefect\b", r"\bkafka\b",
+    r"\bflink\b", r"\boracle\b", r"\bparquet\b", r"\bavro\b", r"ci/?cd", r"\bgit\b",
+    r"dimensional modeling|star schema|snowflake schema", r"\bscd\b",
+    r"\betl\b|\belt\b", r"data quality", r"\bhipaa\b|\bphi\b", r"\blooker\b|\btableau\b|power\s*bi",
+    r"feature store|feature engineering", r"\bmlops\b|machine learning",
+    r"\bpinecone\b|\bmilvus\b|\bweaviate\b", r"\bterraform\b|infrastructure-as-code|\biac\b",
 ]
 
 
@@ -106,15 +107,15 @@ def _requirement_score(item_text: str, corpus: str, my_years: int = 5) -> tuple[
     if jd_tech:
         # Split core DE stack vs adjacent ML/tooling
         core = {t for t in jd_tech if t not in {
-            r"mlops|machine learning", r"feature store|feature engineering",
-            r"pinecone|milvus|weaviate", r"looker|tableau|power\s*bi",
-            r"airflow", r"kafka", r"dbt", r"dagster", r"prefect", r"flink",
+            r"\bmlops\b|machine learning", r"feature store|feature engineering",
+            r"\bpinecone\b|\bmilvus\b|\bweaviate\b", r"\blooker\b|\btableau\b|power\s*bi",
+            r"\bairflow\b", r"\bkafka\b", r"\bdbt\b", r"\bdagster\b", r"\bprefect\b", r"\bflink\b",
         }}
         adj = jd_tech - core
         core_hits = sum(1 for t in core if re.search(t, corpus, re.I)) if core else 0
         adj_hits = sum(1 for t in adj if re.search(t, corpus, re.I)) if adj else 0
         # ADF ≈ orchestration tooling when JD asks Airflow family
-        if any(t in adj for t in (r"airflow", r"dagster", r"prefect")) and re.search(
+        if any(t in adj for t in (r"\bairflow\b", r"\bdagster\b", r"\bprefect\b")) and re.search(
             r"azure data factory|\badf\b", corpus
         ):
             adj_hits = max(adj_hits, 1)
@@ -174,19 +175,21 @@ def score_resume_against_jd(resume: Resume, jd: TieredJd, my_years: int = 5) -> 
     missing_tech = sorted(jd_tech - resume_tech)
     # human labels
     label = {
-        r"airflow": "Airflow",
-        r"kafka": "Kafka",
-        r"dbt": "dbt",
-        r"dagster": "Dagster",
-        r"prefect": "Prefect",
-        r"bigquery": "BigQuery",
-        r"looker|tableau|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
+        r"\bairflow\b": "Airflow",
+        r"\bkafka\b": "Kafka",
+        r"\bdbt\b": "dbt",
+        r"\bdagster\b": "Dagster",
+        r"\bprefect\b": "Prefect",
+        r"\bbigquery\b": "BigQuery",
+        r"\blooker\b|\btableau\b|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
         r"feature store|feature engineering": "feature engineering / feature store",
-        r"mlops|machine learning": "ML/MLOps workflows",
-        r"pinecone|milvus|weaviate": "vector databases",
-        r"flink": "Flink",
-        r"avro": "Avro",
-        r"terraform|infrastructure-as-code|iac": "IaC / Terraform",
+        r"\bmlops\b|machine learning": "ML/MLOps workflows",
+        r"\bpinecone\b|\bmilvus\b|\bweaviate\b": "vector databases",
+        r"\bflink\b": "Flink",
+        r"\bavro\b": "Avro",
+        r"\bterraform\b|infrastructure-as-code|\biac\b": "IaC / Terraform",
+        r"\bscala\b": "Scala",
+        r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
     }
     top5 = []
     for pat in missing_tech:

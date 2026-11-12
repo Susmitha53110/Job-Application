@@ -102,6 +102,11 @@ TITLE_HINTS = (
     "warehouse engineer",
     "snowflake engineer",
     "databricks engineer",
+    "data & analytics",
+    "data and analytics",
+    "data integration",
+    "analytics platform",
+    "data analytics engineer",
 )
 
 
@@ -115,7 +120,16 @@ def _strip_html(text: str) -> str:
 
 def _title_match(title: str) -> bool:
     tl = (title or "").lower()
-    return any(x in tl for x in TITLE_HINTS)
+    if any(x in tl for x in ("director", "vp ", "vice president", "chief ", "intern", "co-op")):
+        return False
+    if any(x in tl for x in TITLE_HINTS):
+        return True
+    # Healthcare/product SWE titles that are clearly data-platform roles
+    if "software engineer" in tl and any(
+        x in tl for x in ("data", "analytics", "etl", "pipeline", "warehouse")
+    ):
+        return True
+    return False
 
 
 def hunt_greenhouse(boards: list[str] | None = None, max_age_days: int = 4) -> list[JobPosting]:
@@ -247,13 +261,18 @@ def hunt_rippling(board_slug: str, max_age_days: int = 4) -> list[JobPosting]:
                 remote_us = True
         location = ", ".join(loc_names) or "Remote"
         company = detail.get("companyName") or board_slug
-        desc_html = ""
+        parts: list[str] = []
         desc_obj = detail.get("description") or {}
         if isinstance(desc_obj, dict):
-            desc_html = desc_obj.get("company") or desc_obj.get("role") or ""
-            if isinstance(desc_html, dict):
-                desc_html = " ".join(str(v) for v in desc_html.values())
-        desc = _strip_html(str(desc_html))
+            for key in ("role", "company", "responsibilities", "requirements"):
+                chunk = desc_obj.get(key) or ""
+                if isinstance(chunk, dict):
+                    chunk = " ".join(str(v) for v in chunk.values())
+                if chunk:
+                    parts.append(str(chunk))
+        elif desc_obj:
+            parts.append(str(desc_obj))
+        desc = _strip_html(" ".join(parts))
         full_title = detail.get("name") or title
         if not remote_us and not is_us_remote(location, desc, source="rippling", title=full_title):
             continue
@@ -303,6 +322,7 @@ DEFAULT_ASHBY_ORGS = [
     "sentilink",
     "commure",
     "hex",
+    "bayesianhealth",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [

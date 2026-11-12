@@ -97,6 +97,7 @@ ASHBY_WATCH = [
     "hightouch",
     "lumin-digital",
     "cruxclimate",
+    "bayesianhealth",
 ]
 
 RIPPLING_WATCH = [

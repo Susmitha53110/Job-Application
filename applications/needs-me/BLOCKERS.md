@@ -1,22 +1,26 @@
-# Active blockers — prevents first confirmed `applied`
+# Active blockers — prevents confirmed `applied`
 
-Updated: 2026-11-11 ~18:35 America/Chicago
+Updated: 2026-11-11 ~19:00 America/Chicago
 
-## Must clear before Curve Dental submit
-1. **Salary expectations number** — not set. Unlock:
-   - Chat: `Salary expectations: 120000` (or your number)
-   - Or paste into `applications/needs-me/SALARY_REPLY.md`
-   - Or CLI after reply: `python3 -m agent set-salary 120000`
-2. **Apply window** — only **08:00–12:00 America/Chicago**. Next open: **2026-11-12 08:00 CT**.
+## Global
+1. **Apply window** — only **08:00–12:00 America/Chicago**. Next open: **2026-11-12 08:00 CT**.
+
+## Per-job
+| Job | Score | Salary on form? | Other |
+|-----|-------|-----------------|-------|
+| **Clera — Senior Data Integration Engineer** | 9.7 | **No** | Ready at window open. Kit: `2026-11-12/Clera_SUBMIT_KIT.md` |
+| **Bayesian Health — SWE Data & Analytics Platform** | 7.5 | **No** | Ready at window open. Sponsorship **No**. Kit: `2026-11-12/Bayesian_Health_SUBMIT_KIT.md` |
+| **Curve Dental — Data Engineer** | 8.1 | **Yes — BLOCKED** | Needs `Salary expectations: <n>`. Kit + form map ready |
+
+## Unlock Curve salary
+- Chat: `Salary expectations: 120000` (or your number)
+- Or `applications/needs-me/SALARY_REPLY.md`
+- Or `python3 -m agent set-salary <n>`
 
 ## Already ready
-- Memory profile + base resume
 - Dry-run approved + real ATS authorized
-- Curve honest score **(b)=8.1 ≥ 7**
-- Live Rippling form inspected (no submit): `applications/needs-me/2026-11-12/CURVE_FORM_MAP.md`
-- Submit kit + resume (a); EEO → Choose not to disclose; text consent **No**
-- Background-check question not present on Curve form
+- LinkedIn, sponsorship **No**, text consent **No**
 - Timers: overnight hunt + 07:00 CT prep + 08:00 CT daily
 
-## Not blockers (fail-closed skips)
-Consumer Edge Staff, Keebo no-visa, older/geo/clearance posts — see `memory/APPLIED_INDEX.md`.
+## Skips
+Kit AE 5.9–6.7; Consumer Edge Staff; Keebo no-visa — see `memory/APPLIED_INDEX.md`.

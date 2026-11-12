@@ -3,16 +3,17 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
+# Short tokens use word boundaries so "scala" ≠ "scalable", "java" ≠ "javascript", etc.
 TECH_PATTERNS = [
-    r"python", r"sql", r"pyspark", r"spark", r"scala", r"java", r"bash",
-    r"databricks", r"snowflake", r"delta\s*lake", r"adf|azure data factory",
-    r"adls", r"azure", r"aws", r"glue", r"s3", r"athena", r"redshift",
-    r"bigquery", r"airflow", r"dbt", r"dagster", r"prefect", r"kafka",
-    r"flink", r"oracle", r"parquet", r"avro", r"ci/?cd", r"git",
-    r"dimensional modeling|star schema|snowflake schema", r"scd",
-    r"etl|elt", r"data quality", r"hipaa|phi", r"looker|tableau|power\s*bi",
-    r"feature store|feature engineering", r"mlops|machine learning",
-    r"pinecone|milvus|weaviate", r"terraform|infrastructure-as-code|iac",
+    r"\bpython\b", r"\bsql\b", r"\bpyspark\b", r"\bspark\b", r"\bscala\b", r"\bjava\b", r"\bbash\b",
+    r"\bdatabricks\b", r"\bsnowflake\b", r"delta\s*lake", r"\badf\b|azure data factory",
+    r"\badls\b", r"\bazure\b", r"\baws\b", r"\bglue\b", r"\bs3\b", r"\bathena\b", r"\bredshift\b",
+    r"\bbigquery\b", r"\bairflow\b", r"\bdbt\b", r"\bdagster\b", r"\bprefect\b", r"\bkafka\b",
+    r"\bflink\b", r"\boracle\b", r"\bparquet\b", r"\bavro\b", r"ci/?cd", r"\bgit\b",
+    r"dimensional modeling|star schema|snowflake schema", r"\bscd\b",
+    r"\betl\b|\belt\b", r"data quality", r"\bhipaa\b|\bphi\b", r"\blooker\b|\btableau\b|power\s*bi",
+    r"feature store|feature engineering", r"\bmlops\b|machine learning",
+    r"\bpinecone\b|\bmilvus\b|\bweaviate\b", r"\bterraform\b|infrastructure-as-code|\biac\b",
 ]
 
 
@@ -160,25 +161,28 @@ def _tech_requirements_from_prose(jd_text: str) -> list[JdRequirement]:
             tech_hits.append(pat)
     # Deduplicate overlapping labels
     labels = {
-        r"python": "Python",
-        r"sql": "SQL",
-        r"pyspark": "PySpark",
-        r"spark": "Spark",
-        r"databricks": "Databricks",
-        r"snowflake": "Snowflake",
+        r"\bpython\b": "Python",
+        r"\bsql\b": "SQL",
+        r"\bpyspark\b": "PySpark",
+        r"\bspark\b": "Spark",
+        r"\bscala\b": "Scala",
+        r"\bdatabricks\b": "Databricks",
+        r"\bsnowflake\b": "Snowflake",
         r"delta\s*lake": "Delta Lake",
-        r"adf|azure data factory": "Azure Data Factory",
-        r"azure": "Azure",
-        r"aws": "AWS",
-        r"airflow": "Airflow",
-        r"dbt": "dbt",
-        r"dagster": "Dagster",
-        r"prefect": "Prefect",
-        r"kafka": "Kafka",
-        r"etl|elt": "ETL/ELT pipelines",
+        r"\badf\b|azure data factory": "Azure Data Factory",
+        r"\bazure\b": "Azure",
+        r"\baws\b": "AWS",
+        r"\bairflow\b": "Airflow",
+        r"\bdbt\b": "dbt",
+        r"\bdagster\b": "Dagster",
+        r"\bprefect\b": "Prefect",
+        r"\bkafka\b": "Kafka",
+        r"\betl\b|\belt\b": "ETL/ELT pipelines",
         r"data quality": "data quality",
-        r"looker|tableau|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
+        r"\blooker\b|\btableau\b|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
         r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
+        r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
+        r"\bmlops\b|machine learning": "ML/MLOps workflows",
     }
     seen = set()
     for pat in tech_hits:
@@ -192,6 +196,12 @@ def _tech_requirements_from_prose(jd_text: str) -> list[JdRequirement]:
             "Azure Data Factory", "Azure", "AWS", "ETL/ELT pipelines", "dbt",
             "dimensional modeling", "data quality",
         } else 2
+        # Example-only mentions (e.g. dbt) are preferred signal, not hard gates
+        if label == "dbt" and re.search(
+            r"(?:e\.g\.?|such as|including|like)\s+[^.],{0,80}\bdbt\b|(?:e\.g\.?|such as|including|like)\s+dbt\b",
+            low,
+        ):
+            weight = 2
         reqs.append(JdRequirement(text=f"Experience with {label}", weight=weight, kind="hard" if weight == 3 else "important"))
 
     # Pipeline ownership prose

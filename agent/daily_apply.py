@@ -97,8 +97,9 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         needs_me.append("Wait for 08:00–12:00 America/Chicago window before any ATS submit")
     if not salary:
         needs_me.append(
-            "Salary expectations number missing — set in applications/FORM_ANSWERS.md "
-            "as `Salary expectations | 120000` (exact figure Susmitha chooses)"
+            "Salary expectations number missing for forms that ask (Curve Dental). "
+            "Clera + Bayesian Health forms have no salary field — submit those in-window without it. "
+            "Unlock Curve via `python3 -m agent set-salary <n>` after Susmitha replies."
         )
 
     # Process new hunt hits into dry-run packets for later
@@ -140,7 +141,7 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
             )
         else:
             needs_me.append(
-                f"NEW ≥7 fit ready to apply when window+salary clear: {pkt.company} / {pkt.role} — {pkt.url}"
+                f"NEW ≥7 fit ready to apply when window open: {pkt.company} / {pkt.role} — {pkt.url}"
             )
             append_log_row(
                 {
@@ -161,34 +162,66 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                 }
             )
 
-    # Curve guidance / submit-now marker
+    # SUBMIT_NOW: in-window jobs that do not need salary, plus Curve if gated
     submit_now = paths.REPORTS / day / "SUBMIT_NOW.md"
-    if gate.ok and not dry:
-        notes.append(
-            "Curve Dental READY TO SUBMIT — run computer-use with prompt from "
-            f"{gate_report}; then `python3 -m agent proof`."
-        )
-        submit_now.write_text(
-            "\n".join(
+    no_salary_kits = [
+        (
+            "Clera",
+            "Senior Data Integration Engineer",
+            "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
+            "applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md",
+        ),
+        (
+            "Bayesian Health",
+            "Software Engineer, Data & Analytics Platform",
+            "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
+            "applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md",
+        ),
+    ]
+    if window.open and not dry:
+        lines = [
+            f"# SUBMIT NOW — {day}",
+            "",
+            "Window is OPEN. Submit company ATS only (never Easy Apply). Proof required.",
+            "",
+            "## Queue (no salary field on form)",
+        ]
+        for company, role, url, kit in no_salary_kits:
+            lines.append(f"- **{company} / {role}** — {url}")
+            lines.append(f"  - Kit: `{kit}`")
+        lines.append("")
+        if gate.ok:
+            notes.append(
+                "Curve Dental READY TO SUBMIT — run computer-use with prompt from "
+                f"{gate_report}; then `python3 -m agent proof`."
+            )
+            lines.extend(
                 [
-                    f"# SUBMIT NOW — {day}",
-                    "",
-                    "Curve Dental Data Engineer is fully gated green.",
+                    "## Curve Dental (salary present)",
                     f"- URL: {gate.url}",
                     f"- Salary: {gate.salary}",
                     f"- Gate report: {gate_report}",
                     "",
-                    "## Computer-use prompt",
+                    "### Computer-use prompt",
                     "```",
                     gate.computer_use_prompt,
                     "```",
                     "",
                 ]
-            ),
-            encoding="utf-8",
-        )
+            )
+        else:
+            notes.append("Curve Dental queued — salary and/or other gate blockers remain.")
+            lines.extend(
+                [
+                    "## Curve Dental",
+                    f"- Blocked: {', '.join(gate.blockers) or '(unknown)'}",
+                    "",
+                ]
+            )
+        notes.append("Clera + Bayesian Health ready in-window without salary field.")
+        submit_now.write_text("\n".join(lines), encoding="utf-8")
     else:
-        notes.append("Curve Dental remains queued: approved packet + submit kit ready.")
+        notes.append("Outside window or dry run — prepare only. Clera/Bayesian/Curve kits ready.")
         if submit_now.exists():
             submit_now.unlink()
 

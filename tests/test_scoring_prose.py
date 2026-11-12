@@ -54,3 +54,42 @@ def test_kit_senior_below_seven_with_years_stretch():
     score = score_resume_against_jd(resume, jd, my_years=5)
     # 7+ years stretch + dbt-heavy should not clear 7 on reorder-only without hedges
     assert score.fit_10 < 7.0, score
+
+
+def test_scala_does_not_match_scalable():
+    from agent.score import _tech_in_text
+
+    assert r"\bscala\b" not in _tech_in_text("building scalable secure data infrastructure")
+    assert r"\bscala\b" in _tech_in_text("experience with Scala and Spark")
+
+
+BAYESIAN_PROSE = """
+QUALIFICATIONS BS in Computer Science or other relevant technical discipline.
+5+ years of experience in building scalable, secure data or analytics infrastructure on a cloud
+platform (preferably AWS), serving live products and customers. Proficient in Python and SQL.
+Deep knowledge in modern data and analytics technologies, such as cloud-based data warehouses,
+transformation frameworks (e.g. dbt), workflow orchestration tools, and BI tools like Tableau or
+Quicksight, and keen ability to integrate with existing infrastructure. Experience in leveraging
+LLMs in distributed data processing and analytics systems. Excellent communication skills.
+PREFERRED QUALIFICATIONS Experience handling sensitive data that contains PHI/PII securely.
+Experience building analytics technology for clinical or health data.
+"""
+
+
+def test_bayesian_prose_not_poisoned_by_scalable():
+    resume = _tiny_resume()
+    resume.summary += " HIPAA-aligned PHI controls and AWS data pipelines."
+    resume.skills_raw += ", data quality, HIPAA, PHI, AWS, Tableau"
+    resume.skills.extend(["AWS", "HIPAA", "PHI", "Tableau", "data quality"])
+    jd = tier_jd(
+        "Software Engineer, Data & Analytics Platform",
+        "Bayesian Health",
+        "https://example.com",
+        "Remote - US Only",
+        BAYESIAN_PROSE,
+    )
+    assert not any(r.text.lower().startswith("experience with scala") for r in jd.required), [
+        r.text for r in jd.required
+    ]
+    score = score_resume_against_jd(resume, jd, my_years=5)
+    assert score.fit_10 >= 7.0, (score.fit_10, score.missing, [r.text for r in jd.required])
