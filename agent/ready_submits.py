@@ -120,12 +120,15 @@ LIFE360 = {
         "Greenhouse form. Fill known fields only:\n"
         "- First name: Susmitha / Last name: Chowdary\n"
         "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
-        "- Location: Austin, TX (US remote)\n"
         "- Resume: upload resumes/submit/Susmitha_life360.docx\n"
         "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Authorized to work in the U.S.?: Yes\n"
-        "- Require sponsorship now or in future?: No\n"
-        "If salary expectation / EEO / background / CAPTCHA appears: STOP needs-me.\n"
+        "- Are you legally authorized to work in the country where the job is located?: Yes\n"
+        "- Do you require sponsorship ... now or in the future?: No\n"
+        "- Existing employee at Life360/Tile/Jiobit?: Not an Existing Employee\n"
+        "- Previously worked for Life360/Tile/Jiobit?: No\n"
+        "- Agree to Job Applicant Privacy Policy: Yes (after reading)\n"
+        "- Optional veteran/EEO: I don't wish to answer\n"
+        "If salary expectation / required EEO without decline / CAPTCHA appears: STOP needs-me.\n"
         "Do not invent ads/ML ownership beyond resume facts.\n"
     ),
 }
@@ -208,6 +211,18 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
 
     for hb in spec.get("hard_blockers") or []:
         blockers.append(hb)
+
+    # Live Greenhouse question preflight (catches multi-year no-sponsorship traps).
+    if (spec.get("ats") or "") == "greenhouse" and spec.get("gh_board") and spec.get("gh_id"):
+        try:
+            from .form_preflight import preflight_greenhouse
+
+            pf = preflight_greenhouse(spec["gh_board"], spec["gh_id"])
+            for b in pf.blockers:
+                if b not in blockers:
+                    blockers.append(b)
+        except Exception as e:
+            blockers.append(f"Greenhouse preflight error: {e}")
 
     resume = _newest_resume(spec["resume_globs"])
     if resume is None or not resume.exists():

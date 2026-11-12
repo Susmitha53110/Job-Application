@@ -117,6 +117,16 @@ def process_job(
         if name == "on_site" and "austin" not in (job.location or "").lower():
             fail_reasons.append(f"On-site outside Austin: {snippet}")
 
+    # Greenhouse application-question preflight (multi-year no-sponsorship, citizen-only, salary)
+    try:
+        from .form_preflight import preflight_from_url
+
+        pf = preflight_from_url(job.url or job.apply_url or "")
+        if pf and pf.blockers:
+            fail_reasons.extend(pf.blockers)
+    except Exception as e:
+        fail_reasons.append(f"Form preflight error: {e}")
+
     yrs = _years_required(job.description)
     stretch = "No major years stretch detected."
     if yrs and yrs > my_years:
