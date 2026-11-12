@@ -62,3 +62,26 @@ def test_morning_go_nogo_hard_pass_outside_window():
     assert out["report_json"]
     # Salary may be missing; hard GO should still pass overnight if packets/files exist
     assert out["go"] is True, out.get("hard_failures")
+
+
+def test_icims_login_url_flagged_needs_me():
+    from agent.job_search import JobPosting
+    from agent.process_job import process_job
+    from agent.resume_parse import load_base_resume
+    from agent.setup_gate import find_base_resume
+
+    resume = load_base_resume(find_base_resume())
+    job = JobPosting(
+        title="Data Engineer",
+        company="LoginGateCo",
+        url="https://careers-example.icims.com/jobs/1/login",
+        location="United States, Remote",
+        description="Remote United States data engineer SQL Python Azure 3-5 years experience",
+        source="test",
+        posted_at="2026-11-11T12:00:00+00:00",
+        apply_url="https://careers-example.icims.com/jobs/1/login",
+        is_open=True,
+        country_hint="US",
+    )
+    pkt = process_job(resume, job, dry_run=True, my_years=5, day="2026-11-11")
+    assert "iCIMS" in pkt.reason
