@@ -26,3 +26,4 @@
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
 - next_apply_window: "2026-11-12 08:00 America/Chicago"
+- salary_expectation: 120000

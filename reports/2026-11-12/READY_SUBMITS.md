@@ -9,7 +9,7 @@ Jobs that can be computer-use submitted when the CT window is open.
 - Resume: `/workspace/resumes/tailored/2026-11-12/Susmitha_clera_Senior_Data_Integration_Engineer.docx`
 - Kit: `/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-11 21:42 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-11 23:16 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt (ready when window opens)
 ```
@@ -42,7 +42,7 @@ If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent a
 - Resume: `/workspace/resumes/tailored/2026-11-12/Susmitha_bayesianhealth_Software_Engineer_Data_Analytics_Platform.docx`
 - Kit: `/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-11 21:42 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-11 23:16 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt (ready when window opens)
 ```
@@ -81,7 +81,7 @@ If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent a
 - Resume: `/workspace/resumes/tailored/2026-11-12/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx`
 - Kit: `/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-11 21:42 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-11 23:16 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt (ready when window opens)
 ```
@@ -111,6 +111,42 @@ Do not invent ads/ML ownership beyond resume facts.
 
 Click Submit Application ONCE.
 Save proof under applications/applied/2026-11-12/Life360_Senior_Data_Engineer__Ads_Data__AI_Native_/ and /opt/cursor/artifacts/life360_confirmation.png
+Write confirmation.txt with on-screen confirmation text.
+If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent answers.
+```
+
+## BetterHelp — Senior Analytics Engineer
+- Ready: **False**
+- Needs salary: **False**
+- URL: https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008
+- Resume: `/workspace/resumes/tailored/2026-11-12/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx`
+- Kit: `/workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md`
+## Blockers
+- Outside window (now 2026-11-11 23:16 CST). Applies only 08:00–12:00 America/Chicago.
+
+### Computer-use prompt (ready when window opens)
+```
+SUBMIT BetterHelp — Senior Analytics Engineer on company ATS. REAL submit authorized by Susmitha.
+Kit: /workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md
+
+URL: https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008
+Window: must still be 08:00–12:00 America/Chicago. If outside, STOP.
+Resume file on disk (prefer short path): /workspace/resumes/submit/Susmitha_betterhelp.docx
+Fallback resume: /workspace/resumes/tailored/2026-11-12/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx
+
+Greenhouse form. Fill known fields only:
+- First name: Susmitha / Last name: Chowdary
+- Email: Susmithachowdary67@gmail.com / Phone: 9132073787
+- Country: United States / Location (City): Austin
+- Resume: upload resumes/submit/Susmitha_betterhelp.docx
+- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- Are you located in and able to work in the US without visa sponsorship for the next 5 years?: Yes
+- Pronouns: Prefer not to say / skip
+If salary appears: 120000. Show filled form to Susmitha before Submit.
+If CAPTCHA/login/unexpected required field: STOP needs-me.
+
+Click Submit Application ONCE.
+Save proof under applications/applied/2026-11-12/BetterHelp_Senior_Analytics_Engineer/ and /opt/cursor/artifacts/betterhelp_confirmation.png
 Write confirmation.txt with on-screen confirmation text.
 If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent answers.
 ```

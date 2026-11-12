@@ -35,17 +35,22 @@
   - Security clearance required
   - US citizen only / citizenship required
   - Staffing agencies / third-party recruiters when avoidable
-  - Roles that explicitly refuse any future visa sponsorship if they are not workable on F1-OPT (**CONFIRM** — see work auth)
+  - Roles that require US citizenship / permanent residence only
   - Jobs already applied to; duplicate postings
   - Posted pay below $120,000 when pay is listed
   - Non-US jobs, non-remote jobs, closed postings, posts older than 4 days
 
 ## Work authorization
 - F1-OPT (currently authorized to work in the US on Optional Practical Training)
-- **Sponsorship answer (confirmed by Susmitha 2026-11-11): No** — use this on “will you now or in the future require sponsorship?” questions.
+- **Sponsorship answer (standing, Susmitha 2026-11-11): No** — use on “will you now or in the future require sponsorship?” questions.
+- **Does not require sponsorship** — for multi-year “able to work without visa sponsorship” questions (e.g. BetterHelp 5 years), answer **Yes**.
 - Authorized to work in the US currently: **Yes** (F1-OPT)
 - Do not claim US citizenship or permanent residence.
-- Still **STOP → needs me** on EEO/demographics, background checks, and salary expectations unless Susmitha provided a number for that job.
+- Still **STOP → needs me** on EEO/demographics and background checks unless Memory already has an answer.
+
+## Standing compensation (Susmitha 2026-11-11)
+- **Minimum / expected salary: $120,000** — on salary/expectation fields enter **120000** (or a range starting at 120000).
+- Do **not** flag salary as needs-me when Memory has this number.
 
 ## Schedule
 - Daily window: **8:00 AM – 12:00 PM** America/Chicago (Central Time)

@@ -1,33 +1,24 @@
 # Active blockers — prevents confirmed `applied`
 
-Updated: 2026-11-11 ~20:40 America/Chicago
+Updated: 2026-11-11 ~21:46 America/Chicago
 
 ## Global
 1. **Apply window** — only **08:00–12:00 America/Chicago**. Next open: **2026-11-12 08:00 CT**.
+2. Outside window: no hunt / form rechecks unless Susmitha asks (standing rule).
+
+## Standing Memory answers (use on every application)
+- **Salary expectations: 120000** (do not flag salary needs-me)
+- **Sponsorship: No** (and Yes on multi-year “without visa sponsorship” questions)
 
 ## Per-job
-| Job | Score | Salary on form? | Other |
-|-----|-------|-----------------|-------|
-| **Clera — Senior Data Integration Engineer** | 9.7 | **No** | Ready at window open. Kit: `2026-11-12/Clera_SUBMIT_KIT.md` |
-| **Bayesian Health — SWE Data & Analytics Platform** | 7.5 | **No** | Ready at window open. Sponsorship **No**. Kit: `2026-11-12/Bayesian_Health_SUBMIT_KIT.md` |
-| **Life360 — Senior DE, Ads Data** | 7.3 | No on question set | Greenhouse ready after Clera/Bayesian. Kit + `life360-dry-fill/README.md` |
-| **Velosio — Data Engineer** | 8.7 | Unknown — STOP if asked | **needs-me**: iCIMS email login + **CAPTCHA** before form. Never Easy Apply. Kit: `Velosio_SUBMIT_KIT.md` |
-| **BetterHelp — Senior Analytics Engineer** | 7.2 | n/a | **SKIP / needs-me**: required 5-year *without visa sponsorship* question — F1-OPT cannot honestly Yes. Kit: `BetterHelp_SUBMIT_KIT.md` |
-| **Curve Dental — Data Engineer** | 8.1 | **Yes — BLOCKED** | Needs `Salary expectations: <n>`. Kit + form map ready |
+| Job | Score | Status |
+|-----|-------|--------|
+| **Clera** | 9.7 | Ready at window |
+| **Bayesian Health** | 7.5 | Ready at window |
+| **Life360** | 7.3 | Ready at window |
+| **Curve Dental** | 8.1 | Salary **120000** set — dry-fill for Susmitha review before submit |
+| **BetterHelp** | 7.2 | Unblocked with sponsorship=No / 5yr **Yes** — dry-fill for Susmitha review before submit |
+| **Velosio** | 8.7 | **needs-me**: iCIMS login + CAPTCHA |
 
-## Unlock Curve salary
-- Chat: `Salary expectations: 120000` (or your number)
-- Or `applications/needs-me/SALARY_REPLY.md`
-- Or `python3 -m agent set-salary <n>`
-
-## Already ready
-- Dry-run approved + real ATS authorized
-- LinkedIn, sponsorship **No**, text consent **No**
-- Timers: overnight hunt + 07:00 CT prep + 08:00 CT first-applies
-- Submit order: Clera → Bayesian → Life360 → Curve (Velosio login needs-me; BetterHelp blocked)
-- Live URLs re-checked 20:37 CT (all HTTP 200)
-
-## Skips
-Talkiatry AE honest **5.0** (dbt/BigQuery/BI) — ≤4d US-remote but below apply threshold.
-Kit AE ~5.9; Consumer Edge Staff; Keebo no-visa; Rackner federal — see `memory/APPLIED_INDEX.md`.
-Overnight 20:40 CT: hunt refreshed; ge7=5 (same queue); no new mid-level ≥7; morning packets dual-written for **2026-11-12**.
+## Submit order at 08:00 CT
+Clera → Bayesian → Life360 → Curve → BetterHelp (after Susmitha approves filled-form screenshots) · Velosio still login needs-me

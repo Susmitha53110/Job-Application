@@ -46,20 +46,24 @@ class FormPreflight:
 
 
 def _scan_label(label: str, *, required: bool) -> tuple[list[str], list[str]]:
+    from .salary import salary_from_memory
+
     blockers: list[str] = []
     warnings: list[str] = []
     if not label:
         return blockers, warnings
     if MULTIYEAR_NO_SPONSOR.search(label):
-        # Always hard-stop for F1-OPT — cannot honestly affirm multi-year no-sponsorship.
-        prefix = "required Q" if required else "Q"
-        blockers.append(
-            f"F1-OPT incompatible {prefix} (multi-year no-sponsorship): {label.strip()}"
+        # Standing Memory: Susmitha does not require sponsorship → answer Yes on these.
+        warnings.append(
+            f"Multi-year no-sponsorship Q (answer Yes per Memory sponsorship=No): {label.strip()}"
         )
     if CITIZEN_ONLY.search(label):
         blockers.append(f"Citizenship/green-card only question: {label.strip()}")
     if SALARY_FIELD.search(label) and required:
-        blockers.append(f"Required salary field — STOP needs-me: {label.strip()}")
+        if salary_from_memory():
+            warnings.append(f"Required salary field — use Memory {salary_from_memory()}: {label.strip()}")
+        else:
+            blockers.append(f"Required salary field — STOP needs-me: {label.strip()}")
     elif SALARY_FIELD.search(label):
         warnings.append(f"Optional salary field present: {label.strip()}")
     return blockers, warnings
