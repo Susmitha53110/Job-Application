@@ -9,11 +9,11 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-12
-- last_run_summary: "overnight_hunt 2026-11-11T21:39-06:00: window=False; salary=MISSING; hunt=11; ge7=5; curve_gate=False"
+- last_run_summary: "schedule locked 8–12 CT daily; idle until next 08:00 CT"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
-- schedule_days: "Mon-Sun"
+- schedule_days: Mon-Sun
 - max_post_age_days: 4
 - us_only: true
 - remote_only: true
@@ -27,3 +27,5 @@
 - min_pay_usd: 120000
 - next_apply_window: "2026-11-12 08:00 America/Chicago"
 - salary_expectation: 120000
+- timer_policy: exactly_one_recurring_8am_ct
+- outside_window_policy: idle_no_hunt_no_github_react

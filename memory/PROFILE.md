@@ -71,11 +71,13 @@
 - Log: `skipped: excluded company`
 
 ## Schedule
-- Daily window: **8:00 AM – 12:00 PM** America/Chicago (Central Time)
-- Days: **Monday–Sunday** (every day)
-- Daily limit ramp: Days 1–3 = 10; Days 4–6 = 15; then up to 20–25
-- Quality over quantity; apply to fewer if cannot finish cleanly
-- Do not start applies outside the window; stop cleanly by 12:00 PM CT
+- Daily window: **8:00 AM – 12:00 PM** America/Chicago (**Monday–Sunday**, including weekends)
+- At **08:00 CT**: one job search → tailor → fill → submit using standing answers; work through daily limit
+- At **12:00 CT sharp**: stop (finish only in-progress app), send daily report, go idle
+- Outside window: **do nothing** (no search, rechecks, extra timers, or GitHub/CI reactions)
+- Exactly **one** recurring timer: start at 8:00 AM CT every day (until Susmitha stops it)
+- Standing form answers: `applications/FORM_ANSWERS.md`
+
 
 ## Application channels
 - Find on: LinkedIn, Indeed, and company career pages
