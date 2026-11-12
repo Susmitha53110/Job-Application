@@ -4,8 +4,10 @@ from agent.form_preflight import MULTIYEAR_NO_SPONSOR, _scan_label, preflight_gr
 def test_multiyear_no_sponsor_regex():
     q = "Are you located in and able to work in the US without visa sponsorship for the next 5 years?"
     assert MULTIYEAR_NO_SPONSOR.search(q)
-    blockers, _ = _scan_label(q, required=True)
-    assert blockers and "multi-year no-sponsorship" in blockers[0]
+    blockers, warnings = _scan_label(q, required=True)
+    # Standing Memory: sponsorship No → answer Yes; warn only, do not hard-block.
+    assert blockers == []
+    assert warnings and "Multi-year no-sponsorship Q" in warnings[0]
 
 
 def test_standard_sponsorship_question_not_multiyear_trap():
@@ -15,10 +17,10 @@ def test_standard_sponsorship_question_not_multiyear_trap():
     assert blockers == []
 
 
-def test_betterhelp_preflight_blocks_live():
+def test_betterhelp_preflight_allows_with_standing_sponsorship_no():
     pf = preflight_greenhouse("betterhelpcom", 5475004008)
-    assert not pf.ok
-    assert any("multi-year no-sponsorship" in b for b in pf.blockers)
+    assert pf.ok, pf.blockers
+    assert any("Multi-year no-sponsorship Q" in w for w in pf.warnings)
 
 
 def test_life360_preflight_allows_standard_sponsorship():
