@@ -547,23 +547,26 @@ def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 4) ->
             loc_obj = loc_obj[0]
         addr = (loc_obj.get("address") if isinstance(loc_obj, dict) else {}) or {}
         country = addr.get("addressCountry") if isinstance(addr, dict) else ""
-        location = f"{country}".strip() or "United States"
-        if not is_us_remote(f"{location} remote", desc, source="jsonld", title=title):
-            # Many JSON-LD pages omit "remote" in address; allow US + remote language in desc/benefits
-            if str(country).lower() not in {"united states", "usa", "us"} and "united states" not in desc.lower():
+        country_s = str(country).strip() or "United States"
+        # Benefits "remote" often sits past is_us_remote's description[:2000] window —
+        # stamp Remote into location when the full JSON-LD text mentions it.
+        remote_in_page = "remote" in desc.lower() or "work from home" in desc.lower()
+        location = f"{country_s}, Remote" if remote_in_page else country_s
+        if not is_us_remote(location, desc, source="jsonld", title=title):
+            if country_s.lower() not in {"united states", "usa", "us"} and "united states" not in desc.lower():
                 continue
-            if "remote" not in desc.lower() and "work from home" not in desc.lower():
+            if not remote_in_page:
                 continue
         out.append(
             JobPosting(
                 title=title,
                 company=company,
-                url=data.get("url") or page_url,
+                url=(data.get("url") or page_url).rstrip("?"),
                 location=location,
                 description=desc,
                 source="jsonld",
                 posted_at=posted,
-                apply_url=data.get("url") or page_url,
+                apply_url=(data.get("url") or page_url).rstrip("?"),
                 is_open=True,
                 country_hint="US",
             )
