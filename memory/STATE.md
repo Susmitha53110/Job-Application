@@ -29,3 +29,4 @@
 - salary_expectation: 120000
 - timer_policy: exactly_one_recurring_8am_ct
 - outside_window_policy: idle_no_hunt_no_github_react
+- timer_recreate_rule: "at 12:00 CT end-of-run ensure exactly one next 8:00 AM CT timer; recreate immediately if missing"
