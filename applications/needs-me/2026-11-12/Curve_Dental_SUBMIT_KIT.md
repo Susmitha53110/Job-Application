@@ -26,8 +26,11 @@
 12. **Home office + reliable internet?*** — **Yes**
 13. **Data platform story*** — draft below
 14. **Salary expectations?*** — **120000**
-15. **How did you hear?*** — Company careers / Rippling ATS research
-16–19. **EEO voluntary** — each **Choose not to disclose** (Gender, Race, Hispanic/Latino, Veteran)
+15. **How did you hear?*** — **Company website**
+16. **Gender** — Female
+17. **Race** — Asian (South Asian if listed)
+18. **Hispanic/Latino** — No
+19. **Veteran** — I am not a protected veteran
 20. **Text message consent*** — **No - I do not consent to receiving text messages**
 21. Click **Apply** once
 

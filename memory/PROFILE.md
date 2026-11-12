@@ -42,15 +42,33 @@
 
 ## Work authorization
 - F1-OPT (currently authorized to work in the US on Optional Practical Training)
-- **Sponsorship answer (standing, Susmitha 2026-11-11): No** — use on “will you now or in the future require sponsorship?” questions.
-- **Does not require sponsorship** — for multi-year “able to work without visa sponsorship” questions (e.g. BetterHelp 5 years), answer **Yes**.
+- **Sponsorship: No** (standing) — now or in the future.
+- Multi-year “without visa sponsorship” questions → **Yes**.
 - Authorized to work in the US currently: **Yes** (F1-OPT)
 - Do not claim US citizenship or permanent residence.
-- Still **STOP → needs me** on EEO/demographics and background checks unless Memory already has an answer.
+- Nationality/national origin if asked: **Indian** (never use for citizenship/work-auth questions).
 
-## Standing compensation (Susmitha 2026-11-11)
-- **Minimum / expected salary: $120,000** — on salary/expectation fields enter **120000** (or a range starting at 120000).
-- Do **not** flag salary as needs-me when Memory has this number.
+## Standing compensation
+- **Expected salary: 120000** (min $120,000). Do not flag salary again.
+
+## Standing EEO / voluntary self-ID
+- Gender: Female · Sexual orientation: Heterosexual/Straight · Marital status: Single
+- Race/ethnicity: Asian (South Asian) · Hispanic/Latino: No
+- Disability: No (never had one) · Veteran: not a protected veteran
+- Closest honest option if no exact match; never Yes on disability/veteran.
+
+## Other standing answers
+- Relocate: Yes · On-site/hybrid: Yes (prefer remote) · Start: 2 weeks
+- How heard: **Company website** · Previously worked / relatives there: No · Over 18: Yes
+- Background check + drug screen: Yes
+- LinkedIn / GitHub / portfolio: blank; if required → N/A
+- Uncovered questions → needs me (never guess)
+- After fill → **submit directly** (no approval wait); proof or `unconfirmed`
+
+## Never apply
+- **Citi** / Citigroup / Citibank / subsidiaries
+- **Optum** / UnitedHealth Group subsidiaries
+- Log: `skipped: excluded company`
 
 ## Schedule
 - Daily window: **8:00 AM – 12:00 PM** America/Chicago (Central Time)

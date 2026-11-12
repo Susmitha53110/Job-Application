@@ -131,3 +131,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
 2026-11-12 | Paystone | Analytics Engineer | https://paystone.applytojob.com/apply/ldGCNb6JES/Analytics-Engineer | dry-run
 2026-11-11 | Paystone | Analytics Engineer | https://paystone.applytojob.com/apply/ldGCNb6JES/Analytics-Engineer | skipped_non_US_VN_applicantLocation
+2026-11-12 | Curve Dental | Data Engineer | https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394 | needs-me
+2026-11-12 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | applied

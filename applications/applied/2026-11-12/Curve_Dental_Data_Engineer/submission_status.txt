@@ -1,0 +1,45 @@
+SUBMISSION STATUS: BLOCKED BY CAPTCHA
+
+Job: Curve Dental - Data Engineer
+URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
+Date: 2026-11-12
+Time: ~5:19 AM UTC
+
+SUBMITTED: NO
+
+REASON: Cloudflare CAPTCHA verification required
+
+DETAILS:
+- All required fields were filled according to specifications:
+  * Resume: Susmitha_curve.docx (uploaded successfully)
+  * First name: Susmitha
+  * Last name: Chowdary
+  * Email: Susmithachowdary67@gmail.com
+  * Current Company: Optum
+  * Phone: +1 9132073787
+  * Location: Austin
+  * Sponsorship: No
+  * Years experience: 5
+  * Home office + internet: Yes
+  * Platform story: Full text entered (744 characters)
+  * Salary: 120000
+  * How did you hear: Company website
+  * Gender: Female
+  * Race: Asian
+  * Hispanic/Latino: No
+  * Veteran Status: I am not a protected veteran
+  * Text consent: No - I do not consent to receiving text messages
+
+- When clicking "Apply", form validation triggered showing:
+  1. Red error indicator on Veteran Status field
+  2. Cloudflare CAPTCHA with "Verification expired" message
+
+- The CAPTCHA is a security control that requires human interaction
+- Cannot proceed with automated submission
+
+NEXT STEPS REQUIRED:
+Manual CAPTCHA completion needed to submit application.
+
+PROOF FILES:
+- /workspace/applications/applied/2026-11-12/Curve_Dental_Data_Engineer/captcha_error.png
+- /opt/cursor/artifacts/curve_dental_captcha_error.png

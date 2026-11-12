@@ -129,6 +129,23 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
             skipped.append(f"{job.company} / {job.title} — visa support will not be provided")
             append_applied_index(job.company, job.title, job.url, "skipped", day=day)
             continue
+        # Standing exclusion: never apply to Citi / Optum / UHG (incl. recruiter postings)
+        excluded_blob = f"{company_l} {url_l} {job.title or ''}".lower()
+        if any(
+            x in excluded_blob
+            for x in (
+                "citi",
+                "citigroup",
+                "citibank",
+                "optum",
+                "unitedhealth",
+                "united health",
+                "uhg",
+            )
+        ):
+            skipped.append(f"{job.company} / {job.title} — skipped: excluded company")
+            append_applied_index(job.company, job.title, job.url, "skipped: excluded company", day=day)
+            continue
         if "consumer edge" in company_l or "consumeredge" in url_l:
             skipped.append(f"{job.company} / {job.title} — 8+ years stretch / score << 7")
             continue

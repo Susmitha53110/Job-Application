@@ -78,11 +78,11 @@ Fill in this exact order (no login/CAPTCHA expected):
 12) Do you have a home office, with reliable internet, that you can work from?*: Yes
 13) Describe a data platform you built or significantly improved...*: {PLATFORM_STORY}
 14) What are your salary expectations for this role?*: {salary}
-15) How did you hear about, or where did you find, this job posting?*: Company careers / Rippling ATS research
-16) Gender (voluntary): Choose not to disclose
-17) Please identify your race (voluntary): Choose not to disclose
-18) Are you Hispanic/Latino? (voluntary): Choose not to disclose
-19) Veteran Status (voluntary): Choose not to disclose
+15) How did you hear about, or where did you find, this job posting?*: Company website
+16) Gender (voluntary): Female
+17) Please identify your race (voluntary): Asian (South Asian if listed; else Asian)
+18) Are you Hispanic/Latino? (voluntary): No
+19) Veteran Status (voluntary): I am not a protected veteran / Not a veteran
 20) Text message consent*: select "No - I do not consent to receiving text messages"
 
 Click Apply ONCE.

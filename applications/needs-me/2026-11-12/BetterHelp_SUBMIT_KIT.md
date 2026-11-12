@@ -19,10 +19,12 @@ Show filled form to Susmitha before Submit. Window for real submit: 08:00–12:0
 | Country / City | United States / Austin |
 | Resume | `resumes/submit/Susmitha_betterhelp.docx` |
 | Cover letter | blank |
-| LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
-| Located in and able to work in the US **without visa sponsorship for the next 5 years?** | **Yes** (standing: does not require sponsorship) |
-| Pronouns | Prefer not to say / skip |
+| LinkedIn | leave blank (optional); if forced → N/A |
+| Located in and able to work in the US **without visa sponsorship for the next 5 years?** | **Yes** |
+| Pronouns | Prefer not to say / skip (no exact Memory match) |
+| How heard | Company website (if asked) |
 | Salary | not on form; if asked → **120000** |
+| EEO if shown | Gender Female; Race Asian; Hispanic No; Veteran not protected; Disability No |
 
 ## Proof
 After approved submit: `applications/applied/<CT-day>/BetterHelp_Senior_Analytics_Engineer/` then `python3 -m agent proof`.
