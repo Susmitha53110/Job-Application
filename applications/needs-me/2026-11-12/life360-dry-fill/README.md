@@ -112,3 +112,50 @@
 - life360_form_1_middle.png
 - life360_form_2_eeo.png
 - life360_form_3_veteran.png
+
+---
+
+## 2026-11-12 03:28 UTC Recheck
+
+**Form fields verified — all 19 expected fields present and match submit kit:**
+
+**Required Fields (marked with *):**
+1. First Name* ✓
+2. Last Name* ✓
+3. Email* ✓
+4. Country* ✓
+5. Phone* ✓
+6. Location (City)* ✓
+7. Resume/CV* ✓
+8. LinkedIn Profile* ✓ (Required - marked with asterisk)
+9. Are you legally authorized to work in the country where the job is located?* ✓
+10. Do you require sponsorship to work in the country listed for employment now or in the future?* ✓
+11. Are you an existing employee at Life360, Tile, or Jiobit?* ✓
+12. Have you previously worked for Life360, Tile, or Jiobit?* ✓
+13. Please confirm that you have read and agree to the Life360 Job Applicant Privacy Policy* ✓
+
+**Optional Fields:**
+14. Cover Letter (optional) ✓
+15. Website (optional) ✓
+
+**Voluntary EEO Section (all optional):**
+16. Gender (voluntary) ✓
+17. Are you Hispanic/Latino? (voluntary) ✓
+18. Race & Ethnicity (voluntary) ✓
+19. Veteran Status (voluntary) ✓
+
+**No salary field present** ✅
+
+**Screenshots saved:**
+- `recheck_form_top_2026-11-12_03-28.png` (top of form with First/Last name, Email, Country, Phone, Location, Resume fields)
+- `recheck_form_middle_2026-11-12_03-28.png` (Resume upload options, Cover Letter, LinkedIn*, Website, Authorization*, Sponsorship*, Existing employee*, Previously worked*, Privacy policy*)
+- `recheck_form_eeo_2026-11-12_03-28.png` (Voluntary Self-Identification section intro with Gender, Hispanic/Latino, Race & Ethnicity definitions)
+- `recheck_form_bottom_2026-11-12_03-28.png` (Veteran Status field and Submit application button)
+
+**Submit application button NOT clicked** ✅
+
+**Blockers:** None (no CAPTCHA triggered, no login gate, no salary field)
+
+**reCAPTCHA widget:** Visible in bottom-right corner but did not trigger during inspection (may activate on submission attempt)
+
+**Verdict:** Form structure unchanged from previous inspection. All 19 fields match expected schema (13 required + 2 optional + 4 voluntary EEO). LinkedIn Profile is still required field. Ready for real submission during apply window.
