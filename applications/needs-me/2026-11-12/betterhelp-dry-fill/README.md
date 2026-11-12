@@ -53,10 +53,13 @@
 - Pronouns are optional
 - No login/CAPTCHA gate to access form
 
+**STATUS: SKIP / needs-me — do not submit.**
+
+Required 5-year *without visa sponsorship* question cannot be answered **Yes** honestly on F1-OPT. Do not invent Yes. See `BetterHelp_SUBMIT_KIT.md`.
+
 **Caveats:**
-- **Visa sponsorship dropdown** must be answered; F-1 OPT status may not meet the "5 years without sponsorship" requirement
-- reCAPTCHA may trigger on Submit (not tested)
-- Form is straightforward with no hidden custom questions observed
+- **Visa sponsorship dropdown** is a hard F1-OPT gate (multi-year no-sponsorship).
+- reCAPTCHA may trigger on Submit (not tested).
 
 **Recommendation:** Form can be dry-filled with standard candidate data, but the visa sponsorship question is a potential application blocker for candidates on temporary work authorization.
 

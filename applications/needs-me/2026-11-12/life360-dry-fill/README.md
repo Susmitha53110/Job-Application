@@ -81,14 +81,29 @@
 - EEO section is entirely voluntary (all optional)
 - No login/CAPTCHA gate to access form
 
-**Caveats:**
-- **Work authorization dropdowns** must be answered; answers may be used for screening (F-1 OPT candidates should answer "Yes" to requiring sponsorship in the future)
-- **Privacy policy acknowledgment** must be confirmed (standard consent requirement)
-- **Company history questions** must be answered (simple yes/no screening)
-- **LinkedIn Profile is required** (unlike many other jobs)
-- reCAPTCHA may trigger on Submit (not tested)
+## Memory answers for dry-fill / submit (do not invent)
+| Field | Answer |
+|-------|--------|
+| First / Last | Susmitha / Chowdary |
+| Email / Phone | Susmithachowdary67@gmail.com / 9132073787 |
+| Country / City | United States / Austin |
+| Resume | `resumes/submit/Susmitha_life360.docx` |
+| LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
+| Authorized to work where job is located? | **Yes** (F1-OPT) |
+| Require sponsorship now or in the future? | **No** (Memory — Susmitha-confirmed) |
+| Existing employee Life360/Tile/Jiobit? | **Not an Existing Employee** |
+| Previously worked there? | **No** |
+| Privacy policy | **Yes** after reading the linked policy |
+| EEO / Gender / Hispanic / Veteran | leave blank or “I don't wish to answer” |
 
-**Recommendation:** Form can be fully dry-filled with candidate data. All required questions are answerable for standard applicants. The work authorization questions are screening criteria but not blockers for submitting an application. EEO section can be left blank (all voluntary).
+**Caveats:**
+- Do **not** answer sponsorship **Yes** — Memory is sponsorship **No**.
+- Privacy policy acknowledgment required after reading the link.
+- LinkedIn is required.
+- reCAPTCHA may trigger on Submit → needs-me if it blocks.
+- EEO section voluntary — leave blank / prefer not to say.
+
+**Recommendation:** Dry-fill and in-window submit are OK with Memory answers above. No salary field.
 
 ---
 
