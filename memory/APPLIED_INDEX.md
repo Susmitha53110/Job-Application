@@ -73,3 +73,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3 | dry-run
 2026-11-11 | kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
 2026-11-11 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | dry-run
+2026-11-11 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | skipped | required 5-year no-sponsorship Q — F1-OPT needs-me
