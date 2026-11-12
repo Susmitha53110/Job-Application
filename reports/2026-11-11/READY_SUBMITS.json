@@ -9,7 +9,7 @@
     "needs_salary": false,
     "ok": false,
     "blockers": [
-      "Outside window (now 2026-11-11 20:09 CST). Applies only 08:00\u201312:00 America/Chicago."
+      "Outside window (now 2026-11-11 20:40 CST). Applies only 08:00\u201312:00 America/Chicago."
     ],
     "computer_use_prompt": ""
   },
@@ -23,21 +23,7 @@
     "needs_salary": false,
     "ok": false,
     "blockers": [
-      "Outside window (now 2026-11-11 20:09 CST). Applies only 08:00\u201312:00 America/Chicago."
-    ],
-    "computer_use_prompt": ""
-  },
-  {
-    "key": "betterhelp",
-    "company": "BetterHelp",
-    "role": "Senior Analytics Engineer",
-    "url": "https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008",
-    "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx",
-    "kit": "/workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md",
-    "needs_salary": false,
-    "ok": false,
-    "blockers": [
-      "Outside window (now 2026-11-11 20:09 CST). Applies only 08:00\u201312:00 America/Chicago."
+      "Outside window (now 2026-11-11 20:40 CST). Applies only 08:00\u201312:00 America/Chicago."
     ],
     "computer_use_prompt": ""
   },
@@ -51,7 +37,7 @@
     "needs_salary": false,
     "ok": false,
     "blockers": [
-      "Outside window (now 2026-11-11 20:09 CST). Applies only 08:00\u201312:00 America/Chicago."
+      "Outside window (now 2026-11-11 20:40 CST). Applies only 08:00\u201312:00 America/Chicago."
     ],
     "computer_use_prompt": ""
   }

@@ -18,21 +18,39 @@ from .ready_submits import evaluate_all_ready_submits, write_ready_submits_repor
 from .submit_handoff import build_submit_handoff
 
 
+def _next_apply_day(now: datetime) -> str:
+    """When outside the window after noon CT, morning packets belong to tomorrow."""
+    from datetime import timedelta
+
+    if now.hour >= 12:
+        return (now.date() + timedelta(days=1)).isoformat()
+    return now.date().isoformat()
+
+
 def run_overnight_hunt(*, day: str | None = None) -> dict:
     """Prepare-only hunt between windows. Never submits."""
     tz = ZoneInfo("America/Chicago")
     now = datetime.now(tz)
     day = day or now.date().isoformat()
+    morning_day = _next_apply_day(now) if day == now.date().isoformat() else day
+    report_days = [day]
+    if morning_day not in report_days:
+        report_days.append(morning_day)
+
     window = check_apply_window()
     salary = salary_from_memory()
     gate = evaluate_curve_gate()
-    write_gate_report(day=day)
     ready_items = evaluate_all_ready_submits()
-    ready_report = write_ready_submits_report(day=day)
-    handoff = build_submit_handoff(day=day)
+    ready_report = None
+    handoff: dict = {}
+    for d in report_days:
+        write_gate_report(day=d)
+        ready_report = write_ready_submits_report(day=d)
+        handoff = build_submit_handoff(day=d)
 
     watch = poll_watchlist()
-    write_watchlist_report(watch, day=day)
+    for d in report_days:
+        write_watchlist_report(watch, day=d)
     hunted = hunt_all()
     near = hunt_near_miss(lookback_days=10)
 
@@ -61,9 +79,6 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
             )
 
     eligible = [p for p in packets if p["status"] == "candidate"]
-    report_dir = paths.REPORTS / day
-    report_dir.mkdir(parents=True, exist_ok=True)
-    report = report_dir / "OVERNIGHT_HUNT.md"
     lines = [
         f"# Overnight hunt — {day} {now.strftime('%H:%M %Z')}",
         "",
@@ -71,6 +86,7 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
         f"- Salary set: **{salary or 'MISSING'}**",
         f"- Curve gate ok: **{gate.ok}**",
         f"- Curve blockers: {', '.join(gate.blockers) or '(none)'}",
+        f"- Morning packet day: **{morning_day}**",
         f"- Ready submits report: `{ready_report}`",
         f"- Submit handoff: `{handoff.get('handoff_json')}`",
         *[
@@ -99,25 +115,27 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
         ),
         "",
     ]
-    report.write_text("\n".join(lines), encoding="utf-8")
-    (report_dir / "NEAR_MISS.json").write_text(
-        json.dumps(
-            [
-                {
-                    "company": j.company,
-                    "title": j.title,
-                    "posted_at": j.posted_at,
-                    "location": j.location,
-                    "url": j.url,
-                    "source": j.source,
-                }
-                for j in near
-            ],
-            indent=2,
-        )
-        + "\n",
-        encoding="utf-8",
-    )
+    near_payload = json.dumps(
+        [
+            {
+                "company": j.company,
+                "title": j.title,
+                "posted_at": j.posted_at,
+                "location": j.location,
+                "url": j.url,
+                "source": j.source,
+            }
+            for j in near
+        ],
+        indent=2,
+    ) + "\n"
+    report = None
+    for d in report_days:
+        report_dir = paths.REPORTS / d
+        report_dir.mkdir(parents=True, exist_ok=True)
+        report = report_dir / "OVERNIGHT_HUNT.md"
+        report.write_text("\n".join(lines), encoding="utf-8")
+        (report_dir / "NEAR_MISS.json").write_text(near_payload, encoding="utf-8")
 
     # Update state breadcrumb
     if paths.STATE.exists():

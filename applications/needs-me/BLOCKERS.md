@@ -1,6 +1,6 @@
 # Active blockers — prevents confirmed `applied`
 
-Updated: 2026-11-11 ~20:08 America/Chicago
+Updated: 2026-11-11 ~20:40 America/Chicago
 
 ## Global
 1. **Apply window** — only **08:00–12:00 America/Chicago**. Next open: **2026-11-12 08:00 CT**.
@@ -25,7 +25,8 @@ Updated: 2026-11-11 ~20:08 America/Chicago
 - LinkedIn, sponsorship **No**, text consent **No**
 - Timers: overnight hunt + 07:00 CT prep + 08:00 CT first-applies
 - Submit order: Clera → Bayesian → Life360 → Curve (Velosio login needs-me; BetterHelp blocked)
+- Live URLs re-checked 20:37 CT (all HTTP 200)
 
 ## Skips
-Kit AE ~6.7; Consumer Edge Staff; Keebo no-visa — see `memory/APPLIED_INDEX.md`.
-Overnight 20:07 CT: hunt=9, ge7=4, no new mid-level ≥7 beyond the queue above.
+Kit AE ~5.9; Consumer Edge Staff; Keebo no-visa; Rackner federal — see `memory/APPLIED_INDEX.md`.
+Overnight 20:40 CT: hunt refreshed; ge7=5 (same queue); no new mid-level ≥7; morning packets dual-written for **2026-11-12**.

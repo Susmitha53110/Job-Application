@@ -11,6 +11,7 @@
   - sponsorship answer No (Memory); skip employers that forbid OPT/F1 outright
   - travel/on-site checked via JD patterns
   - min pay $120k when posted
+  - F1-OPT incompatible required Q (multi-year no-sponsorship): Are you located in and able to work in the US without visa sponsorship for the next 5 years?
 - Remove if I cannot back it up in an interview:
   - verify before applying: "familiarity with Apache Airflow"
   - verify before applying: "familiarity with dbt"

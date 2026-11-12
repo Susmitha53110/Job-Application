@@ -7,7 +7,7 @@
   - Posted pay >= $120k if pay is listed
   - Apply on company ATS only (never LinkedIn Easy Apply)
 - Dealbreakers checked:
-  - location=United States (Remote or hybrid)
+  - location=United States, Remote
   - sponsorship answer No (Memory); skip employers that forbid OPT/F1 outright
   - travel/on-site checked via JD patterns
   - min pay $120k when posted

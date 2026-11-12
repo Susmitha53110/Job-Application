@@ -93,6 +93,15 @@ DEFAULT_GH_BOARDS = [
     "dbtlabs",
     "betterhelpcom",
     "life360",
+    "tempus",
+    "athenahealth",
+    "headway",
+    "goodrx",
+    "doximity",
+    "datavant",
+    "montecarlodata",
+    "constantcontact",
+    "extend",
 ]
 
 
@@ -335,6 +344,8 @@ DEFAULT_RIPPLING_BOARDS = [
     "joinroot",
     "accelerant",
     "intertwine-associates",
+    "included-health",
+    "modern-health",
 ]
 
 DEFAULT_LEVER_COMPANIES = [
@@ -344,6 +355,10 @@ DEFAULT_LEVER_COMPANIES = [
     "anduril",
     "benchling",
     "color",
+    "spotify",
+    "affirm",
+    "discord",
+    "cloudflare",
 ]
 
 
