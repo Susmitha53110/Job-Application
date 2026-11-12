@@ -1,6 +1,6 @@
 # Velosio — Data Engineer submit kit
 
-**STATUS: needs-me — iCIMS login required. Do not auto-submit.**
+**STATUS: needs-me — iCIMS email login + CAPTCHA before any form fields. Do not auto-submit.**
 
 - Role: Data Engineer (Microsoft Fabric / Azure data)
 - Job page: https://careers.velosio.com/jobs/3162
@@ -15,7 +15,8 @@
 
 ## Agent rules
 - Never create accounts or ask for passwords — Susmitha signs in herself.
-- After login, fill Memory answers only; STOP on salary / required EEO without decline / CAPTCHA.
+- CAPTCHA after email is a hard stop for the agent (documented in `velosio-dry-fill/`).
+- After Susmitha clears login/CAPTCHA, fill Memory answers only; STOP on salary / required EEO without decline / further CAPTCHA.
 - Work auth **Yes**; sponsorship **No**.
 
 ## If Susmitha completes login in-window

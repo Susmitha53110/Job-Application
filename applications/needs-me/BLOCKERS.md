@@ -11,7 +11,7 @@ Updated: 2026-11-11 ~20:08 America/Chicago
 | **Clera — Senior Data Integration Engineer** | 9.7 | **No** | Ready at window open. Kit: `2026-11-12/Clera_SUBMIT_KIT.md` |
 | **Bayesian Health — SWE Data & Analytics Platform** | 7.5 | **No** | Ready at window open. Sponsorship **No**. Kit: `2026-11-12/Bayesian_Health_SUBMIT_KIT.md` |
 | **Life360 — Senior DE, Ads Data** | 7.3 | No on question set | Greenhouse ready after Clera/Bayesian. Kit + `life360-dry-fill/README.md` |
-| **Velosio — Data Engineer** | 8.7 | Unknown — STOP if asked | **needs-me**: iCIMS login required (`.../jobs/3162/login`). Never Easy Apply. Kit: `Velosio_SUBMIT_KIT.md` |
+| **Velosio — Data Engineer** | 8.7 | Unknown — STOP if asked | **needs-me**: iCIMS email login + **CAPTCHA** before form. Never Easy Apply. Kit: `Velosio_SUBMIT_KIT.md` |
 | **BetterHelp — Senior Analytics Engineer** | 7.2 | n/a | **SKIP / needs-me**: required 5-year *without visa sponsorship* question — F1-OPT cannot honestly Yes. Kit: `BetterHelp_SUBMIT_KIT.md` |
 | **Curve Dental — Data Engineer** | 8.1 | **Yes — BLOCKED** | Needs `Salary expectations: <n>`. Kit + form map ready |
 
