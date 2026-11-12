@@ -49,3 +49,13 @@ def test_ready_submits_only_window_blocked_outside():
     assert len(items) >= 2
     # Outside CT window these should still be packet-ready for morning
     assert any(packet_ready_except_window(i) for i in items)
+
+
+def test_morning_go_nogo_hard_pass_outside_window():
+    from agent.morning_check import run_morning_check
+
+    out = run_morning_check()
+    assert "go" in out
+    assert out["report_json"]
+    # Salary may be missing; hard GO should still pass overnight if packets/files exist
+    assert out["go"] is True, out.get("hard_failures")

@@ -14,6 +14,7 @@ from .proof import require_proof_for_applied, write_proof_manifest
 from .ready_submits import evaluate_all_ready_submits, packet_ready_except_window, write_ready_submits_report
 from .salary import set_salary
 from .setup_gate import check_setup, write_needs_me_packet
+from .morning_check import run_morning_check
 from .submit_handoff import build_submit_handoff
 from .watchlist import poll_watchlist, write_watchlist_report
 from .window import check_apply_window
@@ -36,6 +37,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("curve-gate", help="Evaluate Curve Dental submit gate + write prompt")
     sub.add_parser("ready-submits", help="Evaluate Clera/Bayesian (no-salary) submit gates")
     sub.add_parser("handoff", help="Write SUBMIT_HANDOFF.json for morning computer-use")
+    sub.add_parser("go-nogo", help="Morning go/no-go readiness checklist")
     p_sal = sub.add_parser("set-salary", help="Save Susmitha-provided salary expectation")
     p_sal.add_argument("amount", help="Yearly USD number, e.g. 120000")
     p_proof = sub.add_parser("proof", help="Write proof manifest for an apply attempt")
@@ -154,6 +156,11 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "handoff":
         print(json.dumps(build_submit_handoff(), indent=2))
         return 0
+
+    if args.cmd == "go-nogo":
+        out = run_morning_check()
+        print(json.dumps(out, indent=2))
+        return 0 if out.get("go") else 2
 
     if args.cmd == "set-salary":
         try:

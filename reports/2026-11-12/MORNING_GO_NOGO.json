@@ -1,0 +1,108 @@
+{
+  "day": "2026-11-12",
+  "window_open": false,
+  "window_reason": "Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "salary": null,
+  "go": true,
+  "hard_failures": [],
+  "soft_failures": [
+    {
+      "name": "salary_set_for_curve",
+      "ok": false,
+      "detail": "MISSING"
+    }
+  ],
+  "checks": [
+    {
+      "name": "resume_short_clera",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_clera.docx"
+    },
+    {
+      "name": "resume_short_bayesian",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_bayesian.docx"
+    },
+    {
+      "name": "resume_short_curve",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_curve.docx"
+    },
+    {
+      "name": "kit_clera",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_bayesian",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_curve",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_first_applies",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/FIRST_APPLIES.md"
+    },
+    {
+      "name": "kit_form_map",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/CURVE_FORM_MAP.md"
+    },
+    {
+      "name": "packet_clera",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3"
+    },
+    {
+      "name": "live_clera",
+      "ok": true,
+      "detail": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3"
+    },
+    {
+      "name": "packet_bayesian",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
+    },
+    {
+      "name": "live_bayesian",
+      "ok": true,
+      "detail": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
+    },
+    {
+      "name": "curve_age_le_4d",
+      "ok": true,
+      "detail": "createdOn=2026-11-11T09:43:45.658000-08:00"
+    },
+    {
+      "name": "salary_set_for_curve",
+      "ok": false,
+      "detail": "MISSING"
+    },
+    {
+      "name": "curve_packet_except_salary_window",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.', 'Salary expectations number missing in Memory/FORM_ANSWERS']"
+    },
+    {
+      "name": "real_applies_authorized",
+      "ok": true,
+      "detail": "memory/STATE.md"
+    },
+    {
+      "name": "dry_run_approved",
+      "ok": true,
+      "detail": "memory/STATE.md"
+    }
+  ],
+  "handoff_json": "/workspace/reports/2026-11-12/SUBMIT_HANDOFF.json",
+  "submit_order": [
+    "clera",
+    "bayesian",
+    "curve"
+  ]
+}
