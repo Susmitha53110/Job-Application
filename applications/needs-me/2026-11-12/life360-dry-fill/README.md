@@ -1,6 +1,6 @@
 # Life360 — Greenhouse form inspect (dry, no submit)
 
-Source: Greenhouse questions API (`?questions=true`) for job 8935286002.
+Source: Greenhouse questions API (`?questions=true`) for job 8935286002 + screenshot `life360_form_1_middle.png` (2026-11-12).
 
 ## Fields
 | Field | Required | Answer |
@@ -25,8 +25,9 @@ Source: Greenhouse questions API (`?questions=true`) for job 8935286002.
 
 ## Blockers
 - No salary field in question set.
-- CAPTCHA/login at submit → needs-me.
+- reCAPTCHA badge visible on page — if it blocks submit → needs-me.
 - Confirm privacy policy link readable before agreeing.
+- Standard sponsorship Q (now/future) → answer **No** per Memory (not a 5-year gate).
 
 ## Dry-fill without submit
 Yes for known fields above. Submit only in 08:00–12:00 CT with proof.
