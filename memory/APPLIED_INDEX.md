@@ -133,3 +133,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | Paystone | Analytics Engineer | https://paystone.applytojob.com/apply/ldGCNb6JES/Analytics-Engineer | skipped_non_US_VN_applicantLocation
 2026-11-12 | Curve Dental | Data Engineer | https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394 | needs-me
 2026-11-12 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | applied
+2026-11-12 | Clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3 | applied
+2026-11-12 | Bayesian Health | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | applied
