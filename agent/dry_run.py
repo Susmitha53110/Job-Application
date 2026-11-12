@@ -106,7 +106,7 @@ def run_dry_run(limit: int = 3) -> dict:
         "",
         "## Needs me before normal daily schedule",
         *[f"- {x}" for x in remaining_needs],
-        "- On every application: sponsorship/visa questions (F1-OPT) → needs me",
+        "- On every application: work auth Yes (F1-OPT); sponsorship **No** (Memory)",
         "",
         "## Jobs prepared (not submitted)",
         "",
