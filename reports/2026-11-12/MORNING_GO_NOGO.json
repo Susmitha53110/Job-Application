@@ -1,7 +1,7 @@
 {
   "day": "2026-11-12",
   "window_open": false,
-  "window_reason": "Outside window (now 2026-11-11 20:17 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "window_reason": "Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago.",
   "salary": null,
   "go": true,
   "hard_failures": [],
@@ -34,6 +34,11 @@
       "detail": "/workspace/resumes/submit/Susmitha_life360.docx"
     },
     {
+      "name": "resume_short_velosio",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_velosio.docx"
+    },
+    {
       "name": "resume_short_curve",
       "ok": true,
       "detail": "/workspace/resumes/submit/Susmitha_curve.docx"
@@ -59,6 +64,11 @@
       "detail": "/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md"
     },
     {
+      "name": "kit_velosio",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Velosio_SUBMIT_KIT.md"
+    },
+    {
       "name": "kit_curve",
       "ok": true,
       "detail": "/workspace/applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md"
@@ -76,7 +86,7 @@
     {
       "name": "packet_clera",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 20:17 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3"
+      "detail": "blockers=['Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3"
     },
     {
       "name": "live_clera",
@@ -86,7 +96,7 @@
     {
       "name": "packet_bayesian",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 20:17 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
+      "detail": "blockers=['Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
     },
     {
       "name": "live_bayesian",
@@ -96,12 +106,22 @@
     {
       "name": "packet_life360",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 20:17 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://job-boards.greenhouse.io/life360/jobs/8935286002"
+      "detail": "blockers=['Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://job-boards.greenhouse.io/life360/jobs/8935286002"
     },
     {
       "name": "live_life360",
       "ok": true,
       "detail": "https://job-boards.greenhouse.io/life360/jobs/8935286002"
+    },
+    {
+      "name": "packet_velosio",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://careers.velosio.com/jobs/3162"
+    },
+    {
+      "name": "live_velosio",
+      "ok": true,
+      "detail": "https://careers.velosio.com/jobs/3162"
     },
     {
       "name": "curve_age_le_4d",
@@ -116,7 +136,7 @@
     {
       "name": "curve_packet_except_salary_window",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 20:17 CST). Applies only 08:00\u201312:00 America/Chicago.', 'Salary expectations number missing in Memory/FORM_ANSWERS']"
+      "detail": "blockers=['Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago.', 'Salary expectations number missing in Memory/FORM_ANSWERS']"
     },
     {
       "name": "real_applies_authorized",
@@ -134,6 +154,7 @@
     "clera",
     "bayesian",
     "life360",
+    "velosio",
     "curve"
   ]
 }

@@ -11,6 +11,7 @@ Updated: 2026-11-11 ~20:08 America/Chicago
 | **Clera — Senior Data Integration Engineer** | 9.7 | **No** | Ready at window open. Kit: `2026-11-12/Clera_SUBMIT_KIT.md` |
 | **Bayesian Health — SWE Data & Analytics Platform** | 7.5 | **No** | Ready at window open. Sponsorship **No**. Kit: `2026-11-12/Bayesian_Health_SUBMIT_KIT.md` |
 | **Life360 — Senior DE, Ads Data** | 7.3 | No on question set | Greenhouse ready after Clera/Bayesian. Kit + `life360-dry-fill/README.md` |
+| **Velosio — Data Engineer** | 8.7 | Unknown — STOP if asked | Company careers/iCIMS. Fabric preferred (don't invent). Kit: `Velosio_SUBMIT_KIT.md` |
 | **BetterHelp — Senior Analytics Engineer** | 7.2 | n/a | **SKIP / needs-me**: required 5-year *without visa sponsorship* question — F1-OPT cannot honestly Yes. Kit: `BetterHelp_SUBMIT_KIT.md` |
 | **Curve Dental — Data Engineer** | 8.1 | **Yes — BLOCKED** | Needs `Salary expectations: <n>`. Kit + form map ready |
 
@@ -23,7 +24,7 @@ Updated: 2026-11-11 ~20:08 America/Chicago
 - Dry-run approved + real ATS authorized
 - LinkedIn, sponsorship **No**, text consent **No**
 - Timers: overnight hunt + 07:00 CT prep + 08:00 CT first-applies
-- Submit order: Clera → Bayesian → Life360 → Curve (BetterHelp blocked)
+- Submit order: Clera → Bayesian → Life360 → Velosio → Curve (BetterHelp blocked)
 
 ## Skips
 Kit AE ~6.7; Consumer Edge Staff; Keebo no-visa — see `memory/APPLIED_INDEX.md`.

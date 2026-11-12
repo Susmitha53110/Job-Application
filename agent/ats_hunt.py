@@ -502,6 +502,80 @@ def hunt_himalayas(*, max_age_days: int = 4, max_pages: int = 8) -> list[JobPost
     return out
 
 
+def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 4) -> list[JobPosting]:
+    """Fetch company careers pages that expose schema.org JobPosting JSON-LD."""
+    import json
+    import urllib.request
+
+    out: list[JobPosting] = []
+    for company, page_url in pages:
+        try:
+            req = urllib.request.Request(page_url, headers={"User-Agent": "SusmithaJobAgent/0.1"})
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                raw_html = resp.read().decode("utf-8", "replace")
+        except Exception:
+            continue
+        m = re.search(
+            r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+            raw_html,
+            re.I | re.S,
+        )
+        if not m:
+            continue
+        try:
+            data = json.loads(m.group(1))
+        except Exception:
+            continue
+        if isinstance(data, list):
+            data = next((x for x in data if isinstance(x, dict) and x.get("@type") == "JobPosting"), None)
+        if not isinstance(data, dict) or data.get("@type") != "JobPosting":
+            continue
+        title = data.get("title") or ""
+        if not _title_match(title):
+            continue
+        posted = data.get("datePosted")
+        if not within_max_age(posted, max_age_days=max_age_days):
+            continue
+        desc = _strip_html(
+            " ".join(
+                str(data.get(k) or "")
+                for k in ("description", "qualifications", "responsibilities", "skills")
+            )
+        )
+        loc_obj = data.get("jobLocation") or {}
+        if isinstance(loc_obj, list) and loc_obj:
+            loc_obj = loc_obj[0]
+        addr = (loc_obj.get("address") if isinstance(loc_obj, dict) else {}) or {}
+        country = addr.get("addressCountry") if isinstance(addr, dict) else ""
+        location = f"{country}".strip() or "United States"
+        if not is_us_remote(f"{location} remote", desc, source="jsonld", title=title):
+            # Many JSON-LD pages omit "remote" in address; allow US + remote language in desc/benefits
+            if str(country).lower() not in {"united states", "usa", "us"} and "united states" not in desc.lower():
+                continue
+            if "remote" not in desc.lower() and "work from home" not in desc.lower():
+                continue
+        out.append(
+            JobPosting(
+                title=title,
+                company=company,
+                url=data.get("url") or page_url,
+                location=location,
+                description=desc,
+                source="jsonld",
+                posted_at=posted,
+                apply_url=data.get("url") or page_url,
+                is_open=True,
+                country_hint="US",
+            )
+        )
+    return out
+
+
+JSONLD_CAREERS_PAGES = [
+    ("Velosio", "https://careers.velosio.com/jobs/3162"),
+]
+
+
 def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     from .job_search import search_arbeitnow, search_remotive
     from .watchlist import poll_watchlist
@@ -514,6 +588,10 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     jobs.extend(hunt_lever(max_age_days=max_age_days))
     try:
         jobs.extend(hunt_himalayas(max_age_days=max_age_days))
+    except Exception:
+        pass
+    try:
+        jobs.extend(hunt_jsonld_pages(JSONLD_CAREERS_PAGES, max_age_days=max_age_days))
     except Exception:
         pass
     jobs.extend(poll_watchlist(max_age_days=max_age_days))

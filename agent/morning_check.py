@@ -30,7 +30,7 @@ def run_morning_check() -> dict:
     gate = evaluate_curve_gate()
 
     # Files
-    for key in ("clera", "bayesian", "betterhelp", "life360", "curve"):
+    for key in ("clera", "bayesian", "betterhelp", "life360", "velosio", "curve"):
         docx = paths.ROOT / "resumes" / "submit" / f"Susmitha_{key}.docx"
         checks.append(CheckItem(f"resume_short_{key}", docx.exists(), str(docx)))
 
@@ -39,6 +39,7 @@ def run_morning_check() -> dict:
         "bayesian": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Bayesian_Health_SUBMIT_KIT.md",
         "betterhelp": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "BetterHelp_SUBMIT_KIT.md",
         "life360": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Life360_SUBMIT_KIT.md",
+        "velosio": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Velosio_SUBMIT_KIT.md",
         "curve": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Curve_Dental_SUBMIT_KIT.md",
         "first_applies": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "FIRST_APPLIES.md",
         "form_map": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "CURVE_FORM_MAP.md",

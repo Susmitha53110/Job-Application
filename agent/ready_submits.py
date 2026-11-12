@@ -133,6 +133,32 @@ LIFE360 = {
     ),
 }
 
+VELOSIO = {
+    "key": "velosio",
+    "company": "Velosio",
+    "role": "Data Engineer",
+    "url": "https://careers.velosio.com/jobs/3162",
+    "ats": "jsonld",
+    "jsonld_url": "https://careers.velosio.com/jobs/3162",
+    "resume_globs": [
+        "*/Susmitha_Velosio_Data_Engineer.docx",
+    ],
+    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Velosio_SUBMIT_KIT.md",
+    "needs_salary": False,
+    "prompt_extra": (
+        "Company careers site (iCIMS). Never Easy Apply.\n"
+        "- Name: Susmitha Chowdary\n"
+        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
+        "- Location: Austin, TX\n"
+        "- Resume: upload resumes/submit/Susmitha_velosio.docx\n"
+        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
+        "- Authorized to work in the U.S.?: Yes\n"
+        "- Require sponsorship now or in future?: No\n"
+        "Do not claim Microsoft Fabric product ownership (Azure/ADF/lakehouse only).\n"
+        "If salary expectation / required EEO without decline / CAPTCHA/login: STOP needs-me.\n"
+    ),
+}
+
 
 def _newest_resume(globs: list[str]) -> Path | None:
     found: list[Path] = []
@@ -169,6 +195,37 @@ def _greenhouse_still_open(board: str, job_id: int | str) -> tuple[bool, str | N
     posted = detail.get("first_published") or detail.get("updated_at")
     if not within_max_age(posted, max_age_days=4):
         return False, posted, f"age fail-closed: first_published={posted}"
+    return True, posted, None
+
+
+def _jsonld_still_open(page_url: str) -> tuple[bool, str | None, str | None]:
+    """Fetch a careers page and require JobPosting JSON-LD datePosted ≤4d."""
+    import json
+    import re
+    import urllib.request
+
+    try:
+        req = urllib.request.Request(page_url, headers={"User-Agent": "SusmithaJobAgent/0.1"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            html = resp.read().decode("utf-8", "replace")
+    except Exception as e:
+        return False, None, str(e)
+    m = re.search(
+        r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html,
+        re.I | re.S,
+    )
+    if not m:
+        return False, None, "no JSON-LD JobPosting on page"
+    try:
+        data = json.loads(m.group(1))
+    except Exception as e:
+        return False, None, f"JSON-LD parse failed: {e}"
+    if isinstance(data, list):
+        data = next((x for x in data if isinstance(x, dict) and x.get("@type") == "JobPosting"), {})
+    posted = data.get("datePosted")
+    if not within_max_age(posted, max_age_days=4):
+        return False, posted, f"age fail-closed: datePosted={posted}"
     return True, posted, None
 
 
@@ -238,6 +295,8 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
         open_ok, posted, err = _ashby_still_open(spec["ashby_org"], spec["ashby_id"])
     elif ats == "greenhouse":
         open_ok, posted, err = _greenhouse_still_open(spec["gh_board"], spec["gh_id"])
+    elif ats == "jsonld":
+        open_ok, posted, err = _jsonld_still_open(spec.get("jsonld_url") or spec["url"])
     else:
         open_ok, posted, err = False, None, f"unknown ats={ats}"
     if err and not open_ok:
@@ -270,6 +329,7 @@ def evaluate_all_ready_submits() -> list[ReadySubmit]:
         evaluate_ready_submit(CLERA),
         evaluate_ready_submit(BAYESIAN),
         evaluate_ready_submit(LIFE360),
+        evaluate_ready_submit(VELOSIO),
     ]
 
 
