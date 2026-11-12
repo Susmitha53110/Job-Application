@@ -1,15 +1,15 @@
-# Overnight hunt — 2026-11-11 20:04 CST
+# Overnight hunt — 2026-11-11 20:07 CST
 
 - Window open: **False**
 - Salary set: **MISSING**
 - Curve gate ok: **False**
-- Curve blockers: Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago., Salary expectations number missing in Memory/FORM_ANSWERS
+- Curve blockers: Outside window (now 2026-11-11 20:07 CST). Applies only 08:00–12:00 America/Chicago., Salary expectations number missing in Memory/FORM_ANSWERS
 - Ready submits report: `/workspace/reports/2026-11-11/READY_SUBMITS.md`
 - Submit handoff: `/workspace/reports/2026-11-11/SUBMIT_HANDOFF.json`
-- Clera ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.']
-- Bayesian Health ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.']
-- BetterHelp ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.']
-- Life360 ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:04 CST). Applies only 08:00–12:00 America/Chicago.']
+- Clera ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:07 CST). Applies only 08:00–12:00 America/Chicago.']
+- Bayesian Health ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:07 CST). Applies only 08:00–12:00 America/Chicago.']
+- BetterHelp ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:07 CST). Applies only 08:00–12:00 America/Chicago.']
+- Life360 ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-11 20:07 CST). Applies only 08:00–12:00 America/Chicago.']
 - Watchlist hits: **2**
 - Hunt hits (≤4d): **9**
 - Near-miss (5–10d, watch only): **5**

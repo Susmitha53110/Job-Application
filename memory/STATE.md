@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "overnight_hunt 2026-11-11T20:04-06:00: window=False; salary=MISSING; hunt=9; ge7=4; curve_gate=False"
+- last_run_summary: "overnight_hunt 2026-11-11T20:07-06:00: window=False; salary=MISSING; hunt=9; ge7=4; curve_gate=False"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
