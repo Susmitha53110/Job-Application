@@ -6,8 +6,8 @@ Authorized real ATS work. Never Easy Apply. Do not invent salary.
 1. **Clera** — Senior Data Integration Engineer (b=9.7, no salary field)
 2. **Bayesian Health** — SWE Data & Analytics Platform (b=7.5, no salary field)
 3. **Life360** — Senior Data Engineer, Ads Data (b=7.3; auth Yes / sponsorship No) — kit `Life360_SUBMIT_KIT.md`
-4. **Velosio** — Data Engineer (b=8.7; STOP if salary/EEO/CAPTCHA) — kit `Velosio_SUBMIT_KIT.md`
-5. **Curve Dental** — only if `python3 -m agent curve-gate` → ok
+4. **Curve Dental** — only if `python3 -m agent curve-gate` → ok
+5. **Velosio** — **needs-me (iCIMS login)** — Susmitha must sign in at careers-velosio.icims.com; never Easy Apply — kit `Velosio_SUBMIT_KIT.md`
 6. **BetterHelp** — **SKIP / needs-me** until Susmitha decides on required 5-year no-sponsorship question (see `BetterHelp_SUBMIT_KIT.md`)
 
 ## Commands

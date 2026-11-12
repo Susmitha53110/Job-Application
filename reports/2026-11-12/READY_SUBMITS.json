@@ -9,7 +9,7 @@
     "needs_salary": false,
     "ok": false,
     "blockers": [
-      "Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago."
+      "Outside window (now 2026-11-11 20:23 CST). Applies only 08:00\u201312:00 America/Chicago."
     ],
     "computer_use_prompt": ""
   },
@@ -23,7 +23,7 @@
     "needs_salary": false,
     "ok": false,
     "blockers": [
-      "Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago."
+      "Outside window (now 2026-11-11 20:23 CST). Applies only 08:00\u201312:00 America/Chicago."
     ],
     "computer_use_prompt": ""
   },
@@ -37,21 +37,7 @@
     "needs_salary": false,
     "ok": false,
     "blockers": [
-      "Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago."
-    ],
-    "computer_use_prompt": ""
-  },
-  {
-    "key": "velosio",
-    "company": "Velosio",
-    "role": "Data Engineer",
-    "url": "https://careers.velosio.com/jobs/3162",
-    "resume": "/workspace/resumes/tailored/2026-11-11/Susmitha_Velosio_Data_Engineer.docx",
-    "kit": "/workspace/applications/needs-me/2026-11-12/Velosio_SUBMIT_KIT.md",
-    "needs_salary": false,
-    "ok": false,
-    "blockers": [
-      "Outside window (now 2026-11-11 20:21 CST). Applies only 08:00\u201312:00 America/Chicago."
+      "Outside window (now 2026-11-11 20:23 CST). Applies only 08:00\u201312:00 America/Chicago."
     ],
     "computer_use_prompt": ""
   }

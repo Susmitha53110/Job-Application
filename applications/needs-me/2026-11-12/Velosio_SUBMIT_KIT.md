@@ -1,19 +1,24 @@
 # Velosio — Data Engineer submit kit
 
-**Do not submit outside 08:00–12:00 America/Chicago.**  
-Company ATS (iCIMS-backed careers site) — never Easy Apply.
+**STATUS: needs-me — iCIMS login required. Do not auto-submit.**
 
 - Role: Data Engineer (Microsoft Fabric / Azure data)
-- ATS: https://careers.velosio.com/jobs/3162
-- Posted: 2026-11-11 (JSON-LD `datePosted`) · United States · remote or hybrid option · open
-- Pay posted: not listed (salary 0 in schema) — if form asks expectations → **STOP needs-me**
+- Job page: https://careers.velosio.com/jobs/3162
+- Apply flow: `https://careers-velosio.icims.com/jobs/3162/login` (candidate login)
+- Posted: 2026-11-11 · United States · remote or hybrid · open
+- Pay posted: not listed — if form asks expectations → **STOP needs-me**
 - Resume (a): `resumes/tailored/2026-11-11/Susmitha_Velosio_Data_Engineer.docx`
 - Short copy: `resumes/submit/Susmitha_velosio.docx`
-- Scores: **8.7 / 8.7 / 8.7** (honest b ≥ 7 — submit **(a)** only)
-- Fit notes: 2–5 years band; SQL/Python/PySpark/Azure/ETL/medallion match resume. Microsoft Fabric preferred — comparable Azure Data Factory / lakehouse experience on resume; do **not** claim Fabric product ownership.
-- Work auth: Yes (F1-OPT). Sponsorship: **No**.
+- Scores: **8.7 / 8.7 / 8.7** (honest b ≥ 7)
+- Fit: 2–5 years; SQL/Python/PySpark/Azure/ETL/medallion. Fabric preferred — do **not** invent Fabric ownership.
+- **Never Indeed Easy Apply** (site has Easy Apply feed config; use company iCIMS only after Susmitha logs in).
 
-## Form answers (inspect still in progress; STOP on salary/EEO/CAPTCHA/login)
+## Agent rules
+- Never create accounts or ask for passwords — Susmitha signs in herself.
+- After login, fill Memory answers only; STOP on salary / required EEO without decline / CAPTCHA.
+- Work auth **Yes**; sponsorship **No**.
+
+## If Susmitha completes login in-window
 | Field | Answer |
 |-------|--------|
 | Name | Susmitha Chowdary |
@@ -24,9 +29,7 @@ Company ATS (iCIMS-backed careers site) — never Easy Apply.
 | LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
 | Authorized to work in US? | **Yes** |
 | Require sponsorship now/future? | **No** |
-| Salary expectation | **STOP → needs me** if required |
-
-Dry-fill evidence folder (when captured): `applications/needs-me/2026-11-12/velosio-dry-fill/`
+| Salary | **STOP → needs me** if required |
 
 ## Proof
 `applications/applied/<CT-day>/Velosio_Data_Engineer/` then `python3 -m agent proof …`.

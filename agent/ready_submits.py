@@ -145,17 +145,13 @@ VELOSIO = {
     ],
     "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Velosio_SUBMIT_KIT.md",
     "needs_salary": False,
+    # apply_url redirects to careers-velosio.icims.com/.../login — Susmitha must sign in herself.
+    "hard_blockers": [
+        "Velosio iCIMS apply requires candidate login (careers-velosio.icims.com/jobs/3162/login) — STOP needs-me; never create accounts or use Indeed Easy Apply"
+    ],
     "prompt_extra": (
-        "Company careers site (iCIMS). Never Easy Apply.\n"
-        "- Name: Susmitha Chowdary\n"
-        "- Email: Susmithachowdary67@gmail.com / Phone: 9132073787\n"
-        "- Location: Austin, TX\n"
-        "- Resume: upload resumes/submit/Susmitha_velosio.docx\n"
-        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Authorized to work in the U.S.?: Yes\n"
-        "- Require sponsorship now or in future?: No\n"
-        "Do not claim Microsoft Fabric product ownership (Azure/ADF/lakehouse only).\n"
-        "If salary expectation / required EEO without decline / CAPTCHA/login: STOP needs-me.\n"
+        "DO NOT auto-submit. iCIMS login required. Susmitha must sign in herself.\n"
+        "Never Indeed Easy Apply.\n"
     ),
 }
 
@@ -323,13 +319,12 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
 
 
 def evaluate_all_ready_submits() -> list[ReadySubmit]:
-    # BetterHelp stays packeted but is not in the auto-submit queue while the
-    # 5-year no-sponsorship Greenhouse question is unresolved for F1-OPT.
+    # BetterHelp: F1-OPT 5-year no-sponsorship gate.
+    # Velosio: iCIMS login required — Susmitha must sign in; not auto-queued.
     return [
         evaluate_ready_submit(CLERA),
         evaluate_ready_submit(BAYESIAN),
         evaluate_ready_submit(LIFE360),
-        evaluate_ready_submit(VELOSIO),
     ]
 
 

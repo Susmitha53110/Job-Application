@@ -75,3 +75,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-11 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | dry-run
 2026-11-11 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | skipped | required 5-year no-sponsorship Q — F1-OPT needs-me
 2026-11-11 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
+2026-11-11 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | needs-me | iCIMS login required; never Easy Apply
