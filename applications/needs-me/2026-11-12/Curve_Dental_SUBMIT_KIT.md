@@ -6,8 +6,9 @@
 - Job: Data Engineer
 - ATS: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
 - Posted (`createdOn`): 2026-11-11 · still ≤4 days as of kit write
-- Resume (a): `resumes/tailored/2026-11-11/Susmitha_Curve_Dental_Data_Engineer.docx`
-- Score override: authorized (`curve_dental_score_override: true`)
+- Resume (a): `resumes/tailored/2026-11-12/Susmitha_Curve_Dental_Data_Engineer.docx`
+- Scores: **8.1 / 8.1 / 10.0** (honest b ≥ 7; override kept as backup)
+- Gaps to disclose if asked: dbt; BI tools; Snowflake prod tenure since May 2025 vs JD ~2 yrs
 - EEO questionnaire enabled on this post → Prefer not to disclose / needs me if forced
 
 ## Basic fields

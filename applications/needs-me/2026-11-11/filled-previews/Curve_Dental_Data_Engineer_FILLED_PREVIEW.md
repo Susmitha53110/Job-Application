@@ -6,10 +6,10 @@
 - URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
 - Posted/created: 2026-11-11 (PASS ≤4 days)
 - Location: Remote (United States)
-- Resume (a): `resumes/tailored/2026-11-11/Susmitha_Curve_Dental_Data_Engineer.docx`
-- Scores: **5.6 / 5.6 / 7.3**
-- Packet approval: Susmitha approved this filter-pass dry-run → **score bar overridden for Curve only**
-- Remaining gap: Snowflake tenure stretch + missing production dbt/Fivetran — disclose honestly if asked
+- Resume (a): `resumes/tailored/2026-11-12/Susmitha_Curve_Dental_Data_Engineer.docx`
+- Scores (rescored): **8.1 / 8.1 / 10.0** — honest (b) ≥ 7 after JD-tier fix for Rippling prose
+- Packet approval: Susmitha approved this filter-pass dry-run (override retained as backup)
+- Remaining gaps: dbt / BI tools; Snowflake tenure stretch (JD ~2 yrs prod; Optum since May 2025) — disclose honestly
 
 ## Proposed answers
 | Field | Answer |

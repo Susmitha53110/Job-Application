@@ -43,7 +43,19 @@ def _safe_name(company: str, role: str) -> str:
 
 
 def _years_required(jd_text: str) -> int | None:
-    m = re.search(r"(\d+)\+?\s*years?.{0,40}experience", jd_text, re.I)
+    m_range = re.search(
+        r"(\d+)\s*[–\-to]{1,3}\s*(\d+)\s*years?.{0,60}(?:experience|engineering|data)",
+        jd_text,
+        re.I,
+    )
+    if m_range:
+        # For stretch detection, use the low end of mid-level bands
+        return int(m_range.group(1))
+    m = re.search(
+        r"(?:around\s+)?(\d+)\+?\s*(?:or more\s+)?years?.{0,60}(?:experience|engineering|data)",
+        jd_text,
+        re.I,
+    )
     return int(m.group(1)) if m else None
 
 
@@ -109,6 +121,13 @@ def process_job(
     stretch = "No major years stretch detected."
     if yrs and yrs > my_years:
         stretch = f"JD asks for {yrs}+ years; Susmitha has ~{my_years}. Call this a **stretch** — do not hide the gap in the score."
+    # Snowflake / specialty tenure stretches
+    snow = re.search(r"(?:at least|minimum of)?\s*(\d+)\+?\s*years?.{0,40}snowflake", job.description, re.I)
+    if snow and int(snow.group(1)) > 1:
+        stretch = (
+            (stretch + " " if stretch != "No major years stretch detected." else "")
+            + f"JD asks ~{snow.group(1)}+ years production Snowflake; Optum Snowflake ownership starts May 2025 — disclose honestly."
+        )
 
     score_orig = score_resume_against_jd(resume, jd, my_years=my_years)
     tailored = tailor(resume, jd)

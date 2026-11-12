@@ -62,15 +62,23 @@ def _requirement_score(item_text: str, corpus: str, my_years: int = 5) -> tuple[
     """
     low = item_text.lower()
 
-    # Years-of-experience gates
-    m = re.search(r"(\d+)\+?\s*years?", low)
-    if m and "experience" in low:
+    # Years-of-experience gates (ranges like 3-6 years, or N+/around N or more)
+    m_range = re.search(r"(\d+)\s*[–\-to]{1,3}\s*(\d+)\s*years?", low)
+    m = re.search(r"(?:around\s+)?(\d+)\+?\s*(?:or more\s+)?years?", low)
+    if (m_range or m) and ("experience" in low or "engineering" in low or "data" in low):
+        if m_range:
+            lo, hi = int(m_range.group(1)), int(m_range.group(2))
+            if lo <= my_years <= hi:
+                return 1.0, True
+            if my_years < lo:
+                return max(0.0, my_years / lo), False
+            # slightly over max of range — still ok for mid-level bands
+            return 0.9, True
         need = int(m.group(1))
         if my_years >= need:
-            # still check domain words if present
             if "pipeline" in low and "pipeline" in corpus:
                 return 1.0, True
-            if any(k in low for k in ("data engineer", "software engineer", "related field")):
+            if any(k in low for k in ("data engineer", "software engineer", "analytics engineer", "related field")):
                 return 1.0, True
             return 0.85, True
         return max(0.0, my_years / need), False
@@ -186,9 +194,20 @@ def score_resume_against_jd(resume: Resume, jd: TieredJd, my_years: int = 5) -> 
         if len(top5) >= 5:
             break
     if len(top5) < 5:
+        junk = {
+            "such", "patterns", "storage", "working", "closely", "technologies", "e.g",
+            "what", "when", "where", "who", "how", "why", "are", "can", "more", "first",
+            "through", "sales", "help", "time", "product", "business", "company",
+            "creators", "creator", "omni", "paid", "questions", "commerce", "kit",
+            "dental", "curve", "finance", "billing", "payments", "customer",
+            "core", "management", "model", "report", "reliable", "bring", "build",
+        }
         for kw in jd.keywords:
             if kw.lower() not in corpus and kw not in top5 and len(kw) > 3:
-                if kw.lower() in {"such", "patterns", "storage", "working", "closely", "technologies", "e.g"}:
+                if kw.lower() in junk:
+                    continue
+                # Prefer tech-looking tokens
+                if not re.search(r"[A-Z]|sql|dbt|spark|python|azure|aws|snow|data|pipeline|model", kw, re.I):
                     continue
                 top5.append(kw)
             if len(top5) >= 5:

@@ -9,7 +9,7 @@
 - ramp_day: 1
 - daily_limit: 10
 - last_run_date: 2026-11-11
-- last_run_summary: "~18:02 CT: objective audit — only salary + window block first applied. Lever mid-level hunt=0. Watchlist=Curve only. 07:00 CT prep timer armed; daily 08:00 CT timer armed."
+- last_run_summary: "Scoring fix for Ashby/Rippling prose JDs: Curve now honest b=8.1 (≥7). Kit 6.7 skip. Only salary + 08:00 CT window block first applied."
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

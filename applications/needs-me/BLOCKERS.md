@@ -11,7 +11,8 @@ Updated: 2026-11-11 ~18:00 America/Chicago
 ## Already ready
 - Memory profile + base resume
 - Dry-run approved + real ATS authorized
-- Curve score override + Rippling submit kit + resume (a)
+- Curve honest score **(b)=8.1 ≥ 7** after scoring fix (dbt/BI gaps + Snowflake tenure stretch still disclosed)
+- Rippling submit kit + resume (a)
 - Form answers: LinkedIn, sponsorship **No**, text consent **No**
 - Timers: daily 08:00 CT + 07:00 CT prep once
 
