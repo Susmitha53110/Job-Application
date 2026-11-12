@@ -34,6 +34,9 @@ def test_us_remote_patterns():
     assert is_us_remote("US - Remote", "", title="Data Engineer", source="greenhouse")
     assert is_us_remote("Remote (United States)", "", title="Data Engineer", source="rippling")
     assert not is_us_remote("Remote", "Please join us on our mission", title="Engineer", source="greenhouse")
+    # Jobicy remote-jobs feed often sets jobGeo=USA without "remote" in the short blob
+    assert is_us_remote("USA", "", title="Senior Analytics Engineer", source="jobicy")
+    assert not is_us_remote("Argentina", "", title="Data Engineer", source="jobicy")
 
 
 def test_window_status_shape():
