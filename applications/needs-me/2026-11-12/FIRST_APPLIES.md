@@ -20,7 +20,7 @@ python3 -m agent curve-gate
 ```
 
 Prefer short resumes under `resumes/submit/Susmitha_{clera,bayesian,betterhelp,life360,curve}.docx` (PDF copies also available where built).  
-Use computer-use prompts from `reports/<CT-day>/SUBMIT_HANDOFF.json`, `READY_SUBMITS.md`, and `SUBMIT_NOW.md`.
+Use computer-use prompts from `applications/needs-me/2026-11-12/SUBMIT_NOW.md` (mirrored in `reports/2026-11-12/SUBMIT_NOW.md`) or `reports/2026-11-12/SUBMIT_HANDOFF.json`.
 
 ## Proof paths
 - `applications/applied/2026-11-12/Clera_Senior_Data_Integration_Engineer/`

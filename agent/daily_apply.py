@@ -71,6 +71,19 @@ def write_daily_report(day: str, payload: dict) -> Path:
     return path
 
 
+def _report_day() -> str:
+    """Evening prepare-only runs target tomorrow's CT apply day after noon."""
+    from datetime import datetime, timedelta
+    from zoneinfo import ZoneInfo
+
+    now = datetime.now(ZoneInfo("America/Chicago"))
+    if check_apply_window().open:
+        return now.date().isoformat()
+    if now.hour >= 12:
+        return (now.date() + timedelta(days=1)).isoformat()
+    return now.date().isoformat()
+
+
 def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     """Orchestrate one daily cycle.
 
@@ -79,7 +92,7 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     Actual browser submits happen via computer-use follow-up using the submit kit;
     this function records readiness and proof when provided.
     """
-    day = day or chicago_today().isoformat()
+    day = day or _report_day()
     window = check_apply_window()
     salary = salary_from_memory()
     ready_payload = readiness_report(day=day)
@@ -143,9 +156,20 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                 }
             )
         else:
-            needs_me.append(
-                f"NEW ≥7 fit ready to apply when window open: {pkt.company} / {pkt.role} — {pkt.url}"
-            )
+            company_l2 = (pkt.company or "").lower()
+            url_l2 = (pkt.url or "").lower()
+            if "betterhelp" in company_l2 or "betterhelp" in url_l2:
+                needs_me.append(
+                    f"BetterHelp ≥7 but SKIP/needs-me (5-year no-sponsorship gate): {pkt.url}"
+                )
+            elif "velosio" in company_l2 or "velosio" in url_l2:
+                needs_me.append(
+                    f"Velosio ≥7 but needs-me (iCIMS login/CAPTCHA): {pkt.url}"
+                )
+            else:
+                needs_me.append(
+                    f"NEW ≥7 fit ready to apply when window open: {pkt.company} / {pkt.role} — {pkt.url}"
+                )
             append_log_row(
                 {
                     "date": day,
@@ -165,66 +189,85 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                 }
             )
 
-    # SUBMIT_NOW: in-window jobs that do not need salary, plus Curve if gated
+    # SUBMIT_NOW: always refresh with prompts. Outside window / dry = prepare packet
+    # for the next open window (do NOT delete — morning computer-use depends on it).
     submit_now = paths.REPORTS / day / "SUBMIT_NOW.md"
-    if window.open and not dry:
-        lines = [
-            f"# SUBMIT NOW — {day}",
-            "",
-            "Window is OPEN. Submit company ATS only (never Easy Apply). Proof required.",
-            "",
-            f"Ready-submits report: `{ready_report}`",
-            "",
-        ]
-        any_ready = False
-        for item in ready_items:
-            lines.append(f"## {item.company} — {item.role}")
-            lines.append(f"- Ready: **{item.ok}**")
-            lines.append(f"- URL: {item.url}")
-            lines.append(f"- Kit: `{item.kit}`")
-            if item.ok:
-                any_ready = True
+    live_submit = bool(window.open and not dry)
+    lines = [
+        f"# SUBMIT NOW — {day}",
+        "",
+        (
+            "Window is OPEN. Submit company ATS only (never Easy Apply). Proof required."
+            if live_submit
+            else "PREPARE / frozen packet. Submit only 08:00–12:00 America/Chicago. Never Easy Apply."
+        ),
+        "",
+        f"Ready-submits report: `{ready_report}`",
+        "",
+    ]
+    any_prompt = False
+    for item in ready_items:
+        lines.append(f"## {item.company} — {item.role}")
+        lines.append(f"- Ready now: **{item.ok}**")
+        lines.append(f"- URL: {item.url}")
+        lines.append(f"- Kit: `{item.kit}`")
+        if item.blockers:
+            lines.extend(["", "### Blockers", *[f"- {b}" for b in item.blockers]])
+        if item.computer_use_prompt:
+            any_prompt = True
+            if live_submit and item.ok:
                 notes.append(f"{item.company} READY TO SUBMIT — use prompt below; then proof.")
-                lines.extend(["", "### Computer-use prompt", "```", item.computer_use_prompt, "```", ""])
-            else:
-                lines.extend(["", "### Blockers", *[f"- {b}" for b in item.blockers], ""])
-        if gate.ok:
-            any_ready = True
-            notes.append(
-                "Curve Dental READY TO SUBMIT — run computer-use with prompt from "
-                f"{gate_report}; then `python3 -m agent proof`."
-            )
             lines.extend(
                 [
-                    "## Curve Dental (salary present)",
-                    f"- URL: {gate.url}",
-                    f"- Salary: {gate.salary}",
-                    f"- Gate report: {gate_report}",
                     "",
-                    "### Computer-use prompt",
+                    "### Computer-use prompt"
+                    + ("" if (live_submit and item.ok) else " (use when window opens)"),
                     "```",
-                    gate.computer_use_prompt,
+                    item.computer_use_prompt,
                     "```",
                     "",
                 ]
             )
         else:
-            notes.append("Curve Dental queued — salary and/or other gate blockers remain.")
-            lines.extend(
-                [
-                    "## Curve Dental",
-                    f"- Blocked: {', '.join(gate.blockers) or '(unknown)'}",
-                    "",
-                ]
+            lines.append("")
+    if gate.ok and gate.computer_use_prompt:
+        any_prompt = True
+        if live_submit:
+            notes.append(
+                "Curve Dental READY TO SUBMIT — run computer-use with prompt from "
+                f"{gate_report}; then `python3 -m agent proof`."
             )
-        if any_ready:
-            submit_now.write_text("\n".join(lines), encoding="utf-8")
-        elif submit_now.exists():
-            submit_now.unlink()
+        lines.extend(
+            [
+                "## Curve Dental (salary present)",
+                f"- URL: {gate.url}",
+                f"- Salary: {gate.salary}",
+                f"- Gate report: {gate_report}",
+                "",
+                "### Computer-use prompt",
+                "```",
+                gate.computer_use_prompt,
+                "```",
+                "",
+            ]
+        )
     else:
-        notes.append("Outside window or dry run — prepare only. Clera/Bayesian/Curve kits ready.")
-        if submit_now.exists():
-            submit_now.unlink()
+        notes.append("Curve Dental queued — salary and/or other gate blockers remain.")
+        lines.extend(
+            [
+                "## Curve Dental",
+                f"- Blocked: {', '.join(gate.blockers) or '(unknown)'}",
+                "",
+            ]
+        )
+    if not live_submit:
+        notes.append("Outside window or dry run — prepare only. Clera/Bayesian/Life360 prompts frozen in SUBMIT_NOW.")
+    if any_prompt or gate.blockers:
+        submit_now.write_text("\n".join(lines), encoding="utf-8")
+        # Mirror into needs-me kit folder for the first-applies runbook.
+        kit_dir = paths.APPLICATIONS / "needs-me" / "2026-11-12"
+        if kit_dir.exists():
+            (kit_dir / "SUBMIT_NOW.md").write_text("\n".join(lines), encoding="utf-8")
 
     payload = {
         "window_open": window.open,
@@ -245,7 +288,7 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         "readiness_report": ready_payload.get("report"),
         "curve_gate_report": str(gate_report),
         "ready_submits_report": str(ready_report),
-        "submit_now": str(submit_now) if window.open and not dry and submit_now.exists() else None,
+        "submit_now": str(submit_now) if submit_now.exists() else None,
     }
     report = write_daily_report(day, payload)
     payload["daily_report"] = str(report)
