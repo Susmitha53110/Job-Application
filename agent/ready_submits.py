@@ -183,7 +183,7 @@ def _ashby_still_open(org: str, job_id: str) -> tuple[bool, str | None, str | No
         jid = (j.get("id") or "")
         if job_id in url or jid == job_id:
             posted = j.get("publishedAt") or j.get("updatedAt")
-            if not within_max_age(posted, max_age_days=4):
+            if not within_max_age(posted, max_age_days=10):
                 return False, posted, f"age fail-closed: publishedAt={posted}"
             return True, posted, None
     return False, None, "job id not found on Ashby board (possibly closed)"
@@ -196,7 +196,7 @@ def _greenhouse_still_open(board: str, job_id: int | str) -> tuple[bool, str | N
     except Exception as e:
         return False, None, str(e)
     posted = detail.get("first_published") or detail.get("updated_at")
-    if not within_max_age(posted, max_age_days=4):
+    if not within_max_age(posted, max_age_days=10):
         return False, posted, f"age fail-closed: first_published={posted}"
     return True, posted, None
 
@@ -227,7 +227,7 @@ def _jsonld_still_open(page_url: str) -> tuple[bool, str | None, str | None]:
     if isinstance(data, list):
         data = next((x for x in data if isinstance(x, dict) and x.get("@type") == "JobPosting"), {})
     posted = data.get("datePosted")
-    if not within_max_age(posted, max_age_days=4):
+    if not within_max_age(posted, max_age_days=10):
         return False, posted, f"age fail-closed: datePosted={posted}"
     return True, posted, None
 

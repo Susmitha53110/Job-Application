@@ -148,7 +148,7 @@ def _title_match(title: str) -> bool:
     return False
 
 
-def hunt_greenhouse(boards: list[str] | None = None, max_age_days: int = 4) -> list[JobPosting]:
+def hunt_greenhouse(boards: list[str] | None = None, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for board in boards or DEFAULT_GH_BOARDS:
         try:
@@ -191,7 +191,7 @@ def hunt_greenhouse(boards: list[str] | None = None, max_age_days: int = 4) -> l
     return out
 
 
-def hunt_ashby(orgs: list[str], max_age_days: int = 4) -> list[JobPosting]:
+def hunt_ashby(orgs: list[str], max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for org in orgs:
         try:
@@ -227,7 +227,7 @@ def hunt_ashby(orgs: list[str], max_age_days: int = 4) -> list[JobPosting]:
     return out
 
 
-def hunt_rippling(board_slug: str, max_age_days: int = 4) -> list[JobPosting]:
+def hunt_rippling(board_slug: str, max_age_days: int = 10) -> list[JobPosting]:
     """Rippling board list lacks dates; fetch each job detail for createdOn."""
     try:
         listing = _get_json(f"https://ats.rippling.com/api/v2/board/{board_slug}/jobs")
@@ -370,7 +370,7 @@ DEFAULT_LEVER_COMPANIES = [
 ]
 
 
-def hunt_lever(companies: list[str] | None = None, max_age_days: int = 4) -> list[JobPosting]:
+def hunt_lever(companies: list[str] | None = None, max_age_days: int = 10) -> list[JobPosting]:
     from datetime import datetime, timezone
 
     out: list[JobPosting] = []
@@ -423,7 +423,7 @@ HIMALAYAS_GH_BOARDS = {
 }
 
 
-def hunt_himalayas(*, max_age_days: int = 4, max_pages: int = 8) -> list[JobPosting]:
+def hunt_himalayas(*, max_age_days: int = 10, max_pages: int = 8) -> list[JobPosting]:
     """Probe Himalayas public jobs API; prefer Greenhouse apply URLs when board is known."""
     out: list[JobPosting] = []
     cursor = None
@@ -626,7 +626,7 @@ def _jsonld_is_us_eligible(data: dict, desc: str) -> tuple[bool, str]:
     return True, ",".join(countries) or "US"
 
 
-def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 4) -> list[JobPosting]:
+def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 10) -> list[JobPosting]:
     """Fetch company careers pages that expose schema.org JobPosting JSON-LD."""
     import urllib.request
 
@@ -690,7 +690,7 @@ JSONLD_CAREERS_PAGES = [
 ]
 
 
-def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
+def hunt_all(*, max_age_days: int = 10) -> list[JobPosting]:
     from .job_search import search_arbeitnow, search_remotive
     from .watchlist import poll_watchlist
 
@@ -730,10 +730,10 @@ def hunt_all(*, max_age_days: int = 4) -> list[JobPosting]:
     return filter_jobs(uniq, max_age_days=max_age_days)
 
 
-def hunt_near_miss(*, lookback_days: int = 10) -> list[JobPosting]:
-    """US-remote DE/AE roles 5–10 days old — watch only, never apply (fail-closed ≤4d)."""
+def hunt_near_miss(*, lookback_days: int = 14) -> list[JobPosting]:
+    """US DE/AE roles older than apply window — watch only, never apply (fail-closed ≤10d)."""
     wide = hunt_all(max_age_days=lookback_days)
-    return [j for j in wide if not within_max_age(j.posted_at, max_age_days=4)]
+    return [j for j in wide if not within_max_age(j.posted_at, max_age_days=10)]
 
 
 if __name__ == "__main__":

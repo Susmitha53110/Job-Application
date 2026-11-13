@@ -1,0 +1,20 @@
+Natera — Sr. Forward Deployed Data Engineer
+URL: https://job-boards.greenhouse.io/natera/jobs/6255111004
+Email: dsusmitha55@gmail.com
+Non-compete: No (standing answer)
+Status: NEEDS-ME — email security code (Greenhouse "confirm you're a human")
+
+What works:
+- Playwright fills the full form (validation clean) with standing answers.
+- First Submit triggers: "A verification code was sent to dsusmitha55@gmail.com… enter the 8-character code"
+- OTP boxes: #security-input-0 … #security-input-7
+
+What blocked:
+- Code 87230656 → "Incorrect security code" (expired after a new Submit resent a fresh code).
+- Gmail MCP auth declined by user — agent cannot read new codes automatically.
+
+Unblock:
+1. Open the job URL, Apply, or reply in chat with the latest 8-char code from Gmail (from Greenhouse / Natera) while a form session is live.
+2. Or re-enable Gmail MCP so the agent can fetch the code in-session after Submit.
+
+Do not re-click Submit before entering the code (each Submit can invalidate the previous code).

@@ -155,7 +155,7 @@ def _visa_block(text: str) -> bool:
     )
 
 
-def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 4) -> list[JobPosting]:
+def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for board in boards or GREENHOUSE_WATCH:
         try:
@@ -197,7 +197,7 @@ def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 4) -
     return out
 
 
-def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 4) -> list[JobPosting]:
+def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for org in orgs or ASHBY_WATCH:
         try:
@@ -235,7 +235,7 @@ def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 4) -> list[
     return out
 
 
-def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 4) -> list[JobPosting]:
+def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for slug in slugs or RIPPLING_WATCH:
         try:
@@ -311,7 +311,7 @@ def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 4) -> l
     return out
 
 
-def poll_watchlist(*, max_age_days: int = 4) -> list[JobPosting]:
+def poll_watchlist(*, max_age_days: int = 10) -> list[JobPosting]:
     jobs: list[JobPosting] = []
     jobs.extend(poll_greenhouse(max_age_days=max_age_days))
     jobs.extend(poll_ashby(max_age_days=max_age_days))

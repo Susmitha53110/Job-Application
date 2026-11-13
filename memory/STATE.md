@@ -6,15 +6,15 @@
 - real_applies_authorized: true
 - curve_dental_score_override: true
 - daily_schedule_active: true
-- ramp_day: 1
-- daily_limit: 10
-- last_run_date: 2026-11-12
-- last_run_summary: "efficiency+quality guard saved; idle until 08:00 CT; target 20-25"
+- ramp_day: 2
+- daily_limit: 25
+- last_run_date: 2026-11-13
+- last_run_summary: "0 confirmed applies; Natera blocked on email OTP (Gmail declined); age window 10d; queue MongoDB/NinjaOne/lumin-digital for 08:00 CT"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
 - schedule_days: Mon-Sun
-- max_post_age_days: 4
+- max_post_age_days: 10
 - us_only: true
 - remote_only: true
 - open_positions_only: true
@@ -25,7 +25,7 @@
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
-- next_apply_window: "2026-11-12 08:00 America/Chicago"
+- next_apply_window: "2026-11-14 08:00 America/Chicago"
 - salary_expectation: 120000
 - timer_policy: exactly_one_recurring_8am_ct
 - outside_window_policy: idle_no_hunt_no_github_react
@@ -35,3 +35,6 @@
 - daily_apply_target_usage_cut: 10_if_usage_gt_85pct
 - efficiency_rules: memory/EFFICIENCY.md
 - master_facts: memory/MASTER_FACTS.md
+- non_compete: No
+- max_age_days: 10
+- gmail_mcp: declined

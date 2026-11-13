@@ -1,27 +1,18 @@
-# Queue — 2026-11-13
+# Queue — 2026-11-13 → handoff 2026-11-14
 
-Target: 20–25 · Email: dsusmitha55@gmail.com
+Target: 20–25 · Email: dsusmitha55@gmail.com · Age: **≤10 days** · US remote · ATS · b≥7
 
-## Hunt
-One pass + queue-empty re-hunts (Greenhouse expanded, Lever sweep, Remotive/Arbeitnow/Rippling/Ashby).
-Strict filter: first_published ≤4d · US remote · company ATS · not Citi/Optum/Keebo/Consumer Edge · not already applied.
+## Confirmed today
+None (0) — no employer confirmation emails expected.
 
-## Eligible ≥7 today
-| Company | Role | b | Status |
-|---------|------|---|--------|
-| Natera | Sr. Forward Deployed Data Engineer | 7.3 | **needs me** — non-compete Q not in FORM_ANSWERS |
-| Instacart | Staff SWE, Ads Data Platform | 6.5 | skipped (&lt;7) |
+## Blocked today
+- **Natera** Sr Forward Deployed DE — needs **8-char email security code** pasted in chat (Gmail declined). URL: https://job-boards.greenhouse.io/natera/jobs/6255111004
+- Block / Zocdoc / Commure / Velosio — prior needs-me (CAPTCHA / automation / login)
+
+## Ready for 08:00 CT 2026-11-14 (10-day hunt, scored)
+1. MongoDB — Senior SWE, Database Integration & Observability — b=9.6 — https://www.mongodb.com/careers/job/?gh_jid=8352433
+2. NinjaOne — Senior Data Engineer \| Emerging Products — b=8.6 — https://job-boards.greenhouse.io/ninjaone/jobs/4470734009
+3. lumin-digital — Senior Data Engineer — b=7.5 — https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384
 
 ## Already applied (seen)
 BetterHelp, Clera, Bayesian, Life360, Curve Dental
-
-## Market note
-Only ~7 Greenhouse postings matched first_published≤4d + US-remote DE/AE across 100+ boards; most already applied or excluded. Cannot reach 20–25 without relaxing age/remote filters or new standing answers (non-compete).
-
-## Steps shortened for efficiency
-- Reused MASTER_FACTS / Greenhouse kit / APPLIED_INDEX
-- Prefer Greenhouse `?questions=true` API over screenshots for Natera form map
-- Fast-skip Consumer Edge / Keebo / score&lt;7
-
-## Mid-window update (~08:10 CT)
-Additional board sweeps (PerfectServe, Machinify, Airbnb, EnergyHub, Lever×100, Jobicy): **no new first_published≤4d US-remote DE/AE** left to apply.

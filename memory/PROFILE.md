@@ -29,7 +29,7 @@
 - Work mode: prefer remote; allow hybrid/on-site US
 - Openings hard filter: **open positions only** (skip closed/filled)
 - Seniority / years range: 3–6 years / mid-level Data Engineer (**CONFIRM**)
-- Posted within: last **4** days (fail closed if post date unknown)
+- Posted within: last **10** days (fail closed if post date unknown)
 - Minimum pay (only if posted): $120,000 / year
 - Skip / dealbreakers:
   - Security clearance required
@@ -63,6 +63,7 @@
 - Background check + drug screen: Yes
 - LinkedIn / GitHub / portfolio: blank; if required → N/A
 - Uncovered questions → needs me (never guess)
+- Non-compete / restrictive covenant with current employer: **No**
 - After fill → **submit directly** (no approval wait); proof or `unconfirmed`
 
 ## Never apply

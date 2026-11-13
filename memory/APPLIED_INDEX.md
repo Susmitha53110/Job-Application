@@ -149,3 +149,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-13 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/block/jobs/5473605008 | needs-me
 2026-11-13 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
 2026-11-13 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me
+2026-11-13 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | skipped

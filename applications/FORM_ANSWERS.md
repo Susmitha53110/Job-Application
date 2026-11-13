@@ -43,6 +43,7 @@ Updated: 2026-11-11 — standing answers from Susmitha. Do not flag these again.
 | Nationality / national origin | Indian (nationality fields only — never for citizenship/work auth) |
 | Disability | No, I do not have a disability (never had one) |
 | Veteran status | I am not a protected veteran |
+| Non-compete / restrictive covenant with current employer? | **No** |
 | Text message consent | **No** |
 | Cover letter | Skip unless required |
 | Resume file | `resumes/tailored/YYYY-MM-DD/Susmitha_<Company>_<Role>.docx` (version a) |
@@ -55,7 +56,7 @@ Updated: 2026-11-11 — standing answers from Susmitha. Do not flag these again.
 ## Apply rules (runtime)
 - Only between **08:00–12:00 America/Chicago** unless Susmitha explicitly overrides for named jobs
 - **Daily apply target (from 2026-11-13): 20–25 confirmed applications** per window (10/day if usage >85%)
-- US remote open · posted ≤4 days · company ATS only · never Easy Apply
+- US remote open · posted ≤10 days · company ATS only · never Easy Apply
 - Honest score (b) ≥ 7 unless Memory notes an explicit override
 - After tailor + fill → **SUBMIT DIRECTLY** (no approval wait). Proof required; else `unconfirmed`
 - Anything not covered above → **needs me** (never guess)

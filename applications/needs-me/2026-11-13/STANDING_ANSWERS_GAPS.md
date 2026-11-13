@@ -1,6 +1,6 @@
-# Standing answers gaps (blocking applies)
+# Standing answers gaps
 
-1. **Non-compete:** “Have you signed a non-compete with your current employer?” (Natera required)
+1. Non-compete: **SET — No** (2026-11-13)
 2. Velosio: iCIMS login + CAPTCHA
-
-Please add standing answers for #1 so future forms can submit without needs-me.
+3. Natera Greenhouse: needs pasted **8-char email security code** (Gmail MCP declined)
+4. Block / Zocdoc / Commure: CAPTCHA or ATS automation needs-me

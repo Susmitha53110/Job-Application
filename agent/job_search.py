@@ -9,7 +9,7 @@ from datetime import datetime, timedelta, timezone
 
 
 # Locked search policy from Susmitha (2026-11-11)
-DEFAULT_MAX_AGE_DAYS = 4
+DEFAULT_MAX_AGE_DAYS = 10
 US_ONLY = True
 REMOTE_ONLY = True
 OPEN_ONLY = True
