@@ -157,3 +157,16 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | Machinify | Senior Data Engineer  | https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009 | dry-run
 2026-11-14 | mux | Senior Data Engineer | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe | dry-run
 2026-11-14 | lumin-digital | Senior Data Engineer | https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384 | dry-run
+2026-11-13 | MongoDB | Senior Software Engineer, Database Integration & Observability | https://www.mongodb.com/careers/job/?gh_jid=8352433 | dry-run
+2026-11-13 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | dry-run
+2026-11-13 | Machinify | Senior Data Engineer  | https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009 | dry-run
+2026-11-13 | NinjaOne | Senior Data Engineer | Emerging Products | https://job-boards.greenhouse.io/ninjaone/jobs/4470734009 | dry-run
+2026-11-13 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | dry-run
+2026-11-13 | Life360 | Senior Data Engineer, Ads Data (AI Native) | https://job-boards.greenhouse.io/life360/jobs/8935286002 | dry-run
+2026-11-13 | mux | Senior Data Engineer | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe | dry-run
+2026-11-13 | clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3 | dry-run
+2026-11-13 | kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
+2026-11-13 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | dry-run
+2026-11-13 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-13 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
+2026-11-13 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run

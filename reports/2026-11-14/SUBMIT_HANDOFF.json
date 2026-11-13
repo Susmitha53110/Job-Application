@@ -1,7 +1,7 @@
 {
   "day": "2026-11-14",
   "window_open": false,
-  "window_reason": "Outside window (now 2026-11-13 12:17 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "window_reason": "Outside window (now 2026-11-13 12:32 CST). Applies only 08:00\u201312:00 America/Chicago.",
   "salary": "120000",
   "ready_submits_report": "/workspace/reports/2026-11-14/READY_SUBMITS.md",
   "curve_gate_report": "/workspace/reports/2026-11-14/CURVE_GATE.md",
@@ -21,7 +21,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-13 12:17 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-13 12:32 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-14/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx",
@@ -38,7 +38,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-13 12:17 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-13 12:32 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/ready/2026-11-14/mux_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-14/Susmitha_mux_Senior_Data_Engineer.docx",
@@ -55,7 +55,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-13 12:17 CST). Applies only 08:00\u201312:00 America/Chicago."
+        "Outside window (now 2026-11-13 12:32 CST). Applies only 08:00\u201312:00 America/Chicago."
       ],
       "kit": "/workspace/applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md",
       "resume": "/workspace/resumes/tailored/2026-11-14/Susmitha_Machinify_Senior_Data_Engineer_.docx",
