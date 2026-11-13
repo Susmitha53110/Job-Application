@@ -229,6 +229,13 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
             skipped.append(f"{job.company} / {job.title} — visa support will not be provided")
             append_applied_index(job.company, job.title, job.url, "skipped", day=day)
             continue
+        # Company ATS only — skip contractor marketplaces / aggregator apply links
+        if any(
+            x in url_l or x in company_l
+            for x in ("lemon.io", "remotive.com", "himalayas.app", "arbeitnow.com", "weworkremotely")
+        ):
+            skipped.append(f"{job.company} / {job.title} — not company ATS (marketplace/aggregator)")
+            continue
         # Standing exclusion: never apply to Citi / Optum / UHG (incl. recruiter postings)
         excluded_blob = f"{company_l} {url_l} {job.title or ''}".lower()
         if any(
