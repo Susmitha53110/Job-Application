@@ -15,6 +15,7 @@ from .resume_parse import load_base_resume
 from .salary import salary_from_memory
 from .setup_gate import find_base_resume
 from .window import check_apply_window, chicago_today
+# Playwright submit helpers imported lazily inside run_daily when window is open.
 
 
 def _load_resume():
@@ -278,7 +279,53 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
             ]
         )
     if not live_submit:
-        notes.append("Outside window or dry run — prepare only. Clera/Bayesian/Life360 prompts frozen in SUBMIT_NOW.")
+        notes.append("Outside window or dry run — prepare only. Ready-submit prompts frozen in SUBMIT_NOW.")
+
+    # In-window: attempt Playwright submits for ready Greenhouse/Ashby packets
+    if live_submit:
+        from .ashby_pw import submit_ashby_basic
+        from .greenhouse_pw import submit_greenhouse_basic
+
+        for item in ready_items:
+            if not item.ok:
+                continue
+            proof = paths.APPLICATIONS / "applied" / day / f"{item.company}_{item.role}".replace(" ", "_")[:100]
+            key = (item.key or "").lower()
+            try:
+                if key in {"mongodb", "machinify"}:
+                    res = submit_greenhouse_basic(
+                        url=item.url,
+                        resume=Path(item.resume),
+                        proof_dir=proof,
+                        company=item.company,
+                        require_window=True,
+                        fill_only=False,
+                    )
+                elif key == "mux":
+                    res = submit_ashby_basic(
+                        url=item.url,
+                        resume=Path(item.resume),
+                        proof_dir=proof,
+                        company=item.company,
+                        require_window=True,
+                        fill_only=False,
+                    )
+                else:
+                    continue
+            except Exception as e:
+                needs_me.append(f"{item.company} Playwright submit error: {e}")
+                continue
+            if res.success and not res.needs_me:
+                applied.append(f"{item.company} / {item.role} — {res.url}")
+                append_applied_index(item.company, item.role, item.url, "applied", day=day)
+                notes.append(f"{item.company} submitted via Playwright; proof in {proof}")
+            elif res.needs_me:
+                needs_me.append(f"{item.company}: {res.needs_me}")
+                append_applied_index(item.company, item.role, item.url, "needs-me", day=day)
+            else:
+                unconfirmed.append(f"{item.company} / {item.role} — {res.url}")
+                append_applied_index(item.company, item.role, item.url, "unconfirmed", day=day)
+
     if any_prompt or gate.blockers:
         submit_now.write_text("\n".join(lines), encoding="utf-8")
         # Mirror into needs-me kit folder for the first-applies runbook.

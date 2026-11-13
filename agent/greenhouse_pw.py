@@ -183,6 +183,11 @@ def submit_greenhouse_basic(
             browser.close()
             return GhSubmitResult(False, page.url, "No #first_name — form not found", "", proof_dir)
 
+        # Upload resume first (may autofill), then overwrite with standing answers.
+        if _by_id(page, "resume").count():
+            page.set_input_files("#resume", str(resume))
+            page.wait_for_timeout(1200)
+
         for eid, val in [
             ("first_name", first),
             ("last_name", last),
@@ -221,8 +226,10 @@ def submit_greenhouse_basic(
                 page.keyboard.press("Enter")
             _close_overlays(page)
 
-        if _by_id(page, "resume").count():
-            page.set_input_files("#resume", str(resume))
+        # Re-assert email/name after location interactions (autofill can race)
+        for eid, val in [("first_name", first), ("last_name", last), ("email", email)]:
+            if _by_id(page, eid).count():
+                _set_val(page, eid, val)
 
         # Custom questions + EEO via label map (includes numeric demographic ids)
         labels = page.evaluate(
@@ -262,6 +269,7 @@ def submit_greenhouse_basic(
                     _pick_react(page, eid, ["Female", "Woman"])
                 elif "hispanic" in low:
                     _pick_react(page, eid, ["No"])
+                    page.wait_for_timeout(400)  # race field may mount after Hispanic=No
                 elif low.startswith("race") or "please identify your race" in low:
                     _pick_react(page, eid, ["Asian", "Asian (Not Hispanic or Latino)"])
                 elif "veteran" in low:
@@ -272,8 +280,20 @@ def submit_greenhouse_basic(
                         eid,
                         ["No, I do not have a disability", "No, I don't have a disability"],
                     )
+                elif "phone number" in low and "phone*" not in low.replace(" ", ""):
+                    _set_val(page, eid, phone)
             except Exception:
                 continue
+
+        # Second pass for race if it appeared after Hispanic
+        try:
+            race_lab = page.locator("label", has_text=re.compile(r"identify your race|^Race", re.I))
+            if race_lab.count():
+                rid = (race_lab.first.get_attribute("id") or "").replace("-label", "")
+                if rid:
+                    _pick_react(page, rid, ["Asian", "Asian (Not Hispanic or Latino)"])
+        except Exception:
+            pass
 
         # demographic consent checkbox (MongoDB etc.)
         consent = _by_id(page, "gdpr_demographic_data_consent_given_1")

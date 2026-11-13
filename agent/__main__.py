@@ -46,10 +46,10 @@ def main(argv: list[str] | None = None) -> int:
     p_proof.add_argument("--url", required=True)
     p_proof.add_argument("--notes", default="")
     p_proof.add_argument("--file", action="append", default=[], help="Proof file path (repeatable)")
-    p_gh = sub.add_parser("gh-fill", help="Greenhouse Playwright fill (default fill-only; --submit in-window)")
-    p_gh.add_argument("--company", required=True, choices=["mongodb", "machinify"])
+    p_gh = sub.add_parser("gh-fill", help="Greenhouse/Ashby Playwright fill (default fill-only; --submit in-window)")
+    p_gh.add_argument("--company", required=True, choices=["mongodb", "machinify", "mux"])
     p_gh.add_argument("--submit", action="store_true", help="Click Submit (requires open CT window)")
-    p_gh.add_argument("--security-code", default=None, help="8-char Greenhouse email OTP if prompted")
+    p_gh.add_argument("--security-code", default=None, help="8-char email OTP if prompted")
 
     args = parser.parse_args(argv)
 
@@ -197,13 +197,21 @@ def main(argv: list[str] | None = None) -> int:
         specs = {
             "mongodb": {
                 "company": "MongoDB",
+                "ats": "greenhouse",
                 "url": "https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433",
                 "resume": paths.ROOT / "resumes" / "submit" / "Susmitha_mongodb.docx",
             },
             "machinify": {
                 "company": "Machinify",
+                "ats": "greenhouse",
                 "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
                 "resume": paths.ROOT / "resumes" / "submit" / "Susmitha_machinify.docx",
+            },
+            "mux": {
+                "company": "mux",
+                "ats": "ashby",
+                "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+                "resume": paths.ROOT / "resumes" / "submit" / "Susmitha_mux.docx",
             },
         }
         spec = specs[args.company]
@@ -213,15 +221,28 @@ def main(argv: list[str] | None = None) -> int:
         if do_submit and not check_apply_window().open:
             print(json.dumps({"ok": False, "error": "Submit blocked outside CT window"}, indent=2))
             return 4
-        result = submit_greenhouse_basic(
-            url=spec["url"],
-            resume=Path(spec["resume"]),
-            proof_dir=proof,
-            company=spec["company"],
-            security_code=args.security_code,
-            require_window=do_submit,
-            fill_only=not do_submit,
-        )
+        if spec["ats"] == "ashby":
+            from .ashby_pw import submit_ashby_basic
+
+            result = submit_ashby_basic(
+                url=spec["url"],
+                resume=Path(spec["resume"]),
+                proof_dir=proof,
+                company=spec["company"],
+                security_code=args.security_code,
+                require_window=do_submit,
+                fill_only=not do_submit,
+            )
+        else:
+            result = submit_greenhouse_basic(
+                url=spec["url"],
+                resume=Path(spec["resume"]),
+                proof_dir=proof,
+                company=spec["company"],
+                security_code=args.security_code,
+                require_window=do_submit,
+                fill_only=not do_submit,
+            )
         print(
             json.dumps(
                 {
