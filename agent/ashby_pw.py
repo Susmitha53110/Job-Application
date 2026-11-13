@@ -133,12 +133,40 @@ def submit_ashby_basic(
         # Re-assert identity after autofill races
         fill_label(r"^Name$", name)
         fill_label(r"^Email$", email)
+        try:
+            page.locator("#_systemfield_email, input[type=email]").first.fill(email, timeout=3000)
+        except Exception:
+            pass
+        try:
+            page.locator("#_systemfield_name").first.fill(name, timeout=3000)
+        except Exception:
+            pass
 
         page.screenshot(path=str(proof_dir / "filled.png"), full_page=True)
         if fill_only:
-            (proof_dir / "FILL_ONLY.txt").write_text(
-                f"{company} Ashby fill-only\nURL: {page.url}\nEmail: {email}\nNo Submit.\n"
+            dom = page.evaluate(
+                """() => ({
+                  name: document.getElementById('_systemfield_name')?.value
+                    || document.querySelector('input[name="_systemfield_name"]')?.value || null,
+                  email: document.getElementById('_systemfield_email')?.value
+                    || document.querySelector('input[type=email]')?.value || null,
+                })"""
             )
+            ok = (dom.get("email") or "") == email and (dom.get("name") or "") == name
+            (proof_dir / "FILL_ONLY.txt").write_text(
+                f"{company} Ashby fill-only\n"
+                f"URL: {page.url}\n"
+                f"Email: {email}\n"
+                f"DOM name: {dom.get('name')}\n"
+                f"DOM email: {dom.get('email')}\n"
+                f"identity_ok: {ok}\n"
+                f"No Submit.\n"
+            )
+            if not ok:
+                browser.close()
+                return AshbySubmitResult(
+                    False, page.url, f"Fill identity mismatch DOM={dom}", "fill_only", proof_dir
+                )
             browser.close()
             return AshbySubmitResult(True, page.url, None, "fill_only", proof_dir)
 

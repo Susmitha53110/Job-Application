@@ -280,8 +280,22 @@ def submit_greenhouse_basic(
                         eid,
                         ["No, I do not have a disability", "No, I don't have a disability"],
                     )
-                elif "phone number" in low and "phone*" not in low.replace(" ", ""):
+                elif "phone number" in low:
                     _set_val(page, eid, phone)
+                elif "culture" in low or "careers content" in low or (
+                    "alert" in low and ("receive" in low or "similar" in low)
+                ):
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "No",
+                            "No thank you",
+                            "No, I don't want to receive alerts",
+                            "Opt out",
+                            "False",
+                        ],
+                    )
             except Exception:
                 continue
 
@@ -323,11 +337,47 @@ def submit_greenhouse_basic(
                 except Exception:
                     pass
 
+        # Final identity overwrite (resume autofill races)
+        for eid, val in [("first_name", first), ("last_name", last), ("email", email)]:
+            if _by_id(page, eid).count():
+                _set_val(page, eid, val)
+
         page.screenshot(path=str(proof_dir / "filled.png"), full_page=True)
         if fill_only:
-            (proof_dir / "FILL_ONLY.txt").write_text(
-                f"{company} fill-only dry check\nURL: {page.url}\nEmail: {email}\nNo Submit clicked.\n"
+            dom = page.evaluate(
+                """() => ({
+                  first: document.getElementById('first_name')?.value || null,
+                  last: document.getElementById('last_name')?.value || null,
+                  email: document.getElementById('email')?.value || null,
+                  phone: document.getElementById('phone')?.value || null,
+                  consent: document.getElementById('gdpr_demographic_data_consent_given_1')?.checked ?? null,
+                  selects: [...document.querySelectorAll('.select__single-value')]
+                    .map(e => (e.textContent||'').trim()).filter(Boolean),
+                })"""
             )
+            ok_email = (dom.get("email") or "") == email
+            ok_name = (dom.get("first") or "") == first and (dom.get("last") or "") == last
+            (proof_dir / "FILL_ONLY.txt").write_text(
+                f"{company} fill-only dry check\n"
+                f"URL: {page.url}\n"
+                f"Email: {email}\n"
+                f"DOM email: {dom.get('email')}\n"
+                f"DOM name: {dom.get('first')} {dom.get('last')}\n"
+                f"DOM phone: {dom.get('phone')}\n"
+                f"DOM consent: {dom.get('consent')}\n"
+                f"DOM selects: {dom.get('selects')}\n"
+                f"identity_ok: {ok_email and ok_name}\n"
+                f"No Submit clicked.\n"
+            )
+            if not (ok_email and ok_name):
+                browser.close()
+                return GhSubmitResult(
+                    False,
+                    page.url,
+                    f"Fill identity mismatch DOM={dom}",
+                    "fill_only",
+                    proof_dir,
+                )
             browser.close()
             return GhSubmitResult(True, page.url, None, "fill_only", proof_dir)
 
