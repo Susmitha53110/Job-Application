@@ -55,11 +55,18 @@ def _close_overlays(page) -> None:
     )
 
 
+def _by_id(page, eid: str):
+    """Locator for any element id, including numeric Greenhouse EEO ids."""
+    if not eid:
+        return page.locator("html")  # empty-safe; callers check count
+    return page.locator(f'[id="{eid}"]')
+
+
 def _pick_react(page, eid: str, candidates: list[str]) -> bool:
-    if not eid or not re.match(r"^[A-Za-z][\w\-:.]*$", eid):
+    if not eid:
         return False
     _close_overlays(page)
-    inp = page.locator(f"#{eid}")
+    inp = _by_id(page, eid)
     try:
         if not inp.count():
             return False
@@ -182,68 +189,81 @@ def submit_greenhouse_basic(
             ("preferred_name", preferred),
             ("email", email),
         ]:
-            if page.locator(f"#{eid}").count():
+            if _by_id(page, eid).count():
                 _set_val(page, eid, val)
 
-        if page.locator("#country").count():
+        if _by_id(page, "country").count():
             _pick_react(page, "country", ["United States"])
-        if page.locator("#phone").count():
+        if _by_id(page, "phone").count():
             _set_val(page, "phone", phone)
             _close_overlays(page)
-        # duplicate phone number fields on some boards
         for eid in ("phone_number", "question_phone", "phone-number"):
-            if page.locator(f"#{eid}").count():
+            if _by_id(page, eid).count():
                 _set_val(page, eid, phone)
 
-        # Location city — Greenhouse often uses a free-text or combobox
-        for eid in ("job_application_location", "location", "city"):
-            if page.locator(f"#{eid}").count():
-                _set_val(page, eid, city)
-                break
-        # label-based city
-        try:
-            page.get_by_label(re.compile(r"Location \(City\)|City", re.I)).fill(city)
-        except Exception:
-            pass
+        # Location (City) — Greenhouse candidate-location combobox
+        if _by_id(page, "candidate-location").count():
+            loc = _by_id(page, "candidate-location")
+            loc.click()
+            loc.fill("")
+            loc.type(city, delay=25)
+            page.wait_for_timeout(500)
+            menu = page.locator("div.select__menu").last
+            if menu.count() and menu.locator("[role=option]").count():
+                # prefer Austin, TX / United States style
+                opts = menu.locator("[role=option]").all_inner_texts()
+                hit = next((t for t in opts if city.lower() in t.lower()), None)
+                if hit:
+                    menu.get_by_role("option", name=hit, exact=True).first.click()
+                else:
+                    menu.locator("[role=option]").first.click()
+            else:
+                page.keyboard.press("Enter")
+            _close_overlays(page)
 
-        if page.locator("#resume").count():
+        if _by_id(page, "resume").count():
             page.set_input_files("#resume", str(resume))
-        # LinkedIn required boards
-        for eid in page.evaluate(
-            """() => [...document.querySelectorAll('[id]')].map(e => e.id).filter(id => /linkedin|question_/i.test(id))"""
-        ):
-            lab = page.evaluate(
-                """(id) => (document.getElementById(id + '-label') || {}).innerText || ''""",
-                eid,
-            )
-            if "linkedin" in (lab or "").lower() or "linkedin" in eid.lower():
-                _set_val(page, eid, linkedin)
 
-        # Sponsorship / prior employer selects by label heuristics via react ids from labels
+        # Custom questions + EEO via label map (includes numeric demographic ids)
         labels = page.evaluate(
             """() => [...document.querySelectorAll('label[id$="-label"]')].map(l => ({id: l.id.replace(/-label$/, ''), text: (l.innerText||'').trim()}))"""
         )
         for item in labels:
             low = (item.get("text") or "").lower()
             eid = item.get("id") or ""
-            if not eid or not re.match(r"^[A-Za-z]", eid):
+            if not eid:
                 continue
             try:
-                if "sponsor" in low and sponsorship_no:
+                if "preferred name" in low or "preferred first name" in low:
+                    _set_val(page, eid, preferred)
+                elif "linkedin" in low:
+                    _set_val(page, eid, linkedin)
+                elif "sponsor" in low and sponsorship_no:
                     _pick_react(page, eid, ["No"])
                 elif ("worked" in low and "before" in low) or "previously" in low:
                     if previously_no:
                         _pick_react(page, eid, ["No"])
                 elif "hear" in low or "learn about" in low:
-                    _pick_react(page, eid, ["Company website", "Company Website", "Online", "Other"])
-                elif low.startswith("gender") and "identity" not in low:
-                    _pick_react(page, eid, ["Female"])
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "MongoDB Careers Page",
+                            "Company website",
+                            "Company Website",
+                            "Company career site",
+                            "LinkedIn",
+                            "Other",
+                        ],
+                    )
                 elif "gender identity" in low:
-                    _pick_react(page, eid, ["Female"])
+                    _pick_react(page, eid, ["Woman", "Female"])
+                elif low.strip().startswith("gender"):
+                    _pick_react(page, eid, ["Female", "Woman"])
                 elif "hispanic" in low:
                     _pick_react(page, eid, ["No"])
                 elif low.startswith("race") or "please identify your race" in low:
-                    _pick_react(page, eid, ["Asian"])
+                    _pick_react(page, eid, ["Asian", "Asian (Not Hispanic or Latino)"])
                 elif "veteran" in low:
                     _pick_react(page, eid, ["I am not a protected veteran"])
                 elif "disability" in low:
@@ -255,13 +275,33 @@ def submit_greenhouse_basic(
             except Exception:
                 continue
 
-        # demographic / privacy consent checkboxes
-        consents = page.locator("label", has_text=re.compile(r"consent", re.I))
-        for i in range(min(consents.count(), 6)):
+        # demographic consent checkbox (MongoDB etc.)
+        consent = _by_id(page, "gdpr_demographic_data_consent_given_1")
+        if consent.count():
             try:
-                consents.nth(i).click(timeout=1000)
+                page.locator('label[for="gdpr_demographic_data_consent_given_1"]').click(force=True)
             except Exception:
-                pass
+                try:
+                    consent.check(force=True)
+                except Exception:
+                    pass
+            if not consent.is_checked():
+                page.evaluate(
+                    """() => {
+                  const el=document.getElementById('gdpr_demographic_data_consent_given_1');
+                  if(!el) return;
+                  el.checked=true;
+                  el.dispatchEvent(new Event('click',{bubbles:true}));
+                  el.dispatchEvent(new Event('change',{bubbles:true}));
+                }"""
+                )
+        else:
+            consents = page.locator("label", has_text=re.compile(r"consent", re.I))
+            for i in range(min(consents.count(), 6)):
+                try:
+                    consents.nth(i).click(timeout=1000)
+                except Exception:
+                    pass
 
         page.screenshot(path=str(proof_dir / "filled.png"), full_page=True)
         if fill_only:

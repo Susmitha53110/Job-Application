@@ -17,14 +17,14 @@
 - Location (City): Austin
 - Resume: upload submit docx
 - LinkedIn: blank (optional) · Website: blank
-- How did you learn about this job?: Company website / closest match
-- Culture content / similar-job alerts: No or skip if optional
+- How did you learn about this job?: **MongoDB Careers Page**
+- Culture content / similar-job alerts: skip optional
 - Sponsorship now or future: **No**
 - Worked at MongoDB before: **No**
-- Gender: Female · Gender Identity: Female · Race: Asian · Hispanic/Latino: No
+- Gender: Female · Gender Identity: **Woman** · Race: Asian · Hispanic/Latino: No
 - Veteran: I am not a protected veteran
-- Disability: No, I don't have a disability
-- **Check** demographic survey consent box (required)
+- Disability: No, I do not have a disability and have not had one in the past
+- **Check** demographic survey consent (`label[for=gdpr_demographic_data_consent_given_1]`)
 
 ## Submit rules
 - Company ATS only · never Easy Apply · confirmation proof required
