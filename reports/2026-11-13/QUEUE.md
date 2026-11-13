@@ -22,3 +22,6 @@ Only ~7 Greenhouse postings matched first_published≤4d + US-remote DE/AE acros
 - Reused MASTER_FACTS / Greenhouse kit / APPLIED_INDEX
 - Prefer Greenhouse `?questions=true` API over screenshots for Natera form map
 - Fast-skip Consumer Edge / Keebo / score&lt;7
+
+## Mid-window update (~08:10 CT)
+Additional board sweeps (PerfectServe, Machinify, Airbnb, EnergyHub, Lever×100, Jobicy): **no new first_published≤4d US-remote DE/AE** left to apply.
