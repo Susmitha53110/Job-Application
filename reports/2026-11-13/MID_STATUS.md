@@ -1,24 +1,28 @@
-# Mid-window status — 2026-11-13 ~09:50 CT
+# Mid-window status — 2026-11-13 ~09:55 CT
 
-Asked: 20–25 · Applied: **0** · Unconfirmed: 0
+Asked: **20–25** · Applied confirmed: **0** · Unconfirmed: **0**
 
-## Needs me (ready packets, blocked)
+## Needs me
 | Job | b | Blocker |
 |-----|---|---------|
-| Natera Sr Forward Deployed DE | 7.3 | Standing answer: non-compete Y/N |
-| Block Staff DE Advanced Insights | 7.8 | Greenhouse form automation (upload/fields) |
-| Zocdoc Staff AE | 7.6 | Greenhouse country dropdown / OAuth traps |
-| Commure Senior SWE Data Platform | 7.3 | Ashby resume upload automation |
+| Natera Sr Forward Deployed DE | 7.3 | Non-compete Y/N not in standing answers |
+| Block Staff DE Advanced Insights | 7.8 | block.xyz Apply → Greenhouse embed + form automation |
+| Zocdoc Staff AE | 7.6 | Greenhouse country dropdown / OAuth |
+| Commure Senior SWE Data Platform | 7.3 | Ashby **reCAPTCHA** on submit (Playwright filled fields + resume) |
 | Velosio DE | 8.7 | iCIMS login + CAPTCHA |
 
-## Skipped
-Instacart Staff SWE Ads (6.5) · Gusto SWE Financial Data (5.0) · Consumer Edge/Keebo excluded · already-applied boards
+## Skipped / below bar
+Instacart 6.5 · Gusto 5.0 · excluded companies · already applied yesterday
 
 ## Market
-Strict first_published ≤4d US DE/AE pool is tiny after yesterday’s applies. Hybrid US added Block/Zocdoc/Commure.
+first_published ≤4d US DE/AE pool exhausted after yesterday; hybrid US added a few ≥7 packets.
 
 ## Steps shortened
-MASTER_FACTS + Greenhouse questions API; fast-skips; no screenshot-first.
+MASTER_FACTS · Greenhouse questions API · Playwright for Ashby file input · fast-skips
 
 ## Usage
-Normal so far (browser retries burned actions without confirms).
+Normal→elevated (browser retries). Still under 85% cut rule unless you say otherwise.
+
+## Needed from you to unblock volume
+1. Standing answer: **Have you signed a non-compete with current employer? Yes/No**
+2. Manual CAPTCHA/login for Commure / Velosio / Block if you want those submitted today
