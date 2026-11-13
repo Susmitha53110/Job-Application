@@ -129,6 +129,24 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             blob,
         )
     )
+    # Greenhouse-style "Remote - Austin" / "Remote - CA" / "Remote - NYC" (US city/state, no country word)
+    if not us_ok and remote_ok:
+        loc_l = (location or "").lower()
+        if re.search(
+            r"\bremote\s*[-–—]\s*(usa|us|u\.s\.|united states|"
+            r"alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|"
+            r"hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|"
+            r"michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|"
+            r"new mexico|new york|nyc|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+            r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
+            r"west virginia|wisconsin|wyoming|ca|ny|tx|wa|ma|il|ga|fl|nc|co|or|az|nv|ut|mn|mi|pa|nj|va|"
+            r"seattle|austin|dallas|chicago|denver|boston|atlanta|miami|portland|phoenix|sf bay|bay area)\b",
+            loc_l,
+        ):
+            us_ok = True
+        # Multi-state lists like "California, USA; Texas, USA" already covered by usa; also bare ", USA"
+        if ", usa" in loc_l or "; usa" in loc_l or loc_l.endswith(" usa"):
+            us_ok = True
     # Remotive: require US/Worldwide/America style candidate location
     if source == "remotive":
         loc = location.lower()

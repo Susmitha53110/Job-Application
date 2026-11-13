@@ -137,3 +137,8 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-12 | Bayesian Health | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | applied
 2026-11-12 | Life360 | Senior Data Engineer, Ads Data (AI Native) | https://job-boards.greenhouse.io/life360/jobs/8935286002 | applied
 2026-11-12 | Curve Dental | Data Engineer | https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394 | applied
+2026-11-13 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | dry-run
+2026-11-13 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | dry-run
+2026-11-13 | Instacart | Staff Software Engineer, Ads Data Platform | https://instacart.careers/job/?gh_jid=8372846 | dry-run
+2026-11-13 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | needs-me
+2026-11-13 | Instacart | Staff Software Engineer, Ads Data Platform | https://instacart.careers/job/?gh_jid=8372846 | skipped

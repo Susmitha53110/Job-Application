@@ -102,6 +102,11 @@ DEFAULT_GH_BOARDS = [
     "montecarlodata",
     "constantcontact",
     "extend",
+    "instacart",
+    "block",
+    "discord",
+    "omadahealth",
+    "ninjaone",
 ]
 
 
