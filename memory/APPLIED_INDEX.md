@@ -142,3 +142,10 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-13 | Instacart | Staff Software Engineer, Ads Data Platform | https://instacart.careers/job/?gh_jid=8372846 | dry-run
 2026-11-13 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | needs-me
 2026-11-13 | Instacart | Staff Software Engineer, Ads Data Platform | https://instacart.careers/job/?gh_jid=8372846 | skipped
+2026-11-13 | Gusto, Inc. | Software Engineer,  Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | dry-run
+2026-11-13 | Block | Staff Data Engineer, Advanced Insights & Modeling | http://block.xyz/careers/jobs/5473605008?gh_jid=5473605008 | dry-run
+2026-11-13 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | dry-run
+2026-11-13 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | dry-run
+2026-11-13 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/block/jobs/5473605008 | needs-me
+2026-11-13 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
+2026-11-13 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me

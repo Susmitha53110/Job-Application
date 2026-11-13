@@ -24,9 +24,9 @@
 
 ## Targets
 - Roles: Data Engineer; Analytics Engineer; Azure Data Engineer; Snowflake Data Engineer; Databricks Data Engineer (**CONFIRM** — inferred from resume)
-- Location preference: **Remote only** · **United States only**
-- Geography hard filter: United States only (skip non-US locations / non-US-eligible remote)
-- Work mode hard filter: Remote only (skip hybrid/on-site-only)
+- Location preference: **United States** · **prefer remote** (on-site/hybrid OK per standing answers; relocate Yes)
+- Geography hard filter: United States only (skip non-US locations / non-US-eligible)
+- Work mode: prefer remote; allow hybrid/on-site US
 - Openings hard filter: **open positions only** (skip closed/filled)
 - Seniority / years range: 3–6 years / mid-level Data Engineer (**CONFIRM**)
 - Posted within: last **4** days (fail closed if post date unknown)
