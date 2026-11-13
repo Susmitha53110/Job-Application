@@ -150,3 +150,10 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-13 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
 2026-11-13 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me
 2026-11-13 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | skipped
+2026-11-14 | MongoDB | Senior Software Engineer, Database Integration & Observability | https://www.mongodb.com/careers/job/?gh_jid=8352433 | dry-run
+2026-11-14 | NinjaOne | Senior Data Engineer | Emerging Products | https://job-boards.greenhouse.io/ninjaone/jobs/4470734009 | dry-run
+2026-11-14 | lumin-digital | Senior Data Engineer | https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384 | dry-run
+2026-11-14 | MongoDB | Senior Software Engineer, Database Integration & Observability | https://www.mongodb.com/careers/job/?gh_jid=8352433 | dry-run
+2026-11-14 | Machinify | Senior Data Engineer  | https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009 | dry-run
+2026-11-14 | mux | Senior Data Engineer | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe | dry-run
+2026-11-14 | lumin-digital | Senior Data Engineer | https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384 | dry-run
