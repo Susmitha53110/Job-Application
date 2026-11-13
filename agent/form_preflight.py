@@ -105,5 +105,11 @@ def preflight_from_url(url: str) -> FormPreflight | None:
     """If URL is a known Greenhouse job board link, run questions preflight."""
     m = re.search(r"greenhouse\.io/([^/]+)/jobs/(\d+)", url or "")
     if not m:
+        # embed: .../embed/job_app?for=BOARD&token=JOBID
+        m = re.search(r"greenhouse\.io/embed/job_app\?[^#]*for=([^&]+).*?[?&]token=(\d+)", url or "")
+    if not m:
+        m = re.search(r"[?&]gh_jid=(\d+)", url or "")
+        if m and "mongodb" in (url or "").lower():
+            return preflight_greenhouse("mongodb", m.group(1))
         return None
     return preflight_greenhouse(m.group(1), m.group(2))

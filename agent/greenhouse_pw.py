@@ -56,9 +56,14 @@ def _close_overlays(page) -> None:
 
 
 def _pick_react(page, eid: str, candidates: list[str]) -> bool:
+    if not eid or not re.match(r"^[A-Za-z][\w\-:.]*$", eid):
+        return False
     _close_overlays(page)
     inp = page.locator(f"#{eid}")
-    if not inp.count():
+    try:
+        if not inp.count():
+            return False
+    except Exception:
         return False
     inp.scroll_into_view_if_needed()
     inp.click(timeout=5000)
@@ -128,12 +133,14 @@ def submit_greenhouse_basic(
     previously_no: bool = True,
     security_code: str | None = None,
     require_window: bool = True,
+    fill_only: bool = False,
 ) -> GhSubmitResult:
     """Fill a common Greenhouse board form and attempt submit.
 
     Returns needs_me if blocked on OTP without code, captcha, or outside window.
+    fill_only=True: map/fill + screenshot, never click Submit (safe outside window).
     """
-    if require_window:
+    if require_window and not fill_only:
         win = check_apply_window()
         if not win.open:
             return GhSubmitResult(False, url, win.reason, "", None)
@@ -219,27 +226,34 @@ def submit_greenhouse_basic(
         for item in labels:
             low = (item.get("text") or "").lower()
             eid = item.get("id") or ""
-            if not eid:
+            if not eid or not re.match(r"^[A-Za-z]", eid):
                 continue
-            if "sponsor" in low and sponsorship_no:
-                _pick_react(page, eid, ["No"])
-            elif ("worked" in low and "before" in low) or "previously" in low:
-                if previously_no:
+            try:
+                if "sponsor" in low and sponsorship_no:
                     _pick_react(page, eid, ["No"])
-            elif "hear" in low or "learn about" in low:
-                _pick_react(page, eid, ["Company website", "Company Website", "Online", "Other"])
-            elif low.startswith("gender") and "identity" not in low:
-                _pick_react(page, eid, ["Female"])
-            elif "gender identity" in low:
-                _pick_react(page, eid, ["Female"])
-            elif "hispanic" in low:
-                _pick_react(page, eid, ["No"])
-            elif low.startswith("race") or "please identify your race" in low:
-                _pick_react(page, eid, ["Asian"])
-            elif "veteran" in low:
-                _pick_react(page, eid, ["I am not a protected veteran"])
-            elif "disability" in low:
-                _pick_react(page, eid, ["No, I do not have a disability", "No, I don't have a disability"])
+                elif ("worked" in low and "before" in low) or "previously" in low:
+                    if previously_no:
+                        _pick_react(page, eid, ["No"])
+                elif "hear" in low or "learn about" in low:
+                    _pick_react(page, eid, ["Company website", "Company Website", "Online", "Other"])
+                elif low.startswith("gender") and "identity" not in low:
+                    _pick_react(page, eid, ["Female"])
+                elif "gender identity" in low:
+                    _pick_react(page, eid, ["Female"])
+                elif "hispanic" in low:
+                    _pick_react(page, eid, ["No"])
+                elif low.startswith("race") or "please identify your race" in low:
+                    _pick_react(page, eid, ["Asian"])
+                elif "veteran" in low:
+                    _pick_react(page, eid, ["I am not a protected veteran"])
+                elif "disability" in low:
+                    _pick_react(
+                        page,
+                        eid,
+                        ["No, I do not have a disability", "No, I don't have a disability"],
+                    )
+            except Exception:
+                continue
 
         # demographic / privacy consent checkboxes
         consents = page.locator("label", has_text=re.compile(r"consent", re.I))
@@ -250,6 +264,13 @@ def submit_greenhouse_basic(
                 pass
 
         page.screenshot(path=str(proof_dir / "filled.png"), full_page=True)
+        if fill_only:
+            (proof_dir / "FILL_ONLY.txt").write_text(
+                f"{company} fill-only dry check\nURL: {page.url}\nEmail: {email}\nNo Submit clicked.\n"
+            )
+            browser.close()
+            return GhSubmitResult(True, page.url, None, "fill_only", proof_dir)
+
         btn = page.locator('button:has-text("Submit application"), button:has-text("Submit Application")')
         if btn.count():
             btn.first.click()
