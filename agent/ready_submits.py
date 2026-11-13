@@ -22,6 +22,7 @@ class ReadySubmit:
     ok: bool
     blockers: list[str]
     computer_use_prompt: str
+    ats: str = "unknown"
 
 
 MONGODB = {
@@ -314,6 +315,7 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
         ok=not blockers,
         blockers=blockers,
         computer_use_prompt=prompt,
+        ats=str(spec.get("ats") or ats or "unknown"),
     )
 
 

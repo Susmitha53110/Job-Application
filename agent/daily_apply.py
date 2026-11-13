@@ -9,13 +9,96 @@ from .ats_hunt import hunt_all
 from .log_writer import append_applied_index, append_log_row, load_applied_urls, url_already_applied
 from .curve_apply import evaluate_curve_gate, write_gate_report
 from .morning_run import readiness_report, CURVE_URL
-from .process_job import process_job
+from .process_job import JobPacket, process_job
 from .ready_submits import evaluate_all_ready_submits, write_ready_submits_report
 from .resume_parse import load_base_resume
 from .salary import salary_from_memory
 from .setup_gate import find_base_resume
 from .window import check_apply_window, chicago_today
 # Playwright submit helpers imported lazily inside run_daily when window is open.
+
+
+def detect_ats(url: str) -> str | None:
+    u = (url or "").lower()
+    if "greenhouse.io" in u or "gh_jid=" in u or "boards.greenhouse.io" in u:
+        return "greenhouse"
+    if "ashbyhq.com" in u:
+        return "ashby"
+    return None
+
+
+def _seniority_blocked(title: str) -> bool:
+    tl = (title or "").lower()
+    return any(x in tl for x in ("staff", "principal", "director", "manager", "vp ", "vice president"))
+
+
+def _packet_auto_submitable(pkt: JobPacket) -> tuple[bool, str | None]:
+    """Return (ok, skip_reason) for in-window Playwright auto-submit."""
+    if pkt.score_b < 7:
+        return False, "score < 7"
+    if _seniority_blocked(pkt.role):
+        return False, "seniority staff/principal/director/manager"
+    reason_l = (pkt.reason or "").lower()
+    if "citizen" in reason_l or "green-card only" in reason_l or "green card" in reason_l:
+        return False, "citizen/green-card gate"
+    if "icims" in reason_l or "login" in reason_l:
+        return False, "login-gated ATS"
+    if "likely skip" in reason_l and ("dealbreaker" in reason_l or "citizenship" in reason_l):
+        return False, "dealbreaker skip"
+    company_l = (pkt.company or "").lower()
+    url_l = (pkt.url or "").lower()
+    if "velosio" in company_l or "velosio" in url_l:
+        return False, "Velosio iCIMS needs-me"
+    if "lumin" in company_l or "lumin-digital" in url_l:
+        return False, "lumin biometric needs-me"
+    if "ninjaone" in company_l or "ninjaone" in url_l:
+        return False, "NinjaOne citizen_only"
+    if "natera" in company_l or "natera" in url_l:
+        return False, "Natera OTP needs-me (Gmail declined)"
+    ats = detect_ats(pkt.url or "")
+    if ats not in {"greenhouse", "ashby"}:
+        return False, f"ATS not auto-submittable ({ats})"
+    if not pkt.resume_a or not Path(pkt.resume_a).exists():
+        return False, "missing tailored resume"
+    return True, None
+
+
+def _playwright_submit(
+    *,
+    ats: str,
+    url: str,
+    resume: Path,
+    proof_dir: Path,
+    company: str,
+) -> tuple[bool, str | None, str, object]:
+    """Submit via Playwright. Returns (success, needs_me, confirmation, raw_result)."""
+    from .ashby_pw import submit_ashby_basic
+    from .greenhouse_pw import submit_greenhouse_basic
+
+    # Prefer short resumes/submit/Susmitha_<key>.docx when present.
+    short = paths.ROOT / "resumes" / "submit" / f"Susmitha_{company.lower().replace(' ', '_')}.docx"
+    resume_path = short if short.exists() else Path(resume)
+    if ats == "greenhouse":
+        res = submit_greenhouse_basic(
+            url=url,
+            resume=resume_path,
+            proof_dir=proof_dir,
+            company=company,
+            require_window=True,
+            fill_only=False,
+        )
+    elif ats == "ashby":
+        res = submit_ashby_basic(
+            url=url,
+            resume=resume_path,
+            proof_dir=proof_dir,
+            company=company,
+            require_window=True,
+            fill_only=False,
+        )
+    else:
+        return False, f"unsupported ats={ats}", "", None
+    return bool(res.success and not res.needs_me), res.needs_me, res.confirmation_text or "", res
 
 
 def _load_resume():
@@ -119,9 +202,21 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
             "Unlock Curve via `python3 -m agent set-salary <n>` after Susmitha replies."
         )
 
-    # Process new hunt hits into dry-run packets for later
+    # Process new hunt hits into dry-run packets for later / in-window auto-submit
     resume = _load_resume()
     applied_urls = load_applied_urls()
+    hunt_auto: list[JobPacket] = []
+    daily_limit = 25
+    try:
+        if paths.STATE.exists():
+            import re as _re
+
+            m = _re.search(r"(?m)^- daily_limit:\s*(\d+)", paths.STATE.read_text(encoding="utf-8"))
+            if m:
+                daily_limit = int(m.group(1))
+    except Exception:
+        pass
+
     for job in hunt:
         if CURVE_URL in (job.url or ""):
             continue
@@ -154,6 +249,9 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         if "consumer edge" in company_l or "consumeredge" in url_l:
             skipped.append(f"{job.company} / {job.title} — 8+ years stretch / score << 7")
             continue
+        if _seniority_blocked(job.title or ""):
+            skipped.append(f"{job.company} / {job.title} — seniority skip (staff/principal/director/manager)")
+            continue
         pkt = process_job(resume, job, dry_run=True, my_years=5, day=day)
         if pkt.score_b < 7:
             skipped.append(
@@ -178,15 +276,15 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                 }
             )
         else:
-            company_l2 = (pkt.company or "").lower()
-            url_l2 = (pkt.url or "").lower()
-            if "betterhelp" in company_l2 or "betterhelp" in url_l2:
-                needs_me.append(
-                    f"BetterHelp ≥7 but SKIP/needs-me (5-year no-sponsorship gate): {pkt.url}"
+            ok_auto, skip_why = _packet_auto_submitable(pkt)
+            if ok_auto and window.open and not dry:
+                hunt_auto.append(pkt)
+                notes.append(
+                    f"Queued in-window auto-submit: {pkt.company} / {pkt.role} (b={pkt.score_b})"
                 )
-            elif "velosio" in company_l2 or "velosio" in url_l2:
+            elif skip_why:
                 needs_me.append(
-                    f"Velosio ≥7 but needs-me (iCIMS login/CAPTCHA): {pkt.url}"
+                    f"{pkt.company} / {pkt.role} ≥7 but {skip_why}: {pkt.url}"
                 )
             else:
                 needs_me.append(
@@ -202,8 +300,12 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
                     "score_tailored": pkt.score_b,
                     "score_with_additions": pkt.score_c,
                     "top5_missing_keywords": "; ".join(pkt.top5_missing),
-                    "status": "dry-run" if dry or not window.open else "needs me",
-                    "reason": "Prepared; submit only in-window with salary answered",
+                    "status": "dry-run" if dry or not window.open else ("queued" if ok_auto else "needs me"),
+                    "reason": (
+                        "In-window auto-submit queued"
+                        if ok_auto and window.open and not dry
+                        else (skip_why or "Prepared; submit only in-window")
+                    ),
                     "resume_file": str(pkt.resume_a or ""),
                     "catch_note_file": str(pkt.catch_note or ""),
                     "additions_verify": "; ".join(pkt.additions_flagged),
@@ -285,50 +387,77 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     if not live_submit:
         notes.append("Outside window or dry run — prepare only. Ready-submit prompts frozen in SUBMIT_NOW.")
 
-    # In-window: attempt Playwright submits for ready Greenhouse/Ashby packets
+    # In-window: Playwright submits for ready queue, then new ≥7 Greenhouse/Ashby hunt hits
     if live_submit:
-        from .ashby_pw import submit_ashby_basic
-        from .greenhouse_pw import submit_greenhouse_basic
+        submitted_count = 0
+
+        def _record_submit(company: str, role: str, url: str, proof: Path, ok: bool, needs: str | None, conf: str) -> None:
+            nonlocal submitted_count
+            if ok:
+                applied.append(f"{company} / {role} — {url}")
+                append_applied_index(company, role, url, "applied", day=day)
+                notes.append(f"{company} submitted via Playwright; proof in {proof}")
+                submitted_count += 1
+                applied_urls.add(url.lower().rstrip("/"))
+            elif needs:
+                needs_me.append(f"{company}: {needs}")
+                append_applied_index(company, role, url, "needs-me", day=day)
+            else:
+                unconfirmed.append(f"{company} / {role} — {url}")
+                append_applied_index(company, role, url, "unconfirmed", day=day)
 
         for item in ready_items:
             if not item.ok:
                 continue
+            if submitted_count >= daily_limit:
+                notes.append(f"Daily limit {daily_limit} reached — stopping ready-queue submits")
+                break
+            if url_already_applied(item.url, applied_urls):
+                skipped.append(f"{item.company} / {item.role} — already applied")
+                continue
+            ats = (item.ats or detect_ats(item.url) or "").lower()
+            if ats not in {"greenhouse", "ashby"}:
+                needs_me.append(f"{item.company}: ATS {ats or 'unknown'} not auto-submittable — use kit/computer-use")
+                continue
             proof = paths.APPLICATIONS / "applied" / day / f"{item.company}_{item.role}".replace(" ", "_")[:100]
-            key = (item.key or "").lower()
             try:
-                if key in {"mongodb", "machinify"}:
-                    res = submit_greenhouse_basic(
-                        url=item.url,
-                        resume=Path(item.resume),
-                        proof_dir=proof,
-                        company=item.company,
-                        require_window=True,
-                        fill_only=False,
-                    )
-                elif key == "mux":
-                    res = submit_ashby_basic(
-                        url=item.url,
-                        resume=Path(item.resume),
-                        proof_dir=proof,
-                        company=item.company,
-                        require_window=True,
-                        fill_only=False,
-                    )
-                else:
-                    continue
+                ok, needs, conf, _raw = _playwright_submit(
+                    ats=ats,
+                    url=item.url,
+                    resume=Path(item.resume),
+                    proof_dir=proof,
+                    company=item.company,
+                )
             except Exception as e:
                 needs_me.append(f"{item.company} Playwright submit error: {e}")
                 continue
-            if res.success and not res.needs_me:
-                applied.append(f"{item.company} / {item.role} — {res.url}")
-                append_applied_index(item.company, item.role, item.url, "applied", day=day)
-                notes.append(f"{item.company} submitted via Playwright; proof in {proof}")
-            elif res.needs_me:
-                needs_me.append(f"{item.company}: {res.needs_me}")
-                append_applied_index(item.company, item.role, item.url, "needs-me", day=day)
-            else:
-                unconfirmed.append(f"{item.company} / {item.role} — {res.url}")
-                append_applied_index(item.company, item.role, item.url, "unconfirmed", day=day)
+            _record_submit(item.company, item.role, item.url, proof, ok, needs, conf)
+
+        for pkt in hunt_auto:
+            if submitted_count >= daily_limit:
+                notes.append(f"Daily limit {daily_limit} reached — remaining hunt ≥7 stay queued/needs-me")
+                break
+            if url_already_applied(pkt.url, applied_urls):
+                continue
+            ats = detect_ats(pkt.url) or ""
+            proof = (
+                paths.APPLICATIONS
+                / "applied"
+                / day
+                / f"{pkt.company}_{pkt.role}".replace(" ", "_")[:100]
+            )
+            try:
+                ok, needs, conf, _raw = _playwright_submit(
+                    ats=ats,
+                    url=pkt.url,
+                    resume=Path(pkt.resume_a),
+                    proof_dir=proof,
+                    company=pkt.company,
+                )
+            except Exception as e:
+                needs_me.append(f"{pkt.company} Playwright submit error: {e}")
+                continue
+            _record_submit(pkt.company, pkt.role, pkt.url, proof, ok, needs, conf)
 
     if any_prompt or gate.blockers:
         submit_now.write_text("\n".join(lines), encoding="utf-8")
