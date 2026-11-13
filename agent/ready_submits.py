@@ -24,119 +24,93 @@ class ReadySubmit:
     computer_use_prompt: str
 
 
-CLERA = {
-    "key": "clera",
-    "company": "Clera",
-    "role": "Senior Data Integration Engineer",
-    "url": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
-    "ats": "ashby",
-    "ashby_org": "Clera",
-    "ashby_id": "782c2049-c72a-4920-a278-e5b1ee6fd2b3",
-    "resume_globs": [
-        "*/Susmitha_clera_Senior_Data_Integration_Engineer.docx",
-        "*/Susmitha_Clera_Senior_Data_Integration_Engineer.docx",
-    ],
-    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Clera_SUBMIT_KIT.md",
-    "needs_salary": False,
-    "prompt_extra": (
-        "Fill exactly:\n"
-        "- Name*: Susmitha Chowdary\n"
-        "- Email*: dsusmitha55@gmail.com\n"
-        "- Resume*: upload the .docx\n"
-        "- LinkedIn*: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Do you have work authorization to work in that country?*: Yes\n"
-        "No salary field. No sponsorship field on this form.\n"
-    ),
-}
-
-BAYESIAN = {
-    "key": "bayesian",
-    "company": "Bayesian Health",
-    "role": "Software Engineer, Data & Analytics Platform",
-    "url": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
-    "ats": "ashby",
-    "ashby_org": "bayesianhealth",
-    "ashby_id": "3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
-    "resume_globs": [
-        "*/Susmitha_bayesianhealth_Software_Engineer_Data_Analytics_Platform.docx",
-        "*/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx",
-    ],
-    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Bayesian_Health_SUBMIT_KIT.md",
-    "needs_salary": False,
-    "prompt_extra": (
-        "Fill exactly:\n"
-        "- Name*: Susmitha Chowdary\n"
-        "- Email*: dsusmitha55@gmail.com\n"
-        "- Resume*: upload the .docx\n"
-        "- Are you legally authorized to work in the United States?*: Yes\n"
-        "- Do you now or will you in the future require employer sponsorship?*: No\n"
-        "- Why are you a good fit for this role?*: paste the Why good fit draft from the submit kit "
-        "(resume facts only; do not invent dbt/BI ownership)\n"
-        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Years with BI tools: 0\n"
-        "- Years developing data/analytics platform in production: 5\n"
-        "- 2-3 most proficient languages: Python, SQL, PySpark\n"
-        "- Location: Austin, TX\n"
-        "No salary field on this form.\n"
-    ),
-}
-
-BETTERHELP = {
-    "key": "betterhelp",
-    "company": "BetterHelp",
-    "role": "Senior Analytics Engineer",
-    "url": "https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008",
+MONGODB = {
+    "key": "mongodb",
+    "company": "MongoDB",
+    "role": "Senior Software Engineer, Database Integration & Observability",
+    "url": "https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433",
     "ats": "greenhouse",
-    "gh_board": "betterhelpcom",
-    "gh_id": 5475004008,
+    "gh_board": "mongodb",
+    "gh_id": 8352433,
     "resume_globs": [
-        "*/Susmitha_BetterHelp_Senior_Analytics_Engineer.docx",
+        "*/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx",
     ],
-    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "BetterHelp_SUBMIT_KIT.md",
+    "kit": paths.APPLICATIONS / "ready" / "2026-11-14" / "MongoDB_SUBMIT_KIT.md",
     "needs_salary": False,
     "prompt_extra": (
-        "Greenhouse form. Fill known fields only:\n"
-        "- First name: Susmitha / Last name: Chowdary\n"
+        "Use Greenhouse embed URL (not mongodb.com careers wrapper).\n"
+        "Fill exactly:\n"
+        "- First Name: Susmitha / Last Name: Chowdary / Preferred Name: Susmitha\n"
         "- Email: dsusmitha55@gmail.com / Phone: 9132073787\n"
         "- Country: United States / Location (City): Austin\n"
-        "- Resume: upload resumes/submit/Susmitha_betterhelp.docx\n"
-        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Are you located in and able to work in the US without visa sponsorship for the next 5 years?: Yes\n"
-        "- Pronouns: Prefer not to say / skip\n"
-        "If salary appears: 120000. Show filled form to Susmitha before Submit.\n"
-        "If CAPTCHA/login/unexpected required field: STOP needs-me.\n"
+        "- Resume: upload resumes/submit/Susmitha_mongodb.docx\n"
+        "- LinkedIn: blank; if forced N/A / Website: blank\n"
+        "- How did you learn about this job?: Company website (or closest)\n"
+        "- Culture/careers content / similar-job alerts: No or skip if optional\n"
+        "- Will you now or in the future require employment sponsorship?: No\n"
+        "- Have you ever worked at MongoDB before?: No\n"
+        "- EEO required: Gender Female / Gender Identity Female / Race Asian / "
+        "Hispanic No / Veteran I am not a protected veteran / "
+        "Disability No, I don't have a disability\n"
+        "- Check demographic survey consent box (required)\n"
+        "If email security code appears: STOP needs-me and ask Susmitha to paste the 8-char code "
+        "(Gmail declined). If CAPTCHA/unexpected required field: STOP needs-me.\n"
     ),
 }
 
-LIFE360 = {
-    "key": "life360",
-    "company": "Life360",
-    "role": "Senior Data Engineer, Ads Data (AI Native)",
-    "url": "https://job-boards.greenhouse.io/life360/jobs/8935286002",
+MACHINIFY = {
+    "key": "machinify",
+    "company": "Machinify",
+    "role": "Senior Data Engineer",
+    "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
     "ats": "greenhouse",
-    "gh_board": "life360",
-    "gh_id": 8935286002,
+    "gh_board": "machinifyinc",
+    "gh_id": 4478208009,
     "resume_globs": [
-        "*/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx",
+        "*/Susmitha_Machinify_Senior_Data_Engineer*.docx",
     ],
-    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Life360_SUBMIT_KIT.md",
+    "kit": paths.APPLICATIONS / "ready" / "2026-11-14" / "Machinify_SUBMIT_KIT.md",
     "needs_salary": False,
     "prompt_extra": (
-        "Greenhouse form. Fill known fields only:\n"
-        "- First name: Susmitha / Last name: Chowdary\n"
-        "- Email: dsusmitha55@gmail.com / Phone: 9132073787\n"
-        "- Country: United States / Location (City): Austin\n"
-        "- Resume: upload resumes/submit/Susmitha_life360.docx\n"
-        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Cover Letter / Website: leave blank\n"
-        "- Are you legally authorized to work in the country where the job is located?: Yes\n"
-        "- Do you require sponsorship ... now or in the future?: No\n"
-        "- Existing employee at Life360/Tile/Jiobit?: Not an Existing Employee\n"
-        "- Previously worked for Life360/Tile/Jiobit?: No\n"
-        "- Agree to Job Applicant Privacy Policy: Yes (after reading the linked policy)\n"
-        "- Optional Gender / Hispanic / Veteran EEO: I don't wish to answer (or leave blank)\n"
-        "If salary expectation / required EEO without decline / CAPTCHA appears: STOP needs-me.\n"
-        "Do not invent ads/ML ownership beyond resume facts.\n"
+        "Greenhouse form. Fill exactly:\n"
+        "- First Name: Susmitha / Last Name: Chowdary / Preferred First Name: Susmitha\n"
+        "- Email: dsusmitha55@gmail.com / Phone + Phone Number: 9132073787\n"
+        "- Country: United States\n"
+        "- Resume: upload resumes/submit/Susmitha_machinify.docx\n"
+        "- LinkedIn Profile* (required): N/A\n"
+        "- Website: blank\n"
+        "- EEO optional if shown: Female / Hispanic No / Asian / not protected veteran\n"
+        "Enterprise reCAPTCHA present — if email security code / captcha blocks submit: "
+        "STOP needs-me (paste code; Gmail declined). Unexpected required field: STOP needs-me.\n"
+    ),
+}
+
+MUX = {
+    "key": "mux",
+    "company": "mux",
+    "role": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "ats": "ashby",
+    "ashby_org": "mux",
+    "ashby_id": "bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "resume_globs": [
+        "*/Susmitha_mux_Senior_Data_Engineer.docx",
+    ],
+    "kit": paths.APPLICATIONS / "ready" / "2026-11-14" / "mux_SUBMIT_KIT.md",
+    "needs_salary": False,
+    "prompt_extra": (
+        "Ashby form. Fill exactly:\n"
+        "- Name: Susmitha Chowdary\n"
+        "- Email: dsusmitha55@gmail.com\n"
+        "- Resume: upload resumes/submit/Susmitha_mux.docx\n"
+        "- LinkedIn: blank; if required N/A\n"
+        "- Why Mux fit: short honest DE/platform note from submit kit (no invented Mux experience)\n"
+        "- How did you hear about us?: Company website\n"
+        "- Eligible to work in the US?: Yes\n"
+        "- Sponsorship for employment visa?: No\n"
+        "- Spell the number '12': twelve\n"
+        "- EEO: Female / Asian (Not Hispanic or Latino) / I am not a protected veteran\n"
+        "If CAPTCHA/unexpected required field: STOP needs-me.\n"
     ),
 }
 
@@ -202,7 +176,7 @@ def _greenhouse_still_open(board: str, job_id: int | str) -> tuple[bool, str | N
 
 
 def _jsonld_still_open(page_url: str) -> tuple[bool, str | None, str | None]:
-    """Fetch a careers page and require JobPosting JSON-LD datePosted ≤4d."""
+    """Fetch a careers page and require JobPosting JSON-LD datePosted ≤10d."""
     import json
     import re
     import urllib.request
@@ -344,12 +318,12 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
 
 
 def evaluate_all_ready_submits() -> list[ReadySubmit]:
-    # Velosio: iCIMS login required — Susmitha must sign in; not auto-queued.
+    # 2026-11-14 morning queue. Already-applied (BetterHelp/Clera/Bayesian/Life360/Curve) removed.
+    # Velosio/Natera/lumin-digital: needs-me — not auto-queued.
     return [
-        evaluate_ready_submit(CLERA),
-        evaluate_ready_submit(BAYESIAN),
-        evaluate_ready_submit(LIFE360),
-        evaluate_ready_submit(BETTERHELP),
+        evaluate_ready_submit(MONGODB),
+        evaluate_ready_submit(MUX),
+        evaluate_ready_submit(MACHINIFY),
     ]
 
 
