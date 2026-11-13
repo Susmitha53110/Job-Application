@@ -1,0 +1,148 @@
+{
+  "day": "2026-11-14",
+  "window_open": false,
+  "window_reason": "Outside window (now 2026-11-13 12:40 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "salary": "120000",
+  "go": false,
+  "hard_failures": [
+    {
+      "name": "live_mux",
+      "ok": false,
+      "detail": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe"
+    }
+  ],
+  "soft_failures": [],
+  "checks": [
+    {
+      "name": "resume_short_clera",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_clera.docx"
+    },
+    {
+      "name": "resume_short_bayesian",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_bayesian.docx"
+    },
+    {
+      "name": "resume_short_betterhelp",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_betterhelp.docx"
+    },
+    {
+      "name": "resume_short_life360",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_life360.docx"
+    },
+    {
+      "name": "resume_short_velosio",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_velosio.docx"
+    },
+    {
+      "name": "resume_short_curve",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_curve.docx"
+    },
+    {
+      "name": "kit_clera",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Clera_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_bayesian",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_betterhelp",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_life360",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_velosio",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Velosio_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_curve",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Curve_Dental_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_first_applies",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/FIRST_APPLIES.md"
+    },
+    {
+      "name": "kit_form_map",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/CURVE_FORM_MAP.md"
+    },
+    {
+      "name": "packet_mongodb",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-13 12:40 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433"
+    },
+    {
+      "name": "live_mongodb",
+      "ok": true,
+      "detail": "https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433"
+    },
+    {
+      "name": "packet_mux",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-13 12:40 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe"
+    },
+    {
+      "name": "live_mux",
+      "ok": false,
+      "detail": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe"
+    },
+    {
+      "name": "packet_machinify",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-13 12:40 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009"
+    },
+    {
+      "name": "live_machinify",
+      "ok": true,
+      "detail": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009"
+    },
+    {
+      "name": "curve_age_le_4d",
+      "ok": true,
+      "detail": "createdOn=2026-11-11T09:43:45.658000-08:00"
+    },
+    {
+      "name": "salary_set_for_curve",
+      "ok": true,
+      "detail": "120000"
+    },
+    {
+      "name": "curve_packet_except_salary_window",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-13 12:40 CST). Applies only 08:00\u201312:00 America/Chicago.']"
+    },
+    {
+      "name": "real_applies_authorized",
+      "ok": true,
+      "detail": "memory/STATE.md"
+    },
+    {
+      "name": "dry_run_approved",
+      "ok": true,
+      "detail": "memory/STATE.md"
+    }
+  ],
+  "handoff_json": "/workspace/reports/2026-11-14/SUBMIT_HANDOFF.json",
+  "submit_order": [
+    "mongodb",
+    "mux",
+    "machinify"
+  ]
+}

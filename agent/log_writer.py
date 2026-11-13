@@ -79,3 +79,58 @@ def append_applied_index(company: str, role: str, url: str, status: str, day: st
         paths.APPLIED_INDEX.write_text("# Applied / seen index\n\n## Entries\n", encoding="utf-8")
     with paths.APPLIED_INDEX.open("a", encoding="utf-8") as f:
         f.write(f"{day} | {company} | {role} | {url} | {status}\n")
+
+
+def _normalize_job_url(url: str) -> str:
+    u = (url or "").strip().lower().rstrip("/")
+    # Drop query/fragment so embed vs listing still match when path shares job id.
+    for sep in ("?", "#"):
+        if sep in u:
+            u = u.split(sep, 1)[0]
+    return u.rstrip("/")
+
+
+def load_applied_urls() -> set[str]:
+    """URLs with status=applied only (dry-run / needs-me / skipped do not block)."""
+    path = paths.APPLIED_INDEX
+    if not path.exists():
+        return set()
+    out: set[str] = set()
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if "|" not in line or line.startswith("#"):
+            continue
+        parts = [p.strip() for p in line.split("|")]
+        if len(parts) < 5:
+            continue
+        status = (parts[4] or "").split()[0].lower()
+        if status != "applied":
+            continue
+        norm = _normalize_job_url(parts[3])
+        if norm:
+            out.add(norm)
+    return out
+
+
+def url_already_applied(url: str, applied: set[str] | None = None) -> bool:
+    """True if this job URL (or same Greenhouse/Ashby job id) was already applied."""
+    import re
+
+    applied = applied if applied is not None else load_applied_urls()
+    if not url or not applied:
+        return False
+    norm = _normalize_job_url(url)
+    if norm in applied:
+        return True
+    tokens: set[str] = set(
+        re.findall(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", norm)
+    )
+    tokens |= set(re.findall(r"/jobs?/(\d{6,})(?:/|$)", norm))
+    tokens |= set(re.findall(r"[?&]token=(\d{6,})", (url or "").lower()))
+    tokens |= set(re.findall(r"/(\d{6,})(?:/|$)", norm))
+    if not tokens:
+        return False
+    for a in applied:
+        for t in tokens:
+            if t and t in a:
+                return True
+    return False

@@ -6,7 +6,7 @@ from pathlib import Path
 
 from . import paths
 from .ats_hunt import hunt_all
-from .log_writer import append_applied_index, append_log_row
+from .log_writer import append_applied_index, append_log_row, load_applied_urls, url_already_applied
 from .curve_apply import evaluate_curve_gate, write_gate_report
 from .morning_run import readiness_report, CURVE_URL
 from .process_job import process_job
@@ -121,11 +121,15 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
 
     # Process new hunt hits into dry-run packets for later
     resume = _load_resume()
+    applied_urls = load_applied_urls()
     for job in hunt:
         if CURVE_URL in (job.url or ""):
             continue
         company_l = (job.company or "").lower()
         url_l = (job.url or "").lower()
+        if url_already_applied(job.url or job.apply_url or "", applied_urls):
+            skipped.append(f"{job.company} / {job.title} — already applied")
+            continue
         if "keebo" in url_l or company_l == "keebo":
             skipped.append(f"{job.company} / {job.title} — visa support will not be provided")
             append_applied_index(job.company, job.title, job.url, "skipped", day=day)

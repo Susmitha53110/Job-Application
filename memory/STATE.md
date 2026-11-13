@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-13
-- last_run_summary: "overnight_hunt 2026-11-13T12:32-06:00: window=False; salary=set; hunt=20; ge7=10; curve_gate=False"
+- last_run_summary: "overnight_hunt 2026-11-13T12:37-06:00: window=False; salary=set; hunt=20; ge7=6; curve_gate=False"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -39,4 +39,6 @@
 - max_age_days: 10
 - gmail_mcp: declined
 
-- Overnight prepare-only ran 2026-11-13 12:32 CT; MongoDB/mux/Machinify ready for 08:00 CT.
+- Overnight prepare-only ran 2026-11-13 12:32 CT and 12:37 CT; MongoDB/mux/Machinify ready for 08:00 CT.
+- status=applied URLs excluded from overnight/daily hunt scoring (BetterHelp/Life360/Clera/Bayesian/Curve).
+- Expanded GH/Ashby board lists; fresh US-remote DE inventory still thin within 10d.

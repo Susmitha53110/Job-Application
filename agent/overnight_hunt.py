@@ -16,6 +16,7 @@ from .salary import salary_from_memory
 from .curve_apply import evaluate_curve_gate, write_gate_report
 from .ready_submits import evaluate_all_ready_submits, write_ready_submits_report
 from .submit_handoff import build_submit_handoff
+from .log_writer import load_applied_urls, url_already_applied
 
 
 def _next_apply_day(now: datetime) -> str:
@@ -54,6 +55,7 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
     hunted = hunt_all()
     near = hunt_near_miss(lookback_days=10)
 
+    applied_urls = load_applied_urls()
     resume_path = find_base_resume()
     packets = []
     if resume_path is not None:
@@ -66,6 +68,17 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
             if any(x in job.title.lower() for x in ("staff", "principal", "director", "manager")):
                 continue
             if "keebo" in (job.url or "").lower():
+                continue
+            if url_already_applied(job.url or job.apply_url or "", applied_urls):
+                packets.append(
+                    {
+                        "company": job.company,
+                        "role": job.title,
+                        "url": job.url,
+                        "scores": [],
+                        "status": "skip_already_applied",
+                    }
+                )
                 continue
             pkt = process_job(resume, job, dry_run=True, my_years=5, day=day)
             packets.append(
@@ -95,9 +108,10 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
             for i in ready_items
         ],
         f"- Watchlist hits: **{len(watch)}**",
-        f"- Hunt hits (≤4d): **{len(hunted)}**",
-        f"- Near-miss (5–10d, watch only): **{len(near)}**",
-        f"- New ≥7 packets (non-Curve): **{len(eligible)}**",
+        f"- Hunt hits (≤10d): **{len(hunted)}**",
+        f"- Near-miss (age watch only): **{len(near)}**",
+        f"- Applied URLs excluded: **{len(applied_urls)}**",
+        f"- New ≥7 packets (non-Curve, not applied): **{len(eligible)}**",
         "",
         "## Eligible ≥7",
         *([f"- {p['company']} / {p['role']} — {p['scores']} — {p['url']}" for p in eligible] or ["- (none)"]),
@@ -105,7 +119,7 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
         "## All scored non-Curve",
         *([f"- {p['company']} / {p['role']} — {p['scores']} — {p['status']}" for p in packets] or ["- (none)"]),
         "",
-        "## Near-miss watch (do not apply — age >4d)",
+        "## Near-miss watch (do not apply — age edge)",
         *(
             [
                 f"- {j.company} / {j.title} — posted {j.posted_at} — {j.location} — {j.url}"

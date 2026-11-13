@@ -9,7 +9,7 @@ Jobs that can be computer-use submitted when the CT window is open.
 - Resume: `/workspace/resumes/tailored/2026-11-14/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx`
 - Kit: `/workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-13 12:32 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-13 12:37 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt (ready when window opens)
 ```
@@ -49,7 +49,7 @@ If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent a
 - Resume: `/workspace/resumes/tailored/2026-11-14/Susmitha_mux_Senior_Data_Engineer.docx`
 - Kit: `/workspace/applications/ready/2026-11-14/mux_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-13 12:32 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-13 12:37 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt (ready when window opens)
 ```
@@ -87,7 +87,7 @@ If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent a
 - Resume: `/workspace/resumes/tailored/2026-11-14/Susmitha_Machinify_Senior_Data_Engineer_.docx`
 - Kit: `/workspace/applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-13 12:32 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-13 12:37 CST). Applies only 08:00–12:00 America/Chicago.
 
 ### Computer-use prompt (ready when window opens)
 ```
