@@ -1,20 +1,20 @@
 # Morning queue — 2026-11-14 08:00 CT
 
-Outside-window prep (no submits). Email **dsusmitha55@gmail.com**. Age ≤10d. dry-run index rows do **not** block submit.
+Outside-window prep complete. Email **dsusmitha55@gmail.com**. Age ≤10d.
 
-Ready **4** · needs-me **3** · skipped **14**
+Ready **3** · needs-me **4** · skipped **14**
 
 ## Ready to submit at 08:00 CT
-| b | Company | Role | Submit file | URL |
+| b | Company | Role | Kit | URL |
 |---:|---|---|---|---|
-| 9.6 | MongoDB | Senior Software Engineer, Database Integration & Observability | `Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx` | https://www.mongodb.com/careers/job/?gh_jid=8352433 |
-| 7.9 | mux | Senior Data Engineer | `Susmitha_mux_Senior_Data_Engineer.docx` | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe |
-| 7.6 | Machinify | Senior Data Engineer | `Susmitha_Machinify_Senior_Data_Engineer.docx` | https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009 |
-| 7.5 | lumin-digital | Senior Data Engineer | `Susmitha_lumin-digital_Senior_Data_Engineer.docx` | https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384 |
+| 9.6 | MongoDB | Senior Software Engineer, Database Integration & Observability | `applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md` | https://www.mongodb.com/careers/job/?gh_jid=8352433 |
+| 7.9 | mux | Senior Data Engineer | `applications/ready/2026-11-14/mux_SUBMIT_KIT.md` | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe |
+| 7.6 | Machinify | Senior Data Engineer  | `applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md` | https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009 |
 
 ## Needs-me
 | b | Company | Role | Why |
 |---:|---|---|---|
+| 7.5 | lumin-digital | Senior Data Engineer | Ashby biometric/voiceprint consent — no standing answer |
 | 8.7 | Velosio | Data Engineer | iCIMS login + CAPTCHA |
 | 7.8 | Block | Staff Data Engineer, Advanced Insights & Modeling | prior Greenhouse automation/CAPTCHA fail |
 | 7.3 | Natera | Sr. Forward Deployed Data Engineer | Greenhouse email OTP — paste 8-char code (Gmail declined) |

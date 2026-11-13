@@ -1,0 +1,457 @@
+{
+  "mux": {
+    "labels": [
+      "Name",
+      "Email",
+      "Resume",
+      "LinkedIn Profile",
+      "Why does Mux seem like a good fit for you?",
+      "How did you hear about us?",
+      "Are you eligible to work in the US?",
+      "Do you now, or will you in the future, require sponsorship for employment visa status?",
+      "Spell the number '12'",
+      "Pronouns",
+      "Gender",
+      "Male",
+      "Female",
+      "Decline to self-identify",
+      "Race",
+      "Hispanic or Latino",
+      "White (Not Hispanic or Latino)",
+      "Black or African American (Not Hispanic or Latino)",
+      "Native Hawaiian or Other Pacific Islander (Not Hispanic or Latino)",
+      "Asian (Not Hispanic or Latino)",
+      "American Indian or Alaska Native (Not Hispanic or Latino)",
+      "Two or More Races (Not Hispanic or Latino)",
+      "Veteran Status",
+      "I identify as one or more of the classifications of protected veteran listed above",
+      "I am not a protected veteran",
+      "I decline to self-identify for protected veteran status"
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "file",
+        "name": "",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "name": "_systemfield_name",
+        "id": "_systemfield_name",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "email",
+        "name": "_systemfield_email",
+        "id": "_systemfield_email",
+        "aria": null,
+        "placeholder": "hello@example.com..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "file",
+        "name": "",
+        "id": "_systemfield_resume",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "name": "b15f221e-6637-4c83-8634-ec89e911efe9",
+        "id": "b15f221e-6637-4c83-8634-ec89e911efe9",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "TEXTAREA",
+        "type": "textarea",
+        "name": "0679b83b-32cd-4d34-8e4e-5a1e46a9323c",
+        "id": "0679b83b-32cd-4d34-8e4e-5a1e46a9323c",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "TEXTAREA",
+        "type": "textarea",
+        "name": "c2dcd39d-9b08-498a-8376-c297d4505d12",
+        "id": "c2dcd39d-9b08-498a-8376-c297d4505d12",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "72f31cff-c312-4009-b37e-534dcbc6ba7f",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "bd021086-8636-4e38-a937-cf3084b77db9",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "name": "20bf1cb0-05bb-4065-8aed-d13d044cc24b",
+        "id": "20bf1cb0-05bb-4065-8aed-d13d044cc24b",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "name": "c4ccbd56-2a19-4881-bcb9-30b4c3d42672",
+        "id": "c4ccbd56-2a19-4881-bcb9-30b4c3d42672",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_gender",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_gender-labeled-radio-0",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_gender",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_gender-labeled-radio-1",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_gender",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_gender-labeled-radio-2",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-0",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-1",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-2",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-3",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-4",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-5",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-6",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_race-labeled-radio-7",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_veteran_status",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_veteran_status-labeled-radio-0",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_veteran_status",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_veteran_status-labeled-radio-1",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_veteran_status",
+        "id": "14a6657d-173e-4e8b-9427-ef7a7663db81__systemfield_eeoc_veteran_status-labeled-radio-2",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "TEXTAREA",
+        "type": "textarea",
+        "name": "g-recaptcha-response",
+        "id": "g-recaptcha-response-100000",
+        "aria": null,
+        "placeholder": ""
+      }
+    ],
+    "bodySnippet": "Senior Data Engineer\nLocation\n\nRemote, United States; New York, New York, United States; San Francisco, California, United States\n\nEmployment Type\n\nFull time\n\nLocation Type\n\nRemote\n\nDepartment\n\nEngineering\n\nCompensation\nEstimated Base Salary $190K \u2013 $220K \u2022 Offers Equity\n\nIn our commitment to provide transparency with candidates, we openly share base pay ranges for all job postings within the United States, regardless of the state. These pay ranges are established using standardized criteria, including job function, level, and location. They're also benchmarked against similar companies in a similar stage of growth. Actual pay is influenced by various factors such as level, skills, depth of experience, location and internal equity.\n\nOverview\nApplication\nAutofill from resume\n\nUpload your resume here to autofill key application fields.\n\nUpload file\nGeneral Application Form\nName\nEmail\nResume\nUpload File\n\nor drag and drop here\n\nLinkedIn Profile\nWhy does Mux seem like a good fit for you?\nHow did you hear about us?\nAre you eligible to work in the US?\nYes\nNo\nDo you now, or will you in the future, require sponsorship for employment visa status?\nYes\nNo\nSpell the number '12'\nPronouns\n\nU.S. EQUAL EMPLOYMENT OPPORTUNITY INFORMATION \u00a0\u00a0(Completion is voluntary and will not subject you to adverse treatment)\n\nMux provides equal employment opportunities to applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected vet"
+  },
+  "lumin-digital": {
+    "labels": [
+      "Name",
+      "Email",
+      "Phone Number",
+      "Resume",
+      "Are you legally authorized to work in the United States?",
+      "Will you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)?*",
+      "This role must be performed from within the continental U.S. (excluding Montana, Alaska & Hawaii). Are you able to work from an approved location?",
+      "Are you able and willing to meet the travel requirements of the role?",
+      "Do you actively use AI tools (such as Claude, ChatGPT, or similar) in your day-to-day work?",
+      "Interview recording & notetaker voiceprint:",
+      "I consent to recording and to the notetaker voiceprint as described.",
+      "I do NOT consent. (A human will take notes; this will not affect my candidacy.)",
+      "Fraud / Identity Verification:",
+      "I acknowledge and consent to the fraud/identity-verification biometric check as described.",
+      "I do not consent to the biometric identity-verification check and am not requesting an accommodation. I understand this check is a requirement of the interview process, and that without it, or an approved accommodation, Lumin cannot verify my identity and I cannot proceed as a candidate.",
+      "I am requesting a reasonable accommodation (disability or sincerely held religious belief). I understand I must email careers@lumindigital.com to arrange an alternative identity-verification method, and that Lumin will follow up with me.",
+      "Do you have at least 5 years of professional experience in software engineering, data engineering, or a closely related technical discipline?",
+      "Do you have at least 5 years of hands-on experience designing, developing, administering, or maintaining cloud-based data platforms using Databricks?",
+      "Do you have hands-on experience building and optimizing data pipelines, integrations, and automation solutions?",
+      "Do you have professional experience developing data engineering solutions using Scala, Python and SQL?",
+      "Do you have hands-on experience working with cloud infrastructure such as AWS, Azure, or Google Cloud Platform?",
+      "Do you have experience implementing infrastructure-as-code (IaC) and CI/CD practices to automate infrastructure provisioning or deployments?",
+      "Do you have experience supporting production data platforms, including troubleshooting performance, reliability, or scalability issues?"
+    ],
+    "inputs": [
+      {
+        "tag": "INPUT",
+        "type": "file",
+        "name": "",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "text",
+        "name": "_systemfield_name",
+        "id": "_systemfield_name",
+        "aria": null,
+        "placeholder": "Type here..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "email",
+        "name": "_systemfield_email",
+        "id": "_systemfield_email",
+        "aria": null,
+        "placeholder": "hello@example.com..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "tel",
+        "name": "6ebe8bf7-ae1c-4a7f-89eb-f6d54872a161",
+        "id": "6ebe8bf7-ae1c-4a7f-89eb-f6d54872a161",
+        "aria": null,
+        "placeholder": "1-415-555-1234..."
+      },
+      {
+        "tag": "INPUT",
+        "type": "file",
+        "name": "",
+        "id": "_systemfield_resume",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "b0949428-1cb5-4748-8c56-f16dd8ceb4df",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "0526c898-57ff-4031-9d32-d5f64c8b12f1",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "b05e169f-5908-47f5-a6e8-607d0533287d",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "073d02a2-930d-4a32-b1bc-0786a07d7e04",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "988e4cde-cd9d-499f-8617-c817fbd8f62e",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_02ec29a3-9e17-4ac3-91aa-01a3f86e724f",
+        "id": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_02ec29a3-9e17-4ac3-91aa-01a3f86e724f-labeled-radio-0",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_02ec29a3-9e17-4ac3-91aa-01a3f86e724f",
+        "id": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_02ec29a3-9e17-4ac3-91aa-01a3f86e724f-labeled-radio-1",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_c61456e2-1819-49a6-89e3-2df37b907f92",
+        "id": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_c61456e2-1819-49a6-89e3-2df37b907f92-labeled-radio-0",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_c61456e2-1819-49a6-89e3-2df37b907f92",
+        "id": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_c61456e2-1819-49a6-89e3-2df37b907f92-labeled-radio-1",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "radio",
+        "name": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_c61456e2-1819-49a6-89e3-2df37b907f92",
+        "id": "5ccd0094-a34e-4de1-8a34-82b48c5e0d04_c61456e2-1819-49a6-89e3-2df37b907f92-labeled-radio-2",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "5df8a45d-a11c-45cf-8a15-c42aed33b2ad",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "5de28ba1-720c-429c-aedf-d4f3e704c9b7",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "db229843-405b-4c3d-b514-94d07922caaa",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "6c3ab2a8-2eee-47c5-8534-1e3c26115873",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "a46b0b48-4472-4bea-b104-24d489a88c01",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "a07ec3bd-b75e-4df0-b2f3-96ffb587c87f",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "INPUT",
+        "type": "checkbox",
+        "name": "a2b6e5ad-a145-47c9-b5c4-2a08be8ee94b",
+        "id": "",
+        "aria": null,
+        "placeholder": ""
+      },
+      {
+        "tag": "TEXTAREA",
+        "type": "textarea",
+        "name": "g-recaptcha-response",
+        "id": "g-recaptcha-response-100000",
+        "aria": null,
+        "placeholder": ""
+      }
+    ],
+    "bodySnippet": "Senior Data Engineer\nLocation\n\nRemote - United States\n\nEmployment Type\n\nFull time\n\nLocation Type\n\nRemote\n\nDepartment\n\nOperations\nSRE\n\nCompensation\nEstimated Salary Range $180K \u2013 $200K \u2022 Offers Bonus\nOverview\nApplication\nAutofill from resume\n\nUpload your resume here to autofill key application fields.\n\nUpload file\nYour Information\nName\nEmail\nPhone Number\nResume\nUpload File\n\nor drag and drop here\n\nAre you legally authorized to work in the United States?\nYes\nNo\nWill you now, or in the future, require sponsorship for employment visa status (e.g. H-1B visa status)?*\nYes\nNo\nThis role must be performed from within the continental U.S. (excluding Montana, Alaska & Hawaii). Are you able to work from an approved location?\u00a0\nYes\nNo\nAre you able and willing to meet the travel requirements of the role?\nYes\nNo\nDo you actively use AI tools (such as Claude, ChatGPT, or similar) in your day-to-day work?\nYes\nNo\nConsents: Please Review and Select\nInterview recording & notetaker voiceprint:\n\nWe use an AI notetaker (Ashby) that records and transcribes interviews and creates a voiceprint - data from the unique characteristics of your voice - to distinguish speakers. A voiceprint is \u201cbiometric information\u201d under certain laws. Please review our Biometric Data Notice & Release and Candidate Privacy Notice. https://lumindigital.com/employee-applicant-privacy-notice/\n\nThis is entirely voluntary. If you decline, you will not be recorded, and a human will take notes instead - declining does not affect you"
+  }
+}

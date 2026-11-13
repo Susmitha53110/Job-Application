@@ -1,0 +1,238 @@
+[
+  {
+    "company": "MongoDB",
+    "url": "https://www.mongodb.com/careers/job/?gh_jid=8352433",
+    "ats": "greenhouse",
+    "b": 9.6,
+    "blockers": [],
+    "warnings": [],
+    "questions": [
+      {
+        "label": "First Name",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Last Name",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Email",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Phone",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Resume/CV",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Cover Letter",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Preferred Name",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Website",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "LinkedIn Profile",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Would you like to stay up to date with MongoDB Culture and Careers content?",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "How did you learn about this job?",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "If you answered MongoDB Employee, MongoDB Event, or Other, please specify here:",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Receive alerts for similar jobs? ",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Will you now or in the future require employment sponsorship?",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Have you ever worked at MongoDB before? ",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Gender",
+        "required": true,
+        "type": "eeo",
+        "options": []
+      },
+      {
+        "label": "Gender Identity",
+        "required": true,
+        "type": "eeo",
+        "options": []
+      },
+      {
+        "label": "Race",
+        "required": true,
+        "type": "eeo",
+        "options": []
+      },
+      {
+        "label": "Are you Hispanic/Latino?",
+        "required": true,
+        "type": "eeo",
+        "options": []
+      },
+      {
+        "label": "Veteran Status",
+        "required": true,
+        "type": "eeo",
+        "options": []
+      },
+      {
+        "label": "Disability Status",
+        "required": true,
+        "type": "eeo",
+        "options": []
+      }
+    ],
+    "kit": "/workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md"
+  },
+  {
+    "company": "Machinify",
+    "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
+    "ats": "greenhouse",
+    "b": 7.6,
+    "blockers": [],
+    "warnings": [
+      "Compliance section present (eeoc): VeteranStatus",
+      "Compliance section present (eeoc): Race",
+      "Compliance section present (eeoc): Gender"
+    ],
+    "questions": [
+      {
+        "label": "First Name",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Last Name",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Preferred First Name",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Email",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Phone",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Resume/CV",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Cover Letter",
+        "required": false,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Phone Number",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "LinkedIn Profile",
+        "required": true,
+        "type": null,
+        "options": []
+      },
+      {
+        "label": "Website",
+        "required": false,
+        "type": null,
+        "options": []
+      }
+    ],
+    "kit": "/workspace/applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md"
+  },
+  {
+    "company": "mux",
+    "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "ats": "ashby",
+    "b": 7.9,
+    "blockers": [],
+    "warnings": [
+      "Ashby full application questions not in public posting API \u2014 inspect live form at submit"
+    ],
+    "questions": [],
+    "kit": "/workspace/applications/ready/2026-11-14/mux_SUBMIT_KIT.md"
+  },
+  {
+    "company": "lumin-digital",
+    "url": "https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384",
+    "ats": "ashby",
+    "b": 7.5,
+    "blockers": [],
+    "warnings": [
+      "Ashby full application questions not in public posting API \u2014 inspect live form at submit"
+    ],
+    "questions": [],
+    "kit": "/workspace/applications/ready/2026-11-14/lumin-digital_SUBMIT_KIT.md"
+  }
+]
