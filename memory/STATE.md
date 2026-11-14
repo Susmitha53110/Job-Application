@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~11:11CT 11am timer: no new unblocked US b≥7; Costa Rica loc reject; confirms 0; noon timer armed"
+- last_run_summary: "2026-11-14 ~11:15CT: market empty unblocked US b≥7; NEEDS_ME_QUEUE written; confirms 0; noon timer armed"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
