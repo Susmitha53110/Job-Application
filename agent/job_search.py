@@ -317,17 +317,37 @@ def is_us_work_ok(location: str, description: str = "", *, source: str = "", tit
     if is_us_remote(location, description, source=source, title=title):
         return True
     # Hybrid / on-site US — Susmitha relocates Yes, hybrid Yes
-    # Use a wide JD window — US eligibility often appears in the footer/location section.
-    blob = f"{title} {location} {description[:8000]}".lower()
+    # US eligibility often sits in the JD footer — sample head + tail of long postings.
+    desc = description or ""
+    desc_window = desc if len(desc) <= 12000 else (desc[:8000] + "\n" + desc[-4000:])
+    blob = f"{title} {location} {desc_window}".lower()
     loc_l = (location or "").lower().strip()
     # Bare "Remote" + US work-auth language in JD → treat as US-remote eligible
+    # But reject when Remote is clearly global/Europe/Asia without a US hiring signal.
     if loc_l in {"remote", "remote work", "fully remote"} and re.search(
         r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b|\bauthorization to work\b|"
         r"\blegally authorized to work in the (us|u\.s|united states)\b|"
-        r"\bremote within the united states\b|\bremote(?:ly)? (?:in|within) the u\.?s",
+        r"\bremote within the united states\b|\bremote(?:ly)? (?:in|within) the u\.?s|"
+        r"\bwest coast of the united states\b|\bacross the (us|u\.s|united states)\b|"
+        r"\bus time zone|\beast coast time\b|\bcandidates in the (us|u\.s|united states)\b",
         blob,
     ):
-        return True
+        # Timezone-only mentions (e.g. "West Coast of the United States, Europe, or Asia")
+        # are not a US hiring gate when the role is explicitly global remote.
+        if re.search(
+            r"\b(across the globe|around the world|worldwide|globally|europe,? or asia|"
+            r"hire globally|global remote)\b",
+            blob,
+        ) and not re.search(
+            r"\bmust (?:be|live|reside) in the (us|u\.s|united states)\b|"
+            r"\bonly (?:open to|hiring) (?:in )?the (us|u\.s|united states)\b|"
+            r"\bus[- ]based candidates\b|\bremote(?:ly)? (?:in|within) the united states\b|"
+            r"\blegally authorized to work in the (us|u\.s|united states)\b",
+            blob,
+        ):
+            pass  # fall through — not US-gated
+        else:
+            return True
     if not is_us_location(location, description, title=title):
         return False
     if any(

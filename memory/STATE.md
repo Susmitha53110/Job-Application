@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~11:23CT: Solvd Knowledge Ingestion filled (b=8.8) reCAPTCHA needs-me; confirms 0"
+- last_run_summary: "2026-11-14 ~11:27CT: Solvd CAPTCHA kit; market empty of new unblocked b≥7; Kit global-remote rejected; confirms 0"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
