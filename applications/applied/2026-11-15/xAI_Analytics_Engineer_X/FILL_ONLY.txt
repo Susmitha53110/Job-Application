@@ -6,5 +6,7 @@ DOM name: Susmitha Chowdary
 DOM phone: (913) 207-3787
 DOM consent: None
 DOM selects: ['+1', 'No', 'Company careers page / website']
+DOM textareas: [{'id': 'question_13357669007', 'len': 140, 'head': 'Built Optum healthcare Spark/Databricks pipelines that cut reconciliation from d'}, {'id': 'question_13357670007', 'len': 137, 'head': '5 years Python/SQL/Spark DE; ship reliable warehouses and analytics pipelines; s'}, {'id': 'g-recaptcha-response-100000', 'len': 0, 'head': ''}]
+DOM inputs_extra: [{'id': 'country', 'len': 0, 'head': ''}, {'id': 'question_13357659007', 'len': 17, 'head': 'Susmitha Chowdary'}, {'id': 'question_13357660007', 'len': 0, 'head': ''}, {'id': 'question_13357661007', 'len': 0, 'head': ''}, {'id': 'question_13357662007', 'len': 52, 'head': 'https://www.linkedin.com/in/susmitha-dodla-a05ab92b8'}, {'id': 'question_13357663007', 'len': 0, 'head': ''}, {'id': 'question_13357664007', 'len': 0, 'head': ''}, {'id': 'question_13357665007', 'len': 0, 'head': ''}, {'id': 'question_13357666007', 'len': 10, 'head': 'Austin, TX'}, {'id': 'question_13357667007', 'len': 0, 'head': ''}, {'id': 'question_13357668007', 'len': 0, 'head': ''}, {'id': 'question_13357671007', 'len': 0, 'head': ''}]
 identity_ok: True
 No Submit clicked.

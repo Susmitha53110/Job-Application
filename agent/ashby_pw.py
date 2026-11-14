@@ -317,14 +317,44 @@ def submit_ashby_basic(
                 False, page.url, "Ashby reCAPTCHA — needs you", "captcha", proof_dir
             )
 
-        # submit
-        btn = page.get_by_role("button", name=re.compile(r"Submit", re.I))
+        # submit — scroll into view; wait for URL/body change; surface validation errors
+        pre_url = page.url
+        btn = page.get_by_role("button", name=re.compile(r"^Submit$|Submit [Aa]pplication", re.I))
+        if not btn.count():
+            btn = page.get_by_role("button", name=re.compile(r"Submit", re.I))
         if btn.count():
-            btn.first.click()
-            page.wait_for_timeout(6000)
+            try:
+                btn.last.scroll_into_view_if_needed()
+                btn.last.click(timeout=5000)
+            except Exception:
+                try:
+                    btn.first.click(force=True, timeout=5000)
+                except Exception:
+                    pass
+            try:
+                page.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:
+                pass
+            page.wait_for_timeout(4000)
+            # success pages often drop /application from the path
+            try:
+                page.wait_for_function(
+                    """(pre) => {
+                      const t = (document.body && document.body.innerText || '').toLowerCase();
+                      const u = location.href;
+                      if (u !== pre && !u.includes('/application')) return true;
+                      return ['thank you','application has been submitted','successfully submitted',
+                              'we have received','thanks for applying','application received',
+                              'thanks for your interest'].some(x => t.includes(x));
+                    }""",
+                    arg=pre_url,
+                    timeout=8000,
+                )
+            except Exception:
+                pass
         body = page.inner_text("body")
         low = body.lower()
-        if "verification code" in low or "security code" in low:
+        if "verification code" in low or "security code" in low or "enter the code" in low:
             if not security_code:
                 page.screenshot(path=str(proof_dir / "needs_security_code.png"), full_page=True)
                 browser.close()
@@ -335,6 +365,18 @@ def submit_ashby_basic(
                     body[-500:],
                     proof_dir,
                 )
+        # Required-field / validation still on form
+        validation_hits = []
+        for phrase in (
+            "is required",
+            "this field is required",
+            "please fill",
+            "please complete",
+            "required field",
+            "cannot be empty",
+        ):
+            if phrase in low:
+                validation_hits.append(phrase)
         ok = any(
             x in low
             for x in [
@@ -343,14 +385,19 @@ def submit_ashby_basic(
                 "successfully submitted",
                 "we have received",
                 "thanks for applying",
+                "application received",
+                "thanks for your interest",
+                "successfully applied",
             ]
         )
+        if not ok and page.url.rstrip("/") != pre_url.rstrip("/") and "/application" not in page.url.lower():
+            ok = True
         page.screenshot(
             path=str(proof_dir / ("confirmation.png" if ok else "after_submit.png")),
             full_page=True,
         )
         (proof_dir / ("confirmation.txt" if ok else "after_submit.txt")).write_text(
-            f"{company}\nURL: {page.url}\nEmail: {email}\n\n{body[:3000]}\n"
+            f"{company}\nURL: {page.url}\nEmail: {email}\npre_url: {pre_url}\n\n{body[:3000]}\n"
         )
         if ok:
             try:
@@ -360,5 +407,10 @@ def submit_ashby_basic(
                 )
             except Exception:
                 pass
+            browser.close()
+            return AshbySubmitResult(True, page.url, None, body[-800:], proof_dir)
+        detail = "Submit not confirmed"
+        if validation_hits:
+            detail = f"Submit blocked — validation ({', '.join(validation_hits[:3])})"
         browser.close()
-        return AshbySubmitResult(ok, page.url, None if ok else "Submit not confirmed", body[-800:], proof_dir)
+        return AshbySubmitResult(False, page.url, detail, body[-800:], proof_dir)

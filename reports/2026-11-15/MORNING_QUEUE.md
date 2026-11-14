@@ -24,7 +24,7 @@ Runner: `python3 -m agent.morning_queue_submit` (window-gated). **xAI age ~9.5d 
 
 | # | Company | Role | b | Kit |
 |---|---------|------|---|-----|
-| 1 | xAI | Analytics Engineer (X) | 8.2 | `applications/applied/2026-11-15/xAI_Analytics_Engineer_X/` |
+| 1 | xAI | Analytics Engineer (X) | 8.2 | `applications/applied/2026-11-15/xAI_Analytics_Engineer_X/` (essays+legal name filled; may hit reCAPTCHA on submit) |
 | 2 | Verkada | Sr SWE, Business Systems - Data Trust | 10.0 | `applications/applied/2026-11-15/Verkada_Sr_SWE_Data_Trust/` |
 | 3 | Abnormal | SWE I, Data Platforms | 8.0 | `applications/applied/2026-11-15/Abnormal_SWE_I_Data_Platforms/` (use GH embed URL) |
 | 4 | Merge | Analytics Engineer | 8.6 | `applications/applied/2026-11-15/Merge_Analytics_Engineer/` |

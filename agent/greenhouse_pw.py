@@ -540,6 +540,15 @@ def submit_greenhouse_basic(
                   consent: document.getElementById('gdpr_demographic_data_consent_given_1')?.checked ?? null,
                   selects: [...document.querySelectorAll('.select__single-value')]
                     .map(e => (e.textContent||'').trim()).filter(Boolean),
+                  textareas: [...document.querySelectorAll('textarea')].map(t => ({
+                    id: t.id || t.name || '',
+                    len: (t.value||'').length,
+                    head: (t.value||'').slice(0, 80),
+                  })),
+                  inputs_extra: [...document.querySelectorAll('input[type=text],input:not([type])')]
+                    .filter(i => i.id && !['first_name','last_name','email','phone','preferred_name'].includes(i.id))
+                    .slice(0, 12)
+                    .map(i => ({id: i.id, len: (i.value||'').length, head: (i.value||'').slice(0,60)})),
                 })"""
             )
             ok_email = (dom.get("email") or "") == email
@@ -553,6 +562,8 @@ def submit_greenhouse_basic(
                 f"DOM phone: {dom.get('phone')}\n"
                 f"DOM consent: {dom.get('consent')}\n"
                 f"DOM selects: {dom.get('selects')}\n"
+                f"DOM textareas: {dom.get('textareas')}\n"
+                f"DOM inputs_extra: {dom.get('inputs_extra')}\n"
                 f"identity_ok: {ok_email and ok_name}\n"
                 f"No Submit clicked.\n"
             )
