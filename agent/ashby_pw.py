@@ -141,8 +141,48 @@ def submit_ashby_basic(
             r"eligible to work in the US|authorized to work at the location|authorized to work in the US",
             "Yes",
         )
-        click_yes_no(r"require (visa )?sponsorship|require sponsorship", "No")
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship|visa transfer", "No")
         click_yes_no(r"18 years of age", "Yes")
+        # Talkiatry / similar: currently on OPT or H4?
+        click_yes_no(r"currently on an OPT or H4|OPT or H4 visa", "Yes")
+        # Posted salary alignment (her floor $120k; ranges >=120k → Yes)
+        click_yes_no(r"salary range aligned with your requirements", "Yes")
+        # SQL years radios
+        try:
+            page.get_by_text(re.compile(r"^3\+\s*years$", re.I)).first.click(timeout=2000)
+        except Exception:
+            try:
+                page.get_by_text(re.compile(r"3\+\s*years", re.I)).first.click(timeout=2000)
+            except Exception:
+                pass
+        # Metaview / interview transcription consent
+        try:
+            page.get_by_text(re.compile(r"Yes,?\s*I DO Consent|Yes.*[Cc]onsent", re.I)).first.click(
+                timeout=2000
+            )
+        except Exception:
+            pass
+        # SMS / text consent — prefer No
+        try:
+            page.get_by_text(re.compile(r"No - I do not consent|No.*do not consent", re.I)).first.click(
+                timeout=2000
+            )
+        except Exception:
+            pass
+        # Location combobox (Ashby "Start typing...")
+        try:
+            loc = page.get_by_placeholder(re.compile(r"Start typing|Search for a location", re.I))
+            if loc.count():
+                loc.first.click()
+                loc.first.fill("Austin, Texas, United States")
+                page.wait_for_timeout(500)
+                opt = page.locator("[role=option]").filter(has_text=re.compile(r"Austin", re.I))
+                if opt.count():
+                    opt.first.click()
+                else:
+                    page.keyboard.press("Enter")
+        except Exception:
+            pass
         if spell_twelve:
             fill_label(r"Spell the number", "twelve")
         # Terms checkbox

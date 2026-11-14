@@ -275,3 +275,6 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | TRM Labs | Senior Data Engineer - AI Platform | https://jobs.ashbyhq.com/trm-labs/45e886bf-748d-41cb-9748-258440d12b61 | skipped
 2026-11-14 | TRM Labs | Senior Data Engineer - AI Platform | https://jobs.ashbyhq.com/trm-labs/45e886bf-748d-41cb-9748-258440d12b61 | needs-me
 2026-11-14 | BookNook | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | skipped
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | skipped
+2026-11-14 | talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | needs-me
