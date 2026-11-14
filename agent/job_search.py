@@ -510,16 +510,19 @@ def resolve_posted_at(url: str) -> str | None:
                 return meta.get("createdOn") or meta.get("publishedOn") or meta.get("updatedAt")
         except Exception:
             pass
-    # Greenhouse board API
+    # Greenhouse board API (board path, gh_jid=, or embed ?for=&token=)
     m = re.search(
         r"(?:boards|job-boards)\.greenhouse\.io/([^/]+)/jobs/(\d+)|"
-        r"greenhouse\.io/([^/]+)/jobs/(\d+)|gh_jid=(\d+)",
+        r"greenhouse\.io/([^/]+)/jobs/(\d+)|"
+        r"[?&]for=([A-Za-z0-9_-]+).*?[?&]token=(\d+)|"
+        r"[?&]token=(\d+).*?[?&]for=([A-Za-z0-9_-]+)|"
+        r"gh_jid=(\d+)",
         url,
         re.I,
     )
     if m:
-        board = m.group(1) or m.group(3)
-        jid = m.group(2) or m.group(4) or m.group(5)
+        board = m.group(1) or m.group(3) or m.group(5) or m.group(8)
+        jid = m.group(2) or m.group(4) or m.group(6) or m.group(7) or m.group(9)
         if board and jid:
             try:
                 meta = greenhouse_job_meta(board, jid)

@@ -6,7 +6,7 @@ Target: **20–25** applications in 08:00–12:00 CT. Gmail declined — paste O
 
 | # | Company | Role | Blocker | Kit |
 |---|---------|------|---------|-----|
-| 1 | MongoDB | Sr / DB Integration & Observability | OTP | `applications/applied/2026-11-14/MongoDB_Sr_fill/` + ready kit |
+| 1 | MongoDB | Sr / DB Integration & Observability | OTP (age edge ~9.7d on 11-15 — use `.../mongodb/jobs/8352433`) | `applications/applied/2026-11-14/MongoDB_Sr_fill/` |
 | 2 | Extend | Senior Analytics Engineer | OTP | `applications/applied/2026-11-14/Extend_Senior_Analytics_Engineer/` |
 | 3 | Keebo | Senior Data Engineer | OTP | `applications/applied/2026-11-14/Keebo_Senior_Data_Engineer/` |
 | 4 | Anduril | Production Master Data Engineer | reCAPTCHA | `applications/applied/2026-11-14/Anduril_Production_Master_Data_Engineer/` |
@@ -19,6 +19,8 @@ Target: **20–25** applications in 08:00–12:00 CT. Gmail declined — paste O
 **Skip:** NinjaOne (citizen/LPR), Anduril Lead/Manager (clearance), Velosio until age assert fixed, Citi/Optum.
 
 ## Priority 1 — fill_only ready to submit at 8am
+
+Runner: `python3 -m agent.morning_queue_submit` (window-gated). **xAI age ~9.5d on 11-15 — submit first.**
 
 | # | Company | Role | b | Kit |
 |---|---------|------|---|-----|
