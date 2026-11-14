@@ -5,6 +5,8 @@ DOM email: dsusmitha55@gmail.com
 DOM name: Susmitha Chowdary
 DOM phone: (913) 207-3787
 DOM consent: None
-DOM selects: ['+1', 'Austin, Texas, United States', 'Yes', 'No', 'No', 'Female', 'No', 'Asian', 'I am not a protected veteran']
+DOM selects: ['+1', 'Austin, Texas, United States', 'Yes', 'No', 'No', 'No', 'Female', 'No', 'Asian', 'I am not a protected veteran']
+DOM textareas: [{'id': 'g-recaptcha-response-100000', 'len': 0, 'head': ''}]
+DOM inputs_extra: [{'id': 'country', 'len': 0, 'head': ''}, {'id': 'candidate-location', 'len': 0, 'head': ''}, {'id': 'question_35342596003', 'len': 0, 'head': ''}, {'id': 'question_35342597003', 'len': 5, 'head': '78754'}, {'id': 'question_35342598003', 'len': 52, 'head': 'https://www.linkedin.com/in/susmitha-dodla-a05ab92b8'}, {'id': 'question_35342599003', 'len': 5, 'head': 'Optum'}, {'id': 'question_35342600003', 'len': 0, 'head': ''}, {'id': 'question_35342601003', 'len': 0, 'head': ''}, {'id': 'question_35342602003', 'len': 0, 'head': ''}, {'id': 'question_35342603003', 'len': 0, 'head': ''}, {'id': 'question_35342604003', 'len': 0, 'head': ''}, {'id': 'gender', 'len': 0, 'head': ''}]
 identity_ok: True
 No Submit clicked.

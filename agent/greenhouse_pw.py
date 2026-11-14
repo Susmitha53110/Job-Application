@@ -337,6 +337,9 @@ def submit_greenhouse_basic(
                 elif ("worked" in low and "before" in low) or "previously" in low or "interviewed" in low:
                     if previously_no:
                         _pick_react(page, eid, ["No"])
+                elif "employee or contractor" in low or "currently an employee" in low or "currently employed" in low:
+                    if previously_no:
+                        _pick_react(page, eid, ["No"])
                 elif "hear" in low or "learn about" in low or "how did you hear" in low or "this opportunity" in low:
                     _pick_react(
                         page,
