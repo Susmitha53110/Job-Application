@@ -469,3 +469,21 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | jobgether | Software Engineer - Database | https://jobs.lever.co/jobgether/4adde91c-124f-4b1a-ad24-a7f1d5c0bfad | dry-run
 2026-11-14 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
 2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-15 | SpaceXSI | Analytics Engineer (X) | https://job-boards.greenhouse.io/xai/jobs/5286889007 | dry-run
+2026-11-15 | SpaceXSI | Sr. Software Engineer, Data Engineering (X) | https://job-boards.greenhouse.io/xai/jobs/5286971007 | dry-run
+2026-11-15 | SpaceX | Data Engineer (Starship) | https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002 | dry-run
+2026-11-15 | Rocket Lab Corporation | Senior Software Engineer I - Data Engineering | https://job-boards.greenhouse.io/rocketlab/jobs/8201104003 | dry-run
+2026-11-15 | Abnormal | Software Engineer I, Data Platforms | https://abnormal.ai/careers/jobs/8196352003?gh_jid=8196352003 | dry-run
+2026-11-15 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | dry-run
+2026-11-15 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | dry-run
+2026-11-15 | SpaceXSI | Analytics Engineer (X) | https://job-boards.greenhouse.io/xai/jobs/5286889007 | dry-run
+2026-11-15 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | dry-run
+2026-11-15 | Abnormal | Software Engineer I, Data Platforms | https://abnormal.ai/careers/jobs/8196352003?gh_jid=8196352003 | dry-run
+2026-11-15 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | dry-run
+2026-11-15 | SpaceXSI | Analytics Engineer (X) | https://job-boards.greenhouse.io/xai/jobs/5286889007 | dry-run
+2026-11-15 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | dry-run
+2026-11-15 | Abnormal | Software Engineer I, Data Platforms | https://abnormal.ai/careers/jobs/8196352003?gh_jid=8196352003 | dry-run
+2026-11-15 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | dry-run
+2026-11-15 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | dry-run
+2026-11-15 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-15 | BranchInsurance | Analytics Engineer II | https://jobs.ashbyhq.com/BranchInsurance/728e3815-8d03-40ca-8f6f-86cef305965b | dry-run
