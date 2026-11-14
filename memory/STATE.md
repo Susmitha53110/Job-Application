@@ -8,8 +8,8 @@
 - daily_schedule_active: true
 - ramp_day: 2
 - daily_limit: 25
-- last_run_date: 2026-11-13
-- last_run_summary: "overnight_hunt 2026-11-13T12:37-06:00: window=False; salary=set; hunt=20; ge7=6; curve_gate=False"
+- last_run_date: 2026-11-14
+- last_run_summary: "daily_apply 2026-11-14: window=OPEN; MongoDB+Machinify OTP needs-me; mux CAPTCHA needs-me; hunt=no other ge7 auto; applied_today=0"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -20,7 +20,7 @@
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
-- applications_requested_today: 0
+- applications_requested_today: 3
 - applications_succeeded_today: 0
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
@@ -42,3 +42,4 @@
 - Overnight prepare-only ran 2026-11-13 12:32 CT and 12:37 CT; MongoDB/mux/Machinify ready for 08:00 CT.
 - status=applied URLs excluded from overnight/daily hunt scoring (BetterHelp/Life360/Clera/Bayesian/Curve).
 - Expanded GH/Ashby board lists; fresh US-remote DE inventory still thin within 10d.
+- 2026-11-14 morning: MongoDB+Machinify email OTP needs-me; mux CAPTCHA needs-me; paste codes to finish.
