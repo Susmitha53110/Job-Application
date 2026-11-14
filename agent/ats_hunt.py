@@ -147,6 +147,13 @@ DEFAULT_GH_BOARDS = [
     "anomalo",
     "metaplane",
     "coalesceio",
+    # Boards surfaced in live hunts (keep for next-day freshness)
+    "velir",
+    "merceradvisors",
+    "energyhub",
+    "theknotworldwide",
+    "zscaler",
+    "zencastr",
 ]
 
 
@@ -401,6 +408,15 @@ DEFAULT_ASHBY_ORGS = [
     "together",
     "replicate",
     "elevenlabs",
+    # Boards surfaced in live hunts
+    "aboon",
+    "amplitude",
+    "spoton",
+    "current-advisors",
+    "balorgames",
+    "trm-labs",
+    "evermore",
+    "surveymonkey",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [
@@ -412,6 +428,8 @@ DEFAULT_RIPPLING_BOARDS = [
     "intertwine-associates",
     "included-health",
     "modern-health",
+    "booknook-inc",
+    "genlogs-corporation",
 ]
 
 DEFAULT_LEVER_COMPANIES = [
@@ -425,6 +443,8 @@ DEFAULT_LEVER_COMPANIES = [
     "affirm",
     "discord",
     "cloudflare",
+    "SimbeRobotics",
+    "jobgether",
 ]
 
 

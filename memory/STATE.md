@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 10:10CT rehunt: no new GH/Ashby US b≥7; CE#2 CAPTCHA; Jobgether enterprise SDE CAPTCHA; Zip age-fail; 11am rehunt armed; confirms 0"
+- last_run_summary: "2026-11-14 ~10:15CT: market empty of new US b≥7; Lead AE Jobgether CAPTCHA kit; expanded ats_hunt boards; 11am rehunt armed; confirms 0"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
