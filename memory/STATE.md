@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~11:15CT: market empty unblocked US b≥7; NEEDS_ME_QUEUE written; confirms 0; noon timer armed"
+- last_run_summary: "2026-11-14 ~11:23CT: Solvd Knowledge Ingestion filled (b=8.8) reCAPTCHA needs-me; confirms 0"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -21,7 +21,7 @@
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
-- applications_requested_today: 15
+- applications_requested_today: 16
 - applications_succeeded_today: 0
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT

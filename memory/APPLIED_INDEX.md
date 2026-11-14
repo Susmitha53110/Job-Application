@@ -329,3 +329,33 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | skipped
 2026-11-14 | Jobgether | Staff/Senior Data Engineer | https://jobs.lever.co/jobgether/141c6bd9-8d42-4ebc-a52c-4b897059e2f2 | skipped
 2026-11-14 | Jobgether | Staff/Senior Data Engineer | https://jobs.lever.co/jobgether/141c6bd9-8d42-4ebc-a52c-4b897059e2f2 | needs-me
+2026-11-14 | Tebra | Data Integration Specialist I | https://job-boards.greenhouse.io/tebra/jobs/4750090005 | dry-run
+2026-11-14 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | dry-run
+2026-11-14 | BookNook, Inc | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | dry-run
+2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | skipped
+2026-11-14 | Tebra | Data Integration Specialist I | https://job-boards.greenhouse.io/tebra/jobs/4750090005 | dry-run
+2026-11-14 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | dry-run
+2026-11-14 | flatironhealth | Senior Software Engineer, Data Engineering | https://flatiron.com/careers/open-positions/job?gh_jid=8371660 | dry-run
+2026-11-14 | andurilindustries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-14 | energyhub | Senior Analytics Engineer | https://job-boards.greenhouse.io/energyhub/jobs/8877372002 | dry-run
+2026-11-14 | mux | Senior Data Engineer | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe | dry-run
+2026-11-14 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | lumin-digital | Senior Data Engineer | https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384 | dry-run
+2026-11-14 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | andurilindustries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-14 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | BranchInsurance | Analytics Engineer II | https://jobs.ashbyhq.com/BranchInsurance/728e3815-8d03-40ca-8f6f-86cef305965b | dry-run
+2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | solvd | Senior Data Engineer — Retrieval & RAG Platform  | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | dry-run
+2026-11-14 | solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | dry-run
+2026-11-14 | Solvd | Senior Data Engineer — Retrieval & RAG Platform  | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | dry-run
+2026-11-14 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | dry-run
+2026-11-14 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-14 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | skipped
+2026-11-14 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | skipped
+2026-11-14 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | needs-me
+2026-11-14 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | skipped

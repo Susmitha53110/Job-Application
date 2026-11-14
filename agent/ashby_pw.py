@@ -167,6 +167,21 @@ def submit_ashby_basic(
         )
         click_yes_no(r"require (visa )?sponsorship|require sponsorship|visa transfer", "No")
         click_yes_no(r"18 years of age", "Yes")
+        # Solvd-style English level + work-right radios
+        try:
+            page.get_by_text(re.compile(r"^C1-C2$", re.I)).first.click(timeout=2000)
+        except Exception:
+            pass
+        try:
+            page.get_by_text(
+                re.compile(r"authorized to work without sponsorship", re.I)
+            ).first.click(timeout=2000)
+        except Exception:
+            pass
+        try:
+            page.get_by_text(re.compile(r"^I agree$", re.I)).first.click(timeout=2000)
+        except Exception:
+            pass
         # Talkiatry / similar: currently on OPT or H4?
         click_yes_no(r"currently on an OPT or H4|OPT or H4 visa", "Yes")
         # Posted salary alignment (her floor $120k; ranges >=120k → Yes)

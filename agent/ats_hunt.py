@@ -158,6 +158,7 @@ DEFAULT_GH_BOARDS = [
     "togetherai",
     "podium81",
     "anaplan",
+    "sixfold",
 ]
 
 
@@ -425,6 +426,8 @@ DEFAULT_ASHBY_ORGS = [
     "outmarket",
     "Ontic",
     "BranchInsurance",
+    "Solvd",
+    "clera",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [

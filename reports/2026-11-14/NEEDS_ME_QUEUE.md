@@ -16,6 +16,7 @@ Gmail MCP declined — paste codes here in chat if emailed to dsusmitha55@gmail.
 
 | Company | Role | Blocker |
 |--------|------|---------|
+| Solvd | Senior Data Engineer — Knowledge Ingestion | reCAPTCHA Enterprise |
 | BookNook | Senior Analytics Engineer | Cloudflare |
 | Amplitude | Senior Data Engineer, Marketing & GTM | CAPTCHA |
 | Instructure | Senior Analytics Engineer | CAPTCHA |
