@@ -428,6 +428,16 @@ def resolve_posted_at(url: str) -> str | None:
     """
     if not url:
         return None
+    # Rippling ATS API
+    m_rip = re.search(r"ats\.rippling\.com/([^/]+)/jobs/([0-9a-f-]{36})", url, re.I)
+    if m_rip:
+        board, jid = m_rip.group(1), m_rip.group(2)
+        try:
+            meta = _get_json(f"https://ats.rippling.com/api/v2/board/{board}/jobs/{jid}")
+            if isinstance(meta, dict):
+                return meta.get("createdOn") or meta.get("publishedOn") or meta.get("updatedAt")
+        except Exception:
+            pass
     # Greenhouse board API
     m = re.search(
         r"(?:boards|job-boards)\.greenhouse\.io/([^/]+)/jobs/(\d+)|"

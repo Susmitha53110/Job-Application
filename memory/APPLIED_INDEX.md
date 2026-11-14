@@ -274,3 +274,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | needs-me
 2026-11-14 | TRM Labs | Senior Data Engineer - AI Platform | https://jobs.ashbyhq.com/trm-labs/45e886bf-748d-41cb-9748-258440d12b61 | skipped
 2026-11-14 | TRM Labs | Senior Data Engineer - AI Platform | https://jobs.ashbyhq.com/trm-labs/45e886bf-748d-41cb-9748-258440d12b61 | needs-me
+2026-11-14 | BookNook | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | skipped
