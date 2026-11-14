@@ -165,6 +165,19 @@ DEFAULT_GH_BOARDS = [
     "abnormalsecurity",
     "spacex",
     "rocketlab",
+    # Boards live-probed 2026-11-14 afternoon (DE inventory thin; keep for freshness)
+    "airbnb",
+    "air",
+    "monsterenergy",
+    "eventbriteinc",
+    "goatgroup",
+    "alpaca",
+    "monzo",
+    "clearstreet",
+    "shipbobinc",
+    "checkr",
+    "cameo",
+    "starburst",
 ]
 
 
