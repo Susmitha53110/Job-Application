@@ -39,6 +39,7 @@ Gmail MCP declined — paste codes here in chat if emailed to dsusmitha55@gmail.
 
 - Anduril Data Platform Lead / SWE Manager — clearance
 - NinjaOne — citizen/LPR
-- Velosio — age gate fail-closed (unknown posted date on URL assert)
+- Velosio — age OK (posted 2026-11-11) but iCIMS needs computer-use — see `reports/2026-11-15/MORNING_UNLOCK_RUNBOOK.md`
+- Machinify — aged out (first_published 2026-11-03); do not OTP-unlock
 - The Knot Lead AE — 7+ years stretch; kit already exists
 - Zencastr — aged out (posted 2026-09-11)
