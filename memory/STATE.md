@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "mid-window 2026-11-14: Zencastr Ashby submitted BUT age miss (64d)—gate hardened; SpotOn/Knot/Current CAPTCHA; TRM aged-out; OTP still MongoDB/Machinify/Extend/Keebo; applied_valid_age=0"
+- last_run_summary: "2026-11-14 ~09:30CT: valid_age applied=0; talkiatry CAPTCHA (form filled); BookNook Rippling dropdowns sticky needs-me; OTP MongoDB/Machinify/Extend/Keebo; many CAPTCHA; age-gate active; 10am rehunt armed"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
