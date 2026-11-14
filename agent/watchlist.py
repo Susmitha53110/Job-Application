@@ -7,7 +7,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 from . import paths
-from .job_search import JobPosting, _get_json, filter_jobs, is_us_remote, within_max_age
+from .job_search import JobPosting, _get_json, filter_jobs, is_us_remote, is_us_work_ok, within_max_age
 from .window import chicago_today
 
 
@@ -210,7 +210,7 @@ def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 10) 
             desc = _strip_html(detail.get("content") or "")
             if _visa_block(desc):
                 continue
-            if not is_us_remote(str(loc), desc, source="greenhouse", title=title):
+            if not is_us_work_ok(str(loc), desc, source="greenhouse", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -248,7 +248,7 @@ def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 10) -> list
             desc = _strip_html(j.get("descriptionPlain") or j.get("descriptionHtml") or "")
             if _visa_block(desc):
                 continue
-            if not is_us_remote(f"{loc} {wt}", desc, source="ashby", title=title):
+            if not is_us_work_ok(f"{loc} {wt}", desc, source="ashby", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -324,7 +324,7 @@ def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 10) -> 
             if _visa_block(desc):
                 continue
             full_title = detail.get("name") or title
-            if not remote_us and not is_us_remote(location, desc, source="rippling", title=full_title):
+            if not remote_us and not is_us_work_ok(location, desc, source="rippling", title=full_title):
                 continue
             out.append(
                 JobPosting(

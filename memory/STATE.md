@@ -16,7 +16,8 @@
 - schedule_days: Mon-Sun
 - max_post_age_days: 10
 - us_only: true
-- remote_only: true
+- remote_only: false
+- work_mode: prefer_remote_allow_us_hybrid_onsite
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
@@ -43,3 +44,4 @@
 - status=applied URLs excluded from overnight/daily hunt scoring (BetterHelp/Life360/Clera/Bayesian/Curve).
 - Expanded GH/Ashby board lists; fresh US-remote DE inventory still thin within 10d.
 - 2026-11-14 morning: MongoDB+Machinify email OTP needs-me; mux CAPTCHA needs-me; paste codes to finish.
+- 2026-11-14: hybrid/on-site US hunt enabled per PROFILE; Anduril skipped (clearance).

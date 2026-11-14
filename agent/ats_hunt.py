@@ -5,7 +5,7 @@ import re
 from dataclasses import asdict
 from datetime import date
 
-from .job_search import JobPosting, _get_json, _parse_dt, filter_jobs, is_us_remote, within_max_age
+from .job_search import JobPosting, _get_json, _parse_dt, filter_jobs, is_us_remote, is_us_work_ok, within_max_age
 
 
 DEFAULT_GH_BOARDS = [
@@ -212,7 +212,7 @@ def hunt_greenhouse(boards: list[str] | None = None, max_age_days: int = 10) -> 
             loc = ((detail.get("location") or {}).get("name") if isinstance(detail.get("location"), dict) else "") or ""
             desc = _strip_html(detail.get("content") or "")
             title = detail.get("title") or j.get("title") or ""
-            if not is_us_remote(str(loc), desc, source="greenhouse", title=title):
+            if not is_us_work_ok(str(loc), desc, source="greenhouse", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -248,7 +248,7 @@ def hunt_ashby(orgs: list[str], max_age_days: int = 10) -> list[JobPosting]:
             wt = j.get("workplaceType") or ""
             desc = _strip_html(j.get("descriptionPlain") or j.get("descriptionHtml") or "")
             title = j.get("title") or ""
-            if not is_us_remote(f"{loc} {wt}", desc, source="ashby", title=title):
+            if not is_us_work_ok(f"{loc} {wt}", desc, source="ashby", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -330,7 +330,7 @@ def hunt_rippling(board_slug: str, max_age_days: int = 10) -> list[JobPosting]:
             parts.append(str(desc_obj))
         desc = _strip_html(" ".join(parts))
         full_title = detail.get("name") or title
-        if not remote_us and not is_us_remote(location, desc, source="rippling", title=full_title):
+        if not remote_us and not is_us_work_ok(location, desc, source="rippling", title=full_title):
             continue
         out.append(
             JobPosting(
@@ -454,7 +454,7 @@ def hunt_lever(companies: list[str] | None = None, max_age_days: int = 10) -> li
             loc = cats.get("location") or ""
             workplace = cats.get("workplaceType") or j.get("workplaceType") or ""
             desc = _strip_html(j.get("descriptionPlain") or j.get("description") or "")
-            if not is_us_remote(f"{loc} {workplace}", desc, source="lever", title=title):
+            if not is_us_work_ok(f"{loc} {workplace}", desc, source="lever", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -538,7 +538,7 @@ def hunt_himalayas(*, max_age_days: int = 10, max_pages: int = 8) -> list[JobPos
                         loc = ((detail.get("location") or {}).get("name") if isinstance(detail.get("location"), dict) else "") or loc_s
                         desc_gh = _strip_html(detail.get("content") or "") or desc
                         apply_gh = detail.get("absolute_url") or gj.get("absolute_url") or apply
-                        if not is_us_remote(str(loc), desc_gh, source="greenhouse", title=title):
+                        if not is_us_work_ok(str(loc), desc_gh, source="greenhouse", title=title):
                             continue
                         out.append(
                             JobPosting(
@@ -561,7 +561,7 @@ def hunt_himalayas(*, max_age_days: int = 10, max_pages: int = 8) -> list[JobPos
                     board = None
             if board:
                 continue
-            if not is_us_remote(loc_s, desc, source="himalayas", title=title):
+            if not is_us_work_ok(loc_s, desc, source="himalayas", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -720,7 +720,7 @@ def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 10) -
             )
             # Only stamp Remote+US when structured eligibility already passed.
             location = f"{country_label or 'United States'}, Remote" if remote_in_page else (country_label or "United States")
-            if not is_us_remote(location, desc, source="jsonld", title=title):
+            if not is_us_work_ok(location, desc, source="jsonld", title=title):
                 if not remote_in_page:
                     continue
                 # Structured US + remote jobLocationType is enough

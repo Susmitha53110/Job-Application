@@ -28,3 +28,9 @@ Agent continues hunting during the window; cannot invent OTPs/CAPTCHAs.
 - ClickHouse Data Platform Engineer skipped (EU-only).
 - Computer Use could not complete mux (Ashby field automation failed in that path); Playwright still preferred for Ashby.
 - Still blocked on MongoDB/Machinify OTP + mux CAPTCHA. No other ≥7 US-remote auto-submits in hunt.
+
+## Update ~08:25 CT
+- Hunt now allows US hybrid/on-site (PROFILE standing).
+- Anduril Production Master Data Engineer b=8.8 skipped — clearance/export controls (preflight strengthened).
+- Still **0 confirms**. Blockers unchanged: MongoDB OTP, Machinify OTP, mux CAPTCHA.
+- No other honest ≥7 US ATS roles without clearance/OTP/login in current inventory.

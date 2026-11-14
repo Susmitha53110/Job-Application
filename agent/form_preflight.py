@@ -25,6 +25,14 @@ CITIZEN_ONLY = re.compile(
     re.I,
 )
 
+CLEARANCE_REQUIRED = re.compile(
+    r"security clearance|clearance eligibility|eligible to obtain.{0,40}clearance|"
+    r"maintain a u\.?s\.? security clearance|active (secret|top secret|ts/?sci) clearance|"
+    r"export controls?.{0,40}(u\.?s\.? person|us person|itar)|"
+    r"must be a u\.?s\.? person",
+    re.I,
+)
+
 SALARY_FIELD = re.compile(
     r"salary expectation|expected salary|compensation expectation|desired (salary|comp)|"
     r"what is your salary|pay expectation",
@@ -59,6 +67,8 @@ def _scan_label(label: str, *, required: bool) -> tuple[list[str], list[str]]:
         )
     if CITIZEN_ONLY.search(label):
         blockers.append(f"Citizenship/green-card only question: {label.strip()}")
+    if CLEARANCE_REQUIRED.search(label):
+        blockers.append(f"Clearance/export-control gate: {label.strip()}")
     if SALARY_FIELD.search(label) and required:
         if salary_from_memory():
             warnings.append(f"Required salary field — use Memory {salary_from_memory()}: {label.strip()}")

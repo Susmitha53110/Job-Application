@@ -200,3 +200,19 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
 2026-11-14 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
 2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-14 | Gusto, Inc. | Software Engineer,  Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | dry-run
+2026-11-14 | Block | Senior Software Engineer - Data Enablement | http://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | dry-run
+2026-11-14 | Anduril Industries | Data Platform Lead, Product Lifecycle Operations | https://boards.greenhouse.io/andurilindustries/jobs/5287472007?gh_jid=5287472007 | dry-run
+2026-11-14 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | palantir | Backend Software Engineer - Data Connectors | https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0 | dry-run
+2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-14 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-14 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | skipped: clearance/export controls
+2026-11-14 | Gusto, Inc. | Software Engineer,  Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | dry-run
+2026-11-14 | Block | Senior Software Engineer - Data Enablement | http://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | palantir | Backend Software Engineer - Data Connectors | https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0 | dry-run
+2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run

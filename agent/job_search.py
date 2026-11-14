@@ -8,10 +8,10 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
 
-# Locked search policy from Susmitha (2026-11-11)
+# Locked search policy from Susmitha (PROFILE: prefer remote; hybrid/on-site US OK)
 DEFAULT_MAX_AGE_DAYS = 10
 US_ONLY = True
-REMOTE_ONLY = True
+REMOTE_ONLY = False  # prefer remote; allow US hybrid/on-site (relocate Yes)
 OPEN_ONLY = True
 
 
@@ -73,6 +73,51 @@ def _explicit_us_mention(text: str) -> bool:
         r"\bremote - us\b|\bremote us\b|\bremote, us\b|\bus - remote\b|\bus remote\b|"
         r"\bremote \(us|\bremote \(u\.s",
         t,
+    ):
+        return True
+    return False
+
+
+def is_us_location(location: str, description: str = "", *, title: str = "") -> bool:
+    """True when the role is clearly US-based (remote, hybrid, or on-site)."""
+    loc_l = (location or "").lower()
+    blob = f"{title} {location} {description[:1500]}".lower()
+    if _explicit_us_mention(loc_l) or _explicit_us_mention(blob):
+        # Still reject pure EU/APAC location strings with no US in location
+        non_us_loc = any(
+            x in loc_l
+            for x in (
+                "netherlands",
+                "germany",
+                "spain",
+                "united kingdom",
+                "ireland",
+                "france",
+                "portugal",
+                "poland",
+                "india",
+                "canada",
+                "australia",
+                "singapore",
+                "israel",
+                "emea",
+                "europe",
+                "latam",
+                "apac",
+            )
+        )
+        if non_us_loc and not _explicit_us_mention(loc_l):
+            return False
+        return True
+    if re.search(
+        r"\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|"
+        r"hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|"
+        r"michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|"
+        r"new mexico|new york|nyc|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+        r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
+        r"west virginia|wisconsin|wyoming|austin|seattle|chicago|denver|boston|atlanta|dallas|"
+        r"san francisco|los angeles|san jose|brooklyn|manhattan)\b",
+        loc_l,
     ):
         return True
     return False
@@ -217,6 +262,35 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
     return remote_ok and us_ok
 
 
+def is_us_work_ok(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
+    """US remote (preferred) OR US hybrid/on-site per PROFILE standing answers."""
+    if is_us_remote(location, description, source=source, title=title):
+        return True
+    # Hybrid / on-site US — Susmitha relocates Yes, hybrid Yes
+    blob = f"{title} {location} {description[:1500]}".lower()
+    if not is_us_location(location, description, title=title):
+        return False
+    if any(
+        x in blob
+        for x in (
+            "hybrid",
+            "on-site",
+            "onsite",
+            "on site",
+            "in-office",
+            "in office",
+            "office days",
+            "days in office",
+        )
+    ):
+        return True
+    # Explicit US city/state location without remote/EU → treat as US on-site eligible
+    loc_l = (location or "").lower()
+    if loc_l and "remote" not in loc_l and is_us_location(location, "", title=title):
+        return True
+    return False
+
+
 def search_remotive(
     search: str = "data engineer",
     limit: int = 30,
@@ -356,7 +430,12 @@ def filter_jobs(
         if not within_max_age(j.posted_at, max_age_days=max_age_days):
             continue
         if us_only or remote_only:
-            if not is_us_remote(j.location, j.description, source=j.source, title=j.title):
+            ok_geo = (
+                is_us_remote(j.location, j.description, source=j.source, title=j.title)
+                if remote_only
+                else is_us_work_ok(j.location, j.description, source=j.source, title=j.title)
+            )
+            if not ok_geo:
                 continue
         blob = f"{j.title} {j.company} {j.location} {j.description} {j.salary_text or ''}".lower()
         if any(s in blob for s in skip_keywords):
