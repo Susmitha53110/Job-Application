@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~09:45CT: BookNook Cloudflare needs-me (auth/sponsor/TX filled); Amplitude Ashby CAPTCHA needs-me b=7.9; ConsumerEdge+Natera GH CAPTCHA; OTP/CAPTCHA queue still blocking confirms; hunt thin"
+- last_run_summary: "2026-11-14 ~09:55CT: fixed Git/CI prose labels (Instructure honest b 6.9→8.1); Instructure CAPTCHA needs-me; ClickHouse Europe skip; market still CAPTCHA/OTP gated"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

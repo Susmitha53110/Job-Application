@@ -197,6 +197,9 @@ def _tech_requirements_from_prose(jd_text: str) -> list[JdRequirement]:
         r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
         r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
         r"\bmlops\b|machine learning": "ML/MLOps workflows",
+        # Must match extract_keywords label_map — never surface raw regex as requirement text
+        r"ci/?cd": "CI/CD",
+        r"\bgit\b": "Git",
     }
     seen = set()
     for pat in tech_hits:

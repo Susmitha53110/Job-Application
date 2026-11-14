@@ -129,8 +129,32 @@ def submit_ashby_basic(
             sal = str(salary_from_memory() or "120000")
         except Exception:
             sal = "120000"
-        fill_label(r"Desired salary|salary expectation|salary requirements", sal)
+        fill_label(r"Desired salary|salary expectation|salary requirements|compensation expectations", sal)
+        fill_label(r"related to anyone|relationship to anyone at", "No")
         fill_label(r"Why does|good fit|interests you about this|significant project|why you are interested", why_fit)
+        # Work-auth radios (F1-OPT = temporary open/transferable)
+        try:
+            page.get_by_text(
+                re.compile(
+                    r"Temporary visa with open\s*/\s*transferable work authorization|"
+                    r"open\s*/\s*transferable work authorization",
+                    re.I,
+                )
+            ).first.click(timeout=2000)
+        except Exception:
+            pass
+        # Reside in country — Yes when already US-based
+        try:
+            q = page.get_by_text(re.compile(r"currently reside in the country", re.I)).first
+            root = q.locator("xpath=ancestor::*[self::div or self::fieldset][1]")
+            for _ in range(6):
+                try:
+                    root.get_by_role("button", name=re.compile(r"^Yes$", re.I)).first.click(timeout=1500)
+                    break
+                except Exception:
+                    root = root.locator("xpath=..")
+        except Exception:
+            pass
         fill_label(r"How did you hear|How you learned|learned about", "Company website")
         fill_label(r"favourite game|favorite game", "Portal — elegant puzzle design and clean systems thinking.")
         fill_label(r"favorite type of nut|favourite type of nut", "almond")
