@@ -1,19 +1,18 @@
-# Midday status — 2026-11-14 (~11:05 CT)
+# Midday status — 2026-11-14 (~11:11 CT)
 
 ## Window
-Open (08:00–12:00 CT). Valid confirms today: **0** (Zencastr voided — age>10d).
+Open. Valid confirms: **0**.
 
-## 11:00 CT rehunt
-- `hunt_all` → 57 hits; only BookNook (already CAPTCHA), Anduril defense (skip), Commure Data Platform SWE (b=5.3 skip), Clera Sr DE (b=5.5 skip).
-- New kit: Jobgether Staff/Senior Analytics Engineer DSA (FunCAPTCHA).
+## 11:00 CT rehunt (timer)
+- hunt_all ~59 hits; no new unblocked honest b≥7 US company-ATS roles.
+- Clera/Commure full-JD scores below 7; Tebra Costa Rica rejected; Mux/Lumin age-edge already kit'd or aged out.
+- Jobgether Staff/Senior DE + DSA already FunCAPTCHA kit'd this morning.
 
 ## Infra
-- jd_tier labels synced (no raw regex).
-- US location: `US - TX` + state abbrevs; bare Remote + US footer (8k JD window).
-- Ashby boards: outmarket, Ontic, BranchInsurance; GH: yipitdata/togetherai/podium81.
+- Reject non-US country locations (Costa Rica, LATAM, etc.) even when JD body mentions United States.
 
-## Needs-me queue (paste OTP / clear CAPTCHA)
-MongoDB, Machinify, Extend, Keebo (OTP) · Amplitude, Instructure, BookNook, Natera, Jobgether×N (CAPTCHA) · Gmail declined.
+## Needs-me (OTP/CAPTCHA)
+MongoDB, Machinify, Extend, Keebo · Amplitude, Instructure, BookNook, Natera, Jobgether×N · Gmail declined.
 
 ## Next
-- Continue hunt toward noon; noon report + ensure one 8am CT timer; then idle.
+Noon report + exactly one 8am CT timer → idle.
