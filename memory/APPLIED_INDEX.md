@@ -327,3 +327,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | Jobgether | Staff/Senior Analytics Engineer, Data Science & Analytics (DSA) | https://jobs.lever.co/jobgether/31ed1bfe-452d-4dae-a8bb-6c58b4f6b5b7 | skipped
 2026-11-14 | Jobgether | Staff/Senior Analytics Engineer, Data Science & Analytics (DSA) | https://jobs.lever.co/jobgether/31ed1bfe-452d-4dae-a8bb-6c58b4f6b5b7 | needs-me
 2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | skipped
+2026-11-14 | Jobgether | Staff/Senior Data Engineer | https://jobs.lever.co/jobgether/141c6bd9-8d42-4ebc-a52c-4b897059e2f2 | skipped
+2026-11-14 | Jobgether | Staff/Senior Data Engineer | https://jobs.lever.co/jobgether/141c6bd9-8d42-4ebc-a52c-4b897059e2f2 | needs-me
