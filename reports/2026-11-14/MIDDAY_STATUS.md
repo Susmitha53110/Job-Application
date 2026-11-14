@@ -1,23 +1,31 @@
-# Mid-window status — 2026-11-14 ~10:15 CT
+# Midday status — 2026-11-14 (~10:32 CT)
 
-## Confirms today
-- Valid age-gated confirms: **0**
-- Zencastr confirmation exists but is an age-overshoot miss (not counted)
+## Window
+Open (08:00–12:00 CT). Confirms today: **0**.
 
-## Blockers (needs you)
-- **OTP (8-char):** MongoDB, Machinify, Extend, Keebo
-- **CAPTCHA / Cloudflare:** Amplitude, Instructure, Consumer Edge (×2), Natera, BookNook, mux/Balor/Current/SpotOn/talkiatry/Zocdoc/Knot, Jobgether Lever kits (healthcare AE, Snowflake AE, transform SDE, enterprise SDE, Lead AE)
+## Infra shipped this hour
+- `jd_tier` tech labels synced (no raw regex requirements: S3/Redshift/Terraform/Git/CI/CD/…).
+- `is_us_location` accepts Greenhouse-style `US - TX` and state abbreviations.
+- Ashby boards added: outmarket, Ontic, BranchInsurance.
 
-## Hunt (10:00 + mid)
-- No new US Greenhouse/Ashby honest b≥7 openings beyond existing queue
-- Reddit AE / Aboon Founding AE / Velir SAE / GenLogs / Simbe / Trafilea / Zip — aged out or closed
-- ClickHouse Data Platform Engineer — Europe-only skip
-- Expanded `ats_hunt` board lists (velir, merceradvisors, aboon, amplitude, booknook-inc, jobgether, …)
+## New kits (needs-me / CAPTCHA)
+- Jobgether Lead Data Engineer (FunCAPTCHA)
+- Jobgether Data Integration Engineer (FunCAPTCHA)
+- Jobgether Senior Data Engineer, Ads Data AI Native (FunCAPTCHA)
 
-## Timers
-- Recurring 8am CT daily start: armed
-- 11:00 CT once rehunt: armed
-- At noon: daily report + ensure exactly one 8am timer
+## Blocked / skipped
+- NinjaOne Sr DE — US citizen/LPR required
+- EnergyHub Sr AE — honest b=6.0
+- BranchInsurance AE II — b=4.4 / pay band low
+- Outmarket / Ontic / Zip / Cloudflare / Okta / Alloy — aged out on first_published
+- SentiLink / Carrum — aged out earlier
+- Existing OTP/CAPTCHA queue unchanged (MongoDB, Machinify, Extend, Keebo, Amplitude, Instructure, BookNook, Natera, …)
 
-## Unlock path
-Paste OTP or clear CAPTCHA on any filled kit → agent can confirm and continue toward 20–25.
+## Market
+True first_published≤10 US DE/AE on tracked GH boards already kit'd or below threshold. Jobgether US IC queue FunCAPTCHA-gated.
+
+## Next
+- 11:00 CT rehunt timer
+- Noon report + ensure one 8am CT timer
+- Paste OTP (MongoDB/Machinify/Extend/Keebo) or clear CAPTCHA to unlock confirms
+- Gmail declined — do not re-auth

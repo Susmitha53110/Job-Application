@@ -417,6 +417,10 @@ DEFAULT_ASHBY_ORGS = [
     "trm-labs",
     "evermore",
     "surveymonkey",
+    # Boards from live web hunts
+    "outmarket",
+    "Ontic",
+    "BranchInsurance",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [

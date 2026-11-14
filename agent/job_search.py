@@ -67,6 +67,9 @@ def _explicit_us_mention(text: str) -> bool:
         return True
     if re.search(r"\busa\b", t):  # word-bounded — not 'reusable' / 'usability'
         return True
+    # Greenhouse-style "US - TX" / "US-Remote" / leading "US" location tokens
+    if re.search(r"(?:^|[\s,;(])us(?:\s*[-–—/,]|\s*$)", t):
+        return True
     if re.search(
         r"\bus[\s\-–—]?remote\b|\bremote[\s\-–,–—]?us\b|\bremote,\s*u\.?s\.?\b|\bu\.?s\.?\s*remote\b|"
         r"\banywhere in the us\b|\bwithin the united states\b|\bus only\b|"
@@ -117,6 +120,13 @@ def is_us_location(location: str, description: str = "", *, title: str = "") -> 
         r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
         r"west virginia|wisconsin|wyoming|austin|seattle|chicago|denver|boston|atlanta|dallas|"
         r"san francisco|los angeles|san jose|brooklyn|manhattan)\b",
+        loc_l,
+    ):
+        return True
+    # Common US state abbreviations in location strings (e.g. "US - TX", "NY, USA")
+    if re.search(
+        r"(?:^|[\s,;\-/])(al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|"
+        r"mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy)(?:\s|$|[,;/\)])",
         loc_l,
     ):
         return True

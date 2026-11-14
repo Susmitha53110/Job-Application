@@ -16,7 +16,7 @@
   - verify before applying: "familiarity with dbt"
   - verify before applying: "familiarity with Tableau"
 - Timeline flags: Citi Jan 2020–May 2023; education Jan 2024–Dec 2025; Optum May 2025–Present; gap ~May 2023–Jan 2024
-- Honest tailored score (b): 6.9/10 (apply threshold ≥ 7)
+- Honest tailored score (b): 8.1/10 (apply threshold ≥ 7)
 - Version to submit: **(a) reorder-only** unless (b) approved
 - Additions flagged verify-before-applying:
   - verify before applying: "familiarity with Apache Airflow"

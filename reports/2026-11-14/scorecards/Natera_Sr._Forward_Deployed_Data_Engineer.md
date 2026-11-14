@@ -2,13 +2,13 @@
 
 - Link: https://job-boards.greenhouse.io/natera/jobs/6255111004
 - Source: greenhouse
-- Posted: 2026-11-12T16:25:49-05:00
+- Posted: 2026-11-12T15:45:34-05:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 7.3 | raw 29.142857142857142/40.0 |
-| (b) Reorder-only | 7.3 | apply if ≥ 7 |
-| (c) + hedged additions | 8.0 | do not submit without approval |
+| (a) Original | 8.0 | raw 32.14285714285714/40.0 |
+| (b) Reorder-only | 8.0 | apply if ≥ 7 |
+| (c) + hedged additions | 8.8 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - Airflow

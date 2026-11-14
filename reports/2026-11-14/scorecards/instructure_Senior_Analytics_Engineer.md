@@ -6,9 +6,9 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 6.9 | raw 18.0/26.0 |
-| (b) Reorder-only | 6.9 | apply if ≥ 7 |
-| (c) + hedged additions | 8.8 | do not submit without approval |
+| (a) Original | 8.1 | raw 21.0/26.0 |
+| (b) Reorder-only | 8.1 | apply if ≥ 7 |
+| (c) + hedged additions | 10.0 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - Airflow

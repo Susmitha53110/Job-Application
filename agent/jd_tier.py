@@ -174,36 +174,54 @@ def _tech_requirements_from_prose(jd_text: str) -> list[JdRequirement]:
         if re.search(pat, low, re.I):
             tech_hits.append(pat)
     # Deduplicate overlapping labels
+    # Keep in sync with extract_keywords label_map — never emit raw regex as requirement text
     labels = {
         r"\bpython\b": "Python",
         r"\bsql\b": "SQL",
         r"\bpyspark\b": "PySpark",
         r"\bspark\b": "Spark",
         r"\bscala\b": "Scala",
+        r"\bjava\b": "Java",
+        r"\bbash\b": "Bash",
         r"\bdatabricks\b": "Databricks",
         r"\bsnowflake\b": "Snowflake",
         r"delta\s*lake": "Delta Lake",
         r"\badf\b|azure data factory": "Azure Data Factory",
+        r"\badls\b": "ADLS",
         r"\bazure\b": "Azure",
         r"\baws\b": "AWS",
+        r"\bglue\b": "Glue",
+        r"\bs3\b": "S3",
+        r"\bathena\b": "Athena",
+        r"\bredshift\b": "Redshift",
+        r"\bbigquery\b": "BigQuery",
         r"\bairflow\b": "Airflow",
         r"\bdbt\b": "dbt",
         r"\bdagster\b": "Dagster",
         r"\bprefect\b": "Prefect",
         r"\bkafka\b": "Kafka",
-        r"\betl\b|\belt\b": "ETL/ELT pipelines",
-        r"data quality": "data quality",
-        r"\blooker\b|\btableau\b|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
-        r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
-        r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
-        r"\bmlops\b|machine learning": "ML/MLOps workflows",
-        # Must match extract_keywords label_map — never surface raw regex as requirement text
+        r"\bflink\b": "Flink",
+        r"\boracle\b": "Oracle",
+        r"\bparquet\b": "Parquet",
+        r"\bavro\b": "Avro",
         r"ci/?cd": "CI/CD",
         r"\bgit\b": "Git",
+        r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
+        r"\bscd\b": "SCD",
+        r"\betl\b|\belt\b": "ETL/ELT pipelines",
+        r"data quality": "data quality",
+        r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
+        r"\blooker\b|\btableau\b|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
+        r"feature store|feature engineering": "feature engineering",
+        r"\bmlops\b|machine learning": "ML/MLOps workflows",
+        r"\bpinecone\b|\bmilvus\b|\bweaviate\b": "vector DBs",
+        r"\bterraform\b|infrastructure-as-code|\biac\b": "Terraform/IaC",
     }
     seen = set()
     for pat in tech_hits:
-        label = labels.get(pat, pat)
+        label = labels.get(pat)
+        if not label or label.startswith("\\b") or "|" in label or "\\" in label:
+            continue
         if label in seen:
             continue
         seen.add(label)

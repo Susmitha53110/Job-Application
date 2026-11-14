@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~10:15CT: market empty of new US b≥7; Lead AE Jobgether CAPTCHA kit; expanded ats_hunt boards; 11am rehunt armed; confirms 0"
+- last_run_summary: "2026-11-14 ~10:32CT: labels+US-loc fixes; Jobgether Lead/Integration/Ads CAPTCHA kits; Zencastr voided (age>10d); market empty unblocked US b≥7; confirms 0; 11am rehunt armed"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -21,7 +21,7 @@
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
-- applications_requested_today: 12
+- applications_requested_today: 15
 - applications_succeeded_today: 0
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
