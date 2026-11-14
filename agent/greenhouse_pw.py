@@ -24,7 +24,15 @@ class GhSubmitResult:
 
 
 def _set_val(page, eid: str, val: str) -> bool:
-    return bool(
+    loc = _by_id(page, eid)
+    try:
+        if not loc.count():
+            return False
+        loc.scroll_into_view_if_needed()
+        loc.click(timeout=3000)
+        loc.fill("")
+        loc.fill(val)
+        # Also dispatch React-friendly setter in case fill was ignored
         page.evaluate(
             """(args) => {
       const el = document.getElementById(args.id);
@@ -42,7 +50,27 @@ def _set_val(page, eid: str, val: str) -> bool:
     }""",
             {"id": eid, "val": val},
         )
-    )
+        return True
+    except Exception:
+        return bool(
+            page.evaluate(
+                """(args) => {
+          const el = document.getElementById(args.id);
+          if (!el) return false;
+          el.focus();
+          const setter =
+            Object.getOwnPropertyDescriptor(Object.getPrototypeOf(el), "value")?.set ||
+            Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value")?.set ||
+            Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, "value")?.set;
+          if (setter) setter.call(el, args.val);
+          else el.value = args.val;
+          el.dispatchEvent(new Event("input", { bubbles: true }));
+          el.dispatchEvent(new Event("change", { bubbles: true }));
+          return true;
+        }""",
+                {"id": eid, "val": val},
+            )
+        )
 
 
 def _close_overlays(page) -> None:
@@ -74,36 +102,62 @@ def _pick_react(page, eid: str, candidates: list[str]) -> bool:
         return False
     inp.scroll_into_view_if_needed()
     inp.click(timeout=5000)
-    page.wait_for_timeout(180)
+    page.wait_for_timeout(200)
+    # Read full menu before typing — typing can filter away matches
+    # (e.g. "Company website" hides "Mercer Company Website").
     try:
         inp.fill("")
-        inp.type(candidates[0], delay=15)
     except Exception:
         pass
-    page.wait_for_timeout(280)
+    page.keyboard.press("ArrowDown")
+    page.wait_for_timeout(220)
     menu = page.locator("div.select__menu").last
-    texts = []
+    texts: list[str] = []
     if menu.count():
-        texts = [t for t in menu.locator("[role=option]").all_inner_texts() if "+" not in t]
+        texts = [t.strip() for t in menu.locator("[role=option]").all_inner_texts() if t and t.strip()]
+
+    def _norm(s: str) -> str:
+        # Country menus often show "United States +1" — match on name only.
+        return re.sub(r"\s*\+\d+\s*$", "", (s or "").strip()).lower()
+
     chosen = None
     for c in candidates:
+        cl = _norm(c)
         for t in texts:
-            if t.strip().lower() == c.lower() or c.lower() in t.strip().lower():
-                chosen = t.strip()
+            tl = _norm(t)
+            if tl == cl or cl in tl or tl in cl:
+                chosen = t
                 break
         if chosen:
             break
     if not chosen:
-        opts = page.locator("div.select__menu [role=option]")
-        for i in range(min(opts.count(), 40)):
-            t = opts.nth(i).inner_text().strip()
-            if any(c.lower() in t.lower() for c in candidates):
-                opts.nth(i).click()
-                _close_overlays(page)
-                return True
+        try:
+            inp.fill("")
+            inp.type(candidates[0], delay=15)
+            page.wait_for_timeout(250)
+            texts = [
+                t.strip()
+                for t in page.locator("div.select__menu [role=option]").all_inner_texts()
+                if t and t.strip()
+            ]
+            for c in candidates:
+                cl = _norm(c)
+                for t in texts:
+                    tl = _norm(t)
+                    if tl == cl or cl in tl or tl in cl:
+                        chosen = t
+                        break
+                if chosen:
+                    break
+        except Exception:
+            pass
+    if not chosen:
         _close_overlays(page)
         return False
-    menu.get_by_role("option", name=chosen, exact=True).first.click()
+    try:
+        page.locator("div.select__menu").last.get_by_role("option", name=chosen, exact=True).first.click()
+    except Exception:
+        page.locator("div.select__menu [role=option]", has_text=chosen).first.click()
     _close_overlays(page)
     return True
 
@@ -245,24 +299,47 @@ def submit_greenhouse_basic(
                     _set_val(page, eid, preferred)
                 elif "linkedin" in low:
                     _set_val(page, eid, linkedin)
+                elif (
+                    "authorized to work" in low
+                    or "legally authorized" in low
+                    or "eligible to work" in low
+                    or "without sponsorship" in low
+                    or ("work authorization" in low and "require" not in low)
+                ):
+                    # Must run before sponsor branch — "authorized … without sponsorship" ≠ requiring visa
+                    _pick_react(page, eid, ["Yes"])
                 elif "sponsor" in low and sponsorship_no:
                     _pick_react(page, eid, ["No"])
-                elif ("worked" in low and "before" in low) or "previously" in low:
+                elif "salary" in low or "compensation expectation" in low or "pay expectation" in low:
+                    from .salary import salary_from_memory
+
+                    sal = salary_from_memory() or "120000"
+                    _set_val(page, eid, str(sal))
+                elif ("worked" in low and "before" in low) or "previously" in low or "interviewed" in low:
                     if previously_no:
                         _pick_react(page, eid, ["No"])
-                elif "hear" in low or "learn about" in low:
+                elif "hear" in low or "learn about" in low or "how did you hear" in low or "this opportunity" in low:
                     _pick_react(
                         page,
                         eid,
                         [
+                            "Mercer Company Website",
                             "MongoDB Careers Page",
                             "Company website",
                             "Company Website",
                             "Company career site",
+                            "Company Website / Careers Page",
+                            "Careers Page",
+                            "Website",
+                            "Internet search",
                             "LinkedIn",
                             "Other",
                         ],
                     )
+                elif "state are you currently" in low or "state will you be based" in low or (
+                    "what state" in low and "based" in low
+                ):
+                    _pick_react(page, eid, ["Texas", "TX"])
                 elif "gender identity" in low:
                     _pick_react(page, eid, ["Woman", "Female"])
                 elif low.strip().startswith("gender"):
@@ -341,6 +418,62 @@ def submit_greenhouse_basic(
         for eid, val in [("first_name", first), ("last_name", last), ("email", email)]:
             if _by_id(page, eid).count():
                 _set_val(page, eid, val)
+        if _by_id(page, "country").count():
+            # Re-pick country last — phone iti overlays / select races often clear it
+            _pick_react(page, "country", ["United States"])
+            _close_overlays(page)
+        if _by_id(page, "phone").count():
+            _set_val(page, "phone", phone)
+            _close_overlays(page)
+        # Re-assert common custom required fields that autofill may blank
+        try:
+            from .salary import salary_from_memory
+
+            sal = str(salary_from_memory() or "120000")
+        except Exception:
+            sal = "120000"
+        for item in labels:
+            low = (item.get("text") or "").lower()
+            eid = item.get("id") or ""
+            if not eid:
+                continue
+            try:
+                if "linkedin" in low:
+                    _set_val(page, eid, linkedin)
+                elif "phone number" in low:
+                    _set_val(page, eid, phone)
+                elif "salary" in low or "compensation expectation" in low:
+                    _set_val(page, eid, sal)
+                elif "state are you currently" in low or "state will you be based" in low or (
+                    "what state" in low and "based" in low
+                ):
+                    _pick_react(page, eid, ["Texas", "TX"])
+                elif "hear" in low or "this opportunity" in low:
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "Mercer Company Website",
+                            "Company website",
+                            "Company Website",
+                            "Website",
+                            "LinkedIn",
+                            "Other",
+                        ],
+                    )
+                elif (
+                    "authorized to work" in low
+                    or "legally authorized" in low
+                    or "without sponsorship" in low
+                ):
+                    _pick_react(page, eid, ["Yes"])
+                elif "sponsor" in low and sponsorship_no:
+                    _pick_react(page, eid, ["No"])
+                elif ("worked" in low and "before" in low) or "previously" in low or "interviewed" in low:
+                    if previously_no:
+                        _pick_react(page, eid, ["No"])
+            except Exception:
+                continue
 
         page.screenshot(path=str(proof_dir / "filled.png"), full_page=True)
         if fill_only:
@@ -380,6 +513,40 @@ def submit_greenhouse_basic(
                 )
             browser.close()
             return GhSubmitResult(True, page.url, None, "fill_only", proof_dir)
+
+        # Detect visible reCAPTCHA before submit (cannot solve — needs-me)
+        try:
+            has_captcha = bool(
+                page.evaluate(
+                    """() => {
+              const ifr=[...document.querySelectorAll('iframe')].some(f=>(f.src||'').includes('recaptcha'));
+              const box=!!document.querySelector('.g-recaptcha, [data-sitekey]');
+              return ifr || box;
+            }"""
+                )
+            )
+        except Exception:
+            has_captcha = False
+        if has_captcha and page.locator("textarea[name='g-recaptcha-response']").count():
+            # Only block if captcha widget is actually rendered (not just empty textarea stub)
+            try:
+                vis = page.locator("iframe[src*='recaptcha']").first.is_visible(timeout=1500)
+            except Exception:
+                vis = False
+            if vis:
+                page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
+                (proof_dir / "NEEDS_ME.txt").write_text(
+                    f"{company}: reCAPTCHA on Greenhouse form — cannot complete autonomously.\n"
+                    f"URL: {page.url}\nEmail: {email}\n"
+                )
+                browser.close()
+                return GhSubmitResult(
+                    False,
+                    page.url,
+                    "Greenhouse reCAPTCHA — needs you",
+                    "captcha",
+                    proof_dir,
+                )
 
         btn = page.locator('button:has-text("Submit application"), button:has-text("Submit Application")')
         if btn.count():

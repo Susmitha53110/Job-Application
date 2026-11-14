@@ -268,6 +268,14 @@ def is_us_work_ok(location: str, description: str = "", *, source: str = "", tit
         return True
     # Hybrid / on-site US — Susmitha relocates Yes, hybrid Yes
     blob = f"{title} {location} {description[:1500]}".lower()
+    loc_l = (location or "").lower().strip()
+    # Bare "Remote" + US work-auth language in JD → treat as US-remote eligible
+    if loc_l in {"remote", "remote work", "fully remote"} and re.search(
+        r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b|\bauthorization to work\b|"
+        r"\blegally authorized to work in the (us|u\.s|united states)\b",
+        blob,
+    ):
+        return True
     if not is_us_location(location, description, title=title):
         return False
     if any(

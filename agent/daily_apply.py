@@ -225,11 +225,8 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         if url_already_applied(job.url or job.apply_url or "", applied_urls):
             skipped.append(f"{job.company} / {job.title} — already applied")
             continue
-        if "keebo" in url_l or company_l == "keebo":
-            skipped.append(f"{job.company} / {job.title} — visa support will not be provided")
-            append_applied_index(job.company, job.title, job.url, "skipped", day=day)
-            continue
         # Company ATS only — skip contractor marketplaces / aggregator apply links
+        # Note: "visa support will not be provided" is OK — Memory sponsorship=No / F1-OPT.
         if any(
             x in url_l or x in company_l
             for x in ("lemon.io", "remotive.com", "himalayas.app", "arbeitnow.com", "weworkremotely")

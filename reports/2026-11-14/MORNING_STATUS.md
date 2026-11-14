@@ -1,36 +1,28 @@
-# Morning status — 2026-11-14 ~08:05 CT
+# Morning status — 2026-11-14 (~08:40 CT)
 
-## Window
-OPEN 08:00–12:00 America/Chicago. Target 20–25.
+Window: OPEN 08:00–12:00 CT. Gmail MCP: declined (do not re-auth).
 
-## Ready-queue attempts
-| Company | Result | Blocker |
-|---------|--------|---------|
-| MongoDB | needs-me | Greenhouse **8-char email OTP** → dsusmitha55@gmail.com (Gmail declined) |
-| mux | needs-me | Ashby **image CAPTCHA** (select buses) |
-| Machinify | needs-me | Greenhouse **8-char email OTP** (note: posting now >10d; finish if code pasted) |
+## Confirmed applies today
+0
 
-## Hunt
-- Broader Greenhouse/Ashby scan: **no other** honest b≥7 US-remote auto-submittable roles in age window.
-- Rackner Data Integration Engineer b=9.3 skipped (federal clearance dealbreaker).
-- kit 5.9 / instructure 6.9 below threshold.
-- Natera / lumin / Velosio / NinjaOne remain carryover needs-me.
+## Needs you
+| Company | Role | Blocker | Action |
+|---------|------|---------|--------|
+| MongoDB | Sr DE | Greenhouse 8-char email OTP | Paste code |
+| Machinify | Sr DE | Greenhouse 8-char email OTP | Paste code |
+| Extend | Sr Analytics Engineer | Greenhouse 8-char email OTP | Paste code |
+| Keebo | Sr Data Engineer (b=8.6) | Greenhouse 8-char email OTP | Paste code |
+| mux | Sr Data Engineer | Ashby CAPTCHA | Solve in browser |
+| Mercer Advisors | Sr Analytics Engineer | Greenhouse reCAPTCHA | Solve in browser |
+| Balor Games | Sr Analytics Engineer (contract, b=8.8) | Ashby reCAPTCHA | Solve in browser |
+| Zocdoc | Staff Analytics Engineer (b=7.6) | Greenhouse reCAPTCHA | Solve in browser |
 
-## Action needed from Susmitha
-1. Paste **MongoDB** 8-char code (and **Machinify** if a second code arrived).
-2. Or complete mux CAPTCHA in browser / paste guidance.
-3. Approve Gmail MCP if OTP auto-read is preferred.
+## Filler fixes landed
+- Greenhouse country options like `United States +1` now match (was dropping `+`)
+- Work-auth “without sponsorship” → Yes before visa-sponsor → No
+- Extend state = Texas; Mercer how-heard = Mercer Company Website; salary = 120000
+- Ashby Balor essay/legal fields + CAPTCHA needs-me detection
+- Removed incorrect Keebo hard-skip (no-visa-support is OK with sponsorship=No)
 
-Agent continues hunting during the window; cannot invent OTPs/CAPTCHAs.
-
-## Update ~08:20 CT
-- Fixed `is_us_remote` false positive (`usa` inside "reusable").
-- ClickHouse Data Platform Engineer skipped (EU-only).
-- Computer Use could not complete mux (Ashby field automation failed in that path); Playwright still preferred for Ashby.
-- Still blocked on MongoDB/Machinify OTP + mux CAPTCHA. No other ≥7 US-remote auto-submits in hunt.
-
-## Update ~08:25 CT
-- Hunt now allows US hybrid/on-site (PROFILE standing).
-- Anduril Production Master Data Engineer b=8.8 skipped — clearance/export controls (preflight strengthened).
-- Still **0 confirms**. Blockers unchanged: MongoDB OTP, Machinify OTP, mux CAPTCHA.
-- No other honest ≥7 US ATS roles without clearance/OTP/login in current inventory.
+## Hunt note
+Fresh Senior ATS inventory within 10d is thin; Staff/8+yr/aged-out filtered. Continuing hunt in-window.

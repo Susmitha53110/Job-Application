@@ -216,3 +216,34 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
 2026-11-14 | palantir | Backend Software Engineer - Data Connectors | https://jobs.lever.co/palantir/9aadca04-df88-4b46-95d8-c3b2628b30b0 | dry-run
 2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-14 | Block | Senior Software Engineer - Data Enablement | http://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | extend | Senior Analytics Engineer | https://job-boards.greenhouse.io/extend/jobs/6250516004 | dry-run
+2026-11-14 | merceradvisors | Senior Analytics Engineer  | https://job-boards.greenhouse.io/merceradvisors/jobs/5462825008 | dry-run
+2026-11-14 | Extend | Senior Analytics Engineer | https://job-boards.greenhouse.io/extend/jobs/6250516004 | needs-me
+2026-11-14 | Mercer Advisors | Senior Analytics Engineer | https://job-boards.greenhouse.io/merceradvisors/jobs/5462825008 | needs-me
+2026-11-14 | Extend | Senior Analytics Engineer | https://job-boards.greenhouse.io/extend/jobs/6250516004 | needs-me
+2026-11-14 | Mercer Advisors | Senior Analytics Engineer | https://job-boards.greenhouse.io/merceradvisors/jobs/5462825008 | needs-me
+2026-11-14 | Consumer Edge | Staff Data Engineer | https://job-boards.greenhouse.io/consumeredge/jobs/6252515004 | dry-run
+2026-11-14 | Consumer Edge | Staff Data Engineer | https://job-boards.greenhouse.io/consumeredge/jobs/6252538004 | dry-run
+2026-11-14 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | dry-run
+2026-11-14 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | dry-run
+2026-11-14 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | dry-run
+2026-11-14 | Instacart | Staff Software Engineer, Ads Data Platform | https://instacart.careers/job/?gh_jid=8372846 | dry-run
+2026-11-14 | Block | Senior Software Engineer - Data Enablement | http://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | dry-run
+2026-11-14 | Block | Staff Data Engineer, Advanced Insights & Modeling | http://block.xyz/careers/jobs/5473605008?gh_jid=5473605008 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | Consumer Edge | Staff Data Engineer | https://job-boards.greenhouse.io/consumeredge/jobs/6252515004 | skipped
+2026-11-14 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped
+2026-11-14 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | skipped
+2026-11-14 | Block | Staff Data Engineer, Advanced Insights & Modeling | http://block.xyz/careers/jobs/5473605008?gh_jid=5473605008 | skipped
+2026-11-14 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | skipped
+2026-11-14 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | needs-me
+2026-11-14 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | evermore | Senior Analytics Engineer | https://jobs.ashbyhq.com/evermore/d0eb6e11-b5ce-4780-9f22-3942b87d9ec6 | skipped
+2026-11-14 | Virta Health | Senior Analytics Engineer | https://jobs.ashbyhq.com/virtahealth/714ee3dd-46f5-425a-b19b-a92d948a069b | skipped
+2026-11-14 | Balor Games | Senior Analytics Engineer | https://jobs.ashbyhq.com/balorgames/b9792276-16f9-46e1-a1ca-93fa97e3e12f | skipped
+2026-11-14 | Balor Games | Senior Analytics Engineer | https://jobs.ashbyhq.com/balorgames/b9792276-16f9-46e1-a1ca-93fa97e3e12f | needs-me
+2026-11-14 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | skipped
+2026-11-14 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me

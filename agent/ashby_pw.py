@@ -108,12 +108,25 @@ def submit_ashby_basic(
         if phone:
             fill_label(r"Phone", phone)
         fill_label(r"LinkedIn", linkedin)
-        fill_label(r"Why does|good fit", why_fit)
+        fill_label(r"Why does|good fit|interests you about this", why_fit)
         fill_label(r"How did you hear", "Company website")
-        click_yes_no(r"eligible to work in the US", "Yes")
-        click_yes_no(r"require sponsorship", "No")
+        fill_label(r"favourite game|favorite game", "Portal — elegant puzzle design and clean systems thinking.")
+        fill_label(r"Something we should know", "Open to a 6-month contract; Austin TX; F1-OPT authorized, no sponsorship needed.")
+        fill_label(r"previously employed or contracted", "No")
+        fill_label(r"non-compete|non-solicitation|confidentiality agreement", "No")
+        click_yes_no(r"eligible to work in the US|authorized to work at the location", "Yes")
+        click_yes_no(r"require (visa )?sponsorship", "No")
+        click_yes_no(r"18 years of age", "Yes")
         if spell_twelve:
             fill_label(r"Spell the number", "twelve")
+        # Terms checkbox
+        try:
+            page.get_by_text(re.compile(r"I have read and agree", re.I)).first.click(timeout=2000)
+        except Exception:
+            try:
+                page.locator('input[type=checkbox]').last.check(force=True, timeout=2000)
+            except Exception:
+                pass
         # EEO radios
         try:
             page.get_by_text("Female", exact=True).first.click(timeout=2000)
@@ -169,6 +182,24 @@ def submit_ashby_basic(
                 )
             browser.close()
             return AshbySubmitResult(True, page.url, None, "fill_only", proof_dir)
+
+        # CAPTCHA gate (cannot solve)
+        try:
+            captcha_vis = page.locator("iframe[src*='recaptcha'], iframe[title*='recaptcha']").first.is_visible(
+                timeout=1500
+            )
+        except Exception:
+            captcha_vis = False
+        if captcha_vis or "select all images" in (page.inner_text("body").lower()):
+            page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
+            (proof_dir / "NEEDS_ME.txt").write_text(
+                f"{company}: Ashby reCAPTCHA — cannot complete autonomously.\nURL: {page.url}\nEmail: {email}\n",
+                encoding="utf-8",
+            )
+            browser.close()
+            return AshbySubmitResult(
+                False, page.url, "Ashby reCAPTCHA — needs you", "captcha", proof_dir
+            )
 
         # submit
         btn = page.get_by_role("button", name=re.compile(r"Submit", re.I))

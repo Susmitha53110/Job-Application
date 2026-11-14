@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "daily_apply 2026-11-14: window=OPEN; MongoDB+Machinify OTP needs-me; mux CAPTCHA needs-me; hunt=no other ge7 auto; applied_today=0"
+- last_run_summary: "daily_apply 2026-11-14 ~08:40CT: applied=0; needs-me OTP=MongoDB+Machinify+Extend+Keebo; CAPTCHA=mux+Mercer+Balor; Gmail declined; GH country/+1 pick fixed; hunt thin Senior>=7"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -21,7 +21,7 @@
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
-- applications_requested_today: 3
+- applications_requested_today: 7
 - applications_succeeded_today: 0
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
