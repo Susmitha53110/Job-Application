@@ -527,8 +527,28 @@ def resolve_posted_at(url: str) -> str | None:
             except Exception:
                 pass
         elif jid and not board:
-            # gh_jid alone — try common scrape of absolute_url later via LD
-            pass
+            # gh_jid on a custom career host — try known board tokens from host/path.
+            host = (re.search(r"https?://([^/]+)", url, re.I) or [None, ""])[1].lower()
+            guesses: list[str] = []
+            host_map = {
+                "abnormal.ai": ["abnormalsecurity"],
+                "jobs.lever.co": [],
+            }
+            for needle, boards in host_map.items():
+                if needle in host:
+                    guesses.extend(boards)
+            # path token e.g. /abnormalsecurity/ rarely present; also try slug from subdomain
+            slug = host.split(".")[0]
+            if slug and slug not in {"www", "careers", "jobs", "job-boards", "boards"}:
+                guesses.append(slug)
+            for guess in guesses:
+                try:
+                    meta = greenhouse_job_meta(guess, jid)
+                    posted = meta.get("first_published") or meta.get("updated_at") or meta.get("created_at")
+                    if posted:
+                        return posted
+                except Exception:
+                    continue
     # LD+JSON datePosted (Ashby and many career pages)
     try:
         from playwright.sync_api import sync_playwright

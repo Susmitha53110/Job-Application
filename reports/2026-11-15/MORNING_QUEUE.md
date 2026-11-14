@@ -22,11 +22,16 @@ Target: **20–25** applications in 08:00–12:00 CT. Gmail declined — paste O
 
 | # | Company | Role | b | Kit |
 |---|---------|------|---|-----|
-| 1 | SpotOn | Senior Analytics Platform Engineer | 7.8 | `applications/applied/2026-11-15/SpotOn_Senior_Analytics_Platform_Engineer/` |
-| 2 | Clera | Senior Data Engineer | 7.6 | `applications/applied/2026-11-15/Clera_Senior_Data_Engineer/` |
-| 3 | BranchInsurance | Analytics Engineer II | 7.3 | `applications/applied/2026-11-15/BranchInsurance_Analytics_Engineer_II/` |
+| 1 | xAI | Analytics Engineer (X) | 8.2 | `applications/applied/2026-11-15/xAI_Analytics_Engineer_X/` |
+| 2 | Verkada | Sr SWE, Business Systems - Data Trust | 10.0 | `applications/applied/2026-11-15/Verkada_Sr_SWE_Data_Trust/` |
+| 3 | Abnormal | SWE I, Data Platforms | 8.0 | `applications/applied/2026-11-15/Abnormal_SWE_I_Data_Platforms/` (use GH embed URL) |
+| 4 | Merge | Analytics Engineer | 8.6 | `applications/applied/2026-11-15/Merge_Analytics_Engineer/` |
+| 5 | SpotOn | Senior Analytics Platform Engineer | 7.8 | `applications/applied/2026-11-15/SpotOn_Senior_Analytics_Platform_Engineer/` |
+| 6 | Clera | Senior Data Engineer | 7.6 | `applications/applied/2026-11-15/Clera_Senior_Data_Engineer/` |
+| 7 | BranchInsurance | Analytics Engineer II | 7.3 | `applications/applied/2026-11-15/BranchInsurance_Analytics_Engineer_II/` |
 
-**Already applied (skip):** Clera Senior Data Integration Engineer (2026-11-12).
+**Already applied (skip):** Clera Senior Data Integration Engineer (2026-11-12).  
+**Skip:** SpaceX Starship DE (ITAR/citizen), Rocket Lab (citizen), xAI Sr SWE DE (b=6.0).
 
 ## Priority 2 — after Priority 1, one hunt_all then apply
 

@@ -159,6 +159,12 @@ DEFAULT_GH_BOARDS = [
     "podium81",
     "anaplan",
     "sixfold",
+    # Boards from 2026-11-14 evening probe
+    "xai",
+    "verkada",
+    "abnormalsecurity",
+    "spacex",
+    "rocketlab",
 ]
 
 
@@ -428,6 +434,8 @@ DEFAULT_ASHBY_ORGS = [
     "BranchInsurance",
     "Solvd",
     "clera",
+    "merge",
+    "cohere",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [

@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "overnight_hunt 2026-11-14T12:10-06:00: window=False; salary=set; hunt=60; ge7=28; curve_gate=False"
+- last_run_summary: "2026-11-14 evening prep: +xAI/Verkada/Abnormal/Merge fill_only; GH boards xai/verkada/abnormal; Abnormal gh_jid age fix; idle to 8am"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
