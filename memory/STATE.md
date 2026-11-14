@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~11:27CT: Solvd CAPTCHA kit; market empty of new unblocked b≥7; Kit global-remote rejected; confirms 0"
+- last_run_summary: "2026-11-14 noon: confirms 0; Solvd+Jobgether CAPTCHA queue; market thin; idle until 8am CT"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -26,7 +26,7 @@
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
-- next_apply_window: "2026-11-14 08:00 America/Chicago"
+- next_apply_window: "2026-11-15 08:00 America/Chicago"
 - salary_expectation: 120000
 - timer_policy: exactly_one_recurring_8am_ct
 - outside_window_policy: idle_no_hunt_no_github_react
