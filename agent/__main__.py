@@ -34,6 +34,10 @@ def main(argv: list[str] | None = None) -> int:
     p_daily = sub.add_parser("daily", help="Run daily hunt/readiness/report cycle")
     p_daily.add_argument("--dry", action="store_true", help="Force prepare-only (no submit guidance)")
     sub.add_parser("overnight", help="Prepare-only overnight hunt (never submits)")
+    sub.add_parser("prewarm", help="7:55 CT age-check morning queue (never submits)")
+    p_q = sub.add_parser("queue-submit", help="Submit prepared morning queue (window-gated)")
+    p_q.add_argument("--dry", action="store_true", help="List queue only; no submit")
+    p_q.add_argument("--limit", type=int, default=None, help="Max items to attempt")
     sub.add_parser("curve-gate", help="Evaluate Curve Dental submit gate + write prompt")
     sub.add_parser("ready-submits", help="Evaluate morning ready-submit gates")
     sub.add_parser("handoff", help="Write SUBMIT_HANDOFF.json for morning computer-use")
@@ -123,6 +127,19 @@ def main(argv: list[str] | None = None) -> int:
     if args.cmd == "overnight":
         print(json.dumps(run_overnight_hunt(), indent=2))
         return 0
+
+    if args.cmd == "prewarm":
+        from .morning_prewarm import prewarm
+
+        print(json.dumps(prewarm(), indent=2))
+        return 0
+
+    if args.cmd == "queue-submit":
+        from .morning_queue_submit import submit_queue
+
+        out = submit_queue(dry=bool(args.dry), limit=args.limit)
+        print(json.dumps(out, indent=2))
+        return 0 if out.get("ok") else 3
 
     if args.cmd == "curve-gate":
         gate = evaluate_curve_gate()

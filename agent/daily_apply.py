@@ -180,17 +180,40 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
     window = check_apply_window()
     salary = salary_from_memory()
     ready_payload = readiness_report(day=day)
-    hunt = hunt_all()
-    gate = evaluate_curve_gate()
-    gate_report = write_gate_report(day=day)
-    ready_items = evaluate_all_ready_submits()
-    ready_report = write_ready_submits_report(day=day)
 
     applied: list[str] = []
     unconfirmed: list[str] = []
     skipped: list[str] = []
     needs_me: list[str] = []
     notes = []
+
+    # In-window: drain prepared morning queue first (xAI age-edge etc.)
+    if window.open and not dry:
+        try:
+            from .morning_queue_submit import submit_queue
+
+            qres = submit_queue(day=day, dry=False)
+            for row in qres.get("results") or []:
+                label = f"{row.get('company')} / {row.get('role')}"
+                st = row.get("status")
+                if st == "applied":
+                    applied.append(f"{label} — morning_queue")
+                elif st == "needs-me":
+                    needs_me.append(f"{label} — {row.get('detail') or 'needs-me'}")
+                elif st == "unconfirmed":
+                    unconfirmed.append(label)
+                elif st == "skip_already_applied":
+                    skipped.append(f"{label} — already applied")
+            notes.append(f"morning_queue_submit: {len(qres.get('results') or [])} items")
+        except Exception as e:
+            notes.append(f"morning_queue_submit error: {e}")
+            needs_me.append(f"morning_queue_submit failed: {e}")
+
+    hunt = hunt_all()
+    gate = evaluate_curve_gate()
+    gate_report = write_gate_report(day=day)
+    ready_items = evaluate_all_ready_submits()
+    ready_report = write_ready_submits_report(day=day)
 
     if not window.open:
         notes.append(window.reason)
