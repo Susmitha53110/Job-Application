@@ -2,7 +2,7 @@
 
 - Link: https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213
 - Source: ashby
-- Posted: 2026-11-06T00:01:35.758+00:00
+- Posted: unknown
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
@@ -15,7 +15,7 @@
 - dbt
 - BI tools (Looker/Tableau/Power BI)
 - BI tools
-- instructure
+- location
 
 ## Keywords covered honestly after tailor: SQL, Snowflake, CI/CD
 ## Gaps remaining: Airflow, dbt
