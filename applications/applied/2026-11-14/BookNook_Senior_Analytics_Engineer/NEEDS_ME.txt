@@ -1,19 +1,11 @@
-BookNook — Senior Analytics Engineer (b=9.0, createdOn=2026-11-13, in age)
+BookNook Senior Analytics Engineer — NEEDS YOU
 URL: https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5
-Resume: /workspace/resumes/tailored/2026-11-14/Susmitha_BookNook_Senior_Analytics_Engineer.docx
+Age OK (createdOn 2026-11-13). Honest b≈9.0.
 
-Rippling Apply stayed disabled — dropdowns (permanent auth / sponsorship / state) did not stick via Playwright/ComputerUse.
+Filled via Playwright: resume, name, email, phone, LinkedIn, Austin TX location,
+permanent auth=No, sponsorship=No, favorite-project answer, EEO, SMS=No.
+State TX select is flaky in automation; Cloudflare challenge fires on Apply click
+(no application POST — only challenges.cloudflare.com).
 
-Standing answers to finish manually:
-- Name/Email/Phone: Susmitha Chowdary / dsusmitha55@gmail.com / 9132073787
-- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
-- Location: Austin, TX
-- Current company: Optum
-- Permanently authorized to work in the US?: No (F1-OPT)
-- Require sponsorship (STEM, OPT)?: No (Memory sponsorship=No)
-- State of residence: Texas
-- Favorite data project: Optum Snowflake/Python/SQL pipelines → trusted stakeholder metrics; onboarding ~2w→~4d
-- EEO: Female / Asian / Hispanic No / not a protected veteran
-- SMS: No - I do not consent
-
-Proof: filled2.png / filled.png
+Please open the URL, confirm state=TX, complete Cloudflare/CAPTCHA, click Apply,
+and reply with confirmation screenshot or "BookNook submitted".

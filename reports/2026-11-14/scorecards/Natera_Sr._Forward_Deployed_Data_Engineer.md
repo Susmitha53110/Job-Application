@@ -2,7 +2,7 @@
 
 - Link: https://job-boards.greenhouse.io/natera/jobs/6255111004
 - Source: greenhouse
-- Posted: 2026-11-12T15:45:34-05:00
+- Posted: 2026-11-12T16:25:49-05:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|

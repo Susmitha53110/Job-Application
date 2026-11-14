@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~09:30CT: valid_age applied=0; talkiatry CAPTCHA (form filled); BookNook Rippling dropdowns sticky needs-me; OTP MongoDB/Machinify/Extend/Keebo; many CAPTCHA; age-gate active; 10am rehunt armed"
+- last_run_summary: "2026-11-14 ~09:45CT: BookNook Cloudflare needs-me (auth/sponsor/TX filled); Amplitude Ashby CAPTCHA needs-me b=7.9; ConsumerEdge+Natera GH CAPTCHA; OTP/CAPTCHA queue still blocking confirms; hunt thin"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -21,7 +21,7 @@
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
-- applications_requested_today: 7
+- applications_requested_today: 12
 - applications_succeeded_today: 0
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT

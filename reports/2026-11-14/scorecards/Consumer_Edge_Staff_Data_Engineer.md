@@ -2,7 +2,7 @@
 
 - Link: https://job-boards.greenhouse.io/consumeredge/jobs/6252515004
 - Source: greenhouse
-- Posted: 2026-11-09T09:02:01-05:00
+- Posted: 2026-11-09T09:14:10-05:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
@@ -15,7 +15,7 @@
 - BigQuery
 - dbt
 - Kafka
-- consumer
+- quot
 
 ## Keywords covered honestly after tailor: Python, SQL, Snowflake
 ## Gaps remaining: BigQuery, Airflow
