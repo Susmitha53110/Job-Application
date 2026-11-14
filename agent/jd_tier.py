@@ -128,6 +128,20 @@ def _split_sections(jd_text: str) -> tuple[str, str]:
             item_l = item.lower()
             if item_l.startswith(("first month", "first six", "first year", "needing ", "wanting ", "preferring ", "being ", "expecting ", "discomfort", "profit sharing", "equity", "401k", "we cover", "childcare", "gender affirming", "twenty (")):
                 continue
+            # Ashby compensation chrome often becomes fake bullets: "$172K", "$50K Equity"
+            if re.match(r"^\$?\d", item_l) or any(
+                k in item_l
+                for k in (
+                    "equity",
+                    "profit sharing",
+                    "offers bonus",
+                    "per year",
+                    "per month",
+                    "salary",
+                    "compensation",
+                )
+            ):
+                continue
             if len(item) < 8:
                 continue
             (req if mode == "required" else pref).append(item)
@@ -314,13 +328,34 @@ def tier_jd(title: str, company: str, url: str, location: str, jd_text: str) -> 
         # fallback: treat bullet-like lines as important
         for line in normalized.splitlines():
             if line.strip().startswith(("-", "*", "•")):
-                required.append(JdRequirement(text=re.sub(r"^[-*•]\s*", "", line.strip()), weight=2, kind="important"))
+                item = re.sub(r"^[-*•]\s*", "", line.strip())
+                low = item.lower()
+                if re.match(r"^\$?\d", low) or any(
+                    k in low
+                    for k in ("equity", "profit sharing", "offers bonus", "compensation", "per month", "401k")
+                ):
+                    continue
+                if len(item) < 8:
+                    continue
+                required.append(JdRequirement(text=item, weight=2, kind="important"))
+
+    def _looks_like_comp_noise(items: list[JdRequirement]) -> bool:
+        if not items:
+            return False
+        hits = 0
+        for it in items:
+            low = (it.text or "").lower()
+            if re.match(r"^\$?\d", low) or any(
+                k in low for k in ("equity", "profit sharing", "offers bonus", "compensation", "per month")
+            ):
+                hits += 1
+        return hits >= max(1, len(items) // 2)
 
     if not required:
         # Prose ATS descriptions (Ashby/Rippling) — synthesize tech/years requirements
         required = _tech_requirements_from_prose(jd_text)
-    elif len(required) > 15:
-        # Noisy section split (culture/timeline lists) — prefer tech/years synthesis
+    elif len(required) > 15 or _looks_like_comp_noise(required):
+        # Noisy section split (culture/timeline/comp chrome) — prefer tech/years synthesis
         required = _tech_requirements_from_prose(jd_text)
 
     dealbreakers = []
