@@ -32,8 +32,9 @@ Runner: `python3 -m agent.morning_queue_submit` (window-gated). **xAI age ~9.5d 
 | 6 | Clera | Senior Data Engineer | 7.6 | `applications/applied/2026-11-15/Clera_Senior_Data_Engineer/` |
 | 7 | BranchInsurance | Analytics Engineer II | 7.3 | `applications/applied/2026-11-15/BranchInsurance_Analytics_Engineer_II/` |
 
-**Already applied (skip):** Clera Senior Data Integration Engineer (2026-11-12).  
-**Skip:** SpaceX Starship DE (ITAR/citizen), Rocket Lab (citizen), xAI Sr SWE DE (b=6.0).
+**Already applied (skip):** Clera Senior Data Integration Engineer (2026-11-12); Life360 Ads DE (Jobgether mirror — already applied via Greenhouse).  
+**Skip:** SpaceX Starship DE (ITAR/citizen), Rocket Lab (citizen), xAI Sr SWE DE (b=6.0).  
+**Aged out:** Ontic AE (published 2026-10-29), mux/Machinify, evermore AE gone from board.
 
 ## Priority 2 — after Priority 1, one hunt_all then apply
 

@@ -436,6 +436,7 @@ DEFAULT_ASHBY_ORGS = [
     "clera",
     "merge",
     "cohere",
+    "langchain",
 ]
 
 DEFAULT_RIPPLING_BOARDS = [
