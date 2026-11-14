@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 noon: confirms 0; Solvd+Jobgether CAPTCHA queue; market thin; idle until 8am CT"
+- last_run_summary: "2026-11-14 ~11:52CT final hunt: thin-JD false positives only; confirms 0; noon report written; idle to 8am"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
