@@ -34,8 +34,12 @@ def main(argv: list[str] | None = None) -> int:
     p_daily = sub.add_parser("daily", help="Run daily hunt/readiness/report cycle")
     p_daily.add_argument("--dry", action="store_true", help="Force prepare-only (no submit guidance)")
     sub.add_parser("overnight", help="Prepare-only overnight hunt (never submits)")
+    sub.add_parser("prewarm", help="7:55 CT age-check morning queue (never submits)")
+    p_q = sub.add_parser("queue-submit", help="Submit prepared morning queue (window-gated)")
+    p_q.add_argument("--dry", action="store_true", help="List queue only; no submit")
+    p_q.add_argument("--limit", type=int, default=None, help="Max items to attempt")
     sub.add_parser("curve-gate", help="Evaluate Curve Dental submit gate + write prompt")
-    sub.add_parser("ready-submits", help="Evaluate Clera/Bayesian (no-salary) submit gates")
+    sub.add_parser("ready-submits", help="Evaluate morning ready-submit gates")
     sub.add_parser("handoff", help="Write SUBMIT_HANDOFF.json for morning computer-use")
     sub.add_parser("go-nogo", help="Morning go/no-go readiness checklist")
     p_sal = sub.add_parser("set-salary", help="Save Susmitha-provided salary expectation")
@@ -46,6 +50,10 @@ def main(argv: list[str] | None = None) -> int:
     p_proof.add_argument("--url", required=True)
     p_proof.add_argument("--notes", default="")
     p_proof.add_argument("--file", action="append", default=[], help="Proof file path (repeatable)")
+    p_gh = sub.add_parser("gh-fill", help="Greenhouse/Ashby Playwright fill (default fill-only; --submit in-window)")
+    p_gh.add_argument("--company", required=True, choices=["mongodb", "machinify", "mux"])
+    p_gh.add_argument("--submit", action="store_true", help="Click Submit (requires open CT window)")
+    p_gh.add_argument("--security-code", default=None, help="8-char email OTP if prompted")
 
     args = parser.parse_args(argv)
 
@@ -120,6 +128,19 @@ def main(argv: list[str] | None = None) -> int:
         print(json.dumps(run_overnight_hunt(), indent=2))
         return 0
 
+    if args.cmd == "prewarm":
+        from .morning_prewarm import prewarm
+
+        print(json.dumps(prewarm(), indent=2))
+        return 0
+
+    if args.cmd == "queue-submit":
+        from .morning_queue_submit import submit_queue
+
+        out = submit_queue(dry=bool(args.dry), limit=args.limit)
+        print(json.dumps(out, indent=2))
+        return 0 if out.get("ok") else 3
+
     if args.cmd == "curve-gate":
         gate = evaluate_curve_gate()
         report = write_gate_report()
@@ -183,6 +204,76 @@ def main(argv: list[str] | None = None) -> int:
         )
         print(json.dumps({"status": status, "manifest": str(path), "proof_files": args.file}, indent=2))
         return 0
+
+    if args.cmd == "gh-fill":
+        from pathlib import Path
+
+        from .greenhouse_pw import submit_greenhouse_basic
+        from . import paths
+
+        specs = {
+            "mongodb": {
+                "company": "MongoDB",
+                "ats": "greenhouse",
+                "url": "https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433",
+                "resume": paths.ROOT / "resumes" / "submit" / "Susmitha_mongodb.docx",
+            },
+            "machinify": {
+                "company": "Machinify",
+                "ats": "greenhouse",
+                "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
+                "resume": paths.ROOT / "resumes" / "submit" / "Susmitha_machinify.docx",
+            },
+            "mux": {
+                "company": "mux",
+                "ats": "ashby",
+                "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+                "resume": paths.ROOT / "resumes" / "submit" / "Susmitha_mux.docx",
+            },
+        }
+        spec = specs[args.company]
+        day = __import__("datetime").date.today().isoformat()
+        proof = paths.APPLICATIONS / "applied" / day / f"{spec['company']}_Sr_fill"
+        do_submit = bool(args.submit)
+        if do_submit and not check_apply_window().open:
+            print(json.dumps({"ok": False, "error": "Submit blocked outside CT window"}, indent=2))
+            return 4
+        if spec["ats"] == "ashby":
+            from .ashby_pw import submit_ashby_basic
+
+            result = submit_ashby_basic(
+                url=spec["url"],
+                resume=Path(spec["resume"]),
+                proof_dir=proof,
+                company=spec["company"],
+                security_code=args.security_code,
+                require_window=do_submit,
+                fill_only=not do_submit,
+            )
+        else:
+            result = submit_greenhouse_basic(
+                url=spec["url"],
+                resume=Path(spec["resume"]),
+                proof_dir=proof,
+                company=spec["company"],
+                security_code=args.security_code,
+                require_window=do_submit,
+                fill_only=not do_submit,
+            )
+        print(
+            json.dumps(
+                {
+                    "ok": result.success,
+                    "url": result.url,
+                    "needs_me": result.needs_me,
+                    "fill_only": not do_submit,
+                    "proof_dir": str(result.proof_dir) if result.proof_dir else None,
+                    "snippet": (result.confirmation_text or "")[:400],
+                },
+                indent=2,
+            )
+        )
+        return 0 if result.success and not result.needs_me else 2
 
     if args.cmd == "dry-run":
         out = run_dry_run(limit=args.limit)

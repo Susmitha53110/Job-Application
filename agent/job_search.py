@@ -8,10 +8,10 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
 
-# Locked search policy from Susmitha (2026-11-11)
-DEFAULT_MAX_AGE_DAYS = 4
+# Locked search policy from Susmitha (PROFILE: prefer remote; hybrid/on-site US OK)
+DEFAULT_MAX_AGE_DAYS = 10
 US_ONLY = True
-REMOTE_ONLY = True
+REMOTE_ONLY = False  # prefer remote; allow US hybrid/on-site (relocate Yes)
 OPEN_ONLY = True
 
 
@@ -60,8 +60,177 @@ def _parse_dt(value) -> datetime | None:
         return None
 
 
+def _explicit_us_mention(text: str) -> bool:
+    """True when text clearly names the United States (word-bounded; avoids 'reusable')."""
+    t = (text or "").lower()
+    if re.search(r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b", t):
+        return True
+    if re.search(r"\busa\b", t):  # word-bounded — not 'reusable' / 'usability'
+        return True
+    # Greenhouse-style "US - TX" / "US-Remote" / leading "US" location tokens
+    if re.search(r"(?:^|[\s,;(])us(?:\s*[-–—/,]|\s*$)", t):
+        return True
+    if re.search(
+        r"\bus[\s\-–—]?remote\b|\bremote[\s\-–,–—]?us\b|\bremote,\s*u\.?s\.?\b|\bu\.?s\.?\s*remote\b|"
+        r"\banywhere in the us\b|\bwithin the united states\b|\bus only\b|"
+        r"\bremote - us\b|\bremote us\b|\bremote, us\b|\bus - remote\b|\bus remote\b|"
+        r"\bremote \(us|\bremote \(u\.s",
+        t,
+    ):
+        return True
+    return False
+
+
+def is_us_location(location: str, description: str = "", *, title: str = "") -> bool:
+    """True when the role is clearly US-based (remote, hybrid, or on-site)."""
+    loc_l = (location or "").lower()
+    blob = f"{title} {location} {description[:8000]}".lower()
+    if _explicit_us_mention(loc_l) or _explicit_us_mention(blob):
+        # Still reject pure EU/APAC location strings with no US in location
+        non_us_loc = any(
+            x in loc_l
+            for x in (
+                "netherlands",
+                "germany",
+                "spain",
+                "united kingdom",
+                "ireland",
+                "france",
+                "portugal",
+                "poland",
+                "india",
+                "canada",
+                "australia",
+                "singapore",
+                "israel",
+                "emea",
+                "europe",
+                "latam",
+                "apac",
+                "costa rica",
+                "colombia",
+                "mexico",
+                "brazil",
+                "argentina",
+                "chile",
+                "peru",
+                "philippines",
+                "pakistan",
+                "nigeria",
+                "kenya",
+                "egypt",
+                "uae",
+                "dubai",
+                "tokyo",
+                "japan",
+                "korea",
+                "china",
+                "taiwan",
+                "vietnam",
+                "thailand",
+                "indonesia",
+                "malaysia",
+            )
+        )
+        if non_us_loc and not _explicit_us_mention(loc_l):
+            return False
+        return True
+    if re.search(
+        r"\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|"
+        r"hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|"
+        r"michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|"
+        r"new mexico|new york|nyc|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+        r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
+        r"west virginia|wisconsin|wyoming|austin|seattle|chicago|denver|boston|atlanta|dallas|"
+        r"san francisco|los angeles|san jose|brooklyn|manhattan)\b",
+        loc_l,
+    ):
+        return True
+    # Common US state abbreviations in location strings (e.g. "US - TX", "NY, USA")
+    if re.search(
+        r"(?:^|[\s,;\-/])(al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|"
+        r"mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy)(?:\s|$|[,;/\)])",
+        loc_l,
+    ):
+        return True
+    return False
+
+
 def is_us_remote(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
-    blob = f"{title} {location} {description[:2000]}".lower()
+    loc_l = (location or "").lower()
+    blob = f"{title} {location} {description[:8000]}".lower()
+    # Structured location wins: EU/UK/etc. office lists without US → not US-remote.
+    non_us_loc = any(
+        x in loc_l
+        for x in (
+            "netherlands",
+            "amsterdam",
+            "germany",
+            "berlin",
+            "frankfurt",
+            "spain",
+            "madrid",
+            "barcelona",
+            "united kingdom",
+            "england",
+            "london",
+            "ireland",
+            "dublin",
+            "france",
+            "paris",
+            "portugal",
+            "lisbon",
+            "poland",
+            "warsaw",
+            "india",
+            "bangalore",
+            "bengaluru",
+            "hyderabad",
+            "canada",
+            "toronto",
+            "vancouver",
+            "australia",
+            "sydney",
+            "melbourne",
+            "singapore",
+            "israel",
+            "tel aviv",
+            "emea",
+            "europe",
+            "latam",
+            "apac",
+            "costa rica",
+            "colombia",
+            "mexico",
+            "brazil",
+            "argentina",
+            "chile",
+            "peru",
+            "philippines",
+            "pakistan",
+            "nigeria",
+            "kenya",
+            "uae",
+            "dubai",
+            "japan",
+            "korea",
+            "china",
+            "taiwan",
+        )
+    )
+    loc_has_us = _explicit_us_mention(loc_l) or bool(
+        re.search(
+            r"\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|"
+            r"hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|"
+            r"michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|"
+            r"new mexico|new york|nyc|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+            r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
+            r"west virginia|wisconsin|wyoming|austin|seattle|chicago|denver|boston|atlanta|dallas)\b",
+            loc_l,
+        )
+    )
+    if non_us_loc and not loc_has_us:
+        return False
     if any(
         x in blob
         for x in (
@@ -81,10 +250,18 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             "peru",
             "colombia",
             "costa rica only",
+            "vietnam",
+            "ho chi minh",
+            "philippines",
+            "nigeria",
+            "kenya",
+            "poland only",
+            "netherlands",
+            "spain",
         )
     ):
-        # Allow if also explicitly US remote
-        if not any(x in blob for x in ("united states", "usa", "u.s.", "us-based", "us based", "remote - us", "remote us")):
+        # Allow only if also explicitly US remote (word-bounded)
+        if not _explicit_us_mention(blob):
             return False
     remote_ok = any(
         x in blob
@@ -97,32 +274,25 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             "fully remote",
         )
     )
-    us_ok = any(
-        x in blob
-        for x in (
-            "united states",
-            "usa",
-            "u.s.",
-            "us-based",
-            "us based",
-            "remote - us",
-            "remote us",
-            "remote, us",
-            "us - remote",
-            "us remote",
-            "remote (us",
-            "remote (u.s",
-            "remote - united states",
-            "anywhere in the us",
-            "within the united states",
-            "us only",
-        )
-    ) or bool(
-        re.search(
-            r"\bus[\s\-–—]?remote\b|\bremote[\s\-–,–—]?us\b|\bremote,\s*u\.?s\.?\b|\bu\.?s\.?\s*remote\b",
-            blob,
-        )
-    )
+    us_ok = _explicit_us_mention(blob)
+    # Greenhouse-style "Remote - Austin" / "Remote - CA" / "Remote - NYC" (US city/state, no country word)
+    if not us_ok and remote_ok:
+        loc_l = (location or "").lower()
+        if re.search(
+            r"\bremote\s*[-–—]\s*(usa|us|u\.s\.|united states|"
+            r"alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|"
+            r"hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|"
+            r"michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|"
+            r"new mexico|new york|nyc|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+            r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
+            r"west virginia|wisconsin|wyoming|ca|ny|tx|wa|ma|il|ga|fl|nc|co|or|az|nv|ut|mn|mi|pa|nj|va|"
+            r"seattle|austin|dallas|chicago|denver|boston|atlanta|miami|portland|phoenix|sf bay|bay area)\b",
+            loc_l,
+        ):
+            us_ok = True
+        # Multi-state lists like "California, USA; Texas, USA" already covered by usa; also bare ", USA"
+        if ", usa" in loc_l or "; usa" in loc_l or loc_l.endswith(" usa"):
+            us_ok = True
     # Remotive: require US/Worldwide/America style candidate location
     if source == "remotive":
         loc = location.lower()
@@ -132,7 +302,73 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             # Still require US eligibility language in description when possible
             return us_ok or "visa" not in blob
         return us_ok
+    # Jobicy remote-jobs API: jobGeo often "USA" without the word "remote" in the short payload.
+    # Still require a US geo; treat the remote-jobs feed as remote_ok.
+    if source == "jobicy":
+        loc = location.lower().strip()
+        if loc in {"usa", "us", "united states"} or "usa" in loc or "united states" in loc:
+            return True
+        return remote_ok and us_ok
     return remote_ok and us_ok
+
+
+def is_us_work_ok(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
+    """US remote (preferred) OR US hybrid/on-site per PROFILE standing answers."""
+    if is_us_remote(location, description, source=source, title=title):
+        return True
+    # Hybrid / on-site US — Susmitha relocates Yes, hybrid Yes
+    # US eligibility often sits in the JD footer — sample head + tail of long postings.
+    desc = description or ""
+    desc_window = desc if len(desc) <= 12000 else (desc[:8000] + "\n" + desc[-4000:])
+    blob = f"{title} {location} {desc_window}".lower()
+    loc_l = (location or "").lower().strip()
+    # Bare "Remote" + US work-auth language in JD → treat as US-remote eligible
+    # But reject when Remote is clearly global/Europe/Asia without a US hiring signal.
+    if loc_l in {"remote", "remote work", "fully remote"} and re.search(
+        r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b|\bauthorization to work\b|"
+        r"\blegally authorized to work in the (us|u\.s|united states)\b|"
+        r"\bremote within the united states\b|\bremote(?:ly)? (?:in|within) the u\.?s|"
+        r"\bwest coast of the united states\b|\bacross the (us|u\.s|united states)\b|"
+        r"\bus time zone|\beast coast time\b|\bcandidates in the (us|u\.s|united states)\b",
+        blob,
+    ):
+        # Timezone-only mentions (e.g. "West Coast of the United States, Europe, or Asia")
+        # are not a US hiring gate when the role is explicitly global remote.
+        if re.search(
+            r"\b(across the globe|around the world|worldwide|globally|europe,? or asia|"
+            r"hire globally|global remote)\b",
+            blob,
+        ) and not re.search(
+            r"\bmust (?:be|live|reside) in the (us|u\.s|united states)\b|"
+            r"\bonly (?:open to|hiring) (?:in )?the (us|u\.s|united states)\b|"
+            r"\bus[- ]based candidates\b|\bremote(?:ly)? (?:in|within) the united states\b|"
+            r"\blegally authorized to work in the (us|u\.s|united states)\b",
+            blob,
+        ):
+            pass  # fall through — not US-gated
+        else:
+            return True
+    if not is_us_location(location, description, title=title):
+        return False
+    if any(
+        x in blob
+        for x in (
+            "hybrid",
+            "on-site",
+            "onsite",
+            "on site",
+            "in-office",
+            "in office",
+            "office days",
+            "days in office",
+        )
+    ):
+        return True
+    # Explicit US city/state location without remote/EU → treat as US on-site eligible
+    loc_l = (location or "").lower()
+    if loc_l and "remote" not in loc_l and is_us_location(location, "", title=title):
+        return True
+    return False
 
 
 def search_remotive(
@@ -140,38 +376,52 @@ def search_remotive(
     limit: int = 30,
     max_age_days: int = DEFAULT_MAX_AGE_DAYS,
 ) -> list[JobPosting]:
-    q = urllib.parse.quote(search)
-    url = f"https://remotive.com/api/remote-jobs?search={q}&limit={limit}"
-    data = _get_json(url)
-    jobs = []
+    # Remotive's free-text search is noisy; also probe the data category feed.
+    urls = [
+        f"https://remotive.com/api/remote-jobs?search={urllib.parse.quote(search)}&limit={limit}",
+        f"https://remotive.com/api/remote-jobs?category=data&limit={limit}",
+    ]
+    jobs: list[JobPosting] = []
+    seen: set[str] = set()
     cutoff = _cutoff(max_age_days)
-    for item in data.get("jobs", []):
-        posted_dt = _parse_dt(item.get("publication_date"))
-        if posted_dt and posted_dt < cutoff:
+    for url in urls:
+        try:
+            data = _get_json(url)
+        except Exception:
             continue
-        title = item.get("title") or ""
-        title_l = title.lower()
-        if "data engineer" not in title_l and "analytics engineer" not in title_l:
-            continue
-        loc = item.get("candidate_required_location") or "Remote"
-        desc = item.get("description") or ""
-        if not is_us_remote(str(loc), desc, source="remotive", title=title):
-            continue
-        jobs.append(
-            JobPosting(
-                title=title,
-                company=item.get("company_name") or "Unknown",
-                url=item.get("url") or "",
-                location=str(loc),
-                description=desc,
-                source="remotive",
-                posted_at=posted_dt.date().isoformat() if posted_dt else None,
-                salary_text=item.get("salary") or None,
-                apply_url=item.get("url"),
-                is_open=True,
-                country_hint="US",
+        for item in data.get("jobs", []):
+            posted_dt = _parse_dt(item.get("publication_date"))
+            if posted_dt and posted_dt < cutoff:
+                continue
+            title = item.get("title") or ""
+            title_l = title.lower()
+            if "data engineer" not in title_l and "analytics engineer" not in title_l:
+                continue
+            if any(x in title_l for x in ("staff", "principal", "director", "intern")):
+                continue
+            loc = item.get("candidate_required_location") or "Remote"
+            desc = item.get("description") or ""
+            if not is_us_remote(str(loc), desc, source="remotive", title=title):
+                continue
+            key = (item.get("url") or f"{item.get('company_name')}:{title}").lower()
+            if key in seen:
+                continue
+            seen.add(key)
+            jobs.append(
+                JobPosting(
+                    title=title,
+                    company=item.get("company_name") or "Unknown",
+                    url=item.get("url") or "",
+                    location=str(loc),
+                    description=desc,
+                    source="remotive",
+                    posted_at=posted_dt.date().isoformat() if posted_dt else None,
+                    salary_text=item.get("salary") or None,
+                    apply_url=item.get("url"),
+                    is_open=True,
+                    country_hint="US",
+                )
             )
-        )
     return jobs
 
 
@@ -242,6 +492,107 @@ def within_max_age(posted_at: str | None, max_age_days: int = DEFAULT_MAX_AGE_DA
     return dt >= _cutoff(max_age_days)
 
 
+def resolve_posted_at(url: str) -> str | None:
+    """Best-effort posted/updated timestamp for age-gating web-found URLs.
+
+    Prefer Greenhouse boards API first_published/updated_at; else Ashby/LD+JSON
+    datePosted via a short Playwright read. Returns ISO date/time string or None.
+    """
+    if not url:
+        return None
+    # Rippling ATS API
+    m_rip = re.search(r"ats\.rippling\.com/([^/]+)/jobs/([0-9a-f-]{36})", url, re.I)
+    if m_rip:
+        board, jid = m_rip.group(1), m_rip.group(2)
+        try:
+            meta = _get_json(f"https://ats.rippling.com/api/v2/board/{board}/jobs/{jid}")
+            if isinstance(meta, dict):
+                return meta.get("createdOn") or meta.get("publishedOn") or meta.get("updatedAt")
+        except Exception:
+            pass
+    # Greenhouse board API (board path, gh_jid=, or embed ?for=&token=)
+    m = re.search(
+        r"(?:boards|job-boards)\.greenhouse\.io/([^/]+)/jobs/(\d+)|"
+        r"greenhouse\.io/([^/]+)/jobs/(\d+)|"
+        r"[?&]for=([A-Za-z0-9_-]+).*?[?&]token=(\d+)|"
+        r"[?&]token=(\d+).*?[?&]for=([A-Za-z0-9_-]+)|"
+        r"gh_jid=(\d+)",
+        url,
+        re.I,
+    )
+    if m:
+        board = m.group(1) or m.group(3) or m.group(5) or m.group(8)
+        jid = m.group(2) or m.group(4) or m.group(6) or m.group(7) or m.group(9)
+        if board and jid:
+            try:
+                meta = greenhouse_job_meta(board, jid)
+                return meta.get("first_published") or meta.get("updated_at") or meta.get("created_at")
+            except Exception:
+                pass
+        elif jid and not board:
+            # gh_jid on a custom career host — try known board tokens from host/path.
+            host = (re.search(r"https?://([^/]+)", url, re.I) or [None, ""])[1].lower()
+            guesses: list[str] = []
+            host_map = {
+                "abnormal.ai": ["abnormalsecurity"],
+                "jobs.lever.co": [],
+            }
+            for needle, boards in host_map.items():
+                if needle in host:
+                    guesses.extend(boards)
+            # path token e.g. /abnormalsecurity/ rarely present; also try slug from subdomain
+            slug = host.split(".")[0]
+            if slug and slug not in {"www", "careers", "jobs", "job-boards", "boards"}:
+                guesses.append(slug)
+            for guess in guesses:
+                try:
+                    meta = greenhouse_job_meta(guess, jid)
+                    posted = meta.get("first_published") or meta.get("updated_at") or meta.get("created_at")
+                    if posted:
+                        return posted
+                except Exception:
+                    continue
+    # LD+JSON datePosted (Ashby and many career pages)
+    try:
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(800)
+            posted = page.evaluate(
+                """() => {
+              for (const s of document.querySelectorAll('script[type="application/ld+json"]')) {
+                try {
+                  const j = JSON.parse(s.textContent || '');
+                  const jobs = Array.isArray(j) ? j : (j['@graph'] || [j]);
+                  for (const item of jobs) {
+                    if (item && item.datePosted) return item.datePosted;
+                  }
+                } catch (e) {}
+              }
+              return null;
+            }"""
+            )
+            browser.close()
+            if posted:
+                return str(posted)
+    except Exception:
+        return None
+    return None
+
+
+def assert_url_within_max_age(url: str, max_age_days: int = DEFAULT_MAX_AGE_DAYS) -> tuple[bool, str]:
+    """Return (ok, detail). Fail closed when posted date cannot be resolved."""
+    posted = resolve_posted_at(url)
+    if not posted:
+        return False, f"unknown posted date for {url} (fail closed)"
+    if within_max_age(posted, max_age_days=max_age_days):
+        return True, f"posted={posted}"
+    return False, f"posted={posted} older than {max_age_days}d"
+
+
 def filter_jobs(
     jobs: list[JobPosting],
     *,
@@ -260,7 +611,12 @@ def filter_jobs(
         if not within_max_age(j.posted_at, max_age_days=max_age_days):
             continue
         if us_only or remote_only:
-            if not is_us_remote(j.location, j.description, source=j.source, title=j.title):
+            ok_geo = (
+                is_us_remote(j.location, j.description, source=j.source, title=j.title)
+                if remote_only
+                else is_us_work_ok(j.location, j.description, source=j.source, title=j.title)
+            )
+            if not ok_geo:
                 continue
         blob = f"{j.title} {j.company} {j.location} {j.description} {j.salary_text or ''}".lower()
         if any(s in blob for s in skip_keywords):

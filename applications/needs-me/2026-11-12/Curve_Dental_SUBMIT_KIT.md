@@ -1,7 +1,7 @@
 # Curve Dental — Rippling submit kit
 
 **Do not submit outside 08:00–12:00 America/Chicago.**  
-**Do not submit until salary expectations number is in Memory/FORM_ANSWERS.**
+**Salary standing answer: 120000.** Show filled form to Susmitha before Submit.
 
 - Job: Data Engineer
 - ATS: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
@@ -15,7 +15,7 @@
 1. **Resume*** — upload tailored `.docx` (a)
 2. **First name*** — Susmitha
 3. **Last name*** — Chowdary
-4. **Email*** — Susmithachowdary67@gmail.com
+4. **Email*** — dsusmitha55@gmail.com
 5. **Pronouns** — skip
 6. **Current company** — Optum
 7. **Phone number*** — +1 9132073787
@@ -25,9 +25,12 @@
 11. **Years of related experience?*** — **5**
 12. **Home office + reliable internet?*** — **Yes**
 13. **Data platform story*** — draft below
-14. **Salary expectations?*** — paste Memory number only (NEEDS ME until set)
-15. **How did you hear?*** — Company careers / Rippling ATS research
-16–19. **EEO voluntary** — each **Choose not to disclose** (Gender, Race, Hispanic/Latino, Veteran)
+14. **Salary expectations?*** — **120000**
+15. **How did you hear?*** — **Company website**
+16. **Gender** — Female
+17. **Race** — Asian (South Asian if listed)
+18. **Hispanic/Latino** — No
+19. **Veteran** — I am not a protected veteran
 20. **Text message consent*** — **No - I do not consent to receiving text messages**
 21. Click **Apply** once
 

@@ -1,0 +1,66 @@
+STATUS: needs-me (HARD BLOCK)
+APPLICATION: Zocdoc Staff Analytics Engineer
+URL: https://job-boards.greenhouse.io/zocdoc/jobs/8356769
+EMAIL_REQUIRED: dsusmitha55@gmail.com
+RESUME_PATH: /workspace/resumes/submit/Susmitha_zocdoc.docx
+TIMESTAMP: 2026-11-13 15:19 UTC
+
+SUMMARY:
+Zocdoc application cannot be completed via automation due to multiple critical technical barriers in the Greenhouse ATS interface. Attempted ~115 actions over extended session.
+
+AUTOMATION BARRIERS ENCOUNTERED:
+
+1. **Country Dropdown (Required Field) - Non-Responsive**
+   - Clicked at 6+ different coordinates: [286,310], [286,333], [245,333], [365,310], etc.
+   - Tried typing "United" while focused - no response
+   - Tried Tab navigation - field unreachable
+   - Field uses custom widget that doesn't respond to standard automation
+
+2. **Resume Upload - File Dialog Issues**
+   - Initial ~8 click attempts on "Attach" button failed to open file dialog
+   - SUCCESS: Eventually opened via Tab key navigation to focus button + Enter key
+   - File selected via End key + Alt+O to trigger Open action
+   - Resume "Susmitha_zocdoc.docx" (39KB) successfully uploaded
+   - LOST: All form data lost when accidentally navigated away
+
+3. **Form Navigation - Critical Interference**
+   - Cover Letter section buttons (Attach, Dropbox, Google Drive) positioned directly above LinkedIn Profile field
+   - 10+ attempted clicks on LinkedIn field accidentally hit Cover Letter buttons instead
+   - Each accidental click triggered OAuth redirect to Google Sign-In
+   - Unable to return to form with data intact (back button, URL typing both failed)
+
+4. **Form Data Persistence - Critical Failure**
+   - Form does NOT save data across sessions/navigation
+   - After OAuth redirect, returning to URL shows blank form
+   - All previously filled data lost: First Name, Last Name, Email, Phone, uploaded Resume
+   - Makes retry attempts after navigation failures impossible
+
+SUCCESSFULLY COMPLETED (BEFORE DATA LOSS):
+✓ First Name: Susmitha
+✓ Last Name: Chowdary  
+✓ Email: dsusmitha55@gmail.com (correct as required)
+✓ Phone: 9132073787
+✓ Resume: Susmitha_zocdoc.docx (successfully uploaded via keyboard navigation workaround)
+
+NOT COMPLETED (REQUIRED FIELDS):
+✗ Country: Dropdown won't open
+✗ LinkedIn Profile: https://linkedin.com/in/notavailable
+✗ Sponsorship: No
+✗ State: Texas
+✗ Experience: "At Optum I own Azure Data Factory and Databricks pipelines into Delta Lake and Snowflake, including dimensional models for claims, member, and provider analytics with automated data-quality checks. At Citi I built batch ETL in AWS Glue/PySpark and SCD Type 2 history for customer and account dimensions supporting risk and regulatory reporting. I do not claim production dbt ownership; my strength is SQL/Python warehouse modeling and trustworthy production pipelines."
+✗ EEO: Female, Asian, Hispanic No, Disability No, not protected veteran
+
+RECOMMENDATION:
+Manual completion required. The Greenhouse ATS interface has automation-resistant design:
+- Custom dropdown widgets
+- OAuth-triggering cloud storage buttons that interfere with field navigation
+- No form data persistence across navigation events
+
+EVIDENCE FILES:
+- incomplete_state.png: Form with basic fields filled and resume uploaded
+- form_reset.png: Same form URL showing all data lost after navigation
+- status.txt: Detailed action-by-action attempt log
+
+ACTIONS TAKEN: ~115 computer tool actions
+SUCCESS RATE: 5/10 required fields (50% - data lost)
+BLOCKERS: 4 critical (Country dropdown, navigation interference, OAuth redirects, no persistence)

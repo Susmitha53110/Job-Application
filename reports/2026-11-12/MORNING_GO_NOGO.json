@@ -1,17 +1,11 @@
 {
   "day": "2026-11-12",
   "window_open": false,
-  "window_reason": "Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.",
-  "salary": null,
+  "window_reason": "Outside window (now 2026-11-11 23:16 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "salary": "120000",
   "go": true,
   "hard_failures": [],
-  "soft_failures": [
-    {
-      "name": "salary_set_for_curve",
-      "ok": false,
-      "detail": "MISSING"
-    }
-  ],
+  "soft_failures": [],
   "checks": [
     {
       "name": "resume_short_clera",
@@ -22,6 +16,21 @@
       "name": "resume_short_bayesian",
       "ok": true,
       "detail": "/workspace/resumes/submit/Susmitha_bayesian.docx"
+    },
+    {
+      "name": "resume_short_betterhelp",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_betterhelp.docx"
+    },
+    {
+      "name": "resume_short_life360",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_life360.docx"
+    },
+    {
+      "name": "resume_short_velosio",
+      "ok": true,
+      "detail": "/workspace/resumes/submit/Susmitha_velosio.docx"
     },
     {
       "name": "resume_short_curve",
@@ -37,6 +46,21 @@
       "name": "kit_bayesian",
       "ok": true,
       "detail": "/workspace/applications/needs-me/2026-11-12/Bayesian_Health_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_betterhelp",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/BetterHelp_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_life360",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Life360_SUBMIT_KIT.md"
+    },
+    {
+      "name": "kit_velosio",
+      "ok": true,
+      "detail": "/workspace/applications/needs-me/2026-11-12/Velosio_SUBMIT_KIT.md"
     },
     {
       "name": "kit_curve",
@@ -56,7 +80,7 @@
     {
       "name": "packet_clera",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3"
+      "detail": "blockers=['Outside window (now 2026-11-11 23:16 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3"
     },
     {
       "name": "live_clera",
@@ -66,12 +90,32 @@
     {
       "name": "packet_bayesian",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
+      "detail": "blockers=['Outside window (now 2026-11-11 23:16 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
     },
     {
       "name": "live_bayesian",
       "ok": true,
       "detail": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655"
+    },
+    {
+      "name": "packet_life360",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-11 23:16 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://job-boards.greenhouse.io/life360/jobs/8935286002"
+    },
+    {
+      "name": "live_life360",
+      "ok": true,
+      "detail": "https://job-boards.greenhouse.io/life360/jobs/8935286002"
+    },
+    {
+      "name": "packet_betterhelp",
+      "ok": true,
+      "detail": "blockers=['Outside window (now 2026-11-11 23:16 CST). Applies only 08:00\u201312:00 America/Chicago.']; url=https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008"
+    },
+    {
+      "name": "live_betterhelp",
+      "ok": true,
+      "detail": "https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008"
     },
     {
       "name": "curve_age_le_4d",
@@ -80,13 +124,13 @@
     },
     {
       "name": "salary_set_for_curve",
-      "ok": false,
-      "detail": "MISSING"
+      "ok": true,
+      "detail": "120000"
     },
     {
       "name": "curve_packet_except_salary_window",
       "ok": true,
-      "detail": "blockers=['Outside window (now 2026-11-11 19:57 CST). Applies only 08:00\u201312:00 America/Chicago.', 'Salary expectations number missing in Memory/FORM_ANSWERS']"
+      "detail": "blockers=['Outside window (now 2026-11-11 23:16 CST). Applies only 08:00\u201312:00 America/Chicago.']"
     },
     {
       "name": "real_applies_authorized",
@@ -103,6 +147,8 @@
   "submit_order": [
     "clera",
     "bayesian",
+    "life360",
+    "betterhelp",
     "curve"
   ]
 }

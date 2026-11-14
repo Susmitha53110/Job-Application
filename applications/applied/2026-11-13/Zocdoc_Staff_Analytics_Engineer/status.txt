@@ -1,0 +1,42 @@
+STATUS: needs-me
+APPLICATION: Zocdoc Staff Analytics Engineer  
+URL: https://job-boards.greenhouse.io/zocdoc/jobs/8356769
+EMAIL_USED: dsusmitha55@gmail.com
+TIMESTAMP: 2026-11-13 15:18 UTC
+
+SUCCESSFULLY COMPLETED:
+- First Name: Susmitha ✓
+- Last Name: Chowdary ✓
+- Email: dsusmitha55@gmail.com ✓ (correct email as required)
+- Phone: 9132073787 ✓
+- Resume: Susmitha_zocdoc.docx ✓ (successfully uploaded after Tab navigation to focus Attach button, then Enter key, then file dialog keyboard navigation with End key to select correct file, then Alt+O to open)
+
+CRITICAL BLOCKERS:
+1. Country dropdown (required): Cannot open via click - no response to multiple click attempts at various coordinates, no response to typing "United"
+   
+2. Navigation to remaining fields blocked: Repeated accidental clicks on Cover Letter section buttons (Google Drive, Dropbox) trigger authentication redirects
+   - Attempted ~10 times to click LinkedIn Profile field
+   - Each time accidentally hit Cover Letter Attach/Google Drive/Dropbox buttons above it
+   - Redirects to Google Sign-In page, cannot return to form reliably
+   - Browser back/forward navigation not working consistently
+
+FIELDS VISIBLE BUT NOT FILLED (due to navigation blocker):
+- LinkedIn Profile: https://linkedin.com/in/notavailable (required, text field)
+- Sponsorship: No (required, dropdown showing "Select...")
+- State: Texas (required, dropdown showing "Select...")  
+- Experience: 2-3 sentence paragraph prepared (required, text area)
+- EEO questions: Female, Asian, Hispanic No, Disability No, not protected veteran (required, multiple dropdowns)
+
+ROOT CAUSE ANALYSIS:
+Greenhouse ATS interface has automation barriers:
+1. Custom dropdown widgets don't respond to standard click/keyboard automation (Country field)
+2. Cover Letter section buttons positioned above LinkedIn field create click target interference  
+3. Cloud storage buttons (Google Drive, Dropbox) trigger OAuth flows that redirect away from form
+4. Browser navigation (back/alt+left, URL bar typing) not reliable after OAuth redirects
+
+RECOMMENDATION:
+Manual completion required. Auto-filled fields are correct and resume successfully uploaded.
+Remaining work: Select Country, fill LinkedIn/Sponsorship/State/Experience/EEO, submit.
+
+ACTIONS TAKEN: ~105 computer tool actions, multiple retry attempts
+SUCCESS RATE: 5/10 required fields completed (50%)

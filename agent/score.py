@@ -209,6 +209,9 @@ def score_resume_against_jd(resume: Resume, jd: TieredJd, my_years: int = 5) -> 
             if kw.lower() not in corpus and kw not in top5 and len(kw) > 3:
                 if kw.lower() in junk:
                     continue
+                # Never treat raw regex patterns as human keywords
+                if "\\" in kw or kw.startswith("\\b") or "|" in kw:
+                    continue
                 # Prefer tech-looking tokens
                 if not re.search(r"[A-Z]|sql|dbt|spark|python|azure|aws|snow|data|pipeline|model", kw, re.I):
                     continue

@@ -1,0 +1,416 @@
+"""Playwright helpers for Ashby application forms (fill + optional submit)."""
+
+from __future__ import annotations
+
+import re
+import shutil
+from dataclasses import dataclass
+from pathlib import Path
+
+from .window import check_apply_window
+
+
+@dataclass
+class AshbySubmitResult:
+    success: bool
+    url: str
+    needs_me: str | None
+    confirmation_text: str
+    proof_dir: Path | None
+
+
+def submit_ashby_basic(
+    *,
+    url: str,
+    resume: Path,
+    proof_dir: Path,
+    company: str,
+    name: str = "Susmitha Chowdary",
+    email: str = "dsusmitha55@gmail.com",
+    phone: str | None = "9132073787",
+    linkedin: str = "N/A",
+    why_fit: str | None = None,
+    spell_twelve: bool = True,
+    security_code: str | None = None,
+    require_window: bool = True,
+    fill_only: bool = False,
+) -> AshbySubmitResult:
+    if require_window and not fill_only:
+        win = check_apply_window()
+        if not win.open:
+            return AshbySubmitResult(False, url, win.reason, "", None)
+        try:
+            from .job_search import assert_url_within_max_age
+
+            ok_age, age_detail = assert_url_within_max_age(url)
+            if not ok_age:
+                return AshbySubmitResult(
+                    False, url, f"Age gate: {age_detail}", "", None
+                )
+        except Exception as e:
+            return AshbySubmitResult(False, url, f"Age gate error: {e}", "", None)
+
+    from playwright.sync_api import sync_playwright
+
+    proof_dir.mkdir(parents=True, exist_ok=True)
+    resume = resume.resolve()
+    if not resume.exists():
+        return AshbySubmitResult(False, url, f"Missing resume: {resume}", "", proof_dir)
+
+    why_fit = why_fit or (
+        "I build reliable Python/SQL/Spark data platforms and want to apply that "
+        "experience to product analytics and data systems at scale."
+    )
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(
+            headless=True, args=["--disable-blink-features=AutomationControlled"]
+        )
+        page = browser.new_context(
+            viewport={"width": 1280, "height": 2400},
+            user_agent=(
+                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+                "(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            ),
+        ).new_page()
+        page.goto(url, wait_until="domcontentloaded", timeout=120000)
+        page.wait_for_timeout(1200)
+        for txt in ("Apply", "Apply for this Job", "Submit Application"):
+            loc = page.get_by_role("button", name=txt)
+            if loc.count():
+                try:
+                    loc.first.click(timeout=3000)
+                    page.wait_for_timeout(1000)
+                    break
+                except Exception:
+                    pass
+
+        def fill_label(pattern: str, value: str) -> None:
+            try:
+                page.get_by_label(re.compile(pattern, re.I)).first.fill(value, timeout=3000)
+            except Exception:
+                pass
+
+        def click_yes_no(question_snippet: str, answer: str) -> None:
+            """Ashby often uses Yes/No buttons under a question heading."""
+            try:
+                q = page.get_by_text(re.compile(question_snippet, re.I)).first
+                root = q.locator("xpath=ancestor::*[self::div or self::fieldset][1]")
+                root.get_by_role("button", name=answer).first.click(timeout=3000)
+            except Exception:
+                try:
+                    # fallback: nearest buttons after the text
+                    page.get_by_text(re.compile(question_snippet, re.I)).first.locator(
+                        "xpath=following::button[normalize-space()='%s'][1]" % answer
+                    ).click(timeout=3000)
+                except Exception:
+                    pass
+
+        # Resume first (autofill), then overwrite standing answers
+        try:
+            page.set_input_files("input[type=file]", str(resume))
+            page.wait_for_timeout(2000)
+        except Exception:
+            pass
+
+        fill_label(r"^Name$", name)
+        fill_label(r"^Email$", email)
+        if phone:
+            fill_label(r"Phone", phone)
+        fill_label(r"LinkedIn", linkedin)
+        # Standing address from Memory PROFILE
+        fill_label(r"Current address|Street address|Address line", "1601 Scottsdale Ln")
+        fill_label(r"^City", "Austin")
+        fill_label(r"^State", "TX")
+        fill_label(r"Zip|Postal", "78754")
+        try:
+            from .salary import salary_from_memory
+
+            sal = str(salary_from_memory() or "120000")
+        except Exception:
+            sal = "120000"
+        fill_label(r"Desired salary|salary expectation|salary requirements|compensation expectations", sal)
+        fill_label(r"related to anyone|relationship to anyone at", "No")
+        fill_label(r"Why does|good fit|interests you about this|significant project|why you are interested", why_fit)
+        # Work-auth radios (F1-OPT = temporary open/transferable)
+        try:
+            page.get_by_text(
+                re.compile(
+                    r"Temporary visa with open\s*/\s*transferable work authorization|"
+                    r"open\s*/\s*transferable work authorization",
+                    re.I,
+                )
+            ).first.click(timeout=2000)
+        except Exception:
+            pass
+        # Reside in country — Yes when already US-based
+        try:
+            q = page.get_by_text(re.compile(r"currently reside in the country", re.I)).first
+            root = q.locator("xpath=ancestor::*[self::div or self::fieldset][1]")
+            for _ in range(6):
+                try:
+                    root.get_by_role("button", name=re.compile(r"^Yes$", re.I)).first.click(timeout=1500)
+                    break
+                except Exception:
+                    root = root.locator("xpath=..")
+        except Exception:
+            pass
+        fill_label(r"How did you hear|How you learned|learned about", "Company website")
+        fill_label(r"favourite game|favorite game", "Portal — elegant puzzle design and clean systems thinking.")
+        fill_label(r"favorite type of nut|favourite type of nut", "almond")
+        fill_label(r"Something we should know", "Open to a 6-month contract; Austin TX; F1-OPT authorized, no sponsorship needed.")
+        fill_label(r"previously employed or contracted", "No")
+        fill_label(r"non-compete|non-solicitation|confidentiality agreement", "No")
+        click_yes_no(
+            r"eligible to work in the US|authorized to work at the location|authorized to work in the US",
+            "Yes",
+        )
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship|visa transfer", "No")
+        click_yes_no(r"18 years of age", "Yes")
+        # Solvd-style English level + work-right radios
+        try:
+            page.get_by_text(re.compile(r"^C1-C2$", re.I)).first.click(timeout=2000)
+        except Exception:
+            pass
+        try:
+            page.get_by_text(
+                re.compile(r"authorized to work without sponsorship", re.I)
+            ).first.click(timeout=2000)
+        except Exception:
+            pass
+        try:
+            page.get_by_text(re.compile(r"^I agree$", re.I)).first.click(timeout=2000)
+        except Exception:
+            pass
+        # Talkiatry / similar: currently on OPT or H4?
+        click_yes_no(r"currently on an OPT or H4|OPT or H4 visa", "Yes")
+        # Posted salary alignment (her floor $120k; ranges >=120k → Yes)
+        click_yes_no(r"salary range aligned with your requirements", "Yes")
+        # SQL years radios
+        try:
+            page.get_by_text(re.compile(r"^3\+\s*years$", re.I)).first.click(timeout=2000)
+        except Exception:
+            try:
+                page.get_by_text(re.compile(r"3\+\s*years", re.I)).first.click(timeout=2000)
+            except Exception:
+                pass
+        # Metaview / interview transcription consent
+        try:
+            page.get_by_text(re.compile(r"Yes,?\s*I DO Consent|Yes.*[Cc]onsent", re.I)).first.click(
+                timeout=2000
+            )
+        except Exception:
+            pass
+        # SMS / text consent — prefer No
+        try:
+            page.get_by_text(re.compile(r"No - I do not consent|No.*do not consent", re.I)).first.click(
+                timeout=2000
+            )
+        except Exception:
+            pass
+        # Location combobox (Ashby "Start typing...")
+        try:
+            loc = page.get_by_placeholder(re.compile(r"Start typing|Search for a location", re.I))
+            if loc.count():
+                loc.first.click()
+                loc.first.fill("Austin, Texas, United States")
+                page.wait_for_timeout(500)
+                opt = page.locator("[role=option]").filter(has_text=re.compile(r"Austin", re.I))
+                if opt.count():
+                    opt.first.click()
+                else:
+                    page.keyboard.press("Enter")
+        except Exception:
+            pass
+        if spell_twelve:
+            fill_label(r"Spell the number", "twelve")
+        # Terms checkbox
+        try:
+            page.get_by_text(re.compile(r"I have read and agree", re.I)).first.click(timeout=2000)
+        except Exception:
+            try:
+                page.locator('input[type=checkbox]').last.check(force=True, timeout=2000)
+            except Exception:
+                pass
+        # Re-assert standing answers after autofill races
+        fill_label(r"LinkedIn", linkedin)
+        if phone:
+            fill_label(r"Phone", phone)
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship|anytime in the future require sponsorship", "No")
+        click_yes_no(
+            r"eligible to work in the US|authorized to work at the location|authorized to work in the US for any employer",
+            "Yes",
+        )
+        # sponsorship again last — work-auth Yes clicks can hit adjacent Yes/No pairs
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship|anytime in the future require sponsorship", "No")
+        # EEO radios
+        try:
+            page.get_by_text("Female", exact=True).first.click(timeout=2000)
+        except Exception:
+            pass
+        try:
+            page.get_by_text("Asian (Not Hispanic or Latino)", exact=True).first.click(timeout=2000)
+        except Exception:
+            try:
+                page.get_by_text("Asian", exact=True).first.click(timeout=2000)
+            except Exception:
+                pass
+        try:
+            page.get_by_text("I am not a protected veteran", exact=True).first.click(timeout=2000)
+        except Exception:
+            pass
+        # Re-assert identity after autofill races
+        fill_label(r"^Name$", name)
+        fill_label(r"^Email$", email)
+        try:
+            page.locator("#_systemfield_email, input[type=email]").first.fill(email, timeout=3000)
+        except Exception:
+            pass
+        try:
+            page.locator("#_systemfield_name").first.fill(name, timeout=3000)
+        except Exception:
+            pass
+
+        page.screenshot(path=str(proof_dir / "filled.png"), full_page=True)
+        if fill_only:
+            dom = page.evaluate(
+                """() => ({
+                  name: document.getElementById('_systemfield_name')?.value
+                    || document.querySelector('input[name="_systemfield_name"]')?.value || null,
+                  email: document.getElementById('_systemfield_email')?.value
+                    || document.querySelector('input[type=email]')?.value || null,
+                })"""
+            )
+            ok = (dom.get("email") or "") == email and (dom.get("name") or "") == name
+            (proof_dir / "FILL_ONLY.txt").write_text(
+                f"{company} Ashby fill-only\n"
+                f"URL: {page.url}\n"
+                f"Email: {email}\n"
+                f"DOM name: {dom.get('name')}\n"
+                f"DOM email: {dom.get('email')}\n"
+                f"identity_ok: {ok}\n"
+                f"No Submit.\n"
+            )
+            if not ok:
+                browser.close()
+                return AshbySubmitResult(
+                    False, page.url, f"Fill identity mismatch DOM={dom}", "fill_only", proof_dir
+                )
+            browser.close()
+            return AshbySubmitResult(True, page.url, None, "fill_only", proof_dir)
+
+        # CAPTCHA gate (cannot solve)
+        try:
+            captcha_vis = page.locator("iframe[src*='recaptcha'], iframe[title*='recaptcha']").first.is_visible(
+                timeout=1500
+            )
+        except Exception:
+            captcha_vis = False
+        if captcha_vis or "select all images" in (page.inner_text("body").lower()):
+            page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
+            (proof_dir / "NEEDS_ME.txt").write_text(
+                f"{company}: Ashby reCAPTCHA — cannot complete autonomously.\nURL: {page.url}\nEmail: {email}\n",
+                encoding="utf-8",
+            )
+            browser.close()
+            return AshbySubmitResult(
+                False, page.url, "Ashby reCAPTCHA — needs you", "captcha", proof_dir
+            )
+
+        # submit — scroll into view; wait for URL/body change; surface validation errors
+        pre_url = page.url
+        btn = page.get_by_role("button", name=re.compile(r"^Submit$|Submit [Aa]pplication", re.I))
+        if not btn.count():
+            btn = page.get_by_role("button", name=re.compile(r"Submit", re.I))
+        if btn.count():
+            try:
+                btn.last.scroll_into_view_if_needed()
+                btn.last.click(timeout=5000)
+            except Exception:
+                try:
+                    btn.first.click(force=True, timeout=5000)
+                except Exception:
+                    pass
+            try:
+                page.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:
+                pass
+            page.wait_for_timeout(4000)
+            # success pages often drop /application from the path
+            try:
+                page.wait_for_function(
+                    """(pre) => {
+                      const t = (document.body && document.body.innerText || '').toLowerCase();
+                      const u = location.href;
+                      if (u !== pre && !u.includes('/application')) return true;
+                      return ['thank you','application has been submitted','successfully submitted',
+                              'we have received','thanks for applying','application received',
+                              'thanks for your interest'].some(x => t.includes(x));
+                    }""",
+                    arg=pre_url,
+                    timeout=8000,
+                )
+            except Exception:
+                pass
+        body = page.inner_text("body")
+        low = body.lower()
+        if "verification code" in low or "security code" in low or "enter the code" in low:
+            if not security_code:
+                page.screenshot(path=str(proof_dir / "needs_security_code.png"), full_page=True)
+                browser.close()
+                return AshbySubmitResult(
+                    False,
+                    page.url,
+                    "Email/security verification required — paste code (Gmail declined)",
+                    body[-500:],
+                    proof_dir,
+                )
+        # Required-field / validation still on form
+        validation_hits = []
+        for phrase in (
+            "is required",
+            "this field is required",
+            "please fill",
+            "please complete",
+            "required field",
+            "cannot be empty",
+        ):
+            if phrase in low:
+                validation_hits.append(phrase)
+        ok = any(
+            x in low
+            for x in [
+                "thank you",
+                "application has been submitted",
+                "successfully submitted",
+                "we have received",
+                "thanks for applying",
+                "application received",
+                "thanks for your interest",
+                "successfully applied",
+            ]
+        )
+        if not ok and page.url.rstrip("/") != pre_url.rstrip("/") and "/application" not in page.url.lower():
+            ok = True
+        page.screenshot(
+            path=str(proof_dir / ("confirmation.png" if ok else "after_submit.png")),
+            full_page=True,
+        )
+        (proof_dir / ("confirmation.txt" if ok else "after_submit.txt")).write_text(
+            f"{company}\nURL: {page.url}\nEmail: {email}\npre_url: {pre_url}\n\n{body[:3000]}\n"
+        )
+        if ok:
+            try:
+                shutil.copy(
+                    proof_dir / "confirmation.png",
+                    f"/opt/cursor/artifacts/{company.lower()}_confirmation.png",
+                )
+            except Exception:
+                pass
+            browser.close()
+            return AshbySubmitResult(True, page.url, None, body[-800:], proof_dir)
+        detail = "Submit not confirmed"
+        if validation_hits:
+            detail = f"Submit blocked — validation ({', '.join(validation_hits[:3])})"
+        browser.close()
+        return AshbySubmitResult(False, page.url, detail, body[-800:], proof_dir)

@@ -1,0 +1,45 @@
+BLOCK APPLICATION RETRY SUMMARY
+================================
+Date: Friday Nov 13, 2026, 2:49 PM
+Retry Attempt: 2nd attempt (after initial failure documented earlier)
+
+APPLICATION: Block — Staff Data Engineer, Advanced Insights & Modeling
+URL: https://job-boards.greenhouse.io/block/jobs/5473605008
+Resume File: /workspace/resumes/submit/Susmitha_block.docx
+Required Email: dsusmitha55@gmail.com
+
+RESULT: NEEDS-ME (HARD BLOCK)
+===============================
+
+COMPLETED: 0/1 applications
+- Block: NOT SUBMITTED - needs manual intervention
+
+ACTIONS TAKEN (~44 actions):
+----------------------------
+1. Opened new tab and navigated to Block URL
+2. Multiple attempts to reach application form via "Apply" button
+3. Encountered navigation issues - Apply button not reliably loading form
+4. When form was reached, attempted to fill First Name, Last Name, Email
+5. Experienced form field targeting problems - data entered wrong fields
+6. Email "dsusmitha55@gmail.com" typed into Last Name field
+7. First/Last names swapped between fields
+8. Refreshed page to start clean
+9. Could not reliably navigate back to working application form
+
+TECHNICAL ISSUES:
+-----------------
+1. block.xyz embeds Greenhouse form with unreliable behavior
+2. Apply button clicks don't consistently load application section
+3. Form fields have targeting issues causing data corruption
+4. Field navigation (click, tab, triple-click) produces inconsistent results
+
+EMAIL ATTEMPTED: dsusmitha55@gmail.com (never successfully entered in correct field)
+
+RECOMMENDATION:
+---------------
+MANUAL INTERVENTION REQUIRED. The Block application form has automation barriers that prevent reliable submission. After 2 retry attempts totaling ~70 actions, the form remains incomplete due to:
+- Unreliable form navigation
+- Form field targeting failures
+- Data corruption across fields
+
+Manual completion recommended using provided data in status.txt file.

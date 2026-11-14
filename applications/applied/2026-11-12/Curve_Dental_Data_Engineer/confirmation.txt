@@ -1,0 +1,60 @@
+APPLICATION CONFIRMATION - Curve Dental Data Engineer
+======================================================
+
+Submission Date: 2026-11-12
+Submission Time: 2026-11-12 15:13 UTC (approx)
+Job Title: Data Engineer
+Company: Curve Dental
+ATS Platform: Rippling ATS
+
+Application URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
+Confirmation URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394/apply?jobBoardSlug=curve-dental&jobId=81161b01-ae38-49d2-9ca8-3b618d31c394&step=confirmation
+
+CONFIRMATION STATUS
+-------------------
+✓ Application submitted successfully
+✓ Confirmation page displayed: "You have successfully applied to Data Engineer"
+✓ Cloudflare CAPTCHA solved successfully
+
+SUBMITTED INFORMATION
+---------------------
+Resume: /workspace/resumes/submit/Susmitha_curve.docx
+First Name: Susmitha
+Last Name: Chowdary
+Email: dsusmitha55@gmail.com (VERIFIED - CRITICAL REQUIREMENT MET)
+Phone: +1 913-207-3787
+Location: Austin, Texas
+Current Company: Optum
+
+Sponsorship Required: No
+Years of Experience: 5
+Home Office Available: Yes
+
+Data Platform Story:
+At Optum I own production Azure Data Factory + Databricks ingestion into ADLS Gen2 / Delta Lake bronze-silver-gold for claims, eligibility, and provider feeds, and deliver Snowflake loads via external stages, COPY INTO, and MERGE for analytics dimensions. I cut new-source onboarding from ~2 weeks to ~4 days with a config-driven PySpark framework, reduced a claims workflow from ~2 hours to 75 minutes, and raised scheduled pipeline success from ~97% to 99.5% with dependency checks, bounded retries, and idempotent backfills. Honest gap if asked: JD prefers 2+ years production Snowflake and dbt/Fivetran; my Snowflake production ownership is since May 2025, and I do not claim production dbt/Fivetran ownership.
+
+Salary Expectation: 120000
+How Heard About Role: Company website
+
+EEO INFORMATION (Voluntary)
+---------------------------
+Gender: Female
+Race: Asian
+Hispanic/Latino: No
+Veteran Status: I am not a protected veteran
+SMS/Text Consent: No - I do not consent to receiving text messages
+
+PROOF FILES
+-----------
+Screenshot: /workspace/applications/applied/2026-11-12/Curve_Dental_Data_Engineer/confirmation.png
+Screenshot Copy: /opt/cursor/artifacts/curve_dental_confirmation.png
+Text Log: /workspace/applications/applied/2026-11-12/Curve_Dental_Data_Engineer/confirmation.txt
+
+NOTES
+-----
+- Email address dsusmitha55@gmail.com was verified before submission
+- CAPTCHA verification completed successfully on first attempt
+- All required fields filled per user specifications
+- Real submission authorized for 2026-11-12
+
+Application completed successfully.

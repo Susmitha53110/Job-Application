@@ -50,7 +50,7 @@ def run_dry_run(limit: int = 3) -> dict:
         resume.name = "SUSMITHA CHOWDARY"
     if not resume.contact_lines:
         resume.contact_lines = [
-            "Susmithachowdary67@gmail.com | 9132073787",
+            "dsusmitha55@gmail.com | 9132073787",
             "1601 Scottsdale Ln, Austin, Texas, 78754",
         ]
 

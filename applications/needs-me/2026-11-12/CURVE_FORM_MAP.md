@@ -15,7 +15,7 @@ Source: live browser inspection + Rippling API `activeJobApplication`.
 | 1 | Resume | yes | file .doc/.docx/.pdf | `resumes/tailored/2026-11-12/Susmitha_Curve_Dental_Data_Engineer.docx` |
 | 2 | First name | yes | text | Susmitha |
 | 3 | Last name | yes | text | Chowdary |
-| 4 | Email | yes | email | Susmithachowdary67@gmail.com |
+| 4 | Email | yes | email | dsusmitha55@gmail.com |
 | 5 | Pronouns | no | select | skip |
 | 6 | Current company | no | text | Optum |
 | 7 | Phone number | yes | phone (+1) | 9132073787 |

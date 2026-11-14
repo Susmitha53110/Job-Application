@@ -1,0 +1,402 @@
+[
+  {
+    "tag": "INPUT",
+    "type": "file",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "Upload file",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "text",
+    "name": "_systemfield_name",
+    "id": "_systemfield_name",
+    "placeholder": "Type here...",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "email",
+    "name": "_systemfield_email",
+    "id": "_systemfield_email",
+    "placeholder": "hello@example.com...",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "file",
+    "name": "",
+    "id": "_systemfield_resume",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "Upload File",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "url",
+    "name": "ffcc11e4-f8d1-48e1-9b80-85c1b012a46e",
+    "id": "ffcc11e4-f8d1-48e1-9b80-85c1b012a46e",
+    "placeholder": "https://example.com...",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "Yes",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "No",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "f2b68430-09be-4d13-9db6-70517e32c301",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Mountain View, CA",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_3b4436c4-1ff9-45d6-b25c-80b907e8bb73-labeled-checkbox-0",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "San Francisco, CA",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_3b4436c4-1ff9-45d6-b25c-80b907e8bb73-labeled-checkbox-1",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Los Angeles, CA",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_3b4436c4-1ff9-45d6-b25c-80b907e8bb73-labeled-checkbox-2",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "Yes",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "No",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "bda5786a-4667-4903-80ba-9f6189af944c",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "LinkedIn",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-0",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Company Website",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-1",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Recruiter Outreach",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-2",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Podcast/Blog",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-3",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Industry Conference",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-4",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Tech Community/Forum",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-5",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Fireside Chat/Event",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-6",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "checkbox",
+    "name": "Other Job Boards",
+    "id": "9502ad2f-75b9-4098-8062-b0bcccfd983d_b6e70549-cf33-4fef-ac77-6d16d8c4746e-labeled-checkbox-7",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_gender",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_gender-labeled-radio-0",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_gender",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_gender-labeled-radio-1",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_gender",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_gender-labeled-radio-2",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-0",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-1",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-2",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-3",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-4",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-5",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-6",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_race-labeled-radio-7",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_veteran_status",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_veteran_status-labeled-radio-0",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_veteran_status",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_veteran_status-labeled-radio-1",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "INPUT",
+    "type": "radio",
+    "name": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_veteran_status",
+    "id": "233b5933-cbde-4415-8609-724ba44f0e5d__systemfield_eeoc_veteran_status-labeled-radio-2",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  },
+  {
+    "tag": "BUTTON",
+    "type": "submit",
+    "name": "",
+    "id": "",
+    "placeholder": "",
+    "aria": "",
+    "text": "Submit Application",
+    "role": ""
+  },
+  {
+    "tag": "TEXTAREA",
+    "type": "textarea",
+    "name": "g-recaptcha-response",
+    "id": "g-recaptcha-response-100000",
+    "placeholder": "",
+    "aria": "",
+    "text": "",
+    "role": ""
+  }
+]

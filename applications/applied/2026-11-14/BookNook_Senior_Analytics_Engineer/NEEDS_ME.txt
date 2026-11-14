@@ -1,0 +1,11 @@
+BookNook Senior Analytics Engineer — NEEDS YOU
+URL: https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5
+Age OK (createdOn 2026-11-13). Honest b≈9.0.
+
+Filled via Playwright: resume, name, email, phone, LinkedIn, Austin TX location,
+permanent auth=No, sponsorship=No, favorite-project answer, EEO, SMS=No.
+State TX select is flaky in automation; Cloudflare challenge fires on Apply click
+(no application POST — only challenges.cloudflare.com).
+
+Please open the URL, confirm state=TX, complete Cloudflare/CAPTCHA, click Apply,
+and reply with confirmation screenshot or "BookNook submitted".

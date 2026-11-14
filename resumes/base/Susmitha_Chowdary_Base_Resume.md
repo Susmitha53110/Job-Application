@@ -2,7 +2,7 @@
 
 Data Engineer | Python · SQL · PySpark · Databricks · Snowflake · Azure · AWS
 
-Susmithachowdary67@gmail.com | 9132073787 | 1601 Scottsdale Ln, Austin, Texas, 78754
+dsusmitha55@gmail.com | 9132073787 | 1601 Scottsdale Ln, Austin, Texas, 78754
 
 ## Summary
 

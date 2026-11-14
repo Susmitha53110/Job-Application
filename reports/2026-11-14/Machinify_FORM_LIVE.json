@@ -1,0 +1,31 @@
+{
+  "labels": [
+    "First Name*",
+    "Last Name*",
+    "Preferred First Name",
+    "Email*",
+    "Country*",
+    "Phone*",
+    "Attach",
+    "Enter manually",
+    "Phone Number*",
+    "LinkedIn Profile*",
+    "Website",
+    "Gender",
+    "Are you Hispanic/Latino?",
+    "Veteran Status"
+  ],
+  "required": [
+    "First Name*",
+    "Last Name*",
+    "Email*",
+    "Country*",
+    "Phone*",
+    "Phone Number*",
+    "LinkedIn Profile*"
+  ],
+  "recaptcha": [
+    "https://www.recaptcha.net/recaptcha/enterprise/anchor?ar=1&k=6LfmcbcpAAAAAChNTbhUShzUOAMj_wY9LQIvLFX"
+  ],
+  "security": false
+}

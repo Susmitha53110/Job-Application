@@ -1,0 +1,226 @@
+[
+  {
+    "company": "MongoDB",
+    "title": "Senior Software Engineer, Database Integration & Observability",
+    "url": "https://www.mongodb.com/careers/job/?gh_jid=8352433",
+    "b": 9.6,
+    "status": "ready",
+    "reason": "Packeted for 08:00 CT submit",
+    "resume_a": "/workspace/resumes/tailored/2026-11-14/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx",
+    "submit": "/workspace/resumes/submit/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx",
+    "catch_note": "/workspace/reports/2026-11-14/catch-notes/MongoDB_Senior_Software_Engineer,_Database_Integration_&_Observability.md",
+    "top5_missing": [
+      "mongodb",
+      "software",
+      "database",
+      "employees",
+      "salary"
+    ],
+    "preflight_warnings": null,
+    "loc": "Austin; Boston; Chicago; Dallas; New York City; Palo Alto; San Francisco; Seattle; United States",
+    "posted": "2026-11-05T14:17:34-05:00"
+  },
+  {
+    "company": "mux",
+    "title": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "b": 7.9,
+    "status": "ready",
+    "reason": "Packeted for 08:00 CT submit",
+    "resume_a": "/workspace/resumes/tailored/2026-11-14/Susmitha_mux_Senior_Data_Engineer.docx",
+    "submit": "/workspace/resumes/submit/Susmitha_mux_Senior_Data_Engineer.docx",
+    "catch_note": "/workspace/reports/2026-11-14/catch-notes/mux_Senior_Data_Engineer.md",
+    "top5_missing": [
+      "BigQuery",
+      "dbt",
+      "Kafka",
+      "agents",
+      "video"
+    ],
+    "preflight_warnings": null,
+    "loc": "Remote, United States",
+    "posted": "2026-11-03T21:57:56.538+00:00"
+  },
+  {
+    "company": "Machinify",
+    "title": "Senior Data Engineer\u00a0",
+    "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
+    "b": 7.6,
+    "status": "ready",
+    "reason": "Packeted for 08:00 CT submit",
+    "resume_a": "/workspace/resumes/tailored/2026-11-14/Susmitha_Machinify_Senior_Data_Engineer_.docx",
+    "submit": "/workspace/resumes/submit/Susmitha_Machinify_Senior_Data_Engineer.docx",
+    "catch_note": "/workspace/reports/2026-11-14/catch-notes/Machinify_Senior_Data_Engineer\u00a0.md",
+    "top5_missing": [
+      "Airflow",
+      "dbt",
+      "Scala",
+      "IaC / Terraform",
+      "Terraform/IaC"
+    ],
+    "preflight_warnings": [
+      "Compliance section present (eeoc): VeteranStatus",
+      "Compliance section present (eeoc): Race",
+      "Compliance section present (eeoc): Gender"
+    ],
+    "loc": "Remote - US",
+    "posted": "2026-11-03T18:23:56-05:00"
+  },
+  {
+    "company": "lumin-digital",
+    "title": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384",
+    "b": 7.5,
+    "status": "needs-me",
+    "reason": "Ashby biometric/voiceprint consent \u2014 no standing answer",
+    "resume_a": "/workspace/resumes/tailored/2026-11-14/Susmitha_lumin-digital_Senior_Data_Engineer.docx",
+    "submit": "/workspace/resumes/submit/Susmitha_lumin-digital_Senior_Data_Engineer.docx",
+    "catch_note": "/workspace/reports/2026-11-14/catch-notes/lumin-digital_Senior_Data_Engineer.md",
+    "top5_missing": [
+      "Kafka",
+      "Scala",
+      "IaC / Terraform",
+      "Terraform/IaC",
+      "technical"
+    ],
+    "preflight_warnings": null,
+    "loc": "Remote - United States",
+    "posted": "2026-11-03T18:24:24.798+00:00"
+  },
+  {
+    "company": "Velosio",
+    "title": "Data Engineer",
+    "url": "https://careers.velosio.com/jobs/3162",
+    "b": 8.7,
+    "status": "needs-me",
+    "reason": "iCIMS login + CAPTCHA"
+  },
+  {
+    "company": "Block",
+    "title": "Staff Data Engineer, Advanced Insights & Modeling",
+    "url": "http://block.xyz/careers/jobs/5473605008?gh_jid=5473605008",
+    "b": 7.8,
+    "status": "needs-me",
+    "reason": "prior Greenhouse automation/CAPTCHA fail"
+  },
+  {
+    "company": "Natera",
+    "title": "Sr. Forward Deployed Data Engineer",
+    "url": "https://job-boards.greenhouse.io/natera/jobs/6255111004",
+    "b": 7.3,
+    "status": "needs-me",
+    "reason": "Greenhouse email OTP \u2014 paste 8-char code (Gmail declined)"
+  },
+  {
+    "company": "NinjaOne",
+    "title": "Senior Data Engineer | Emerging Products",
+    "url": "https://job-boards.greenhouse.io/ninjaone/jobs/4470734009",
+    "b": 8.6,
+    "status": "skip",
+    "reason": "dealbreaker:citizen_only"
+  },
+  {
+    "company": "instructure",
+    "title": "Senior Analytics Engineer",
+    "url": "https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213",
+    "b": 6.9,
+    "status": "skip",
+    "reason": "score 6.9<7"
+  },
+  {
+    "company": "Instacart",
+    "title": "Staff Software Engineer, Ads Data Platform",
+    "url": "https://instacart.careers/job/?gh_jid=8372846",
+    "b": 6.5,
+    "status": "skip",
+    "reason": "score 6.5<7"
+  },
+  {
+    "company": "Constant Contact",
+    "title": "Principal Data Engineer",
+    "url": "https://job-boards.greenhouse.io/constantcontact/jobs/8348159",
+    "b": 6.3,
+    "status": "skip",
+    "reason": "score 6.3<7"
+  },
+  {
+    "company": "kit",
+    "title": "Senior Analytics Engineer",
+    "url": "https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9",
+    "b": 5.9,
+    "status": "skip",
+    "reason": "score 5.9<7"
+  },
+  {
+    "company": "Consumer Edge",
+    "title": "Staff Data Engineer",
+    "url": "https://job-boards.greenhouse.io/consumeredge/jobs/6252515004",
+    "status": "skip",
+    "reason": "excluded company",
+    "b": null
+  },
+  {
+    "company": "Consumer Edge",
+    "title": "Staff Data Engineer",
+    "url": "https://job-boards.greenhouse.io/consumeredge/jobs/6252538004",
+    "status": "skip",
+    "reason": "excluded company",
+    "b": null
+  },
+  {
+    "company": "Keebo",
+    "title": "Senior Data Engineer",
+    "url": "https://job-boards.greenhouse.io/keebo/jobs/5470466008",
+    "status": "skip",
+    "reason": "excluded company",
+    "b": null
+  },
+  {
+    "company": "BetterHelp",
+    "title": "Senior Analytics Engineer",
+    "url": "https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008",
+    "status": "skip",
+    "reason": "already applied",
+    "b": null
+  },
+  {
+    "company": "Life360",
+    "title": "Senior Data Engineer, Ads Data (AI Native)",
+    "url": "https://job-boards.greenhouse.io/life360/jobs/8935286002",
+    "status": "skip",
+    "reason": "already applied",
+    "b": null
+  },
+  {
+    "company": "clera",
+    "title": "Senior Data Integration Engineer",
+    "url": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
+    "status": "skip",
+    "reason": "already applied",
+    "b": null
+  },
+  {
+    "company": "bayesianhealth",
+    "title": "Software Engineer, Data & Analytics Platform",
+    "url": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
+    "status": "skip",
+    "reason": "already applied",
+    "b": null
+  },
+  {
+    "company": "Curve Dental",
+    "title": "Data Engineer",
+    "url": "https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394",
+    "status": "skip",
+    "reason": "already applied",
+    "b": null
+  },
+  {
+    "company": "Lemon.io",
+    "title": "Senior Data Engineer",
+    "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137",
+    "status": "skip",
+    "reason": "not company ATS",
+    "b": null
+  }
+]
