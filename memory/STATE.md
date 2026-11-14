@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~10:00CT: Jobgether Lever SAE/SDE kits filled (healthcare + Snowflake/dbt + transform) all FunCAPTCHA needs-me; GH/Ashby hunt still thin; confirms 0 pending OTP/CAPTCHA"
+- last_run_summary: "2026-11-14 10:10CT rehunt: no new GH/Ashby US b≥7; CE#2 CAPTCHA; Jobgether enterprise SDE CAPTCHA; Zip age-fail; 11am rehunt armed; confirms 0"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

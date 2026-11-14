@@ -1,21 +1,21 @@
 # Scorecard — Consumer Edge / Staff Data Engineer
 
-- Link: https://job-boards.greenhouse.io/consumeredge/jobs/6252515004
+- Link: https://job-boards.greenhouse.io/consumeredge/jobs/6252538004
 - Source: greenhouse
-- Posted: 2026-11-09T09:14:10-05:00
+- Posted: 2026-11-09T09:13:04-05:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 7.3 | raw 18.875/26.0 |
-| (b) Reorder-only | 7.3 | apply if ≥ 7 |
-| (c) + hedged additions | 8.8 | do not submit without approval |
+| (a) Original | 7.4 | raw 17.875/24.0 |
+| (b) Reorder-only | 7.4 | apply if ≥ 7 |
+| (c) + hedged additions | 8.7 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - Airflow
 - BigQuery
 - dbt
-- Kafka
 - quot
+- span
 
 ## Keywords covered honestly after tailor: Python, SQL, Snowflake
 ## Gaps remaining: BigQuery, Airflow
