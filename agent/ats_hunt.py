@@ -157,6 +157,7 @@ DEFAULT_GH_BOARDS = [
     "yipitdata",
     "togetherai",
     "podium81",
+    "anaplan",
 ]
 
 

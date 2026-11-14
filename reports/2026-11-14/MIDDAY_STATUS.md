@@ -1,31 +1,19 @@
-# Midday status — 2026-11-14 (~10:32 CT)
+# Midday status — 2026-11-14 (~11:05 CT)
 
 ## Window
-Open (08:00–12:00 CT). Confirms today: **0**.
+Open (08:00–12:00 CT). Valid confirms today: **0** (Zencastr voided — age>10d).
 
-## Infra shipped this hour
-- `jd_tier` tech labels synced (no raw regex requirements: S3/Redshift/Terraform/Git/CI/CD/…).
-- `is_us_location` accepts Greenhouse-style `US - TX` and state abbreviations.
-- Ashby boards added: outmarket, Ontic, BranchInsurance.
+## 11:00 CT rehunt
+- `hunt_all` → 57 hits; only BookNook (already CAPTCHA), Anduril defense (skip), Commure Data Platform SWE (b=5.3 skip), Clera Sr DE (b=5.5 skip).
+- New kit: Jobgether Staff/Senior Analytics Engineer DSA (FunCAPTCHA).
 
-## New kits (needs-me / CAPTCHA)
-- Jobgether Lead Data Engineer (FunCAPTCHA)
-- Jobgether Data Integration Engineer (FunCAPTCHA)
-- Jobgether Senior Data Engineer, Ads Data AI Native (FunCAPTCHA)
+## Infra
+- jd_tier labels synced (no raw regex).
+- US location: `US - TX` + state abbrevs; bare Remote + US footer (8k JD window).
+- Ashby boards: outmarket, Ontic, BranchInsurance; GH: yipitdata/togetherai/podium81.
 
-## Blocked / skipped
-- NinjaOne Sr DE — US citizen/LPR required
-- EnergyHub Sr AE — honest b=6.0
-- BranchInsurance AE II — b=4.4 / pay band low
-- Outmarket / Ontic / Zip / Cloudflare / Okta / Alloy — aged out on first_published
-- SentiLink / Carrum — aged out earlier
-- Existing OTP/CAPTCHA queue unchanged (MongoDB, Machinify, Extend, Keebo, Amplitude, Instructure, BookNook, Natera, …)
-
-## Market
-True first_published≤10 US DE/AE on tracked GH boards already kit'd or below threshold. Jobgether US IC queue FunCAPTCHA-gated.
+## Needs-me queue (paste OTP / clear CAPTCHA)
+MongoDB, Machinify, Extend, Keebo (OTP) · Amplitude, Instructure, BookNook, Natera, Jobgether×N (CAPTCHA) · Gmail declined.
 
 ## Next
-- 11:00 CT rehunt timer
-- Noon report + ensure one 8am CT timer
-- Paste OTP (MongoDB/Machinify/Extend/Keebo) or clear CAPTCHA to unlock confirms
-- Gmail declined — do not re-auth
+- Continue hunt toward noon; noon report + ensure one 8am CT timer; then idle.

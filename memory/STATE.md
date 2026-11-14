@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~10:32CT: labels+US-loc fixes; Jobgether Lead/Integration/Ads CAPTCHA kits; Zencastr voided (age>10d); market empty unblocked US b≥7; confirms 0; 11am rehunt armed"
+- last_run_summary: "2026-11-14 ~11:05CT 11am rehunt: DSA CAPTCHA kit; Clera/Commure below b7; confirms 0; US-remote footer fix"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"

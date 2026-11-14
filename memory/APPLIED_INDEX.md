@@ -319,3 +319,11 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | Jobgether | Data Integration Engineer | https://jobs.lever.co/jobgether/25f8ac01-c5a3-495d-b94c-848bcb7f2197 | needs-me
 2026-11-14 | Jobgether | Senior Data Engineer, Ads Data (AI Native) | https://jobs.lever.co/jobgether/5632944f-f006-4e6c-ab9f-836169b07e0b | needs-me
 2026-11-14 | Zencastr | Senior Data Engineer | https://jobs.ashbyhq.com/zencastr/96a7ba66-f677-48d7-83cc-9e8bb769821a | skipped-age
+2026-11-14 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-14 | commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | dry-run
+2026-11-14 | BookNook, Inc | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | dry-run
+2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-14 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | skipped
+2026-11-14 | Jobgether | Staff/Senior Analytics Engineer, Data Science & Analytics (DSA) | https://jobs.lever.co/jobgether/31ed1bfe-452d-4dae-a8bb-6c58b4f6b5b7 | skipped
+2026-11-14 | Jobgether | Staff/Senior Analytics Engineer, Data Science & Analytics (DSA) | https://jobs.lever.co/jobgether/31ed1bfe-452d-4dae-a8bb-6c58b4f6b5b7 | needs-me
+2026-11-14 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | skipped

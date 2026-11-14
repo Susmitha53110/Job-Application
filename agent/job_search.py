@@ -84,7 +84,7 @@ def _explicit_us_mention(text: str) -> bool:
 def is_us_location(location: str, description: str = "", *, title: str = "") -> bool:
     """True when the role is clearly US-based (remote, hybrid, or on-site)."""
     loc_l = (location or "").lower()
-    blob = f"{title} {location} {description[:1500]}".lower()
+    blob = f"{title} {location} {description[:8000]}".lower()
     if _explicit_us_mention(loc_l) or _explicit_us_mention(blob):
         # Still reject pure EU/APAC location strings with no US in location
         non_us_loc = any(
@@ -135,7 +135,7 @@ def is_us_location(location: str, description: str = "", *, title: str = "") -> 
 
 def is_us_remote(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
     loc_l = (location or "").lower()
-    blob = f"{title} {location} {description[:2000]}".lower()
+    blob = f"{title} {location} {description[:8000]}".lower()
     # Structured location wins: EU/UK/etc. office lists without US → not US-remote.
     non_us_loc = any(
         x in loc_l
@@ -277,12 +277,14 @@ def is_us_work_ok(location: str, description: str = "", *, source: str = "", tit
     if is_us_remote(location, description, source=source, title=title):
         return True
     # Hybrid / on-site US — Susmitha relocates Yes, hybrid Yes
-    blob = f"{title} {location} {description[:1500]}".lower()
+    # Use a wide JD window — US eligibility often appears in the footer/location section.
+    blob = f"{title} {location} {description[:8000]}".lower()
     loc_l = (location or "").lower().strip()
     # Bare "Remote" + US work-auth language in JD → treat as US-remote eligible
     if loc_l in {"remote", "remote work", "fully remote"} and re.search(
         r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b|\bauthorization to work\b|"
-        r"\blegally authorized to work in the (us|u\.s|united states)\b",
+        r"\blegally authorized to work in the (us|u\.s|united states)\b|"
+        r"\bremote within the united states\b|\bremote(?:ly)? (?:in|within) the u\.?s",
         blob,
     ):
         return True
