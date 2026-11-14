@@ -420,6 +420,74 @@ def within_max_age(posted_at: str | None, max_age_days: int = DEFAULT_MAX_AGE_DA
     return dt >= _cutoff(max_age_days)
 
 
+def resolve_posted_at(url: str) -> str | None:
+    """Best-effort posted/updated timestamp for age-gating web-found URLs.
+
+    Prefer Greenhouse boards API first_published/updated_at; else Ashby/LD+JSON
+    datePosted via a short Playwright read. Returns ISO date/time string or None.
+    """
+    if not url:
+        return None
+    # Greenhouse board API
+    m = re.search(
+        r"(?:boards|job-boards)\.greenhouse\.io/([^/]+)/jobs/(\d+)|"
+        r"greenhouse\.io/([^/]+)/jobs/(\d+)|gh_jid=(\d+)",
+        url,
+        re.I,
+    )
+    if m:
+        board = m.group(1) or m.group(3)
+        jid = m.group(2) or m.group(4) or m.group(5)
+        if board and jid:
+            try:
+                meta = greenhouse_job_meta(board, jid)
+                return meta.get("first_published") or meta.get("updated_at") or meta.get("created_at")
+            except Exception:
+                pass
+        elif jid and not board:
+            # gh_jid alone — try common scrape of absolute_url later via LD
+            pass
+    # LD+JSON datePosted (Ashby and many career pages)
+    try:
+        from playwright.sync_api import sync_playwright
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="domcontentloaded", timeout=60000)
+            page.wait_for_timeout(800)
+            posted = page.evaluate(
+                """() => {
+              for (const s of document.querySelectorAll('script[type="application/ld+json"]')) {
+                try {
+                  const j = JSON.parse(s.textContent || '');
+                  const jobs = Array.isArray(j) ? j : (j['@graph'] || [j]);
+                  for (const item of jobs) {
+                    if (item && item.datePosted) return item.datePosted;
+                  }
+                } catch (e) {}
+              }
+              return null;
+            }"""
+            )
+            browser.close()
+            if posted:
+                return str(posted)
+    except Exception:
+        return None
+    return None
+
+
+def assert_url_within_max_age(url: str, max_age_days: int = DEFAULT_MAX_AGE_DAYS) -> tuple[bool, str]:
+    """Return (ok, detail). Fail closed when posted date cannot be resolved."""
+    posted = resolve_posted_at(url)
+    if not posted:
+        return False, f"unknown posted date for {url} (fail closed)"
+    if within_max_age(posted, max_age_days=max_age_days):
+        return True, f"posted={posted}"
+    return False, f"posted={posted} older than {max_age_days}d"
+
+
 def filter_jobs(
     jobs: list[JobPosting],
     *,

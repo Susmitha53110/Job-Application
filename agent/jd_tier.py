@@ -325,14 +325,47 @@ def tier_jd(title: str, company: str, url: str, location: str, jd_text: str) -> 
     preferred = [JdRequirement(text=t, weight=1, kind="nice") for t in pref_block.splitlines() if t.strip()]
 
     if not required:
-        # fallback: treat bullet-like lines as important
+        # fallback: treat bullet-like lines as important (skip benefits/comp chrome)
+        in_benefits = False
         for line in normalized.splitlines():
+            low_line = line.strip().lower()
+            if any(
+                k in low_line
+                for k in (
+                    "benefits",
+                    "compensation",
+                    "what we offer",
+                    "perks",
+                    "our values",
+                    "equal opportunity",
+                    "life at",
+                )
+            ):
+                in_benefits = True
+                continue
+            if in_benefits:
+                continue
             if line.strip().startswith(("-", "*", "•")):
                 item = re.sub(r"^[-*•]\s*", "", line.strip())
                 low = item.lower()
                 if re.match(r"^\$?\d", low) or any(
                     k in low
-                    for k in ("equity", "profit sharing", "offers bonus", "compensation", "per month", "401k")
+                    for k in (
+                        "equity",
+                        "profit sharing",
+                        "offers bonus",
+                        "compensation",
+                        "per month",
+                        "401k",
+                        "medical",
+                        "dental",
+                        "vision",
+                        "stipend",
+                        "tuition",
+                        "paid vacation",
+                        "pto",
+                        "401(k)",
+                    )
                 ):
                     continue
                 if len(item) < 8:

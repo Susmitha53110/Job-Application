@@ -39,6 +39,16 @@ def submit_ashby_basic(
         win = check_apply_window()
         if not win.open:
             return AshbySubmitResult(False, url, win.reason, "", None)
+        try:
+            from .job_search import assert_url_within_max_age
+
+            ok_age, age_detail = assert_url_within_max_age(url)
+            if not ok_age:
+                return AshbySubmitResult(
+                    False, url, f"Age gate: {age_detail}", "", None
+                )
+        except Exception as e:
+            return AshbySubmitResult(False, url, f"Age gate error: {e}", "", None)
 
     from playwright.sync_api import sync_playwright
 
@@ -143,8 +153,17 @@ def submit_ashby_basic(
                 page.locator('input[type=checkbox]').last.check(force=True, timeout=2000)
             except Exception:
                 pass
-        # Re-assert LinkedIn after autofill may inject a wrong URL
+        # Re-assert standing answers after autofill races
         fill_label(r"LinkedIn", linkedin)
+        if phone:
+            fill_label(r"Phone", phone)
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship|anytime in the future require sponsorship", "No")
+        click_yes_no(
+            r"eligible to work in the US|authorized to work at the location|authorized to work in the US for any employer",
+            "Yes",
+        )
+        # sponsorship again last — work-auth Yes clicks can hit adjacent Yes/No pairs
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship|anytime in the future require sponsorship", "No")
         # EEO radios
         try:
             page.get_by_text("Female", exact=True).first.click(timeout=2000)

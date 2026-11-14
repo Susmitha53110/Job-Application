@@ -262,3 +262,15 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | skipped
 2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | needs-me
 2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | needs-me
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | SpotOn | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | skipped
+2026-11-14 | Zencastr | Senior Data Engineer | https://jobs.ashbyhq.com/zencastr/96a7ba66-f677-48d7-83cc-9e8bb769821a | dry-run
+2026-11-14 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | dry-run
+2026-11-14 | SpotOn | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | skipped
+2026-11-14 | SpotOn | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | needs-me
+2026-11-14 | Zencastr | Senior Data Engineer | https://jobs.ashbyhq.com/zencastr/96a7ba66-f677-48d7-83cc-9e8bb769821a | skipped
+2026-11-14 | Zencastr | Senior Data Engineer | https://jobs.ashbyhq.com/zencastr/96a7ba66-f677-48d7-83cc-9e8bb769821a | applied
+2026-11-14 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | skipped
+2026-11-14 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | needs-me
+2026-11-14 | TRM Labs | Senior Data Engineer - AI Platform | https://jobs.ashbyhq.com/trm-labs/45e886bf-748d-41cb-9748-258440d12b61 | skipped
+2026-11-14 | TRM Labs | Senior Data Engineer - AI Platform | https://jobs.ashbyhq.com/trm-labs/45e886bf-748d-41cb-9748-258440d12b61 | needs-me

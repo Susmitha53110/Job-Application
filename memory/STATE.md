@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "daily_apply 2026-11-14 ~08:40CT: applied=0; needs-me OTP=MongoDB+Machinify+Extend+Keebo; CAPTCHA=mux+Mercer+Balor; Gmail declined; GH country/+1 pick fixed; hunt thin Senior>=7"
+- last_run_summary: "mid-window 2026-11-14: Zencastr Ashby submitted BUT age miss (64d)—gate hardened; SpotOn/Knot/Current CAPTCHA; TRM aged-out; OTP still MongoDB/Machinify/Extend/Keebo; applied_valid_age=0"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -45,3 +45,4 @@
 - Expanded GH/Ashby board lists; fresh US-remote DE inventory still thin within 10d.
 - 2026-11-14 morning: MongoDB+Machinify email OTP needs-me; mux CAPTCHA needs-me; paste codes to finish.
 - 2026-11-14: hybrid/on-site US hunt enabled per PROFILE; Anduril skipped (clearance).
+- age_gate_overshoot_today: "Zencastr 2026-09-11 (submitted before ld+json age check)"

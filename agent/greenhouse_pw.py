@@ -205,6 +205,14 @@ def submit_greenhouse_basic(
         win = check_apply_window()
         if not win.open:
             return GhSubmitResult(False, url, win.reason, "", None)
+        try:
+            from .job_search import assert_url_within_max_age
+
+            ok_age, age_detail = assert_url_within_max_age(url)
+            if not ok_age:
+                return GhSubmitResult(False, url, f"Age gate: {age_detail}", "", None)
+        except Exception as e:
+            return GhSubmitResult(False, url, f"Age gate error: {e}", "", None)
 
     from playwright.sync_api import sync_playwright
 
