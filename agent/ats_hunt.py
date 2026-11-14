@@ -154,6 +154,9 @@ DEFAULT_GH_BOARDS = [
     "theknotworldwide",
     "zscaler",
     "zencastr",
+    "yipitdata",
+    "togetherai",
+    "podium81",
 ]
 
 
