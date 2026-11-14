@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 ~09:55CT: fixed Git/CI prose labels (Instructure honest b 6.9→8.1); Instructure CAPTCHA needs-me; ClickHouse Europe skip; market still CAPTCHA/OTP gated"
+- last_run_summary: "2026-11-14 ~10:00CT: Jobgether Lever SAE/SDE kits filled (healthcare + Snowflake/dbt + transform) all FunCAPTCHA needs-me; GH/Ashby hunt still thin; confirms 0 pending OTP/CAPTCHA"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
