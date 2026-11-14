@@ -6,9 +6,9 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 7.5 | raw 3.0/4.0 |
-| (b) Reorder-only | 7.5 | apply if ≥ 7 |
-| (c) + hedged additions | 7.5 | do not submit without approval |
+| (a) Original | 8.3 | raw 30.55/37.0 |
+| (b) Reorder-only | 8.3 | apply if ≥ 7 |
+| (c) + hedged additions | 8.8 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - Kafka

@@ -2,7 +2,7 @@
 
 - Link: https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008
 - Source: greenhouse
-- Posted: unknown
+- Posted: 2026-11-10T23:32:06-05:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
@@ -15,7 +15,7 @@
 - dbt
 - BI tools (Looker/Tableau/Power BI)
 - BI tools
-- knot
+- nbsp
 
 ## Keywords covered honestly after tailor: SQL, Snowflake, dimensional modeling
 ## Gaps remaining: Airflow, dbt

@@ -14,11 +14,11 @@
 - advertising
 - partner
 - senior
-- accountabilities
 - actionable
+- ai-native
 
 ## Keywords covered honestly after tailor: business
-## Gaps remaining: advertising, partner, senior, accountabilities
+## Gaps remaining: advertising, partner, senior, actionable
 
 ## Stretch call: No major years stretch detected.
 

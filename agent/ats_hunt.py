@@ -456,6 +456,16 @@ DEFAULT_LEVER_COMPANIES = [
     "cloudflare",
     "SimbeRobotics",
     "jobgether",
+    # Partner / adjacent boards surfaced in live hunts
+    "luxurypresence",
+    "wpromote",
+    "foodsmart",
+    "coderio",
+    "resilinc",
+    "aleph",
+    "sixfold",
+    "lumin",
+    "mux",
 ]
 
 

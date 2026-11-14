@@ -6,9 +6,9 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 8.7 | raw 27.0/31.0 |
-| (b) Reorder-only | 8.7 | apply if ≥ 7 |
-| (c) + hedged additions | 8.7 | do not submit without approval |
+| (a) Original | 9.4 | raw 29.0/31.0 |
+| (b) Reorder-only | 9.4 | apply if ≥ 7 |
+| (c) + hedged additions | 9.4 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - BI tools (Looker/Tableau/Power BI)

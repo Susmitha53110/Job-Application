@@ -1,37 +1,36 @@
-# Noon status — 2026-11-14 (11:32 CT)
+# Noon status — 2026-11-14 (12:00 CT)
 
 ## Window
-08:00–12:00 CT apply window ending. **Valid confirms today: 0.**
+08:00–12:00 CT apply window **closed**. **Valid confirms today: 0.**
 
 (Zencastr confirmation exists but voided — posted 2026-09-11, age >10d.)
 
-## Pipeline
-- CSV rows today: 185 — {'dry-run': 125, 'needs me': 12, 'skipped': 47, 'applied': 1}
-- Applied kits (folders): 34
-- NEEDS_ME kits: 27
-- Confirmation screenshots: 1 (none counted valid)
+## Late-window attempt (~11:57–12:00 CT)
+- **Anduril Production Master Data Engineer** (b=8.8, Costa Mesa, no citizen/clearance in JD) → Greenhouse reCAPTCHA needs-me.
+- **Commure Senior Software Engineer, Data Platform** (b=8.0) → filled; submit not confirmed (still on application page) needs-me.
+- Window closed before SpotOn / Clera / Branch submit — fill_only kits written under `applications/applied/2026-11-15/` for 8am.
 
-## Needs-me unlocks (paste OTP / clear CAPTCHA)
+## Pipeline
+- Applied kits (folders) today: 36+
+- NEEDS_ME kits: 29+
+- Confirmation screenshots counted valid: **0**
+
+## Needs-me unlocks
 See `reports/2026-11-14/NEEDS_ME_QUEUE.md`.
 
 OTP: MongoDB, Machinify, Extend, Keebo  
-CAPTCHA: Solvd (reCAPTCHA), BookNook (Cloudflare), Amplitude, Instructure, Natera, Mercer, Jobgether×N (FunCAPTCHA)
+CAPTCHA: Anduril, Solvd, BookNook, Amplitude, Instructure, Natera, Mercer, Jobgether×N, Commure unconfirmed
 
-## Hunt summary (late morning)
-- Expanded GH/Ashby/Lever/Rippling boards (Solvd, sixfold, lever partners).
-- New fill: **Solvd Senior Data Engineer — Knowledge Ingestion** (b=8.8) → reCAPTCHA needs-me.
-- Near-misses below b7: Solvd RAG 6.9, Clera 5.5, EnergyHub 6.0, Kit global-remote rejected.
-- Aggregator-fresh listings (Sixfold/Discord/Wpromote/etc.) failed age gate on first_published/datePosted.
-
-## Infra shipped
-- jd_tier tech labels (no raw regex)
-- US location: `US - TX`, state abbrevs, bare-Remote footer window, Costa Rica reject, global-remote timezone caveat
-- ashby_pw: Solvd English/work-auth/consent
+## Morning queue (2026-11-15 08:00 CT)
+1. OTP/CAPTCHA unlocks if pasted overnight
+2. Submit fill_only: SpotOn AE Platform, Clera Integration, Clera SDE, Branch AE II
+3. Retry Commure / Anduril with human CAPTCHA
+4. hunt_all → continue toward 20–25
 
 ## Timers
 - Recurring 8am CT (`0 14 * * *`) — keep exactly one
 - Noon one-shot — this report
 
 ## Outside window
-Idle — no hunt, no GitHub react. Gmail declined — do not re-auth.
+Idle — no hunt, no GitHub react. **Gmail declined — do not re-auth.**
 Next: 2026-11-15 08:00 CT.

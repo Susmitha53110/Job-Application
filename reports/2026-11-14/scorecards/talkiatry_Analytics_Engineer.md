@@ -2,13 +2,13 @@
 
 - Link: https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3
 - Source: ashby
-- Posted: unknown
+- Posted: 2026-11-10T21:44:05.987+00:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 7.4 | raw 20.7/28.0 |
-| (b) Reorder-only | 7.4 | apply if ≥ 7 |
-| (c) + hedged additions | 9.2 | do not submit without approval |
+| (a) Original | 3.7 | raw 15.492948717948721/42.0 |
+| (b) Reorder-only | 3.7 | apply if ≥ 7 |
+| (c) + hedged additions | 4.5 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - BigQuery

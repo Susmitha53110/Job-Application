@@ -6,9 +6,9 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 5.9 | raw 14.142857142857142/24.0 |
-| (b) Reorder-only | 5.9 | apply if ≥ 7 |
-| (c) + hedged additions | 8.0 | do not submit without approval |
+| (a) Original | 6.7 | raw 16.142857142857142/24.0 |
+| (b) Reorder-only | 6.7 | apply if ≥ 7 |
+| (c) + hedged additions | 8.8 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - dbt

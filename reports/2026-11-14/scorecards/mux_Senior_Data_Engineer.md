@@ -6,9 +6,9 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 7.9 | raw 31.0/39.0 |
-| (b) Reorder-only | 7.9 | apply if ≥ 7 |
-| (c) + hedged additions | 9.2 | do not submit without approval |
+| (a) Original | 8.2 | raw 32.0/39.0 |
+| (b) Reorder-only | 8.2 | apply if ≥ 7 |
+| (c) + hedged additions | 10.0 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - BigQuery

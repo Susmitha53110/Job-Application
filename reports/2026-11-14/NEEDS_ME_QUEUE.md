@@ -1,7 +1,7 @@
-# Needs-me queue — 2026-11-14 (~11:15 CT)
+# Needs-me queue — 2026-11-14 (end of window ~12:00 CT)
 
 Valid confirms today: **0**. Paste OTP (8-char Greenhouse) or clear CAPTCHA to unlock submits.
-Gmail MCP declined — paste codes here in chat if emailed to dsusmitha55@gmail.com.
+Gmail MCP declined — paste codes here in chat if emailed to dsusmitha55@gmail.com. Do not re-auth Gmail.
 
 ## OTP (Greenhouse email code)
 
@@ -12,25 +12,33 @@ Gmail MCP declined — paste codes here in chat if emailed to dsusmitha55@gmail.
 | Extend | Senior Analytics Engineer | `applications/applied/2026-11-14/Extend_Senior_Analytics_Engineer/` |
 | Keebo | Senior Data Engineer | `applications/applied/2026-11-14/Keebo_Senior_Data_Engineer/` |
 
-## CAPTCHA / Cloudflare / FunCAPTCHA
+## CAPTCHA / Cloudflare / FunCAPTCHA / unconfirmed
 
 | Company | Role | Blocker |
 |--------|------|---------|
+| Anduril | Production Master Data Engineer | Greenhouse reCAPTCHA |
+| Commure | Senior Software Engineer, Data Platform | Submit not confirmed (form still open) |
 | Solvd | Senior Data Engineer — Knowledge Ingestion | reCAPTCHA Enterprise |
 | BookNook | Senior Analytics Engineer | Cloudflare |
 | Amplitude | Senior Data Engineer, Marketing & GTM | CAPTCHA |
 | Instructure | Senior Analytics Engineer | CAPTCHA |
 | Natera | Sr Forward Deployed Data Engineer | CAPTCHA |
 | Mercer Advisors | Senior Analytics Engineer | CAPTCHA |
-| Jobgether (partner Lever) | Lead/Senior DE & AE, Integration, Ads, DSA, Staff/Senior DE | FunCAPTCHA |
+| Jobgether (partner Lever) | Lead/Senior DE & AE, Integration, Ads, DSA, Staff/Senior DE, Snowflake | FunCAPTCHA |
 
-## Ready kits (also blocked)
+## Morning fill_only (2026-11-15 kits — ready to submit at 8am)
 
-- `applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md`
-- `applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md`
-- `applications/ready/2026-11-14/mux_SUBMIT_KIT.md` (age-edge / OTP)
-- `applications/ready/2026-11-14/lumin-digital_SUBMIT_KIT.md` (aged out as of midday)
+| Company | Role | Kit |
+|--------|------|-----|
+| SpotOn | Senior Analytics Platform Engineer | `applications/applied/2026-11-15/SpotOn_Senior_Analytics_Platform_Engineer/` |
+| Clera | Senior Data Integration Engineer | `applications/applied/2026-11-15/Clera_Senior_Data_Integration_Engineer/` |
+| Clera | Senior Data Engineer | `applications/applied/2026-11-15/Clera_Senior_Data_Engineer/` |
+| BranchInsurance | Analytics Engineer II | `applications/applied/2026-11-15/BranchInsurance_Analytics_Engineer_II/` |
 
-## Market note
+## Skip / blocked
 
-11am full GH/Ashby/Lever/Rippling/Himalayas/Remotive sweep: **no new** unblocked honest b≥7 US company-ATS DE/AE roles. Continuing hunts until noon; unlocks require human OTP/CAPTCHA.
+- Anduril Data Platform Lead / SWE Manager — clearance
+- NinjaOne — citizen/LPR
+- Velosio — age gate fail-closed (unknown posted date on URL assert)
+- The Knot Lead AE — 7+ years stretch; kit already exists
+- Zencastr — aged out (posted 2026-09-11)
