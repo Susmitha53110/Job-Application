@@ -6,7 +6,7 @@
 - URL: https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394
 
 ## Blockers
-- Outside window (now 2026-11-13 12:40 CST). Applies only 08:00–12:00 America/Chicago.
+- Outside window (now 2026-11-14 12:12 CST). Applies only 08:00–12:00 America/Chicago.
 
 ## Computer-use prompt (only if Ready)
 ```

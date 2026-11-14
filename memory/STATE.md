@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 12:00CT window closed; confirms 0; Anduril CAPTCHA + Commure unconfirmed needs-me; fill_only SpotOn/Clera/Branch for 11-15; Gmail declined; idle to 8am"
+- last_run_summary: "overnight_hunt 2026-11-14T12:10-06:00: window=False; salary=set; hunt=60; ge7=28; curve_gate=False"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
