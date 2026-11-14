@@ -90,6 +90,38 @@ def _by_id(page, eid: str):
     return page.locator(f'[id="{eid}"]')
 
 
+def _norm_option(s: str) -> str:
+    """Country menus often show 'United States +1' — match on name only."""
+    return re.sub(r"\s*\+\d+\s*$", "", (s or "").strip()).lower()
+
+
+def match_select_option(candidates: list[str], texts: list[str]) -> str | None:
+    """Pick a Greenhouse react-select option for the first matching candidate.
+
+    Prefer exact / anchored matches. Avoid traps like male∈female and no∈another.
+    """
+    def _match_one(cl: str) -> str | None:
+        for t in texts:
+            if _norm_option(t) == cl:
+                return t
+        for t in texts:
+            tl = _norm_option(t)
+            if tl.startswith(cl + " ") or tl.startswith(cl + "(") or tl.startswith(cl + "—") or tl.startswith(cl + "-"):
+                return t
+        if len(cl) >= 4:
+            pat = re.compile(rf"(?:^|[^a-z0-9]){re.escape(cl)}(?:[^a-z0-9]|$)")
+            for t in texts:
+                if pat.search(_norm_option(t)):
+                    return t
+        return None
+
+    for c in candidates:
+        hit = _match_one(_norm_option(c))
+        if hit:
+            return hit
+    return None
+
+
 def _pick_react(page, eid: str, candidates: list[str]) -> bool:
     if not eid:
         return False
@@ -116,34 +148,7 @@ def _pick_react(page, eid: str, candidates: list[str]) -> bool:
     if menu.count():
         texts = [t.strip() for t in menu.locator("[role=option]").all_inner_texts() if t and t.strip()]
 
-    def _norm(s: str) -> str:
-        # Country menus often show "United States +1" — match on name only.
-        return re.sub(r"\s*\+\d+\s*$", "", (s or "").strip()).lower()
-
-    def _match_option(cl: str, texts: list[str]) -> str | None:
-        """Prefer exact / anchored matches. Avoid 'male'∈'female' and 'no'∈'another'."""
-        # 1) exact
-        for t in texts:
-            if _norm(t) == cl:
-                return t
-        # 2) option starts with candidate (e.g. "Female (optional)")
-        for t in texts:
-            tl = _norm(t)
-            if tl.startswith(cl + " ") or tl.startswith(cl + "(") or tl.startswith(cl + "—") or tl.startswith(cl + "-"):
-                return t
-        # 3) candidate is a whole word in option (length≥4 only — blocks no/yes/male traps)
-        if len(cl) >= 4:
-            pat = re.compile(rf"(?:^|[^a-z0-9]){re.escape(cl)}(?:[^a-z0-9]|$)")
-            for t in texts:
-                if pat.search(_norm(t)):
-                    return t
-        return None
-
-    chosen = None
-    for c in candidates:
-        chosen = _match_option(_norm(c), texts)
-        if chosen:
-            break
+    chosen = match_select_option(candidates, texts)
     if not chosen:
         try:
             inp.fill("")
@@ -154,10 +159,7 @@ def _pick_react(page, eid: str, candidates: list[str]) -> bool:
                 for t in page.locator("div.select__menu [role=option]").all_inner_texts()
                 if t and t.strip()
             ]
-            for c in candidates:
-                chosen = _match_option(_norm(c), texts)
-                if chosen:
-                    break
+            chosen = match_select_option(candidates, texts)
         except Exception:
             pass
     if not chosen:
