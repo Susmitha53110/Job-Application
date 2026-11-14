@@ -1,17 +1,17 @@
-# Overnight hunt — 2026-11-14 14:27 CST
+# Overnight hunt — 2026-11-14 15:05 CST
 
 - Window open: **False**
 - Salary set: **120000**
 - Curve gate ok: **False**
-- Curve blockers: Outside window (now 2026-11-14 14:27 CST). Applies only 08:00–12:00 America/Chicago.
+- Curve blockers: Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.
 - Morning packet day: **2026-11-15**
 - Ready submits report: `/workspace/reports/2026-11-15/READY_SUBMITS.md`
 - Submit handoff: `/workspace/reports/2026-11-15/SUBMIT_HANDOFF.json`
-- MongoDB ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-14 14:27 CST). Applies only 08:00–12:00 America/Chicago.']
-- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-14 14:27 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
-- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-14 14:27 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
+- MongoDB ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.']
+- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
+- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
 - Watchlist hits: **5**
-- Hunt hits (≤10d): **68**
+- Hunt hits (≤10d): **67**
 - Near-miss (age watch only): **0**
 - Applied URLs excluded: **6**
 - New ≥7 packets (non-Curve, not applied): **34**
@@ -85,7 +85,6 @@
 - Solvd / Senior Data Engineer — Knowledge Ingestion — [8.8, 8.8, 8.8] — candidate
 - merge / Analytics Engineer — [8.6, 8.6, 10.0] — candidate
 - BookNook, Inc / Senior Analytics Engineer — [9.0, 9.0, 10.0] — candidate
-- palantir / Backend Software Engineer - Data Connectors — [2.0, 3.5, 3.5] — skip_low_score
 - jobgether / Data Integration Engineer — [10.0, 10.0, 10.0] — candidate
 - jobgether / Integration and Data Software Engineer — [1.5, 2.5, 2.5] — skip_low_score
 - jobgether / Lead Analytics Engineer — [10.0, 10.0, 10.0] — candidate
