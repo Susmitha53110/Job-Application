@@ -28,7 +28,7 @@ def submit_ashby_basic(
     name: str = "Susmitha Chowdary",
     email: str = "dsusmitha55@gmail.com",
     phone: str | None = "9132073787",
-    linkedin: str = "N/A",
+    linkedin: str = "https://www.linkedin.com/in/susmitha-dodla-a05ab92b8",
     why_fit: str | None = None,
     spell_twelve: bool = True,
     security_code: str | None = None,
@@ -95,16 +95,24 @@ def submit_ashby_basic(
             """Ashby often uses Yes/No buttons under a question heading."""
             try:
                 q = page.get_by_text(re.compile(question_snippet, re.I)).first
+                # Walk up a few ancestors — Ashby nests Yes/No outside the immediate div
                 root = q.locator("xpath=ancestor::*[self::div or self::fieldset][1]")
-                root.get_by_role("button", name=answer).first.click(timeout=3000)
+                for _ in range(6):
+                    try:
+                        root.get_by_role("button", name=re.compile(rf"^{answer}$", re.I)).first.click(
+                            timeout=1500
+                        )
+                        return
+                    except Exception:
+                        root = root.locator("xpath=..")
             except Exception:
-                try:
-                    # fallback: nearest buttons after the text
-                    page.get_by_text(re.compile(question_snippet, re.I)).first.locator(
-                        "xpath=following::button[normalize-space()='%s'][1]" % answer
-                    ).click(timeout=3000)
-                except Exception:
-                    pass
+                pass
+            try:
+                page.get_by_text(re.compile(question_snippet, re.I)).first.locator(
+                    "xpath=following::button[normalize-space()='%s'][1]" % answer
+                ).click(timeout=3000)
+            except Exception:
+                pass
 
         # Resume first (autofill), then overwrite standing answers
         try:
@@ -132,6 +140,11 @@ def submit_ashby_basic(
         fill_label(r"Desired salary|salary expectation|salary requirements|compensation expectations", sal)
         fill_label(r"related to anyone|relationship to anyone at", "No")
         fill_label(r"Why does|good fit|interests you about this|significant project|why you are interested", why_fit)
+        # Hybrid / relocation prompts (Amplitude and similar)
+        fill_label(
+            r"comfortable relocating|willing to relocate|hybrid role|Bay Area|outside of (the )?Bay|relocat",
+            "Yes — prefer remote; open to hybrid and relocating to SF Bay Area if needed.",
+        )
         # Work-auth radios (F1-OPT = temporary open/transferable)
         try:
             page.get_by_text(
@@ -165,7 +178,12 @@ def submit_ashby_basic(
             r"eligible to work in the US|authorized to work at the location|authorized to work in the US",
             "Yes",
         )
-        click_yes_no(r"require (visa )?sponsorship|require sponsorship|visa transfer", "No")
+        click_yes_no(
+            r"require (visa )?sponsorship|require sponsorship|visa transfer|"
+            r"anytime in the future|now or will you in the future require|"
+            r"employment visa sponsorship",
+            "No",
+        )
         click_yes_no(r"18 years of age", "Yes")
         # Solvd-style English level + work-right radios
         try:
@@ -236,13 +254,21 @@ def submit_ashby_basic(
         fill_label(r"LinkedIn", linkedin)
         if phone:
             fill_label(r"Phone", phone)
-        click_yes_no(r"require (visa )?sponsorship|require sponsorship|anytime in the future require sponsorship", "No")
+        click_yes_no(
+            r"require (visa )?sponsorship|require sponsorship|anytime in the future|"
+            r"now or will you in the future require|employment visa sponsorship",
+            "No",
+        )
         click_yes_no(
             r"eligible to work in the US|authorized to work at the location|authorized to work in the US for any employer",
             "Yes",
         )
         # sponsorship again last — work-auth Yes clicks can hit adjacent Yes/No pairs
-        click_yes_no(r"require (visa )?sponsorship|require sponsorship|anytime in the future require sponsorship", "No")
+        click_yes_no(
+            r"require (visa )?sponsorship|require sponsorship|anytime in the future|"
+            r"now or will you in the future require|employment visa sponsorship",
+            "No",
+        )
         # EEO radios
         try:
             page.get_by_text("Female", exact=True).first.click(timeout=2000)
@@ -254,7 +280,60 @@ def submit_ashby_basic(
             try:
                 page.get_by_text("Asian", exact=True).first.click(timeout=2000)
             except Exception:
-                pass
+                # Ashby race combobox: label is not wired for get_by_label; find
+                # the combobox under the "Race / Ethnicity" heading only.
+                try:
+                    race = page.locator(
+                        "xpath=//label[contains(., 'Race') or contains(., 'Ethnicity')]"
+                        "/following::input[@role='combobox'][1]"
+                    )
+                    if not race.count():
+                        race = page.locator(
+                            "xpath=//*[contains(normalize-space(.), 'Race / Ethnicity')]"
+                            "/following::input[@role='combobox'][1]"
+                        )
+                    if race.count():
+                        race.first.click()
+                        race.first.fill("Asian")
+                        page.wait_for_timeout(500)
+                        opt = page.locator("[role=option]").filter(
+                            has_text=re.compile(r"Asian.*(Not Hispanic|Latino)?", re.I)
+                        )
+                        if opt.count():
+                            opt.first.click()
+                        else:
+                            opt2 = page.locator("[role=option]").filter(
+                                has_text=re.compile(r"Asian", re.I)
+                            )
+                            if opt2.count():
+                                opt2.first.click()
+                except Exception:
+                    pass
+        # Re-assert US location after any combobox races (race/EEO)
+        try:
+            loc = page.get_by_placeholder(re.compile(r"Start typing|Search for a location", re.I))
+            if loc.count():
+                cur = (loc.first.input_value() or "").lower()
+                if "austin" not in cur or "egypt" in cur or "aswan" in cur:
+                    loc.first.click()
+                    loc.first.fill("")
+                    loc.first.fill("Austin, Texas, United States")
+                    page.wait_for_timeout(500)
+                    opt = page.locator("[role=option]").filter(
+                        has_text=re.compile(r"Austin,\s*Texas,\s*United States", re.I)
+                    )
+                    if opt.count():
+                        opt.first.click()
+                    else:
+                        opt2 = page.locator("[role=option]").filter(
+                            has_text=re.compile(r"Austin.*United States", re.I)
+                        )
+                        if opt2.count():
+                            opt2.first.click()
+                        else:
+                            page.keyboard.press("Enter")
+        except Exception:
+            pass
         try:
             page.get_by_text("I am not a protected veteran", exact=True).first.click(timeout=2000)
         except Exception:

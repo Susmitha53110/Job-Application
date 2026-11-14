@@ -14,6 +14,7 @@
 5. SpotOn Senior Analytics Platform — Ashby
 6. Clera Senior Data Engineer — Ashby
 7. BranchInsurance Analytics Engineer II — Ashby
+8. Amplitude SWE II Analytics Compute — Ashby (may reCAPTCHA)
 
 Then: OTP (MongoDB/Extend/Keebo) if pasted → CAPTCHA retries → `hunt_all`.
 

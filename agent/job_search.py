@@ -552,7 +552,26 @@ def resolve_posted_at(url: str) -> str | None:
                         return posted
                 except Exception:
                     continue
-    # LD+JSON datePosted (Ashby and many career pages)
+    # Cheap HTTP scrape for schema.org datePosted (iCIMS / Velosio / many career pages)
+    try:
+        import urllib.request
+
+        req = urllib.request.Request(
+            url,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; job-agent/1.0)"},
+        )
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            html = resp.read(2_000_000).decode("utf-8", "replace")
+        m_dp = re.search(
+            r'"datePosted"\s*:\s*"([^"]+)"',
+            html,
+            re.I,
+        )
+        if m_dp:
+            return m_dp.group(1)
+    except Exception:
+        pass
+    # LD+JSON datePosted via Playwright (Ashby and JS-rendered career pages)
     try:
         from playwright.sync_api import sync_playwright
 

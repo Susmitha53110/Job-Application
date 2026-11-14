@@ -91,6 +91,14 @@ FALLBACK_QUEUE: list[dict] = [
         "ats": "ashby",
         "resume": "resumes/submit/Susmitha_branchinsurance_2026-11-15.docx",
     },
+    {
+        "key": "Amplitude",
+        "company": "Amplitude",
+        "role": "Software Engineer II, Analytics Compute Platform Team",
+        "url": "https://jobs.ashbyhq.com/amplitude/f65ba1d9-f809-442f-88df-453241e8d509",
+        "ats": "ashby",
+        "resume": "resumes/submit/Susmitha_amplitude_swe_ii_2026-11-15.docx",
+    },
 ]
 
 
