@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-14
-- last_run_summary: "2026-11-14 evening prep: +xAI/Verkada/Abnormal/Merge fill_only; GH boards xai/verkada/abnormal; Abnormal gh_jid age fix; idle to 8am"
+- last_run_summary: "2026-11-14 outside window: morning_queue_submit + 7:55 prewarm armed; 7 kits age-OK; idle to 8am; Gmail declined"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
