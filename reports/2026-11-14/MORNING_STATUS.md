@@ -22,3 +22,9 @@ OPEN 08:00–12:00 America/Chicago. Target 20–25.
 3. Approve Gmail MCP if OTP auto-read is preferred.
 
 Agent continues hunting during the window; cannot invent OTPs/CAPTCHAs.
+
+## Update ~08:20 CT
+- Fixed `is_us_remote` false positive (`usa` inside "reusable").
+- ClickHouse Data Platform Engineer skipped (EU-only).
+- Computer Use could not complete mux (Ashby field automation failed in that path); Playwright still preferred for Ashby.
+- Still blocked on MongoDB/Machinify OTP + mux CAPTCHA. No other ≥7 US-remote auto-submits in hunt.

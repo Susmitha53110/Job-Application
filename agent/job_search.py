@@ -60,8 +60,82 @@ def _parse_dt(value) -> datetime | None:
         return None
 
 
+def _explicit_us_mention(text: str) -> bool:
+    """True when text clearly names the United States (word-bounded; avoids 'reusable')."""
+    t = (text or "").lower()
+    if re.search(r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b", t):
+        return True
+    if re.search(r"\busa\b", t):  # word-bounded — not 'reusable' / 'usability'
+        return True
+    if re.search(
+        r"\bus[\s\-–—]?remote\b|\bremote[\s\-–,–—]?us\b|\bremote,\s*u\.?s\.?\b|\bu\.?s\.?\s*remote\b|"
+        r"\banywhere in the us\b|\bwithin the united states\b|\bus only\b|"
+        r"\bremote - us\b|\bremote us\b|\bremote, us\b|\bus - remote\b|\bus remote\b|"
+        r"\bremote \(us|\bremote \(u\.s",
+        t,
+    ):
+        return True
+    return False
+
+
 def is_us_remote(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
+    loc_l = (location or "").lower()
     blob = f"{title} {location} {description[:2000]}".lower()
+    # Structured location wins: EU/UK/etc. office lists without US → not US-remote.
+    non_us_loc = any(
+        x in loc_l
+        for x in (
+            "netherlands",
+            "amsterdam",
+            "germany",
+            "berlin",
+            "frankfurt",
+            "spain",
+            "madrid",
+            "barcelona",
+            "united kingdom",
+            "england",
+            "london",
+            "ireland",
+            "dublin",
+            "france",
+            "paris",
+            "portugal",
+            "lisbon",
+            "poland",
+            "warsaw",
+            "india",
+            "bangalore",
+            "bengaluru",
+            "hyderabad",
+            "canada",
+            "toronto",
+            "vancouver",
+            "australia",
+            "sydney",
+            "melbourne",
+            "singapore",
+            "israel",
+            "tel aviv",
+            "emea",
+            "europe",
+            "latam",
+            "apac",
+        )
+    )
+    loc_has_us = _explicit_us_mention(loc_l) or bool(
+        re.search(
+            r"\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia|"
+            r"hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|"
+            r"michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|"
+            r"new mexico|new york|nyc|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|"
+            r"rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington|"
+            r"west virginia|wisconsin|wyoming|austin|seattle|chicago|denver|boston|atlanta|dallas)\b",
+            loc_l,
+        )
+    )
+    if non_us_loc and not loc_has_us:
+        return False
     if any(
         x in blob
         for x in (
@@ -87,10 +161,12 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             "nigeria",
             "kenya",
             "poland only",
+            "netherlands",
+            "spain",
         )
     ):
-        # Allow if also explicitly US remote
-        if not any(x in blob for x in ("united states", "usa", "u.s.", "us-based", "us based", "remote - us", "remote us")):
+        # Allow only if also explicitly US remote (word-bounded)
+        if not _explicit_us_mention(blob):
             return False
     remote_ok = any(
         x in blob
@@ -103,32 +179,7 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             "fully remote",
         )
     )
-    us_ok = any(
-        x in blob
-        for x in (
-            "united states",
-            "usa",
-            "u.s.",
-            "us-based",
-            "us based",
-            "remote - us",
-            "remote us",
-            "remote, us",
-            "us - remote",
-            "us remote",
-            "remote (us",
-            "remote (u.s",
-            "remote - united states",
-            "anywhere in the us",
-            "within the united states",
-            "us only",
-        )
-    ) or bool(
-        re.search(
-            r"\bus[\s\-–—]?remote\b|\bremote[\s\-–,–—]?us\b|\bremote,\s*u\.?s\.?\b|\bu\.?s\.?\s*remote\b",
-            blob,
-        )
-    )
+    us_ok = _explicit_us_mention(blob)
     # Greenhouse-style "Remote - Austin" / "Remote - CA" / "Remote - NYC" (US city/state, no country word)
     if not us_ok and remote_ok:
         loc_l = (location or "").lower()

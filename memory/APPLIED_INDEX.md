@@ -192,3 +192,11 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
 2026-11-14 | talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | dry-run
 2026-11-14 | Rackner | Data Integration Engineer — Federal Health IT | https://job-boards.greenhouse.io/rackner/jobs/4752876005 | dry-run
+2026-11-14 | clickhouse | Data Platform Engineer | https://jobs.ashbyhq.com/clickhouse/6d2d05da-c1f4-4ff6-9d02-a30306940857 | dry-run
+2026-11-14 | clickhouse | Data Platform Engineer | https://jobs.ashbyhq.com/clickhouse/6d2d05da-c1f4-4ff6-9d02-a30306940857 | needs-me
+2026-11-14 | clickhouse | Data Platform Engineer | https://jobs.ashbyhq.com/clickhouse/6d2d05da-c1f4-4ff6-9d02-a30306940857 | skipped: not US remote (EU locations; usa substring false positive)
+2026-11-14 | MongoDB | Senior Software Engineer, Database Integration & Observability | https://www.mongodb.com/careers/job/?gh_jid=8352433 | dry-run
+2026-11-14 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
+2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
