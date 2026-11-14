@@ -247,3 +247,18 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | Balor Games | Senior Analytics Engineer | https://jobs.ashbyhq.com/balorgames/b9792276-16f9-46e1-a1ca-93fa97e3e12f | needs-me
 2026-11-14 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | skipped
 2026-11-14 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
+2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | dry-run
+2026-11-14 | Lyra Health | Sr. Data Engineer | https://jobs.lever.co/lyrahealth/59d16304-6164-44b0-8895-cf26ca90c8a6 | dry-run
+2026-11-14 | Quandri | Senior Data Engineer | https://jobs.lever.co/quandri/eaeee943-f9a3-4d02-9462-6648181a33cc/ | dry-run
+2026-11-14 | Qventus | Senior Data Engineer  | https://www.qventus.com/company/working-qventus/job?gh_jid=4429668009 | dry-run
+2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | dry-run
+2026-11-14 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | skipped
+2026-11-14 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
+2026-11-14 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | dry-run
+2026-11-14 | Kit | Senior Analytics Engineer | https://jobs.ashbyhq.com/kit/cecc518c-2f11-433f-9f75-e9960330ccb9 | skipped
+2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | dry-run
+2026-11-14 | instructure | Senior Analytics Engineer | https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213 | dry-run
+2026-11-14 | Balor Games | Senior Analytics Engineer | https://jobs.ashbyhq.com/balorgames/b9792276-16f9-46e1-a1ca-93fa97e3e12f | dry-run
+2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | skipped
+2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | needs-me
+2026-11-14 | Current | Senior Data Engineer | https://jobs.ashbyhq.com/current-advisors/c9dc1842-cf43-462b-b37c-34db15abb1aa | needs-me

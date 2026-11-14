@@ -108,14 +108,30 @@ def submit_ashby_basic(
         if phone:
             fill_label(r"Phone", phone)
         fill_label(r"LinkedIn", linkedin)
-        fill_label(r"Why does|good fit|interests you about this", why_fit)
-        fill_label(r"How did you hear", "Company website")
+        # Standing address from Memory PROFILE
+        fill_label(r"Current address|Street address|Address line", "1601 Scottsdale Ln")
+        fill_label(r"^City", "Austin")
+        fill_label(r"^State", "TX")
+        fill_label(r"Zip|Postal", "78754")
+        try:
+            from .salary import salary_from_memory
+
+            sal = str(salary_from_memory() or "120000")
+        except Exception:
+            sal = "120000"
+        fill_label(r"Desired salary|salary expectation|salary requirements", sal)
+        fill_label(r"Why does|good fit|interests you about this|significant project|why you are interested", why_fit)
+        fill_label(r"How did you hear|How you learned|learned about", "Company website")
         fill_label(r"favourite game|favorite game", "Portal — elegant puzzle design and clean systems thinking.")
+        fill_label(r"favorite type of nut|favourite type of nut", "almond")
         fill_label(r"Something we should know", "Open to a 6-month contract; Austin TX; F1-OPT authorized, no sponsorship needed.")
         fill_label(r"previously employed or contracted", "No")
         fill_label(r"non-compete|non-solicitation|confidentiality agreement", "No")
-        click_yes_no(r"eligible to work in the US|authorized to work at the location", "Yes")
-        click_yes_no(r"require (visa )?sponsorship", "No")
+        click_yes_no(
+            r"eligible to work in the US|authorized to work at the location|authorized to work in the US",
+            "Yes",
+        )
+        click_yes_no(r"require (visa )?sponsorship|require sponsorship", "No")
         click_yes_no(r"18 years of age", "Yes")
         if spell_twelve:
             fill_label(r"Spell the number", "twelve")
@@ -127,6 +143,8 @@ def submit_ashby_basic(
                 page.locator('input[type=checkbox]').last.check(force=True, timeout=2000)
             except Exception:
                 pass
+        # Re-assert LinkedIn after autofill may inject a wrong URL
+        fill_label(r"LinkedIn", linkedin)
         # EEO radios
         try:
             page.get_by_text("Female", exact=True).first.click(timeout=2000)
