@@ -1,23 +1,22 @@
-# Overnight hunt — 2026-11-15 12:05 CST
+# Overnight hunt — 2026-11-15 14:12 CST
 
 - Window open: **False**
 - Salary set: **120000**
 - Curve gate ok: **False**
-- Curve blockers: Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.
+- Curve blockers: Outside window (now 2026-11-15 14:12 CST). Applies only 08:00–12:00 America/Chicago.
 - Morning packet day: **2026-11-16**
 - Ready submits report: `/workspace/reports/2026-11-16/READY_SUBMITS.md`
 - Submit handoff: `/workspace/reports/2026-11-16/SUBMIT_HANDOFF.json`
-- MongoDB ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.']
-- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
-- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
+- MongoDB ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 14:12 CST). Applies only 08:00–12:00 America/Chicago.', 'MongoDB verification failed: age fail-closed: first_published=2026-11-05T14:17:34-05:00']
+- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 14:12 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
+- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 14:12 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
 - Watchlist hits: **4**
-- Hunt hits (≤10d): **65**
+- Hunt hits (≤10d): **64**
 - Near-miss (age watch only): **0**
 - Applied URLs excluded: **6**
-- New ≥7 packets (non-Curve, not applied): **33**
+- New ≥7 packets (non-Curve, not applied): **32**
 
 ## Eligible ≥7
-- MongoDB / Senior Software Engineer, Database Integration & Observability — [9.6, 9.6, 9.6] — https://www.mongodb.com/careers/job/?gh_jid=8352433
 - Natera / Sr. Forward Deployed Data Engineer — [8.0, 8.0, 8.8] — https://job-boards.greenhouse.io/natera/jobs/6255111004
 - Anduril Industries / Data Platform Lead, Product Lifecycle Operations — [9.7, 9.7, 9.7] — https://boards.greenhouse.io/andurilindustries/jobs/5287472007?gh_jid=5287472007
 - Anduril Industries / Production Master Data Engineer — [8.8, 8.8, 10.0] — https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007
@@ -53,7 +52,6 @@
 
 ## All scored non-Curve
 - Gusto, Inc. / Software Engineer,  Financial Data & Payments — [5.0, 5.0, 5.0] — skip_low_score
-- MongoDB / Senior Software Engineer, Database Integration & Observability — [9.6, 9.6, 9.6] — candidate
 - Natera / Sr. Forward Deployed Data Engineer — [8.0, 8.0, 8.8] — candidate
 - BetterHelp / Senior Analytics Engineer — [] — skip_already_applied
 - Life360 / Senior Data Engineer, Ads Data (AI Native) — [] — skip_already_applied

@@ -1,0 +1,24 @@
+# Catch note — Anduril Industries / Data Platform Lead, Product Lifecycle Operations
+
+- Stretch: JD asks for 6+ years; Susmitha has ~5. Call this a **stretch** — do not hide the gap in the score.
+- Must be true before applying:
+  - All bullets remain factual from base resume
+  - Work auth Yes (F1-OPT); sponsorship No (Susmitha-confirmed in Memory)
+  - Posted pay >= $120k if pay is listed
+  - Apply on company ATS only (never LinkedIn Easy Apply)
+- Dealbreakers checked:
+  - location=Costa Mesa, California, United States
+  - sponsorship answer No (Memory); skip employers that forbid OPT/F1 outright
+  - travel/on-site checked via JD patterns
+  - min pay $120k when posted
+  - Dealbreaker clearance: security clearance
+  - Clearance/export-control gate: CLEARANCE ELIGIBILITY - This position requires eligibility to obtain and maintain a U.S. security clearance.
+  - Clearance/export-control gate: If you have held a U.S. security clearance in the past, what clearance level have you held?
+- Remove if I cannot back it up in an interview:
+  - (none beyond base resume facts)
+- Timeline flags: Citi Jan 2020–May 2023; education Jan 2024–Dec 2025; Optum May 2025–Present; gap ~May 2023–Jan 2024
+- Honest tailored score (b): 9.7/10 (apply threshold ≥ 7)
+- Version to submit: **(a) reorder-only** unless (b) approved
+- Additions flagged verify-before-applying:
+  - (none)
+- Work auth: F1-OPT → Authorized to work **Yes**; sponsorship answer **No** (Memory)
