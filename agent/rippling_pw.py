@@ -195,10 +195,29 @@ def submit_rippling_basic(
         _following_input(page, r"^LinkedIn Link\*|^LinkedIn", linkedin)
         if not _following_input(page, r"favorite data project|favourite data project", story, textarea=True):
             _following_input(page, r"favorite data project|favourite data project", story)
+        # Curve-style long-form / standing answers
+        if not _following_input(
+            page,
+            r"data platform you built|significantly improved|What was broken",
+            story,
+            textarea=True,
+        ):
+            _following_input(page, r"data platform you built|significantly improved", story)
+        try:
+            from .salary import salary_from_memory
+
+            sal = str(salary_from_memory() or "120000")
+        except Exception:
+            sal = "120000"
+        _following_input(page, r"salary expectations|salary expectation", sal)
+        _following_input(page, r"How did you hear|where did you find this job", "Company website")
+        _following_input(page, r"years of related experience", "5")
+        _select_following(page, r"home office.*reliable internet|reliable internet", "Yes")
 
         # Work auth — permanently authorized: No (F1-OPT is temporary)
         _select_following(page, r"permanently authorized to work", "No")
         _select_following(page, r"require sponsorship|sponsorship \(STEM", "No")
+        _select_following(page, r"require sponsorship to work in the US", "No")
 
         # State of residence (BookNook TX-ok list)
         try:

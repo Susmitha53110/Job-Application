@@ -24,6 +24,8 @@ def detect_ats(url: str) -> str | None:
         return "greenhouse"
     if "ashbyhq.com" in u:
         return "ashby"
+    if "ats.rippling.com" in u or "rippling.com" in u:
+        return "rippling"
     return None
 
 
@@ -56,7 +58,7 @@ def _packet_auto_submitable(pkt: JobPacket) -> tuple[bool, str | None]:
     if "natera" in company_l or "natera" in url_l:
         return False, "Natera OTP needs-me (Gmail declined)"
     ats = detect_ats(pkt.url or "")
-    if ats not in {"greenhouse", "ashby"}:
+    if ats not in {"greenhouse", "ashby", "rippling"}:
         return False, f"ATS not auto-submittable ({ats})"
     if not pkt.resume_a or not Path(pkt.resume_a).exists():
         return False, "missing tailored resume"
@@ -74,6 +76,7 @@ def _playwright_submit(
     """Submit via Playwright. Returns (success, needs_me, confirmation, raw_result)."""
     from .ashby_pw import submit_ashby_basic
     from .greenhouse_pw import submit_greenhouse_basic
+    from .rippling_pw import submit_rippling_basic
 
     # Prefer short resumes/submit/Susmitha_<key>.docx when present.
     short = paths.ROOT / "resumes" / "submit" / f"Susmitha_{company.lower().replace(' ', '_')}.docx"
@@ -89,6 +92,15 @@ def _playwright_submit(
         )
     elif ats == "ashby":
         res = submit_ashby_basic(
+            url=url,
+            resume=resume_path,
+            proof_dir=proof_dir,
+            company=company,
+            require_window=True,
+            fill_only=False,
+        )
+    elif ats == "rippling":
+        res = submit_rippling_basic(
             url=url,
             resume=resume_path,
             proof_dir=proof_dir,

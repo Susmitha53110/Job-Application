@@ -463,6 +463,12 @@ DEFAULT_RIPPLING_BOARDS = [
     "modern-health",
     "booknook-inc",
     "genlogs-corporation",
+    # Expanded 2026-11-15 (age-filtered at hunt time)
+    "mytra",
+    "flyover-chicago",
+    "mykaarma",
+    "camlin-careers",
+    "rippling",
 ]
 
 DEFAULT_LEVER_COMPANIES = [
