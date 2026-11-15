@@ -1,0 +1,72 @@
+{
+  "day": "2026-11-15",
+  "now": "2026-11-15T07:55:38.986739-06:00",
+  "window_open": false,
+  "window_reason": "Outside window (now 2026-11-15 07:55 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "queue_n": 6,
+  "blocked_n": 0,
+  "items": [
+    {
+      "key": "xAI",
+      "company": "SpaceXSI",
+      "role": "Analytics Engineer (X)",
+      "ats": "greenhouse",
+      "age_ok": true,
+      "age_detail": "posted=2026-11-05T21:03:11-05:00",
+      "resume_exists": true,
+      "url": "https://job-boards.greenhouse.io/xai/jobs/5286889007"
+    },
+    {
+      "key": "Verkada",
+      "company": "Verkada",
+      "role": "Senior Software Engineer, Business Systems - Data Trust",
+      "ats": "greenhouse",
+      "age_ok": true,
+      "age_detail": "posted=2026-11-09T15:25:22-05:00",
+      "resume_exists": true,
+      "url": "https://job-boards.greenhouse.io/verkada/jobs/5264711007"
+    },
+    {
+      "key": "Abnormal",
+      "company": "Abnormal",
+      "role": "Software Engineer I, Data Platforms",
+      "ats": "greenhouse",
+      "age_ok": true,
+      "age_detail": "posted=2026-11-12T21:06:01-05:00",
+      "resume_exists": true,
+      "url": "https://job-boards.greenhouse.io/embed/job_app?for=abnormalsecurity&token=8196352003"
+    },
+    {
+      "key": "Merge",
+      "company": "merge",
+      "role": "Analytics Engineer",
+      "ats": "ashby",
+      "age_ok": true,
+      "age_detail": "posted=2026-11-13",
+      "resume_exists": true,
+      "url": "https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd"
+    },
+    {
+      "key": "SpotOn",
+      "company": "spoton",
+      "role": "Senior Analytics Platform Engineer",
+      "ats": "ashby",
+      "age_ok": true,
+      "age_detail": "posted=2026-11-10",
+      "resume_exists": true,
+      "url": "https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681"
+    },
+    {
+      "key": "Clera",
+      "company": "clera",
+      "role": "Senior Data Engineer",
+      "ats": "ashby",
+      "age_ok": true,
+      "age_detail": "posted=2026-11-12",
+      "resume_exists": true,
+      "url": "https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44"
+    }
+  ],
+  "blocked": [],
+  "next": "At 08:00 CT run: python3 -m agent.morning_queue_submit"
+}
