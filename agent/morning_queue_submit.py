@@ -33,16 +33,8 @@ class QueueItem:
     resume: Path
 
 
-# Authoritative 2026-11-15 order (also in reports/.../MORNING_QUEUE.md)
+# Authoritative 2026-11-16 order (xAI/MongoDB/Mercer aged out overnight)
 FALLBACK_QUEUE: list[dict] = [
-    {
-        "key": "xAI",
-        "company": "xAI",
-        "role": "Analytics Engineer (X)",
-        "url": "https://job-boards.greenhouse.io/xai/jobs/5286889007",
-        "ats": "greenhouse",
-        "resume": "resumes/submit/Susmitha_xai_2026-11-15.docx",
-    },
     {
         "key": "Verkada",
         "company": "Verkada",
@@ -83,8 +75,6 @@ FALLBACK_QUEUE: list[dict] = [
         "ats": "ashby",
         "resume": "resumes/submit/Susmitha_clera_2026-11-15.docx",
     },
-    # Dropped 2026-11-15 morning: BranchInsurance + Amplitude aged out
-    # (Ashby datePosted 2026-11-05 date-only → older than 10d).
 ]
 
 
