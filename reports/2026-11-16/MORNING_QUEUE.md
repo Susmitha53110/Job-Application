@@ -19,21 +19,21 @@ Target: **20–25** in 08:00–12:00 CT. Gmail declined — paste OTP in chat.
 ## Priority 1 — auto queue at 8am (`python3 -m agent queue-submit`)
 | # | Company | Role | ATS |
 |---|---------|------|-----|
-| 1 | Verkada | Sr SWE Data Trust | GH |
-| 2 | Abnormal | SWE I Data Platforms | GH embed |
-| 3 | Merge | Analytics Engineer | Ashby |
-| 4 | SpotOn | Senior Analytics Platform | Ashby |
-| 5 | Clera | Senior Data Engineer | Ashby |
-| 6 | Natera | Sr Forward Deployed DE | GH |
-| 7 | Anduril | Production Master Data Engineer | GH |
-| 8 | Commure | Sr SWE Data Platform | Ashby |
-| 9 | Solvd | Knowledge Ingestion | Ashby |
-| 10 | Amplitude | Sr DE Marketing & GTM | Ashby |
-| 11 | Talkiatry | Analytics Engineer | Ashby |
-| 12 | The Knot | Lead AE | GH (stretch) |
-| 13 | Extend | Senior Analytics Engineer | GH — if OTP ready |
-| 14 | Keebo | Senior Data Engineer | GH — if OTP ready |
-| 15 | BookNook | Senior Analytics Engineer | Rippling (fill-only verified; no reCAPTCHA iframe) |
+| 1 | **BookNook** | Senior Analytics Engineer | **Rippling** (CAPTCHA-light; submit first) |
+| 2 | Verkada | Sr SWE Data Trust | GH |
+| 3 | Abnormal | SWE I Data Platforms | GH embed |
+| 4 | Merge | Analytics Engineer | Ashby |
+| 5 | SpotOn | Senior Analytics Platform | Ashby |
+| 6 | Clera | Senior Data Engineer | Ashby |
+| 7 | Natera | Sr Forward Deployed DE | GH |
+| 8 | Anduril | Production Master Data Engineer | GH |
+| 9 | Commure | Sr SWE Data Platform | Ashby |
+| 10 | Solvd | Knowledge Ingestion | Ashby |
+| 11 | Amplitude | Sr DE Marketing & GTM | Ashby |
+| 12 | Talkiatry | Analytics Engineer | Ashby |
+| 13 | The Knot | Lead AE | GH (stretch) |
+| 14 | Extend | Senior Analytics Engineer | GH — if OTP ready |
+| 15 | Keebo | Senior Data Engineer | GH — if OTP ready |
 
 Then: `hunt_all` → apply new ≤10d b≥7.
 

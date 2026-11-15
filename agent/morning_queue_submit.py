@@ -34,8 +34,17 @@ class QueueItem:
     resume: Path
 
 
-# Authoritative 2026-11-16 order (xAI/MongoDB/Mercer/Instructure/Branch aged out)
+# Authoritative 2026-11-16 order — BookNook first (Rippling, no reCAPTCHA on probe);
+# then GH/Ashby CAPTCHA retries; OTP last. Aged out: xAI/MongoDB/Mercer/Instructure/Branch.
 FALLBACK_QUEUE: list[dict] = [
+    {
+        "key": "BookNook",
+        "company": "BookNook",
+        "role": "Senior Analytics Engineer",
+        "url": "https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5",
+        "ats": "rippling",
+        "resume": "resumes/submit/Susmitha_booknook_2026-11-15.docx",
+    },
     {
         "key": "Verkada",
         "company": "Verkada",
@@ -148,14 +157,6 @@ FALLBACK_QUEUE: list[dict] = [
         "ats": "greenhouse",
         "resume": "resumes/submit/Susmitha_keebo.docx",
     },
-    {
-        "key": "BookNook",
-        "company": "BookNook",
-        "role": "Senior Analytics Engineer",
-        "url": "https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5",
-        "ats": "rippling",
-        "resume": "resumes/submit/Susmitha_booknook_2026-11-15.docx",
-    },
 ]
 
 
@@ -200,7 +201,7 @@ def _parse_kits(day: str) -> list[QueueItem]:
 def load_queue(day: str | None = None) -> list[QueueItem]:
     day = day or chicago_today().isoformat()
     parsed = _parse_kits(day)
-    # Prefer FALLBACK_QUEUE order (Verkada first); overlay kit metadata when present.
+    # Prefer FALLBACK_QUEUE order (BookNook first); overlay kit metadata when present.
     by_url = {p.url.rstrip("/").lower(): p for p in parsed}
     by_key = {p.key.lower(): p for p in parsed}
     out: list[QueueItem] = []

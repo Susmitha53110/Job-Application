@@ -1,9 +1,9 @@
 # Ready packets — 2026-11-16
 
 Queue order (FALLBACK / queue-submit):
-1. Verkada 2. Abnormal 3. Merge 4. SpotOn 5. Clera
-6. Natera 7. Anduril PME 8. Commure 9. Solvd 10. Amplitude Mkt
-11. Talkiatry 12. TheKnot 13. Extend (OTP) 14. Keebo (OTP)
-15. BookNook (Rippling — fill-only verified; no reCAPTCHA iframe on probe)
+1. **BookNook** (Rippling — CAPTCHA-light; fill-only verified)
+2. Verkada 3. Abnormal 4. Merge 5. SpotOn 6. Clera
+7. Natera 8. Anduril PME 9. Commure 10. Solvd 11. Amplitude Mkt
+12. Talkiatry 13. TheKnot 14. Extend (OTP) 15. Keebo (OTP)
 
 Then hunt_all. Skip: Citi/Optum, citizen/clearance, Jobgether FunCAPTCHA, Velosio iCIMS, Branch age-out, MongoDB/Mercer/Instructure/xAI age-outs.
