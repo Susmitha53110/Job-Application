@@ -1,4 +1,4 @@
-# Morning status — 2026-11-15 (~08:10 CT)
+# Morning status — 2026-11-15 (~08:15 CT)
 
 Window: **OPEN**. Valid confirms: **0**.
 
@@ -12,9 +12,17 @@ Window: **OPEN**. Valid confirms: **0**.
 | SpotOn Senior Analytics Platform | Ashby image reCAPTCHA after Submit — needs you |
 | Clera Senior Data Engineer | Ashby image reCAPTCHA after Submit — needs you |
 
-## Needs you
-Paste OTP (MongoDB / Extend / Keebo) or solve CAPTCHA on the filled forms above.
-Gmail declined — no re-auth. See `MORNING_UNLOCK_RUNBOOK.md`.
+## OTP unlocks (forms reached security code)
+| Company | Status |
+|---------|--------|
+| **Extend** | Waiting for 8-char email code → paste in chat |
+| **Keebo** | Waiting for 8-char email code → paste in chat |
+| MongoDB | Hit reCAPTCHA before OTP this morning |
+
+## Needs you (priority)
+1. Paste **Extend** + **Keebo** 8-char Greenhouse OTPs from `dsusmitha55@gmail.com`
+2. Solve CAPTCHA on filled queue forms (xAI first — age edge ~21:03 CT)
+Gmail declined — no re-auth.
 
 ## Next
-CAPTCHA/OTP unlocks → hunt_all → continue toward 20–25.
+OTP paste → finish Extend/Keebo → CAPTCHA retries → hunt toward 20–25.
