@@ -30,12 +30,12 @@ Runner: `python3 -m agent.morning_queue_submit` (window-gated). **xAI age ~9.5d 
 | 4 | Merge | Analytics Engineer | 8.6 | `applications/applied/2026-11-15/Merge_Analytics_Engineer/` |
 | 5 | SpotOn | Senior Analytics Platform Engineer | 7.8 | `applications/applied/2026-11-15/SpotOn_Senior_Analytics_Platform_Engineer/` |
 | 6 | Clera | Senior Data Engineer | 7.6 | `applications/applied/2026-11-15/Clera_Senior_Data_Engineer/` |
-| 7 | BranchInsurance | Analytics Engineer II | 7.3 | `applications/applied/2026-11-15/BranchInsurance_Analytics_Engineer_II/` |
-| 8 | Amplitude | Software Engineer II, Analytics Compute Platform | 9.0 | `applications/applied/2026-11-15/Amplitude_SWE_II_Analytics_Compute/` (may hit reCAPTCHA on submit; Marketing GTM twin CAPTCHA-blocked) |
+
+**Dropped 2026-11-15 06:10 CT age gate:** BranchInsurance AE II + Amplitude SWE II Compute (Ashby `posted=2026-11-05` date-only → older than 10d).
 
 **Already applied (skip):** Clera Senior Data Integration Engineer (2026-11-12); Life360 Ads DE (Jobgether mirror — already applied via Greenhouse).  
 **Skip:** SpaceX Starship DE (ITAR/citizen), Rocket Lab (citizen), xAI Sr SWE DE (b=6.0), ClickHouse (EU only).  
-**Aged out:** Ontic AE (published 2026-10-29), mux/Machinify, evermore AE gone from board.  
+**Aged out:** Ontic AE, mux/Machinify, BranchInsurance, Amplitude Compute, evermore AE gone from board.  
 **Age unlocked (iCIMS needs-me, not auto):** Velosio Data Engineer — posted 2026-11-11.
 
 ## Priority 2 — after Priority 1, one hunt_all then apply

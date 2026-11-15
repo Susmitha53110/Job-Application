@@ -1,6 +1,6 @@
 # Morning unlock runbook — 2026-11-15
 
-Use **after** `python3 -m agent queue-submit` finishes the 8 auto roles.
+Use **after** `python3 -m agent queue-submit` finishes the **6** auto roles (Branch/Amplitude aged out overnight).
 Window: 08:00–12:00 America/Chicago only. Gmail declined — paste 8-char OTP in chat (no re-auth).
 
 Standing answers: email `dsusmitha55@gmail.com` · phone `9132073787` · LinkedIn `https://www.linkedin.com/in/susmitha-dodla-a05ab92b8` · salary `120000` · sponsorship **No** · relocate/hybrid **Yes prefer remote** · Female / Asian / not Hispanic / not veteran / no disability · how heard **Company website**.

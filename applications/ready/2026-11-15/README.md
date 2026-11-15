@@ -8,5 +8,4 @@ Use at 08:00 CT. Prefer resume_b (tailored). Gmail declined — paste OTP in cha
 - **merge / Analytics Engineer** b=8.6 — kit `applications/ready/2026-11-15/Merge_SUBMIT_KIT.md` — resume `Susmitha_merge_2026-11-15.docx`
 - **spoton / Senior Analytics Platform Engineer** b=7.8 — kit `applications/ready/2026-11-15/SpotOn_SUBMIT_KIT.md` — resume `Susmitha_spoton_2026-11-15.docx`
 - **clera / Senior Data Engineer** b=7.6 — kit `applications/ready/2026-11-15/Clera_SUBMIT_KIT.md` — resume `Susmitha_clera_2026-11-15.docx`
-- **BranchInsurance / Analytics Engineer II** b=7.3 — kit `applications/ready/2026-11-15/BranchInsurance_SUBMIT_KIT.md` — resume `Susmitha_branchinsurance_2026-11-15.docx`
-- **Amplitude / Software Engineer II, Analytics Compute Platform Team** b=9.0 — kit `applications/ready/2026-11-15/Amplitude_SUBMIT_KIT.md` — resume `Susmitha_amplitude_swe_ii_2026-11-15.docx`
+- ~~BranchInsurance / Amplitude~~ — **aged out 2026-11-15** (kits moved to `aged_out/`)

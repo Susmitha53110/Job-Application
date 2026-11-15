@@ -83,22 +83,8 @@ FALLBACK_QUEUE: list[dict] = [
         "ats": "ashby",
         "resume": "resumes/submit/Susmitha_clera_2026-11-15.docx",
     },
-    {
-        "key": "BranchInsurance",
-        "company": "BranchInsurance",
-        "role": "Analytics Engineer II",
-        "url": "https://jobs.ashbyhq.com/BranchInsurance/728e3815-8d03-40ca-8f6f-86cef305965b",
-        "ats": "ashby",
-        "resume": "resumes/submit/Susmitha_branchinsurance_2026-11-15.docx",
-    },
-    {
-        "key": "Amplitude",
-        "company": "Amplitude",
-        "role": "Software Engineer II, Analytics Compute Platform Team",
-        "url": "https://jobs.ashbyhq.com/amplitude/f65ba1d9-f809-442f-88df-453241e8d509",
-        "ats": "ashby",
-        "resume": "resumes/submit/Susmitha_amplitude_swe_ii_2026-11-15.docx",
-    },
+    # Dropped 2026-11-15 morning: BranchInsurance + Amplitude aged out
+    # (Ashby datePosted 2026-11-05 date-only → older than 10d).
 ]
 
 

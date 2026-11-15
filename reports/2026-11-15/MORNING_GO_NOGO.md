@@ -6,20 +6,19 @@
 - `python3 -m agent.morning_queue_submit` available
 - xAI still ≤10d (published 2026-11-05 ~21:03 CT — **submit first**)
 
-## Queue (submit order)
-1. xAI Analytics Engineer (X) — GH — may reCAPTCHA
+## Queue (submit order) — 6 roles after 06:10 CT age drop
+1. xAI Analytics Engineer (X) — GH — may reCAPTCHA (**submit first**; ages ~21:03 CT)
 2. Verkada Data Trust — GH
 3. Abnormal SWE I Data Platforms — GH embed
 4. Merge Analytics Engineer — Ashby
 5. SpotOn Senior Analytics Platform — Ashby
 6. Clera Senior Data Engineer — Ashby
-7. BranchInsurance Analytics Engineer II — Ashby
-8. Amplitude SWE II Analytics Compute — Ashby (may reCAPTCHA)
 
 Then: OTP (MongoDB/Extend/Keebo) if pasted → CAPTCHA retries → `hunt_all`.
 
 ## NO-GO / skip
 - mux, Machinify — aged
+- **BranchInsurance, Amplitude Compute — aged out overnight (posted 2026-11-05 date-only)**
 - SpaceX / Rocket Lab — citizen/ITAR
 - Clera Integration — already applied
 - Jobgether Ads — Life360 already applied
