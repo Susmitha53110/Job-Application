@@ -33,11 +33,9 @@ Target: **20–25** in 08:00–12:00 CT. Gmail declined — paste OTP in chat.
 | 12 | The Knot | Lead AE | GH (stretch) |
 | 13 | Extend | Senior Analytics Engineer | GH — if OTP ready |
 | 14 | Keebo | Senior Data Engineer | GH — if OTP ready |
+| 15 | BookNook | Senior Analytics Engineer | Rippling (fill-only verified; no reCAPTCHA iframe) |
 
 Then: `hunt_all` → apply new ≤10d b≥7.
-
-## Watch (not in GH/Ashby queue-submit)
-- BookNook Senior AE — Rippling ≤10d — needs Rippling submit path / Cloudflare possible
 
 ## Skip
 Citi/Optum · SpaceX/Rocket Lab/NinjaOne/Air citizen · Velosio iCIMS · Jobgether FunCAPTCHA · Staff/Principal

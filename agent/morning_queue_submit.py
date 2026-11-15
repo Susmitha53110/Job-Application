@@ -13,6 +13,7 @@ from pathlib import Path
 from . import paths
 from .ashby_pw import submit_ashby_basic
 from .greenhouse_pw import submit_greenhouse_basic
+from .rippling_pw import submit_rippling_basic
 from .log_writer import append_applied_index, load_applied_urls, url_already_applied
 from .window import check_apply_window, chicago_today
 
@@ -147,6 +148,14 @@ FALLBACK_QUEUE: list[dict] = [
         "ats": "greenhouse",
         "resume": "resumes/submit/Susmitha_keebo.docx",
     },
+    {
+        "key": "BookNook",
+        "company": "BookNook",
+        "role": "Senior Analytics Engineer",
+        "url": "https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5",
+        "ats": "rippling",
+        "resume": "resumes/submit/Susmitha_booknook_2026-11-15.docx",
+    },
 ]
 
 
@@ -169,7 +178,12 @@ def _parse_kits(day: str) -> list[QueueItem]:
             # try resumes/submit basename
             alt = Path("resumes/submit") / resume.name if resume.name else Path()
             resume = alt if alt.exists() else resume
-        ats = "ashby" if "ashbyhq.com" in url else "greenhouse"
+        if "ashbyhq.com" in url:
+            ats = "ashby"
+        elif "rippling.com" in url:
+            ats = "rippling"
+        else:
+            ats = "greenhouse"
         items.append(
             QueueItem(
                 key=kit.stem.replace("_SUBMIT_KIT", ""),
@@ -247,6 +261,19 @@ def submit_queue(*, day: str | None = None, dry: bool = False, limit: int | None
             continue
         if item.ats == "ashby":
             r = submit_ashby_basic(
+                url=item.url,
+                resume=item.resume,
+                proof_dir=proof,
+                company=item.company,
+                name=NAME,
+                email=EMAIL,
+                phone=PHONE,
+                linkedin=LINKEDIN,
+                require_window=True,
+            )
+            ok, needs, conf = r.success, r.needs_me, r.confirmation_text
+        elif item.ats == "rippling":
+            r = submit_rippling_basic(
                 url=item.url,
                 resume=item.resume,
                 proof_dir=proof,

@@ -9,7 +9,8 @@
 1. Verkada → Abnormal → Merge → SpotOn → Clera
 2. Natera → Anduril PME → Commure → Solvd → Amplitude Mkt → Talkiatry → TheKnot
 3. OTP: Extend (age edge ~13:30 CT) → Keebo
-4. hunt_all
+4. BookNook Rippling (new auto path — fill-only verified 11-15)
+5. hunt_all
 
 ## NO-GO
 - xAI / MongoDB / Mercer / Instructure / BranchInsurance — aged
