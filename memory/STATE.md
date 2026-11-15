@@ -9,7 +9,7 @@
 - ramp_day: 2
 - daily_limit: 25
 - last_run_date: 2026-11-15
-- last_run_summary: "2026-11-15 window closed 12:03 CT — valid confirms=0 (CAPTCHA/OTP wall); overnight prep for 2026-11-16 Verkada-first queue ready"
+- last_run_summary: "overnight_hunt 2026-11-15T12:11-06:00: window=False; salary=set; hunt=65; ge7=33; curve_gate=False"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
