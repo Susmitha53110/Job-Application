@@ -1,23 +1,22 @@
-# Morning queue — 2026-11-16 (prepare @ 12:04 CT 11-15)
+# Morning queue — 2026-11-16 (expanded prepare @ ~12:15 CT 11-15)
 
 Target: **20–25** in 08:00–12:00 CT. Gmail declined — paste OTP in chat.
 
-## Aged out overnight (do not retry)
-- xAI Analytics Engineer (X) — ages ~21:03 CT 11-15 (outside window — lost)
-- MongoDB — aged ~14:17 CT 11-15
-- Mercer Advisors — ages ~16:37 CT 11-15
+## Aged out (do not retry)
+- xAI Analytics Engineer (X) — aged ~21:03 CT 11-15
+- MongoDB — ages ~14:17 CT 11-15 (dead on 11-16)
+- Mercer Advisors — ages ~16:37 CT 11-15 (dead on 11-16)
 - Instructure — Ashby datePosted 2026-11-06 date-only fails on 11-16
+- BranchInsurance Analytics Engineer II — posted 2026-11-05 already >10d
 
 ## Priority 0 — human unlock if pasted
 | # | Company | Blocker | Note |
 |---|---------|---------|------|
 | 1 | Extend | OTP | ages ~13:30 CT 11-16 — unlock early |
 | 2 | Keebo | OTP | |
-| 3 | Verkada / Abnormal / Merge / SpotOn / Clera / Anduril / Natera / Commure / Solvd / Talkiatry / TheKnot / Amplitude Mkt | CAPTCHA | filled kits from 11-15 |
+| 3 | CAPTCHA list below | CAPTCHA | filled kits from 11-15 |
 
-## Priority 1 — auto queue at 8am (CAPTCHA likely)
-Runner: `python3 -m agent queue-submit` (update FALLBACK to this order).
-
+## Priority 1 — auto queue at 8am (`python3 -m agent queue-submit`)
 | # | Company | Role | ATS |
 |---|---------|------|-----|
 | 1 | Verkada | Sr SWE Data Trust | GH |
@@ -25,10 +24,10 @@ Runner: `python3 -m agent queue-submit` (update FALLBACK to this order).
 | 3 | Merge | Analytics Engineer | Ashby |
 | 4 | SpotOn | Senior Analytics Platform | Ashby |
 | 5 | Clera | Senior Data Engineer | Ashby |
-| 6 | Anduril | Production Master Data Engineer | GH |
-| 7 | Natera | Sr Forward Deployed DE | GH |
-| 8 | Solvd | Knowledge Ingestion | Ashby |
-| 9 | Commure | Sr SWE Data Platform | Ashby |
+| 6 | Natera | Sr Forward Deployed DE | GH |
+| 7 | Anduril | Production Master Data Engineer | GH |
+| 8 | Commure | Sr SWE Data Platform | Ashby |
+| 9 | Solvd | Knowledge Ingestion | Ashby |
 | 10 | Amplitude | Sr DE Marketing & GTM | Ashby |
 | 11 | Talkiatry | Analytics Engineer | Ashby |
 | 12 | The Knot | Lead AE | GH (stretch) |
@@ -37,5 +36,8 @@ Runner: `python3 -m agent queue-submit` (update FALLBACK to this order).
 
 Then: `hunt_all` → apply new ≤10d b≥7.
 
+## Watch (not in GH/Ashby queue-submit)
+- BookNook Senior AE — Rippling ≤10d — needs Rippling submit path / Cloudflare possible
+
 ## Skip
-Citi/Optum · SpaceX/Rocket Lab/NinjaOne citizen · Air citizen · Velosio iCIMS login · Jobgether FunCAPTCHA · Staff/Principal
+Citi/Optum · SpaceX/Rocket Lab/NinjaOne/Air citizen · Velosio iCIMS · Jobgether FunCAPTCHA · Staff/Principal

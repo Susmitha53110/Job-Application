@@ -1,7 +1,7 @@
 """Submit prepared morning-queue kits at 08:00 CT (window-gated).
 
 Reads applications/ready/<day>/README.md + SUBMIT_KIT.md files, or the
-hardcoded FALLBACK_QUEUE for 2026-11-15. Never Easy Apply. Stops on needs-me.
+hardcoded FALLBACK_QUEUE for 2026-11-16. Never Easy Apply. Stops on needs-me.
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ class QueueItem:
     resume: Path
 
 
-# Authoritative 2026-11-16 order (xAI/MongoDB/Mercer aged out overnight)
+# Authoritative 2026-11-16 order (xAI/MongoDB/Mercer/Instructure/Branch aged out)
 FALLBACK_QUEUE: list[dict] = [
     {
         "key": "Verkada",
@@ -75,6 +75,78 @@ FALLBACK_QUEUE: list[dict] = [
         "ats": "ashby",
         "resume": "resumes/submit/Susmitha_clera_2026-11-15.docx",
     },
+    {
+        "key": "Natera",
+        "company": "Natera",
+        "role": "Sr. Forward Deployed Data Engineer",
+        "url": "https://job-boards.greenhouse.io/natera/jobs/6255111004",
+        "ats": "greenhouse",
+        "resume": "resumes/submit/Susmitha_natera.docx",
+    },
+    {
+        "key": "Anduril",
+        "company": "Anduril Industries",
+        "role": "Production Master Data Engineer",
+        "url": "https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007",
+        "ats": "greenhouse",
+        "resume": "resumes/submit/Susmitha_anduril_pme_2026-11-15.docx",
+    },
+    {
+        "key": "Commure",
+        "company": "Commure",
+        "role": "Senior Software Engineer, Data Platform",
+        "url": "https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654",
+        "ats": "ashby",
+        "resume": "resumes/submit/Susmitha_commure.docx",
+    },
+    {
+        "key": "Solvd",
+        "company": "Solvd",
+        "role": "Senior Data Engineer — Knowledge Ingestion",
+        "url": "https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9",
+        "ats": "ashby",
+        "resume": "resumes/submit/Susmitha_solvd_ki_2026-11-15.docx",
+    },
+    {
+        "key": "AmplitudeMkt",
+        "company": "Amplitude",
+        "role": "Senior Data Engineer, Marketing & GTM",
+        "url": "https://jobs.ashbyhq.com/amplitude/32a5b52c-9e3b-46e2-8c3f-a843fa21bd48",
+        "ats": "ashby",
+        "resume": "resumes/submit/Susmitha_amplitude_mkt_2026-11-15.docx",
+    },
+    {
+        "key": "Talkiatry",
+        "company": "Talkiatry",
+        "role": "Analytics Engineer",
+        "url": "https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3",
+        "ats": "ashby",
+        "resume": "resumes/submit/Susmitha_talkiatry.docx",
+    },
+    {
+        "key": "TheKnot",
+        "company": "The Knot Worldwide",
+        "role": "Lead Analytics Engineer",
+        "url": "https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008",
+        "ats": "greenhouse",
+        "resume": "resumes/submit/Susmitha_theknotworldwide.docx",
+    },
+    {
+        "key": "Extend",
+        "company": "Extend",
+        "role": "Senior Analytics Engineer",
+        "url": "https://job-boards.greenhouse.io/extend/jobs/6250516004",
+        "ats": "greenhouse",
+        "resume": "resumes/submit/Susmitha_extend.docx",
+    },
+    {
+        "key": "Keebo",
+        "company": "Keebo",
+        "role": "Senior Data Engineer",
+        "url": "https://job-boards.greenhouse.io/keebo/jobs/5470466008",
+        "ats": "greenhouse",
+        "resume": "resumes/submit/Susmitha_keebo.docx",
+    },
 ]
 
 
@@ -114,7 +186,7 @@ def _parse_kits(day: str) -> list[QueueItem]:
 def load_queue(day: str | None = None) -> list[QueueItem]:
     day = day or chicago_today().isoformat()
     parsed = _parse_kits(day)
-    # Prefer FALLBACK_QUEUE order (xAI first — age edge); overlay kit metadata when present.
+    # Prefer FALLBACK_QUEUE order (Verkada first); overlay kit metadata when present.
     by_url = {p.url.rstrip("/").lower(): p for p in parsed}
     by_key = {p.key.lower(): p for p in parsed}
     out: list[QueueItem] = []
