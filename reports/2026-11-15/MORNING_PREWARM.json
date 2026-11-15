@@ -70,3 +70,4 @@
   "blocked": [],
   "next": "At 08:00 CT run: python3 -m agent.morning_queue_submit"
 }
+prewarm delivered late — already completed at 07:55; queue-submit already ran; 1x 8am timer OK

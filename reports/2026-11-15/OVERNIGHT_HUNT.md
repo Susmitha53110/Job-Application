@@ -1,20 +1,20 @@
-# Overnight hunt — 2026-11-15 08:11 CST
+# Overnight hunt — 2026-11-15 12:05 CST
 
-- Window open: **True**
+- Window open: **False**
 - Salary set: **120000**
-- Curve gate ok: **True**
-- Curve blockers: (none)
-- Morning packet day: **2026-11-15**
-- Ready submits report: `/workspace/reports/2026-11-15/READY_SUBMITS.md`
-- Submit handoff: `/workspace/reports/2026-11-15/SUBMIT_HANDOFF.json`
-- MongoDB ready (ignoring window check in overnight): **True** blockers=[]
-- mux ready (ignoring window check in overnight): **False** blockers=['mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
-- Machinify ready (ignoring window check in overnight): **False** blockers=['Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
+- Curve gate ok: **False**
+- Curve blockers: Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.
+- Morning packet day: **2026-11-16**
+- Ready submits report: `/workspace/reports/2026-11-16/READY_SUBMITS.md`
+- Submit handoff: `/workspace/reports/2026-11-16/SUBMIT_HANDOFF.json`
+- MongoDB ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.']
+- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
+- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 12:05 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
 - Watchlist hits: **4**
-- Hunt hits (≤10d): **67**
+- Hunt hits (≤10d): **65**
 - Near-miss (age watch only): **0**
 - Applied URLs excluded: **6**
-- New ≥7 packets (non-Curve, not applied): **34**
+- New ≥7 packets (non-Curve, not applied): **33**
 
 ## Eligible ≥7
 - MongoDB / Senior Software Engineer, Database Integration & Observability — [9.6, 9.6, 9.6] — https://www.mongodb.com/careers/job/?gh_jid=8352433
@@ -32,7 +32,6 @@
 - clera / Senior Data Engineer — [7.6, 7.6, 8.9] — https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44
 - commure / Senior Software Engineer, Data Platform — [8.0, 8.0, 9.1] — https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654
 - instructure / Senior Analytics Engineer — [8.1, 8.1, 10.0] — https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213
-- amplitude / Software Engineer II, Analytics Compute Platform Team — [9.0, 9.0, 9.0] — https://jobs.ashbyhq.com/amplitude/f65ba1d9-f809-442f-88df-453241e8d509
 - amplitude / Senior Data Engineer, Marketing & GTM — [8.9, 8.9, 10.0] — https://jobs.ashbyhq.com/amplitude/32a5b52c-9e3b-46e2-8c3f-a843fa21bd48
 - spoton / Senior Analytics Platform Engineer — [7.8, 7.8, 9.4] — https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681
 - BranchInsurance / Analytics Engineer II — [7.3, 7.3, 9.8] — https://jobs.ashbyhq.com/BranchInsurance/728e3815-8d03-40ca-8f6f-86cef305965b
@@ -70,14 +69,12 @@
 - SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — candidate
 - Rocket Lab Corporation / Senior Software Engineer I - Data Engineering — [10.0, 10.0, 10.0] — candidate
 - Air / Data Engineer - Analytics  — [9.2, 9.2, 9.2] — candidate
-- clera / Senior Data Integration Engineer — [] — skip_already_applied
 - clera / Senior Data Engineer — [7.6, 7.6, 8.9] — candidate
 - commure / Senior Software Engineer, Data Platform — [8.0, 8.0, 9.1] — candidate
 - bayesianhealth / Software Engineer, Data & Analytics Platform — [] — skip_already_applied
 - instructure / Senior Analytics Engineer — [8.1, 8.1, 10.0] — candidate
 - cursor / Sr. Software Engineer, Pretraining Data — [4.9, 4.9, 4.9] — skip_low_score
 - cursor / Software Engineer, Pretraining Data — [6.1, 6.1, 6.1] — skip_low_score
-- amplitude / Software Engineer II, Analytics Compute Platform Team — [9.0, 9.0, 9.0] — candidate
 - amplitude / Senior Data Engineer, Marketing & GTM — [8.9, 8.9, 10.0] — candidate
 - spoton / Senior Analytics Platform Engineer — [7.8, 7.8, 9.4] — candidate
 - BranchInsurance / Analytics Engineer II — [7.3, 7.3, 9.8] — candidate

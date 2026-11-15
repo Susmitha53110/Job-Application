@@ -8,8 +8,8 @@
 - daily_schedule_active: true
 - ramp_day: 2
 - daily_limit: 25
-- last_run_date: 2026-11-14
-- last_run_summary: "overnight_hunt 2026-11-15T08:11-06:00: window=True; salary=set; hunt=67; ge7=34; curve_gate=True"
+- last_run_date: 2026-11-15
+- last_run_summary: "2026-11-15 window closed 12:03 CT — valid confirms=0 (CAPTCHA/OTP wall); overnight prep for 2026-11-16 Verkada-first queue ready"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -26,7 +26,7 @@
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
-- next_apply_window: "2026-11-15 08:00 America/Chicago"
+- next_apply_window: "2026-11-16 08:00 America/Chicago"
 - salary_expectation: 120000
 - timer_policy: exactly_one_recurring_8am_ct
 - outside_window_policy: idle_no_hunt_no_github_react
