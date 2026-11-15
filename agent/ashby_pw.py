@@ -433,11 +433,17 @@ def submit_ashby_basic(
                 pass
         body = page.inner_text("body")
         low = body.lower()
-        # Image reCAPTCHA often appears only after Submit click
+        # Image reCAPTCHA often appears only after Submit click (challenge lives in iframe)
         try:
-            post_captcha = page.locator(
-                "iframe[src*='recaptcha'], iframe[title*='recaptcha'], iframe[src*='bframe']"
-            ).first.is_visible(timeout=1500)
+            post_captcha = page.evaluate(
+                """() => {
+                  const frames = [...document.querySelectorAll('iframe')];
+                  return frames.some(f => {
+                    const s = (f.src || '') + (f.title || '');
+                    return /recaptcha|bframe|anchor/i.test(s) && f.offsetParent !== null;
+                  }) || !!document.querySelector('.g-recaptcha, [data-sitekey]');
+                }"""
+            )
         except Exception:
             post_captcha = False
         if post_captcha or "select all images" in low or "select all squares" in low:
