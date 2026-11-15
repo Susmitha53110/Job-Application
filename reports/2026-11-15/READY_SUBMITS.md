@@ -3,15 +3,15 @@
 Jobs that can be computer-use submitted when the CT window is open.
 
 ## MongoDB — Senior Software Engineer, Database Integration & Observability
-- Ready: **False**
+- Ready: **True**
 - Needs salary: **False**
 - URL: https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433
 - Resume: `/workspace/resumes/tailored/2026-11-14/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx`
 - Kit: `/workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.
+- (none)
 
-### Computer-use prompt (ready when window opens)
+### Computer-use prompt
 ```
 SUBMIT MongoDB — Senior Software Engineer, Database Integration & Observability on company ATS. REAL submit authorized by Susmitha.
 Kit: /workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md
@@ -49,7 +49,6 @@ If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent a
 - Resume: `/workspace/resumes/tailored/2026-11-14/Susmitha_mux_Senior_Data_Engineer.docx`
 - Kit: `/workspace/applications/ready/2026-11-14/mux_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.
 - mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00
 
 ### Computer-use prompt
@@ -64,7 +63,6 @@ If CAPTCHA/login/unexpected required field/error: STOP needs-me. Do not invent a
 - Resume: `/workspace/resumes/tailored/2026-11-14/Susmitha_Machinify_Senior_Data_Engineer_.docx`
 - Kit: `/workspace/applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md`
 ## Blockers
-- Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.
 - Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00
 
 ### Computer-use prompt

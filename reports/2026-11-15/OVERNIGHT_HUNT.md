@@ -1,16 +1,16 @@
-# Overnight hunt — 2026-11-14 15:05 CST
+# Overnight hunt — 2026-11-15 08:11 CST
 
-- Window open: **False**
+- Window open: **True**
 - Salary set: **120000**
-- Curve gate ok: **False**
-- Curve blockers: Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.
+- Curve gate ok: **True**
+- Curve blockers: (none)
 - Morning packet day: **2026-11-15**
 - Ready submits report: `/workspace/reports/2026-11-15/READY_SUBMITS.md`
 - Submit handoff: `/workspace/reports/2026-11-15/SUBMIT_HANDOFF.json`
-- MongoDB ready (ignoring window check in overnight): **True** blockers=['Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.']
-- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
-- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-14 15:05 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
-- Watchlist hits: **5**
+- MongoDB ready (ignoring window check in overnight): **True** blockers=[]
+- mux ready (ignoring window check in overnight): **False** blockers=['mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
+- Machinify ready (ignoring window check in overnight): **False** blockers=['Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
+- Watchlist hits: **4**
 - Hunt hits (≤10d): **67**
 - Near-miss (age watch only): **0**
 - Applied URLs excluded: **6**
@@ -19,7 +19,6 @@
 ## Eligible ≥7
 - MongoDB / Senior Software Engineer, Database Integration & Observability — [9.6, 9.6, 9.6] — https://www.mongodb.com/careers/job/?gh_jid=8352433
 - Natera / Sr. Forward Deployed Data Engineer — [8.0, 8.0, 8.8] — https://job-boards.greenhouse.io/natera/jobs/6255111004
-- NinjaOne / Senior Data Engineer | Emerging Products — [8.6, 8.6, 9.2] — https://job-boards.greenhouse.io/ninjaone/jobs/4470734009
 - Anduril Industries / Data Platform Lead, Product Lifecycle Operations — [9.7, 9.7, 9.7] — https://boards.greenhouse.io/andurilindustries/jobs/5287472007?gh_jid=5287472007
 - Anduril Industries / Production Master Data Engineer — [8.8, 8.8, 10.0] — https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007
 - Mercer Advisors / Senior Analytics Engineer  — [8.0, 8.0, 9.4] — https://job-boards.greenhouse.io/merceradvisors/jobs/5462825008
@@ -29,6 +28,7 @@
 - Abnormal / Software Engineer I, Data Platforms — [8.0, 8.0, 10.0] — https://abnormal.ai/careers/jobs/8196352003?gh_jid=8196352003
 - SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002
 - Rocket Lab Corporation / Senior Software Engineer I - Data Engineering — [10.0, 10.0, 10.0] — https://job-boards.greenhouse.io/rocketlab/jobs/8201104003
+- Air / Data Engineer - Analytics  — [9.2, 9.2, 9.2] — https://job-boards.greenhouse.io/air/jobs/4504874009
 - clera / Senior Data Engineer — [7.6, 7.6, 8.9] — https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44
 - commure / Senior Software Engineer, Data Platform — [8.0, 8.0, 9.1] — https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654
 - instructure / Senior Analytics Engineer — [8.1, 8.1, 10.0] — https://jobs.ashbyhq.com/instructure/af01c88f-fb94-420b-85e8-2afbfb5b0213
@@ -56,7 +56,6 @@
 - Gusto, Inc. / Software Engineer,  Financial Data & Payments — [5.0, 5.0, 5.0] — skip_low_score
 - MongoDB / Senior Software Engineer, Database Integration & Observability — [9.6, 9.6, 9.6] — candidate
 - Natera / Sr. Forward Deployed Data Engineer — [8.0, 8.0, 8.8] — candidate
-- NinjaOne / Senior Data Engineer | Emerging Products — [8.6, 8.6, 9.2] — candidate
 - BetterHelp / Senior Analytics Engineer — [] — skip_already_applied
 - Life360 / Senior Data Engineer, Ads Data (AI Native) — [] — skip_already_applied
 - Block / Senior Software Engineer - Data Enablement — [6.8, 6.8, 8.4] — skip_low_score
@@ -70,6 +69,7 @@
 - Abnormal / Software Engineer I, Data Platforms — [8.0, 8.0, 10.0] — candidate
 - SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — candidate
 - Rocket Lab Corporation / Senior Software Engineer I - Data Engineering — [10.0, 10.0, 10.0] — candidate
+- Air / Data Engineer - Analytics  — [9.2, 9.2, 9.2] — candidate
 - clera / Senior Data Integration Engineer — [] — skip_already_applied
 - clera / Senior Data Engineer — [7.6, 7.6, 8.9] — candidate
 - commure / Senior Software Engineer, Data Platform — [8.0, 8.0, 9.1] — candidate
