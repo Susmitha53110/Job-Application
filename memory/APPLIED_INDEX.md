@@ -576,3 +576,11 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-14 | jobgether | Software Engineer - Database | https://jobs.lever.co/jobgether/4adde91c-124f-4b1a-ad24-a7f1d5c0bfad | dry-run
 2026-11-14 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
 2026-11-14 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-15 | Air | Data Engineer - Analytics | https://job-boards.greenhouse.io/air/jobs/4504874009 | dry-run
+2026-11-15 | air | Data Engineer - Analytics  | https://job-boards.greenhouse.io/air/jobs/4504874009 | dry-run
+2026-11-15 | SpaceXSI | Analytics Engineer (X) | https://job-boards.greenhouse.io/xai/jobs/5286889007 | needs-me
+2026-11-15 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | needs-me
+2026-11-15 | Abnormal | Software Engineer I, Data Platforms | https://job-boards.greenhouse.io/embed/job_app?for=abnormalsecurity&token=8196352003 | needs-me
+2026-11-15 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | needs-me
+2026-11-15 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | needs-me
+2026-11-15 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | needs-me

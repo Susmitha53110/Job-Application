@@ -433,6 +433,24 @@ def submit_ashby_basic(
                 pass
         body = page.inner_text("body")
         low = body.lower()
+        # Image reCAPTCHA often appears only after Submit click
+        try:
+            post_captcha = page.locator(
+                "iframe[src*='recaptcha'], iframe[title*='recaptcha'], iframe[src*='bframe']"
+            ).first.is_visible(timeout=1500)
+        except Exception:
+            post_captcha = False
+        if post_captcha or "select all images" in low or "select all squares" in low:
+            page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
+            (proof_dir / "NEEDS_ME.txt").write_text(
+                f"{company}: Ashby reCAPTCHA after Submit — needs you.\n"
+                f"URL: {page.url}\nEmail: {email}\n",
+                encoding="utf-8",
+            )
+            browser.close()
+            return AshbySubmitResult(
+                False, page.url, "Ashby reCAPTCHA — needs you", body[-500:], proof_dir
+            )
         if "verification code" in low or "security code" in low or "enter the code" in low:
             if not security_code:
                 page.screenshot(path=str(proof_dir / "needs_security_code.png"), full_page=True)
