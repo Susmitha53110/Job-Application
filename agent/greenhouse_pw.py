@@ -624,12 +624,33 @@ def submit_greenhouse_basic(
         body = page.inner_text("body")
         low = body.lower()
         if "verification code" in low or "security code" in low or page.locator("#security-input-0").count():
-            if not security_code:
-                page.screenshot(path=str(proof_dir / "needs_security_code.png"), full_page=True)
-                (proof_dir / "NEEDS_ME_STATUS.txt").write_text(
-                    f"{company}: Greenhouse email security code required.\n"
-                    f"Email: {email}\nPaste 8-char code in chat (Gmail declined).\nURL: {page.url}\n"
-                )
+            page.screenshot(path=str(proof_dir / "needs_security_code.png"), full_page=True)
+            (proof_dir / "NEEDS_ME_STATUS.txt").write_text(
+                f"{company}: Greenhouse email security code required.\n"
+                f"Email: {email}\nPaste 8-char code in chat (Gmail declined).\n"
+                f"Also writes to: {proof_dir / 'OTP_CODE.txt'}\nURL: {page.url}\n"
+            )
+            # Prefer an already-provided code; otherwise poll OTP_CODE.txt so a
+            # chat paste in another turn can unlock this same browser session.
+            code = (security_code or "").strip()
+            otp_path = proof_dir / "OTP_CODE.txt"
+            if not code:
+                import time
+
+                (proof_dir / "WAITING_FOR_OTP").write_text("1", encoding="utf-8")
+                deadline = time.time() + 1200  # 20 min — human paste latency
+                while time.time() < deadline and not code:
+                    if otp_path.exists():
+                        code = otp_path.read_text(encoding="utf-8").strip()[:8]
+                        if len(code) >= 6:
+                            break
+                        code = ""
+                    page.wait_for_timeout(2000)
+                try:
+                    (proof_dir / "WAITING_FOR_OTP").unlink(missing_ok=True)
+                except Exception:
+                    pass
+            if not code or len(code) < 6:
                 browser.close()
                 return GhSubmitResult(
                     False,
@@ -638,7 +659,7 @@ def submit_greenhouse_basic(
                     body[-500:],
                     proof_dir,
                 )
-            _enter_security_code(page, security_code)
+            _enter_security_code(page, code)
             if btn.count():
                 try:
                     btn.first.click(force=True, timeout=8000)

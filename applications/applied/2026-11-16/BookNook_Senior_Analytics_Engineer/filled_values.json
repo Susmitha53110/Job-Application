@@ -1,0 +1,14 @@
+{
+  "field-12": "Susmitha",
+  "field-16": "Chowdary",
+  "field-20": "dsusmitha55@gmail.com",
+  "field-24": "",
+  "field-31": "Optum",
+  "field-38": "+1 US",
+  "field-35": "913-207-3787",
+  "field-46": "Austin, TX",
+  "field-55": "https://www.linkedin.com/in/susmitha-dodla-a05ab92b8",
+  "field-75": "TX",
+  "field-82": "At Optum I rebuilt claims ingestion on Azure Data Factory + Databricks into a Delta Lake bronze-silver-gold model with Snowflake loads via COPY INTO / MERGE. It cut new-source onboarding from ~2 weeks to ~4 days and raised scheduled pipeline success from ~97% to 99.5% \u2014 favorite because analysts could trust the silver layer and I owned the end-to-end reliability path.",
+  "field-92": "Asian"
+}
