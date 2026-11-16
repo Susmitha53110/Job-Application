@@ -327,38 +327,20 @@ def submit_rippling_basic(
             browser.close()
             return RipplingSubmitResult(True, page.url, None, "fill_only", proof_dir)
 
-        # Turnstile widget often injects late; also check visible verify checkbox.
-        try:
-            
-        # TURNSTILE_CLICK_TRY: attempt checkbox / iframe click once before needs-me
+        # Turnstile: click checkbox/iframe, then try Apply. Only needs-me if still blocked after.
         try:
             page.get_by_text(re.compile(r"verify you are human", re.I)).first.click(timeout=2000)
             page.wait_for_timeout(2500)
         except Exception:
             pass
         try:
-            frame = page.frame_locator("iframe[src*='turnstile'], iframe[src*='challenges.cloudflare']").first
-            frame.locator("body").click(timeout=2000)
-            page.wait_for_timeout(3000)
+            frame = page.frame_locator(
+                "iframe[src*='turnstile'], iframe[src*='challenges.cloudflare']"
+            ).first
+            frame.locator("input, body").first.click(timeout=3000)
+            page.wait_for_timeout(3500)
         except Exception:
             pass
-        # if still visible, fall through to needs-me
-
-        if page.get_by_text(re.compile(r"verify you are human", re.I)).count():
-                page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
-                browser.close()
-                return RipplingSubmitResult(
-                    False, page.url, "Rippling Cloudflare Turnstile — needs you", "", proof_dir
-                )
-        except Exception:
-            pass
-        html2 = page.content().lower()
-        if "recaptcha" in html2 or "hcaptcha" in html2 or "cf-turnstile" in html2 or "turnstile" in html2:
-            page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
-            browser.close()
-            return RipplingSubmitResult(
-                False, page.url, "Rippling CAPTCHA — needs you", "", proof_dir
-            )
 
         try:
             page.get_by_role("button", name=re.compile(r"^Apply$", re.I)).first.click(timeout=5000)
@@ -366,8 +348,16 @@ def submit_rippling_basic(
             try:
                 page.locator("button[type=submit], input[type=submit]").first.click(timeout=5000)
             except Exception as e:
+                # If Apply still disabled, likely Turnstile
+                page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
                 browser.close()
-                return RipplingSubmitResult(False, page.url, f"Apply click failed: {e}", "", proof_dir)
+                return RipplingSubmitResult(
+                    False,
+                    page.url,
+                    f"Rippling Apply blocked (Turnstile/CAPTCHA?) — needs you: {e}",
+                    "",
+                    proof_dir,
+                )
 
         page.wait_for_timeout(3500)
         page.screenshot(path=str(proof_dir / "after_submit.png"), full_page=True)
