@@ -329,7 +329,22 @@ def submit_rippling_basic(
 
         # Turnstile widget often injects late; also check visible verify checkbox.
         try:
-            if page.get_by_text(re.compile(r"verify you are human", re.I)).count():
+            
+        # TURNSTILE_CLICK_TRY: attempt checkbox / iframe click once before needs-me
+        try:
+            page.get_by_text(re.compile(r"verify you are human", re.I)).first.click(timeout=2000)
+            page.wait_for_timeout(2500)
+        except Exception:
+            pass
+        try:
+            frame = page.frame_locator("iframe[src*='turnstile'], iframe[src*='challenges.cloudflare']").first
+            frame.locator("body").click(timeout=2000)
+            page.wait_for_timeout(3000)
+        except Exception:
+            pass
+        # if still visible, fall through to needs-me
+
+        if page.get_by_text(re.compile(r"verify you are human", re.I)).count():
                 page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
                 browser.close()
                 return RipplingSubmitResult(

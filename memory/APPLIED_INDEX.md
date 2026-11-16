@@ -907,3 +907,8 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-16 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5473605008 | needs-me
 2026-11-16 | Lyft | Data Engineer, Marketplace | https://job-boards.greenhouse.io/embed/job_app?for=lyft&token=8940409002 | needs-me
 2026-11-16 | Lyft | Data Engineer | https://job-boards.greenhouse.io/embed/job_app?for=lyft&token=8931413002 | needs-me
+2026-11-16 | BookNook | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | needs-me
+2026-11-16 | surveymonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
+2026-11-16 | Instacart | Staff Software Engineer, Ads Data Platform | https://job-boards.greenhouse.io/embed/job_app?for=instacart&token=8372846 | needs-me
+2026-11-16 | Flatiron Health | Senior Software Engineer, Data Engineering | https://job-boards.greenhouse.io/embed/job_app?for=flatironhealth&token=8371660 | needs-me
+2026-11-16 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
