@@ -510,6 +510,26 @@ def resolve_posted_at(url: str) -> str | None:
                 return meta.get("createdOn") or meta.get("publishedOn") or meta.get("updatedAt")
         except Exception:
             pass
+    # Ashby posting API (jobs.ashbyhq.com/{org}/{uuid})
+    m_ash = re.search(
+        r"jobs\.ashbyhq\.com/([^/]+)/([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})",
+        url,
+        re.I,
+    )
+    if m_ash:
+        org, jid = m_ash.group(1), m_ash.group(2)
+        try:
+            data = _get_json(f"https://api.ashbyhq.com/posting-api/job-board/{org}")
+            jobs = data.get("jobs") if isinstance(data, dict) else data
+            if isinstance(jobs, list):
+                for job in jobs:
+                    if not isinstance(job, dict):
+                        continue
+                    ju = str(job.get("jobUrl") or job.get("applyUrl") or "")
+                    if jid in ju or str(job.get("id") or "") == jid:
+                        return job.get("publishedAt") or job.get("updatedAt")
+        except Exception:
+            pass
     # Greenhouse board API (board path, gh_jid=, or embed ?for=&token=)
     m = re.search(
         r"(?:boards|job-boards)\.greenhouse\.io/([^/]+)/jobs/(\d+)|"
