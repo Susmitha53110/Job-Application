@@ -912,3 +912,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-16 | Instacart | Staff Software Engineer, Ads Data Platform | https://job-boards.greenhouse.io/embed/job_app?for=instacart&token=8372846 | needs-me
 2026-11-16 | Flatiron Health | Senior Software Engineer, Data Engineering | https://job-boards.greenhouse.io/embed/job_app?for=flatironhealth&token=8371660 | needs-me
 2026-11-16 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
+2026-11-16 | cursor | Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88 | needs-me
+2026-11-16 | cursor | Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88 | needs-me
