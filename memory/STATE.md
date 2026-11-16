@@ -46,3 +46,9 @@
 - 2026-11-14 morning: MongoDB+Machinify email OTP needs-me; mux CAPTCHA needs-me; paste codes to finish.
 - 2026-11-14: hybrid/on-site US hunt enabled per PROFILE; Anduril skipped (clearance).
 - age_gate_overshoot_today: "Zencastr 2026-09-11 (submitted before ld+json age check)"
+
+## 2026-11-16 mid-window (~09:18 CT)
+- confirmed_applied: 2 (Extend, Keebo) — Gmail thank-you seen for Extend
+- gmail_connected: dsusmitha55@gmail.com (OTP auto-read)
+- blocker: CAPTCHA/Turnstile on remaining ≤10d company ATS
+- target_20_25: blocked without human CAPTCHA
