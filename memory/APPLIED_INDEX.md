@@ -894,3 +894,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-16 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | needs-me
 2026-11-16 | Extend | Senior Analytics Engineer | https://job-boards.greenhouse.io/extend/jobs/6250516004 | applied
 2026-11-16 | BookNook | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | needs-me
+2026-11-16 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | applied
