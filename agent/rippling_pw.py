@@ -191,7 +191,23 @@ def submit_rippling_basic(
             # first following input is often country (+1 US); number is 2nd
             if not _following_input(page, r"^Phone number\*", phone, which=1):
                 _following_input(page, r"^Phone number\*", phone, which=0)
-        _following_input(page, r"^Location\*", location)
+        # Location often requires Places autocomplete pick (e.g. "Austin, TX, USA")
+        try:
+            loc_lab = page.get_by_text(re.compile(r"^Location\*", re.I)).first
+            loc_inp = loc_lab.locator("xpath=following::input[not(@type='hidden')][1]")
+            loc_inp.click()
+            loc_inp.fill("")
+            loc_inp.type(location, delay=40)
+            page.wait_for_timeout(900)
+            opt = page.locator("[role=option]").filter(has_text=re.compile(r"Austin", re.I))
+            if opt.count():
+                opt.first.click()
+            else:
+                page.keyboard.press("ArrowDown")
+                page.keyboard.press("Enter")
+            page.wait_for_timeout(300)
+        except Exception:
+            _following_input(page, r"^Location\*", location)
         _following_input(page, r"^LinkedIn Link\*|^LinkedIn", linkedin)
         if not _following_input(page, r"favorite data project|favourite data project", story, textarea=True):
             _following_input(page, r"favorite data project|favourite data project", story)
@@ -219,41 +235,75 @@ def submit_rippling_basic(
         _select_following(page, r"require sponsorship|sponsorship \(STEM", "No")
         _select_following(page, r"require sponsorship to work in the US", "No")
 
-        # State of residence (BookNook TX-ok list)
+        # State of residence (BookNook TX-ok list) — type + pick option, then Tab to commit
         try:
             loc = page.get_by_text(re.compile(r"state of residence", re.I)).first
             cb = loc.locator("xpath=following::input[@role='combobox'][1]")
             if cb.count():
                 cb.first.click()
-                cb.first.fill(state)
-                page.wait_for_timeout(500)
+                cb.first.fill("")
+                cb.first.type(state, delay=60)
+                page.wait_for_timeout(600)
                 opt = page.locator("[role=option]").filter(
-                    has_text=re.compile(rf"^{re.escape(state)}$|Texas", re.I)
+                    has_text=re.compile(rf"^{re.escape(state)}$|^{re.escape(state)}\b|Texas", re.I)
                 )
                 if opt.count():
                     opt.first.click()
                 else:
                     page.keyboard.press("Enter")
+                page.keyboard.press("Tab")
+                page.wait_for_timeout(300)
             else:
                 _select_following(page, r"state of residence", state)
         except Exception:
             _following_input(page, r"state of residence", state)
 
-        _select_following(page, r"^Gender$", "Female")
-        if not _following_input(page, r"identify your race", "Asian"):
-            try:
-                page.get_by_text(re.compile(r"^Asian$", re.I)).first.click(timeout=1500)
-            except Exception:
-                pass
-        else:
-            try:
-                page.get_by_text(re.compile(r"^Asian$", re.I)).first.click(timeout=1500)
-            except Exception:
-                pass
+        # Gender — re-open and force Female (avoid wrong Select match)
+        try:
+            g = page.get_by_text(re.compile(r"^Gender$", re.I)).first
+            trig = g.locator(
+                "xpath=following::*[normalize-space()='Select' or normalize-space()='Select...' or normalize-space()='Female' or normalize-space()='Male'][1]"
+            )
+            trig.first.click()
+            page.wait_for_timeout(350)
+            page.locator("[role=option]").filter(has_text=re.compile(r"^Female$", re.I)).first.click()
+            page.wait_for_timeout(200)
+        except Exception:
+            _select_following(page, r"^Gender$", "Female")
+        # Race via typeahead option
+        try:
+            race = page.get_by_text(re.compile(r"identify your race", re.I)).first
+            ri = race.locator("xpath=following::input[1]")
+            ri.click()
+            ri.fill("")
+            ri.type("Asian", delay=40)
+            page.wait_for_timeout(500)
+            ro = page.locator("[role=option]").filter(has_text=re.compile(r"^Asian", re.I))
+            if ro.count():
+                ro.first.click()
+            page.keyboard.press("Tab")
+        except Exception:
+            _following_input(page, r"identify your race", "Asian")
         _select_following(page, r"Hispanic/Latino", "No")
         if not _select_following(page, r"Veteran Status", "I am not a protected veteran"):
             _select_following(page, r"Veteran Status", "Not a veteran")
 
+        try:
+            page.get_by_text(re.compile(r"No - I do not consent", re.I)).first.click(timeout=2000)
+        except Exception:
+            pass
+        # Race sometimes needs option click after typing
+        try:
+            race = page.get_by_text(re.compile(r"identify your race", re.I)).first
+            race.locator("xpath=following::input[1]").click()
+            race.locator("xpath=following::input[1]").fill("Asian")
+            page.wait_for_timeout(400)
+            opt = page.locator("[role=option]").filter(has_text=re.compile(r"^Asian", re.I))
+            if opt.count():
+                opt.first.click()
+        except Exception:
+            pass
+        # Re-assert SMS No (autofill/resume parse can clear radios)
         try:
             page.get_by_text(re.compile(r"No - I do not consent", re.I)).first.click(timeout=2000)
         except Exception:
@@ -277,8 +327,18 @@ def submit_rippling_basic(
             browser.close()
             return RipplingSubmitResult(True, page.url, None, "fill_only", proof_dir)
 
+        # Turnstile widget often injects late; also check visible verify checkbox.
+        try:
+            if page.get_by_text(re.compile(r"verify you are human", re.I)).count():
+                page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
+                browser.close()
+                return RipplingSubmitResult(
+                    False, page.url, "Rippling Cloudflare Turnstile — needs you", "", proof_dir
+                )
+        except Exception:
+            pass
         html2 = page.content().lower()
-        if "recaptcha" in html2 or "hcaptcha" in html2 or "cf-turnstile" in html2:
+        if "recaptcha" in html2 or "hcaptcha" in html2 or "cf-turnstile" in html2 or "turnstile" in html2:
             page.screenshot(path=str(proof_dir / "needs_captcha.png"), full_page=True)
             browser.close()
             return RipplingSubmitResult(
@@ -316,13 +376,31 @@ def submit_rippling_basic(
             return RipplingSubmitResult(
                 False, page.url, "Rippling CAPTCHA/verify after Apply — needs you", body[:300], proof_dir
             )
-        if re.search(r"is required|please (complete|fix|select)", body, re.I) and not conf_ok:
+        # Only treat explicit validation banners as errors — NOT question copy like
+        # "Please select your current state of residence".
+        if (
+            re.search(
+                r"(this field is required|field is required|required field|"
+                r"please (complete|fill|fix) (all|the|this)|"
+                r"fix to (continue|submit)|missing required)",
+                body,
+                re.I,
+            )
+            and not conf_ok
+        ):
             browser.close()
             return RipplingSubmitResult(
                 False, page.url, "Rippling validation errors after Apply — needs you", body[:300], proof_dir
             )
-
+        # Still on apply form (Apply button visible) ⇒ not confirmed
+        still_form = bool(re.search(r"^Apply$|^Apply - ", body, re.M)) or (
+            "step=application" in (page.url or "") and not conf_ok
+        )
         browser.close()
         if conf_ok:
             return RipplingSubmitResult(True, url, None, body[:500], proof_dir)
+        if still_form:
+            return RipplingSubmitResult(
+                False, url, "Rippling still on application form after Apply — needs you", body[:300], proof_dir
+            )
         return RipplingSubmitResult(False, url, "Submit not confirmed", body[:300], proof_dir)

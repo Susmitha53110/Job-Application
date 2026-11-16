@@ -898,3 +898,12 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-16 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | needs-me
 2026-11-16 | Curve Dental | Data Engineer | https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394 | needs-me
 2026-11-16 | Life360 | Senior Data Engineer, Ads Data (AI Native) | https://job-boards.greenhouse.io/life360/jobs/8935286002 | needs-me
+2026-11-16 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
+2026-11-16 | Gusto | Software Engineer, Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | needs-me
+2026-11-16 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | needs-me
+2026-11-16 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | needs-me
+2026-11-16 | Solvd | Senior Data Engineer — Retrieval & RAG Platform | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | needs-me
+2026-11-16 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/block/jobs/5473605008 | needs-me
+2026-11-16 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5473605008 | needs-me
+2026-11-16 | Lyft | Data Engineer, Marketplace | https://job-boards.greenhouse.io/embed/job_app?for=lyft&token=8940409002 | needs-me
+2026-11-16 | Lyft | Data Engineer | https://job-boards.greenhouse.io/embed/job_app?for=lyft&token=8931413002 | needs-me
