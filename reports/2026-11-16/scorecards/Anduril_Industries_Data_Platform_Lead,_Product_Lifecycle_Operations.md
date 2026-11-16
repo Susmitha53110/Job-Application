@@ -2,7 +2,7 @@
 
 - Link: https://boards.greenhouse.io/andurilindustries/jobs/5287472007?gh_jid=5287472007
 - Source: greenhouse
-- Posted: unknown
+- Posted: 2026-11-06T12:00:00-05:00
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
@@ -12,13 +12,13 @@
 
 ## Top 5 missing keywords (vs original)
 - anduril
-- technical
 - nbsp
+- information
+- technical
 - technology
-- agency
 
-## Keywords covered honestly after tailor: Python, SQL, Databricks, product
-## Gaps remaining: anduril
+## Keywords covered honestly after tailor: Python, SQL, Databricks
+## Gaps remaining: anduril, nbsp
 
 ## Stretch call: JD asks for 6+ years; Susmitha has ~5. Call this a **stretch** — do not hide the gap in the score.
 

@@ -1,27 +1,26 @@
-# Overnight hunt — 2026-11-15 19:09 CST
+# Overnight hunt — 2026-11-16 05:03 CST
 
 - Window open: **False**
 - Salary set: **120000**
 - Curve gate ok: **False**
-- Curve blockers: Outside window (now 2026-11-15 19:09 CST). Applies only 08:00–12:00 America/Chicago.
+- Curve blockers: Outside window (now 2026-11-16 05:03 CST). Applies only 08:00–12:00 America/Chicago.
 - Morning packet day: **2026-11-16**
 - Ready submits report: `/workspace/reports/2026-11-16/READY_SUBMITS.md`
 - Submit handoff: `/workspace/reports/2026-11-16/SUBMIT_HANDOFF.json`
-- MongoDB ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 19:09 CST). Applies only 08:00–12:00 America/Chicago.', 'MongoDB verification failed: age fail-closed: first_published=2026-11-05T14:17:34-05:00']
-- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 19:09 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
-- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-15 19:09 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
+- MongoDB ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-16 05:03 CST). Applies only 08:00–12:00 America/Chicago.', 'MongoDB verification failed: age fail-closed: first_published=2026-11-05T14:17:34-05:00']
+- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-16 05:03 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
+- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-16 05:03 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
 - Watchlist hits: **3**
-- Hunt hits (≤10d): **61**
+- Hunt hits (≤10d): **63**
 - Near-miss (age watch only): **0**
 - Applied URLs excluded: **6**
-- New ≥7 packets (non-Curve, not applied): **29**
+- New ≥7 packets (non-Curve, not applied): **31**
 
 ## Eligible ≥7
 - Natera / Sr. Forward Deployed Data Engineer — [8.0, 8.0, 8.8] — https://job-boards.greenhouse.io/natera/jobs/6255111004
 - Anduril Industries / Data Platform Lead, Product Lifecycle Operations — [9.7, 9.7, 9.7] — https://boards.greenhouse.io/andurilindustries/jobs/5287472007?gh_jid=5287472007
 - Anduril Industries / Production Master Data Engineer — [8.8, 8.8, 10.0] — https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007
 - The Knot Worldwide / Lead Analytics Engineer — [7.3, 7.3, 9.6] — https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008
-- SpaceXSI / Analytics Engineer (X) — [8.2, 8.2, 10.0] — https://job-boards.greenhouse.io/xai/jobs/5286889007
 - Verkada / Senior Software Engineer, Business Systems - Data Trust — [10.0, 10.0, 10.0] — https://job-boards.greenhouse.io/verkada/jobs/5264711007
 - Abnormal / Software Engineer I, Data Platforms — [8.0, 8.0, 10.0] — https://abnormal.ai/careers/jobs/8196352003?gh_jid=8196352003
 - SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002
@@ -34,9 +33,12 @@
 - Solvd / Senior Data Engineer — Knowledge Ingestion — [8.8, 8.8, 8.8] — https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9
 - merge / Analytics Engineer — [8.6, 8.6, 10.0] — https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd
 - BookNook, Inc / Senior Analytics Engineer — [9.0, 9.0, 10.0] — https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5
+- jobgether / Data Engineer — [8.0, 8.0, 9.2] — https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93
+- jobgether / Data Engineering Solution Lead — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863
 - jobgether / Data Integration Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/25f8ac01-c5a3-495d-b94c-848bcb7f2197
 - jobgether / Lead Analytics Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/6fde602d-bc6f-47fa-a759-a8d3e208b560
 - jobgether / Lead Data Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/916f073e-33f6-4180-89c3-89e0c1deba47
+- jobgether / Lead Data Engineer, Databricks — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1
 - jobgether / Senior Analytics Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/33de5a38-ccfb-47ae-831f-0986ad9cdd75
 - jobgether / Senior Analytics Engineer — [7.5, 7.5, 10.0] — https://jobs.lever.co/jobgether/583a42b1-dea0-4138-861f-d45c7e781523
 - jobgether / Senior Data Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/37abc1bf-fe10-47c5-ae2c-bacf0036ccd6
@@ -56,8 +58,6 @@
 - Anduril Industries / Data Platform Lead, Product Lifecycle Operations — [9.7, 9.7, 9.7] — candidate
 - Anduril Industries / Production Master Data Engineer — [8.8, 8.8, 10.0] — candidate
 - The Knot Worldwide / Lead Analytics Engineer — [7.3, 7.3, 9.6] — candidate
-- SpaceXSI / Analytics Engineer (X) — [8.2, 8.2, 10.0] — candidate
-- SpaceXSI / Sr. Software Engineer, Data Engineering (X) — [6.0, 6.0, 8.4] — skip_low_score
 - Verkada / Senior Software Engineer, Business Systems - Data Trust — [10.0, 10.0, 10.0] — candidate
 - Abnormal / Software Engineer I, Data Platforms — [8.0, 8.0, 10.0] — candidate
 - SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — candidate
@@ -74,10 +74,13 @@
 - Solvd / Senior Data Engineer — Knowledge Ingestion — [8.8, 8.8, 8.8] — candidate
 - merge / Analytics Engineer — [8.6, 8.6, 10.0] — candidate
 - BookNook, Inc / Senior Analytics Engineer — [9.0, 9.0, 10.0] — candidate
+- jobgether / Data Engineer — [8.0, 8.0, 9.2] — candidate
+- jobgether / Data Engineering Solution Lead — [10.0, 10.0, 10.0] — candidate
 - jobgether / Data Integration Engineer — [10.0, 10.0, 10.0] — candidate
 - jobgether / Integration and Data Software Engineer — [1.5, 2.5, 2.5] — skip_low_score
 - jobgether / Lead Analytics Engineer — [10.0, 10.0, 10.0] — candidate
 - jobgether / Lead Data Engineer — [10.0, 10.0, 10.0] — candidate
+- jobgether / Lead Data Engineer, Databricks — [10.0, 10.0, 10.0] — candidate
 - jobgether / Senior Analyst, Hub Data & Analytics — [2.5, 3.0, 3.0] — skip_low_score
 - jobgether / Senior Analytics Engineer — [10.0, 10.0, 10.0] — candidate
 - jobgether / Senior Analytics Engineer — [7.5, 7.5, 10.0] — candidate
