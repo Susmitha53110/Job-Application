@@ -1,7 +1,7 @@
 {
   "day": "2026-11-15",
   "window_open": false,
-  "window_reason": "Outside window (now 2026-11-15 14:12 CST). Applies only 08:00\u201312:00 America/Chicago.",
+  "window_reason": "Outside window (now 2026-11-15 19:09 CST). Applies only 08:00\u201312:00 America/Chicago.",
   "salary": "120000",
   "ready_submits_report": "/workspace/reports/2026-11-15/READY_SUBMITS.md",
   "curve_gate_report": "/workspace/reports/2026-11-15/CURVE_GATE.md",
@@ -21,7 +21,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-15 14:12 CST). Applies only 08:00\u201312:00 America/Chicago.",
+        "Outside window (now 2026-11-15 19:09 CST). Applies only 08:00\u201312:00 America/Chicago.",
         "MongoDB verification failed: age fail-closed: first_published=2026-11-05T14:17:34-05:00"
       ],
       "kit": "/workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md",
@@ -39,7 +39,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-15 14:12 CST). Applies only 08:00\u201312:00 America/Chicago.",
+        "Outside window (now 2026-11-15 19:09 CST). Applies only 08:00\u201312:00 America/Chicago.",
         "mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00"
       ],
       "kit": "/workspace/applications/ready/2026-11-14/mux_SUBMIT_KIT.md",
@@ -57,7 +57,7 @@
       "needs_salary": false,
       "ok_now": false,
       "blockers": [
-        "Outside window (now 2026-11-15 14:12 CST). Applies only 08:00\u201312:00 America/Chicago.",
+        "Outside window (now 2026-11-15 19:09 CST). Applies only 08:00\u201312:00 America/Chicago.",
         "Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00"
       ],
       "kit": "/workspace/applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md",
