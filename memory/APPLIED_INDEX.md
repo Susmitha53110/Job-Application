@@ -914,3 +914,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-16 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
 2026-11-16 | cursor | Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88 | needs-me
 2026-11-16 | cursor | Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88 | needs-me
+2026-11-16 | Acentra Health | Data Engineer, Mid (2026-5955) | https://careers-acentra.icims.com/jobs/5955/data-engineer%2c-mid/job | applied
