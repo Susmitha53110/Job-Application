@@ -28,12 +28,6 @@ Autofill completed!
 
 Please review the information we filled in for you below.
 
-Your form needs corrections
-
-Missing entry for required field: Your level of English
-
-Missing entry for required field: Do you currently have the legal right to work in the country where this role is based?
-
 Full Name
 Email
 Resume
