@@ -1,0 +1,26 @@
+success=False
+stage=filled_pending_captcha
+url=https://job-boards.greenhouse.io/natera/jobs/6255111004
+captcha=1
+body=New
+Sr. Forward Deployed Data Engineer
+US Remote
+Apply
+
+POSITION SUMMARY:
+
+Natera is a global leader in cell-free DNA testing, serving patients across oncology, women’s health, and organ health. Our Data & AI organization builds the enterprise data platform and AI systems that turn clinical, genomic, and operational data into products that improve patient care and accelerate the business.
+
+We are looking for a Senior Forward Deployed Data Engineer to work directly with internal business stakeholders and domain teams to design, build, and deploy high-impact analytics and AI solutions. Reporting directly to the Data & AI Engineering Tech Lead, you will act as the technical point-of-contact and primary builder for stakeholder initiatives, translating business needs into production-ready data and AI products. This is a hands-on, senior individual contributor role where you will write production code, develop semantic layers, and implement agentic workflows and LLM pipelines.
+
+As a forward deployed engineer, you are AI-native by design—using AI coding harnesses and agentic tooling to accelerate development, testing, and documentation. You will partner closely with the Tech Lead to adopt foundational architecture patterns while rapidly delivering tailored solutions in a regulated environment where data quality, lineage, and privacy are essential.
+
+The ideal candidate combines strong engineering fundamentals with a customer-obsessed mindset, pragmatic problem-solving, and the communication skills needed to bridge complex technical solutions and business outcomes.
+
+ 
+
+Key Responsibilities
+Stakeholder Engagement & Technical Ownership
+Embed closely with business stakeholders to deeply understand their data and AI requirements, serving as their primary technical advisor and engineer.
+Run launch discovery and impact analysis for new assays or products (models, views, dashboards touched), documented in Confluence and Jira.
+Translate complex business challenges into clear technic
