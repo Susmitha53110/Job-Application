@@ -990,3 +990,6 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
 2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
 2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | applied
+2026-11-17 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | applied
+2026-11-17 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | applied
+2026-11-17 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | applied

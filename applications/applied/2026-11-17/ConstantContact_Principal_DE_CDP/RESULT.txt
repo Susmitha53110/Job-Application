@@ -1,27 +1,10 @@
-success=False
-stage=filled_pending_captcha
-url=https://job-boards.greenhouse.io/constantcontact/jobs/8348159
-body=Back to jobs
-New
-Principal Data Engineer
-Remote, US or Remote, Ontario, Canada
-Apply
+success=True
+url=https://job-boards.greenhouse.io/constantcontact/jobs/8348159/confirmation
+body=Thank you for applying.
 
-At Constant Contact, we are seriously awesome people who take ownership and make an impact by operating with the mindset, integrity and courage of a small business owner. There’s something so profoundly rewarding about knowing that your work is empowering people everywhere to pursue their dreams.  Here, we all play an integral part in helping business owners, entrepreneurs, non-profits and individuals to succeed by giving them all the help and tools they need to grow online. We’re energized by new challenges and new possibilities-and we’re just getting started!
+Your application has been received.
 
-The Enterprise Data Platform team is looking for a Principal Data Engineer to help revolutionize how we think about and deliver customer insights, playing an important role in the future success of the company.
+View more jobs at Constant Contact
+Back to job post
 
-The ideal candidate will be a platform evangelist, having a deep appreciation for the business as well as strong technical skills. You should be self-directed, a creative problem solver, and able to adjust to a fast-paced environment.  This position plays the important role of bridging the gap between our business stakeholders and our technical data teams.
-
-What you'll do:
-
-Architecting large-scale data intelligence solutions, performing architectural assessments, crafting architectural options and analysis around Snowflake Data Warehouse and/or Google BigQuery
-Design and evolve an open lakehouse on AWS: S3 with Apache Iceberg/Delta table formats, a medallion architecture (bronze → silver → gold), and Trino as the federated query engine.
-Finalize preferred solution alternative working with IT and Business stakeholders to build data ingestion pipeline using tools like AWS EMR, Snowpipe, AWS DMS, etc.etc
-Need to have professional knowledge of cloud platforms like AWS, GCP, etc.
-Developing ETL pipelines in and out of data the warehouse using but not limited to Python, Scala,SnowSQL, etc.
-Own orchestration patterns in Dagster: asset-based pipelines, code-location design, cross-asset lineage, sensors and schedules, partitioning and backfills.
-Set dbt standards for the enterprise data model: layering (staging/intermediate/marts), testing, documentation, and CI for model changes.
-Hands on experience with building productionized data ingestion and processing pipelines using Java, Spark, Scala, Python
-In-depth understanding of Data Warehouse/ODS, ETL concept and modeling structure principles
-Tune Trino for performa
+Powered by

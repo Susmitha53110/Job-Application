@@ -1,31 +1,28 @@
-success=False
-url=https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008
-body=Back to jobs
-New
-Lead Analytics Engineer
-Remote - United States
-Apply
+success=True
+url=https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008/confirmation
+body=Thank you for applying!
 
-ABOUT US
+Thank you for your interest in joining The Knot Worldwide! We appreciate the time and effort you put into your application and are excited to learn more about you.
 
-In more than ten countries around the world, The Knot Worldwide champions the power of celebration. Our global family of brands provide best-in-class products, services and content to take celebration planning from inspiration to action. At the core of our business is our industry-leading global online wedding Vendor Marketplace, connecting couples with local wedding professionals and a comprehensive suite of personalized wedding websites, planning tools, invitations, and registry services that make wedding planning easier for couples around the globe. Each year, we connect more than 4.5 million users with around 900,000 global small businesses through our Vendor Marketplace.
+Our team is currently reviewing applications, and we’ll be in touch soon with any next steps. In the meantime, if you have any questions, feel free to reach out.
 
-LIFE AT TKWW
+We know the job search process takes time and energy, and we truly appreciate you considering TKWW as your next career move.
 
-At The Knot Worldwide, we believe in doing work that matters. Each year, we help millions of couples around the world celebrate life’s most meaningful moments, while also helping hundreds of thousands of global small business owners get discovered and scale. Life here means working alongside a team that cares deeply, not just about the work you do, but about the life you live. We prioritize employee well-being and development through meaningful opportunities for growth, and we celebrate milestones and wins in a big way. After all, celebrations are what we do best.
+View more jobs at The Knot Worldwide
+Back to job post
 
-ABOUT US
+Track your application
 
-In more than ten countries around the world, The Knot Worldwide champions the power of celebration. Our global family of brands provide best-in-class products, services and content to take celebration planning from inspiration to action. At the core of our business is our industry-leading global online wedding Vendor Marketplace, connecting couples with local wedding professionals and a comprehensive suite of personalized wedding websites, planning tools, invitations, and registry services that make wedding planning easier for couples around the globe. Each year, we connect more than 4.5 million users with around 900,000 global small businesses through our Vendor Marketplace.
+Sign in to keep tabs on your application, get status updates and more.
 
-LIFE AT TKWW
+Initial screen
 
-At The Knot Worldwide, we believe in doing work that matters. Each year, we help millions of couples around the world celebrate life's most meaningful moments, while also helping hundreds of thousands of global small business owners get discovered and scale. Life here means working alongside a team that cares deeply, not just about the work you do, but about the life you live. We prioritize employee well-being and development through meaningful opportunities for growth, and we celebrate milestones and wins in a big way. After all, celebrations are what we do best.
+Team interview
 
-ABOUT THE ROLE AND OUR TEAM
+Onsite interview
 
-The Principal Analytics Engineer will architect the data and analytics infrastructure that lets our data science and analytics teams build on shared, trusted foundations across Growth & Lifecycle, Marketplace, eCommerce, WeddingWire, and International. You will own the business-context layer on top of Data Engineering's pipelines and the semantic layer that serves as the single source of truth. You will partner closely with Data Engineering, Data Science, Analytics, and business leaders, reporting to the Senior Director of Data Science. This is a hands-on architect role whose impact is measured by how much faster and more consistent the whole organization's analytics becomes.
+Offer
 
-RESPONSIBILITIES:
-Design the shared data model and semantic layer, so analytical teams reference shared datasets instead of rebuilding them. 
-Define t
+Track your application
+
+Powered by
