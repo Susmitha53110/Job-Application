@@ -1,7 +1,6 @@
 success=False
-stage=filled_pending_captcha
+stage=after_submit_attempt
 url=https://job-boards.greenhouse.io/natera/jobs/6255111004
-captcha=1
 body=New
 Sr. Forward Deployed Data Engineer
 US Remote
@@ -23,4 +22,17 @@ Key Responsibilities
 Stakeholder Engagement & Technical Ownership
 Embed closely with business stakeholders to deeply understand their data and AI requirements, serving as their primary technical advisor and engineer.
 Run launch discovery and impact analysis for new assays or products (models, views, dashboards touched), documented in Confluence and Jira.
-Translate complex business challenges into clear technic
+Translate complex business challenges into clear technical specs and deliverable milestones, partnering with the Tech Lead to align with enterprise architecture standards.
+Adhere to established engineering standards for pipeline design, data modeling, testing, version control (Git/GitLab branching, MRs, PRs) and CI/CD, ensuring deployed solutions are reliable and maintainable.
+Hands-On Solutions Engineering
+Design, build, and maintain scalable data pipelines and transformations on our cloud data platform, sourcing clinical, laboratory, operational, and commercial data to serve business analytics.
+Develop governed data models and semantic layers that power self-service analytics, dashboards, and data products (e.g., Patient 360, Provider 360, Test 360) for business teams.
+Develop AI solutions to enable business productivity and automation through use of agentic workflows, RAG/retrieval, and LLM pipelines (extraction/classification)
+Write production-grade SQL and Python; contribute to shared frameworks, templates, and tooling that let the team deliver new analytics solutions faster.
+Ensure the data layer supports performant, trustworthy analytics and LLM querying ; lead root-cause analysis on complex data issues and drive durable fixes.
+
+ 
+
+AI-Native Execution & Continuous Learning
+Leverage AI coding assistants and agentic tools daily across the full software development lifecycle to accelerate solution development and deployment speed.
+Apply AI-native engineering best practices—such as prompt engineering, agentic workflows, and aut

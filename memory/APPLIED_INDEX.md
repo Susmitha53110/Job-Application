@@ -987,3 +987,6 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | needs-me
 2026-11-17 | Plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | skipped
 2026-11-17 | Air | Data Engineer - Analytics | https://job-boards.greenhouse.io/air/jobs/4504874009 | skipped
+2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
+2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | needs-me
+2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | applied
