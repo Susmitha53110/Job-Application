@@ -1,0 +1,71 @@
+success=False
+stage=filled_pending_captcha
+token=5473605008
+url=https://job-boards.greenhouse.io/embed/job_app?for=block&validityToken=pAl17HQhUZxWFBHBqXKy5yaLbxe33Q1bS1t0qgvgKaIHm_ET2OQnw2ntf21Ze-uhAkMksELMaCZ4jPNaEQW4fV3JP8YVNEC0R_ld7YxuCn3oLiaAh_0aOwTXqmBmPDofLD6VWw6mRlF3zhQuweGjacLZY9nyUMyJpRwbAZsU59JJUYd2lt4w_ID4-_5c5ubWrD6NfDvxH0P84aNWFMaRh_4hu0ip7yTiGX9sRSV_h6NmFXNcv9JHn-h8wHni6MAAVO8mHqrO_LeOoNfH1s3gx_4fH120kljKDjqvzKJCnAuY6aPSsA5ZTik-UgBZFsSTX4i6sq8Exig-s1VvPRwwAQ%3D%3D&token=5473605008
+loc=
+body=Create a Job Alert
+
+Interested in building your career at Block? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
++1
+Phone*
+Location (City)*
+Austin, Texas, United States
+Locate me
+Resume/CV*
+
+Susmitha_block.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Education
+
+School
+Select...
+Degree
+Select...
+Discipline
+Select...
+Add another
+LinkedIn Profile
+Additional profiles (e.g. GitHub, Stack Overflow)
+Tell us a bit about why you're applying to work here. What excited you about this role?
+Block's purpose is economic empowerment. Briefly tell us about what that purpose means to you.
+Will you now or in the future require sponsorship for work authorization? (This information will not be used in assessing your qualifications for any position.)*
+Select...
+Are you authorized to work lawfully in the location posted for this position?*
+Yes
+Have you ever been employed at Block or its subsidiaries?*
+No
+If you answered "Yes" to the question above, please enter your dates of employment.
+Have you ever provided any contract work for Block, Inc. or any of its subsidiaries or affiliates (whether in the U.S. or internationally)?*
+Select...
+If you answered "Yes" to the question above, please enter your dates of contract engagement or work through agency.
+By clicking “accept,” you agree that any disputes related to your application, including those related to Block’s selection process, hiring decision, and your background check, shall be submitted to binding arbitration with the Judicial Arbitration and Mediation Services, Inc. (JAMS) on an individual basis only in San Francisco, before a single arbitrator according to the applicable JAMS Rules then in effect, with Block bearing all costs unique to arbitration. To the extent permitted by law, you and Block each waive the right to initiate or participate in any class, collective, or representative action against the other in any forum (including court and arbitration). If any provision of this agreement is deemed unenforceable, the remainder shall remain in effect, except that, notwithstanding the above, under no circumstances shall class or collective, or representative proceedings be permitted in arbitration. *
+Accept
+I certify that all of the information I have provided is correct and complete and realize that falsification or misrepresentation, including omission, on this or any other personnel record, or in the hiring process, may be grounds for refusal of employment, or if hired, may lead to disciplinary action, up to and including termination. By signing this Electronic Signature Acknowledgment Online Form, I agree that my electronic signature is the legally binding equivalent to my handwritten signature. Whenever I execute an electronic signature, it has the same validity and meaning as my handwritten signature. I will not, at any time in the future, repudiate the meaning of my electronic signature or claim that my electronic signature is not legally binding. Please sign by typing your Full Legal First, Middle Initial, and Last Name.*
+What is your Legal First Name?*
+What is your Legal Last Name?*
+US Demographic Questions
+
+Equal Employment Opportunity Information (Completing this form is strictly voluntary with a “I do not wish to answer” selection option and will not have any impact on your conside

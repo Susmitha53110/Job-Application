@@ -1,0 +1,69 @@
+success=False
+stage=filled_pending_captcha
+token=5478819008
+url=https://job-boards.greenhouse.io/embed/job_app?for=block&validityToken=A0aIFZ5juc6ANZ9H5Z1ShdHbz6pO3T45T7poZ7Muiqsk1qQA5coLakEQkzOTOx4xooGi6vS-ekiv3EcWaKl-D7u1jnvP5dN64-yp_rCBPxW5eFBgNtD16Tn7MR0cTiegm3gPF8b8s5iEB1hcEkQYJnsFm5i17vj-uclGTAjOlJ6-suGrOeioRURPsbq3detCJ_VCmQkMmMGZp5OMEZFgqAAv-MGnW_68dLB7uSM6V2lVud-zZlvObZvGMZHZyXzTL-u7_UMlXtzOxVklzk_ipe5_jK17-LXCt2tbOEC-NFU6eRVL_8PMtOz3tHYs--dGRVNydRG6MNVgEKZSDNN9cQ%3D%3D&token=5478819008
+loc=
+body=Create a Job Alert
+
+Interested in building your career at Block? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
++1
+Phone*
+Location (City)*
+Austin, Texas, United States
+Locate me
+Resume/CV*
+
+Susmitha_block.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Education
+
+School
+Select...
+Degree
+Select...
+Discipline
+Select...
+Add another
+LinkedIn Profile
+Additional profiles (e.g. GitHub, Stack Overflow)
+Tell us a bit about why you're applying to work here. What excited you about this role?
+Block's purpose is economic empowerment. Briefly tell us about what that purpose means to you.
+Will you now or in the future require sponsorship for work authorization? (This information will not be used in assessing your qualifications for any position.)*
+Select...
+Are you authorized to work lawfully in the location posted for this position?*
+Yes
+Have you ever been employed full-time at Block or its subsidiaries?*
+No
+If you answered "Yes" to the question above, please enter your dates of employment. Note that your performance history may be reviewed as part of the application process.
+Have you ever provided any contract work for Block, Inc. or any of its subsidiaries or affiliates (whether in the U.S. or internationally)?*
+Select...
+If you answered "Yes" to the question above, please enter your dates of contract engagement or work through agency.
+By clicking “accept,” you agree that any disputes related to your application, including those related to Block’s selection process, hiring decision, and your background check, shall be submitted to binding arbitration with the Judicial Arbitration and Mediation Services, Inc. (JAMS) on an individual basis only in San Francisco, before a single arbitrator according to the applicable JAMS Rules then in effect, with Block bearing all costs unique to arbitration. To the extent permitted by law, you and Block each waive the right to initiate or participate in any class, collective, or representative action against the other in any forum (including court and arbitration). If any provision of this agreement is deemed unenforceable, the remainder shall remain in effect, except that, notwithstanding the above, under no circumstances shall class or collective, or representative proceedings be permitted in arbitration. *
+Accept
+I certify that all of the information I have provided is correct and complete and realize that falsification or misrepresentation, including omission, on this or any other personnel record, or in the hiring process, may be grounds for refusal of employment, or if hired, may lead to disciplinary action, up to and including termination. By signing this Electronic Signature Acknowledgment Online Form, I agree that my electronic signature is the legally binding equivalent to my handwritten signature. Whenever I execute an electronic signature, it has the same validity and meaning as my handwritten signature. I will not, at any time in the future, repudiate the meaning of my electronic signature or claim that my electronic signature is not legally binding. Please sign by typing your Full Legal First, Middle Initial, and Last Name.*
+What is your Legal First Name?*
+What is your Legal Last Name?*
+How we interview: Our hiring process prioritizes authenticity and fairness, and we ask all candidates to adh
