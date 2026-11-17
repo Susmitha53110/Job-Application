@@ -1,1 +1,1 @@
-form complete; errs=0; captcha pending
+form complete; captcha pending

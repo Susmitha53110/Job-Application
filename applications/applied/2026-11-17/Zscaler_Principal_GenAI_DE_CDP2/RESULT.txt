@@ -1,0 +1,32 @@
+success=False
+url=https://job-boards.greenhouse.io/zscaler/jobs/5282847007
+body=Back to jobs
+New
+Principal GenAI Data Engineer
+Bellevue, Washington, USA; Santa Clara, California, USA
+Apply
+
+Zscaler (NASDAQ: ZS) accelerates digital transformation so customers can be more agile, efficient, resilient, and secure. The Zscaler Zero Trust Exchange platform protects thousands of customers from cyberattacks and data loss by securely connecting users, devices, and applications in any location. Distributed across 200+ public data centers globally and thousands of private sites at the edge, the SASE-based Zero Trust Exchange is the world’s largest in-line cloud security platform.
+
+We believe the future of work is Human + AI and are building an AI-native enterprise where human potential is amplified by machine intelligence to solve the world’s hardest security challenges. Driven by deep customer obsession, we are committed to the mission, outcome, and to each other. We bring these commitments to life through three core behaviors: ownership and collaboration, trust through outcomes and impact, and a challenge culture with ongoing feedback. Ready to make an impact at the company pioneering security transformation in the AI era? Join us at Zscaler.
+
+Role
+
+We are looking for a Principal GenAI Data Engineer to join our team. This is a Hybrid role based in Santa Clara, CA or Bellevue, WA (3 days in office), reporting to the Senior Manager, Enterprise AI Data Platform in the Information Technology Data Strategy department.
+
+We are seeking an experienced technical leader to drive the design and implementation of enterprise-grade Generative AI data ingestion, knowledge preparation, and platform architectures that enable scalable, production-ready GenAI applications. This role focuses on architecting robust pipelines and platforms for ingesting, processing, governing, and serving structured and unstructured enterprise data for AI/LLM workloads. The ideal candidate combines deep expertise in enterprise data architecture, unstructured data pipelines, GenAI platform engineering, and strong software engineering skills in Python.
+
+What You’ll Do
+
+Architect enterprise-scale GenAI data platforms for ingestion, transformation, enrichment, and serving of structured and unstructured data
+Design scalable pipelines for enterprise knowledge ingestion from diverse data sources including documents, SaaS platforms, knowledge bases, collaboration tools, and databases
+Define architecture for metadata extraction, chunking, enrichment, embeddings generation, and knowledge preparation workflows
+Design AI-ready data models and storage strategies for vector, graph, and hybrid knowledge systems
+Architect scalable unstructured data processing pipelines for text, images, PDFs, tables, and multimodal content
+
+Who You Are
+
+You’re comfortable building the path as you walk it. You thrive in a dynamic environment, seeing ambiguity not as a hindrance, but as the raw material to build something meaningful.
+Your passion for the mission fuels your bias for action. You operate with integrity because you genuinely care about the outcome. True ownership involves leveraging dynamic range: the ability to navigate seamlessly between high-level strategy and hands-on execution.
+You love running towards the challenges because you are laser-focused on finding the solution, knowing that solving the hard problems delivers the biggest impact.
+You are ambitious for the team, not just yourself. You embrace our challenge culture by giving and receiving ongoing feedback—knowing that cand
