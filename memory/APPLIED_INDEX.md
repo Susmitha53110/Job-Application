@@ -925,3 +925,9 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/0bb25b44-9e01-48be-9db1-a8a26d558d0d | needs-me
 2026-11-17 | Clera | Founding Data Engineer | https://jobs.ashbyhq.com/Clera/45a0be14-0f13-4efb-8596-011758aac3f7 | needs-me
 2026-11-17 | surveymonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
+2026-11-17 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | needs-me
+2026-11-17 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | needs-me
+2026-11-17 | amplitude | Senior Data Engineer, Marketing & GTM | https://jobs.ashbyhq.com/amplitude/32a5b52c-9e3b-46e2-8c3f-a843fa21bd48 | needs-me
+2026-11-17 | Clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/0bb25b44-9e01-48be-9db1-a8a26d558d0d | applied
+2026-11-17 | Clera | Founding Data Engineer | https://jobs.ashbyhq.com/Clera/45a0be14-0f13-4efb-8596-011758aac3f7 | applied
+2026-11-17 | surveymonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me

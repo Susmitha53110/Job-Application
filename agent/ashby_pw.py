@@ -175,7 +175,7 @@ def submit_ashby_basic(
         fill_label(r"previously employed or contracted", "No")
         fill_label(r"non-compete|non-solicitation|confidentiality agreement", "No")
         click_yes_no(
-            r"eligible to work in the US|authorized to work at the location|authorized to work in the US",
+            r"eligible to work in the US|authorized to work at the location|authorized to work in the US|work authorization to work in that country|legally authorized to work in the United States",
             "Yes",
         )
         click_yes_no(
@@ -260,7 +260,7 @@ def submit_ashby_basic(
             "No",
         )
         click_yes_no(
-            r"eligible to work in the US|authorized to work at the location|authorized to work in the US for any employer",
+            r"eligible to work in the US|authorized to work at the location|authorized to work in the US|work authorization to work in that country|legally authorized to work in the United States for any employer",
             "Yes",
         )
         # sponsorship again last — work-auth Yes clicks can hit adjacent Yes/No pairs
