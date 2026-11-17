@@ -304,9 +304,22 @@ def submit_greenhouse_basic(
             if _by_id(page, eid).count():
                 _set_val(page, eid, val)
 
-        # Custom questions + EEO via label map (includes numeric demographic ids)
+        # Custom questions + EEO via label map (id$=-label OR label[for=…])
         labels = page.evaluate(
-            """() => [...document.querySelectorAll('label[id$="-label"]')].map(l => ({id: l.id.replace(/-label$/, ''), text: (l.innerText||'').trim()}))"""
+            """() => {
+              const out=[];
+              const seen=new Set();
+              for (const l of document.querySelectorAll('label[id$="-label"], label[for]')) {
+                const text=(l.innerText||'').replace(/\\s+/g,' ').trim();
+                let id='';
+                if (l.id && l.id.endsWith('-label')) id=l.id.replace(/-label$/,'');
+                else if (l.htmlFor) id=l.htmlFor;
+                if (!id || seen.has(id)) continue;
+                seen.add(id);
+                out.push({id, text});
+              }
+              return out;
+            }"""
         )
         for item in labels:
             low = (item.get("text") or "").lower()
@@ -316,12 +329,17 @@ def submit_greenhouse_basic(
             try:
                 if "preferred name" in low or "preferred first name" in low:
                     _set_val(page, eid, preferred)
+                elif "legal first name" in low:
+                    _set_val(page, eid, first)
+                elif "legal last name" in low:
+                    _set_val(page, eid, last)
                 elif "linkedin" in low:
                     _set_val(page, eid, linkedin)
                 elif (
                     "authorized to work" in low
                     or "legally authorized" in low
                     or "eligible to work" in low
+                    or "work lawfully" in low
                     or "without sponsorship" in low
                     or ("work authorization" in low and "require" not in low)
                 ):
@@ -334,12 +352,23 @@ def submit_greenhouse_basic(
 
                     sal = salary_from_memory() or "120000"
                     _set_val(page, eid, str(sal))
-                elif ("worked" in low and "before" in low) or "previously" in low or "interviewed" in low:
+                elif (
+                    ("worked" in low and "before" in low)
+                    or "previously" in low
+                    or "interviewed" in low
+                    or "employed full-time" in low
+                    or ("contract work" in low and "block" in low)
+                    or ("provided any contract" in low)
+                ):
                     if previously_no:
                         _pick_react(page, eid, ["No"])
                 elif "employee or contractor" in low or "currently an employee" in low or "currently employed" in low:
                     if previously_no:
                         _pick_react(page, eid, ["No"])
+                elif "how we interview" in low or "authenticity and fairness" in low:
+                    _pick_react(page, eid, ["I agree to these expectations", "Yes", "I agree"])
+                elif "transcription" in low or ("ai" in low and "interview" in low):
+                    _pick_react(page, eid, ["Yes", "I agree", "No"])
                 elif "hear" in low or "learn about" in low or "how did you hear" in low or "this opportunity" in low:
                     _pick_react(
                         page,
@@ -436,10 +465,55 @@ def submit_greenhouse_basic(
                 except Exception:
                     pass
 
+        # Certify / consent checkboxes (Block and similar)
+        for box in page.locator("input[type=checkbox]").all():
+            try:
+                name = (
+                    box.evaluate(
+                        "e => (e.labels && e.labels[0] && e.labels[0].innerText) || e.getAttribute('aria-label') || ''"
+                    )
+                    or ""
+                )
+                low_n = name.lower()
+                if any(
+                    k in low_n
+                    for k in (
+                        "certify",
+                        "consent",
+                        "acknowledge",
+                        "agree",
+                        "demographic",
+                        "privacy",
+                        "gdpr",
+                    )
+                ):
+                    if not box.is_checked():
+                        box.check(force=True)
+            except Exception:
+                pass
+
         # Final identity overwrite (resume autofill races)
         for eid, val in [("first_name", first), ("last_name", last), ("email", email)]:
             if _by_id(page, eid).count():
                 _set_val(page, eid, val)
+        # Legal name fields (Block) — by label text
+        for item in labels:
+            low = (item.get("text") or "").lower()
+            eid = item.get("id") or ""
+            if not eid:
+                continue
+            if "legal first name" in low:
+                _set_val(page, eid, first)
+            elif "legal last name" in low:
+                _set_val(page, eid, last)
+        # Country BEFORE phone — iti/Country race (Block quirk); reassert both
+        if _by_id(page, "country").count():
+            _pick_react(page, "country", ["United States"])
+            _close_overlays(page)
+            page.wait_for_timeout(150)
+        if _by_id(page, "phone").count():
+            _set_val(page, "phone", phone)
+            _close_overlays(page)
         if _by_id(page, "country").count():
             # Re-pick country last — phone iti overlays / select races often clear it
             _pick_react(page, "country", ["United States"])
