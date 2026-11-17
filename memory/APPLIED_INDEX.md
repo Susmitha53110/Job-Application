@@ -994,3 +994,7 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | applied
 2026-11-17 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | applied
 2026-11-17 | Rocket Lab Corporation | Senior Software Engineer I - Data Engineering | https://job-boards.greenhouse.io/rocketlab/jobs/8201104003 | skipped
+2026-11-17 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | applied
+2026-11-17 | Anduril | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007 | needs-me
+2026-11-17 | Rocket Lab | Senior Software Engineer I - Data Engineering | https://job-boards.greenhouse.io/rocketlab/jobs/8201104003 | needs-me
+2026-11-17 | Anduril | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007 | skipped: clearance required

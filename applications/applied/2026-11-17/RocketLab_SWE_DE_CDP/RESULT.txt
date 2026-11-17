@@ -1,0 +1,46 @@
+success=False
+body=Back to jobs
+New
+Senior Software Engineer I - Data Engineering
+Long Beach, CA
+Apply
+
+ABOUT ROCKET LAB
+
+Rocket Lab is the end-to-end space company building rockets, spacecraft, and critical subsystems that keep the world connected, protected, expand humanity’s reach to the Moon, Mars, and beyond. We move fast, build real hardware for meaningful missions, and make the impossible routine. Come shape the future with us.
+
+SENIOR SOFTWARE ENGINEER I - DATA ENGINEERING
+
+At Rocket Lab, operational data drives everything from production acceptance to mission success. The Data Engineering team builds the foundational infrastructure, platforms, and tools that make this possible, providing long-term storage, data management, discovery, and access for data across all verticals. Our platforms enable data processing and automation at scale, while our applications and services provide the visualization and reporting capabilities that engineers rely on throughout the product lifecycle.
+
+We're seeking a Senior Software Engineer to help us build and scale the data infrastructure that powers Rocket Lab's operations.
+
+Based onsite at Rocket Lab's headquarters in Long Beach, CA, you'll design, build, and maintain core data platforms and services that enable engineers across the company to access and work with operational data. You'll collaborate with teams across development, testing, production, and mission operations to build robust, scalable solutions—from data pipelines and storage systems to APIs and processing platforms. Your work will directly impact our ability to validate hardware, execute missions, and improve performance across all Rocket Lab verticals.
+
+WHAT YOU'LL GET TO DO:
+
+Design, build, and deploy tools and services that power operational data access across Rocket Lab
+Collaborate with engineering teams across multiple verticals and time zones to understand data requirements and deliver scalable infrastructure solutions
+Develop and maintain apps, services, and platforms that can scale with the business’ needs.
+Build automation and tools that enable engineers to discover, access, and work with operational data efficiently
+Own services end-to-end—from architecture and development through deployment and production support
+
+YOU'LL BRING THESE QUALIFICATIONS: To thrive in this role, you’ll bring strong backend software engineering experience, a solid grasp of data pipelines, and a passion for building scalable, reliable systems. Here’s what you’ll need:
+
+A degree or diploma in Software Engineering, Computer Science, Electrical Engineering, or equivalent experience
+At least 5 years of professional experience in software engineering or a related discipline
+Expertise in Python development and a deep understanding of backend architecture
+Experience deploying services at scale, and familiarity with CI/CD and containerization
+Strong Git skills for version control and collaboration
+Experience with Kubernetes or similar orchestration tools for managing containerized applications
+Hands-on experience designing and developing REST APIs
+Familiarity with issue tracking tools like Jira or Redmine
+U.S. citizenship is required, due to program requirements
+
+THESE QUALIFICATIONS WOULD BE NICE TO HAVE:
+
+Proficiency with common data analysis libraries/tools (e.g., Pandas, Numpy), and building ETL pipelines
+Experience in data visualization, data science and numerical analysis techniques
+Familiarity with agile development practices
+Database knowledge (SQL)
+Experience w

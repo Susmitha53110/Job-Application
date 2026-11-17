@@ -1,5 +1,4 @@
 success=False
-url=https://job-boards.greenhouse.io/embed/job_app?for=block&validityToken=MTWxPo1CV9bEzOw2K6KrDi5AVMivEei6P4JQ1wsAdu-PNOYX6JlLVnPvrls78P1ZTwcy2qijqStp-Jqf9AYZ5ql9RVVaOS5D3SrvFOzGwq-YUV9n0c2fs0c8hfuWiG_AvrLmqeKAGmRto4Y9AYFr44ssnTFipddH1Kwlz9xplXOmlyk5tH4ioyPbLEbNkE3Q_Y02OsEj_tb-SLK-NZ1OdhhhJ-icHoKvVDi6zGj19FA98WBRZGzuiB5Sy4SJIQ9z8vgOZuqdrVX8FrrAg7byikuEA5_QlXHqZRlIoMMiz1WQCr2aFrf1TEa1WmYQVWKnQwTu_2ZwcjGkusqnms4QSQ%3D%3D&token=5478819008
 body=Create a Job Alert
 
 Interested in building your career at Block? Get future opportunities sent straight to your email.
@@ -17,7 +16,6 @@ Last Name*
 Email*
 Phone
 Country*
-option , selected.Select is focused ,type to refine list, press Down to open the menu,
 
 Select a country
 
@@ -27,16 +25,11 @@ Austin, Texas, United States
 Locate me
 Resume/CV*
 
-Susmitha_block.docx
+Susmitha_Block_Senior_Software_Engineer_-_Data_Enablement_WITH_HEDGED_ADDITIONS.docx
 
 Cover Letter
-Attach
-Attach
-Dropbox
-Enter manually
-Enter manually
 
-Accepted file types: pdf, doc, docx, txt, rtf
+Susmitha_Block_Senior_Software_Engineer_-_Data_Enablement_WITH_HEDGED_ADDITIONS.docx
 
 Education
 
@@ -52,7 +45,7 @@ Additional profiles (e.g. GitHub, Stack Overflow)
 Tell us a bit about why you're applying to work here. What excited you about this role?
 Block's purpose is economic empowerment. Briefly tell us about what that purpose means to you.
 Will you now or in the future require sponsorship for work authorization? (This information will not be used in assessing your qualifications for any position.)*
-Yes
+No
 Are you authorized to work lawfully in the location posted for this position?*
 Yes
 Have you ever been employed full-time at Block or its subsidiaries?*
@@ -64,8 +57,18 @@ If you answered "Yes" to the question above, please enter your dates of contract
 By clicking “accept,” you agree that any disputes related to your application, including those related to Block’s selection process, hiring decision, and your background check, shall be submitted to binding arbitration with the Judicial Arbitration and Mediation Services, Inc. (JAMS) on an individual basis only in San Francisco, before a single arbitrator according to the applicable JAMS Rules then in effect, with Block bearing all costs unique to arbitration. To the extent permitted by law, you and Block each waive the right to initiate or participate in any class, collective, or representative action against the other in any forum (including court and arbitration). If any provision of this agreement is deemed unenforceable, the remainder shall remain in effect, except that, notwithstanding the above, under no circumstances shall class or collective, or representative proceedings be permitted in arbitration. *
 Accept
 I certify that all of the information I have provided is correct and complete and realize that falsification or misrepresentation, including omission, on this or any other personnel record, or in the hiring process, may be grounds for refusal of employment, or if hired, may lead to disciplinary action, up to and including termination. By signing this Electronic Signature Acknowledgment Online Form, I agree that my electronic signature is the legally binding equivalent to my handwritten signature. Whenever I execute an electronic signature, it has the same validity and meaning as my handwritten signature. I will not, at any time in the future, repudiate the meaning of my electronic signature or claim that my electronic signature is not legally binding. Please sign by typing your Full Legal First, Middle Initial, and Last Name.*
-
-This field is required.
-
 What is your Legal First Name?*
-What is your Legal Last
+What is your Legal Last Name?*
+How we interview: Our hiring process prioritizes authenticity and fairness, and we ask all candidates to adhere to a few key expectations. Acceptable use of AI may differ depending on the role, so we encourage you to confirm with your recruiter what is or isn’t permitted during the process. Recording any part of the interview without consent is prohibited. However, if you need recording as an accommodation, please notify your recruiter before your scheduled interview. During virtual interviews, keep your video on to foster meaningful engagement; if you require accommodations, please inform our team in advance. Lastly, maintain confidentiality by refraining from sharing any proprietary or trade secret information from previous employers or other sources throughout the interview process.*
+I agree to these expectations
+With your permission, we may use AI transcription software to transcribe and summarize your interview to help us capture accurate notes. Participation is entirely voluntary, and your decision will not affect the outcome of your application. You can withdraw consent at any time. Do you consent to us using AI to transcribe and summarize your interview?*
+Yes
+
+More information about this optional processing is provided in our Applicant Privacy Notice.
+
+US Demographic Questions
+
+Equal Employment Opportunity Information (Completing this form is strictly voluntary with a “I do not wish to answer” selection option and will not have any impact on your consideration for employment at Block.)
+
+
+As a company, we celebrate and em

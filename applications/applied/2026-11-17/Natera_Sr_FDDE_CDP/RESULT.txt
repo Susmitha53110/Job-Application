@@ -1,41 +1,31 @@
-success=False
-url=https://job-boards.greenhouse.io/natera/jobs/6255111004
-body=New
-Sr. Forward Deployed Data Engineer
-US Remote
-Apply
+success=True
+url=https://job-boards.greenhouse.io/natera/jobs/6255111004/confirmation
+company=Natera
+role=Sr Forward Deployed Data Engineer
+confirmation=Thank you for applying.
 
-POSITION SUMMARY:
+Your application has been received. As applications are reviewed a member of the talent acquisition team will follow up.  
 
-Natera is a global leader in cell-free DNA testing, serving patients across oncology, women’s health, and organ health. Our Data & AI organization builds the enterprise data platform and AI systems that turn clinical, genomic, and operational data into products that improve patient care and accelerate the business.
+Please be advised that Natera will reach out to candidates with a @natera.com email domain ONLY. Email communications from all other domain names are not from Natera or its employees and are fraudulent. Natera does not request interviews via text messages and does not ask for personal information until a candidate has engaged with the company and has spoken to a recruiter and the hiring team. Natera takes cyber crimes seriously, and will collaborate with law enforcement authorities to prosecute any related cyber crimes.
 
-We are looking for a Senior Forward Deployed Data Engineer to work directly with internal business stakeholders and domain teams to design, build, and deploy high-impact analytics and AI solutions. Reporting directly to the Data & AI Engineering Tech Lead, you will act as the technical point-of-contact and primary builder for stakeholder initiatives, translating business needs into production-ready data and AI products. This is a hands-on, senior individual contributor role where you will write production code, develop semantic layers, and implement agentic workflows and LLM pipelines.
+For more information:
+- BBB announcement on job scams 
+- FBI Cyber Crime resource page
 
-As a forward deployed engineer, you are AI-native by design—using AI coding harnesses and agentic tooling to accelerate development, testing, and documentation. You will partner closely with the Tech Lead to adopt foundational architecture patterns while rapidly delivering tailored solutions in a regulated environment where data quality, lineage, and privacy are essential.
+View more jobs at Natera
+Back to job post
 
-The ideal candidate combines strong engineering fundamentals with a customer-obsessed mindset, pragmatic problem-solving, and the communication skills needed to bridge complex technical solutions and business outcomes.
+Track your application
 
- 
+Sign in to keep tabs on your application, get status updates and more.
 
-Key Responsibilities
-Stakeholder Engagement & Technical Ownership
-Embed closely with business stakeholders to deeply understand their data and AI requirements, serving as their primary technical advisor and engineer.
-Run launch discovery and impact analysis for new assays or products (models, views, dashboards touched), documented in Confluence and Jira.
-Translate complex business challenges into clear technical specs and deliverable milestones, partnering with the Tech Lead to align with enterprise architecture standards.
-Adhere to established engineering standards for pipeline design, data modeling, testing, version control (Git/GitLab branching, MRs, PRs) and CI/CD, ensuring deployed solutions are reliable and maintainable.
-Hands-On Solutions Engineering
-Design, build, and maintain scalable data pipelines and transformations on our cloud data platform, sourcing clinical, laboratory, operational, and commercial data to serve business analytics.
-Develop governed data models and semantic layers that power self-service analytics, dashboards, and data products (e.g., Patient 360, Provider 360, Test 360) for business teams.
-Develop AI solutions to enable business productivity and automation through use of agentic workflows, RAG/retrieval, and LLM pipelines (extraction/classification)
-Write production-grade SQL and Python; contribute to shared frameworks, templates, and tooling that let the team deliver new analytics solutions faster.
-Ensure the data layer supports performant, trustworthy analytics and LLM querying ; lead root-cause analysis on complex data issues and drive durable fixes.
+Initial screen
 
- 
+Team interview
 
-AI-Native Execution & Continuous Learning
-Leverage AI coding assistants and agentic tools daily across the full software development lifecycle to accelerate solution development and deployment speed.
-Apply AI-native engineering best practices—such as prompt engineering, agentic workflows, and automated testing—to maximize individual output while upholding high quality.
-Collaborate with the Tech Lead and peer engineers through code reviews, technical sharing, and feedback to continually refine forward deployed engineering practices.
-Data Quality, Reliability & Compliance
-Implement data quality checks, contracts, lineage, and monitoring so that downstream consumers can trust the data by default.
-Own operational excellence for the team’s solutions: SLAs, incident response, and cost efficie
+Onsite interview
+
+Offer
+
+Track your application
+timestamp=2026-11-17 17:04 UTC
