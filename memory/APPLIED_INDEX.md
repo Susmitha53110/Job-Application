@@ -942,3 +942,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Solvd | Senior Data Engineer — Retrieval & RAG Platform | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | needs-me
 2026-11-17 | Solvd | Senior Data Engineer — Retrieval & RAG Platform | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | needs-me
 2026-11-17 | amplitude | Senior Data Engineer, Marketing & GTM | https://jobs.ashbyhq.com/amplitude/32a5b52c-9e3b-46e2-8c3f-a843fa21bd48 | applied
+2026-11-17 | Solvd | Senior Data Engineer — Retrieval & RAG Platform | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | applied

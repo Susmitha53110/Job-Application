@@ -1,28 +1,3 @@
 success=True
 url=https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa/application
-body=Senior Data Engineer — Retrieval & RAG Platform
-Location
-
-USA
-
-Employment Type
-
-Full time
-
-Location Type
-
-Remote
-
-Department
-
-Cloud & Infrastructure
-
-Overview
-Application
-Success
-
-We empower passionate people to thrive in the AI era! Your application was successfully submitted!
-
-Powered by 
-
-Privacy PolicySecurityVulnerability Disclosure
+note=submitted; screenshot retry
