@@ -957,3 +957,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
 2026-11-17 | cohere | Staff Software Engineer, Agentic Analytics | https://jobs.ashbyhq.com/cohere/39cab400-c976-41d9-9002-880ac6985b64 | needs-me
 2026-11-17 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
+2026-11-17 | surveymonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
