@@ -8,8 +8,8 @@
 - daily_schedule_active: true
 - ramp_day: 2
 - daily_limit: 25
-- last_run_date: 2026-11-15
-- last_run_summary: "overnight_hunt 2026-11-16T05:03-06:00: window=False; salary=set; hunt=63; ge7=31; curve_gate=False"
+- last_run_date: 2026-11-17
+- last_run_summary: "noon 23 unique; overnight prep 2026-11-18; window=False; salary=set; hunt=63; ge7=19"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
@@ -21,15 +21,15 @@
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
-- applications_requested_today: 16
-- applications_succeeded_today: 0
+- applications_requested_today: 25
+- applications_succeeded_today: 23
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
-- next_apply_window: "2026-11-16 08:00 America/Chicago"
+- next_apply_window: "2026-11-18 08:00 America/Chicago"
 - salary_expectation: 120000
 - timer_policy: exactly_one_recurring_8am_ct
-- outside_window_policy: idle_no_hunt_no_github_react
+- outside_window_policy: idle_no_submit; overnight_prepare_ok
 - timer_recreate_rule: "at 12:00 CT end-of-run ensure exactly one next 8:00 AM CT timer; recreate immediately if missing"
 - daily_apply_target: 20-25
 - daily_apply_target_effective: 2026-11-13
@@ -38,17 +38,14 @@
 - master_facts: memory/MASTER_FACTS.md
 - non_compete: No
 - max_age_days: 10
-- gmail_mcp: declined
+- gmail_mcp: connected
 
-- Overnight prepare-only ran 2026-11-13 12:32 CT and 12:37 CT; MongoDB/mux/Machinify ready for 08:00 CT.
-- status=applied URLs excluded from overnight/daily hunt scoring (BetterHelp/Life360/Clera/Bayesian/Curve).
-- Expanded GH/Ashby board lists; fresh US-remote DE inventory still thin within 10d.
-- 2026-11-14 morning: MongoDB+Machinify email OTP needs-me; mux CAPTCHA needs-me; paste codes to finish.
-- 2026-11-14: hybrid/on-site US hunt enabled per PROFILE; Anduril skipped (clearance).
-- age_gate_overshoot_today: "Zencastr 2026-09-11 (submitted before ld+json age check)"
+- Overnight prepare-only ran 2026-11-17 12:07 CT → reports/2026-11-18/*
+- Morning priority: reports/2026-11-18/MORNING_PRIORITY.md
+- Skip: Jobgether/Velosio/Citi/Optum/citizen/clearance; MongoDB/mux/Machinify age-fail; Curve 404
+- Needs-me: Okta CAPTCHA; Block Country; Bayesian spam flag
 
-## 2026-11-16 mid-window (~09:18 CT)
-- confirmed_applied: 2 (Extend, Keebo) — Gmail thank-you seen for Extend
-- gmail_connected: dsusmitha55@gmail.com (OTP auto-read)
-- blocker: CAPTCHA/Turnstile on remaining ≤10d company ATS
-- target_20_25: blocked without human CAPTCHA
+## 2026-11-17 closeout
+- unique_applied: 23 (target 20–25)
+- gmail_connected: dsusmitha55@gmail.com (OTP auto-read — Keebo)
+- next: 2026-11-18 08:00 CT
