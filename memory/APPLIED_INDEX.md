@@ -946,3 +946,6 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | needs-me
 2026-11-17 | commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me
 2026-11-17 | commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me
+2026-11-17 | HarperCollins | Data Engineer (remote US) | https://careers-harpercollins.icims.com/jobs/5496/data-engineer-%28remote-us%29/job | needs-me
+2026-11-17 | WellBe | Data Engineer | https://careers-wellbeseniormedical.icims.com/jobs/7414/data-engineer/job | needs-me
+2026-11-17 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | needs-me
