@@ -30,14 +30,6 @@ Autofill completed!
 
 Please review the information we filled in for you below.
 
-Your form needs corrections
-
-Missing entry for required field: I am comfortable with the fact that this position requires being in one of our offices 3-4 days per week and is not a remote position.
-
-Missing entry for required field: Please select your preferred working location.
-
-Missing entry for required field: How did you hear about Commure?
-
 Full Name
 Email
 Resume
@@ -85,4 +77,10 @@ Female
 Decline to self-identify
 Race
 
-Hispanic or Latino - A person of Cuban, Mexican, Puerto Rican, South or Central Ameri
+Hispanic or Latino - A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race.
+
+White (Not Hispanic or Latino) - A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+
+Black or African American (Not Hispanic or Latino) - A person having origins in any of the Black racial groups of Africa.
+
+Native Hawaiian or Other Pacif
