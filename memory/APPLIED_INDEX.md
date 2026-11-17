@@ -970,3 +970,20 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Gusto | Software Engineer, Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | needs-me
 2026-11-17 | Gusto | Software Engineer, Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | needs-me
 2026-11-17 | Gusto | Software Engineer, Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | needs-me
+2026-11-17 | Zscaler | Principal GenAI Data Engineer | https://job-boards.greenhouse.io/zscaler/jobs/5282847007 | needs-me
+2026-11-17 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | needs-me
+2026-11-17 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | applied
+2026-11-17 | Cohere | Staff Software Engineer, Agentic Analytics | https://jobs.ashbyhq.com/cohere/39cab400-c976-41d9-9002-880ac6985b64 | applied
+2026-11-17 | SurveyMonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
+2026-11-17 | SurveyMonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
+2026-11-17 | SurveyMonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
+2026-11-17 | SurveyMonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | applied
+2026-11-17 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me
+2026-11-17 | Gusto, Inc. | Software Engineer, Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | skipped
+2026-11-17 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | needs-me
+2026-11-17 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | applied
+2026-11-17 | Plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | needs-me
+2026-11-17 | Plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | needs-me
+2026-11-17 | Plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | needs-me
+2026-11-17 | Plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | skipped
+2026-11-17 | Air | Data Engineer - Analytics | https://job-boards.greenhouse.io/air/jobs/4504874009 | skipped

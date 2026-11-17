@@ -1,0 +1,59 @@
+success=False
+stage=filled_pending_captcha
+url=https://job-boards.greenhouse.io/zocdoc/jobs/8356769
+body=Create a Job Alert
+
+Interested in building your career at Zocdoc? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
+Phone*
+Resume/CV*
+
+Susmitha_zocdoc.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Google Drive
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+LinkedIn Profile*
+Do you now or in the future require sponsorship for employment visa status? (Write "Yes" if you require any immigration or work permit/EAD application or renewal - sponsored by an employer, university or otherwise - either now or at some point in the future)*
+option Yes, selected.
+Yes
+What is your state of residence?*
+Select...
+Describe your analytics engineering + data modeling experience in 2-3 sentences.*
+U.S. Standard Demographic Questions
+We invite applicants to share their demographic background. If you choose to complete this survey, your responses may be used to identify areas of improvement in our hiring process.
+How would you describe your gender identity? (mark all that apply)
+Select...
+How would you describe your racial/ethnic background? (mark all that apply)
+Select...
+How would you describe your sexual orientation? (mark all that apply)
+Select...
+Do you identify as transgender?
+Select...
+Do you have a disability or chronic condition (physical, visual, auditory, cognitive, mental, emotional, or other) that substantially limits one or more of your major life activities, including mobility, communication (seeing, hearing, speaking), and learning?
+Select...
+Are you a veteran or active member of the United States Armed Forces?
+Select...
+Submit application
+
+Powered by

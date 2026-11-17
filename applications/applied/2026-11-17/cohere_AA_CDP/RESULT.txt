@@ -1,4 +1,5 @@
-success=False
+success=True
+# corrected: confirmation found in body
 url=https://jobs.ashbyhq.com/cohere/39cab400-c976-41d9-9002-880ac6985b64/application
 body=Staff Software Engineer, Agentic Analytics
 Location
