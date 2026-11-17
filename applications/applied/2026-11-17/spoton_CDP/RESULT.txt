@@ -1,0 +1,79 @@
+success=False
+url=https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681/application
+body=Senior Analytics Platform Engineer
+Location
+
+Chicago, IL
+
+Employment Type
+
+Full time
+
+Department
+
+Engineering
+
+Compensation
+$137,550 – $173,000 • Offers Equity
+
+Please note the salary range listed is just one component of a competitive compensation package which may include a company stock plan depending on role eligibility. Offers will be reflective of the candidate’s location, qualifications, and experience.
+
+Overview
+Application
+Autofill from resume
+
+Upload your resume here to autofill key application fields.
+
+Upload file
+Autofill completed!
+
+Please review the information we filled in for you below.
+
+Name
+Email
+Phone Number
+Resume
+
+Susmitha_spoton_2026-11-15.docx
+
+Replace
+
+or drag and drop here
+
+Cover Letter
+Upload File
+
+or drag and drop here
+
+LinkedIn Profile
+Will you now or any time in the future require sponsorship to work in the US?
+Yes
+No
+Location
+What is your experience with dbt?
+Will you now or any time in the future require sponsorship to work in the US?
+Yes
+No
+Diversity Survey
+
+For government reporting purposes, we ask candidates to respond to the below self-identification survey. Completion of the form is entirely voluntary. Whatever your decision, it will not be considered in the hiring process or thereafter. Any information that you do provide will be recorded and maintained in a confidential file.
+
+As set forth in SpotOn: Sales (Career Site) ’s Equal Employment Opportunity policy, we do not discriminate on the basis of any protected group status under any applicable law.
+
+Please select your gender identity:
+
+Man
+Woman
+I prefer not to answer
+Please select your Race:
+Asian or Asian American
+Black or African American
+Hispanic or Latine
+American Indian or Alaska Native
+Native Hawaiian or Other Pacific Islander
+White
+Two or More Races
+I prefer not to answer
+Veteran Status
+
+If you believe you belong to any of the categories of protected veterans listed below, please indicate by making the appropriate selection. As a government contractor subject to the Vie
