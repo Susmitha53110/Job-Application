@@ -952,3 +952,7 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | applied
 2026-11-17 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | needs-me
 2026-11-17 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | needs-me
+2026-11-17 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | applied
+2026-11-17 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
+2026-11-17 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | needs-me
+2026-11-17 | cohere | Staff Software Engineer, Agentic Analytics | https://jobs.ashbyhq.com/cohere/39cab400-c976-41d9-9002-880ac6985b64 | needs-me

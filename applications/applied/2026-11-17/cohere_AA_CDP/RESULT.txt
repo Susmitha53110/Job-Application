@@ -1,0 +1,39 @@
+success=False
+url=https://jobs.ashbyhq.com/cohere/39cab400-c976-41d9-9002-880ac6985b64/application
+body=Staff Software Engineer, Agentic Analytics
+Location
+
+United States; Canada; Montreal; New York; Ottawa; San Francisco; Toronto
+
+Employment Type
+
+Full time
+
+Location Type
+
+Hybrid
+
+Department
+
+Data & Analytics 
+Data Analytics & Insights
+
+Compensation
+USA - California, New York and Washington
+Base Salary $270K – $325K • Offers Equity
+USA - All Other States
+Base Salary $250K – $290K • Offers Equity
+Canada
+Base Salary CA$350K – CA$410K • Offers Equity
+
+Cohere is committed to fair and transparent pay practices. The compensation range listed for this role reflects the expected compensation. Actual compensation offered will be determined by factors such as location, level, job-related knowledge, skills, education, and experience.
+
+Overview
+Application
+Success
+
+Your application has been submitted! Thank you for your interest in a career growth opportunity at Cohere!
+
+Powered by 
+
+Privacy PolicySecurityVulnerability Disclosure
