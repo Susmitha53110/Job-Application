@@ -919,3 +919,9 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-16 | WellBe | Data Engineer | https://careers-wellbeseniormedical.icims.com/jobs/7414/data-engineer/job | needs-me
 2026-11-16 | BookNook | Senior Analytics Engineer | https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5 | applied
 2026-11-16 | Curve Dental | Data Engineer | https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394 | needs-me
+2026-11-17 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | needs-me
+2026-11-17 | Abnormal | Software Engineer I, Data Platforms | https://job-boards.greenhouse.io/embed/job_app?for=abnormalsecurity&token=8196352003 | needs-me
+2026-11-17 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | needs-me
+2026-11-17 | Clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/0bb25b44-9e01-48be-9db1-a8a26d558d0d | needs-me
+2026-11-17 | Clera | Founding Data Engineer | https://jobs.ashbyhq.com/Clera/45a0be14-0f13-4efb-8596-011758aac3f7 | needs-me
+2026-11-17 | surveymonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | needs-me
