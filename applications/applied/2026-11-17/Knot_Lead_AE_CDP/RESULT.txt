@@ -1,0 +1,24 @@
+success=False
+stage=filled_pending_captcha
+url=https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008
+body=Back to jobs
+New
+Lead Analytics Engineer
+Remote - United States
+Apply
+
+ABOUT US
+
+In more than ten countries around the world, The Knot Worldwide champions the power of celebration. Our global family of brands provide best-in-class products, services and content to take celebration planning from inspiration to action. At the core of our business is our industry-leading global online wedding Vendor Marketplace, connecting couples with local wedding professionals and a comprehensive suite of personalized wedding websites, planning tools, invitations, and registry services that make wedding planning easier for couples around the globe. Each year, we connect more than 4.5 million users with around 900,000 global small businesses through our Vendor Marketplace.
+
+LIFE AT TKWW
+
+At The Knot Worldwide, we believe in doing work that matters. Each year, we help millions of couples around the world celebrate life’s most meaningful moments, while also helping hundreds of thousands of global small business owners get discovered and scale. Life here means working alongside a team that cares deeply, not just about the work you do, but about the life you live. We prioritize employee well-being and development through meaningful opportunities for growth, and we celebrate milestones and wins in a big way. After all, celebrations are what we do best.
+
+ABOUT US
+
+In more than ten countries around the world, The Knot Worldwide champions the power of celebration. Our global family of brands provide best-in-class products, services and content to take celebration planning from inspiration to action. At the core of our business is our industry-leading global online wedding Vendor Marketplace, connecting couples with local wedding professionals and a comprehensive suite of personalized wedding websites, planning tools, invitations, and registry services that make wedding planning easier for couples around the globe. Each year, we connect more than 4.5 million users with around 900,000 global small businesses through our Vendor Marketplace.
+
+LIFE AT TKWW
+
+At The Knot Worldwide, we believe in doing work that matters. Each year, we help millions of couples around the world celebrate life's most meaningful moments, while also helping hundreds of thousands of global small business owners get discovered and scale. Life here means working alongside a team that cares deeply, not just about the work you do, but about the life you live. We prioritize employee well-being and development through
