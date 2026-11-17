@@ -1006,3 +1006,7 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Air | Data Engineer - Analytics | https://job-boards.greenhouse.io/air/jobs/4504874009 | skipped: US citizen required
 2026-11-17 | Coinbase | Senior Analytics Engineer | https://job-boards.greenhouse.io/embed/job_app?for=coinbase&token=8394402 | applied
 2026-11-17 | Instacart | Staff Software Engineer, Ads Data Platform | https://job-boards.greenhouse.io/embed/job_app?for=instacart&token=8372846 | applied
+2026-11-17 | Coinbase | Staff Software Engineer, Infrastructure (Datastores) | https://job-boards.greenhouse.io/embed/job_app?for=coinbase&token=8286487 | applied
+2026-11-17 | Cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | applied
+2026-11-17 | Cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | applied
+2026-11-17 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | applied
