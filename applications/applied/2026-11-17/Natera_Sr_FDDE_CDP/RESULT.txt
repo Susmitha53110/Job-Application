@@ -1,5 +1,4 @@
 success=False
-stage=after_submit_attempt
 url=https://job-boards.greenhouse.io/natera/jobs/6255111004
 body=New
 Sr. Forward Deployed Data Engineer
@@ -35,4 +34,8 @@ Ensure the data layer supports performant, trustworthy analytics and LLM queryin
 
 AI-Native Execution & Continuous Learning
 Leverage AI coding assistants and agentic tools daily across the full software development lifecycle to accelerate solution development and deployment speed.
-Apply AI-native engineering best practices—such as prompt engineering, agentic workflows, and aut
+Apply AI-native engineering best practices—such as prompt engineering, agentic workflows, and automated testing—to maximize individual output while upholding high quality.
+Collaborate with the Tech Lead and peer engineers through code reviews, technical sharing, and feedback to continually refine forward deployed engineering practices.
+Data Quality, Reliability & Compliance
+Implement data quality checks, contracts, lineage, and monitoring so that downstream consumers can trust the data by default.
+Own operational excellence for the team’s solutions: SLAs, incident response, and cost efficie
