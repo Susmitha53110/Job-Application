@@ -1003,3 +1003,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Zscaler | Principal GenAI Data Engineer | https://job-boards.greenhouse.io/zscaler/jobs/5282847007 | applied
 2026-11-17 | Rocket Lab | Senior Software Engineer I - Data Engineering | https://job-boards.greenhouse.io/rocketlab/jobs/8201104003 | applied
 2026-11-17 | Rocket Lab | Senior Software Engineer I - Data Engineering | https://job-boards.greenhouse.io/rocketlab/jobs/8201104003 | applied
+2026-11-17 | Air | Data Engineer - Analytics | https://job-boards.greenhouse.io/air/jobs/4504874009 | skipped: US citizen required
+2026-11-17 | Coinbase | Senior Analytics Engineer | https://job-boards.greenhouse.io/embed/job_app?for=coinbase&token=8394402 | applied
