@@ -1,5 +1,4 @@
 success=False
-stage=filled_pending_captcha
 url=https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008
 body=Back to jobs
 New
@@ -21,4 +20,12 @@ In more than ten countries around the world, The Knot Worldwide champions the po
 
 LIFE AT TKWW
 
-At The Knot Worldwide, we believe in doing work that matters. Each year, we help millions of couples around the world celebrate life's most meaningful moments, while also helping hundreds of thousands of global small business owners get discovered and scale. Life here means working alongside a team that cares deeply, not just about the work you do, but about the life you live. We prioritize employee well-being and development through
+At The Knot Worldwide, we believe in doing work that matters. Each year, we help millions of couples around the world celebrate life's most meaningful moments, while also helping hundreds of thousands of global small business owners get discovered and scale. Life here means working alongside a team that cares deeply, not just about the work you do, but about the life you live. We prioritize employee well-being and development through meaningful opportunities for growth, and we celebrate milestones and wins in a big way. After all, celebrations are what we do best.
+
+ABOUT THE ROLE AND OUR TEAM
+
+The Principal Analytics Engineer will architect the data and analytics infrastructure that lets our data science and analytics teams build on shared, trusted foundations across Growth & Lifecycle, Marketplace, eCommerce, WeddingWire, and International. You will own the business-context layer on top of Data Engineering's pipelines and the semantic layer that serves as the single source of truth. You will partner closely with Data Engineering, Data Science, Analytics, and business leaders, reporting to the Senior Director of Data Science. This is a hands-on architect role whose impact is measured by how much faster and more consistent the whole organization's analytics becomes.
+
+RESPONSIBILITIES:
+Design the shared data model and semantic layer, so analytical teams reference shared datasets instead of rebuilding them. 
+Define t
