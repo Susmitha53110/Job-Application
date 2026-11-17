@@ -1000,3 +1000,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Anduril | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007 | skipped: clearance required
 2026-11-17 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | applied
 2026-11-17 | Block | Senior Software Engineer - Data Enablement | https://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | needs-me: Country validation + CAPTCHA
+2026-11-17 | Zscaler | Principal GenAI Data Engineer | https://job-boards.greenhouse.io/zscaler/jobs/5282847007 | applied

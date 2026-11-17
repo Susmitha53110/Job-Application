@@ -1,27 +1,3 @@
 success=True
-empties=[]
-body=Application Received! What’s Next?
-
-Thank you for applying to Zscaler! Your application is officially in the hands of our Talent Acquisition team, where a real human will thoroughly review your qualifications.
-
-
-
-Before you close this tab, please take ownership of your preparation by reviewing three critical resources:
-
-Explore Our Culture (High Priority): We want you to ensure Zscaler is a place where you can genuinely thrive. Please review our Ways of Working on the Zscaler Culture Page and be prepared to discuss them if you are contacted by a recruiter.
-
-
-Know Our AI Policy: To ensure an authentic evaluation, candidates are not permitted to use AI tools during the interview process unless explicitly instructed to do so. Read the full guidelines on our Candidate Resource Hub.
-
-
-Understand Our Working Arrangement Expectations: At Zscaler, we believe that meaningful connection drives our best outcomes. Our hybrid model is designed with intention. Teams come together in our offices 3 or more planned days per week to accelerate trust, collaboration, and innovation.
-
-Your recruiter will confirm your specific work arrangement eligibility. 
-
-
-Keep an eye on your inbox—we’ve sent a copy of these resources and next steps to your email.
-
-View more jobs at Zscaler
-Back to job post
-
-Powered by
+confirmation=Thank you for applying to Zscaler!
+url=https://job-boards.greenhouse.io/zscaler/jobs/5282847007
