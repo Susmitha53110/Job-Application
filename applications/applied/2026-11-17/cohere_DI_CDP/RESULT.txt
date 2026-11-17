@@ -47,8 +47,6 @@ Your form needs corrections
 
 Missing entry for required field: Are you authorized to work in the country you currently reside in?
 
-Missing entry for required field: Do you, now or in the future, require sponorship to work in the country you currently reside in?
-
 Name
 Phone Number
 Email
