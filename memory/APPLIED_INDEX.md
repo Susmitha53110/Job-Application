@@ -938,3 +938,5 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | needs-me
 2026-11-17 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | applied
 2026-11-17 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | needs-me
+2026-11-17 | Solvd | Senior Data Engineer — Retrieval & RAG Platform | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | needs-me
+2026-11-17 | Solvd | Senior Data Engineer — Retrieval & RAG Platform | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | needs-me
