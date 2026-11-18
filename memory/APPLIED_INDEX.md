@@ -1010,3 +1010,97 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | applied
 2026-11-17 | Cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | applied
 2026-11-17 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | applied
+2026-11-17 | Gusto, Inc. | Software Engineer,  Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | dry-run
+2026-11-17 | Okta | Senior Software Engineer, Data Platform | https://www.okta.com/company/careers/opportunity/8384001?gh_jid=8384001 | dry-run
+2026-11-17 | Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-17 | Block | Senior Software Engineer - Data Enablement | http://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | dry-run
+2026-11-17 | Coinbase | Senior Analytics Engineer | https://www.coinbase.com/careers/positions/8394402?gh_jid=8394402 | dry-run
+2026-11-17 | Anthropic | Software Engineer, Datacenter Server Lifecycle | https://job-boards.greenhouse.io/anthropic/jobs/5484171008 | dry-run
+2026-11-17 | Anduril Industries | Data Analytics Engineer - Hardware Test Operations | https://boards.greenhouse.io/andurilindustries/jobs/5296601007?gh_jid=5296601007 | dry-run
+2026-11-17 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-17 | SpaceX | Data Engineer (Starship) | https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002 | dry-run
+2026-11-17 | Air | Data Engineer - Analytics  | https://job-boards.greenhouse.io/air/jobs/4504874009 | dry-run
+2026-11-17 | cursor | Sr. Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/db5d0c48-7c24-474d-a662-c960c3770d44 | dry-run
+2026-11-17 | cursor | Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88 | dry-run
+2026-11-17 | jobgether | Data Engineer | https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93 | dry-run
+2026-11-17 | jobgether | Data Engineering Solution Lead | https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863 | dry-run
+2026-11-17 | jobgether | Data Integration Engineer | https://jobs.lever.co/jobgether/25f8ac01-c5a3-495d-b94c-848bcb7f2197 | dry-run
+2026-11-17 | jobgether | Integration and Data Software Engineer | https://jobs.lever.co/jobgether/9fadc447-59bb-422c-b4ce-6d4a655e09d0 | dry-run
+2026-11-17 | jobgether | Lead Analytics Engineer | https://jobs.lever.co/jobgether/6fde602d-bc6f-47fa-a759-a8d3e208b560 | dry-run
+2026-11-17 | jobgether | Lead Data Engineer, Databricks | https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1 | dry-run
+2026-11-17 | jobgether | Senior Analyst, Hub Data & Analytics | https://jobs.lever.co/jobgether/fba8ca84-79ec-4f4a-bc8a-7d1e383a4e8b | dry-run
+2026-11-17 | jobgether | Senior Data Engineer | https://jobs.lever.co/jobgether/37abc1bf-fe10-47c5-ae2c-bacf0036ccd6 | dry-run
+2026-11-17 | jobgether | Senior Data Engineer | https://jobs.lever.co/jobgether/f15f154d-6558-4297-b076-d7de2bf08d90 | dry-run
+2026-11-17 | jobgether | Senior Data Engineer (Databricks) - Contractor | https://jobs.lever.co/jobgether/29670e09-39d6-443c-b949-d84349cf3a9d | dry-run
+2026-11-17 | jobgether | Senior Data Engineer, Ads Data (AI Native) | https://jobs.lever.co/jobgether/5632944f-f006-4e6c-ab9f-836169b07e0b | dry-run
+2026-11-17 | jobgether | Senior Data Engineer, Data Transformation Platform | https://jobs.lever.co/jobgether/f77bd289-681f-4a04-b93b-9c889bc46c2e | dry-run
+2026-11-17 | jobgether | Senior Software Engineer, Data Solutions | https://jobs.lever.co/jobgether/ee727b71-350c-400a-9071-74ca4444772b | dry-run
+2026-11-17 | jobgether | Senior Strategist, Constituent Data Integrations | https://jobs.lever.co/jobgether/ac43f2f9-d061-41e9-b60a-f40c2709ed04 | dry-run
+2026-11-17 | jobgether | Software Engineer - Database | https://jobs.lever.co/jobgether/4adde91c-124f-4b1a-ad24-a7f1d5c0bfad | dry-run
+2026-11-17 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
+2026-11-17 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-17 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | dry-run
+2026-11-17 | Gusto, Inc. | Software Engineer,  Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | dry-run
+2026-11-17 | Okta | Senior Software Engineer, Data Platform | https://www.okta.com/company/careers/opportunity/8384001?gh_jid=8384001 | dry-run
+2026-11-17 | Alloy | Engineering Manager, Data Platform | https://www.alloy.com/about/jobs/detail?gh_jid=8935003002&gh_jid=8935003002 | dry-run
+2026-11-17 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | dry-run
+2026-11-17 | Zocdoc | Staff Analytics Engineer | https://job-boards.greenhouse.io/zocdoc/jobs/8356769 | dry-run
+2026-11-17 | BetterHelp | Senior Analytics Engineer | https://job-boards.greenhouse.io/betterhelpcom/jobs/5475004008 | dry-run
+2026-11-17 | Life360 | Senior Data Engineer, Ads Data (AI Native) | https://job-boards.greenhouse.io/life360/jobs/8935286002 | dry-run
+2026-11-17 | Constant Contact | Principal Data Engineer | https://job-boards.greenhouse.io/constantcontact/jobs/8348159 | dry-run
+2026-11-17 | Instacart | Staff Software Engineer, Ads Data Platform | https://instacart.careers/job/?gh_jid=8372846 | dry-run
+2026-11-17 | Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-17 | Block | Senior Software Engineer - Data Enablement | http://block.xyz/careers/jobs/5478819008?gh_jid=5478819008 | dry-run
+2026-11-17 | Block | Staff Data Engineer, Advanced Insights & Modeling | http://block.xyz/careers/jobs/5473605008?gh_jid=5473605008 | dry-run
+2026-11-17 | Coinbase | Senior Analytics Engineer | https://www.coinbase.com/careers/positions/8394402?gh_jid=8394402 | dry-run
+2026-11-17 | Coinbase | Staff Software Engineer, Infrastructure (Datastores) | https://www.coinbase.com/careers/positions/8286487?gh_jid=8286487 | dry-run
+2026-11-17 | Anthropic | Software Engineer, Datacenter Server Lifecycle | https://job-boards.greenhouse.io/anthropic/jobs/5484171008 | dry-run
+2026-11-17 | Anduril Industries | Data Analytics Engineer - Hardware Test Operations | https://boards.greenhouse.io/andurilindustries/jobs/5296601007?gh_jid=5296601007 | dry-run
+2026-11-17 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | dry-run
+2026-11-17 | Anduril Industries | Software Engineering Manager (Factory Data) | https://boards.greenhouse.io/andurilindustries/jobs/5291969007?gh_jid=5291969007 | dry-run
+2026-11-17 | The Knot Worldwide | Lead Analytics Engineer | https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008 | dry-run
+2026-11-17 | Zscaler | Principal GenAI Data Engineer  | https://job-boards.greenhouse.io/zscaler/jobs/5282847007 | dry-run
+2026-11-17 | Verkada | Senior Software Engineer, Business Systems - Data Trust | https://job-boards.greenhouse.io/verkada/jobs/5264711007 | dry-run
+2026-11-17 | SpaceX | Data Engineer (Starship) | https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002 | dry-run
+2026-11-17 | Rocket Lab Corporation | Senior Software Engineer I - Data Engineering | https://job-boards.greenhouse.io/rocketlab/jobs/8201104003 | dry-run
+2026-11-17 | Air | Data Engineer - Analytics  | https://job-boards.greenhouse.io/air/jobs/4504874009 | dry-run
+2026-11-17 | plaid | Staff Software Engineer - Data Infrastructure | https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957 | dry-run
+2026-11-17 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | dry-run
+2026-11-17 | clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/0bb25b44-9e01-48be-9db1-a8a26d558d0d | dry-run
+2026-11-17 | clera | Founding Data Engineer | https://jobs.ashbyhq.com/Clera/45a0be14-0f13-4efb-8596-011758aac3f7 | dry-run
+2026-11-17 | commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | dry-run
+2026-11-17 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | dry-run
+2026-11-17 | cursor | Sr. Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/db5d0c48-7c24-474d-a662-c960c3770d44 | dry-run
+2026-11-17 | cursor | Software Engineer, Pretraining Data | https://jobs.ashbyhq.com/cursor/d06d229f-eb2c-46d7-8e0f-96da5ecaec88 | dry-run
+2026-11-17 | amplitude | Senior Data Engineer, Marketing & GTM | https://jobs.ashbyhq.com/amplitude/32a5b52c-9e3b-46e2-8c3f-a843fa21bd48 | dry-run
+2026-11-17 | spoton | Senior Analytics Platform Engineer | https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681 | dry-run
+2026-11-17 | surveymonkey | Senior Data Engineer | https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807 | dry-run
+2026-11-17 | Solvd | Senior Data Engineer — Retrieval & RAG Platform  | https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa | dry-run
+2026-11-17 | Solvd | Senior Data Engineer — Knowledge Ingestion | https://jobs.ashbyhq.com/Solvd/33ec603d-3ddf-47a4-852e-6fece64196f9 | dry-run
+2026-11-17 | merge | Analytics Engineer | https://jobs.ashbyhq.com/merge/fbb35f9d-d38c-4187-8811-85355a3929dd | dry-run
+2026-11-17 | cohere | Staff Software Engineer, Agentic Analytics | https://jobs.ashbyhq.com/cohere/39cab400-c976-41d9-9002-880ac6985b64 | dry-run
+2026-11-17 | cohere | Staff Software Engineer, Data Infrastructure | https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d | dry-run
+2026-11-17 | jobgether | Data Engineer | https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93 | dry-run
+2026-11-17 | jobgether | Data Engineering Solution Lead | https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863 | dry-run
+2026-11-17 | jobgether | Data Integration Engineer | https://jobs.lever.co/jobgether/25f8ac01-c5a3-495d-b94c-848bcb7f2197 | dry-run
+2026-11-17 | jobgether | Integration and Data Software Engineer | https://jobs.lever.co/jobgether/9fadc447-59bb-422c-b4ce-6d4a655e09d0 | dry-run
+2026-11-17 | jobgether | Lead Analytics Engineer | https://jobs.lever.co/jobgether/6fde602d-bc6f-47fa-a759-a8d3e208b560 | dry-run
+2026-11-17 | jobgether | Lead Data Engineer, Databricks | https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1 | dry-run
+2026-11-17 | jobgether | Manager, Analytics Engineering | https://jobs.lever.co/jobgether/0d4db12a-fa41-4841-9a08-c3878c95992d | dry-run
+2026-11-17 | jobgether | Manager, Business Analytics - Data Platform | https://jobs.lever.co/jobgether/c18e1f78-4813-4c4c-af6a-9cf1f3d542bd | dry-run
+2026-11-17 | jobgether | Senior Analyst, Hub Data & Analytics | https://jobs.lever.co/jobgether/fba8ca84-79ec-4f4a-bc8a-7d1e383a4e8b | dry-run
+2026-11-17 | jobgether | Senior Data Engineer | https://jobs.lever.co/jobgether/37abc1bf-fe10-47c5-ae2c-bacf0036ccd6 | dry-run
+2026-11-17 | jobgether | Senior Data Engineer | https://jobs.lever.co/jobgether/f15f154d-6558-4297-b076-d7de2bf08d90 | dry-run
+2026-11-17 | jobgether | Senior Data Engineer (Databricks) - Contractor | https://jobs.lever.co/jobgether/29670e09-39d6-443c-b949-d84349cf3a9d | dry-run
+2026-11-17 | jobgether | Senior Data Engineer, Ads Data (AI Native) | https://jobs.lever.co/jobgether/5632944f-f006-4e6c-ab9f-836169b07e0b | dry-run
+2026-11-17 | jobgether | Senior Data Engineer, Data Transformation Platform | https://jobs.lever.co/jobgether/f77bd289-681f-4a04-b93b-9c889bc46c2e | dry-run
+2026-11-17 | jobgether | Senior Software Engineer, Data Solutions | https://jobs.lever.co/jobgether/ee727b71-350c-400a-9071-74ca4444772b | dry-run
+2026-11-17 | jobgether | Senior Strategist, Constituent Data Integrations | https://jobs.lever.co/jobgether/ac43f2f9-d061-41e9-b60a-f40c2709ed04 | dry-run
+2026-11-17 | jobgether | Software Engineer - Database | https://jobs.lever.co/jobgether/4adde91c-124f-4b1a-ad24-a7f1d5c0bfad | dry-run
+2026-11-17 | jobgether | Staff Data Engineer, Applied Data Science III | https://jobs.lever.co/jobgether/54da6a1c-4f0e-4377-9c50-6f9dfd256201 | dry-run
+2026-11-17 | jobgether | Staff/Senior Analytics Engineer, Data Science & Analytics (DSA) | https://jobs.lever.co/jobgether/31ed1bfe-452d-4dae-a8bb-6c58b4f6b5b7 | dry-run
+2026-11-17 | jobgether | Staff/Senior Data Engineer | https://jobs.lever.co/jobgether/141c6bd9-8d42-4ebc-a52c-4b897059e2f2 | dry-run
+2026-11-17 | Velosio | Data Engineer | https://careers.velosio.com/jobs/3162 | dry-run
+2026-11-17 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-17 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-18 | Toast | Data Engineer | https://job-boards.greenhouse.io/toast/jobs/8359240 | dry-run

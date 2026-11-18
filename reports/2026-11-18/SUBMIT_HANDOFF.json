@@ -1,9 +1,22 @@
 {
   "day": "2026-11-18",
-  "prepared_at": "2026-11-17T12:17:36.371291-06:00",
+  "prepared_at": "2026-11-17T20:39:55.479017-06:00",
   "window": "08:00-12:00 America/Chicago",
   "target": "20-25",
   "submit_order": [
+    {
+      "company": "Toast",
+      "role": "Data Engineer",
+      "url": "https://job-boards.greenhouse.io/toast/jobs/8359240",
+      "kit": "applications/ready/2026-11-18/Toast_Data_Engineer_SUBMIT_KIT.md",
+      "resume": "resumes/tailored/2026-11-18/Susmitha_Toast_Data_Engineer.docx",
+      "scores": [
+        7.2,
+        7.2,
+        8.3
+      ],
+      "notes": "NEW remote US; dry-run ready"
+    },
     {
       "company": "Block",
       "role": "Sales Compensation Systems & Data Engineer",
@@ -30,7 +43,9 @@
     "Anduril",
     "SpaceX",
     "Air",
-    "Plaid office-3d"
+    "Plaid office-3d",
+    "Natera already applied",
+    "Commure already applied"
   ],
   "gmail_otp": true
 }

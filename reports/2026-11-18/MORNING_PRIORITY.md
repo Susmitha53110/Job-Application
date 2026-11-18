@@ -6,13 +6,16 @@ Window opens **08:00 America/Chicago**. Target **20–25**. Gmail OTP ready (`ds
 - **23 unique applied** on 2026-11-17 (band hit). See `reports/2026-11-17/NOON_REPORT.md`.
 
 ## Do first (in window)
-1. **Block — Sales Compensation Systems & Data Engineer**  
-   http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 (GH; dry-run packet exists; watch Country/phone quirk)
-2. **Okta — Senior Software Engineer, Data Platform** (needs-me CAPTCHA)  
+1. **Toast — Data Engineer** (NEW watchlist 2026-11-17; score 7.2; Remote US)  
+   https://job-boards.greenhouse.io/toast/jobs/8359240  
+   Kit: `applications/ready/2026-11-18/Toast_Data_Engineer_SUBMIT_KIT.md`
+2. **Block — Sales Compensation Systems & Data Engineer**  
+   http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 (GH; fill hardened; watch Country/phone quirk)
+3. **Okta — Senior Software Engineer, Data Platform** (needs-me CAPTCHA)  
    https://www.okta.com/company/careers/opportunity/8384001?gh_jid=8384001  
    Form previously filled; solve reCAPTCHA + submit
-3. **ONE `hunt_all`** → apply age-ok GH/Ashby/Rippling DE/AE/platform roles not in APPLIED_INDEX
-4. Continue until 25 or 12:00 CT
+4. **ONE `hunt_all`** → apply age-ok GH/Ashby/Rippling DE/AE/platform roles not in APPLIED_INDEX
+5. Continue until 25 or 12:00 CT
 
 ## Skip
 - Already applied 2026-11-17 (Clera×3, Merge, Amplitude, Solvd×2, SpotOn, Cohere×2, SurveyMonkey, Commure, Zocdoc, Constant Contact, Knot, Verkada, Natera, Zscaler, Rocket Lab, Coinbase×2, Instacart, Keebo)

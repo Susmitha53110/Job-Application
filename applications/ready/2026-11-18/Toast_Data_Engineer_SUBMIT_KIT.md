@@ -1,0 +1,12 @@
+# Submit kit — Toast / Data Engineer
+- URL: https://job-boards.greenhouse.io/toast/jobs/8359240
+- Careers: https://careers.toasttab.com/jobs?gh_jid=8359240
+- ATS: greenhouse
+- Age: posted 2026-11-17 (≤10d)
+- Location: Remote, US
+- Scores: 7.2 / 7.2 / 8.3 (≥7 — apply)
+- Resume (a): `resumes/tailored/2026-11-18/Susmitha_Toast_Data_Engineer.docx`
+- Catch note: `reports/2026-11-18/catch-notes/Toast_Data_Engineer.md`
+- Standing answers: work auth Yes · sponsorship **No** · salary 120000 · relocate Yes
+- Notes: 2+ years asked (Susmitha ~5 — fine). Hedged Airflow/dbt/BigQuery — use MASTER_FACTS only; do not invent.
+- **Submit only 08:00–12:00 CT**
