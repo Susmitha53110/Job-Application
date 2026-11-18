@@ -1,6 +1,6 @@
 {
   "day": "2026-11-18",
-  "prepared_at": "2026-11-17T20:39:55.479017-06:00",
+  "prepared_at": "2026-11-17T20:45:19.684976-06:00",
   "window": "08:00-12:00 America/Chicago",
   "target": "20-25",
   "submit_order": [
@@ -32,6 +32,14 @@
       "kit": "applications/ready/2026-11-18/Okta_Data_Platform_SUBMIT_KIT.md",
       "resume": "resumes/tailored/2026-11-17/Susmitha_Okta_Senior_Software_Engineer_Data_Platform.docx",
       "notes": "needs-me CAPTCHA; U.S. Person=No"
+    },
+    {
+      "company": "Block",
+      "role": "Staff Data Engineer, Advanced Insights & Modeling",
+      "url": "https://job-boards.greenhouse.io/embed/job_app?for=block&token=5473605008",
+      "kit": "applications/ready/2026-11-18/Block_Staff_DE_SUBMIT_KIT.md",
+      "resume": "resumes/tailored/2026-11-18/Susmitha_Block_Staff_Data_Engineer_Advanced_Insights_Modeling.docx",
+      "notes": "Country quirk; after Sales Comp"
     }
   ],
   "then": "python3 -m agent queue-submit (skip aged MongoDB/mux/Machinify/Curve); ONE hunt_all; apply until 25 or noon",
@@ -45,7 +53,9 @@
     "Air",
     "Plaid office-3d",
     "Natera already applied",
-    "Commure already applied"
+    "Commure already applied",
+    "Alloy Engineering Manager",
+    "Bayesian spam-flag"
   ],
   "gmail_otp": true
 }
