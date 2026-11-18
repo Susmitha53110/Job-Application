@@ -90,6 +90,36 @@ def _by_id(page, eid: str):
     return page.locator(f'[id="{eid}"]')
 
 
+def _greenhouse_embed_fallback(url: str) -> str | None:
+    """Derive boards embed apply URL from common Greenhouse job URL shapes."""
+    # https://job-boards.greenhouse.io/{board}/jobs/{id}
+    m = re.search(
+        r"(?:job-boards|boards)\.greenhouse\.io/(?:embed/job_app\?for=)?([a-z0-9_-]+)(?:/jobs/|.*[?&]token=)(\d+)",
+        url,
+        re.I,
+    )
+    if m and "embed/job_app" not in url:
+        return f"https://job-boards.greenhouse.io/embed/job_app?for={m.group(1)}&token={m.group(2)}"
+    m2 = re.search(r"[?&](?:gh_jid|token|jobId)=(\d+)", url, re.I)
+    m3 = re.search(r"greenhouse\.io/([a-z0-9_-]+)/", url, re.I)
+    if m2 and m3 and "embed/job_app" not in url:
+        return f"https://job-boards.greenhouse.io/embed/job_app?for={m3.group(1)}&token={m2.group(1)}"
+    # careers sites: ?gh_jid=ID with recognizable board host/path
+    jid = re.search(r"[?&]gh_jid=(\d+)", url, re.I)
+    if jid:
+        host = re.search(r"https?://(?:www\.)?([^/]+)/", url, re.I)
+        board_map = {
+            "block.xyz": "block",
+            "careers.toasttab.com": "toast",
+            "www.okta.com": None,  # not GH embed
+        }
+        if host:
+            board = board_map.get(host.group(1).lower())
+            if board:
+                return f"https://job-boards.greenhouse.io/embed/job_app?for={board}&token={jid.group(1)}"
+    return None
+
+
 def _norm_option(s: str) -> str:
     """Country menus often show 'United States +1' — match on name only."""
     return re.sub(r"\s*\+\d+\s*$", "", (s or "").strip()).lower()
@@ -246,15 +276,32 @@ def submit_greenhouse_basic(
         page.goto(url, wait_until="domcontentloaded", timeout=120000)
         page.wait_for_timeout(1000)
         try:
-            page.get_by_text("Apply", exact=True).first.click(timeout=4000)
+            page.get_by_role("button", name=re.compile(r"Apply", re.I)).first.click(timeout=4000)
             page.wait_for_timeout(1000)
         except Exception:
-            pass
+            try:
+                page.get_by_text("Apply", exact=True).first.click(timeout=2000)
+                page.wait_for_timeout(1000)
+            except Exception:
+                pass
         try:
-            page.wait_for_selector("#first_name", timeout=20000)
+            page.wait_for_selector("#first_name", timeout=8000)
         except Exception:
-            browser.close()
-            return GhSubmitResult(False, page.url, "No #first_name — form not found", "", proof_dir)
+            # Toast/Block careers pages often host the form only on the embed URL
+            alt = _greenhouse_embed_fallback(url)
+            if alt and alt != url:
+                try:
+                    page.goto(alt, wait_until="domcontentloaded", timeout=120000)
+                    page.wait_for_timeout(1000)
+                    page.wait_for_selector("#first_name", timeout=15000)
+                except Exception:
+                    browser.close()
+                    return GhSubmitResult(
+                        False, page.url, "No #first_name — form not found (embed fallback failed)", "", proof_dir
+                    )
+            else:
+                browser.close()
+                return GhSubmitResult(False, page.url, "No #first_name — form not found", "", proof_dir)
 
         # Upload resume first (may autofill), then overwrite with standing answers.
         if _by_id(page, "resume").count():
