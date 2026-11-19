@@ -1133,3 +1133,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-19 | Alloy | Senior Analytics Engineer | https://job-boards.greenhouse.io/embed/job_app?for=alloy&token=8612698002 | applied
 2026-11-19 | Cloudflare | Senior Data Engineer, Cloudforce One | https://job-boards.greenhouse.io/cloudflare/jobs/8395358 | applied
 2026-11-19 | Life360 | Staff Data Engineer, Data Platform Core | https://job-boards.greenhouse.io/life360/jobs/8659252002 | applied
+2026-11-19 | Samsara | Senior AI Data & Analytics Engineer II | https://job-boards.greenhouse.io/samsara/jobs/8281489 | applied
