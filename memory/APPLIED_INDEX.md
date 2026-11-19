@@ -1135,3 +1135,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-19 | Life360 | Staff Data Engineer, Data Platform Core | https://job-boards.greenhouse.io/life360/jobs/8659252002 | applied
 2026-11-19 | Samsara | Senior AI Data & Analytics Engineer II | https://job-boards.greenhouse.io/samsara/jobs/8281489 | applied
 2026-11-19 | Block | Senior Analytics Engineer, AI & DX Analytics NYC | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5434325008 | applied
+2026-11-19 | Cloudflare | Distributed Systems Engineer - Data Platform | https://job-boards.greenhouse.io/cloudflare/jobs/7462801 | applied
