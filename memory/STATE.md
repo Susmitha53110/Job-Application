@@ -49,3 +49,11 @@
 - unique_applied: 23 (target 20–25)
 - gmail_connected: dsusmitha55@gmail.com (OTP auto-read — Keebo)
 - next: 2026-11-18 08:00 CT
+
+
+## 2026-11-19 mid-morning (~10:21 CT)
+- unique_applied_so_far: 16
+- target: 20-25 by noon CT
+- pending CAPTCHA tabs: Cloudflare x2, Okta DC, Life360, Alloy, Samsara
+- skipped: Gusto (10+ yrs fit), Air (citizenship), Cursor Ashby 404
+- SoFi: needs-me resume upload/OTP session mismatch

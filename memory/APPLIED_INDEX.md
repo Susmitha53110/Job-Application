@@ -1104,3 +1104,32 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-17 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
 2026-11-17 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
 2026-11-18 | Toast | Data Engineer | https://job-boards.greenhouse.io/toast/jobs/8359240 | dry-run
+2026-11-18 | Alloy | Engineering Manager, Data Platform | https://www.alloy.com/about/jobs/detail?gh_jid=8935003002&gh_jid=8935003002 | dry-run
+2026-11-18 | Block | Staff Data Engineer, Advanced Insights & Modeling | http://block.xyz/careers/jobs/5473605008?gh_jid=5473605008 | dry-run
+2026-11-18 | bayesianhealth | Software Engineer, Data & Analytics Platform | https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655 | dry-run
+2026-11-18 | Toast | Data Engineer | https://job-boards.greenhouse.io/toast/jobs/8359240 | applied
+2026-11-19 | Block | Sales Compensation Systems & Data Engineer | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5485151008 | applied
+2026-11-19 | EnergyHub | Senior Data Engineer, C&I | https://job-boards.greenhouse.io/energyhub/jobs/8947924002 | applied
+2026-11-19 | Tebra | Senior Analytics Engineer | https://job-boards.greenhouse.io/tebra/jobs/4749058005 | applied
+2026-11-19 | Okta | Senior Software Engineer, Data Platform | https://job-boards.greenhouse.io/embed/job_app?for=okta&token=8384001 | applied
+2026-11-19 | Cloudflare | Senior Software Engineer, Data Primitives | https://job-boards.greenhouse.io/cloudflare/jobs/8398753 | applied
+2026-11-19 | Cloudflare | Software Engineer, Data Primitives | https://job-boards.greenhouse.io/cloudflare/jobs/8398779 | applied
+2026-11-19 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5473605008 | applied
+2026-11-19 | Block | Senior Software Engineer - Data Enablement | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5478819008 | applied
+2026-11-19 | Block | Staff Data Engineer, Advanced Insights & Modeling | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5473605008 | applied
+2026-11-19 | Block | Senior Software Engineer - Data Enablement | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5478819008 | applied
+2026-11-19 | Airbnb | Senior Data Engineer Tech Foundations | https://job-boards.greenhouse.io/embed/job_app?for=airbnb&token=8396777 | applied
+2026-11-19 | Air | Data Engineer - Analytics | https://job-boards.greenhouse.io/air/jobs/4504874009 | skipped
+2026-11-19 | Clera | Founding Data Engineer | https://jobs.ashbyhq.com/Clera/96eb46ad-eb7a-4540-afc8-7397d946019f | applied
+2026-11-19 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44 | applied
+2026-11-19 | Clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/0bb25b44-9e01-48be-9db1-a8a26d558d0d | applied
+2026-11-19 | Commure | Senior Software Engineer, Data Platform | https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654 | applied
+2026-11-19 | Gusto | Software Engineer, Financial Data & Payments | https://job-boards.greenhouse.io/gusto/jobs/8360497 | skipped
+2026-11-19 | Block | Senior Analytics Engineer, AI & DX Analytics | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5424561008 | applied
+2026-11-19 | Block | Senior Data Engineer, Product | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5442647008 | applied
+2026-11-19 | Block | Software Engineer, Data Platform | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5381381008 | applied
+2026-11-19 | Okta | Senior Software Engineer, Data Platform DC | https://job-boards.greenhouse.io/embed/job_app?for=okta&token=8239380 | skipped
+2026-11-19 | Cloudflare | Data Engineer | https://job-boards.greenhouse.io/cloudflare/jobs/8055118 | applied
+2026-11-19 | Alloy | Senior Analytics Engineer | https://job-boards.greenhouse.io/embed/job_app?for=alloy&token=8612698002 | applied
+2026-11-19 | Cloudflare | Senior Data Engineer, Cloudforce One | https://job-boards.greenhouse.io/cloudflare/jobs/8395358 | applied
+2026-11-19 | Life360 | Staff Data Engineer, Data Platform Core | https://job-boards.greenhouse.io/life360/jobs/8659252002 | applied

@@ -1,0 +1,73 @@
+success=False
+captcha=True
+otp=False
+url=https://job-boards.greenhouse.io/embed/job_app?for=sofi&token=8207529003
+body=Create a Job Alert
+
+Interested in building your career at SoFi? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
++1
+Phone*
+Location (City)*
+Austin, Texas, United States
+Locate me
+Resume/CV*
+
+Susmitha_Chowdary_Base_Resume.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Education
+
+Degree*
+Master's Degree
+Add another
+LinkedIn Profile
+Website
+Will you now or in the future require SoFi to commence (“sponsor”) an immigration case in order to employ you?*
+No
+
+For example, H-1B or other employment-based immigration case
+
+Have you worked at or been a consultant for SoFi or any company subsequently acquired by a SoFi entity (including Galileo Financial Technologies, Technisys, Wyndham Capital Mortgage, Zenbanx, 8 Securities, and/or Golden Pacific Bancorp, Clara Lending)?*
+option , selected.Select is focused ,type to refine list, press Down to open the menu,
+Select...
+
+This field is required.
+
+Would you like to receive marketing communications about careers at SoFi and SoFi Tech Solutions?*
+Select...
+
+This field is required.
+
+Preferred Name (if different from legal name)
+Are you authorized to lawfully work in the country where this role is located?*
+Yes
+I acknowledge that by providing my phone number, I agree to receive text messages from SoFi Technologies in relation to this job application. Message frequency varies. Reply STOP to opt-out of future messaging. Reply HELP for help. Message and data rates may apply.*
+Select...
+
+This field is required.
+
+View our Privacy & SMS Policy
+
+Are you currently employed with or have been employed by Deloitte? Deloitte is our external financial auditor and due diligence may be performed prior to employment to ensure independence requirements are met. If you indicate yes, you agree that certain information may need to be disclosed to D

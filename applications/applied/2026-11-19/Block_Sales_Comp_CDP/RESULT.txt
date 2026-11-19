@@ -1,0 +1,4 @@
+success=True
+url=https://job-boards.greenhouse.io/embed/job_app/confirmation?for=block&token=5485151008
+confirmation=Application submitted!
+timestamp=2026-11-19 14:05 UTC

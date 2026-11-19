@@ -1,0 +1,68 @@
+success=False
+captcha=True
+otp=False
+url=https://job-boards.greenhouse.io/embed/job_app?for=airbnb&token=8396777
+body=Create a Job Alert
+
+Interested in building your career at Airbnb? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
++1
+Phone*
+Location (City)*
+Austin, Texas, United States
+Locate me
+Resume/CV*
+
+Susmitha_Chowdary_Base_Resume.docx
+
+Cover Letter
+Attach
+Attach
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+LinkedIn Profile
+How did you hear about this job?*
+Company Website (Airbnb Careers)
+U.S. Equal Opportunity Employment Information (Completion is voluntary)
+I decline to answer the following questions.
+
+Airbnb values diversity, inclusion & belonging for all, and is proud to be an Equal Employment Opportunity employer. It's important to us that our workplace empowers people of all backgrounds, identities, and experiences to feel respected, valued and able to contribute at the highest level.
+
+Self-identification is an important tool that provides an avenue for candidates to share their demographic information so that Airbnb can evaluate and implement strategies to build a culture that supports our community. As part of these efforts, we invite candidates to self-identify as to the categories below. Submitting this information is entirely voluntary and any information provided will be maintained confidentially and will not be used in making hiring decisions.
+
+Gender:
+Female
+
+Please identify your gender.
+
+Race:
+Asian
+
+Please identify your race.
+
+Race & Ethnicity Definitions:
+
+Hispanic or Latino: A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin regardless of race.
+
+White (Not Hispanic or Latino): A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.
+
+Black or African American (Not Hispanic or Latino): A person having origins in any of the black racial groups of Africa.
+
+
+Asian (Not Hispanic or Latino): A pers
