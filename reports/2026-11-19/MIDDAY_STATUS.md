@@ -1,15 +1,16 @@
-# 2026-11-19 status (~10:36 CT)
+# 2026-11-19 status (10:43 CT)
 
-- unique_applied: 21 (target 20–25)
-- window open until 12:00 CT
-- pending/needs-me: SoFi (resume upload/OTP session), Plaid Ashby (React form), Samsara done
-- skipped: Gusto (10+ yrs), Air (citizenship), Okta DC (clearance), Cursor Ashby 404
+- **unique_applied: 23** (target 20–25 — floor met)
+- window open until 12:00 CT (~77 min left)
+- still open: SoFi (resume/OTP), optional Samsara location variants, Plaid Ashby
+- skipped: Gusto 10+ yrs, Air citizenship, Okta clearance, Cursor 404
 
-## Applied today
+## Applied today (23)
 - Airbnb — Senior Data Engineer Tech Foundations
 - Alloy — Senior Analytics Engineer
 - Block — Sales Compensation Systems & Data Engineer
 - Block — Senior Analytics Engineer, AI & DX Analytics
+- Block — Senior Analytics Engineer, AI & DX Analytics NYC
 - Block — Senior Data Engineer, Product
 - Block — Senior Software Engineer - Data Enablement
 - Block — Software Engineer, Data Platform
@@ -18,6 +19,7 @@
 - Clera — Senior Data Engineer
 - Clera — Senior Data Integration Engineer
 - Cloudflare — Data Engineer
+- Cloudflare — Distributed Systems Engineer - Data Platform
 - Cloudflare — Senior Data Engineer, Cloudforce One
 - Cloudflare — Senior Software Engineer, Data Primitives
 - Cloudflare — Software Engineer, Data Primitives
