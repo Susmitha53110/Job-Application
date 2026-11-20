@@ -83,7 +83,7 @@ def build_catch_note(
             "- Remove if I cannot back it up in an interview:",
             *[f"  - {x}" for x in (remove_if_unbacked or ["(none beyond base resume facts)"])],
             f"- Timeline flags: {timeline}",
-            f"- Honest tailored score (b): {score_b}/10 (apply threshold ≥ 7)",
+            f"- Honest tailored score (b): {score_b}/10 (apply threshold ≥ 8.5 / 85%)",
             "- Version to submit: **(a) reorder-only** unless (b) approved",
             "- Additions flagged verify-before-applying:",
             *[f"  - {x}" for x in (additions or ["(none)"])],
@@ -117,6 +117,23 @@ def process_job(
         if name == "on_site" and "austin" not in (job.location or "").lower():
             fail_reasons.append(f"On-site outside Austin: {snippet}")
 
+    # Greenhouse application-question preflight (multi-year no-sponsorship, citizen-only, salary)
+    try:
+        from .form_preflight import preflight_from_url
+
+        pf = preflight_from_url(job.url or job.apply_url or "")
+        if pf and pf.blockers:
+            fail_reasons.extend(pf.blockers)
+    except Exception as e:
+        fail_reasons.append(f"Form preflight error: {e}")
+
+    # iCIMS / login-gated apply URLs → needs-me (never create accounts)
+    apply_blob = f"{job.url or ''} {job.apply_url or ''}".lower()
+    if "icims.com" in apply_blob and "/login" in apply_blob:
+        fail_reasons.append(
+            "ATS apply requires candidate login (iCIMS) — STOP needs-me; never create accounts or use Easy Apply"
+        )
+
     yrs = _years_required(job.description)
     stretch = "No major years stretch detected."
     if yrs and yrs > my_years:
@@ -146,8 +163,8 @@ def process_job(
         if fail_reasons:
             reason = "LIKELY SKIP / needs review: " + reason
 
-    if score_b.fit_10 < 7 and not fail_reasons:
-        reason = (reason + " " if reason else "") + f"Honest score (b)={score_b.fit_10}/10 below 7/10 threshold."
+    if score_b.fit_10 < 8.5 and not fail_reasons:
+        reason = (reason + " " if reason else "") + f"Honest score (b)={score_b.fit_10}/10 below 8.5/10 (85%) threshold."
         if not dry_run:
             status = "skipped"
 
@@ -207,7 +224,7 @@ def process_job(
             "| Stage | Fit /10 | Notes |",
             "|-------|---------|-------|",
             f"| (a) Original | {score_orig.fit_10} | raw {score_orig.raw_points}/{score_orig.max_points} |",
-            f"| (b) Reorder-only | {score_b.fit_10} | apply if ≥ 7 |",
+            f"| (b) Reorder-only | {score_b.fit_10} | apply if ≥ 8.5 (85%) |",
             f"| (c) + hedged additions | {score_c.fit_10} | do not submit without approval |",
             "",
             "## Top 5 missing keywords (vs original)",

@@ -1,0 +1,62 @@
+{
+  "time_ct": "2026-11-20T11:12:53.346562-06:00",
+  "request": "5 more DE/Sr DE applies today with \u226585% tailored fit",
+  "result": "inventory empty under gates",
+  "gates": [
+    "title: Data Engineer / Senior Data Engineer only",
+    "tailored score_b \u2265 8.5/10",
+    "first_published \u226410d",
+    "US work OK",
+    "not already applied",
+    "company ATS",
+    "no dbt/fivetran/airflow false claims"
+  ],
+  "closest_rejects": [
+    {
+      "company": "Clasp",
+      "title": "Senior Data Engineer",
+      "score_b": 7.5,
+      "blocker": "JD requires deep dbt; MASTER_FACTS forbids claiming dbt"
+    },
+    {
+      "company": "Clera",
+      "title": "Senior Data Engineer",
+      "score_b": 5.4,
+      "blocker": "low honest fit"
+    },
+    {
+      "company": "Benchling",
+      "title": "Data Engineer",
+      "score_b": 3.7,
+      "blocker": "low honest fit"
+    },
+    {
+      "company": "Kin",
+      "title": "Senior Data Engineer",
+      "score_b": 2.0,
+      "blocker": "low honest fit"
+    },
+    {
+      "company": "Superhuman",
+      "title": "Data Engineer, Foundations",
+      "score_b": 3.7,
+      "blocker": "7+ yrs distributed systems stretch"
+    }
+  ],
+  "already_applied_age_ok_de": [
+    "YesEnergy Data Engineer II",
+    "Toast Data Engineer",
+    "EnergyHub Senior DE C&I",
+    "Airbnb Senior DE Tech Foundations",
+    "Cloudflare Senior DE Cloudforce One",
+    "Block Sales Comp Systems & DE",
+    "Amplitude Senior DE Marketing GTM",
+    "SurveyMonkey Senior DE",
+    "Pocket Data Engineer",
+    "Natera Sr Forward Deployed DE"
+  ],
+  "de_applied_today_unique": [
+    "YesEnergy \u2014 Data Engineer II (8.4, under new gate)",
+    "Pocket \u2014 Data Engineer (9.0)"
+  ]
+}

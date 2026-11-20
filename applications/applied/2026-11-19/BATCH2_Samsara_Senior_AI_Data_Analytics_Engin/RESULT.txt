@@ -1,0 +1,67 @@
+success=False
+captcha=True
+url=https://job-boards.greenhouse.io/embed/job_app?for=samsara&token=8281489
+body=Create a Job Alert
+
+Interested in building your career at Samsara? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country
++1
+Phone
+Location (City)*
+Austin, Texas, United States
+Locate me
+Resume/CV
+
+Susmitha_Chowdary_Base_Resume.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Preferred First Name*
+
+This field is required.
+
+If you do not have a preferred name, please enter your legal name.
+
+Preferred Last Name*
+
+This field is required.
+
+If you do not have a preferred name, please enter your legal name.
+
+LinkedIn Profile
+Most Recent Employer*
+
+This field is required.
+
+What is the zip code of your primary residence?*
+Will you now or in the future require Samsara to commence (“sponsor”) an immigration case in order to employ you? *
+No
+Are you currently legally authorized to work in the country in which this job is based (e.g. you are a citizen, you have a visa, etc.)?*
+Yes
+At Samsara, we encourage employees to bring their whole selves to work (this includes applicants too!) Feel free to share your preferred name and pronouns (she/her, they/them, he/him, ze/zir etc.).
+Processing of Personal Data*
+Select...
+
+This field is required.
+
+When you apply to a job on this site, the personal data contained in your application will be collected by Samsara Inc. and/or one of its subsidiaries (“Samsara”) using Greenhouse Software, Inc., a cloud services provider located in the United States of America ("Greenhouse"). Greenhouse is engaged by Samsara to help manage its recruitment and hiring processes. For more information about how your personal data will be processed by Samsara and any rights you may have, please review Samsara’s Candidate Privacy Notice at https://www.samsara.com/support/candidate-privacy-notice. If you have any questions about our privacy practices, please contact p

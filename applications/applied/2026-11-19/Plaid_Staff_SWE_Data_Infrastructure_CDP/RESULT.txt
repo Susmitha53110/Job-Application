@@ -1,0 +1,7 @@
+success=False
+url=https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957/application
+error=Form validation rejected - Plaid Ashby form uses React components that do not accept CDP automation
+fields_not_filling=Phone Number, Current/Last Company, Previously employed radio, Immigration sponsorship radio, AI impression dropdown, Preferred Location dropdown
+reason=Ashby forms with complex React validation require manual browser interaction - CDP fill(), type(), click() commands do not trigger proper React state updates
+attempted_methods=JavaScript value injection with events, CDP fill(), CDP type() with delay, CDP click on radios/checkboxes
+recommendation=Manual completion required or alternative automation framework (Selenium with real ChromeDriver)

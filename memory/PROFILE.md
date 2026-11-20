@@ -5,7 +5,7 @@
 
 ## Identity
 - Full name: Susmitha Chowdary
-- Application email: Susmithachowdary67@gmail.com
+- Application email: dsusmitha55@gmail.com
 - Phone: 9132073787
 - Location: 1601 Scottsdale Ln, Austin, Texas, 78754
 - LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
@@ -24,35 +24,62 @@
 
 ## Targets
 - Roles: Data Engineer; Analytics Engineer; Azure Data Engineer; Snowflake Data Engineer; Databricks Data Engineer (**CONFIRM** — inferred from resume)
-- Location preference: **Remote only** · **United States only**
-- Geography hard filter: United States only (skip non-US locations / non-US-eligible remote)
-- Work mode hard filter: Remote only (skip hybrid/on-site-only)
+- Location preference: **United States** · **prefer remote** (on-site/hybrid OK per standing answers; relocate Yes)
+- Geography hard filter: United States only (skip non-US locations / non-US-eligible)
+- Work mode: prefer remote; allow hybrid/on-site US
 - Openings hard filter: **open positions only** (skip closed/filled)
 - Seniority / years range: 3–6 years / mid-level Data Engineer (**CONFIRM**)
-- Posted within: last **4** days (fail closed if post date unknown)
+- Posted within: last **10** days (fail closed if post date unknown)
 - Minimum pay (only if posted): $120,000 / year
 - Skip / dealbreakers:
   - Security clearance required
   - US citizen only / citizenship required
   - Staffing agencies / third-party recruiters when avoidable
-  - Roles that explicitly refuse any future visa sponsorship if they are not workable on F1-OPT (**CONFIRM** — see work auth)
+  - Roles that require US citizenship / permanent residence only
   - Jobs already applied to; duplicate postings
   - Posted pay below $120,000 when pay is listed
   - Non-US jobs, non-remote jobs, closed postings, posts older than 4 days
 
 ## Work authorization
 - F1-OPT (currently authorized to work in the US on Optional Practical Training)
-- **Sponsorship answer (confirmed by Susmitha 2026-11-11): No** — use this on “will you now or in the future require sponsorship?” questions.
+- **Sponsorship: No** (standing) — now or in the future.
+- Multi-year “without visa sponsorship” questions → **Yes**.
 - Authorized to work in the US currently: **Yes** (F1-OPT)
 - Do not claim US citizenship or permanent residence.
-- Still **STOP → needs me** on EEO/demographics, background checks, and salary expectations unless Susmitha provided a number for that job.
+- Nationality/national origin if asked: **Indian** (never use for citizenship/work-auth questions).
+
+## Standing compensation
+- **Expected salary: 120000** (min $120,000). Do not flag salary again.
+
+## Standing EEO / voluntary self-ID
+- Gender: Female · Sexual orientation: Heterosexual/Straight · Marital status: Single
+- Race/ethnicity: Asian (South Asian) · Hispanic/Latino: No
+- Disability: No (never had one) · Veteran: not a protected veteran
+- Closest honest option if no exact match; never Yes on disability/veteran.
+
+## Other standing answers
+- Relocate: Yes · On-site/hybrid: Yes (prefer remote) · Start: 2 weeks
+- How heard: **Company website** · Previously worked / relatives there: No · Over 18: Yes
+- Background check + drug screen: Yes
+- LinkedIn / GitHub / portfolio: blank; if required → N/A
+- Uncovered questions → needs me (never guess)
+- Non-compete / restrictive covenant with current employer: **No**
+- After fill → **submit directly** (no approval wait); proof or `unconfirmed`
+
+## Never apply
+- **Citi** / Citigroup / Citibank / subsidiaries
+- **Optum** / UnitedHealth Group subsidiaries
+- Log: `skipped: excluded company`
 
 ## Schedule
-- Daily window: **8:00 AM – 12:00 PM** America/Chicago (Central Time)
-- Days: **Monday–Sunday** (every day)
-- Daily limit ramp: Days 1–3 = 10; Days 4–6 = 15; then up to 20–25
-- Quality over quantity; apply to fewer if cannot finish cleanly
-- Do not start applies outside the window; stop cleanly by 12:00 PM CT
+- Daily window: **8:00 AM – 12:00 PM** America/Chicago (**Monday–Sunday**, including weekends)
+- At **08:00 CT**: one job search → build queue → tailor → fill → submit; **apply target 20–25** per window (cut to 10/day if usage >85%)
+- Efficiency + quality guard: `memory/EFFICIENCY.md` · Master facts: `memory/MASTER_FACTS.md`
+- At **12:00 CT sharp**: stop (finish only in-progress app), send daily report, go idle
+- Outside window: **do nothing** (no search, rechecks, extra timers, or GitHub/CI reactions)
+- Exactly **one** recurring timer: start at 8:00 AM CT every day (until Susmitha stops it)
+- Standing form answers: `applications/FORM_ANSWERS.md`
+
 
 ## Application channels
 - Find on: LinkedIn, Indeed, and company career pages
@@ -71,3 +98,8 @@
 ## Headline / titles (do not change when tailoring)
 - Headline on resume: Data Engineer | Python · SQL · PySpark · Databricks · Snowflake · Azure · AWS
 - Job titles on resume: Data Engineer (Optum), Data Engineer (Citi) — never rewrite
+
+## Daily volume
+- **20–25 applications** per CT window (from 2026-11-13); **10/day** if usage >85%.
+- Work the full 08:00–12:00 window; stop only at 12:00 CT or when Susmitha says stop.
+- Skip dealbreakers / excluded companies / uncovered questions (needs me).

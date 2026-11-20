@@ -1,0 +1,26 @@
+success=False
+captcha=True
+url=https://job-boards.greenhouse.io/life360/jobs/8659252002
+body=Back to jobs
+Staff Data Engineer, Data Platform Core (AI Native)
+Remote, USA ; Remote, Canada
+Apply
+About Life360
+
+Life360’s mission is to keep people close to the ones they love. Our category-leading mobile app, Tile tracking devices, and Pet GPS tracker empower members to protect the people, pets, and things they care about most with a range of services, including location sharing, safe driver reports, and crash detection with emergency dispatch. Life360 serves approximately 107.7 million monthly active users (MAU), as of September 30, 2026, across more than 180 countries.  
+
+Life360 delivers peace of mind and enhances everyday family life with seamless coordination for all the moments that matter, big and small. By continuing to innovate and deliver for our customers, we have become a household name and the must-have mobile-based membership for families (and those friends who are basically family).
+
+Life360 has more than 500 (and growing!) remote-first employees. For more information, please visit life360.com.
+
+Life360 is a Remote First company, which means a remote work environment will be the primary experience for all employees. All positions, unless otherwise specified, can be performed remotely (within the US and Canada) regardless of any specified location above. 
+
+We are AI Native
+
+We are building an AI native company where AI is an integral part of how we build and operate. AI tool usage during interviews varies by role. You may be asked to demonstrate proficiency with AI tools, discuss how you leverage AI, or complete interview exercises without AI assistance. Your Recruiter will provide clear guidance as you move through the interview process.
+
+Undisclosed use of AI not previously discussed with or approved by your Recruiter may impact your candidacy.
+
+About The Team
+
+The Data Platform Core team designs, builds, and maintains scalable data infrastructure that empowers Life360 to make data-driven decisions. We transform raw data into reliable, accessible
