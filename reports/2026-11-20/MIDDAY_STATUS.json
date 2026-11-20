@@ -1,0 +1,17 @@
+{
+  "time_ct": "2026-11-20T08:47:55.007828-06:00",
+  "unique_applied_today": 2,
+  "applied": [
+    "YesEnergy \u2014 Data Engineer II",
+    "Roku \u2014 Senior Data Scientist"
+  ],
+  "eta_answer": "Apply window runs until 12:00 CT. Continuing until then. Verified submits so far; CAPTCHA/resume/OTP are the slow step (~few minutes each when they fire). Inventory of age-ok DE roles is thin after prior days.",
+  "in_flight": [
+    "Toast Principal ML (OTP/captcha)",
+    "Stripe (extra fields)",
+    "Reddit",
+    "Robinhood",
+    "Block ML Platform",
+    "SoFi (resume CDP bug)"
+  ]
+}

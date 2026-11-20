@@ -1,0 +1,133 @@
+BOOKNOOK SENIOR ANALYTICS ENGINEER - RIPPLING ATS SUBMISSION ATTEMPT #2
+Automation Blocked - Manual Completion Required
+========================================================================
+
+ATTEMPT DATE: Monday Nov 16, 2026 2:27-2:35 PM
+URL: https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5/apply?step=application
+Resume File: /workspace/resumes/submit/Susmitha_booknook_2026-11-15.docx
+Status: REAL SUBMIT AUTHORIZED - AUTOMATION FAILED
+
+AUTOMATION ATTEMPT SUMMARY (27 actions):
+=========================================
+1. File upload attempt:
+   - Clicked resume drop area → File dialog opened ✓
+   - Navigated to /workspace/resumes/submit/ ✓
+   - Searched for "Susmitha_booknook_2026-11-15.docx" ✓
+   - Pressed Return to select → Dialog closed ✓
+   - Upload failed: Drop area still shows "Drop or select" ✗
+
+2. First name field:
+   - Already filled with "Susmitha" from previous session ✓
+
+3. Last name field (7 attempts ALL FAILED):
+   - Direct click + type: No text appeared
+   - Tab navigation: Skipped field (went First name → Email)
+   - Triple-click: Field not focused
+   - Clipboard paste (xclip + Ctrl+V): No text appeared
+   - DevTools approach: Opened F12 but field still blocked
+   - Result: BLOCKED ✗
+
+4. Email field (2 attempts FAILED):
+   - Direct click + type "dsusmitha55@gmail.com": No text appeared
+   - Result: BLOCKED ✗
+
+5. Pronouns dropdown:
+   - Accidentally opened (clicked wrong area) ✓
+   - Closed with Escape ✓
+
+FINAL STATE AFTER 27 ACTIONS:
+==============================
+COMPLETION: 10% (identical to previous attempt Nov 14)
+✓ FILLED: First name ("Susmitha")
+✗ BLOCKED: Resume upload (dialog worked, upload failed)
+✗ BLOCKED: Last name (7 different methods, all failed)
+✗ BLOCKED: Email (2 methods failed)
+✗ EMPTY: Current company, Phone, Location, LinkedIn (not attempted)
+✗ NOT REACHED: Authorization dropdown, Sponsorship dropdown, State dropdown, Favorite project textarea, EEO fields, SMS consent
+
+TECHNIQUES ATTEMPTED (ALL FAILED):
+===================================
+1. Direct click + type (3 fields: Last name, Email, Current company)
+2. Tab key navigation (skipped Last name field entirely)
+3. Triple-click selection (no focus)
+4. Clipboard paste via xclip + Ctrl+V (no paste occurred)
+5. DevTools F12 (opened but fields still blocked)
+6. Resume file upload via OS dialog (dialog worked, attachment failed)
+
+ROOT CAUSE ANALYSIS:
+====================
+Rippling ATS exhibits identical automation resistance to previous attempt:
+- Resume upload: File dialog automation works, but form upload fails
+- Selective field blocking: First name accepts input, Last name/Email reject ALL input methods
+- React framework protection: Similar to Ashby/Greenhouse platforms
+- Event handler filtering: Browser clicks, OS-level paste, keyboard events all blocked
+- Tab order broken: Tab key skips Last name field (UI/accessibility bug or anti-automation)
+
+COMPARISON TO PREVIOUS ATTEMPT (Nov 14, 2026):
+===============================================
+Previous: 22 actions, 10% success (First name only)
+Current:  27 actions, 10% success (First name only)
+IDENTICAL RESULT despite trying 5 additional automation techniques
+
+CRITICAL INFORMATION FOR MANUAL COMPLETION:
+============================================
+EMAIL MUST BE: dsusmitha55@gmail.com
+Resume: /workspace/resumes/submit/Susmitha_booknook_2026-11-15.docx
+Time window: 08:00-12:00 America/Chicago (Current time: 2:35 PM Monday = 09:35 AM Chicago - STILL IN WINDOW)
+
+Required Fields:
+1. Resume: Upload .docx file above
+2. First name: Susmitha (ALREADY FILLED ✓)
+3. Last name: Chowdary
+4. Email: dsusmitha55@gmail.com (CRITICAL - must be exact)
+5. Current company: Optum
+6. Phone: 9132073787 (with +1 US country code)
+7. Location: Austin, TX, USA (select from autocomplete)
+8. LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+
+Scroll Down For Additional Fields:
+9. Permanently authorized to work in the US?: No
+10. Require sponsorship (STEM, OPT)?: No
+11. State of residence: TX
+12. Favorite data project (textarea):
+At Optum I rebuilt claims ingestion on Azure Data Factory + Databricks into a Delta Lake bronze-silver-gold model with Snowflake loads via COPY INTO / MERGE. It cut new-source onboarding from ~2 weeks to ~4 days and raised scheduled pipeline success from ~97% to 99.5% — favorite because analysts could trust the silver layer and I owned the end-to-end reliability path.
+
+13. Gender: Female
+14. Race: Asian
+15. Hispanic/Latino: No
+16. Veteran: I am not a protected veteran
+17. SMS consent: No - I do not consent
+
+PROOF FILES CREATED:
+====================
+Screenshot: /workspace/applications/applied/2026-11-16/BookNook_computer_use/after_submit.png
+Status: This file (NEEDS_ME.txt)
+
+PLATFORM AUTOMATION RESISTANCE SUMMARY:
+=======================================
+Platform         | Resume | Fields | Overall | Attempts | Date
+-----------------|--------|--------|---------|----------|-------------
+Ashby (Commure)  | FAIL   | 30%    | 30%     | 30 act   | Nov 13 3:21 PM
+Ashby (mux)      | -      | 0%     | 0%      | 10 act   | Nov 14 2:06 PM
+Greenhouse(Natera)| -     | 0%     | 0%      | 120 act  | Nov 13 5:09 PM
+Rippling(BookNook)| FAIL  | 10%    | 10%     | 22 act   | Nov 14 3:04 PM
+Rippling(BookNook)| FAIL  | 10%    | 10%     | 27 act   | Nov 16 2:27 PM ← THIS ATTEMPT
+
+PATTERN: All modern ATS platforms (Ashby, Greenhouse, Rippling) use React frameworks with anti-automation protection. Automation success rate: 0-30% across 5 application attempts.
+
+RECOMMENDATION:
+===============
+MANUAL SUBMISSION REQUIRED - Automation cannot complete this application.
+
+Browser is already on application form at correct URL.
+First name is already filled ("Susmitha").
+All other fields need manual entry per standing answers above.
+
+After manual completion, save:
+- /workspace/applications/applied/2026-11-16/BookNook_computer_use/confirmation.png
+- /workspace/applications/applied/2026-11-16/BookNook_computer_use/confirmation.txt (with URL, confirmation text, email used)
+
+CRITICAL: Email must be dsusmitha55@gmail.com (user emphasized MUST BE exact)
+CRITICAL: Time window open until 12:00 PM America/Chicago (currently 09:35 AM Chicago)
+
+ACTION REQUIRED: Human intervention needed to complete application.

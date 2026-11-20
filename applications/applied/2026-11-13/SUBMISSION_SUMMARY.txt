@@ -1,0 +1,98 @@
+REAL SUBMISSION ATTEMPT SUMMARY - 2026-11-13
+=============================================
+
+CRITICAL EMAIL REQUIREMENT: dsusmitha55@gmail.com (verified in user instructions)
+
+═══════════════════════════════════════════════════════════════════════
+
+## APPLICATION 1: BLOCK — Staff Data Engineer, Advanced Insights & Modeling
+
+**Status:** NEEDS-ME (INCOMPLETE)
+**URL:** https://block.xyz/careers/jobs/5473605008?gh_jid=5473605008
+**ATS:** Greenhouse (hosted on block.xyz)
+**Resume:** /workspace/resumes/submit/Susmitha_block.docx
+
+**Actions Used:** ~24 (limit: 25)
+
+**Completion Status:**
+✓ Navigated to application page successfully
+✓ Accessed application form
+✓ First Name: Susmitha (entered)
+✓ Last Name: Chowdary (entered)
+✓ Phone: 9132073787 (entered)
+✗ Email: dsusmitha55@gmail.com (may need verification - unclear if saved)
+✗ Resume upload: FAILED - file dialog did not appear after multiple click attempts
+✗ Country dropdown: Not selected
+✗ Location (City): Not filled
+✗ Sponsorship questions: Not reached
+✗ Arbitration agreement: Not reached
+✗ Certification (type name): Not reached
+✗ EEO questions: Not reached
+✗ Form NOT submitted
+
+**Blocking Issue:**
+Resume upload "Attach" button clicked multiple times (single-click, double-click) but 
+file picker dialog never appeared. Cannot proceed without required resume upload.
+
+**Proof Files:**
+- Screenshot: /workspace/applications/applied/2026-11-13/Block_Staff_Data_Engineer_Advanced_Insights/incomplete_state.png
+- Status: /workspace/applications/applied/2026-11-13/Block_Staff_Data_Engineer_Advanced_Insights/status.txt
+
+**Email Used:** Attempted dsusmitha55@gmail.com (verification needed)
+
+**Needs-Me Reason:** Resume upload failure; action limit reached
+
+═══════════════════════════════════════════════════════════════════════
+
+## APPLICATION 2: ZOCDOC — Staff Analytics Engineer
+
+**Status:** NEEDS-ME (INCOMPLETE)
+**URL:** https://job-boards.greenhouse.io/zocdoc/jobs/8356769
+**ATS:** Greenhouse
+**Resume:** /workspace/resumes/submit/Susmitha_zocdoc.docx
+
+**Actions Used:** ~20 (limit: 25)
+
+**Completion Status:**
+✓ Navigated to application page successfully
+✓ Accessed application form
+✗ First Name: Empty
+✗ Last Name: Empty (autocomplete "Chowdary" appeared but not confirmed)
+✗ Email: Contains "Susmitha" (WRONG - should be dsusmitha55@gmail.com)
+✗ Country: Not selected
+✗ Phone: Empty
+✗ Resume upload: Not attempted
+✗ LinkedIn: Not reached
+✗ State of residence: Not reached
+✗ Analytics engineering experience answer: Not reached
+✗ EEO questions: Not reached
+✗ Form NOT submitted
+
+**Blocking Issue:**
+Field navigation difficulties. Multiple attempts to click into "First Name" field 
+resulted in focus landing in "Last Name" or "Email" fields. Email field accidentally 
+populated with "Susmitha" instead of the email address. Unable to make reliable 
+progress through the form.
+
+**Proof Files:**
+- Screenshot: /workspace/applications/applied/2026-11-13/Zocdoc_Staff_Analytics_Engineer/incomplete_state.png
+- Status: /workspace/applications/applied/2026-11-13/Zocdoc_Staff_Analytics_Engineer/status.txt
+
+**Email Used:** NOT CORRECTLY ENTERED (field contains "Susmitha" - WRONG)
+
+**Needs-Me Reason:** Form field navigation issues; minimal progress; action limit approaching
+
+═══════════════════════════════════════════════════════════════════════
+
+FINAL RESULTS SUMMARY:
+
+Applications Submitted: 0 / 2
+Applications Needs-Me: 2 / 2
+
+1. Block: needs-me (resume upload failed)
+2. Zocdoc: needs-me (field navigation issues, email wrong)
+
+CRITICAL NOTES:
+- Email requirement dsusmitha55@gmail.com was NOT properly entered in either application
+- Both applications remain incomplete and require manual intervention
+- No confirmation pages reached; no submissions completed

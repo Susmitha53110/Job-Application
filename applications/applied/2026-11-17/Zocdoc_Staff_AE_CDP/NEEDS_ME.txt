@@ -1,0 +1,43 @@
+NEEDS_ME: Zocdoc Staff Analytics Engineer Application
+
+Status: Session lost - form was previously filled but browser crash reset it
+URL: https://job-boards.greenhouse.io/zocdoc/jobs/8356769
+
+Previous Progress (from filled.png screenshot at 15:53 UTC / 9:53 AM CST):
+✓ Basic info filled (First Name, Last Name, Email, Phone)
+✓ Resume uploaded (Susmitha_zocdoc.docx)
+✓ LinkedIn profile filled
+✓ Sponsorship question answered: Yes
+✗ State of residence required (needs: Texas)
+✗ Analytics engineering experience description required (2-3 sentences)
+✗ Demographics questions required (gender, race, sexual orientation, etc.)
+✗ reCAPTCHA pending
+
+Current Blocker:
+- Chrome "Restore pages?" dialog indicates browser crash
+- Current view shows completely empty form (session data lost)
+- Previous RESULT.txt shows stage=filled_pending_captcha
+- Form needs to be re-filled from scratch due to session loss
+
+Time of previous attempt: ~15:53 UTC (9:53 AM CST)
+Time of current access: 15:58 UTC (9:58 AM CST)
+Session lost between: 15:53 and 15:58 UTC (5 minute window)
+
+Required manual action:
+1. Refresh/reload the application form
+2. Re-enter all candidate information:
+   - Name: Susmitha Chowdary
+   - Email: dsusmitha55@gmail.com
+   - Phone: 9132073787
+   - Resume: Susmitha_zocdoc.docx
+   - LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+   - Sponsorship: Yes
+   - State: Texas
+   - Experience description: (needs to be composed based on resume)
+3. Complete demographics questions
+4. Solve reCAPTCHA
+5. Submit application
+
+Candidate: Susmitha Chowdary
+Location: Austin, TX 78754
+Work auth: F1-OPT (needs future sponsorship: Yes)

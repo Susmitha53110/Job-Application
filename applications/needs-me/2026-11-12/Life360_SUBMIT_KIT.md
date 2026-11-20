@@ -1,0 +1,40 @@
+# Life360 — Greenhouse submit kit
+
+**Do not submit outside 08:00–12:00 America/Chicago.**  
+**Dry-run packet for real ATS work after Clera/Bayesian if still open and in window.**
+
+- Role: Senior Data Engineer, Ads Data (AI Native)
+- ATS: https://job-boards.greenhouse.io/life360/jobs/8935286002
+- Posted: 2026-11-09 · Remote, USA; Remote, Canada · open · Greenhouse
+- Pay posted: $129,000–$192,000 USD (≥ $120k min filter)
+- Resume (a): `resumes/tailored/2026-11-11/Susmitha_Life360_Senior_Data_Engineer_Ads_Data_AI_Native_.docx`
+- Short copy: `resumes/submit/Susmitha_life360.docx`
+- Scores: **7.3 / 7.3 / 8.4** (honest b ≥ 7 — submit **(a)** only)
+- Gaps: Airflow, dbt, BI, Scala, IaC — do not invent ads/ML ownership beyond resume facts.
+- Work auth: Yes (F1-OPT). Sponsorship: **No**.
+
+## Form answers (Greenhouse API + dry-fill README)
+| Field | Answer |
+|-------|--------|
+| First name | Susmitha |
+| Last name | Chowdary |
+| Email | dsusmitha55@gmail.com |
+| Phone | 9132073787 |
+| Country | United States |
+| Location (City) | Austin |
+| Resume/CV | `resumes/submit/Susmitha_life360.docx` |
+| Cover Letter | blank |
+| Website | blank |
+| LinkedIn | leave blank; if required → N/A |
+| Authorized to work where job is located? | **Yes** |
+| Require sponsorship now or in future? | **No** |
+| Existing employee Life360/Tile/Jiobit? | **Not an Existing Employee** |
+| Previously worked there? | **No** |
+| Agree to Job Applicant Privacy Policy | **Yes** (after reading on form) |
+| EEO if shown | Gender Female; Race Asian; Hispanic No; Veteran not protected; Disability No |
+| Salary expectation | if asked → **120000** |
+
+Full map: `applications/needs-me/2026-11-12/life360-dry-fill/README.md`
+
+## Proof
+Save confirmation under `applications/applied/<CT-day>/Life360_Senior_Data_Engineer_Ads_Data/` then `python3 -m agent proof …`.
