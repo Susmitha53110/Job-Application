@@ -1174,3 +1174,21 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-20 | kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
 2026-11-20 | clasp-group | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
 2026-11-20 | kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
+2026-11-20 | EnergyHub | Senior Data Engineer, C&I | https://job-boards.greenhouse.io/energyhub/jobs/8947924002 | dry-run
+2026-11-20 | Airbnb | Senior Data Engineer Tech Foundations | https://job-boards.greenhouse.io/airbnb/jobs/8396777 | dry-run
+2026-11-20 | Keebo | Senior Data Engineer | https://job-boards.greenhouse.io/keebo/jobs/5470466008 | dry-run
+2026-11-20 | Natera | Sr. Forward Deployed Data Engineer | https://job-boards.greenhouse.io/natera/jobs/6255111004 | dry-run
+2026-11-20 | Origami Risk | Senior Data Engineer | https://careers-origamirisk.icims.com/jobs/4002/senior-data-engineer/job | dry-run
+2026-11-20 | Origami Risk | Senior Data Engineer | https://careers-origamirisk.icims.com/jobs/4002/senior-data-engineer/job | dry-run
+2026-11-20 | NBCUniversal | Senior Data Engineer, Data Management & BI | https://jobs.smartrecruiters.com/NBCUniversal3/744000162175261-senior-data-engineer-data-management-bi | dry-run
+2026-11-20 | Mux | Senior Data Engineer | https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe | dry-run
+2026-11-20 | Lumin Digital | Senior Data Engineer | https://jobs.ashbyhq.com/lumin-digital/d3ce55a5-602d-4f8f-84ff-7326cc2b2384 | dry-run
+2026-11-20 | Resilinc | Senior Data Engineer | https://jobs.lever.co/resilinc/98e013c3-84ff-4596-8712-6401c0fb3d55 | dry-run
+2026-11-20 | Origami Risk | Senior Data Engineer | https://careers-origamirisk.icims.com/jobs/4002/senior-data-engineer/job | dry-run
+2026-11-20 | Lemon.io | Senior Data Engineer | https://remotive.com/remote-jobs/data/senior-data-engineer-2091137 | dry-run
+2026-11-20 | Lyft | Data Engineer, Marketplace | https://job-boards.greenhouse.io/lyft/jobs/8940409002 | dry-run
+2026-11-20 | PayPal | Sr Data Engineer | https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Sr-Data-Engineer_R0132344-1 | dry-run
+2026-11-20 | GUIDEcx | Senior Data Engineer | https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009 | dry-run
+2026-11-20 | WorkOS | Data Engineer | https://jobs.ashbyhq.com/workos/26377b4d-b392-4fd7-b813-10c2920299f9 | dry-run
+2026-11-20 | GUIDEcx | Senior Data Engineer | https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009 | needs-me: Greenhouse reCAPTCHA — needs you
+2026-11-20 | GUIDEcx | Senior Data Engineer | https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009 | applied

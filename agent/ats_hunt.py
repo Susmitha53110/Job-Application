@@ -87,6 +87,9 @@ DEFAULT_GH_BOARDS = [
     "machinifyinc",
     "zipcolimited",
     "ninjaone",
+    "guidecxcareers",
+    "chorusinnovations",
+    "keebo",
     "zocdoc",
     "omadahealth",
     "komodohealth",
@@ -494,7 +497,137 @@ DEFAULT_LEVER_COMPANIES = [
     "sixfold",
     "lumin",
     "mux",
+    "floqast",
 ]
+
+
+def hunt_builtin(*, query: str = "senior data engineer", max_age_days: int = 10, limit: int = 40) -> list[JobPosting]:
+    """Discover DE roles on Builtin.com, then keep only listings that resolve to a company ATS URL.
+
+    Builtin is discovery-only. ApplyRedirect often requires login; we still surface JobPosting
+    rows with Builtin URLs so overnight/morning flows can resolve ATS hosts (Greenhouse/Lever/
+    Ashby/iCIMS/Workday/SmartRecruiters) via follow-up scrapes. LinkedIn Easy Apply is never used.
+    """
+    import json
+    import urllib.request
+    from datetime import datetime, timezone
+
+    def _is_de_title(title: str) -> bool:
+        t = (title or "").lower()
+        if "data engineer" not in t:
+            return False
+        return not any(
+            x in t
+            for x in (
+                "director",
+                "manager",
+                "vp ",
+                "vice president",
+                "head of",
+                "chief",
+                "staff",
+                "principal",
+                "distinguished",
+                "machine learning",
+                "ml engineer",
+                "data scientist",
+                "analytics engineer",
+            )
+        )
+
+    out: list[JobPosting] = []
+    search = (
+        f"https://builtin.com/jobs?search={query.replace(' ', '+')}&daysSinceUpdated=7"
+    )
+    try:
+        req = urllib.request.Request(
+            search, headers={"User-Agent": "SusmithaJobAgent/0.1 (discovery)"}
+        )
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            page = resp.read().decode("utf-8", "replace")
+    except Exception:
+        return out
+
+    paths = sorted(set(re.findall(r'href="(/job/[^"]+)"', page)))
+    de_paths = [
+        p
+        for p in paths
+        if re.search(r"data-engineer", p)
+        and not re.search(
+            r"staff|principal|director|manager|scientist|analytics-engineer|software-engineer",
+            p,
+        )
+    ][:limit]
+
+    for path in de_paths:
+        url = "https://builtin.com" + path
+        try:
+            req = urllib.request.Request(
+                url, headers={"User-Agent": "SusmithaJobAgent/0.1 (discovery)"}
+            )
+            with urllib.request.urlopen(req, timeout=20) as resp:
+                raw = resp.read().decode("utf-8", "replace")
+        except Exception:
+            continue
+        title_m = re.search(r"<h1[^>]*>(.*?)</h1>", raw, re.I | re.S)
+        title = _strip_html(title_m.group(1)).strip() if title_m else path
+        if not _is_de_title(title):
+            continue
+        cm = re.search(r'href="/company/([^"/]+)"', raw)
+        company = (cm.group(1).replace("-", " ").title() if cm else "Unknown")
+        posted = None
+        dm = re.search(r'"datePosted"\s*:\s*"([^"]+)"', raw)
+        if dm:
+            posted = dm.group(1)
+        if posted and not within_max_age(posted, max_age_days=max_age_days):
+            continue
+        # Prefer known ATS links embedded on the page when Builtin exposes them
+        ats = re.findall(
+            r"https?://(?:job-boards|boards)\.greenhouse\.io/[^\s\"']+"
+            r"|https?://jobs\.ashbyhq\.com/[^\s\"']+"
+            r"|https?://jobs\.lever\.co/[^\s\"']+"
+            r"|https?://[^\s\"']*icims\.com/[^\s\"']+"
+            r"|https?://[^\s\"']*myworkdayjobs\.com/[^\s\"']+"
+            r"|https?://jobs\.smartrecruiters\.com/[^\s\"']+",
+            raw,
+        )
+        apply_url = ats[0].rstrip(".,)") if ats else url
+        desc = ""
+        for m in re.finditer(
+            r'<script type="application/ld\+json">([\s\S]*?)</script>', raw
+        ):
+            try:
+                ld = json.loads(m.group(1))
+            except Exception:
+                continue
+            if isinstance(ld, list):
+                for x in ld:
+                    if isinstance(x, dict) and "JobPosting" in str(x.get("@type")):
+                        ld = x
+                        break
+            if isinstance(ld, dict) and "JobPosting" in str(ld.get("@type")):
+                desc = _strip_html(ld.get("description") or "")
+                posted = ld.get("datePosted") or posted
+                break
+        remoteish = "Hiring Remotely" in raw or "Remote" in raw[:8000]
+        loc = "Remote, United States" if remoteish else "United States"
+        if not is_us_work_ok(loc, desc, source="builtin", title=title):
+            continue
+        out.append(
+            JobPosting(
+                title=title,
+                company=company,
+                url=apply_url,
+                location=loc,
+                description=desc,
+                source="builtin",
+                posted_at=posted or datetime.now(timezone.utc).isoformat(),
+                apply_url=apply_url,
+                is_open=True,
+                country_hint="US",
+            )
+        )
+    return out
 
 
 def hunt_lever(companies: list[str] | None = None, max_age_days: int = 10) -> list[JobPosting]:
@@ -814,6 +947,10 @@ def hunt_jsonld_pages(pages: list[tuple[str, str]], *, max_age_days: int = 10) -
 
 JSONLD_CAREERS_PAGES = [
     ("Velosio", "https://careers.velosio.com/jobs/3162"),
+    (
+        "Origami Risk",
+        "https://careers-origamirisk.icims.com/jobs/4002/senior-data-engineer/job",
+    ),
 ]
 
 
@@ -833,6 +970,12 @@ def hunt_all(*, max_age_days: int = 10) -> list[JobPosting]:
         pass
     try:
         jobs.extend(hunt_jsonld_pages(JSONLD_CAREERS_PAGES, max_age_days=max_age_days))
+    except Exception:
+        pass
+    # Aggregators / career indexes = discovery only; apply still happens on company ATS URLs.
+    try:
+        jobs.extend(hunt_builtin(query="data engineer", max_age_days=max_age_days))
+        jobs.extend(hunt_builtin(query="senior data engineer", max_age_days=max_age_days))
     except Exception:
         pass
     jobs.extend(poll_watchlist(max_age_days=max_age_days))

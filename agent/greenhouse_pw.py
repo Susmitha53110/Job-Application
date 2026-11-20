@@ -394,6 +394,13 @@ def submit_greenhouse_basic(
                     _pick_react(page, eid, ["Yes"])
                 elif "sponsor" in low and sponsorship_no:
                     _pick_react(page, eid, ["No"])
+                elif (
+                    "located in the united states" in low
+                    or "based in the united states" in low
+                    or ("united states" in low and "located" in low)
+                    or ("do you live" in low and "united states" in low)
+                ):
+                    _pick_react(page, eid, ["Yes"])
                 elif "salary" in low or "compensation expectation" in low or "pay expectation" in low:
                     from .salary import salary_from_memory
 
