@@ -1136,3 +1136,20 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-19 | Samsara | Senior AI Data & Analytics Engineer II | https://job-boards.greenhouse.io/samsara/jobs/8281489 | applied
 2026-11-19 | Block | Senior Analytics Engineer, AI & DX Analytics NYC | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5434325008 | applied
 2026-11-19 | Cloudflare | Distributed Systems Engineer - Data Platform | https://job-boards.greenhouse.io/cloudflare/jobs/7462801 | applied
+2026-11-20 | SoFi | Senior Software Engineer, Data Platform | https://job-boards.greenhouse.io/embed/job_app?for=sofi&token=8207529003 | needs-me
+2026-11-20 | YesEnergy | Data Engineer II | https://job-boards.greenhouse.io/yesenergy/jobs/5485712008 | needs-me
+2026-11-20 | Roku | Senior Data Scientist | https://job-boards.greenhouse.io/roku/jobs/8404549 | needs-me
+2026-11-20 | Stripe | Machine Learning Engineer, Transaction Risk | https://job-boards.greenhouse.io/embed/job_app?for=stripe&token=8187574 | needs-me
+2026-11-20 | YesEnergy | Data Engineer II | https://job-boards.greenhouse.io/yesenergy/jobs/5485712008 | applied
+2026-11-20 | Roku | Senior Data Scientist | https://job-boards.greenhouse.io/embed/job_app?for=roku&token=8404549 | needs-me
+2026-11-20 | Roku | Senior Data Scientist | https://job-boards.greenhouse.io/embed/job_app?for=roku&token=8404549 | applied
+2026-11-20 | Stripe | Machine Learning Engineer, Transaction Risk | https://job-boards.greenhouse.io/embed/job_app?for=stripe&token=8187574 | needs-me
+2026-11-20 | Reddit | Senior Staff Machine Learning Engineer, Ads Ranking | https://job-boards.greenhouse.io/embed/job_app?for=reddit&token=8368600 | needs-me
+2026-11-20 | Toast | Principal Machine Learning Engineer, Vision AI | https://job-boards.greenhouse.io/embed/job_app?for=toast&token=8368740 | needs-me
+2026-11-20 | Toast | Staff Machine Learning Engineer - Vision AI | https://job-boards.greenhouse.io/embed/job_app?for=toast&token=8368738 | needs-me
+2026-11-20 | Block | Senior Machine Learning Engineer, Platform | https://job-boards.greenhouse.io/embed/job_app?for=block&token=5481625008 | needs-me
+2026-11-20 | Robinhood | Senior Data Scientist, Experimentation | https://job-boards.greenhouse.io/embed/job_app?for=robinhood&token=8356065 | needs-me
+2026-11-20 | Waymo | Senior Machine Learning Engineer, Driver Refinement & Validation | https://job-boards.greenhouse.io/embed/job_app?for=waymo&token=7456936 | needs-me
+2026-11-20 | Toast | Principal Machine Learning Engineer, Vision AI | https://job-boards.greenhouse.io/embed/job_app?for=toast&token=8368740 | applied
+2026-11-20 | Reddit | Senior Staff Machine Learning Engineer, Ads Ranking | https://job-boards.greenhouse.io/embed/job_app?for=reddit&token=8368600 | applied
+2026-11-20 | Toast | Staff Machine Learning Engineer - Vision AI | https://job-boards.greenhouse.io/embed/job_app?for=toast&token=8368738 | needs-me
