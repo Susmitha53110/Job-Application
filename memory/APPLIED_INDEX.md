@@ -1158,3 +1158,19 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-20 | YesEnergy | Data Engineer II | https://job-boards.greenhouse.io/yesenergy/jobs/5485712008 | dry-run
 2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | needs-me
 2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | applied
+2026-11-20 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/fffd7f52-1d5e-40f3-b5b2-4e8bf3e0c7e0 | dry-run
+2026-11-20 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/3c0915f0-4daa-439d-ab82-c7e4ae7cb286 | dry-run
+2026-11-20 | Clasp | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-20 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/fffd7f52-1d5e-40f3-b5b2-4e8bf3e0c7e0 | dry-run
+2026-11-20 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/3c0915f0-4daa-439d-ab82-c7e4ae7cb286 | dry-run
+2026-11-20 | Benchling | Data Engineer | https://jobs.ashbyhq.com/benchling/c97e5668-29ee-4810-b7cc-35331ac123f5 | dry-run
+2026-11-20 | poshmark | Sr. Software Engineer, Data Engineering | https://jobs.ashbyhq.com/poshmark/b71bc1f1-00ad-4b56-9640-555ba550e315 | dry-run
+2026-11-20 | benchling | Data Engineer | https://jobs.ashbyhq.com/benchling/c97e5668-29ee-4810-b7cc-35331ac123f5 | dry-run
+2026-11-20 | clasp-group | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-20 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/fffd7f52-1d5e-40f3-b5b2-4e8bf3e0c7e0 | dry-run
+2026-11-20 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/3c0915f0-4daa-439d-ab82-c7e4ae7cb286 | dry-run
+2026-11-20 | Clasp | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-20 | Superhuman | Data Engineer, Foundations  | https://jobs.ashbyhq.com/Superhuman%20Platform%20Inc/1eb01ef7-8fef-4a7c-ae90-adfdaa46b9b0 | dry-run
+2026-11-20 | kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
+2026-11-20 | clasp-group | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-20 | kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
