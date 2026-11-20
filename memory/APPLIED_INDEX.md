@@ -1153,3 +1153,7 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-20 | Toast | Principal Machine Learning Engineer, Vision AI | https://job-boards.greenhouse.io/embed/job_app?for=toast&token=8368740 | applied
 2026-11-20 | Reddit | Senior Staff Machine Learning Engineer, Ads Ranking | https://job-boards.greenhouse.io/embed/job_app?for=reddit&token=8368600 | applied
 2026-11-20 | Toast | Staff Machine Learning Engineer - Vision AI | https://job-boards.greenhouse.io/embed/job_app?for=toast&token=8368738 | needs-me
+2026-11-20 | Amplitude | Senior Data Engineer, Marketing & GTM | https://jobs.ashbyhq.com/amplitude/32a5b52c-9e3b-46e2-8c3f-a843fa21bd48 | dry-run
+2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | dry-run
+2026-11-20 | YesEnergy | Data Engineer II | https://job-boards.greenhouse.io/yesenergy/jobs/5485712008 | dry-run
+2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | needs-me

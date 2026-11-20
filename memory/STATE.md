@@ -39,6 +39,10 @@
 - non_compete: No
 - max_age_days: 10
 - gmail_mcp: connected
+- title_focus: Data Engineer / Senior Data Engineer only (no ML / DS / Analytics Engineer / Staff-Principal)
+- min_tailored_fit: 8.5
+- min_tailored_fit_pct: 85
+- tailor_gate_note: "Susmitha 2026-11-20 — apply only when honest tailored score (b) ≥ 8.5/10 (85%); reorder-only resume (a)"
 
 - Overnight prepare-only ran 2026-11-17 12:07 CT → reports/2026-11-18/*
 - Morning priority: reports/2026-11-18/MORNING_PRIORITY.md

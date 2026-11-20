@@ -93,7 +93,7 @@ def readiness_report(*, day: str | None = None) -> dict:
         if not salary:
             blockers.append("Salary expectations number missing")
         if pkt.score_b < 7:
-            blockers.append(f"Honest score (b)={pkt.score_b}/10 below 7")
+            blockers.append(f"Honest score (b)={pkt.score_b}/10 below 8.5 (85%)")
         items.append(
             ReadyItem(
                 company=pkt.company,

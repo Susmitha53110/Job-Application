@@ -34,10 +34,37 @@ def _seniority_blocked(title: str) -> bool:
     return any(x in tl for x in ("staff", "principal", "director", "manager", "vp ", "vice president"))
 
 
+def is_de_or_senior_de_title(title: str) -> bool:
+    """Strict title gate: Data Engineer / Senior Data Engineer only (Susmitha 2026-11-20)."""
+    t = (title or "").lower()
+    if "data engineer" not in t:
+        return False
+    if any(
+        x in t
+        for x in (
+            "director",
+            "manager",
+            "vp ",
+            "vice president",
+            "head of",
+            "chief",
+            "staff",
+            "principal",
+            "distinguished",
+            "machine learning",
+            "ml engineer",
+            "data scientist",
+            "analytics engineer",
+        )
+    ):
+        return False
+    return True
+
+
 def _packet_auto_submitable(pkt: JobPacket) -> tuple[bool, str | None]:
     """Return (ok, skip_reason) for in-window Playwright auto-submit."""
-    if pkt.score_b < 7:
-        return False, "score < 7"
+    if pkt.score_b < 8.5:
+        return False, "score < 8.5 (85%)"
     if _seniority_blocked(pkt.role):
         return False, "seniority staff/principal/director/manager"
     reason_l = (pkt.reason or "").lower()
@@ -291,10 +318,13 @@ def run_daily(*, day: str | None = None, dry: bool = False) -> dict:
         if _seniority_blocked(job.title or ""):
             skipped.append(f"{job.company} / {job.title} — seniority skip (staff/principal/director/manager)")
             continue
+        if not is_de_or_senior_de_title(job.title or ""):
+            skipped.append(f"{job.company} / {job.title} — skip: not Data Engineer / Senior Data Engineer")
+            continue
         pkt = process_job(resume, job, dry_run=True, my_years=5, day=day)
-        if pkt.score_b < 7:
+        if pkt.score_b < 8.5:
             skipped.append(
-                f"{pkt.company} / {pkt.role} — honest score (b)={pkt.score_b}/10 below 7 ({pkt.url})"
+                f"{pkt.company} / {pkt.role} — honest score (b)={pkt.score_b}/10 below 8.5/85% ({pkt.url})"
             )
             append_log_row(
                 {

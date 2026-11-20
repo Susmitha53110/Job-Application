@@ -87,7 +87,7 @@ def run_overnight_hunt(*, day: str | None = None) -> dict:
                     "role": pkt.role,
                     "url": pkt.url,
                     "scores": [pkt.score_a, pkt.score_b, pkt.score_c],
-                    "status": "candidate" if pkt.score_b >= 7 else "skip_low_score",
+                    "status": "candidate" if pkt.score_b >= 8.5 else "skip_low_score",
                 }
             )
 
