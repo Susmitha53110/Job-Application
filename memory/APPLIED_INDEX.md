@@ -1157,3 +1157,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | dry-run
 2026-11-20 | YesEnergy | Data Engineer II | https://job-boards.greenhouse.io/yesenergy/jobs/5485712008 | dry-run
 2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | needs-me
+2026-11-20 | Pocket | Data Engineer | https://jobs.ashbyhq.com/pocket/565e93c5-4350-44f6-8a41-8fd432fea8f8 | applied
