@@ -8,7 +8,7 @@
 - daily_schedule_active: true
 - ramp_day: 2
 - daily_limit: 25
-- last_run_date: 2026-11-17
+- last_run_date: 2026-11-21
 - last_run_summary: "noon 23 unique; overnight prep 2026-11-18; window=False; salary=set; hunt=63; ge7=19"
 - timezone: America/Chicago
 - window_start: "08:00"
@@ -22,7 +22,7 @@
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
 - applications_requested_today: 25
-- applications_succeeded_today: 23
+- applications_succeeded_today: 1
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
@@ -61,3 +61,13 @@
 - pending CAPTCHA tabs: Cloudflare x2, Okta DC, Life360, Alloy, Samsara
 - skipped: Gusto (10+ yrs fit), Air (citizenship), Cursor Ashby 404
 - SoFi: needs-me resume upload/OTP session mismatch
+
+- nov21_applied: Movement Labs Senior Data Engineers
+
+last_run_date: 2026-11-21
+
+applications_succeeded_today: 2
+
+last_run_summary: "Nov21: Movement Labs + Airbnb DE applied; inventory thin under ≥85%/≤10d gates"
+
+next_apply_window: "2026-11-22 08:00 America/Chicago"

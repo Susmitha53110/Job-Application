@@ -1192,3 +1192,31 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-20 | WorkOS | Data Engineer | https://jobs.ashbyhq.com/workos/26377b4d-b392-4fd7-b813-10c2920299f9 | dry-run
 2026-11-20 | GUIDEcx | Senior Data Engineer | https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009 | needs-me: Greenhouse reCAPTCHA — needs you
 2026-11-20 | GUIDEcx | Senior Data Engineer | https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009 | applied
+2026-11-21 | clasp-group | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-21 | kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
+2026-11-21 | Superhuman%20Platform%20Inc | Data Engineer, Foundations  | https://jobs.ashbyhq.com/Superhuman%20Platform%20Inc/1eb01ef7-8fef-4a7c-ae90-adfdaa46b9b0 | dry-run
+2026-11-21 | benchling | Data Engineer | https://jobs.ashbyhq.com/benchling/c97e5668-29ee-4810-b7cc-35331ac123f5 | dry-run
+2026-11-21 | jobgether | Data Engineer | https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93 | dry-run
+2026-11-21 | jobgether | Data Engineering Solution Lead | https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863 | dry-run
+2026-11-21 | jobgether | Data Management Specialist - Data Engineer | https://jobs.lever.co/jobgether/56f9c3db-261f-4a65-b899-08010f62ac3e | dry-run
+2026-11-21 | jobgether | Lead Data Engineer, Databricks | https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1 | dry-run
+2026-11-21 | jobgether | Senior Data Engineer (Databricks) - Contractor | https://jobs.lever.co/jobgether/29670e09-39d6-443c-b949-d84349cf3a9d | dry-run
+2026-11-21 | Movement Labs | Senior Data Engineers | https://apply.workable.com/j/80C6D52055 | dry-run
+2026-11-21 | Spring Health | Senior GTM Data Engineer | https://jobs.ashbyhq.com/deaa6ad2-d184-436b-b69e-17f761da1d94/a091cae8-479d-402e-85e3-a7b0096f06e8 | dry-run
+2026-11-21 | Movement Labs | Senior Data Engineers | https://apply.workable.com/j/80C6D52055 | needs-me: Cloudflare challenge on Workable submit
+2026-11-21 | Movement Labs | Senior Data Engineers | https://apply.workable.com/movement-labs/j/80C6D52055/ | applied
+2026-11-21 | Coderio | Senior Data Engineer - USA | https://jobs.lever.co/coderio/f550db1d-2b00-4a11-b326-c33b146ef8ef | dry-run
+2026-11-21 | Airbnb | Data Engineer Tech Foundations | https://careers.airbnb.com/positions/8396777?gh_jid=8396777 | dry-run
+2026-11-21 | Toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
+2026-11-21 | Chorus Innovations | Senior Data Engineer | https://job-boards.greenhouse.io/chorusinnovations/jobs/5302247007 | dry-run
+2026-11-21 | Air | Data Engineer - Analytics  | https://job-boards.greenhouse.io/air/jobs/4504874009 | dry-run
+2026-11-21 | Floqast | Senior Data Engineer | https://jobs.lever.co/floqast/d9abbae1-022d-4b08-aa83-b13f54b1e143 | dry-run
+2026-11-21 | Airbnb | Data Engineer Tech Foundations | https://job-boards.greenhouse.io/airbnb/jobs/8396777 | applied
+2026-11-21 | FloQast | Senior Data Engineer | https://jobs.lever.co/floqast/d9abbae1-022d-4b08-aa83-b13f54b1e143 | dry-run
+2026-11-21 | FloQast | Senior Data Engineer | https://jobs.lever.co/floqast/d9abbae1-022d-4b08-aa83-b13f54b1e143 | dry-run
+2026-11-21 | floqast | Senior Data Engineer | https://jobs.lever.co/floqast/d9abbae1-022d-4b08-aa83-b13f54b1e143 | dry-run
+2026-11-21 | Toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
+2026-11-21 | Chorus Innovations | Senior Data Engineer | https://job-boards.greenhouse.io/chorusinnovations/jobs/5302247007 | dry-run
+2026-11-21 | Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-21 | Anduril Industries | Product Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5295058007?gh_jid=5295058007 | dry-run
+2026-11-21 | SpaceX | Data Engineer (Starship) | https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002 | dry-run

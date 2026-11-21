@@ -136,9 +136,10 @@ def match_select_option(candidates: list[str], texts: list[str]) -> str | None:
                 return t
         for t in texts:
             tl = _norm_option(t)
-            if tl.startswith(cl + " ") or tl.startswith(cl + "(") or tl.startswith(cl + "—") or tl.startswith(cl + "-"):
+            if tl.startswith(cl + " ") or tl.startswith(cl + "(") or tl.startswith(cl + "—") or tl.startswith(cl + "-") or tl.startswith(cl + ","):
                 return t
-        if len(cl) >= 4:
+        # Short Yes/No must still match long ATS options ("Yes, I am currently…").
+        if cl in {"yes", "no"} or len(cl) >= 4:
             pat = re.compile(rf"(?:^|[^a-z0-9]){re.escape(cl)}(?:[^a-z0-9]|$)")
             for t in texts:
                 if pat.search(_norm_option(t)):
@@ -391,9 +392,24 @@ def submit_greenhouse_basic(
                     or ("work authorization" in low and "require" not in low)
                 ):
                     # Must run before sponsor branch — "authorized … without sponsorship" ≠ requiring visa
-                    _pick_react(page, eid, ["Yes"])
+                    # Prefer long Airbnb-style options; short "Yes" still matches via startswith("yes,").
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "Yes, I am currently legally authorized to work in the country where the job is located.",
+                            "Yes",
+                        ],
+                    )
                 elif "sponsor" in low and sponsorship_no:
-                    _pick_react(page, eid, ["No"])
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "No, I do not and will not require immigration sponsorship to legally work in the country where the job is located.",
+                            "No",
+                        ],
+                    )
                 elif (
                     "located in the united states" in low
                     or "based in the united states" in low
@@ -616,9 +632,23 @@ def submit_greenhouse_basic(
                     or "legally authorized" in low
                     or "without sponsorship" in low
                 ):
-                    _pick_react(page, eid, ["Yes"])
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "Yes, I am currently legally authorized to work in the country where the job is located.",
+                            "Yes",
+                        ],
+                    )
                 elif "sponsor" in low and sponsorship_no:
-                    _pick_react(page, eid, ["No"])
+                    _pick_react(
+                        page,
+                        eid,
+                        [
+                            "No, I do not and will not require immigration sponsorship to legally work in the country where the job is located.",
+                            "No",
+                        ],
+                    )
                 elif ("worked" in low and "before" in low) or "previously" in low or "interviewed" in low:
                     if previously_no:
                         _pick_react(page, eid, ["No"])
