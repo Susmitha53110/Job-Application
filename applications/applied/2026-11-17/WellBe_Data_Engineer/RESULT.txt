@@ -1,0 +1,6 @@
+success=false
+reason=needs-me
+blocker=iCIMS navigation dialog blocking, accidentally clicked wrong button
+progress=10%
+platform=iCIMS
+time_spent_minutes=4

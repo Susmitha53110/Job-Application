@@ -1,0 +1,3 @@
+success=False
+needs=Apply/Submit controls not found
+url=https://careers-harpercollins.icims.com/jobs/5496/data-engineer-%28remote-us%29/job?mobile=false&width=1264&height=500&bga=true&needsRedirect=false&jan1offset=0&jun1offset=0

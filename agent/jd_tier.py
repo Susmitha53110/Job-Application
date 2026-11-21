@@ -128,6 +128,20 @@ def _split_sections(jd_text: str) -> tuple[str, str]:
             item_l = item.lower()
             if item_l.startswith(("first month", "first six", "first year", "needing ", "wanting ", "preferring ", "being ", "expecting ", "discomfort", "profit sharing", "equity", "401k", "we cover", "childcare", "gender affirming", "twenty (")):
                 continue
+            # Ashby compensation chrome often becomes fake bullets: "$172K", "$50K Equity"
+            if re.match(r"^\$?\d", item_l) or any(
+                k in item_l
+                for k in (
+                    "equity",
+                    "profit sharing",
+                    "offers bonus",
+                    "per year",
+                    "per month",
+                    "salary",
+                    "compensation",
+                )
+            ):
+                continue
             if len(item) < 8:
                 continue
             (req if mode == "required" else pref).append(item)
@@ -160,33 +174,54 @@ def _tech_requirements_from_prose(jd_text: str) -> list[JdRequirement]:
         if re.search(pat, low, re.I):
             tech_hits.append(pat)
     # Deduplicate overlapping labels
+    # Keep in sync with extract_keywords label_map — never emit raw regex as requirement text
     labels = {
         r"\bpython\b": "Python",
         r"\bsql\b": "SQL",
         r"\bpyspark\b": "PySpark",
         r"\bspark\b": "Spark",
         r"\bscala\b": "Scala",
+        r"\bjava\b": "Java",
+        r"\bbash\b": "Bash",
         r"\bdatabricks\b": "Databricks",
         r"\bsnowflake\b": "Snowflake",
         r"delta\s*lake": "Delta Lake",
         r"\badf\b|azure data factory": "Azure Data Factory",
+        r"\badls\b": "ADLS",
         r"\bazure\b": "Azure",
         r"\baws\b": "AWS",
+        r"\bglue\b": "Glue",
+        r"\bs3\b": "S3",
+        r"\bathena\b": "Athena",
+        r"\bredshift\b": "Redshift",
+        r"\bbigquery\b": "BigQuery",
         r"\bairflow\b": "Airflow",
         r"\bdbt\b": "dbt",
         r"\bdagster\b": "Dagster",
         r"\bprefect\b": "Prefect",
         r"\bkafka\b": "Kafka",
+        r"\bflink\b": "Flink",
+        r"\boracle\b": "Oracle",
+        r"\bparquet\b": "Parquet",
+        r"\bavro\b": "Avro",
+        r"ci/?cd": "CI/CD",
+        r"\bgit\b": "Git",
+        r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
+        r"\bscd\b": "SCD",
         r"\betl\b|\belt\b": "ETL/ELT pipelines",
         r"data quality": "data quality",
-        r"\blooker\b|\btableau\b|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
-        r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
         r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
+        r"\blooker\b|\btableau\b|power\s*bi": "BI tools (Looker/Tableau/Power BI)",
+        r"feature store|feature engineering": "feature engineering",
         r"\bmlops\b|machine learning": "ML/MLOps workflows",
+        r"\bpinecone\b|\bmilvus\b|\bweaviate\b": "vector DBs",
+        r"\bterraform\b|infrastructure-as-code|\biac\b": "Terraform/IaC",
     }
     seen = set()
     for pat in tech_hits:
-        label = labels.get(pat, pat)
+        label = labels.get(pat)
+        if not label or label.startswith("\\b") or "|" in label or "\\" in label:
+            continue
         if label in seen:
             continue
         seen.add(label)
@@ -230,35 +265,58 @@ def _tech_requirements_from_prose(jd_text: str) -> list[JdRequirement]:
 
 
 def extract_keywords(jd_text: str, limit: int = 40) -> list[str]:
-    # Prefer concrete tech labels first
-    tech_labels = []
-    for pat in TECH_PATTERNS:
-        if re.search(pat, jd_text, re.I):
-            tech_labels.append(pat)
+    # Prefer concrete tech labels first. Keys must match TECH_PATTERNS exactly.
     label_map = {
-        r"airflow": "Airflow",
-        r"kafka": "Kafka",
-        r"dbt": "dbt",
-        r"dagster": "Dagster",
-        r"prefect": "Prefect",
-        r"bigquery": "BigQuery",
-        r"python": "Python",
-        r"sql": "SQL",
-        r"pyspark": "PySpark",
-        r"spark": "Spark",
-        r"databricks": "Databricks",
-        r"snowflake": "Snowflake",
-        r"azure": "Azure",
-        r"aws": "AWS",
-        r"adf|azure data factory": "Azure Data Factory",
-        r"looker|tableau|power\s*bi": "BI tools",
-        r"etl|elt": "ETL/ELT",
+        r"\bpython\b": "Python",
+        r"\bsql\b": "SQL",
+        r"\bpyspark\b": "PySpark",
+        r"\bspark\b": "Spark",
+        r"\bscala\b": "Scala",
+        r"\bjava\b": "Java",
+        r"\bbash\b": "Bash",
+        r"\bdatabricks\b": "Databricks",
+        r"\bsnowflake\b": "Snowflake",
+        r"delta\s*lake": "Delta Lake",
+        r"\badf\b|azure data factory": "Azure Data Factory",
+        r"\badls\b": "ADLS",
+        r"\bazure\b": "Azure",
+        r"\baws\b": "AWS",
+        r"\bglue\b": "Glue",
+        r"\bs3\b": "S3",
+        r"\bathena\b": "Athena",
+        r"\bredshift\b": "Redshift",
+        r"\bbigquery\b": "BigQuery",
+        r"\bairflow\b": "Airflow",
+        r"\bdbt\b": "dbt",
+        r"\bdagster\b": "Dagster",
+        r"\bprefect\b": "Prefect",
+        r"\bkafka\b": "Kafka",
+        r"\bflink\b": "Flink",
+        r"\boracle\b": "Oracle",
+        r"\bparquet\b": "Parquet",
+        r"\bavro\b": "Avro",
+        r"ci/?cd": "CI/CD",
+        r"\bgit\b": "Git",
+        r"dimensional modeling|star schema|snowflake schema": "dimensional modeling",
+        r"\bscd\b": "SCD",
+        r"\betl\b|\belt\b": "ETL/ELT",
         r"data quality": "data quality",
+        r"\bhipaa\b|\bphi\b": "HIPAA/PHI",
+        r"\blooker\b|\btableau\b|power\s*bi": "BI tools",
+        r"feature store|feature engineering": "feature engineering",
+        r"\bmlops\b|machine learning": "ML/MLOps",
+        r"\bpinecone\b|\bmilvus\b|\bweaviate\b": "vector DBs",
+        r"\bterraform\b|infrastructure-as-code|\biac\b": "Terraform/IaC",
     }
     ranked_tech = []
     seen = set()
-    for pat in tech_labels:
+    for pat in TECH_PATTERNS:
+        if not re.search(pat, jd_text, re.I):
+            continue
         lab = label_map.get(pat, pat)
+        if lab.startswith("\\b") or "|" in lab or "\\" in lab:
+            # Never surface raw regex as a keyword label
+            continue
         if lab not in seen:
             seen.add(lab)
             ranked_tech.append(lab)
@@ -288,16 +346,70 @@ def tier_jd(title: str, company: str, url: str, location: str, jd_text: str) -> 
     preferred = [JdRequirement(text=t, weight=1, kind="nice") for t in pref_block.splitlines() if t.strip()]
 
     if not required:
-        # fallback: treat bullet-like lines as important
+        # fallback: treat bullet-like lines as important (skip benefits/comp chrome)
+        in_benefits = False
         for line in normalized.splitlines():
+            low_line = line.strip().lower()
+            if any(
+                k in low_line
+                for k in (
+                    "benefits",
+                    "compensation",
+                    "what we offer",
+                    "perks",
+                    "our values",
+                    "equal opportunity",
+                    "life at",
+                )
+            ):
+                in_benefits = True
+                continue
+            if in_benefits:
+                continue
             if line.strip().startswith(("-", "*", "•")):
-                required.append(JdRequirement(text=re.sub(r"^[-*•]\s*", "", line.strip()), weight=2, kind="important"))
+                item = re.sub(r"^[-*•]\s*", "", line.strip())
+                low = item.lower()
+                if re.match(r"^\$?\d", low) or any(
+                    k in low
+                    for k in (
+                        "equity",
+                        "profit sharing",
+                        "offers bonus",
+                        "compensation",
+                        "per month",
+                        "401k",
+                        "medical",
+                        "dental",
+                        "vision",
+                        "stipend",
+                        "tuition",
+                        "paid vacation",
+                        "pto",
+                        "401(k)",
+                    )
+                ):
+                    continue
+                if len(item) < 8:
+                    continue
+                required.append(JdRequirement(text=item, weight=2, kind="important"))
+
+    def _looks_like_comp_noise(items: list[JdRequirement]) -> bool:
+        if not items:
+            return False
+        hits = 0
+        for it in items:
+            low = (it.text or "").lower()
+            if re.match(r"^\$?\d", low) or any(
+                k in low for k in ("equity", "profit sharing", "offers bonus", "compensation", "per month")
+            ):
+                hits += 1
+        return hits >= max(1, len(items) // 2)
 
     if not required:
         # Prose ATS descriptions (Ashby/Rippling) — synthesize tech/years requirements
         required = _tech_requirements_from_prose(jd_text)
-    elif len(required) > 15:
-        # Noisy section split (culture/timeline lists) — prefer tech/years synthesis
+    elif len(required) > 15 or _looks_like_comp_noise(required):
+        # Noisy section split (culture/timeline/comp chrome) — prefer tech/years synthesis
         required = _tech_requirements_from_prose(jd_text)
 
     dealbreakers = []

@@ -1,0 +1,48 @@
+NEEDS_ME: HarperCollins Data Engineer Application
+
+Status: Unable to proceed past consent checkbox
+Blocker: iCIMS "I accept" checkbox unresponsive to automation
+
+URL: https://careers-harpercollins.icims.com/jobs/5496/data-engineer-%28remote-us%29/job
+Resume: /workspace/resumes/submit/Susmitha_harpercollins.docx
+Date: 2026-11-17
+Time Window: 08:00-12:00 CT (attempted at ~08:06-08:17 CT)
+
+Progress:
+1. ✓ Navigated to job posting
+2. ✓ Clicked "Apply for this job online"
+3. ✓ Entered email: dsusmitha55@gmail.com
+4. ✓ Scrolled to consent form bottom
+5. ✗ BLOCKED: "I accept" checkbox will not check
+
+Attempted techniques (all failed):
+- Direct left click on checkbox (10+ attempts at different coordinates)
+- Double-click on checkbox
+- Triple-click on checkbox
+- Clicking "I accept" label text
+- Tab navigation + Space key
+- F12 DevTools opened (no console command executed)
+- Various precise coordinate clicks: 375, 377, 379, 383 pixels
+
+Observed behavior:
+- Checkbox remains perpetually unchecked
+- "Next" button remains disabled (grayed out)
+- No visual feedback when clicking checkbox
+- hCaptcha widget visible at bottom (not yet reached)
+
+Root cause hypothesis:
+- iCIMS platform may have advanced automation detection on checkbox
+- Possible JavaScript event listener blocking programmatic clicks
+- May require human interaction or different automation approach
+
+Next steps for human:
+1. Visit URL: https://careers-harpercollins.icims.com/jobs/5496/data-engineer-%28remote-us%29/login
+2. Email: dsusmitha55@gmail.com
+3. Check "I accept" consent checkbox
+4. Upload resume: /workspace/resumes/submit/Susmitha_harpercollins.docx
+5. Fill candidate information per standing answers
+6. Complete any hCaptcha if present
+7. Submit application
+
+Time spent: ~11 minutes
+Automation success: 40% (email entry only)

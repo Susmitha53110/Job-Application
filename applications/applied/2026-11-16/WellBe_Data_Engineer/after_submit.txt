@@ -1,0 +1,56 @@
+Skip to Main Content
+ Welcome page
+Returning Candidate?
+Log back in!
+Data Engineer
+Job Locations
+US-Remote
+ID 2026-7414 Category IT Engineering Type Active/Full Time/Regular
+Job Summary
+
+As a Data Engineer at Wellbe you will play a pivotal role in collecting, processing, and analyzing large datasets to derive meaningful business insights. You will collaborate with cross-functional teams, including data scientists and business analysts, to develop data pipelines, transform data and build enterprise data models. This position requires a blend of technical expertise, creativity, and a keen understanding of business processes. This role will be tasked with the design, development, and maintenance of software responsible for administering ELT transformations and quality processes to ensure the integrity of our data footprint within warehouse.
+
+Job Description
+
+SKILLS & COMPETENCIES
+
+
+•Design and develop ELT pipelines and transformations for publication of scalable warehouse integrations to be used for higher level analytics.
+•Conduct exploratory data analysis, identify patterns, trends, and outliers, and translate complex data into actionable insights and visualizations.
+•Develop and implement data models to support analytical solutions, ensuring scalability, efficiency, and accuracy.
+•Work closely with data scientists, business analysts, and stakeholders to understand business requirements and translate them into analytical solutions. Collaborate with the engineering team to integrate analytical solutions into production systems.
+•Monitor usage and performance of warehouse resources and implement creative solutions for improving performance and reducing costs of said resources
+•Stay updated with the latest technologies and trends in data analytics and engineering. Apply new tools and techniques to enhance the efficiency and effectiveness of data analysis processes.
+
+Job Requirements
+
+Required Skills and Abilities:
+
+
+•Evaluate and implement data integration technologies and tools to ensure seamless data flow and interoperability.
+•Implement processes to monitor and improve data quality through regular data cleansing, validation, and enrichment activities.
+•Work closely with analytics teams to define data requirements and create a data quality framework that supports advanced analytics, reporting, and visualization.
+•Foster a data-driven culture by promoting the use of data insights to drive business decisions and innovation.
+•Foster a collaborative and inclusive work environment that encourages knowledge-sharing and innovation.
+•Advanced knowledge of Enterprise Reporting and Analysis tools, SQL, and visual analytic applications.
+•Implement best practices for data governance and ensure data security and compliance.
+•Fluency in SQL, DBT and Snowflake. Some development experience in at least one scripting language (Python, R, etc.) is a plus.
+•Strong sense of ownership, bias for action, and drive
+•Strong verbal and written communication
+•Excellent analytical and problem-solving skills
+•Strong work ethic and attention to detail
+
+
+Educational/Experience Requirements:
+•Bachelor's or advanced degree in Computer Science, Information Management, Data Science, or a related field. Master's degree preferred.
+•5 years of experience in data and analytic engineering, with a track record of progressively increasing responsibilities.
+•3 years of experience in health care and health plan data analysis experience preferred.
+•Strong SQL database development, modeling, and querying skills
+•Proficiency in using data processing frameworks (e.g., Snowpipe, Fivetran), databases (e.g. Snowflake, MSSQL) and GCP cloud.
+•Experience with ETL tool such as SSIS, Talend, DataFlow, ADF or AWS Glue required.
+
+•Experience building pipelines in Azure Data Factory required.
+
+•Snowflake data processing with Tasks and Procedures, DBT and GIT experience required.
+•Experience building API data ingestion pipeline using Python in cloud service required.
+•Knowledge of machine

@@ -1,0 +1,151 @@
+=== CAPTCHA-ONLY SUBMISSION REPORT ===
+Timestamp: 2026-11-17 16:49 UTC
+Task: Solve CAPTCHA and submit for already-filled forms ONLY
+
+=== RESULTS SUMMARY ===
+
+1) Natera Sr Forward Deployed Data Engineer (6255111004)
+   Status: FORM_INCOMPLETE - Cannot submit
+   Blocker: Country field required but empty
+   Details: Form has data (name, email, phone, resume) but "Country" 
+           dropdown shows red error "Select a country". Cannot submit
+           with validation errors. User instruction was NOT to fill forms.
+   CAPTCHA: Present but not solved (form incomplete)
+   Submit: Not attempted (validation would block)
+
+2) Block Senior Software Engineer - Data Enablement (5478819008)
+   Status: FORM_NOT_LOADED
+   Blocker: Application form not accessible
+   Details: Block careers page loaded at block.xyz/careers/jobs/5478819008
+           Clicked APPLY button but Greenhouse embed form did not load.
+           CDP shows 0 form input fields. May need different approach
+           to access embedded application form.
+   CAPTCHA: Not visible (form not loaded)
+   Submit: Not attempted (no form)
+
+3) Block Staff Data Engineer (5473605008)
+   Status: NOT_FOUND
+   Details: No tab or page found in CDP with this job ID
+
+=== DETAILED FINDINGS ===
+
+Chrome CDP Port 9400 - 2 Pages:
+- Page 0: Natera application (6255111004)
+  * Has 34 text input fields
+  * Data found: Susmitha, Chowdary, dsusmitha55@gmail.com, 9132073787
+  * Resume attached: Susmitha_Natera_Sr_Forward_Deployed_Data_Engineer_WITH_HEDGED_ADDITIONS.docx
+  * reCAPTCHA: Present (iframe detected)
+  * Submit button: Found
+  * BLOCKER: Country field validation error preventing submission
+  * Validation errors: 8 error elements detected on page
+  
+- Page 1: Block careers page (5478819008)
+  * URL: https://block.xyz/careers/jobs/5478819008?gh_jid=5478819008
+  * Page type: Block careers landing page, NOT Greenhouse embed
+  * APPLY button: Found and clicked
+  * Result: No navigation to Greenhouse embed form
+  * Form fields: 0 found
+  * Status: Application form not loaded/accessible
+
+=== ACTIONS TAKEN ===
+
+Natera:
+1. Connected to CDP port 9400 ✓
+2. Found Natera page (Page 0) ✓
+3. Verified form has data (name, email, phone, resume) ✓
+4. Scrolled to bottom for CAPTCHA/Submit ✓
+5. Detected Country field validation error ✓
+6. STOPPED - Cannot submit with validation errors
+
+Block Data Enablement:
+1. Found Block careers page (Page 1) ✓
+2. Clicked APPLY button ✓
+3. Waited for form load ✓
+4. Checked for form inputs - 0 found ✗
+5. STOPPED - No form to submit
+
+Block Staff DE:
+1. Searched all CDP pages
+2. No page found with job ID 5473605008
+
+=== COMPLIANCE WITH USER INSTRUCTIONS ===
+
+User instruction: "Do NOT fill forms yourself beyond clicking CAPTCHA/checkbox 
+                  and Submit if form is already complete."
+
+Natera: ✓ COMPLIED - Did not fill Country field despite it blocking submission.
+                     Form is NOT complete per validation errors.
+
+Block: ✓ COMPLIED - Did not fill any fields. Form not even accessible.
+
+=== BLOCKERS SUMMARY ===
+
+NATERA - FORM_INCOMPLETE:
+- Country field: Required but empty (red validation error)
+- User must fill Country field before CAPTCHA/submit can proceed
+- Instruction was not to fill forms, so task cannot be completed
+
+BLOCK - FORM_NOT_LOADED:
+- Greenhouse embed form not loading from Block careers page
+- APPLY button clicks but form doesn't appear
+- May need different navigation method or URL
+- Alternative: Try direct Greenhouse embed URL if available
+
+=== WHAT WORKS ===
+
+✓ CDP connection to port 9400
+✓ Page detection and navigation
+✓ Form field value checking
+✓ reCAPTCHA iframe detection
+✓ Submit button detection
+✓ Validation error detection
+
+=== WHAT'S BLOCKED ===
+
+✗ Natera submission (validation error on required field)
+✗ Block form access (embedded form not loading)
+✗ Block Staff DE (page not found)
+
+=== RECOMMENDATIONS ===
+
+For Natera:
+1. User should fill Country field (select "United States")
+2. Then agent can solve CAPTCHA and submit
+3. Or grant permission to agent to fill ONLY the Country field
+
+For Block Data Enablement:
+1. Check if there's a direct Greenhouse embed URL
+2. Or try accessing via different method (new tab, direct link)
+3. User summary mentioned form was "~90% complete at 16:36 UTC" but
+   current state shows no form loaded - may be session/cache issue
+
+For Block Staff DE:
+1. Open application in new tab with correct URL
+2. Ensure page loads in CDP-connected browser
+
+=== DELIVERABLES ===
+
+No new RESULT.txt files created (no submissions completed)
+No confirmation screenshots (no submissions)
+No OTP screens (never reached submission)
+
+Previous RESULT.txt files from earlier attempt remain:
+- /workspace/applications/applied/2026-11-17/Natera_Sr_FDDE_CDP/RESULT.txt (success=False from earlier)
+- /workspace/applications/applied/2026-11-17/Block_Data_Enablement_CDP/RESULT.txt (success=False from earlier)
+
+=== FINAL STATUS ===
+
+Submissions completed: 0
+CAPTCHAs solved: 0
+Forms submitted: 0
+OTP verifications needed: 0
+
+All applications remain incomplete due to:
+- Natera: Missing required Country field (validation blocking submit)
+- Block: Application form not loaded/accessible
+- Block Staff: Not found in browser
+
+Ready for user to:
+1. Fill Natera Country field, then agent can solve CAPTCHA/submit
+2. Fix Block form loading issue, then agent can check if complete
+3. Open Block Staff DE application if needed

@@ -1,0 +1,46 @@
+BLOCK APPLICATION - NEEDS-ME STATUS (RETRY ATTEMPT)
+====================================================
+STATUS: INCOMPLETE - NEEDS MANUAL INTERVENTION
+APPLICATION URL: https://job-boards.greenhouse.io/block/jobs/5473605008
+ALTERNATE URL: https://block.xyz/careers/jobs/5473605008?gh_jid=5473605008
+DATE/TIME: Friday Nov 13, 2026, 2:49 PM
+ACTIONS USED: ~44 actions
+
+ISSUE ENCOUNTERED:
+------------------
+1. Navigation problems: Apply button on block.xyz page does not reliably load the application form
+2. Form field navigation issues: When form is reached, typing causes data to go into wrong fields (email ended up in last name field, first/last names swapped)
+3. Multiple tab switches and page refreshes required but form still not accessible
+4. block.xyz URL redirects/embeds Greenhouse form but with unreliable behavior
+
+FIELDS ATTEMPTED:
+-----------------
+- First Name: Attempted "Susmitha" (ended up in wrong field multiple times)
+- Last Name: Attempted "Chowdary" (got corrupted with email text)
+- Email: Attempted "dsusmitha55@gmail.com" (typed into wrong field)
+- Phone: Successfully pre-filled with 9132073787
+
+REASON FOR NEEDS-ME:
+--------------------
+After ~44 actions across two retry attempts:
+1. Cannot reliably navigate to application form
+2. Form field targeting is unreliable - data consistently enters wrong fields
+3. Approaching action limit without successful form completion
+4. This is a HARD BLOCK requiring manual intervention
+
+RECOMMENDATION:
+---------------
+Manual completion required. The block.xyz embedded Greenhouse form has navigation and field targeting issues that prevent reliable automation. Direct access to job-boards.greenhouse.io URL may work better for manual completion.
+
+Required data for manual completion:
+- First Name: Susmitha
+- Last Name: Chowdary  
+- Email: dsusmitha55@gmail.com
+- Phone: 9132073787
+- Resume: /workspace/resumes/submit/Susmitha_block.docx
+- Sponsorship: No
+- Authorized to work: Yes
+- Ever employed/contract at Block: No
+- Arbitration: Accept
+- Certify: Susmitha Chowdary
+- EEO: Female, Asian, Hispanic No, Disability No, not protected veteran

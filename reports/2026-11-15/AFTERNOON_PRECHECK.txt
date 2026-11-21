@@ -1,0 +1,2 @@
+Sat Nov 14 02:47:51 PM CST 2026
+blocked_n=0; all 7 age_ok+resume; xAI ~30h until age-out; window closed — no submits

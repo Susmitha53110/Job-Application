@@ -1,0 +1,11 @@
+success=False
+reason=skip-location-mismatch
+url=https://job-boards.greenhouse.io/air/jobs/4504874009
+role=Data Engineer - Analytics
+company=Air
+location_required=Pittsburgh, PA (onsite)
+candidate_location=Austin, TX 78754
+blocker=Job description explicitly states "This role is a full-time position located out of our office in Pittsburgh, PA" with no remote/hybrid option mentioned
+job_description_quote=This role is a full-time position located out of our office in Pittsburgh, PA. This role may require up to 10% travel.
+fit_assessment=NOT A FIT - Onsite Pittsburgh required, candidate in Austin TX, no relocation mentioned
+decision=SKIPPED per instruction to stop if role requires onsite Pittsburgh and candidate cannot relocate
