@@ -8,11 +8,64 @@ from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
 
 
-# Locked search policy from Susmitha (PROFILE: prefer remote; hybrid/on-site US OK)
+# Locked search policy from Susmitha (PROFILE / standing answers)
+# Through Sun 2026-11-22 CT: USA remote only.
+# From Mon 2026-11-23 CT: USA remote OR Austin hybrid (not other-city hybrid/onsite).
 DEFAULT_MAX_AGE_DAYS = 10
 US_ONLY = True
-REMOTE_ONLY = False  # prefer remote; allow US hybrid/on-site (relocate Yes)
+AUSTIN_HYBRID_EFFECTIVE_DATE = "2026-11-23"  # America/Chicago calendar date
+REMOTE_ONLY = False  # superseded by location_mode(); kept for callers
 OPEN_ONLY = True
+
+
+def _today_chicago() -> str:
+    try:
+        from zoneinfo import ZoneInfo
+
+        return datetime.now(ZoneInfo("America/Chicago")).date().isoformat()
+    except Exception:
+        return datetime.now(timezone.utc).date().isoformat()
+
+
+def location_mode(*, as_of: str | None = None) -> str:
+    """Return 'usa_remote_only' or 'usa_remote_or_austin_hybrid' for the given CT date."""
+    day = as_of or _today_chicago()
+    if day >= AUSTIN_HYBRID_EFFECTIVE_DATE:
+        return "usa_remote_or_austin_hybrid"
+    return "usa_remote_only"
+
+
+def is_austin_location(location: str, description: str = "", *, title: str = "") -> bool:
+    """True when the role is clearly Austin / ATX based (office or hybrid hub)."""
+    blob = f"{title} {location} {description[:4000]}".lower()
+    loc_l = (location or "").lower()
+    if re.search(r"\baustin\b|\batx\b", loc_l):
+        return True
+    # JD may name Austin as the hybrid hub while location field says Hybrid / Remote+Hybrid
+    if re.search(r"\baustin\b|\batx\b", blob) and re.search(
+        r"\bhybrid\b|\bin[- ]office\b|\bonsite\b|\bon-site\b|\boffice days\b|\bdays in (the )?office\b",
+        blob,
+    ):
+        return True
+    return False
+
+
+def is_austin_hybrid(location: str, description: str = "", *, title: str = "") -> bool:
+    """Austin hybrid (or Austin on-site) — not SF/NYC/etc. hybrid."""
+    if not is_austin_location(location, description, title=title):
+        return False
+    blob = f"{title} {location} {(description or '')[:8000]}".lower()
+    # Explicit hybrid / office cadence, or plain Austin city listing (commutable on-site)
+    if re.search(
+        r"\bhybrid\b|\bon-site\b|\bonsite\b|\bon site\b|\bin-office\b|\bin office\b|"
+        r"\boffice days\b|\bdays in (the )?office\b|\bin[- ]person\b",
+        blob,
+    ):
+        return True
+    loc_l = (location or "").lower()
+    if "austin" in loc_l and "remote" not in loc_l:
+        return True
+    return False
 
 
 @dataclass
@@ -312,18 +365,28 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
     return remote_ok and us_ok
 
 
-def is_us_work_ok(location: str, description: str = "", *, source: str = "", title: str = "") -> bool:
-    """US remote (preferred) OR US hybrid/on-site per PROFILE standing answers."""
+def is_us_work_ok(
+    location: str,
+    description: str = "",
+    *,
+    source: str = "",
+    title: str = "",
+    as_of: str | None = None,
+) -> bool:
+    """Location gate per Susmitha's standing policy.
+
+    - Always: USA remote.
+    - From 2026-11-23 CT: also Austin hybrid / Austin on-site.
+    - Never: non-US, or hybrid/onsite in other cities (SF, NYC, Seattle, etc.).
+    """
     if is_us_remote(location, description, source=source, title=title):
         return True
-    # Hybrid / on-site US — Susmitha relocates Yes, hybrid Yes
-    # US eligibility often sits in the JD footer — sample head + tail of long postings.
+
+    # Bare "Remote" + US work-auth language in JD → treat as US-remote eligible
     desc = description or ""
     desc_window = desc if len(desc) <= 12000 else (desc[:8000] + "\n" + desc[-4000:])
     blob = f"{title} {location} {desc_window}".lower()
     loc_l = (location or "").lower().strip()
-    # Bare "Remote" + US work-auth language in JD → treat as US-remote eligible
-    # But reject when Remote is clearly global/Europe/Asia without a US hiring signal.
     if loc_l in {"remote", "remote work", "fully remote"} and re.search(
         r"\bunited states\b|\bu\.s\.a?\b|\bus-based\b|\bus based\b|\bauthorization to work\b|"
         r"\blegally authorized to work in the (us|u\.s|united states)\b|"
@@ -332,8 +395,6 @@ def is_us_work_ok(location: str, description: str = "", *, source: str = "", tit
         r"\bus time zone|\beast coast time\b|\bcandidates in the (us|u\.s|united states)\b",
         blob,
     ):
-        # Timezone-only mentions (e.g. "West Coast of the United States, Europe, or Asia")
-        # are not a US hiring gate when the role is explicitly global remote.
         if re.search(
             r"\b(across the globe|around the world|worldwide|globally|europe,? or asia|"
             r"hire globally|global remote)\b",
@@ -348,27 +409,12 @@ def is_us_work_ok(location: str, description: str = "", *, source: str = "", tit
             pass  # fall through — not US-gated
         else:
             return True
-    if not is_us_location(location, description, title=title):
+
+    mode = location_mode(as_of=as_of)
+    if mode == "usa_remote_only":
         return False
-    if any(
-        x in blob
-        for x in (
-            "hybrid",
-            "on-site",
-            "onsite",
-            "on site",
-            "in-office",
-            "in office",
-            "office days",
-            "days in office",
-        )
-    ):
-        return True
-    # Explicit US city/state location without remote/EU → treat as US on-site eligible
-    loc_l = (location or "").lower()
-    if loc_l and "remote" not in loc_l and is_us_location(location, "", title=title):
-        return True
-    return False
+    # Monday+: Austin hybrid / Austin on-site only (not other US cities)
+    return is_austin_hybrid(location, description, title=title)
 
 
 def search_remotive(
@@ -650,6 +696,7 @@ def filter_jobs(
         if not within_max_age(j.posted_at, max_age_days=max_age_days):
             continue
         if us_only or remote_only:
+            # remote_only=True forces USA-remote-only even after Austin-hybrid start date.
             ok_geo = (
                 is_us_remote(j.location, j.description, source=j.source, title=j.title)
                 if remote_only

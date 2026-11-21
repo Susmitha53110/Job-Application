@@ -24,9 +24,12 @@
 
 ## Targets
 - Roles: Data Engineer; Analytics Engineer; Azure Data Engineer; Snowflake Data Engineer; Databricks Data Engineer (**CONFIRM** — inferred from resume)
-- Location preference: **United States** · **prefer remote** (on-site/hybrid OK per standing answers; relocate Yes)
-- Geography hard filter: United States only (skip non-US locations / non-US-eligible)
-- Work mode: prefer remote; allow hybrid/on-site US
+- Location preference: **USA remote** (always) · **Austin hybrid** from **Mon 2026-11-23 CT**
+- Geography hard filter: United States only (skip non-US)
+- Work mode (effective Mon 2026-11-23 America/Chicago):
+  - **Apply:** USA remote **or** Austin hybrid / Austin on-site
+  - **Skip:** hybrid/onsite in other cities (SF, NYC, Seattle, etc.), non-US
+  - Through Sun 2026-11-22: **USA remote only**
 - Openings hard filter: **open positions only** (skip closed/filled)
 - Seniority / years range: 3–6 years / mid-level Data Engineer (**CONFIRM**)
 - Posted within: last **10** days (fail closed if post date unknown)
@@ -38,7 +41,7 @@
   - Roles that require US citizenship / permanent residence only
   - Jobs already applied to; duplicate postings
   - Posted pay below $120,000 when pay is listed
-  - Non-US jobs, non-remote jobs, closed postings, posts older than 4 days
+  - Non-US jobs; hybrid/onsite outside Austin (from Mon 2026-11-23); closed postings; posts older than age gate
 
 ## Work authorization
 - F1-OPT (currently authorized to work in the US on Optional Practical Training)
@@ -58,7 +61,7 @@
 - Closest honest option if no exact match; never Yes on disability/veteran.
 
 ## Other standing answers
-- Relocate: Yes · On-site/hybrid: Yes (prefer remote) · Start: 2 weeks
+- Relocate: Yes (if asked) · Hybrid/on-site: **Austin only** from Mon 2026-11-23 · Start: 2 weeks
 - How heard: **Company website** · Previously worked / relatives there: No · Over 18: Yes
 - Background check + drug screen: Yes
 - LinkedIn / GitHub / portfolio: blank; if required → N/A

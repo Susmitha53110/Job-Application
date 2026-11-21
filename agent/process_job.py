@@ -115,7 +115,11 @@ def process_job(
             # F1-OPT may still work short-term but often blocked — flag as needs review / likely skip
             fail_reasons.append(f"Sponsorship/citizenship constraint: {snippet}")
         if name == "on_site" and "austin" not in (job.location or "").lower():
-            fail_reasons.append(f"On-site outside Austin: {snippet}")
+            fail_reasons.append(f"On-site/hybrid outside Austin (location policy): {snippet}")
+        if name == "hybrid" and "austin" not in (job.location or "").lower() and "austin" not in (
+            job.description or ""
+        ).lower()[:2000]:
+            fail_reasons.append(f"Hybrid outside Austin (location policy): {snippet}")
 
     # Greenhouse application-question preflight (multi-year no-sponsorship, citizen-only, salary)
     try:

@@ -29,6 +29,12 @@
 ## Efficiency
 - Full rules: `memory/EFFICIENCY.md`. Quality guard overrides savings.
 
+## Location (standing — Susmitha 2026-11-21)
+- **Through Sun 2026-11-22 CT:** USA **remote only**.
+- **From Mon 2026-11-23 CT:** USA **remote** **or** **Austin hybrid / Austin on-site**.
+- Skip hybrid/onsite in other cities (Bay Area, NYC, Seattle, etc.) and all non-US roles.
+- Enforced in `agent/job_search.py` (`location_mode` / `is_us_work_ok` / `is_austin_hybrid`).
+
 ## Hard constraints
 - Never pay for anything or create a paid account.
 - Never ask for or store passwords. Susmitha logs into sites herself.

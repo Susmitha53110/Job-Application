@@ -17,7 +17,9 @@
 - max_post_age_days: 10
 - us_only: true
 - remote_only: false
-- work_mode: prefer_remote_allow_us_hybrid_onsite
+- work_mode: usa_remote_only_until_2026-11-22; usa_remote_or_austin_hybrid_from_2026-11-23
+- location_policy: "Through Sun 2026-11-22 CT: USA remote only. From Mon 2026-11-23 CT: USA remote OR Austin hybrid/onsite. Skip other-city hybrid/onsite."
+- location_policy_effective: "2026-11-23"
 - open_positions_only: true
 - linkedin: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 - sponsorship_answer: "No"
@@ -26,7 +28,7 @@
 - candidate_name: Susmitha Chowdary
 - work_authorization: F1-OPT
 - min_pay_usd: 120000
-- next_apply_window: "2026-11-18 08:00 America/Chicago"
+- next_apply_window: "2026-11-22 08:00 America/Chicago"
 - salary_expectation: 120000
 - timer_policy: exactly_one_recurring_8am_ct
 - outside_window_policy: idle_no_submit; overnight_prepare_ok
