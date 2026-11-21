@@ -1,0 +1,70 @@
+success=False\ncaptcha=True\nurl=https://job-boards.greenhouse.io/embed/job_app?for=block&token=5478819008\nbody=Create a Job Alert
+
+Interested in building your career at Block? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
+option , selected.Select is focused ,type to refine list, press Down to open the menu,
+
+Select a country
+
+Phone*
+Location (City)*
+
+Please enter your location
+
+Locate me
+Resume/CV*
+
+Susmitha_Block_Senior_Software_Engineer_-_Data_Enablement.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Education
+
+School
+Select...
+Degree
+Select...
+Discipline
+Select...
+Add another
+LinkedIn Profile
+Additional profiles (e.g. GitHub, Stack Overflow)
+Tell us a bit about why you're applying to work here. What excited you about this role?
+Block's purpose is economic empowerment. Briefly tell us about what that purpose means to you.
+Will you now or in the future require sponsorship for work authorization? (This information will not be used in assessing your qualifications for any position.)*
+No
+Are you authorized to work lawfully in the location posted for this position?*
+Yes
+Have you ever been employed full-time at Block or its subsidiaries?*
+Select...
+
+This field is required.
+
+If you answered "Yes" to the question above, please enter your dates of employment. Note that your performance history may be reviewed as part of the application process.
+Have you ever provided any contract work for Block, Inc. or any of its subsidiaries or affiliates (whether in the U.S. or internationally)?*
+Select...
+
+This field is required.
+
+If you answered "Yes" to the question above, please enter your dates of contract engagement or work through agency.
+By clicking “accept,” you agree that any disputes related to your application, including those related to Block’s selection process, hiring decision, and your background check, shall be submitted to binding arbitration with the Judicial Arbitra\n

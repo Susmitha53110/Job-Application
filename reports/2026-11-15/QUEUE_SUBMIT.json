@@ -1,0 +1,42 @@
+{
+  "ok": true,
+  "day": "2026-11-15",
+  "results": [
+    {
+      "company": "SpaceXSI",
+      "role": "Analytics Engineer (X)",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Verkada",
+      "role": "Senior Software Engineer, Business Systems - Data Trust",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Abnormal",
+      "role": "Software Engineer I, Data Platforms",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "merge",
+      "role": "Analytics Engineer",
+      "status": "needs-me",
+      "detail": "Submit not confirmed"
+    },
+    {
+      "company": "spoton",
+      "role": "Senior Analytics Platform Engineer",
+      "status": "needs-me",
+      "detail": "Submit not confirmed"
+    },
+    {
+      "company": "clera",
+      "role": "Senior Data Engineer",
+      "status": "needs-me",
+      "detail": "Submit not confirmed"
+    }
+  ]
+}

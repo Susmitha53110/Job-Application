@@ -1,0 +1,30 @@
+NEEDS_ME: Verkada Sr SWE Data Trust Application
+
+Status: Unable to proceed past Apply button
+Blocker: Browser instability and Apply button unresponsive to automation
+
+Progress:
+1. ✓ Navigated to job posting: https://job-boards.greenhouse.io/verkada/jobs/5264711007
+2. ✓ Viewed job description (Greenhouse platform)
+3. ✓ Identified blue "Apply" button
+4. ✗ BLOCKED: Apply button would not respond to clicks
+
+Attempted techniques (all failed):
+- Direct left click on Apply button at multiple coordinates (1092,223 / 1085,220)
+- Clicked with fresh Chrome instance (killed and restarted browser 2x)
+- Scrolled page up/down to ensure button visibility
+- Clicked on page content first to establish focus
+- Waited between attempts
+- Dismissed Chrome "Restore pages?" dialog
+
+Additional blocking issues:
+- Browser kept switching between unrelated tabs/pages
+- SurveyMonkey, Clera, HarperCollins, WellBe tabs interfered with navigation
+- Multiple pkill/restart cycles did not resolve button click issue
+- Greenhouse platform Apply button detection/response issue
+
+Time spent: ~30 minutes
+Automation success: 30% (navigation only, no form access)
+Platform: Greenhouse
+Candidate: Susmitha Chowdary
+Resume ready: /workspace/resumes/submit/Susmitha_verkada_2026-11-15.docx

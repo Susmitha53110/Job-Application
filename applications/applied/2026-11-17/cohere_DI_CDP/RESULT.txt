@@ -1,0 +1,73 @@
+success=False
+url=https://jobs.ashbyhq.com/cohere/c4192057-43fa-45c9-a40e-6f29131bf11d/application
+body=Staff Software Engineer, Data Infrastructure
+Location
+
+New York
+
+Employment Type
+
+Full time
+
+Department
+
+Engineering & Infra
+Product Engineering | Infrastructure
+
+Compensation
+USA - California, New York and Washington
+Base Salary $275K – $335K • Offers Equity
+USA - All Other States
+Base Salary $245K – $300K • Offers Equity
+Canada
+Base Salary CA$350K – CA$420K • Offers Equity
+
+Cohere is committed to fair and transparent pay practices. The compensation range listed for this role reflects the expected compensation. Actual compensation offered will be determined by factors such as location, level, job-related knowledge, skills, education, and experience.
+
+Overview
+Application
+This job has application limits
+
+Please Note: we have set up limits for applications. The following limits apply to applications for all jobs:
+
+Candidates may not apply more than 5 times in any 90 day span
+
+Candidates may not re-apply to the same role within 365 days if not presented with an offer
+
+Autofill from resume
+
+Upload your resume here to autofill key application fields.
+
+Upload file
+Autofill completed!
+
+Please review the information we filled in for you below.
+
+Your form needs corrections
+
+Missing entry for required field: Are you authorized to work in the country you currently reside in?
+
+Name
+Phone Number
+Email
+Location
+LinkedIn
+Resume
+
+Susmitha_cohere.docx
+
+Replace
+
+or drag and drop here
+
+Are you authorized to work in the country you currently reside in?
+Yes
+No
+Do you, now or in the future, require sponorship to work in the country you currently reside in?
+Yes
+No
+Recruiting Privacy Policy
+Submit Application
+Powered by 
+
+Privacy PolicySecurityVulnerability Disclosure

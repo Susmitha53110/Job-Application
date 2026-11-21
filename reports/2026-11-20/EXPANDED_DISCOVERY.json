@@ -1,0 +1,18 @@
+{
+  "day": "2026-11-20",
+  "policy": "Discover via Builtin/LinkedIn/career sites; apply only on company ATS (GH/Lever/Ashby/Rippling/iCIMS/Workday/SmartRecruiters). Never Easy Apply.",
+  "applied_via_expanded": [
+    {"company":"GUIDEcx","role":"Senior Data Engineer","score_b":10.0,"ats":"greenhouse","url":"https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009"}
+  ],
+  "skipped_examples": [
+    {"company":"Origami Risk","reason":"score 6.6 < 8.5 (7+ years)"},
+    {"company":"FloQast","reason":"San Jose hybrid onsite mismatch"},
+    {"company":"GDIT","reason":"US citizenship required"},
+    {"company":"Lyft Marketplace","reason":"Ukraine-only / Nashville hybrid"},
+    {"company":"Machinify","reason":"age >10d"},
+    {"company":"Optum","reason":"excluded"},
+    {"company":"PayPal","reason":"honest score 2.0 (agentic LLM / 6+ yrs gaps)"},
+    {"company":"WorkOS","reason":"age >10d"}
+  ],
+  "unique_de_applied_today": ["YesEnergy Data Engineer II","Pocket Data Engineer","GUIDEcx Senior Data Engineer"]
+}

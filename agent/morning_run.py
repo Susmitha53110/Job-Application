@@ -66,18 +66,7 @@ def readiness_report(*, day: str | None = None) -> dict:
     for job in hunt:
         if CURVE_URL in (job.url or ""):
             continue
-        if "keebo" in (job.url or "").lower() or job.company.lower() == "keebo":
-            items.append(
-                ReadyItem(
-                    company=job.company,
-                    role=job.title,
-                    url=job.url,
-                    score_b=None,
-                    blockers=["JD says visa support will not be provided"],
-                    notes="Skip for F1-OPT",
-                )
-            )
-            continue
+        # Keebo "visa support will not be provided" is OK — Memory sponsorship=No / F1-OPT.
         if "consumer edge" in job.company.lower() or "consumeredge" in (job.url or "").lower():
             items.append(
                 ReadyItem(
@@ -104,7 +93,7 @@ def readiness_report(*, day: str | None = None) -> dict:
         if not salary:
             blockers.append("Salary expectations number missing")
         if pkt.score_b < 7:
-            blockers.append(f"Honest score (b)={pkt.score_b}/10 below 7")
+            blockers.append(f"Honest score (b)={pkt.score_b}/10 below 8.5 (85%)")
         items.append(
             ReadyItem(
                 company=pkt.company,

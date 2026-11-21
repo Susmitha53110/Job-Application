@@ -1,0 +1,2 @@
+success=True
+url=https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654/application

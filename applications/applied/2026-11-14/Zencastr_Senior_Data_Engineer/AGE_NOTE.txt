@@ -1,0 +1,3 @@
+AGE GATE MISS: datePosted=2026-09-11 (64 days old) > max 10 days.
+Submitted before ld+json age check on web-found Ashby URL.
+Do not count toward daily target quality; harden age gate for web-found roles.

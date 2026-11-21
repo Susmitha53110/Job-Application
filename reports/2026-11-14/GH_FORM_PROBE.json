@@ -1,0 +1,159 @@
+{
+  "MongoDB": {
+    "labels": [],
+    "inputs": [
+      {
+        "id": "",
+        "name": "",
+        "type": "text",
+        "aria": null
+      },
+      {
+        "id": "addsearch",
+        "name": "addsearch",
+        "type": "hidden",
+        "aria": null
+      }
+    ],
+    "requiredish": [],
+    "hasRecaptcha": false,
+    "textHasSecurity": false,
+    "final_url": "https://www.mongodb.com/careers/jobs/8352433",
+    "apply_clicked": false
+  },
+  "Machinify": {
+    "labels": [
+      "First Name*",
+      "Last Name*",
+      "Preferred First Name",
+      "Email*",
+      "Country*",
+      "Phone*",
+      "Attach",
+      "Enter manually",
+      "Phone Number*",
+      "LinkedIn Profile*",
+      "Website",
+      "Gender",
+      "Are you Hispanic/Latino?",
+      "Veteran Status"
+    ],
+    "inputs": [
+      {
+        "id": "first_name",
+        "name": "",
+        "type": "text",
+        "aria": "First Name"
+      },
+      {
+        "id": "last_name",
+        "name": "",
+        "type": "text",
+        "aria": "Last Name"
+      },
+      {
+        "id": "preferred_name",
+        "name": "",
+        "type": "text",
+        "aria": "Preferred First Name"
+      },
+      {
+        "id": "email",
+        "name": "",
+        "type": "text",
+        "aria": "Email"
+      },
+      {
+        "id": "country",
+        "name": "",
+        "type": "text",
+        "aria": null
+      },
+      {
+        "id": "",
+        "name": "",
+        "type": "text",
+        "aria": null
+      },
+      {
+        "id": "iti-0__search-input",
+        "name": "",
+        "type": "search",
+        "aria": "Search"
+      },
+      {
+        "id": "phone",
+        "name": "",
+        "type": "tel",
+        "aria": "Phone"
+      },
+      {
+        "id": "resume",
+        "name": "",
+        "type": "file",
+        "aria": null
+      },
+      {
+        "id": "cover_letter",
+        "name": "",
+        "type": "file",
+        "aria": null
+      },
+      {
+        "id": "question_8243722009",
+        "name": "",
+        "type": "text",
+        "aria": "Phone Number"
+      },
+      {
+        "id": "question_8243723009",
+        "name": "",
+        "type": "text",
+        "aria": "LinkedIn Profile"
+      },
+      {
+        "id": "question_8243724009",
+        "name": "",
+        "type": "text",
+        "aria": "Website"
+      },
+      {
+        "id": "gender",
+        "name": "",
+        "type": "text",
+        "aria": null
+      },
+      {
+        "id": "hispanic_ethnicity",
+        "name": "",
+        "type": "text",
+        "aria": null
+      },
+      {
+        "id": "veteran_status",
+        "name": "",
+        "type": "text",
+        "aria": null
+      },
+      {
+        "id": "g-recaptcha-response-100000",
+        "name": "g-recaptcha-response",
+        "type": "textarea",
+        "aria": null
+      }
+    ],
+    "requiredish": [
+      "First Name*",
+      "Last Name*",
+      "Email*",
+      "Country*",
+      "Phone*",
+      "Phone Number*",
+      "LinkedIn Profile*"
+    ],
+    "hasRecaptcha": true,
+    "textHasSecurity": false,
+    "final_url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
+    "apply_clicked": true
+  }
+}

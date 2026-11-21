@@ -1,0 +1,33 @@
+# Scorecard — Jobgether / Staff/Senior Data Engineer
+
+- Link: https://jobs.lever.co/jobgether/141c6bd9-8d42-4ebc-a52c-4b897059e2f2
+- Source: lever
+- Posted: 2026-11-13T09:30:02.826000+00:00
+
+| Stage | Fit /10 | Notes |
+|-------|---------|-------|
+| (a) Original | 10.0 | raw 3.0/3.0 |
+| (b) Reorder-only | 10.0 | apply if ≥ 7 |
+| (c) + hedged additions | 10.0 | do not submit without approval |
+
+## Top 5 missing keywords (vs original)
+- partner
+- technical
+- accountabilities
+- actionable
+- application
+
+## Keywords covered honestly after tailor: analytics
+## Gaps remaining: partner, technical, accountabilities, actionable
+
+## Stretch call: No major years stretch detected.
+
+## ATS checks (not a 100% claim)
+- no_tables_used_in_builder: True
+- contact_in_body: True
+- has_summary_or_profile: True
+- has_experience: True
+- has_skills: True
+- has_education: True
+- header_footer_empty_by_construction: True
+- layout: single-column paragraphs + bullets only

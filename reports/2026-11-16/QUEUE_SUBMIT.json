@@ -1,0 +1,96 @@
+{
+  "ok": true,
+  "day": "2026-11-16",
+  "results": [
+    {
+      "company": "BookNook",
+      "role": "Senior Analytics Engineer",
+      "status": "needs-me",
+      "detail": "Rippling validation errors after Apply \u2014 needs you"
+    },
+    {
+      "company": "Verkada",
+      "role": "Senior Software Engineer, Business Systems - Data Trust",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Abnormal",
+      "role": "Software Engineer I, Data Platforms",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "merge",
+      "role": "Analytics Engineer",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "spoton",
+      "role": "Senior Analytics Platform Engineer",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "clera",
+      "role": "Senior Data Engineer",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Natera",
+      "role": "Sr. Forward Deployed Data Engineer",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Anduril Industries",
+      "role": "Production Master Data Engineer",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Commure",
+      "role": "Senior Software Engineer, Data Platform",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Solvd",
+      "role": "Senior Data Engineer \u2014 Knowledge Ingestion",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Amplitude",
+      "role": "Senior Data Engineer, Marketing & GTM",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Talkiatry",
+      "role": "Analytics Engineer",
+      "status": "needs-me",
+      "detail": "Ashby reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "The Knot Worldwide",
+      "role": "Lead Analytics Engineer",
+      "status": "needs-me",
+      "detail": "Greenhouse reCAPTCHA \u2014 needs you"
+    },
+    {
+      "company": "Extend",
+      "role": "Senior Analytics Engineer",
+      "status": "needs-me",
+      "detail": "Greenhouse email security code required \u2014 paste 8-char code"
+    },
+    {
+      "company": "Keebo",
+      "role": "Senior Data Engineer",
+      "status": "needs-me",
+      "detail": "Greenhouse email security code required \u2014 paste 8-char code"
+    }
+  ]
+}

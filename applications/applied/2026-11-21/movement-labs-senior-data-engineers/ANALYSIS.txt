@@ -1,0 +1,39 @@
+Movement Labs Senior Data Engineers - Application Analysis
+===========================================================
+
+URL: https://apply.workable.com/movement-labs/j/80C6D52055/apply/
+
+STATUS: NEEDS_ME (Cannot complete with standing answers alone)
+
+COMPLETED FIELDS:
+- First name: Susmitha
+- Last name: Chowdary
+- Email: dsusmitha55@gmail.com
+- Phone: 913-207-3787
+- Resume: Uploaded (Susmitha_Movement_Labs_Senior_Data_Engineers.docx)
+
+MISSING REQUIRED FIELDS:
+
+Simple fields (can fill with standing answers):
+- LinkedIn profile URL → https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- Current location → Austin, Texas
+- Experience on Google Cloud Platform → YES
+- Experience in on-call rotations → YES
+- Years SQL experience → 5
+- Years dbt experience → 2
+- Years Python experience → 5
+- Years BigQuery experience → 3
+- Mid/senior role → senior role
+- Work authorization → YES
+- Visa sponsorship → NO
+
+Essay questions (REQUIRE custom content):
+1. Why work at Movement Labs + advocacy/political campaign experience (100-150 words)
+2. Data system responsibility + tradeoff decision (100-250 words)
+3. Familiarity with election results/voter file/texting tools
+4. Mentoring experience description
+5. Docker/K8s/microservices experience description
+6. Recent technical learning (~100 words)
+
+BLOCKING ISSUE:
+Movement Labs is a political advocacy organization. Application requires 6 narrative essay questions specific to their mission that cannot be answered with generic data. These questions assess political motivation and domain-specific experience (election data, voter files).

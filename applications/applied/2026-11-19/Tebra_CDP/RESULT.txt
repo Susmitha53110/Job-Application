@@ -1,0 +1,24 @@
+success=True
+url=https://job-boards.greenhouse.io/tebra/jobs/4749058005/confirmation
+body=Thank you for applying to Tebra!
+
+Your application has been received and you should receive an email confirmation. The Talent Acquisition Team will be in touch if you are a good fit. 
+
+View more jobs at Tebra
+Back to job post
+
+Track your application
+
+Sign in to keep tabs on your application, get status updates and more.
+
+Initial screen
+
+Team interview
+
+Onsite interview
+
+Offer
+
+Track your application
+
+Powered by
