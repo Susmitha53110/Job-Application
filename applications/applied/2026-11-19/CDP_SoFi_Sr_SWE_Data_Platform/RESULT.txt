@@ -1,0 +1,89 @@
+success=False
+captcha=True
+url=https://job-boards.greenhouse.io/embed/job_app?for=sofi&token=8207529003
+empties=[{'id': 'country', 't': 'Country*', 'tag': 'INPUT', 'type': 'text', 'role': 'combobox'}, {'id': 'candidate-location', 't': 'Location (City)*', 'tag': 'INPUT', 'type': 'text', 'role': 'combobox'}, {'id': 'question_35458825003', 't': "Today's Date of Application (MM/DD/YY Format)*", 'tag': 'INPUT', 'type': 'text', 'role': None}, {'id': 'question_35458829003', 't': 'Home Address Line 1*', 'tag': 'INPUT', 'type': 'text', 'role': None}, {'id': 'fieldset', 't': 'What FINRA license(s), if any, do you currently hold? *'}]
+body=Create a Job Alert
+
+Interested in building your career at SoFi? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
+option , selected.Select is focused ,type to refine list, press Down to open the menu,
+
+Select a country
+
+Phone*
+Location (City)*
+
+Please enter your location
+
+Locate me
+Resume/CV*
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Resume/CV is required.
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+Education
+
+Degree*
+Master of Business Administration (M.B.A.)
+Add another
+LinkedIn Profile
+Website
+Will you now or in the future require SoFi to commence (“sponsor”) an immigration case in order to employ you?*
+No
+
+For example, H-1B or other employment-based immigration case
+
+Have you worked at or been a consultant for SoFi or any company subsequently acquired by a SoFi entity (including Galileo Financial Technologies, Technisys, Wyndham Capital Mortgage, Zenbanx, 8 Securities, and/or Golden Pacific Bancorp, Clara Lending)?*
+Yes
+Would you like to receive marketing communications about careers at SoFi and SoFi Tech Solutions?*
+Yes
+Preferred Name (if different from legal name)
+Are you authorized to lawfully work in the country where this role is located?*
+Yes
+I acknowledge that by providing my phone number, I agree to receive text messages from SoFi Technologies in relation to this job application. Message frequency varies. Reply STOP to opt-out of future messaging. Reply HELP for help. Message and data rates may apply.*
+Yes
+
+View our Privacy & SMS Policy
+
+Are you currently employed with or have been employed by Deloitte? Deloitte is our external financial auditor and due diligence may be performed prior to employment to ensure independence requirements are met. If you indicate yes, you agree that certain information may need to be disclosed to Deloitte before employment to confirm independence. *
+Yes
+Are you currently a SoFi or SoFi Tech Solutions (formerly Galileo) employee?*
+No
+
+*If yes, please apply directly on the internal job board in order to be considered for this role
+
+Today's Date of Application (MM/DD/YY Format)*
+
+This field is required.
+
+Please enter today's date in MM/DD/YY format (example: 01/30/25). 
+
+Do you currently hold, or intend to hold, any FINRA licenses if employed by SoFi? (i.e.

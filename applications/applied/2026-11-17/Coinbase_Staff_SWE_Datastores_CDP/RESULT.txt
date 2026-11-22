@@ -1,0 +1,9 @@
+success=True
+code=67560783
+url=https://job-boards.greenhouse.io/embed/job_app/confirmation?for=coinbase&token=8286487
+body=Thank you for applying.
+
+Your application has been received. If there is a fit, someone will be getting back to you. 
+
+View more jobs at Coinbase
+Back to job post

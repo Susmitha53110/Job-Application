@@ -1,0 +1,10 @@
+[
+  {
+    "note": "closest_under_85",
+    "company": "clasp-group",
+    "title": "Senior Data Engineer",
+    "score": 7.5,
+    "url": "https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6",
+    "blocker": "dbt-required gaps; MASTER_FACTS forbids claiming dbt"
+  }
+]

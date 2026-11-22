@@ -1,0 +1,25 @@
+# Catch note — Consumer Edge / Staff Data Engineer
+
+- Stretch: JD asks for 8+ years; Susmitha has ~5. Call this a **stretch** — do not hide the gap in the score.
+- Must be true before applying:
+  - All bullets remain factual from base resume
+  - Work auth Yes (F1-OPT); sponsorship No (Susmitha-confirmed in Memory)
+  - Posted pay >= $120k if pay is listed
+  - Apply on company ATS only (never LinkedIn Easy Apply)
+- Dealbreakers checked:
+  - location=United States
+  - sponsorship answer No (Memory); skip employers that forbid OPT/F1 outright
+  - travel/on-site checked via JD patterns
+  - min pay $120k when posted
+- Remove if I cannot back it up in an interview:
+  - verify before applying: "familiarity with Apache Airflow"
+  - verify before applying: "familiarity with dbt"
+  - verify before applying: "familiarity with BigQuery"
+- Timeline flags: Citi Jan 2020–May 2023; education Jan 2024–Dec 2025; Optum May 2025–Present; gap ~May 2023–Jan 2024
+- Honest tailored score (b): 7.4/10 (apply threshold ≥ 7)
+- Version to submit: **(a) reorder-only** unless (b) approved
+- Additions flagged verify-before-applying:
+  - verify before applying: "familiarity with Apache Airflow"
+  - verify before applying: "familiarity with dbt"
+  - verify before applying: "familiarity with BigQuery"
+- Work auth: F1-OPT → Authorized to work **Yes**; sponsorship answer **No** (Memory)

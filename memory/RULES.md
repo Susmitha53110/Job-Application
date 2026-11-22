@@ -21,17 +21,26 @@
 
 ## Application rules
 - Save as `[FirstName]_[Company]_[Role].docx` under `resumes/tailored/YYYY-MM-DD/`.
-- Fill forms using only resume + Memory.
-- Sponsorship form answer (confirmed): **No**. Fill that when asked “will you now or in the future require sponsorship?”
-- **STOP → `needs me`** (do not guess) on: salary expectations, demographic/EEO, background checks, CAPTCHA/2FA, anything unsure. Work-auth “authorized to work in the US?” → **Yes** (F1-OPT); do not claim citizenship/green card.
-- Submit only with confirmation proof (page/email). No proof → status `unconfirmed`, never `applied`.
+- Fill forms using only MASTER_FACTS + FORM_ANSWERS (+ resume if facts drift).
+- Sponsorship: **No**. Multi-year without sponsorship: **Yes**. Auth to work US: **Yes** (F1-OPT). Salary: **120000**. EEO/background: FORM_ANSWERS.
+- **STOP → `needs me`** only for uncovered questions, CAPTCHA/2FA after 2 tries, or anything unsure. Never guess.
+- Submit directly (no review). Confirmation proof required; else `unconfirmed`.
+
+## Efficiency
+- Full rules: `memory/EFFICIENCY.md`. Quality guard overrides savings.
+
+## Location (standing — Susmitha 2026-11-21)
+- **Through Sun 2026-11-22 CT:** USA **remote only**.
+- **From Mon 2026-11-23 CT:** USA **remote** **or** **Austin hybrid / Austin on-site**.
+- Skip hybrid/onsite in other cities (Bay Area, NYC, Seattle, etc.) and all non-US roles.
+- Enforced in `agent/job_search.py` (`location_mode` / `is_us_work_ok` / `is_austin_hybrid`).
 
 ## Hard constraints
 - Never pay for anything or create a paid account.
 - Never ask for or store passwords. Susmitha logs into sites herself.
-- CAPTCHA / 2FA / account lock → `needs me`, move on. Max 2 retries.
+- CAPTCHA / 2FA / account lock → `needs me`, move on. Max 2 retries · ~25 actions/app.
 - On error: say so. Never silently skip or report done when not.
-- Low usage → stop and report how many finished.
+- If usage >85% weekly → 10 apps/day until reset.
 
 ## First run only
 - Dry run on **3** jobs.

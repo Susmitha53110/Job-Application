@@ -14,11 +14,11 @@
 - dbt
 - BI tools (Looker/Tableau/Power BI)
 - \bredshift\b
-- \bpython\b
-- \bsql\b
+- Redshift
+- BI tools
 
-## Keywords covered honestly after tailor: (see score)
-## Gaps remaining: \bpython\b, \bsql\b, \bredshift\b, \bdbt\b, \bgit\b
+## Keywords covered honestly after tailor: Python, SQL, Git
+## Gaps remaining: Redshift, dbt
 
 ## Stretch call: JD asks for 7+ years; Susmitha has ~5. Call this a **stretch** — do not hide the gap in the score.
 

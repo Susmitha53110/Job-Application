@@ -65,24 +65,7 @@ def build_submit_handoff(*, day: str | None = None) -> dict:
             }
         )
 
-    curve_short = SUBMIT_DIR / "Susmitha_curve.docx"
-    queue.append(
-        {
-            "order": len(queue) + 1,
-            "key": "curve",
-            "company": "Curve Dental",
-            "role": "Data Engineer",
-            "url": gate.url,
-            "needs_salary": True,
-            "ok_now": gate.ok,
-            "blockers": gate.blockers,
-            "kit": str(paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Curve_Dental_SUBMIT_KIT.md"),
-            "resume": str(paths.RESUMES_TAILORED / "2026-11-12" / "Susmitha_Curve_Dental_Data_Engineer.docx"),
-            "resume_short": str(curve_short if curve_short.exists() else paths.RESUMES_TAILORED / "2026-11-12" / "Susmitha_Curve_Dental_Data_Engineer.docx"),
-            "proof_dir": str(paths.APPLICATIONS / "applied" / day / "Curve_Dental_Data_Engineer"),
-            "computer_use_prompt": gate.computer_use_prompt,
-        }
-    )
+    # Curve Dental already applied 2026-11-12 — keep gate report for audit only, do not re-queue.
 
     payload = {
         "day": day,
@@ -91,14 +74,15 @@ def build_submit_handoff(*, day: str | None = None) -> dict:
         "salary": salary,
         "ready_submits_report": str(ready_report),
         "curve_gate_report": str(gate_report),
-        "runbook": str(paths.APPLICATIONS / "needs-me" / "2026-11-12" / "FIRST_APPLIES.md"),
-        "submit_order": ["clera", "bayesian", "curve"],
+        "runbook": str(paths.APPLICATIONS / "ready" / day / "README.md"),
+        "submit_order": [q["key"] for q in queue],
         "queue": queue,
         "instructions": [
-            "Submit only while window_open is true.",
-            "Never Easy Apply.",
-            "Do not invent salary.",
+            "Submit only while window_open is true (08:00–12:00 America/Chicago).",
+            "Never Easy Apply — company ATS only.",
+            "Do not invent salary; use Memory 120000 when asked.",
             "Prefer resume_short paths under resumes/submit/.",
+            "Email security code / captcha → needs-me (Gmail declined; paste code in chat).",
             "After each confirmation, write proof files then python3 -m agent proof.",
         ],
     }

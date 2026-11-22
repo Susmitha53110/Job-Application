@@ -1,0 +1,15 @@
+success=False
+reason=not-attempted
+url=https://block.xyz/careers/jobs/5473605008?gh_jid=5473605008
+company=Block
+role=Staff Data Engineer
+platform=Greenhouse
+
+form_status=NOT_OPENED
+blocker=Time constraints and browser instability prevented starting this application after spending time on Zocdoc, Natera, and Block Data Enablement
+
+notes=This was Task #4 marked as "if time". Given 45 minutes spent on first 3 applications with browser navigation issues, this application was not started.
+
+recommendation=Prioritize completing Natera (80% done, needs Country selection) and Block Data Enablement (90% done, needs few dropdowns/checkboxes) before starting this new application.
+
+timestamp=2026-11-17 16:31 UTC
