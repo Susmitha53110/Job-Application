@@ -1220,3 +1220,23 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-21 | Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
 2026-11-21 | Anduril Industries | Product Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5295058007?gh_jid=5295058007 | dry-run
 2026-11-21 | SpaceX | Data Engineer (Starship) | https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002 | dry-run
+2026-11-22 | Toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
+2026-11-22 | Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-22 | Toast | Data Engineer | https://builtin.com/job/data-engineer/12298324 | dry-run
+2026-11-22 | Block Inc | Sales Compensation Systems & Data Engineer | https://builtin.com/job/sales-compensation-systems-data-engineer/12300884 | dry-run
+2026-11-22 | Cash App | Sales Compensation Systems & Data Engineer | https://builtin.com/job/sales-compensation-systems-data-engineer/12325458 | dry-run
+2026-11-22 | block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-22 | toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
+2026-11-22 | Toast | Data Engineer | https://builtin.com/job/data-engineer/12298324 | dry-run
+2026-11-22 | Block Inc | Sales Compensation Systems & Data Engineer | https://builtin.com/job/sales-compensation-systems-data-engineer/12300884 | dry-run
+2026-11-22 | Cash App | Sales Compensation Systems & Data Engineer | https://builtin.com/job/sales-compensation-systems-data-engineer/12325458 | dry-run
+2026-11-20 | Bridgeway Benefit Technologies | Data Engineer | https://www.bridgewaybentech.com/job-posting?gh_jid=8917005002 | applied
+2026-11-21 | Sagent | Data Engineer | https://ats.rippling.com/sagent/jobs/2b8623e0-3bd4-4e76-ae55-075a6baed6ba | applied
+2026-11-22 | toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
+2026-11-22 | block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-22 | kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
+2026-11-22 | clasp-group | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-22 | Kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
+2026-11-22 | Clasp | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-22 | Kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | dry-run
+2026-11-22 | Kin | Senior Data Engineer | https://jobs.ashbyhq.com/kin/2c31ebcf-e785-44c6-91dd-147105d5f100 | applied

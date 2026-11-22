@@ -66,10 +66,10 @@
 
 - nov21_applied: Movement Labs Senior Data Engineers
 
-last_run_date: 2026-11-21
+last_run_date: 2026-11-22
 
-applications_succeeded_today: 2
+applications_succeeded_today: 1
 
-last_run_summary: "Nov21: Movement Labs + Airbnb DE applied; inventory thin under ≥85%/≤10d gates"
+last_run_summary: "Nov22: Kin Sr DE 9.3 applied (USA remote only); inventory thin"
 
-next_apply_window: "2026-11-22 08:00 America/Chicago"
+next_apply_window: "2026-11-23 08:00 America/Chicago"
