@@ -1,2 +1,2 @@
 email=dsusmitha55@gmail.com
-# password kept only locally for this apply session; not committed
+Use existing Workday/Google sign-in — agent does not create or store passwords.

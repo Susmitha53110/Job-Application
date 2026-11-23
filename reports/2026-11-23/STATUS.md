@@ -28,3 +28,6 @@
 ## Next
 - Susmitha: log into CVS Workday and submit the 9.4 packet (highest priority).
 - Agent: continue hunt for ≤10d USA-remote or Austin-hybrid DE/Sr DE with honest score ≥8.5 on Greenhouse/Ashby/Lever (auto-submit ATS).
+
+## PR
+- https://github.com/Susmitha53110/Job-Application/pull/7
