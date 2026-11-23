@@ -30,20 +30,32 @@ def build_ats_docx(resume: Resume, dest: Path) -> Path:
         run.bold = True
         run.font.size = Pt(12)
 
-    # Name
+    # Name once
     name_p = doc.add_paragraph()
     name_run = name_p.add_run(resume.name or "Name")
     name_run.bold = True
     name_run.font.size = Pt(16)
 
-    # Contact in body
-    if resume.contact_lines:
-        doc.add_paragraph(" | ".join(resume.contact_lines))
-
+    # Headline once (role + key stack), then contact — never repeat the name here.
     if resume.headline:
         hp = doc.add_paragraph()
         hr = hp.add_run(resume.headline)
         hr.italic = True
+
+    if resume.contact_lines:
+        # Drop any contact fragment that duplicates name or full headline.
+        name_l = (resume.name or "").strip().lower()
+        head_l = (resume.headline or "").strip().lower()
+        contact_bits: list[str] = []
+        for line in resume.contact_lines:
+            low = line.strip().lower()
+            if not low or low == name_l or low == head_l:
+                continue
+            if name_l and low.startswith(name_l + " |"):
+                continue
+            contact_bits.append(line.strip())
+        if contact_bits:
+            doc.add_paragraph(" | ".join(contact_bits))
 
     if resume.summary:
         add_heading_line("Summary")
@@ -60,8 +72,23 @@ def build_ats_docx(resume: Resume, dest: Path) -> Path:
                 doc.add_paragraph(b, style="List Bullet")
 
     if resume.skills or resume.skills_raw:
-        add_heading_line("Skills")
-        doc.add_paragraph(resume.skills_raw or ", ".join(resume.skills))
+        add_heading_line("Technical Skills")
+        raw = (resume.skills_raw or "").strip()
+        if raw and "\n" in raw:
+            for ln in raw.splitlines():
+                ln = ln.strip()
+                if not ln:
+                    continue
+                if ":" in ln:
+                    cat, _, items = ln.partition(":")
+                    p = doc.add_paragraph()
+                    r = p.add_run(f"{cat.strip()}: ")
+                    r.bold = True
+                    p.add_run(items.strip())
+                else:
+                    doc.add_paragraph(ln)
+        else:
+            doc.add_paragraph(raw or ", ".join(resume.skills))
 
     if resume.education:
         add_heading_line("Education")

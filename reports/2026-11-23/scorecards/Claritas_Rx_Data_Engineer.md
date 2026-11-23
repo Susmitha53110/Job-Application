@@ -2,7 +2,7 @@
 
 - Link: https://apply.workable.com/j/A4D4F1CE37
 - Source: workable
-- Posted: 2026-11-17T00:00:00.000Z
+- Posted: 2026-11-17
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
