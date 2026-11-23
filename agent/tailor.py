@@ -62,14 +62,22 @@ def rewrite_summary(resume: Resume, jd: TieredJd) -> str:
     return base
 
 
-def reorder_experience(resume: Resume, terms: list[str]) -> list[Experience]:
+# Hard cap: 6 bullets per employer (12 total for Optum + Citi).
+MAX_BULLETS_PER_ROLE = 6
+
+
+def reorder_experience(
+    resume: Resume,
+    terms: list[str],
+    max_bullets: int = MAX_BULLETS_PER_ROLE,
+) -> list[Experience]:
     out = []
     for exp in resume.experiences:
         scored = sorted(
             exp.bullets,
             key=lambda b: _bullet_score(b, terms),
             reverse=True,
-        )
+        )[:max_bullets]
         out.append(
             Experience(
                 title=exp.title,  # never change titles

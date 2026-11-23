@@ -39,6 +39,18 @@ def test_header_not_duplicated_and_city_only():
     assert "susmitha chowdary" not in contact.lower()
 
 
+def test_twelve_bullets_six_per_employer():
+    resume = load_base_resume(BASE)
+    assert len(resume.experiences) >= 2
+    assert len(resume.experiences[0].bullets) == 6
+    assert len(resume.experiences[1].bullets) == 6
+    result = tailor(resume, _sample_jd())
+    assert len(result.version_a.experiences[0].bullets) == 6
+    assert len(result.version_a.experiences[1].bullets) == 6
+    total = sum(len(e.bullets) for e in result.version_a.experiences[:2])
+    assert total == 12
+
+
 def test_skills_keep_categories_after_tailor(tmp_path: Path):
     resume = load_base_resume(BASE)
     result = tailor(resume, _sample_jd())
