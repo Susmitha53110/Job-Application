@@ -1,0 +1,33 @@
+# Scorecard — Block / Sales Compensation Systems & Data Engineer
+
+- Link: https://job-boards.greenhouse.io/block/jobs/5485151008
+- Source: greenhouse
+- Posted: 2026-11-17T10:46:55-05:00
+
+| Stage | Fit /10 | Notes |
+|-------|---------|-------|
+| (a) Original | 8.2 | raw 9.0/11.0 |
+| (b) Reorder-only | 8.2 | apply if ≥ 8.5 (85%) |
+| (c) + hedged additions | 10.0 | do not submit without approval |
+
+## Top 5 missing keywords (vs original)
+- BI tools (Looker/Tableau/Power BI)
+- BI tools
+- block
+- compensation
+- technical
+
+## Keywords covered honestly after tailor: SQL, build
+## Gaps remaining: BI tools, block, compensation
+
+## Stretch call: No major years stretch detected.
+
+## ATS checks (not a 100% claim)
+- no_tables_used_in_builder: True
+- contact_in_body: True
+- has_summary_or_profile: True
+- has_experience: True
+- has_skills: True
+- has_education: True
+- header_footer_empty_by_construction: True
+- layout: single-column paragraphs + bullets only

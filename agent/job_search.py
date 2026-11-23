@@ -329,6 +329,7 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
     )
     us_ok = _explicit_us_mention(blob)
     # Greenhouse-style "Remote - Austin" / "Remote - CA" / "Remote - NYC" (US city/state, no country word)
+    # Also Workday-style "TX - Work from home" / "TX Remote" where state comes first.
     if not us_ok and remote_ok:
         loc_l = (location or "").lower()
         if re.search(
@@ -342,6 +343,17 @@ def is_us_remote(location: str, description: str = "", *, source: str = "", titl
             r"seattle|austin|dallas|chicago|denver|boston|atlanta|miami|portland|phoenix|sf bay|bay area)\b",
             loc_l,
         ):
+            us_ok = True
+        # "TX - Work from home" / "CA Remote" / state-abbrev first then remote/WFH
+        if re.search(
+            r"(?:^|[\s,;\-/])(al|ak|az|ar|ca|co|ct|de|fl|ga|hi|id|il|in|ia|ks|ky|la|me|md|ma|mi|mn|ms|"
+            r"mo|mt|ne|nv|nh|nj|nm|ny|nc|nd|oh|ok|or|pa|ri|sc|sd|tn|tx|ut|vt|va|wa|wv|wi|wy)"
+            r"(?:\s|$|[,;/\)\-–—]).{0,40}\b(remote|work from home|wfh)\b",
+            loc_l,
+        ):
+            us_ok = True
+        # Location field already a clear US place (state/city) + remote/WFH language
+        if not us_ok and is_us_location(location or "", ""):
             us_ok = True
         # Multi-state lists like "California, USA; Texas, USA" already covered by usa; also bare ", USA"
         if ", usa" in loc_l or "; usa" in loc_l or loc_l.endswith(" usa"):
