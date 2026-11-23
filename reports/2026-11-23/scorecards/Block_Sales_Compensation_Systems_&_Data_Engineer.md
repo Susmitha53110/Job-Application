@@ -1,6 +1,6 @@
 # Scorecard — Block / Sales Compensation Systems & Data Engineer
 
-- Link: https://job-boards.greenhouse.io/block/jobs/5485151008
+- Link: http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008
 - Source: greenhouse
 - Posted: 2026-11-17T10:46:55-05:00
 
@@ -13,12 +13,12 @@
 ## Top 5 missing keywords (vs original)
 - BI tools (Looker/Tableau/Power BI)
 - BI tools
+- nbsp
 - block
 - compensation
-- technical
 
 ## Keywords covered honestly after tailor: SQL, build
-## Gaps remaining: BI tools, block, compensation
+## Gaps remaining: BI tools, nbsp, block
 
 ## Stretch call: No major years stretch detected.
 

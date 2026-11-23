@@ -1,19 +1,24 @@
 # Scorecard — Toast / Data Engineer
 
-- Link: https://builtin.com/job/data-engineer/12298324
+- Link: /job/data-engineer/12298324?handler=ApplyRedirect
 - Source: builtin
 - Posted: 2026-11-17
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 0.0 | raw 0.0/1.0 |
-| (b) Reorder-only | 0.0 | apply if ≥ 8.5 (85%) |
-| (c) + hedged additions | 0.0 | do not submit without approval |
+| (a) Original | 7.2 | raw 33.0/46.0 |
+| (b) Reorder-only | 7.2 | apply if ≥ 8.5 (85%) |
+| (c) + hedged additions | 8.3 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
+- Airflow
+- BigQuery
+- dbt
+- \bjava\b
+- \bredshift\b
 
-## Keywords covered honestly after tailor: (see score)
-## Gaps remaining: 
+## Keywords covered honestly after tailor: Python, SQL, Snowflake
+## Gaps remaining: Scala, Java
 
 ## Stretch call: No major years stretch detected.
 

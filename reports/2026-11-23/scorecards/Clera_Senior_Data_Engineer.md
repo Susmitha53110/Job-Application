@@ -6,19 +6,19 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 9.6 | raw 11.55/12.0 |
-| (b) Reorder-only | 9.6 | apply if ≥ 8.5 (85%) |
-| (c) + hedged additions | 9.6 | do not submit without approval |
+| (a) Original | 5.6 | raw 13.403030303030302/24.0 |
+| (b) Reorder-only | 5.6 | apply if ≥ 8.5 (85%) |
+| (c) + hedged additions | 6.4 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
-- compensation
+- Airflow
+- Dagster
+- dbt
+- Prefect
 - concurrent
-- contracts
-- enrichment
-- event-driven
 
-## Keywords covered honestly after tailor: Python, SQL, production, architecture, build
-## Gaps remaining: 
+## Keywords covered honestly after tailor: Python, SQL
+## Gaps remaining: Airflow, dbt, Dagster
 
 ## Stretch call: No major years stretch detected.
 

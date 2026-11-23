@@ -1296,3 +1296,31 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-23 | Oddball | Data Engineer | https://job-boards.greenhouse.io/oddball/jobs/8213810003 | skipped
 2026-11-23 | Oddball | Senior Data Engineer | https://job-boards.greenhouse.io/oddball/jobs/8213809003 | skipped
 2026-11-23 | Carrot Fertility | Sr. Data Engineer | https://job-boards.greenhouse.io/carrotfertility/jobs/6179797004 | dry-run
+2026-11-23 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/045880a4-82bc-409e-a201-bf763806f487 | dry-run
+2026-11-23 | Mactores | AWS Data Engineer (Associate) | https://jobicy.com/jobs/151141-aws-data-engineer-associate | dry-run
+2026-11-23 | Life360 | Senior Data Engineer, Ads Data (AI Native) | https://jobicy.com/jobs/163771-senior-data-engineer-ads-data-ai-native | dry-run
+2026-11-23 | Mactores | AWS Data Engineer (Senior) | https://jobicy.com/jobs/151146-aws-data-engineer-senior | dry-run
+2026-11-23 | Defense Unicorns | Data Engineer (FedD024) | https://jobicy.com/jobs/153638-data-engineer-fedd024 | dry-run
+2026-11-23 | Carrot | Sr. Data Engineer | https://jobicy.com/jobs/153597-sr-data-engineer-3 | dry-run
+2026-11-23 | Airbnb | Data Engineer Tech Foundations | https://careers.airbnb.com/positions/8396777?gh_jid=8396777 | dry-run
+2026-11-23 | GuideCX | Senior Data Engineer | https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009 | dry-run
+2026-11-23 | EnergyHub | Senior Data Engineer, C&I | https://job-boards.greenhouse.io/energyhub/jobs/8947924002 | dry-run
+2026-11-23 | Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-23 | Hallmark Cards | Data Engineer - Business Intelligence (Remote) | /job/data-engineer-business-intelligence-remote/12299041?handler=ApplyRedirect | dry-run
+2026-11-23 | Hugging Face | Senior Software/Data Engineer, Bot Detection - US Remote | /job/senior-software-data-engineer-bot-detection-us-remote/12374813?handler=ApplyRedirect | dry-run
+2026-11-23 | Wells Fargo | Lead Specialty Data Engineer | /job/lead-specialty-data-engineer/12399473?handler=ApplyRedirect | dry-run
+2026-11-23 | General Motors | Data Engineer | /job/data-engineer/12392643?handler=ApplyRedirect | dry-run
+2026-11-23 | PNC Bank | Data Engineer Senior - Data Modeling | /job/data-engineer-senior-data-modeling/12385429?handler=ApplyRedirect | dry-run
+2026-11-23 | Toast | Data Engineer | /job/data-engineer/12298324?handler=ApplyRedirect | dry-run
+2026-11-23 | Hallmark Cards | Data Engineer - Business Intelligence (Remote) | https://recruiting2.ultipro.com/HAL1009HLLI/JobBoard/1af38e50-bef2-48c7-8919-d646ae0bee65/OpportunityDetail?opportunityId=7539f6c4-18a8-415f-a67f-0842b8b46daa | dry-run
+2026-11-23 | Hallmark Cards | Data Engineer - Business Intelligence (Remote) | https://recruiting2.ultipro.com/HAL1009HLLI/JobBoard/1af38e50-bef2-48c7-8919-d646ae0bee65/OpportunityDetail?opportunityId=7539f6c4-18a8-415f-a67f-0842b8b46daa | dry-run
+2026-11-23 | Cash App / Block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-23 | Sony | Data Engineer II, JVM | https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6252099004 | dry-run
+2026-11-23 | Clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/045880a4-82bc-409e-a201-bf763806f487 | dry-run
+2026-11-23 | clasp-group | Senior Data Engineer | https://jobs.ashbyhq.com/clasp-group/6b17e24f-e898-421a-977f-c41791845df6 | dry-run
+2026-11-23 | PayPal | Sr Data Engineer | https://paypal.wd1.myworkdayjobs.com/en-US/jobs/job/San-Jose-California-United-States-of-America/Sr-Data-Engineer_R0139047-1 | dry-run
+2026-11-23 | toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
+2026-11-23 | block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
+2026-11-23 | AcuityMD | Data Engineer | https://job-boards.greenhouse.io/acuitymd/jobs/6266794004 | dry-run
+2026-11-23 | Claritas Rx | Data Engineer | https://apply.workable.com/j/A4D4F1CE37 | dry-run
+2026-11-23 | Claritas Rx | Data Engineer | https://apply.workable.com/j/A4D4F1CE37 | dry-run
