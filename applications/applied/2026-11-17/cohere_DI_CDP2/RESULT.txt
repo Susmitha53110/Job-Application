@@ -1,0 +1,2 @@
+success=True
+confirmation=Your application has been submitted! Thank you for your interest in a career growth opportunity at Cohere!

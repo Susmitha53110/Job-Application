@@ -1,0 +1,3 @@
+success=True
+url=https://jobs.ashbyhq.com/Solvd/66144fe8-eed7-4cd8-b1aa-46a0387424fa/application
+note=submitted; screenshot retry

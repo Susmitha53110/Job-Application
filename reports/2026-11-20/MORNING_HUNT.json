@@ -1,0 +1,65 @@
+[
+  {
+    "company": "SoFi",
+    "title": "Senior Software Engineer, Data Platform",
+    "url": "https://sofi.com/careers/job/8207529003?gh_jid=8207529003",
+    "location": "Seattle, Washington or Salt Lake City, Utah",
+    "source": "greenhouse"
+  },
+  {
+    "company": "Anthropic",
+    "title": "Software Engineer, Datacenter Server Lifecycle",
+    "url": "https://job-boards.greenhouse.io/anthropic/jobs/5484171008",
+    "location": "Remote-Friendly, United States",
+    "source": "greenhouse"
+  },
+  {
+    "company": "plaid",
+    "title": "Staff Software Engineer - Data Infrastructure",
+    "url": "https://jobs.ashbyhq.com/plaid/127d31ff-3a16-488b-ba01-6e87dbb96957",
+    "location": "San Francisco HQ",
+    "source": "ashby"
+  },
+  {
+    "company": "clera",
+    "title": "Founding Data Engineer",
+    "url": "https://jobs.ashbyhq.com/Clera/96eb46ad-eb7a-4540-afc8-7397d946019f",
+    "location": "San Francisco",
+    "source": "ashby"
+  },
+  {
+    "company": "clera",
+    "title": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/Clera/0c1db99d-2e28-4277-87e2-c4d2a6f17b44",
+    "location": "remote",
+    "source": "ashby"
+  },
+  {
+    "company": "clera",
+    "title": "Senior Data Integration Engineer",
+    "url": "https://jobs.ashbyhq.com/Clera/0bb25b44-9e01-48be-9db1-a8a26d558d0d",
+    "location": "remote",
+    "source": "ashby"
+  },
+  {
+    "company": "commure",
+    "title": "Senior Software Engineer, Data Platform",
+    "url": "https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654",
+    "location": "Mountain View, CA",
+    "source": "ashby"
+  },
+  {
+    "company": "cursor",
+    "title": "Sr. Software Engineer, Pretraining Data",
+    "url": "https://jobs.ashbyhq.com/cursor/db5d0c48-7c24-474d-a662-c960c3770d44",
+    "location": "Palo Alto, CA",
+    "source": "ashby"
+  },
+  {
+    "company": "Lemon.io",
+    "title": "Senior Data Engineer",
+    "url": "https://remotive.com/remote-jobs/data/senior-data-engineer-2091137",
+    "location": "LATAM, Europe, USA, Canada, APAC",
+    "source": "remotive"
+  }
+]

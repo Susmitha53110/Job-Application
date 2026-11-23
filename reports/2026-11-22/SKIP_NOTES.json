@@ -1,0 +1,77 @@
+[
+  {
+    "skip": "score_7.2",
+    "company": "Toast",
+    "title": "Data Engineer",
+    "url": "https://careers.toasttab.com/jobs?gh_jid=8359240"
+  },
+  {
+    "skip": "applied",
+    "company": "Natera",
+    "title": "Sr. Forward Deployed Data Engineer",
+    "url": "https://job-boards.greenhouse.io/natera/jobs/6255111004"
+  },
+  {
+    "skip": "applied",
+    "company": "GuideCX",
+    "title": "Senior Data Engineer",
+    "url": "https://job-boards.greenhouse.io/guidecxcareers/jobs/4485398009"
+  },
+  {
+    "skip": "score_8.2",
+    "company": "Block",
+    "title": "Sales Compensation Systems & Data Engineer",
+    "url": "http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008"
+  },
+  {
+    "skip": "applied",
+    "company": "EnergyHub",
+    "title": "Senior Data Engineer, C&I",
+    "url": "https://job-boards.greenhouse.io/energyhub/jobs/8947924002"
+  },
+  {
+    "skip": "applied",
+    "company": "Airbnb",
+    "title": "Data Engineer Tech Foundations",
+    "url": "https://careers.airbnb.com/positions/8396777?gh_jid=8396777"
+  },
+  {
+    "skip": "applied",
+    "company": "surveymonkey",
+    "title": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807"
+  },
+  {
+    "skip": "excluded",
+    "company": "jobgether",
+    "title": "Lead Data Engineer, Databricks"
+  },
+  {
+    "skip": "excluded",
+    "company": "jobgether",
+    "title": "Senior Data Engineer (Databricks) - Contractor"
+  },
+  {
+    "skip": "score_0.0",
+    "company": "Toast",
+    "title": "Data Engineer",
+    "url": "https://builtin.com/job/data-engineer/12298324"
+  },
+  {
+    "skip": "score_0.0",
+    "company": "Block Inc",
+    "title": "Sales Compensation Systems & Data Engineer",
+    "url": "https://builtin.com/job/sales-compensation-systems-data-engineer/12300884"
+  },
+  {
+    "skip": "score_0.0",
+    "company": "Cash App",
+    "title": "Sales Compensation Systems & Data Engineer",
+    "url": "https://builtin.com/job/sales-compensation-systems-data-engineer/12325458"
+  },
+  {
+    "skip": "excluded",
+    "company": "Optum",
+    "title": "Senior Cloud Data Engineer - Remote"
+  }
+]

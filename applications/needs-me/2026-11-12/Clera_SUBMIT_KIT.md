@@ -14,9 +14,9 @@
 | Field | Answer |
 |-------|--------|
 | Name* | Susmitha Chowdary |
-| Email* | Susmithachowdary67@gmail.com |
+| Email* | dsusmitha55@gmail.com |
 | Resume* | tailored `.docx` (a) |
-| LinkedIn* | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
+| LinkedIn* | **N/A** (standing: blank; required → N/A) |
 | Do you have work authorization to work in that country?* | **Yes** (F1-OPT) |
 
 No sponsorship question and no salary question on this form. No EEO section on the page inspected.

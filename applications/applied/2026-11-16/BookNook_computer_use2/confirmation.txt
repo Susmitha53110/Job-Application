@@ -1,0 +1,38 @@
+BOOKNOOK SENIOR ANALYTICS ENGINEER APPLICATION CONFIRMATION
+
+Page Header: Confirmation
+
+Main Message: "You have successfully applied to Senior Analytics Engineer"
+
+Toast Notification: "You have successfully applied to Senior Analytics Engineer"
+
+URL: https://ats.rippling.com/booknook-inc/jobs/5d515e53-e907-4e79-81cb-b8dcf52954f5/apply?cBoardSlug=booknook-inc&jobId=5d515e53-e907-4e79-81cb-b8dcf52954f5&step=confirmation
+
+Status: Application successfully submitted
+Date: November 16, 2026
+Position: Senior Analytics Engineer
+Company: BookNook, Inc (via Rippling ATS)
+
+Application Details Submitted:
+- First Name: Susmitha
+- Last Name: Chowdary
+- Email: dsusmitha55@gmail.com
+- Phone: 913-207-3787
+- Location: Austin, TX, USA
+- Current Company: Optum
+- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- Authorization to work in US: No
+- Sponsorship requirement: No
+- State of residence: TX
+- Favorite data project: Delta Lake bronze-silver-gold model at Optum
+- Gender: Female
+- Race: Asian
+- Hispanic/Latino: No
+- Veteran Status: I am not a protected veteran
+- SMS Consent: No - I do not consent to receiving text messages
+- Cloudflare Turnstile: Completed successfully (1st attempt)
+- Resume: Susmitha_booknook_2026-11-15.docx (uploaded and parsed)
+
+Form Completion: 100%
+CAPTCHA Status: Passed (Cloudflare Turnstile)
+Submission Status: SUCCESS

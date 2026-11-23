@@ -1,0 +1,31 @@
+success=True
+url=https://job-boards.greenhouse.io/natera/jobs/6255111004/confirmation
+company=Natera
+role=Sr Forward Deployed Data Engineer
+confirmation=Thank you for applying.
+
+Your application has been received. As applications are reviewed a member of the talent acquisition team will follow up.  
+
+Please be advised that Natera will reach out to candidates with a @natera.com email domain ONLY. Email communications from all other domain names are not from Natera or its employees and are fraudulent. Natera does not request interviews via text messages and does not ask for personal information until a candidate has engaged with the company and has spoken to a recruiter and the hiring team. Natera takes cyber crimes seriously, and will collaborate with law enforcement authorities to prosecute any related cyber crimes.
+
+For more information:
+- BBB announcement on job scams 
+- FBI Cyber Crime resource page
+
+View more jobs at Natera
+Back to job post
+
+Track your application
+
+Sign in to keep tabs on your application, get status updates and more.
+
+Initial screen
+
+Team interview
+
+Onsite interview
+
+Offer
+
+Track your application
+timestamp=2026-11-17 17:04 UTC

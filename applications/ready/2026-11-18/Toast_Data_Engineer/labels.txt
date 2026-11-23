@@ -1,0 +1,18 @@
+First Name*
+Last Name*
+Preferred First Name
+Email*
+Country*
+Phone*
+Location (City)*
+Attach
+Enter manually
+LinkedIn Profile
+Website
+Are you legally authorized to work in the country where this job is located?*
+Do you now, or will you ever, require employment sponsorship to work in the country where this job is located?*
+By selecting "I agree", I understand that the information I have provided as part of this job application will be processed in accordance with Toast's Applicant Privacy Statement.*
+What's your postal code? *
+Race/Ethnicity (Select all that apply)
+Gender Identity
+Veteran Status

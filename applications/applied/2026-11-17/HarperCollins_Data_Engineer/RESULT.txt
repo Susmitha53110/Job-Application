@@ -1,0 +1,6 @@
+success=false
+reason=needs-me
+blocker=iCIMS consent checkbox unresponsive to automation after 10+ click attempts
+progress=40%
+platform=iCIMS
+time_spent_minutes=11

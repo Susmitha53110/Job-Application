@@ -1,0 +1,29 @@
+success=True
+url=https://jobs.ashbyhq.com/spoton/bb2d12c6-859d-459e-96f8-489c2bfd6681/application
+body=Senior Analytics Platform Engineer
+Location
+
+Chicago, IL
+
+Employment Type
+
+Full time
+
+Department
+
+Engineering
+
+Compensation
+$137,550 – $173,000 • Offers Equity
+
+Please note the salary range listed is just one component of a competitive compensation package which may include a company stock plan depending on role eligibility. Offers will be reflective of the candidate’s location, qualifications, and experience.
+
+Overview
+Application
+Success
+
+Your application was successfully submitted. We'll contact you if there are next steps.
+
+Powered by 
+
+Privacy PolicySecurityVulnerability Disclosure
