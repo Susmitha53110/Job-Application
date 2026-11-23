@@ -10,7 +10,7 @@ If this drifts from the base resume, re-read the resume and fix this file.
 ## Employers / titles / dates
 - Data Engineer — **Optum** | Austin, TX | **May 2025 – Present**
 - Data Engineer — **Citi** | Pune, India | **January 2020 – May 2023**
-- Total related experience: **5 years**
+- Total related experience: **nearly 5 years** (~4 years 10 months documented as of Nov 2026)
 - Gap flags: ~May 2023–Jan 2024; MS overlaps Optum start
 
 ## Education

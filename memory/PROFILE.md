@@ -11,7 +11,7 @@
 - LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
 
 ## Experience & education
-- Current/most recent role + years: Data Engineer, 5 years
+- Current/most recent role + years: Data Engineer, nearly 5 years (~4 years 10 months documented)
 - Education: Master of Science in Computer Science, University of Central Missouri (Jan 2024 – Dec 2025)
 - Real metrics I can back up (for XYZ bullets only):
   - Cut new source-feed onboarding from ~2 weeks to ~4 days (config-driven PySpark ingestion framework at Optum)
