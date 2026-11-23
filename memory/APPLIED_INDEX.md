@@ -1283,3 +1283,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-23 | block | Sales Compensation Systems & Data Engineer | http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008 | dry-run
 2026-11-23 | toast | Data Engineer | https://careers.toasttab.com/jobs?gh_jid=8359240 | dry-run
 2026-11-23 | Block | Sales Compensation Systems & Data Engineer | https://job-boards.greenhouse.io/block/jobs/5485151008 | dry-run
+2026-11-23 | CVS Health | Senior Data Engineer | https://cvshealth.wd1.myworkdayjobs.com/CVS_Health_Careers/job/TX---Work-from-home/Senior-Data-Engineer_R1100213 | deferred

@@ -5,7 +5,7 @@
 
 ## Applies today
 - **0 submitted** so far (window open).
-- **CVS Health / Senior Data Engineer** — score **9.4**, USA remote (TX WFH), ≤10d → **needs-me** (Workday sign-in/password; Susmitha must log in). Resume ready: `resumes/tailored/2026-11-23/Susmitha_CVS_Health_Senior_Data_Engineer.docx`. End date Nov 26.
+- **CVS Health / Senior Data Engineer** — score **9.4**, USA remote (TX WFH), ≤10d → **deferred** (leave for now — Susmitha). Resume ready: `resumes/tailored/2026-11-23/Susmitha_CVS_Health_Senior_Data_Engineer.docx`. End date Nov 26.
   - Kit: `applications/applied/2026-11-23/cvs-health-senior-data-engineer/NEEDS_ME.md`
 
 ## Scored near-misses (honest ≥ gate not met or blocked)
@@ -26,7 +26,7 @@
 - `is_us_remote` now accepts Workday-style **TX - Work from home** (state-abbrev + WFH) so USA-remote TX/CA WFH roles are not false-rejected.
 
 ## Next
-- Susmitha: log into CVS Workday and submit the 9.4 packet (highest priority).
+- CVS deferred per Susmitha — skip Workday chase.
 - Agent: continue hunt for ≤10d USA-remote or Austin-hybrid DE/Sr DE with honest score ≥8.5 on Greenhouse/Ashby/Lever (auto-submit ATS).
 
 ## PR
