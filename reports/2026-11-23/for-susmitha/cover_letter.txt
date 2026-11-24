@@ -1,0 +1,4 @@
+Susmitha Chowdary
+dsusmitha55@gmail.com | 913-207-3787 | Austin, TX
+
+I am applying for the Data Engineer role at Claritas Rx. I have about five years building production data pipelines in Python and SQL on cloud platforms (AWS/Azure), with ELT/ETL, data modeling, and reliability work that matches your platform engineering needs. I am authorized to work in the U.S. on F-1 OPT (no sponsorship needed now) and am excited about Claritas Rx’s patient-access mission.

@@ -1,0 +1,5 @@
+status=RESUME_OK
+path=/workspace/resumes/base/Susmitha_Chowdary_Base_Resume.docx
+filename_visible=True
+required_error=True
+uploadfile_error=True

@@ -1,0 +1,1 @@
+Block Country* phone-input react-select accepts United States +1 visually (+1) but validation keeps Select a country. Resume/Accept also flaky in iframe. needs-me for CAPTCHA+Country after manual Country select.

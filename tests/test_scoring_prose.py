@@ -21,7 +21,7 @@ def _tiny_resume():
     md = """
 # SUSMITHA CHOWDARY
 Data Engineer | Python · SQL · PySpark · Databricks · Snowflake · Azure · AWS
-Susmithachowdary67@gmail.com | 9132073787
+dsusmitha55@gmail.com | 9132073787
 
 ## Summary
 Data engineer with Python, SQL, PySpark, Databricks, Snowflake, Azure Data Factory.

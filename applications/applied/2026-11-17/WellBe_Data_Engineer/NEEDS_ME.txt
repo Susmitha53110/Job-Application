@@ -1,0 +1,50 @@
+NEEDS_ME: WellBe Data Engineer Application
+
+Status: Unable to access application form
+Blocker: Navigated to referral page, stuck on "Leave site?" dialog
+
+URL: https://careers-wellbeseniormedical.icims.com/jobs/7414/data-engineer/job
+Resume: /workspace/resumes/submit/Susmitha_wellbe.docx
+Date: 2026-11-17
+Time Window: 08:00-12:00 CT (attempted at ~08:13-08:17 CT)
+
+Progress:
+1. ✓ Navigated to job posting page
+2. ✗ BLOCKED: Accidentally clicked "Email this job to a friend" instead of "Apply for this job online"
+3. ✗ Redirected to /referral page
+4. ✗ BLOCKED: Browser "Leave site?" dialog prevents navigation
+
+Attempted resolution:
+- Alt+Left (back button) → "Leave site?" dialog appears
+- Clicked "Leave" button (8+ attempts) → dialog remains
+- Escape key → dialog closes, still on referral page
+- Clicked "Welcome page" link → no navigation
+- Edited URL to /login → "Leave site?" dialog reappears
+- Multiple clicks on "Leave" button (different coordinates) → dialog persists
+
+Observed behavior:
+- Stuck on referral form page
+- "Leave site?" dialog blocking all navigation
+- "Leave" button highlighted but not responding to clicks
+- Unable to reach actual application form
+
+Root cause hypothesis:
+- Browser dialog may have z-index or click interception issue
+- Possible race condition with page reload/navigation
+- May need fresh browser session or force reload
+
+Next steps for human:
+1. Visit URL directly: https://careers-wellbeseniormedical.icims.com/jobs/7414/data-engineer/job
+2. Click purple "Apply for this job online" button (NOT "Email this job")
+3. Email: dsusmitha55@gmail.com
+4. Check "I accept" consent checkbox (similar to HarperCollins)
+5. Upload resume: /workspace/resumes/submit/Susmitha_wellbe.docx
+6. Fill candidate information per standing answers
+7. Sponsorship: No (user note: Skip if citizen-only requirement)
+8. Complete any hCaptcha if present
+9. Submit application
+
+Time spent: ~4 minutes
+Automation success: 10% (job page view only)
+
+Note: Both iCIMS applications (HarperCollins and WellBe) encountered blocking issues, suggesting iCIMS platform has strong automation resistance on consent/navigation flows.

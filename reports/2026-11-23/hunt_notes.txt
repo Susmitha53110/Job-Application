@@ -1,0 +1,3 @@
+SCORE 8.2 | block | Sales Compensation Systems & Data Engineer | Bay Area, CA, United States of America
+SCORE 7.2 | toast | Data Engineer | Remote, US 
+USFAIL chorusinnovations | Senior Data Engineer | Long Beach, CA (Hybrid)

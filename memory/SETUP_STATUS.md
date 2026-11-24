@@ -8,5 +8,5 @@ Last updated: 2026-11-11
 - [x] LinkedIn
 - [x] Sponsorship = No
 - [x] Dry-run approved → real ATS authorized
-- [ ] Salary expectation number for required form fields
+- [x] Salary expectation number for required form fields
 - [ ] First confirmed `applied` with proof inside window

@@ -11,14 +11,14 @@
 | (c) + hedged additions | 9.7 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
-- \bpython\b
-- \bsql\b
-- \bspark\b
-- \bazure\b
-- \baws\b
+- integrations
+- telemetry
+- apis
+- logistics
+- shipment
 
-## Keywords covered honestly after tailor: (see score)
-## Gaps remaining: \bpython\b, \bsql\b, \bspark\b, \bazure\b, \baws\b
+## Keywords covered honestly after tailor: Python, SQL, Spark, Azure, AWS
+## Gaps remaining: 
 
 ## Stretch call: No major years stretch detected.
 

@@ -1,0 +1,71 @@
+success=False
+captcha=True
+url=https://job-boards.greenhouse.io/embed/job_app?for=alloy&token=8612698002
+body=Create a Job Alert
+
+Interested in building your career at Alloy? Get future opportunities sent straight to your email.
+
+Create alert
+Apply for this job
+
+*
+
+indicates a required field
+
+Autofill my application
+First Name*
+Last Name*
+Email*
+Phone
+Country*
++1
+Phone*
+Location (City)*
+Austin, Texas, United States
+Locate me
+Resume/CV*
+
+Susmitha_Alloy_Engineering_Manager_Data_Platform.docx
+
+Cover Letter
+Attach
+Attach
+Dropbox
+Enter manually
+Enter manually
+
+Accepted file types: pdf, doc, docx, txt, rtf
+
+LinkedIn Profile*
+Website
+What are your salary requirements? *
+Hybrid work environment: our employees local to NYC are expected to work Tuesdays through Thursdays from our HQ in Union Square, Manhattan. Are you able to attend the office on these days?*
+option , selected.Select is focused ,type to refine list, press Down to open the menu,
+Select...
+
+This field is required.
+
+If you are not based in the NYC metro area, are you willing to relocate? *
+Yes
+Are you authorized to work in the US?*
+Yes
+Will you now, or in the future, require employer visa sponsorship (e.g., H-1B, TN, E-3, or similar)?*
+No
+Will you need accommodations to interview with us?
+Please share your pronouns or how you'd like to be addressed.
+How did you hear about this position?
+Voluntary Self-Identification
+
+For government reporting purposes, we ask candidates to respond to the below self-identification survey. Completion of the form is entirely voluntary. Whatever your decision, it will not be considered in the hiring process or thereafter. Any information that you do provide will be recorded and maintained in a confidential file.
+
+As set forth in Alloy’s Equal Employment Opportunity policy, we do not discriminate on the basis of any protected group status under any applicable law.
+
+Gender
+Female
+Are you Hispanic/Latino?
+No
+Please identify your race
+Select...
+Race & Ethnicity Definitions
+
+If you believe you belong to any of the categories of protected veterans listed below, please indicate by making the approp
