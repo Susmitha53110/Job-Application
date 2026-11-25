@@ -1,0 +1,3 @@
+needs-me=form_stuck
+role=Senior Data Engineer (Lever)
+note=Resume uploaded but Submit did not advance (fields may not bind). Past noon window — retry 8am CT.

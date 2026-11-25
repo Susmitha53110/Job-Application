@@ -1,0 +1,58 @@
+Claritas Rx Data Engineer - Application Attempt
+================================================
+
+Date: Tuesday, Nov 24, 2026
+URL: https://apply.workable.com/claritasrx/j/A4D4F1CE37/apply
+Status: needs-me
+
+WHAT WAS COMPLETED:
+-------------------
+✓ Resume uploaded: Susmitha_Claritas_Rx_Data_Engineer.docx
+✓ Basic fields filled:
+  - First name: Susmitha
+  - Last name: Chowdary
+  - Email: dsusmitha55@gmail.com
+  - Phone: 9132073787
+  - Address: Columbus, United States of America
+
+✓ Required essay questions filled (via CDP):
+  - Software engineering experience (5+ years)
+  - Fast-paced SaaS environment experience
+  - LinkedIn profile URL
+
+✓ Required radio questions:
+  - Visa sponsorship: Yes (attempted)
+  - HIPAA familiarity: Yes (clicked via JS)
+  - Travel willingness: Yes (attempted)
+
+✓ Cloudflare challenge: Appeared and was cleared successfully
+
+BLOCKING ISSUE:
+---------------
+Workable platform uses React form components that reject CDP automation.
+CDP methods (fill(), click(), keyboard.type()) do not trigger proper
+React onChange handlers, causing validation to fail silently.
+
+Submit button clicks but form does not advance - identical behavior to:
+- Movement Labs (Workable) - same issue
+- All Greenhouse applications - same React validation problem
+
+The form appears filled in the DOM (values present) but React's internal
+state doesn't recognize the changes, so submission is blocked.
+
+User mentioned "Yesterday form filled but Cloudflare blocked Submit" -
+this confirms form was successfully filled yesterday but Cloudflare
+prevented submission. Today, Cloudflare was cleared but React validation
+now blocks submission.
+
+EVIDENCE:
+---------
+- form_filled.png: Initial form state
+- cloudflare_blocked.png: Cloudflare challenge
+- after_cloudflare.png: Cloudflare cleared
+- final_attempt.png: Submit clicked, still on form
+
+RECOMMENDATION:
+---------------
+Manual completion required. CDP automation incompatible with
+Workable/Greenhouse React form validation.

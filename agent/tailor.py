@@ -46,38 +46,38 @@ def _bullet_score(bullet: str, terms: list[str]) -> int:
 
 
 def rewrite_summary(resume: Resume, jd: TieredJd) -> str:
-    """Rewrite summary in JD vocabulary; claims must trace to resume (no new facts)."""
+    """Keep the human-written summary. Never prepend ATS/tailoring-tool lead-ins."""
     base = resume.summary.strip() or (
         f"{resume.experiences[0].title} with experience across "
         f"{', '.join(resume.skills[:6])}."
         if resume.experiences and resume.skills
         else resume.headline
     )
-    # Lead with JD title terms if they already appear in resume corpus
-    lead_bits = []
-    corpus = (base + " " + " ".join(resume.skills) + " " + " ".join(
-        b for e in resume.experiences for b in e.bullets
-    )).lower()
-    for kw in jd.keywords[:8]:
-        if kw.lower() in corpus and kw not in lead_bits:
-            lead_bits.append(kw)
-    if not lead_bits:
-        return base
-    lead = f"Candidate aligned to {jd.title} priorities including {', '.join(lead_bits[:5])}."
-    # Keep original summary body (facts unchanged)
-    if base:
-        return f"{lead} {base}"
-    return lead
+    # Reject legacy auto-tailor phrasing if it leaked into a saved resume.
+    base = re.sub(
+        r"(?i)^\s*Candidate aligned to .+? priorities including [^.]+\.\s*",
+        "",
+        base,
+    ).strip()
+    return base
 
 
-def reorder_experience(resume: Resume, terms: list[str]) -> list[Experience]:
+# Hard cap: 6 bullets per employer (12 total for Optum + Citi).
+MAX_BULLETS_PER_ROLE = 6
+
+
+def reorder_experience(
+    resume: Resume,
+    terms: list[str],
+    max_bullets: int = MAX_BULLETS_PER_ROLE,
+) -> list[Experience]:
     out = []
     for exp in resume.experiences:
         scored = sorted(
             exp.bullets,
             key=lambda b: _bullet_score(b, terms),
             reverse=True,
-        )
+        )[:max_bullets]
         out.append(
             Experience(
                 title=exp.title,  # never change titles
@@ -97,6 +97,47 @@ def reorder_skills(skills: list[str], jd: TieredJd) -> list[str]:
         key=lambda s: (0 if s.lower() in terms or any(t in s.lower() for t in terms) else 1, s.lower()),
     )
     return ranked
+
+
+def reorder_skills_raw(skills_raw: str, jd: TieredJd) -> str:
+    """Keep Category: item lines intact; rank categories and items by JD relevance."""
+    lines = [ln.strip() for ln in (skills_raw or "").splitlines() if ln.strip()]
+    if not lines:
+        return skills_raw
+    terms = set(_jd_terms(jd))
+
+    def score_text(text: str) -> int:
+        low = text.lower()
+        return sum(1 for t in terms if t in low)
+
+    ranked_lines: list[str] = []
+    for ln in sorted(lines, key=lambda x: -score_text(x)):
+        if ":" not in ln:
+            ranked_lines.append(ln)
+            continue
+        cat, _, items = ln.partition(":")
+        parts = [p.strip() for p in items.split(",") if p.strip()]
+        parts = sorted(
+            parts,
+            key=lambda s: (0 if score_text(s) else 1, s.lower()),
+        )
+        ranked_lines.append(f"{cat.strip()}: {', '.join(parts)}")
+    return "\n".join(ranked_lines)
+
+
+def flat_skills_from_raw(skills_raw: str) -> list[str]:
+    """Flatten categorized skills_raw into a list for scoring (no category labels)."""
+    out: list[str] = []
+    for ln in (skills_raw or "").splitlines():
+        ln = ln.strip()
+        if not ln:
+            continue
+        items = ln.split(":", 1)[-1] if ":" in ln else ln
+        for p in re.split(r"[,|•]+", items):
+            s = p.strip()
+            if s:
+                out.append(s)
+    return out
 
 
 ALLOWED_HEDGES = [
@@ -145,15 +186,22 @@ def tailor(resume: Resume, jd: TieredJd) -> TailorResult:
     a = copy.deepcopy(resume)
     a.summary = rewrite_summary(resume, jd)
     a.experiences = reorder_experience(resume, terms)
-    a.skills = reorder_skills(list(resume.skills), jd)
-    a.skills_raw = ", ".join(a.skills)
+    if resume.skills_raw and "\n" in resume.skills_raw.strip():
+        a.skills_raw = reorder_skills_raw(resume.skills_raw, jd)
+        a.skills = flat_skills_from_raw(a.skills_raw)
+    else:
+        a.skills = reorder_skills(list(resume.skills), jd)
+        a.skills_raw = ", ".join(a.skills)
 
     b = copy.deepcopy(a)
     additions = hedged_additions(resume, jd)
     flagged = [f'verify before applying: "{x}"' for x in additions]
     if additions:
         b.skills = list(b.skills) + additions
-        b.skills_raw = ", ".join(b.skills)
+        if "\n" in (b.skills_raw or ""):
+            b.skills_raw = (b.skills_raw.rstrip() + "\nHedged (verify): " + ", ".join(additions)).strip()
+        else:
+            b.skills_raw = ", ".join(b.skills)
         notes.append(
             "Version (b) adds hedged skills only. Submit version (a) unless Susmitha approved (b)."
         )

@@ -1,0 +1,28 @@
+success=True
+url=https://job-boards.greenhouse.io/zocdoc/jobs/8356769/confirmation
+company=Zocdoc
+role=Staff Analytics Engineer
+platform=Greenhouse
+confirmation=Thank you for applying! Your application is now safely in human hands. We'll let you know if you're a good match and even if you're not. At Zocdoc we believe black holes are for astrophysicists, not job applicants.
+
+submitted_fields:
+- First Name: Susmitha
+- Last Name: Chowdary
+- Email: dsusmitha55@gmail.com
+- Phone: 9132073787
+- Resume: Susmitha_zocdoc.docx
+- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+- Sponsorship: Yes (F1-OPT)
+- State: Texas
+- Analytics experience: Built analytics-ready warehouses and dbt models for product metrics
+- Demographics:
+  * Gender: Woman, Man
+  * Race: East Asian
+  * Sexual orientation: Heterosexual
+  * Transgender: No
+  * Disability: No
+  * Veteran: No
+- Email verification: 8-char code entered and verified
+
+confirmation_screenshot=/workspace/applications/applied/2026-11-17/Zocdoc_Staff_AE_CDP/confirmation.png
+timestamp=2026-11-17 16:27 UTC

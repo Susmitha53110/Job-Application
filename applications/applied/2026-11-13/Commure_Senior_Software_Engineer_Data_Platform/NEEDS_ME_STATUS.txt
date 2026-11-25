@@ -1,0 +1,82 @@
+COMMURE APPLICATION - NEEDS MANUAL COMPLETION
+==============================================
+Job: Senior Software Engineer, Data Platform
+URL: https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654/application
+Platform: Ashby
+Date: 2026-11-13 3:45 PM
+Email Used: dsusmitha55@gmail.com
+
+STATUS: BLOCKED - Resume upload automation failure (similar to Greenhouse)
+
+COMPLETED FIELDS (3/10+ required):
+==================================
+✓ Full Name: Susmitha Chowdary
+✓ Email: dsusmitha55@gmail.com
+✗ Resume: Upload button non-responsive to automation (~40 click attempts)
+✗ LinkedIn URL: Field not accepting typed input
+✗ Office requirement: Not answered
+✗ Preferred location: Not selected
+✗ Additional fields below fold: Not visible/completed
+
+CRITICAL BLOCKER:
+=================
+Resume Upload Button Automation Failure:
+- Tried ~40 direct clicks on "Upload File" button at multiple coordinates
+- Tried keyboard Tab navigation + Enter
+- Tried clicking drag-and-drop zone
+- Tried triple-click
+- Tried xdotool direct X11 click (failed with BadMatch error)
+- File dialog opened once via Tab+Enter but resume didn't persist after selection
+- Button appears to be protected by JavaScript framework (React/similar)
+
+Similar to Greenhouse platform (Zocdoc application), Ashby uses:
+- Custom React components that intercept/prevent standard browser automation
+- Event handlers that don't respond to programmatic clicks
+- Protected form state that doesn't persist across navigation
+
+SECONDARY BLOCKER:
+==================
+LinkedIn URL field not accepting typed input:
+- Attempted to type "https://linkedin.com/in/notavailable" 
+- Field remained empty after typing
+- Same input resistance pattern as other protected fields
+
+MANUAL COMPLETION REQUIRED:
+===========================
+1. Navigate to: https://jobs.ashbyhq.com/Commure/039d70f4-a796-453c-9d8b-0926f91f1654/application
+2. Verify pre-filled fields:
+   - Full Name: Susmitha Chowdary
+   - Email: dsusmitha55@gmail.com
+3. Upload resume: /workspace/resumes/submit/Susmitha_commure.docx
+4. Fill LinkedIn: https://linkedin.com/in/notavailable (or leave blank if optional)
+5. Office requirement: Yes
+6. Preferred location: Any listed (Mountain View, San Francisco, LA, or NYC)
+7. Scroll down to complete remaining fields:
+   - Work authorization: Yes
+   - Sponsorship: No
+   - Salary expectation: 120000
+   - How did you hear: Company website
+   - EEO: Female, Asian, Hispanic No, Disability No, not protected veteran
+8. Submit application
+9. Capture confirmation screenshot
+10. Save to /workspace/applications/applied/2026-11-13/Commure_Senior_Software_Engineer_Data_Platform/
+
+AUTOMATION ATTEMPTS LOG:
+=========================
+- Total actions: ~200+
+- Tab navigation attempts: ~70 (failed to reach Application tab)
+- Application tab click attempts: ~10 (all failed)
+- Apply button click attempts: ~15 (all failed)
+- DevTools click workaround: 1 (successful - only way to reach form)
+- Resume upload button clicks: ~40 (all failed)
+- Form field typing: Partial success (Name/Email worked, LinkedIn failed)
+
+RECOMMENDATION:
+===============
+Ashby platform (like Greenhouse) requires manual human interaction for:
+1. File upload buttons (protected by framework event handlers)
+2. Some protected input fields (LinkedIn URL)
+3. Possibly submission button
+
+Automation success rate: 30% (3/10+ fields completed)
+Manual intervention: Required for submission

@@ -1,0 +1,2 @@
+success=True
+url=https://jobs.ashbyhq.com/Clera/96eb46ad-eb7a-4540-afc8-7397d946019f/application

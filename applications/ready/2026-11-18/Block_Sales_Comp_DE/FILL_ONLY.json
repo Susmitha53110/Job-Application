@@ -1,0 +1,26 @@
+{
+  "url": "https://job-boards.greenhouse.io/embed/job_app?for=block&token=5485151008",
+  "fill_only": true,
+  "submitted": false,
+  "empties": [
+    "First Name*",
+    "Last Name*",
+    "Email*",
+    "Country*",
+    "Phone*",
+    "Will you now or in the future require sponsorship for work authorization? (This information will not",
+    "Are you authorized to work lawfully in the location posted for this position?*",
+    "Have you ever been employed full-time at Block or its subsidiaries?*",
+    "Have you ever provided any contract work for Block, Inc. or any of its subsidiaries or affiliates (w",
+    "I certify that all of the information I have provided is correct and complete and realize that falsi",
+    "How we interview: Our hiring process prioritizes authenticity and fairness, and we ask all candidate",
+    "With your permission, we may use AI transcription software to transcribe and summarize your intervie",
+    "Gender*",
+    "How would you describe your racial/ethnic background? (mark all that apply)*",
+    "Are you a veteran or active member of the United States Armed Forces? *",
+    "By checking this box, I consent to Block collecting, storing, and processing my responses to the dem"
+  ],
+  "ready_for_morning_submit": false,
+  "resume": "resumes/tailored/2026-11-17/Susmitha_Block_Sales_Compensation_Systems_Data_Engineer.docx",
+  "note": "At 08:00 CT: open embed URL, re-fill if session lost, Submit. Watch Country before phone. Gmail OTP if prompted."
+}

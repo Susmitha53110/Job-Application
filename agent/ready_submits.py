@@ -22,60 +22,118 @@ class ReadySubmit:
     ok: bool
     blockers: list[str]
     computer_use_prompt: str
+    ats: str = "unknown"
 
 
-CLERA = {
-    "key": "clera",
-    "company": "Clera",
-    "role": "Senior Data Integration Engineer",
-    "url": "https://jobs.ashbyhq.com/Clera/782c2049-c72a-4920-a278-e5b1ee6fd2b3",
-    "ashby_org": "Clera",
-    "ashby_id": "782c2049-c72a-4920-a278-e5b1ee6fd2b3",
+MONGODB = {
+    "key": "mongodb",
+    "company": "MongoDB",
+    "role": "Senior Software Engineer, Database Integration & Observability",
+    "url": "https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433",
+    "ats": "greenhouse",
+    "gh_board": "mongodb",
+    "gh_id": 8352433,
     "resume_globs": [
-        "*/Susmitha_clera_Senior_Data_Integration_Engineer.docx",
-        "*/Susmitha_Clera_Senior_Data_Integration_Engineer.docx",
+        "*/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx",
     ],
-    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Clera_SUBMIT_KIT.md",
+    "kit": paths.APPLICATIONS / "ready" / "2026-11-14" / "MongoDB_SUBMIT_KIT.md",
     "needs_salary": False,
     "prompt_extra": (
+        "Use Greenhouse embed URL (not mongodb.com careers wrapper).\n"
         "Fill exactly:\n"
-        "- Name*: Susmitha Chowdary\n"
-        "- Email*: Susmithachowdary67@gmail.com\n"
-        "- Resume*: upload the .docx\n"
-        "- LinkedIn*: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Do you have work authorization to work in that country?*: Yes\n"
-        "No salary field. No sponsorship field on this form.\n"
+        "- First Name: Susmitha / Last Name: Chowdary / Preferred Name: Susmitha\n"
+        "- Email: dsusmitha55@gmail.com / Phone: 9132073787\n"
+        "- Country: United States / Location (City): Austin\n"
+        "- Resume: upload resumes/submit/Susmitha_mongodb.docx\n"
+        "- LinkedIn: blank; if forced N/A / Website: blank\n"
+        "- How did you learn about this job?: Company website (or closest)\n"
+        "- Culture/careers content / similar-job alerts: No or skip if optional\n"
+        "- Will you now or in the future require employment sponsorship?: No\n"
+        "- Have you ever worked at MongoDB before?: No\n"
+        "- EEO required: Gender Female / Gender Identity Female / Race Asian / "
+        "Hispanic No / Veteran I am not a protected veteran / "
+        "Disability No, I don't have a disability\n"
+        "- Check demographic survey consent box (required)\n"
+        "If email security code appears: STOP needs-me and ask Susmitha to paste the 8-char code "
+        "(Gmail declined). If CAPTCHA/unexpected required field: STOP needs-me.\n"
     ),
 }
 
-BAYESIAN = {
-    "key": "bayesian",
-    "company": "Bayesian Health",
-    "role": "Software Engineer, Data & Analytics Platform",
-    "url": "https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
-    "ashby_org": "bayesianhealth",
-    "ashby_id": "3ea2fcfb-9a68-4b8d-a9aa-600a733ef655",
+MACHINIFY = {
+    "key": "machinify",
+    "company": "Machinify",
+    "role": "Senior Data Engineer",
+    "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
+    "ats": "greenhouse",
+    "gh_board": "machinifyinc",
+    "gh_id": 4478208009,
     "resume_globs": [
-        "*/Susmitha_bayesianhealth_Software_Engineer_Data_Analytics_Platform.docx",
-        "*/Susmitha_Bayesian_Health_Software_Engineer_Data_Analytics_Platform.docx",
+        "*/Susmitha_Machinify_Senior_Data_Engineer*.docx",
     ],
-    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Bayesian_Health_SUBMIT_KIT.md",
+    "kit": paths.APPLICATIONS / "ready" / "2026-11-14" / "Machinify_SUBMIT_KIT.md",
     "needs_salary": False,
     "prompt_extra": (
-        "Fill exactly:\n"
-        "- Name*: Susmitha Chowdary\n"
-        "- Email*: Susmithachowdary67@gmail.com\n"
-        "- Resume*: upload the .docx\n"
-        "- Are you legally authorized to work in the United States?*: Yes\n"
-        "- Do you now or will you in the future require employer sponsorship?*: No\n"
-        "- Why are you a good fit for this role?*: paste the Why good fit draft from the submit kit "
-        "(resume facts only; do not invent dbt/BI ownership)\n"
-        "- LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8\n"
-        "- Years with BI tools: 0\n"
-        "- Years developing data/analytics platform in production: 5\n"
-        "- 2-3 most proficient languages: Python, SQL, PySpark\n"
-        "- Location: Austin, TX\n"
-        "No salary field on this form.\n"
+        "Greenhouse form. Fill exactly:\n"
+        "- First Name: Susmitha / Last Name: Chowdary / Preferred First Name: Susmitha\n"
+        "- Email: dsusmitha55@gmail.com / Phone + Phone Number: 9132073787\n"
+        "- Country: United States\n"
+        "- Resume: upload resumes/submit/Susmitha_machinify.docx\n"
+        "- LinkedIn Profile* (required): N/A\n"
+        "- Website: blank\n"
+        "- EEO optional if shown: Female / Hispanic No / Asian / not protected veteran\n"
+        "Enterprise reCAPTCHA present — if email security code / captcha blocks submit: "
+        "STOP needs-me (paste code; Gmail declined). Unexpected required field: STOP needs-me.\n"
+    ),
+}
+
+MUX = {
+    "key": "mux",
+    "company": "mux",
+    "role": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "ats": "ashby",
+    "ashby_org": "mux",
+    "ashby_id": "bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "resume_globs": [
+        "*/Susmitha_mux_Senior_Data_Engineer.docx",
+    ],
+    "kit": paths.APPLICATIONS / "ready" / "2026-11-14" / "mux_SUBMIT_KIT.md",
+    "needs_salary": False,
+    "prompt_extra": (
+        "Ashby form. Fill exactly:\n"
+        "- Name: Susmitha Chowdary\n"
+        "- Email: dsusmitha55@gmail.com\n"
+        "- Resume: upload resumes/submit/Susmitha_mux.docx\n"
+        "- LinkedIn: blank; if required N/A\n"
+        "- Why Mux fit: short honest DE/platform note from submit kit (no invented Mux experience)\n"
+        "- How did you hear about us?: Company website\n"
+        "- Eligible to work in the US?: Yes\n"
+        "- Sponsorship for employment visa?: No\n"
+        "- Spell the number '12': twelve\n"
+        "- EEO: Female / Asian (Not Hispanic or Latino) / I am not a protected veteran\n"
+        "If CAPTCHA/unexpected required field: STOP needs-me.\n"
+    ),
+}
+
+VELOSIO = {
+    "key": "velosio",
+    "company": "Velosio",
+    "role": "Data Engineer",
+    "url": "https://careers.velosio.com/jobs/3162",
+    "ats": "jsonld",
+    "jsonld_url": "https://careers.velosio.com/jobs/3162",
+    "resume_globs": [
+        "*/Susmitha_Velosio_Data_Engineer.docx",
+    ],
+    "kit": paths.APPLICATIONS / "needs-me" / "2026-11-12" / "Velosio_SUBMIT_KIT.md",
+    "needs_salary": False,
+    # apply_url redirects to careers-velosio.icims.com/.../login — Susmitha must sign in herself.
+    "hard_blockers": [
+        "Velosio iCIMS apply requires candidate login (careers-velosio.icims.com/jobs/3162/login) — STOP needs-me; never create accounts or use Indeed Easy Apply"
+    ],
+    "prompt_extra": (
+        "DO NOT auto-submit. iCIMS login required. Susmitha must sign in herself.\n"
+        "Never Indeed Easy Apply.\n"
     ),
 }
 
@@ -100,14 +158,70 @@ def _ashby_still_open(org: str, job_id: str) -> tuple[bool, str | None, str | No
         jid = (j.get("id") or "")
         if job_id in url or jid == job_id:
             posted = j.get("publishedAt") or j.get("updatedAt")
-            if not within_max_age(posted, max_age_days=4):
+            if not within_max_age(posted, max_age_days=10):
                 return False, posted, f"age fail-closed: publishedAt={posted}"
             return True, posted, None
     return False, None, "job id not found on Ashby board (possibly closed)"
 
 
+def _greenhouse_still_open(board: str, job_id: int | str) -> tuple[bool, str | None, str | None]:
+    """Return (open_and_fresh, first_published, error) for a Greenhouse job id."""
+    try:
+        detail = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{job_id}")
+    except Exception as e:
+        return False, None, str(e)
+    posted = detail.get("first_published") or detail.get("updated_at")
+    if not within_max_age(posted, max_age_days=10):
+        return False, posted, f"age fail-closed: first_published={posted}"
+    return True, posted, None
+
+
+def _jsonld_still_open(page_url: str) -> tuple[bool, str | None, str | None]:
+    """Fetch a careers page and require JobPosting JSON-LD datePosted ≤10d."""
+    import json
+    import re
+    import urllib.request
+
+    try:
+        req = urllib.request.Request(page_url, headers={"User-Agent": "SusmithaJobAgent/0.1"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            html = resp.read().decode("utf-8", "replace")
+    except Exception as e:
+        return False, None, str(e)
+    m = re.search(
+        r'<script[^>]*type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+        html,
+        re.I | re.S,
+    )
+    if not m:
+        return False, None, "no JSON-LD JobPosting on page"
+    try:
+        data = json.loads(m.group(1))
+    except Exception as e:
+        return False, None, f"JSON-LD parse failed: {e}"
+    if isinstance(data, list):
+        data = next((x for x in data if isinstance(x, dict) and x.get("@type") == "JobPosting"), {})
+    posted = data.get("datePosted")
+    if not within_max_age(posted, max_age_days=10):
+        return False, posted, f"age fail-closed: datePosted={posted}"
+    return True, posted, None
+
+
+def _proof_apply_day() -> str:
+    """Calendar day used for applications/applied/<day>/ when preparing overnight."""
+    from datetime import datetime, timedelta
+    from zoneinfo import ZoneInfo
+
+    now = datetime.now(ZoneInfo("America/Chicago"))
+    if check_apply_window().open:
+        return now.date().isoformat()
+    if now.hour >= 12:
+        return (now.date() + timedelta(days=1)).isoformat()
+    return now.date().isoformat()
+
+
 def _build_prompt(spec: dict, resume: Path, salary: str | None) -> str:
-    day = chicago_today().isoformat()
+    day = _proof_apply_day()
     safe = "".join(ch if ch.isalnum() or ch in "-_ " else "_" for ch in f"{spec['company']}_{spec['role']}")
     safe = safe.strip().replace(" ", "_")[:120]
     proof = f"applications/applied/{day}/{safe}"
@@ -143,6 +257,21 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
     if spec["needs_salary"] and not salary:
         blockers.append("Salary expectations number missing in Memory/FORM_ANSWERS")
 
+    for hb in spec.get("hard_blockers") or []:
+        blockers.append(hb)
+
+    # Live Greenhouse question preflight (catches multi-year no-sponsorship traps).
+    if (spec.get("ats") or "") == "greenhouse" and spec.get("gh_board") and spec.get("gh_id"):
+        try:
+            from .form_preflight import preflight_greenhouse
+
+            pf = preflight_greenhouse(spec["gh_board"], spec["gh_id"])
+            for b in pf.blockers:
+                if b not in blockers:
+                    blockers.append(b)
+        except Exception as e:
+            blockers.append(f"Greenhouse preflight error: {e}")
+
     resume = _newest_resume(spec["resume_globs"])
     if resume is None or not resume.exists():
         blockers.append(f"Missing tailored resume for {spec['company']}")
@@ -152,14 +281,27 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
     if not kit.exists():
         blockers.append(f"Missing submit kit: {kit}")
 
-    open_ok, posted, err = _ashby_still_open(spec["ashby_org"], spec["ashby_id"])
+    ats = spec.get("ats") or "ashby"
+    if ats == "ashby":
+        open_ok, posted, err = _ashby_still_open(spec["ashby_org"], spec["ashby_id"])
+    elif ats == "greenhouse":
+        open_ok, posted, err = _greenhouse_still_open(spec["gh_board"], spec["gh_id"])
+    elif ats == "jsonld":
+        open_ok, posted, err = _jsonld_still_open(spec.get("jsonld_url") or spec["url"])
+    else:
+        open_ok, posted, err = False, None, f"unknown ats={ats}"
     if err and not open_ok:
         blockers.append(f"{spec['company']} verification failed: {err}")
     elif not open_ok:
         blockers.append(f"{spec['company']} not open/fresh: {err or posted}")
 
+    # Keep the full computer-use prompt even when the only blocker is the CT window,
+    # so overnight / 07:00 prep handoffs are usable the moment the window opens.
+    window_only = bool(blockers) and all(
+        ("Outside window" in b) or ("08:00" in b) for b in blockers
+    )
     prompt = ""
-    if not blockers:
+    if (not blockers or window_only) and resume != Path("(missing)"):
         prompt = _build_prompt(spec, resume, salary)
 
     return ReadySubmit(
@@ -173,11 +315,18 @@ def evaluate_ready_submit(spec: dict) -> ReadySubmit:
         ok=not blockers,
         blockers=blockers,
         computer_use_prompt=prompt,
+        ats=str(spec.get("ats") or ats or "unknown"),
     )
 
 
 def evaluate_all_ready_submits() -> list[ReadySubmit]:
-    return [evaluate_ready_submit(CLERA), evaluate_ready_submit(BAYESIAN)]
+    # 2026-11-14 morning queue. Already-applied (BetterHelp/Clera/Bayesian/Life360/Curve) removed.
+    # Velosio/Natera/lumin-digital: needs-me — not auto-queued.
+    return [
+        evaluate_ready_submit(MONGODB),
+        evaluate_ready_submit(MUX),
+        evaluate_ready_submit(MACHINIFY),
+    ]
 
 
 def packet_ready_except_window(item: ReadySubmit) -> bool:
@@ -210,7 +359,8 @@ def write_ready_submits_report(day: str | None = None) -> Path:
             "## Blockers" if item.blockers else "## Blockers",
             *([f"- {b}" for b in item.blockers] or ["- (none)"]),
             "",
-            "### Computer-use prompt" if item.ok else "### Computer-use prompt",
+            "### Computer-use prompt"
+            + (" (ready when window opens)" if (not item.ok and item.computer_use_prompt) else ""),
             "```",
             item.computer_use_prompt or "(blocked)",
             "```",

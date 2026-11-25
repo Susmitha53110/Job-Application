@@ -1,0 +1,3 @@
+success=True
+confirmation=Thanks for applying to Instacart
+url=https://job-boards.greenhouse.io/embed/job_app?for=instacart&token=8372846

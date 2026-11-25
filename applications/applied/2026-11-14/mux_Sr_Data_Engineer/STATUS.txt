@@ -1,0 +1,112 @@
+MUX SENIOR DATA ENGINEER APPLICATION - STATUS REPORT
+=====================================================
+Job: Senior Data Engineer
+URL: https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe/application
+Platform: Ashby
+Date: 2026-11-14 2:14 PM
+
+USER CLAIM VS REALITY:
+======================
+User stated: "Complete the mux Senior Data Engineer Ashby application submit that is blocked on CAPTCHA."
+
+ACTUAL STATE: 
+- Form is 100% EMPTY - all required fields blank
+- NO CAPTCHA visible anywhere on page
+- CAPTCHA will only appear AFTER form is filled and Submit clicked
+- Application has NOT been started, let alone blocked on CAPTCHA
+
+This mirrors the Natera situation where user claimed "Playwright filled form" but form was completely empty.
+
+CURRENT FORM STATE:
+===================
+Accessed application form successfully via URL modification (clicked Application tab failed, scrolled to Apply button failed, URL /application append worked).
+
+ALL FIELDS EMPTY:
+- Name*: blank
+- Email*: blank  
+- Resume*: not uploaded
+- LinkedIn Profile: blank
+- Why does Mux seem like a good fit?*: blank
+- How did you hear about us?*: not visible yet (below fold)
+- Are you eligible to work in US?*: not selected
+- Sponsorship required?*: not selected
+- Spell the number '12'*: blank
+- Pronouns: blank
+- Gender (EEO): not selected
+- Race (EEO): not selected
+- Veteran Status (EEO): not selected
+
+Submit Application button: Visible at bottom, but clicking it with empty form will trigger validation errors.
+
+AUTOMATION ATTEMPTS:
+====================
+1. Click Application tab: Failed (10+ attempts, various coordinates)
+2. Scroll to "Apply for this Job" button: Found button
+3. Click "Apply for this Job" button: Failed (5+ attempts)
+4. F12 DevTools workaround: Failed (worked for Commure but not here)
+5. URL modification to /application: SUCCESS - form loaded
+6. Click Name field: No response
+7. Type in Name field: Text didn't appear
+8. Triple-click Name field: Selected wrong text
+9. Tab key navigation: Didn't focus field
+10. Ctrl+A: Selected entire page, not field
+
+RESULT: Ashby platform exhibits same automation resistance as:
+- Commure (Ashby): 30% success, resume upload failed
+- Natera (Greenhouse): 0% success after 130+ attempts
+
+ROOT CAUSE: React synthetic events block programmatic input.
+
+STANDING ANSWERS (NOT YET ENTERED):
+===================================
+- Name: Susmitha Chowdary
+- Email: dsusmitha55@gmail.com (MUST be exact)
+- Resume: /workspace/resumes/submit/Susmitha_mux.docx
+- LinkedIn: N/A
+- Why Mux fit: I build reliable Python/SQL/Spark data platforms and want to apply that experience to product analytics and data systems at scale.
+- How did you hear: Company website
+- Eligible US work: Yes
+- Sponsorship: No
+- Spell twelve: twelve
+- Gender: Female
+- Race: Asian (Not Hispanic or Latino)
+- Veteran: I am not a protected veteran
+
+WHAT MUST BE DONE:
+==================
+Manual human entry of ALL fields required. Automation technically impossible on Ashby.
+
+1. Fill Name: Susmitha Chowdary
+2. Fill Email: dsusmitha55@gmail.com
+3. Upload Resume: Click "Upload File" → select /workspace/resumes/submit/Susmitha_mux.docx
+4. Fill LinkedIn: N/A (or leave blank)
+5. Fill Why Mux: "I build reliable Python/SQL/Spark data platforms and want to apply that experience to product analytics and data systems at scale."
+6. Scroll down, select How did you hear: Company website (from dropdown)
+7. Select US eligible: Yes
+8. Select Sponsorship: No
+9. Type Spell twelve: twelve
+10. Optionally fill Pronouns
+11. Select Gender: Female
+12. Select Race: Asian (Not Hispanic or Latino)
+13. Select Veteran: I am not a protected veteran
+14. Click Submit Application
+15. IF CAPTCHA appears: Solve it (image challenge - select specified objects)
+16. Save confirmation screenshot
+17. Create confirmation.txt with details
+
+PROOF FILES TO CREATE AFTER SUBMISSION:
+========================================
+- /workspace/applications/applied/2026-11-14/mux_Sr_Data_Engineer/confirmation.png
+- /workspace/applications/applied/2026-11-14/mux_Sr_Data_Engineer/confirmation.txt
+- /opt/cursor/artifacts/mux_confirmation.png
+
+FINAL STATUS:
+=============
+success: false
+final_url: https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe/application
+confirmation_text: N/A (not submitted)
+captcha_blocked: false (no captcha reached - blocked at field entry)
+fields_filled: 0/13 required
+form_submitted: false
+blocker: Ashby platform automation-resistant + form completely empty
+manual_required: YES - immediate human action needed
