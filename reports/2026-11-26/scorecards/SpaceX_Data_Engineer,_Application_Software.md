@@ -6,9 +6,9 @@
 
 | Stage | Fit /10 | Notes |
 |-------|---------|-------|
-| (a) Original | 8.5 | raw 23.0/27.0 |
-| (b) Reorder-only | 8.5 | apply if ≥ 8.5 (85%) |
-| (c) + hedged additions | 9.3 | do not submit without approval |
+| (a) Original | 2.6 | raw 7.7142857142857135/30.0 |
+| (b) Reorder-only | 2.6 | apply if ≥ 8.5 (85%) |
+| (c) + hedged additions | 2.6 | do not submit without approval |
 
 ## Top 5 missing keywords (vs original)
 - Flink

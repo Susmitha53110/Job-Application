@@ -15,7 +15,7 @@
 - Remove if I cannot back it up in an interview:
   - verify before applying: "exposure to Apache Flink"
 - Timeline flags: Citi Jan 2020–May 2023; education Jan 2024–Dec 2025; Optum May 2025–Present; gap ~May 2023–Jan 2024
-- Honest tailored score (b): 8.5/10 (apply threshold ≥ 8.5 / 85%)
+- Honest tailored score (b): 2.6/10 (apply threshold ≥ 8.5 / 85%)
 - Version to submit: **(a) reorder-only** unless (b) approved
 - Additions flagged verify-before-applying:
   - verify before applying: "exposure to Apache Flink"
