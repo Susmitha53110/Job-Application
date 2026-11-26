@@ -1,0 +1,11 @@
+success=False\ncaptcha=True\nurl=https://job-boards.greenhouse.io/air/jobs/4504874009\nbody=New
+Data Engineer - Analytics
+Pittsburgh, Pennsylvania, United States
+Apply
+Company Description
+Air is the leader in Enterprise Readiness. Our mission is to establish readiness as a real-time condition that is continuously achieved. Today, a dangerous Readiness Gap exists between what the front line needs and what is delivered. Our AI-native platform, Air Enterprise Readiness, aligns development, production, delivery, and sustainment into one coordinated execution system for government agencies and industrial suppliers. By revealing true capacity, exposing real constraints, coordinating resources, and executing at the speed of operational demands, the front line gets what it needs to succeed.
+Job Description
+
+We are seeking an exceptional and experienced Data Engineer team member, a role for someone who shares our passion and obsession with shipping insightful and accurate data. You will be a core member of our team dedicated to helping drive our growth by building and maintaining data pipelines that deliver key business insights. The ideal candidate is an analytically minded engineer with large dataset experience. You must also possess strong interpersonal skills to work cross-functionally across internal teams and with Air platform Subject Matter Experts (SMEs).
+
+You will support the proliferation of our enterprise data by sourcing data from business systems and our core application, and transforming that into a scalable data model delivering key insights. This role involve\n

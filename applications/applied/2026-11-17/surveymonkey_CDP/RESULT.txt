@@ -1,0 +1,67 @@
+success=True
+url=https://jobs.ashbyhq.com/surveymonkey/f9f04d0a-969a-4cc3-86b3-760d4e45c807/application
+body=Senior Data Engineer
+Location
+
+US - Remote
+
+Employment Type
+
+Full time
+
+Location Type
+
+Remote
+
+Department
+
+Data and Analytics
+
+Compensation
+$194,834 – $259,200
+Overview
+Application
+Autofill from resume
+
+Upload your resume here to autofill key application fields.
+
+Upload file
+Name
+Preferred Name
+Email
+Resume
+Upload File
+
+or drag and drop here
+
+SurveyMonkey is registered to hire in the states listed below.  Do you reside in one of these locations?
+
+California, Colorado, Florida, Georgia, Illinois, Kansas, Maine, Massachusetts, Maryland, Michigan, Minnesota, Mississippi, Montana, South Carolina, North Carolina, New Jersey, New York, Ohio, Oregon, Pennsylvania, Tennessee, Texas, Utah, Virginia, Washington, Wisconsin.
+
+Yes
+No but I am willing to relocate
+No and I am not willing to relocate
+In which city are you located?
+Are you legally authorized to work in the United States for our Company?
+Yes
+No
+Do you now, or will you in the future, require sponsorship for employment visa status (e.g., H-1B visa status, etc.) to work legally for our Company in the United States?
+Yes
+No
+How did you first hear about SurveyMonkey?
+Most recent company
+Most recent job title
+LinkedIn Profile URL
+Website URL
+Before submitting your application please review the below:
+
+For more information on how SurveyMonkey (including its subsidiary and affiliated companies) processes your personal data as a job candidate or applicant, please see our Global Applicant and Candidate Data Privacy Notice. Please review this and acknowledge your acceptance of its content by selecting 'Yes' below. Should you have any queries in relation to this, please contact hr-privacy@surveymonkey.com. Do not send your resume/CV/application to this email address.
+
+Yes
+No
+
+U.S. EQUAL EMPLOYMENT OPPORTUNITY INFORMATION   (Completion is voluntary and will not subject you to adverse treatment)
+
+SurveyMonkey provides equal employment opportunities to applicants and employees without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, disability, or any other classification protected by applicable law.
+
+We invite all applicants to voluntarily self-identify their race, ethnicity, and gender. Submission of the information on this form is strictly voluntary and refusal to provide it will not subject you to any adverse treatment. Information obtained will be retained in a confidential file and separate from personnel records. This information may only be used i

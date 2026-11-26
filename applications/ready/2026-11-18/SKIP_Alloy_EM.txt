@@ -1,0 +1,3 @@
+skipped=seniority_mismatch
+role=Alloy Engineering Manager, Data Platform
+reason=Manager track — Susmitha targets IC DE/AE/platform roles, not engineering manager.

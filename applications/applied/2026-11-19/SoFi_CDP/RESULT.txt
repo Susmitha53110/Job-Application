@@ -1,0 +1,9 @@
+success=False
+url=https://job-boards.greenhouse.io/embed/job_app?for=sofi&token=8207529003
+error=Form validation blocking submission - multiple required fields not accepting CDP automation
+blocking_issues=Resume upload not registering via CDP set_input_files(), Dropdown select_option() calls not persisting values, Education degree dropdown empty, Work authorization dropdown empty, Multiple Yes/No question dropdowns empty
+fields_not_filling=Resume/CV (file upload), Education degree, Work authorization, Immigration sponsorship, Previous SoFi employment, Current SoFi employee, SMS acknowledgment, Marketing comms, Deloitte employment, FINRA licenses, Relocation willingness, Home Address Country
+attempted_methods=CDP set_input_files for resume, CDP select_option for dropdowns, CDP click for checkboxes, File chooser API for resume
+reason=Greenhouse forms with complex validation reject CDP automation - file uploads and dropdown selections do not trigger proper state updates
+recommendation=Requires manual completion in browser OR alternative automation (Selenium with real ChromeDriver) OR user to manually fill and then agent can solve CAPTCHA+submit
+note=Multiple attempts made - resume upload appears successful in CDP but validation shows "Resume/CV is required", dropdowns appear to accept select_option() but validation shows empty values

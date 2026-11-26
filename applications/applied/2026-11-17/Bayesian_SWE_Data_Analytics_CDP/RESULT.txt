@@ -1,0 +1,82 @@
+success=False
+url=https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655/application
+body=BAYESIAN HEALTH, INC.
+
+Software Engineer, Data & Analytics Platform
+Location
+
+Remote - US Only
+
+Employment Type
+
+Full time
+
+Location Type
+
+Remote
+
+Department
+
+Engineering
+
+Overview
+Application
+We couldn't submit your application
+
+Your application submission was flagged as possible spam. If you believe this was a mistake, please submit your application again.
+
+Try these steps
+
+Legitimate applications are occasionally flagged by mistake. Try these in order:
+
+Turn off your VPN or proxy
+Use your regular network connection instead.
+Pause browser extensions
+Temporarily pause ad blockers and privacy tools.
+Try another browser or device
+Make sure the browser is up to date.
+Switch networks
+Mobile data often works better than public Wi-Fi.
+Still blocked?
+Wait a few minutes and retry. If that doesn’t work, enable JavaScript if it’s disabled, or clear this site’s cookies and cache in your browser settings. As a last resort, reload the page and submit again. You may need to fill in the form again.
+Autofill from resume
+
+Upload your resume here to autofill key application fields.
+
+Upload file
+Autofill completed!
+
+Please review the information we filled in for you below.
+
+Name
+Email
+Resume
+
+Susmitha_current.docx
+
+Replace
+
+or drag and drop here
+
+Are you legally authorized to work in the United States?
+
+We are unfortunately not set up for visa sponsorship at this time.
+
+Yes
+No
+Do you now or will you in the future require employer sponsorship?
+
+We are unfortunately not set up for visa sponsorship at this time.
+
+Yes
+No
+Why are you a good fit for this role? 
+LinkedIn Profile
+How many years of experience have you worked with BI tools (Tableau, Quicksight, Looker, etc.)?
+How many years of experience do you have in developing data or analytics platform in production?
+Could you share your 2 - 3 most proficient programming languages?
+Location
+Submit Application
+Powered by 
+
+Privacy PolicySecurityVulnerability Disclosure

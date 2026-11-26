@@ -1,0 +1,2 @@
+email=dsusmitha55@gmail.com
+Use existing Workday/Google sign-in — agent does not create or store passwords.

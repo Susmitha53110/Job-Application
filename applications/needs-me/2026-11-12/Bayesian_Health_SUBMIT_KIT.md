@@ -14,12 +14,12 @@
 | Field | Answer |
 |-------|--------|
 | Name* | Susmitha Chowdary |
-| Email* | Susmithachowdary67@gmail.com |
+| Email* | dsusmitha55@gmail.com |
 | Resume* | tailored `.docx` (a) |
 | Legally authorized to work in the US?* | **Yes** (F1-OPT) |
 | Require employer sponsorship now/future?* | **No** (Susmitha-confirmed). Note on form: company not set up for visa sponsorship |
 | Why are you a good fit?* | See draft below |
-| LinkedIn | https://www.linkedin.com/in/susmitha-dodla-a05ab92b8 |
+| LinkedIn | leave blank (optional); if forced → N/A |
 | Years with BI tools (Tableau/Quicksight/Looker) | 0 (honest; do not invent) |
 | Years developing data/analytics platform in production | 5 |
 | 2–3 most proficient languages | Python, SQL, PySpark |

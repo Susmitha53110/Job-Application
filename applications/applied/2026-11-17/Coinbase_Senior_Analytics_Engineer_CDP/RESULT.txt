@@ -1,0 +1,28 @@
+success=False
+url=https://www.coinbase.com/careers/positions/8394402?gh_jid=8394402
+body=Skip to content
+Skip to site index
+Earn up to $2,000 when you buy $50 in crypto
+Crypto
+Individuals
+Businesses
+Institutions
+Developers
+Agents
+Company
+󰒰
+Sign in
+Sign up
+󰂢
+Back to jobs
+Senior Analytics Engineer
+Remote - USA
+Job ID#: P79141
+Apply now
+󰝲
+
+Ready to do the most impactful work of your career? At Coinbase, we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it’s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for "good enough," you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called “surges.” Learn more about working at Coinbase.
+
+The Compliance Data team owns the foundational data layer that every regulatory obligation at Coinbase depends on. We are a centralized team within Coinbase's Platform organization, and we build the trusted, certified data that the rest of the company relies on to answer regulators with confidence.
+
+At the center of our work is the Compliance Data Mart (CDM), Coinbase's canonical source of truth for user, transaction, and compliance data. Our focus is the data foundations beneath every regulatory report, making sure they are accurate, consistent, well-modeled, and trustworthy. When a number is wrong in a regulatory filing, the root cause usuall
