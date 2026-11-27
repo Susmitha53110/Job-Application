@@ -1,4 +1,4 @@
-status=needs-me
-url=https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Data-Engineer_R-430583/apply/applyManually
+status=applied
+thank=True
+url=https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/jobTasks/completed/application
 email=dsusmitha55@gmail.com
-thank=False

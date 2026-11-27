@@ -1,0 +1,78 @@
+Humana Senior Data Engineer - Workday Application Status
+=========================================================
+
+Date: Friday, Nov 27, 2026 at 2:31 PM UTC
+Application URL: https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Data-Engineer_R-430583/apply/applyManually
+
+STATUS: needs-me
+
+BLOCKER:
+--------
+Workday application requires CLEAN browser profile/incognito mode to avoid
+contamination from shared Chrome profile that contains other candidates' data.
+
+The CDP automation is connected to a shared Chrome profile that shows:
+- Multiple other candidates' applications (F-1 OPT status, etc.)
+- Cannot safely launch incognito/clean profile via CDP
+- Risk of submitting mixed candidate data
+
+READY FOR MANUAL COMPLETION:
+-----------------------------
+
+✓ Account Credentials Available:
+  Email: dsusmitha55@gmail.com
+  Password: [REDACTED — see local ACCOUNT_NOTE.txt]
+  (If sign-in fails, use "Forgot Password" - password was just created)
+
+✓ Resume File Ready:
+  /workspace/reports/2026-11-27/for-susmitha/Susmitha_Humana_Senior_Data_Engineer.docx
+
+✓ All Answers Prepared:
+
+  PERSONAL INFORMATION:
+  - First name: Susmitha
+  - Last name: Chowdary
+  - Email: dsusmitha55@gmail.com
+  - Phone: 9132073787
+  - Address: 1601 Scottsdale Ln, Austin, Texas 78754
+  - How did you hear: LinkedIn
+
+  APPLICATION QUESTIONS:
+  - Worked for Humana before: No
+  - Legally authorized to work in US: Yes
+  - Will require immigration sponsorship: NO (CRITICAL: Must be NO)
+  - Reside in location/commutable: Yes
+  - Salary expectations: 120000
+  - Reason for leaving: (leave blank or brief note)
+  - Federal/Military/DHA/Political: No
+  - State/local government past 5 years: No
+
+  VOLUNTARY DISCLOSURES (EEO):
+  - Gender: Female
+  - Race/Ethnicity: Asian
+  - Veteran status: Not a protected veteran
+  - Disability: No disability (or decline if required)
+
+MANUAL COMPLETION STEPS:
+-------------------------
+1. Open Chrome in INCOGNITO/Private window
+2. Navigate to application URL (see above)
+3. Sign in with dsusmitha55@gmail.com / [REDACTED]
+4. Upload resume from path above
+5. Fill all fields with answers listed above
+6. VERIFY before submit: 
+   - Shows Susmitha Chowdary / dsusmitha55@gmail.com
+   - Sponsorship = NO
+7. Submit and save confirmation screenshot
+
+SAFETY VERIFICATION:
+--------------------
+Before claiming success:
+- Confirmation page MUST show Susmitha Chowdary
+- Confirmation page MUST show dsusmitha55@gmail.com
+- If it shows any other candidate info, DO NOT submit
+
+RECOMMENDATION:
+---------------
+Complete this application manually in a clean browser session to ensure
+data integrity and avoid any risk of submitting incorrect candidate information.

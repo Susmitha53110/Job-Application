@@ -1570,3 +1570,4 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-27 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/acc9ce9f-1a6f-46e1-b380-bcbcd250ed74 | dry-run
 2026-11-27 | bluesight | Data Engineer | https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9 | dry-run
 2026-11-27 | bluesight | Senior Data Engineer | https://jobs.lever.co/bluesight/eb53be34-14ee-4bec-9edb-bcd65136c989 | dry-run
+2026-11-27 | Humana | Senior Data Engineer | https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Data-Engineer_R-430583 | applied
