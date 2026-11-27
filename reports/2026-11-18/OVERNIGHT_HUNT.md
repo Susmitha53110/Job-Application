@@ -1,0 +1,89 @@
+# Overnight hunt — 2026-11-17 12:07 CST
+
+- Window open: **False**
+- Salary set: **120000**
+- Curve gate ok: **False**
+- Curve blockers: Outside window (now 2026-11-17 12:07 CST). Applies only 08:00–12:00 America/Chicago., Curve job verification failed: HTTP Error 404: Not Found
+- Morning packet day: **2026-11-18**
+- Ready submits report: `/workspace/reports/2026-11-18/READY_SUBMITS.md`
+- Submit handoff: `/workspace/reports/2026-11-18/SUBMIT_HANDOFF.json`
+- MongoDB ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-17 12:07 CST). Applies only 08:00–12:00 America/Chicago.', 'MongoDB verification failed: age fail-closed: first_published=2026-11-05T14:17:34-05:00']
+- mux ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-17 12:07 CST). Applies only 08:00–12:00 America/Chicago.', 'mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00']
+- Machinify ready (ignoring window check in overnight): **False** blockers=['Outside window (now 2026-11-17 12:07 CST). Applies only 08:00–12:00 America/Chicago.', 'Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00']
+- Watchlist hits: **4**
+- Hunt hits (≤10d): **63**
+- Near-miss (age watch only): **0**
+- Applied URLs excluded: **30**
+- New ≥7 packets (non-Curve, not applied): **19**
+
+## Eligible ≥7
+- Block / Sales Compensation Systems & Data Engineer — [8.2, 8.2, 10.0] — http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008
+- Coinbase / Senior Analytics Engineer — [10.0, 10.0, 10.0] — https://www.coinbase.com/careers/positions/8394402?gh_jid=8394402
+- Anthropic / Software Engineer, Datacenter Server Lifecycle — [7.8, 7.8, 7.8] — https://job-boards.greenhouse.io/anthropic/jobs/5484171008
+- Anduril Industries / Data Analytics Engineer - Hardware Test Operations — [9.1, 9.1, 9.1] — https://boards.greenhouse.io/andurilindustries/jobs/5296601007?gh_jid=5296601007
+- Anduril Industries / Production Master Data Engineer — [8.8, 8.8, 10.0] — https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007
+- SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002
+- Air / Data Engineer - Analytics  — [9.2, 9.2, 9.2] — https://job-boards.greenhouse.io/air/jobs/4504874009
+- jobgether / Data Engineer — [8.0, 8.0, 9.2] — https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93
+- jobgether / Data Engineering Solution Lead — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863
+- jobgether / Data Integration Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/25f8ac01-c5a3-495d-b94c-848bcb7f2197
+- jobgether / Lead Analytics Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/6fde602d-bc6f-47fa-a759-a8d3e208b560
+- jobgether / Lead Data Engineer, Databricks — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1
+- jobgether / Senior Data Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/37abc1bf-fe10-47c5-ae2c-bacf0036ccd6
+- jobgether / Senior Data Engineer — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/f15f154d-6558-4297-b076-d7de2bf08d90
+- jobgether / Senior Data Engineer (Databricks) - Contractor — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/29670e09-39d6-443c-b949-d84349cf3a9d
+- jobgether / Senior Data Engineer, Ads Data (AI Native) — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/5632944f-f006-4e6c-ab9f-836169b07e0b
+- jobgether / Senior Data Engineer, Data Transformation Platform — [8.3, 8.3, 10.0] — https://jobs.lever.co/jobgether/f77bd289-681f-4a04-b93b-9c889bc46c2e
+- jobgether / Software Engineer - Database — [10.0, 10.0, 10.0] — https://jobs.lever.co/jobgether/4adde91c-124f-4b1a-ad24-a7f1d5c0bfad
+- Velosio / Data Engineer — [9.4, 9.4, 9.4] — https://careers.velosio.com/jobs/3162
+
+## All scored non-Curve
+- Gusto, Inc. / Software Engineer,  Financial Data & Payments — [5.0, 5.0, 5.0] — skip_low_score
+- Okta / Senior Software Engineer, Data Platform — [5.8, 5.8, 7.8] — skip_low_score
+- Natera / Sr. Forward Deployed Data Engineer — [] — skip_already_applied
+- BetterHelp / Senior Analytics Engineer — [] — skip_already_applied
+- Life360 / Senior Data Engineer, Ads Data (AI Native) — [] — skip_already_applied
+- Block / Sales Compensation Systems & Data Engineer — [8.2, 8.2, 10.0] — candidate
+- Block / Senior Software Engineer - Data Enablement — [6.8, 6.8, 8.4] — skip_low_score
+- Coinbase / Senior Analytics Engineer — [10.0, 10.0, 10.0] — candidate
+- Anthropic / Software Engineer, Datacenter Server Lifecycle — [7.8, 7.8, 7.8] — candidate
+- Anduril Industries / Data Analytics Engineer - Hardware Test Operations — [9.1, 9.1, 9.1] — candidate
+- Anduril Industries / Production Master Data Engineer — [8.8, 8.8, 10.0] — candidate
+- The Knot Worldwide / Lead Analytics Engineer — [] — skip_already_applied
+- Verkada / Senior Software Engineer, Business Systems - Data Trust — [] — skip_already_applied
+- SpaceX / Data Engineer (Starship) — [7.7, 7.7, 8.7] — candidate
+- Rocket Lab Corporation / Senior Software Engineer I - Data Engineering — [] — skip_already_applied
+- Air / Data Engineer - Analytics  — [9.2, 9.2, 9.2] — candidate
+- clera / Senior Data Engineer — [] — skip_already_applied
+- clera / Senior Data Integration Engineer — [] — skip_already_applied
+- clera / Founding Data Engineer — [] — skip_already_applied
+- commure / Senior Software Engineer, Data Platform — [] — skip_already_applied
+- bayesianhealth / Software Engineer, Data & Analytics Platform — [] — skip_already_applied
+- cursor / Sr. Software Engineer, Pretraining Data — [4.9, 4.9, 4.9] — skip_low_score
+- cursor / Software Engineer, Pretraining Data — [6.1, 6.1, 6.1] — skip_low_score
+- amplitude / Senior Data Engineer, Marketing & GTM — [] — skip_already_applied
+- spoton / Senior Analytics Platform Engineer — [] — skip_already_applied
+- surveymonkey / Senior Data Engineer — [] — skip_already_applied
+- Solvd / Senior Data Engineer — Retrieval & RAG Platform  — [] — skip_already_applied
+- Solvd / Senior Data Engineer — Knowledge Ingestion — [] — skip_already_applied
+- merge / Analytics Engineer — [] — skip_already_applied
+- jobgether / Data Engineer — [8.0, 8.0, 9.2] — candidate
+- jobgether / Data Engineering Solution Lead — [10.0, 10.0, 10.0] — candidate
+- jobgether / Data Integration Engineer — [10.0, 10.0, 10.0] — candidate
+- jobgether / Integration and Data Software Engineer — [1.5, 2.5, 2.5] — skip_low_score
+- jobgether / Lead Analytics Engineer — [10.0, 10.0, 10.0] — candidate
+- jobgether / Lead Data Engineer, Databricks — [10.0, 10.0, 10.0] — candidate
+- jobgether / Senior Analyst, Hub Data & Analytics — [2.5, 3.0, 3.0] — skip_low_score
+- jobgether / Senior Data Engineer — [10.0, 10.0, 10.0] — candidate
+- jobgether / Senior Data Engineer — [10.0, 10.0, 10.0] — candidate
+- jobgether / Senior Data Engineer (Databricks) - Contractor — [10.0, 10.0, 10.0] — candidate
+- jobgether / Senior Data Engineer, Ads Data (AI Native) — [10.0, 10.0, 10.0] — candidate
+- jobgether / Senior Data Engineer, Data Transformation Platform — [8.3, 8.3, 10.0] — candidate
+- jobgether / Senior Software Engineer, Data Solutions — [4.3, 4.3, 10.0] — skip_low_score
+- jobgether / Senior Strategist, Constituent Data Integrations — [1.5, 4.0, 4.0] — skip_low_score
+- jobgether / Software Engineer - Database — [10.0, 10.0, 10.0] — candidate
+- Velosio / Data Engineer — [9.4, 9.4, 9.4] — candidate
+- Lemon.io / Senior Data Engineer — [2.7, 2.7, 2.7] — skip_low_score
+
+## Near-miss watch (do not apply — age edge)
+- (none)

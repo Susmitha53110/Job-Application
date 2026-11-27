@@ -1,0 +1,33 @@
+First Name*
+Last Name*
+Email*
+Country*
+Phone*
+Location (City)*
+Attach
+Enter manually
+Attach
+Enter manually
+School
+Degree
+Discipline
+LinkedIn Profile
+Additional profiles (e.g. GitHub, Stack Overflow)
+Tell us a bit about why you're applying to work here. What excited you about this role?
+Block's purpose is economic empowerment. Briefly tell us about what that purpose means to you.
+Will you now or in the future require sponsorship for work authorization? (This information will not be used in assessing your qualifications for any position.)*
+Are you authorized to work lawfully in the location posted for this position?*
+Have you ever been employed full-time at Block or its subsidiaries?*
+If you answered "Yes" to the question above, please enter your dates of employment. Note that your performance history may be reviewed as part of the application process.
+Have you ever provided any contract work for Block, Inc. or any of its subsidiaries or affiliates (whether in the U.S. or internationally)?*
+If you answered "Yes" to the question above, please enter your dates of contract engagement or work through agency.
+Accept
+I certify that all of the information I have provided is correct and complete and realize that falsification or misrepresentation, including omission, on this or any other personnel record, or in the hiring process, may be grounds for refusal of employment, or if hired, may lead to disciplinary action, up to and including termination. By signing this Electronic Signature Acknowledgment Online Form, I agree that my electronic signature is the legally binding equivalent to my handwritten signature. Whenever I execute an electronic signature, it has the same validity and meaning as my handwritten signature. I will not, at any time in the future, repudiate the meaning of my electronic signature or claim that my electronic signature is not legally binding. Please sign by typing your Full Legal First, Middle Initial, and Last Name.*
+What is your Legal First Name?*
+What is your Legal Last Name?*
+How we interview: Our hiring process prioritizes authenticity and fairness, and we ask all candidates to adhere to a few key expectations. Acceptable use of AI may differ depending on the role, so we encourage you to confirm with your recruiter what is or isn’t permitted during the process. Recording any part of the interview without consent is prohibited. However, if you need recording as an accommodation, please notify your recruiter before your scheduled interview. During virtual interviews, keep your video on to foster meaningful engagement; if you require accommodations, please inform our team in advance. Lastly, maintain confidentiality by refraining from sharing any proprietary or trade secret information from previous employers or other sources throughout the interview process.*
+With your permission, we may use AI transcription software to transcribe and summarize your interview to help us capture accurate notes. Participation is entirely voluntary, and your decision will not affect the outcome of your application. You can withdraw consent at any time. Do you consent to us using AI to transcribe and summarize your interview?*
+Gender*
+How would you describe your racial/ethnic background? (mark all that apply)*
+Are you a veteran or active member of the United States Armed Forces? *
+By checking this box, I consent to Block collecting, storing, and processing my responses to the demographic data surveys above.*

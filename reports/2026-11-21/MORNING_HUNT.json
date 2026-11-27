@@ -1,0 +1,492 @@
+[
+  {
+    "company": "Toast",
+    "title": "Data Engineer",
+    "url": "https://careers.toasttab.com/jobs?gh_jid=8359240",
+    "apply_url": "https://careers.toasttab.com/jobs?gh_jid=8359240",
+    "source": "greenhouse",
+    "posted_at": "2026-11-17T15:59:15-05:00",
+    "location": "Remote, US ",
+    "desc_len": 6876
+  },
+  {
+    "company": "Chorus Innovations",
+    "title": "Senior Data Engineer",
+    "url": "https://job-boards.greenhouse.io/chorusinnovations/jobs/5302247007",
+    "apply_url": "https://job-boards.greenhouse.io/chorusinnovations/jobs/5302247007",
+    "source": "greenhouse",
+    "posted_at": "2026-11-19T13:28:00-05:00",
+    "location": "Long Beach, CA (Hybrid)",
+    "desc_len": 6906
+  },
+  {
+    "company": "Block",
+    "title": "Sales Compensation Systems & Data Engineer",
+    "url": "http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008",
+    "apply_url": "http://block.xyz/careers/jobs/5485151008?gh_jid=5485151008",
+    "source": "greenhouse",
+    "posted_at": "2026-11-17T10:46:55-05:00",
+    "location": "Bay Area, CA, United States of America",
+    "desc_len": 6953
+  },
+  {
+    "company": "Anduril Industries",
+    "title": "Product Data Engineer",
+    "url": "https://boards.greenhouse.io/andurilindustries/jobs/5295058007?gh_jid=5295058007",
+    "apply_url": "https://boards.greenhouse.io/andurilindustries/jobs/5295058007?gh_jid=5295058007",
+    "source": "greenhouse",
+    "posted_at": "2026-11-20T18:47:49-05:00",
+    "location": "Ashville, Ohio, United States",
+    "desc_len": 9051
+  },
+  {
+    "company": "SpaceX",
+    "title": "Data Engineer (Starship)",
+    "url": "https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002",
+    "apply_url": "https://boards.greenhouse.io/spacex/jobs/8938027002?gh_jid=8938027002",
+    "source": "greenhouse",
+    "posted_at": "2026-11-11T15:55:56-05:00",
+    "location": "Starbase, TX",
+    "desc_len": 4449
+  },
+  {
+    "company": "Airbnb",
+    "title": "Data Engineer Tech Foundations",
+    "url": "https://careers.airbnb.com/positions/8396777?gh_jid=8396777",
+    "apply_url": "https://careers.airbnb.com/positions/8396777?gh_jid=8396777",
+    "source": "greenhouse",
+    "posted_at": "2026-11-17T14:22:59-05:00",
+    "location": "US - Remote",
+    "desc_len": 9271
+  },
+  {
+    "company": "Air",
+    "title": "Data Engineer - Analytics ",
+    "url": "https://job-boards.greenhouse.io/air/jobs/4504874009",
+    "apply_url": "https://job-boards.greenhouse.io/air/jobs/4504874009",
+    "source": "greenhouse",
+    "posted_at": "2026-11-12T10:35:27-05:00",
+    "location": "Pittsburgh, Pennsylvania, United States",
+    "desc_len": 4913
+  },
+  {
+    "company": "jobgether",
+    "title": "Data Engineer",
+    "url": "https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93",
+    "apply_url": "https://jobs.lever.co/jobgether/dac12f33-a21f-414a-940c-581febb53b93/apply",
+    "source": "lever",
+    "posted_at": "2026-11-16T11:39:35.979000+00:00",
+    "location": "US",
+    "desc_len": 1246
+  },
+  {
+    "company": "jobgether",
+    "title": "Data Engineering Solution Lead",
+    "url": "https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863",
+    "apply_url": "https://jobs.lever.co/jobgether/fda44492-927d-48d8-8cde-721bc2791863/apply",
+    "source": "lever",
+    "posted_at": "2026-11-16T06:16:23.210000+00:00",
+    "location": "US",
+    "desc_len": 1009
+  },
+  {
+    "company": "jobgether",
+    "title": "Data Management Specialist - Data Engineer",
+    "url": "https://jobs.lever.co/jobgether/56f9c3db-261f-4a65-b899-08010f62ac3e",
+    "apply_url": "https://jobs.lever.co/jobgether/56f9c3db-261f-4a65-b899-08010f62ac3e/apply",
+    "source": "lever",
+    "posted_at": "2026-11-18T04:56:37.442000+00:00",
+    "location": "US",
+    "desc_len": 1147
+  },
+  {
+    "company": "jobgether",
+    "title": "Lead Data Engineer, Databricks",
+    "url": "https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1",
+    "apply_url": "https://jobs.lever.co/jobgether/162e82f6-5739-4caf-9530-daf25a0aabf1/apply",
+    "source": "lever",
+    "posted_at": "2026-11-16T06:08:55.983000+00:00",
+    "location": "US",
+    "desc_len": 1105
+  },
+  {
+    "company": "jobgether",
+    "title": "Senior Data Engineer (Databricks) - Contractor",
+    "url": "https://jobs.lever.co/jobgether/29670e09-39d6-443c-b949-d84349cf3a9d",
+    "apply_url": "https://jobs.lever.co/jobgether/29670e09-39d6-443c-b949-d84349cf3a9d/apply",
+    "source": "lever",
+    "posted_at": "2026-11-17T06:45:33.425000+00:00",
+    "location": "US",
+    "desc_len": 1063
+  },
+  {
+    "company": "floqast",
+    "title": "Senior Data Engineer",
+    "url": "https://jobs.lever.co/floqast/d9abbae1-022d-4b08-aa83-b13f54b1e143",
+    "apply_url": "https://jobs.lever.co/floqast/d9abbae1-022d-4b08-aa83-b13f54b1e143/apply",
+    "source": "lever",
+    "posted_at": "2026-11-18T20:17:11.339000+00:00",
+    "location": "San Jose, California",
+    "desc_len": 1366
+  },
+  {
+    "company": "Velosio",
+    "title": "Data Engineer",
+    "url": "https://careers.velosio.com/jobs/3162",
+    "apply_url": "https://careers.velosio.com/jobs/3162",
+    "source": "jsonld",
+    "posted_at": "2026-11-11T17:46:00+0000",
+    "location": "United States, Remote",
+    "desc_len": 13740
+  },
+  {
+    "company": "Bet365",
+    "title": "Data Engineer (EDW)",
+    "url": "https://builtin.com/job/data-engineer-edw/12390252",
+    "apply_url": "https://builtin.com/job/data-engineer-edw/12390252",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior- Ai/Apache Iceberg",
+    "url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385278",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385278",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior- Ai/Apache Iceberg",
+    "url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385323",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385323",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior- Ai/Apache Iceberg",
+    "url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385374",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385374",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior- Ai/Apache Iceberg",
+    "url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385388",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-ai-apache-iceberg/12385388",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior - Data Modeling",
+    "url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385295",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385295",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior - Data Modeling",
+    "url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385335",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385335",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior - Data Modeling",
+    "url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385362",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385362",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior - Data Modeling",
+    "url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385429",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-data-modeling/12385429",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior (Python/SQL)",
+    "url": "https://builtin.com/job/data-engineer-senior-python-sql/12385329",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-python-sql/12385329",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior (Python/SQL)",
+    "url": "https://builtin.com/job/data-engineer-senior-python-sql/12385338",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-python-sql/12385338",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior (Python/SQL)",
+    "url": "https://builtin.com/job/data-engineer-senior-python-sql/12385344",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-python-sql/12385344",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior (Python/SQL)",
+    "url": "https://builtin.com/job/data-engineer-senior-python-sql/12385373",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-python-sql/12385373",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Data Engineer Senior (Python/SQL)",
+    "url": "https://builtin.com/job/data-engineer-senior-python-sql/12385418",
+    "apply_url": "https://builtin.com/job/data-engineer-senior-python-sql/12385418",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "General Motors",
+    "title": "Data Engineer",
+    "url": "https://builtin.com/job/data-engineer/12392643",
+    "apply_url": "https://builtin.com/job/data-engineer/12392643",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Wells Fargo",
+    "title": "Lead Specialty Data Engineer",
+    "url": "https://builtin.com/job/lead-specialty-data-engineer/12399281",
+    "apply_url": "https://builtin.com/job/lead-specialty-data-engineer/12399281",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Wells Fargo",
+    "title": "Lead Specialty Data Engineer",
+    "url": "https://builtin.com/job/lead-specialty-data-engineer/12399473",
+    "apply_url": "https://builtin.com/job/lead-specialty-data-engineer/12399473",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Cash App",
+    "title": "Sales Compensation Systems & Data Engineer",
+    "url": "https://builtin.com/job/sales-compensation-systems-data-engineer/12325458",
+    "apply_url": "https://builtin.com/job/sales-compensation-systems-data-engineer/12325458",
+    "source": "builtin",
+    "posted_at": "2026-11-19",
+    "location": "Remote, United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Optum",
+    "title": "Senior Cloud Data Engineer - Remote",
+    "url": "https://builtin.com/job/senior-cloud-data-engineer-remote/12346090",
+    "apply_url": "https://builtin.com/job/senior-cloud-data-engineer-remote/12346090",
+    "source": "builtin",
+    "posted_at": "2026-11-19",
+    "location": "Remote, United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Micron Technology",
+    "title": "TD Planning Data Engineer",
+    "url": "https://builtin.com/job/td-planning-data-engineer/12373140",
+    "apply_url": "https://builtin.com/job/td-planning-data-engineer/12373140",
+    "source": "builtin",
+    "posted_at": "2026-11-20",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer - Modeling",
+    "url": "https://builtin.com/job/senior-data-engineer-modeling/12385290",
+    "apply_url": "https://builtin.com/job/senior-data-engineer-modeling/12385290",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer - Modeling",
+    "url": "https://builtin.com/job/senior-data-engineer-modeling/12385292",
+    "apply_url": "https://builtin.com/job/senior-data-engineer-modeling/12385292",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer - Modeling",
+    "url": "https://builtin.com/job/senior-data-engineer-modeling/12385332",
+    "apply_url": "https://builtin.com/job/senior-data-engineer-modeling/12385332",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer - Modeling",
+    "url": "https://builtin.com/job/senior-data-engineer-modeling/12385425",
+    "apply_url": "https://builtin.com/job/senior-data-engineer-modeling/12385425",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Floqast",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12322750",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12322750",
+    "source": "builtin",
+    "posted_at": "2026-11-18",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12325392",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12325392",
+    "source": "builtin",
+    "posted_at": "2026-11-19",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385273",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385273",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385298",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385298",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385305",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385305",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385310",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385310",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385311",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385311",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385334",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385334",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385372",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385372",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Pnc Financial Services Group",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineer/12385430",
+    "apply_url": "https://builtin.com/job/senior-data-engineer/12385430",
+    "source": "builtin",
+    "posted_at": "2026-11-21",
+    "location": "United States",
+    "desc_len": 0
+  },
+  {
+    "company": "Rocket",
+    "title": "Senior Data Engineer",
+    "url": "https://builtin.com/job/senior-data-engineering/12261200",
+    "apply_url": "https://builtin.com/job/senior-data-engineering/12261200",
+    "source": "builtin",
+    "posted_at": "2026-11-16",
+    "location": "United States",
+    "desc_len": 0
+  }
+]

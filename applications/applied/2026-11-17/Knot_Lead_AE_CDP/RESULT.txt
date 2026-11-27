@@ -1,0 +1,28 @@
+success=True
+url=https://job-boards.greenhouse.io/theknotworldwide/jobs/5474523008/confirmation
+body=Thank you for applying!
+
+Thank you for your interest in joining The Knot Worldwide! We appreciate the time and effort you put into your application and are excited to learn more about you.
+
+Our team is currently reviewing applications, and we’ll be in touch soon with any next steps. In the meantime, if you have any questions, feel free to reach out.
+
+We know the job search process takes time and energy, and we truly appreciate you considering TKWW as your next career move.
+
+View more jobs at The Knot Worldwide
+Back to job post
+
+Track your application
+
+Sign in to keep tabs on your application, get status updates and more.
+
+Initial screen
+
+Team interview
+
+Onsite interview
+
+Offer
+
+Track your application
+
+Powered by

@@ -1,0 +1,6 @@
+success=false
+reason=needs-me
+blocker=Greenhouse Apply button unresponsive, browser tab interference
+progress=30%
+platform=Greenhouse
+time_spent_minutes=30

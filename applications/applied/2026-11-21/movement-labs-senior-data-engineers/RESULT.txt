@@ -1,0 +1,23 @@
+success=False
+status=NEEDS_ME
+url=https://apply.workable.com/movement-labs/j/80C6D52055/apply/
+message=Cannot complete - custom React dropdown validation
+
+COMPLETED:
+- Resume uploaded: Susmitha_Movement_Labs_Senior_Data_Engineers.docx
+- First name: Susmitha
+- Last name: Chowdary
+- Email: dsusmitha55@gmail.com
+- Phone: 913-207-3787
+- LinkedIn URL: attempted
+- Location: attempted
+- Essay questions (8): filled via CDP but may not validate
+- Radio buttons: GCP Yes, On-call Yes, Work auth Yes, Visa No
+
+BLOCKING ISSUE:
+6 required custom dropdown fields for years of experience (SQL, dbt, Python, BigQuery, etc.) use React components that reject CDP automation. CDP methods (fill, click, keyboard.type) do not trigger proper onChange handlers, causing validation errors "This field is required."
+
+This is the same limitation encountered with all Greenhouse applications - React form components require genuine browser interaction that CDP cannot provide.
+
+RECOMMENDATION:
+Complete manually or use full Selenium WebDriver with real Chrome (not CDP remote debugging).

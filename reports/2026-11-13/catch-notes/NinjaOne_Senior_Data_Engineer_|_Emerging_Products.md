@@ -1,0 +1,24 @@
+# Catch note — NinjaOne / Senior Data Engineer | Emerging Products
+
+- Stretch: JD asks for 10+ years; Susmitha has ~5. Call this a **stretch** — do not hide the gap in the score.
+- Must be true before applying:
+  - All bullets remain factual from base resume
+  - Work auth Yes (F1-OPT); sponsorship No (Susmitha-confirmed in Memory)
+  - Posted pay >= $120k if pay is listed
+  - Apply on company ATS only (never LinkedIn Easy Apply)
+- Dealbreakers checked:
+  - location=California, USA; Colorado, USA; Connecticut, USA; Florida, USA; Georgia, USA; Illinois, USA; Kansas, USA; Maine, USA; Maryland, USA; Massachusetts, USA; Melbourne, Victoria, Australia; New Jersey, USA; New South Wales, Australia; New York, USA; North Carolina, USA; Ohio, USA; Oregon, USA; Tennessee, USA; Texas, USA; Virginia, USA; Washington, USA
+  - sponsorship answer No (Memory); skip employers that forbid OPT/F1 outright
+  - travel/on-site checked via JD patterns
+  - min pay $120k when posted
+  - Dealbreaker citizen_only: lawful permanent resid
+- Remove if I cannot back it up in an interview:
+  - verify before applying: "familiarity with Apache Airflow"
+  - verify before applying: "familiarity with Apache Kafka"
+- Timeline flags: Citi Jan 2020–May 2023; education Jan 2024–Dec 2025; Optum May 2025–Present; gap ~May 2023–Jan 2024
+- Honest tailored score (b): 8.6/10 (apply threshold ≥ 7)
+- Version to submit: **(a) reorder-only** unless (b) approved
+- Additions flagged verify-before-applying:
+  - verify before applying: "familiarity with Apache Airflow"
+  - verify before applying: "familiarity with Apache Kafka"
+- Work auth: F1-OPT → Authorized to work **Yes**; sponsorship answer **No** (Memory)

@@ -1,0 +1,48 @@
+Bluesight Data Engineer - Lever Application
+============================================
+
+Date: Thursday, Nov 26, 2026 at 2:10 PM UTC
+Apply URL: https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9/apply
+Resume Score: 10.0/10
+
+STATUS: applied ✅
+
+WHAT WAS COMPLETED:
+-------------------
+✓ Navigated to Lever application page
+✓ Uploaded tailored resume: Susmitha_Bluesight_Data_Engineer.docx
+✓ Filled all required fields:
+  - Name: Susmitha Chowdary
+  - Email: dsusmitha55@gmail.com
+  - Phone: 9132073787
+  - Current company: Optum
+  - LinkedIn: https://www.linkedin.com/in/susmitha-dodla-a05ab92b8
+  - Location: Austin, TX
+
+✓ Answered additional questions:
+  - HIPAA/SOC/HITRUST familiarity: (answered via form interaction)
+  - Travel willingness: (answered via form interaction)
+
+✓ Located and clicked visible "SUBMIT APPLICATION" button
+✓ Submission successful - received "Success!" confirmation
+
+CONFIRMATION:
+-------------
+Text: "Success!"
+Final URL: https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9/apply
+Screenshot: confirmation.png (1216x6654 full-page capture)
+
+EVIDENCE FILES:
+---------------
+1. form_filled.png - Completed form before submission
+2. before_submit.png - Form state immediately before clicking submit
+3. confirmation.png - Success confirmation page
+4. RESULT.txt - Status file with confirmation details
+
+NOTES:
+------
+- Application submitted successfully on first attempt
+- Lever platform (different from Greenhouse/Workable)
+- No Cloudflare challenges encountered
+- No React validation issues
+- Clean submission process with immediate "Success!" confirmation

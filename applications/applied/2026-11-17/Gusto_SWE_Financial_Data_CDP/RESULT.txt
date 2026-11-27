@@ -1,0 +1,3 @@
+success=False
+reason=job board no longer active / page not found
+url=https://job-boards.greenhouse.io/gusto/jobs/8360497

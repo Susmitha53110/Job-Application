@@ -1,0 +1,76 @@
+# Morning readiness — 2026-11-27
+
+- Window open: **True** (Inside window 08:00–12:00 America/Chicago.)
+- Salary in Memory: **120000**
+- Curve score override: **True**
+- Hunt filter-pass count: **30**
+- Ready to submit now: **14**
+
+## Ready
+- Curve Dental / Data Engineer — https://ats.rippling.com/curve-dental/jobs/81161b01-ae38-49d2-9ca8-3b618d31c394 (b=5.6)
+- Cloudflare / Senior Software Engineer, Data Primitives — https://boards.greenhouse.io/cloudflare/jobs/8398753?gh_jid=8398753 (b=9.1)
+- Cloudflare / Software Engineer, Data Primitives — https://boards.greenhouse.io/cloudflare/jobs/8398779?gh_jid=8398779 (b=9.1)
+- Flatiron Health / Senior Data Analytics Engineer — https://flatiron.com/careers/open-positions/job?gh_jid=8327183 (b=10.0)
+- Doximity / Senior Software Engineer, Data Platform — https://job-boards.greenhouse.io/doximity/jobs/8395571 (b=8.3)
+- Braze / Senior Analytics Engineer I — https://job-boards.greenhouse.io/braze/jobs/8412517 (b=7.9)
+- EnergyHub / Senior Data Engineer, C&I — https://job-boards.greenhouse.io/energyhub/jobs/8947924002 (b=8.3)
+- SpaceX / Data Engineer, Application Software — https://boards.greenhouse.io/spacex/jobs/8957969002?gh_jid=8957969002 (b=8.5)
+- SpaceX / Data Engineer, Hardware Reliability (Starlink) — https://boards.greenhouse.io/spacex/jobs/8957339002?gh_jid=8957339002 (b=7.9)
+- clera / Senior Data Engineer — https://jobs.ashbyhq.com/Clera/045880a4-82bc-409e-a201-bf763806f487 (b=8.4)
+- clera / Senior Data Integration Engineer — https://jobs.ashbyhq.com/Clera/115996bf-b0c0-4054-97bb-61b8de52f668 (b=10.0)
+- jobgether / Founding Analytics Engineer — https://jobs.lever.co/jobgether/5960e589-b68a-478d-8842-501377a42e71 (b=10.0)
+- jobgether / Senior Software/Data Engineer, Bot Detection — https://jobs.lever.co/jobgether/f81c4e84-0793-439d-9d0d-637db1baa777 (b=10.0)
+- jobgether / Staff Analytics Engineer — https://jobs.lever.co/jobgether/18273a14-9eda-48bf-a3d4-6da01a1a22f7 (b=10.0)
+
+## Blocked / skip
+- Tebra / Senior Analytics Engineer — https://job-boards.greenhouse.io/tebra/jobs/4749058005
+  - blockers: Honest score (b)=6.2/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=6.2/10 below 8.5/10 (85%) threshold.
+- temporal / Staff Software Engineer, Cloud Data Storage — https://jobs.ashbyhq.com/temporal/ceb3ae3d-3a72-4067-b13d-44350a143195
+  - blockers: Honest score (b)=6.8/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=6.8/10 below 8.5/10 (85%) threshold.
+- jobgether / Senior Analytics Engineer — https://jobs.lever.co/jobgether/991d7b28-8870-46bd-a923-8ad27fb8564c
+  - blockers: Honest score (b)=2.5/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=2.5/10 below 8.5/10 (85%) threshold.
+- jobgether / Senior Data Engineer / Technical Lead — https://jobs.lever.co/jobgether/7386a491-56a3-4caa-ad4e-1cfb35c84a2c
+  - blockers: Honest score (b)=2.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=2.0/10 below 8.5/10 (85%) threshold.
+- Decisiveinstincts Llc / Data Engineer — https://builtin.com/job/data-engineer/12530673
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- General Motors / HR Data Engineer — https://builtin.com/job/hr-data-engineer/12429961
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Nbcuniversal / Sr. Data Engineer — https://builtin.com/job/sr-data-engineer/12519147
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Ellis Porter / Senior Data Engineer (Azure Databricks) — https://builtin.com/job/senior-data-engineer-azure-databricks/12454038
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Washington Metropolitan Area Transit Authority / Senior Data Engineer RCMP — https://builtin.com/job/senior-data-engineer-rcmp/12459500
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Guidehouse / Senior Data Engineer – War Data Platform Subject Matter Expert — https://builtin.com/job/senior-data-engineer-war-data-platform-subject-matter-expert/12462310
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Codepathorg / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12426000
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Self Financial / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12428258
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Onxmaps Inc / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12461277
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Bright Vision Technologies / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12463332
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Bluesight / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12487399
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Microsoft / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12490906
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.
+- Humana / Senior Data Engineer — https://builtin.com/job/senior-data-engineer/12491697
+  - blockers: Honest score (b)=0.0/10 below 8.5 (85%)
+  - notes: Prepared for approval; not submitted. Honest score (b)=0.0/10 below 8.5/10 (85%) threshold.

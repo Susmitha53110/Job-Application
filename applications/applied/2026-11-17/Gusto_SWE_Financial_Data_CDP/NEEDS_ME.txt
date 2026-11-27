@@ -1,0 +1,36 @@
+NEEDS_ME: Gusto Software Engineer Financial Data & Payments Application
+
+Status: Unable to access application form - "Page not found" error
+URL: https://job-boards.greenhouse.io/gusto/jobs/8360497
+
+Previous Progress (from after5.png screenshot at 15:28 UTC / 9:28 AM CST):
+✓ Application form was open and mostly filled
+✓ Sexual orientation set to "Heterosexual"
+✓ Transgender set to "No"
+✓ Race/ethnicity includes South Asian
+✗ Veteran Status field required (needs: "I am not a protected veteran")
+✗ Disability field required
+✗ First-generation professional field required
+
+Current Blocker:
+- Greenhouse returns "Page not found - The job board you were viewing is no longer active"
+- Application session appears to have expired or job posting removed
+- Multiple browser restarts and navigation attempts all result in same error
+- Cannot access the partially-filled form to complete required EEO fields
+
+Time of last successful access: ~15:28 UTC (9:28 AM CST)
+Time of failure: 15:35-15:37 UTC (9:35-9:37 AM CST)
+Session lost between: 15:28 and 15:35 UTC
+
+Possible causes:
+1. Job posting was closed/removed by Gusto
+2. Application session expired (7-minute window)
+3. Greenhouse platform issue
+
+Required manual action:
+- Check if job posting is still active at base URL
+- If active, restart application from beginning
+- If inactive, job may have been closed
+
+Resume ready: Susmitha_gusto.docx (mentioned as already attached in previous session)
+Candidate: Susmitha Chowdary / dsusmitha55@gmail.com / 9132073787

@@ -1,0 +1,5 @@
+status=needs-me
+blocker=lever_hcaptcha
+url=https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9/apply
+email=dsusmitha55@gmail.com
+note=Clean Playwright filled Full name/Email/Phone/LinkedIn/eligibility Yes/address/pay 120000/SQL+orchestration Yes/EEO. Submit blocked by hCaptcha (3 iframes). Resume upload Success! is upload ack only — not application success.

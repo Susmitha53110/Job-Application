@@ -72,8 +72,18 @@ def parse_markdown_resume(text: str, source: Path | None = None) -> Resume:
                 resume.summary = block
             elif current == "skills":
                 resume.skills_raw = block
-                parts = re.split(r"[,|\n•]+", block)
-                resume.skills = [p.strip() for p in parts if p.strip()]
+                # Prefer categorized "Label: a, b" lines; flatten items only (drop labels).
+                skills: list[str] = []
+                for ln in block.splitlines():
+                    ln = ln.strip()
+                    if not ln:
+                        continue
+                    items = ln.split(":", 1)[-1] if ":" in ln else ln
+                    for p in re.split(r"[,|•]+", items):
+                        s = p.strip()
+                        if s:
+                            skills.append(s)
+                resume.skills = skills
             elif current == "education":
                 resume.education = block
             elif current not in {"experience"}:
@@ -137,8 +147,21 @@ def parse_markdown_resume(text: str, source: Path | None = None) -> Resume:
             elif stripped.startswith(("-", "*", "•")) and exp:
                 exp.bullets.append(re.sub(r"^[-*•]\s*", "", stripped))
         elif current is None:
-            if stripped and stripped != resume.name:
-                resume.contact_lines.append(stripped)
+            identity = stripped.lstrip("#").strip()
+            if identity and identity != resume.name:
+                # Role/headline line (before contact) vs email/phone/location contact line.
+                if (
+                    not resume.headline
+                    and ("@" not in identity)
+                    and not re.search(r"\d{3}[-.\s]?\d{3}[-.\s]?\d{4}", identity)
+                    and (
+                        "|" in identity
+                        or re.search(r"\b(engineer|developer|analyst|scientist)\b", identity, re.I)
+                    )
+                ):
+                    resume.headline = identity
+                else:
+                    resume.contact_lines.append(identity)
         else:
             buf.append(raw)
         i += 1
@@ -149,6 +172,23 @@ def parse_markdown_resume(text: str, source: Path | None = None) -> Resume:
 
     if not resume.headline and resume.experiences:
         resume.headline = resume.experiences[0].title
+    # Prefer city/state over full street address in contact lines.
+    cleaned_contact: list[str] = []
+    for line in resume.contact_lines:
+        parts = [p.strip() for p in re.split(r"\s*\|\s*", line) if p.strip()]
+        new_parts: list[str] = []
+        for p in parts:
+            if re.search(r"\d+\s+\w+.*(Ln|Lane|St|Street|Ave|Avenue|Rd|Road|Blvd|Dr|Drive)\b", p, re.I):
+                # Keep city/state if present in same token after comma.
+                m = re.search(r",\s*([A-Za-z .]+,\s*[A-Z]{2}(?:\s+\d{5})?)\s*$", p)
+                if m:
+                    city = re.sub(r"\s+\d{5}$", "", m.group(1)).strip()
+                    new_parts.append(city)
+                continue
+            new_parts.append(p)
+        if new_parts:
+            cleaned_contact.append(" | ".join(new_parts))
+    resume.contact_lines = cleaned_contact or resume.contact_lines
     return resume
 
 

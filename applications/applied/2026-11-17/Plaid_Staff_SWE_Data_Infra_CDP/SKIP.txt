@@ -1,0 +1,2 @@
+skipped=onsite_mismatch
+reason=Office 3 days/week required (SF/Seattle hybrid); candidate Austin TX remote/reloc only when role fits.
