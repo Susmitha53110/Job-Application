@@ -1,0 +1,64 @@
+Skip to main content
+Sign In
+Humana Careers
+Senior Data Engineer page is loaded
+Senior Data Engineer
+Apply
+locations
+Remote Nationwide
+time type
+Full time
+posted on
+Posted 2 Days Ago
+job requisition id
+R-430583
+Become a part of our caring community
+ 
+We are looking for a Senior Data Engineer to design, build, and maintain the data pipelines that move healthcare payer and claims data across our ecosystem—from ingestion and validation through processing and delivery to downstream partners. This role sits at the intersection of pipeline architecture and production support: you will build modern data solutions on Azure and Microsoft Fabric, while owning the day-to-day reliability of processes that our health system and payer partners depend on. We are looking for a hands-on engineer who works well independently, adapts quickly as business needs shift, and takes complete ownership of problems from identification through resolution.
+
+We are looking for a Senior Data Engineer to design, build, and maintain the data pipelines that move healthcare payer and claims data across our ecosystem—from ingestion and validation through processing and delivery to downstream partners. This role sits at the intersection of pipeline architecture and production support: you will build modern data solutions on Azure and Microsoft Fabric, while owning the day-to-day reliability of processes that our health system and payer partners depend on. We are looking for a hands-on engineer who works well independently, adapts quickly as business needs shift, and takes complete ownership of problems from identification through resolution.
+
+ 
+
+Role Responsibilities:
+
+Pipeline Development & Data Architecture
+
+Design, build, and maintain data pipelines and processing architectures using Azure Data Factory, Azure Databricks, Azure Synapse, and Microsoft Fabric
+Work within a Fabric Lakehouse/medallion architecture, building and optimizing Delta Lake tables, Lakehouses, Warehouses, and Notebooks
+Write and tune SQL (stored procedures, functions, performance tuning) and develop in Python/PySpark for data transformation and processing
+Build and maintain CI/CD pipelines using Azure DevOps
+Support reporting and analytics through Power BI datasets and data models
+
+ 
+
+Production Support & Data Operations
+
+Monitor and manage inbound payer file transfers via SFTP, ensuring files arrive on schedule and validating them against expected format and content before sending downstream
+Coordinate the round-trip flow of files sent to and received from third-party vendors for processing, including validation of returned data before it's loaded back into the database
+Own monthly processing for healthcare quality metrics (HEDIS measures), ensuring accurate, on-time submission
+Proactively monitor pipeline and job health, identify failures or anomalies, and resolve them without waiting to be told — this includes routine upkeep like fixing failing pipeline activities and keeping monitoring/alerting current
+Serve as a point of coordination across internal teams, vendors, and health system partners when issues arise
+
+Use your skills to make an impact 
+ 
+
+Required Qualifications
+
+Minimum 5 years of experience in Azure cloud data engineering, including Azure Data Factory, SQL Server, Python, PySpark, Azure Synapse, and/or Azure Databricks
+Hands-on experience with Microsoft Fabric — Delta Lake, Lakehouses, Warehouses, and Notebooks
+Strong SQL skills, including performance tuning, stored procedures, and functions
+Experience with CI/CD and Azure DevOps
+Experience with Power BI – including PowerApps, dashboards, row-level security
+Comfortable working in a fast-paced environment with evolving requirements and limited day-to-day direction
+Experience in production support capacity — monitoring, troubleshooting, and resolving issues in live processes
+Strong multi-tasking ability and comfort managing several concurrent priorities
+Familiarity with Agile/Sprint-based delivery
+
+ 
+
+ 
+
+ 
+
+Preferred Qualifica

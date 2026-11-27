@@ -181,6 +181,12 @@ DEFAULT_GH_BOARDS = [
     "checkr",
     "cameo",
     "starburst",
+    # Boards from 2026-11-27 Builtin→Greenhouse slug probe
+    "selffinancial",
+    "onxmaps",
+    "codepath",
+    "oddball",
+    "sonyinteractiveentertainmentglobal",
 ]
 
 
@@ -498,6 +504,8 @@ DEFAULT_LEVER_COMPANIES = [
     "lumin",
     "mux",
     "floqast",
+    # Boards from 2026-11-27 live discovery
+    "bluesight",
 ]
 
 

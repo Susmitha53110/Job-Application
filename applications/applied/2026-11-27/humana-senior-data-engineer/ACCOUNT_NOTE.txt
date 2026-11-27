@@ -1,0 +1,3 @@
+email=dsusmitha55@gmail.com
+password_created_for_workday=Su3!KjI66vC#1!
+NOTE=stored only in agent artifacts for this run; Susmitha can reset via Forgot password.

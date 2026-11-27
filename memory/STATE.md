@@ -8,8 +8,8 @@
 - daily_schedule_active: true
 - ramp_day: 2
 - daily_limit: 25
-- last_run_date: 2026-11-21
-- last_run_summary: "noon 23 unique; overnight prep 2026-11-18; window=False; salary=set; hunt=63; ge7=19"
+- last_run_date: 2026-11-27
+- last_run_summary: "daily_apply 2026-11-27: window=True; salary=set; hunt=30; ready=14; needs_me=4"
 - timezone: America/Chicago
 - window_start: "08:00"
 - window_end: "12:00"
