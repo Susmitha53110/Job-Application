@@ -1,39 +1,5 @@
 status=needs-me
-message=CRITICAL: Browser profile contaminated with other candidates' data
-
-ISSUE:
-------
-The shared Chrome profile contains forms with OTHER candidates' information:
-- Claritas Rx form shows "F-1 OPT (no sponsorship needed now)" 
-- This is NOT Susmitha Chowdary's status (she has work auth Yes without visa)
-- Multiple tabs from other applications are still open
-- Cannot safely verify which data belongs to which candidate
-
-ATTEMPTED:
-----------
-1. Closed 50+ tabs via CDP (browser disconnected after closing all)
-2. Browser restarted with restore dialog
-3. Multiple tabs still showing mixed candidate data
-4. Two "Bluesight Data E..." tabs visible but cannot verify contents
-
-BLOCKING RISK:
---------------
-Submitting an application from this polluted browser state risks:
-- Submitting another candidate's information under Susmitha's name
-- Mixing Susmitha's data with someone else's visa status
-- Cannot verify screenshot shows "Bluesight + Susmitha/dsusmitha55"
-
-RECOMMENDATION:
----------------
-To safely complete this application:
-1. Completely restart Chrome browser (kill process and relaunch)
-2. OR use Chrome incognito/private window
-3. OR use different browser profile
-4. Start with ONE clean tab to Bluesight URL
-5. Verify ONLY Susmitha's information throughout
-
-EVIDENCE:
----------
-- Screenshots show Claritas form with F-1 OPT status
-- Not Susmitha's work authorization status
-- Cannot proceed safely
+blocker=lever_hcaptcha
+url=https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9/apply
+email=dsusmitha55@gmail.com
+note=Clean Playwright filled Full name/Email/Phone/LinkedIn/eligibility Yes/address/pay 120000/SQL+orchestration Yes/EEO. Submit blocked by hCaptcha (3 iframes). Resume upload Success! is upload ack only — not application success.

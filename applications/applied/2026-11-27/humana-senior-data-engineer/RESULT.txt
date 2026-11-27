@@ -1,4 +1,4 @@
 status=needs-me
-blocker=workday_create_account_or_signin
 url=https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Data-Engineer_R-430583/apply/applyManually
-note=Form requires Workday account; automation attempted create; Susmitha should Create Account/Sign In then finish.
+email=dsusmitha55@gmail.com
+thank=False
