@@ -7,7 +7,7 @@ from dataclasses import asdict
 from pathlib import Path
 
 from . import paths
-from .job_search import JobPosting, _get_json, filter_jobs, is_us_remote, within_max_age
+from .job_search import JobPosting, _get_json, filter_jobs, is_us_remote, is_us_work_ok, within_max_age
 from .window import chicago_today
 
 
@@ -68,6 +68,29 @@ GREENHOUSE_WATCH = [
     "ninjaone",
     "omadahealth",
     "komodohealth",
+    "airtable",
+    "retool",
+    "launchdarkly",
+    "cockroachlabs",
+    "cribl",
+    "klaviyo",
+    "braze",
+    "benchling",
+    "color",
+    "cityblockhealth",
+    "noom",
+    "calm",
+    "whatnot",
+    "faire",
+    "flexport",
+    "webflow",
+    "doordash",
+    "lyft",
+    "robinhood",
+    "coinbase",
+    "neon",
+    "planetscale",
+    "anomalo",
 ]
 
 ASHBY_WATCH = [
@@ -98,6 +121,18 @@ ASHBY_WATCH = [
     "lumin-digital",
     "cruxclimate",
     "bayesianhealth",
+    "instructure",
+    "rula",
+    "talkiatry",
+    "notion",
+    "retool",
+    "temporal",
+    "supabase",
+    "statsig",
+    "metronome",
+    "modal",
+    "replicate",
+    "elevenlabs",
 ]
 
 RIPPLING_WATCH = [
@@ -152,7 +187,7 @@ def _visa_block(text: str) -> bool:
     )
 
 
-def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 4) -> list[JobPosting]:
+def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for board in boards or GREENHOUSE_WATCH:
         try:
@@ -175,7 +210,7 @@ def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 4) -
             desc = _strip_html(detail.get("content") or "")
             if _visa_block(desc):
                 continue
-            if not is_us_remote(str(loc), desc, source="greenhouse", title=title):
+            if not is_us_work_ok(str(loc), desc, source="greenhouse", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -194,7 +229,7 @@ def poll_greenhouse(boards: list[str] | None = None, *, max_age_days: int = 4) -
     return out
 
 
-def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 4) -> list[JobPosting]:
+def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for org in orgs or ASHBY_WATCH:
         try:
@@ -213,7 +248,7 @@ def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 4) -> list[
             desc = _strip_html(j.get("descriptionPlain") or j.get("descriptionHtml") or "")
             if _visa_block(desc):
                 continue
-            if not is_us_remote(f"{loc} {wt}", desc, source="ashby", title=title):
+            if not is_us_work_ok(f"{loc} {wt}", desc, source="ashby", title=title):
                 continue
             out.append(
                 JobPosting(
@@ -232,7 +267,7 @@ def poll_ashby(orgs: list[str] | None = None, *, max_age_days: int = 4) -> list[
     return out
 
 
-def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 4) -> list[JobPosting]:
+def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 10) -> list[JobPosting]:
     out: list[JobPosting] = []
     for slug in slugs or RIPPLING_WATCH:
         try:
@@ -289,7 +324,7 @@ def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 4) -> l
             if _visa_block(desc):
                 continue
             full_title = detail.get("name") or title
-            if not remote_us and not is_us_remote(location, desc, source="rippling", title=full_title):
+            if not remote_us and not is_us_work_ok(location, desc, source="rippling", title=full_title):
                 continue
             out.append(
                 JobPosting(
@@ -308,7 +343,7 @@ def poll_rippling(slugs: list[str] | None = None, *, max_age_days: int = 4) -> l
     return out
 
 
-def poll_watchlist(*, max_age_days: int = 4) -> list[JobPosting]:
+def poll_watchlist(*, max_age_days: int = 10) -> list[JobPosting]:
     jobs: list[JobPosting] = []
     jobs.extend(poll_greenhouse(max_age_days=max_age_days))
     jobs.extend(poll_ashby(max_age_days=max_age_days))

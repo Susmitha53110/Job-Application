@@ -1,0 +1,47 @@
+[
+  {
+    "key": "mongodb",
+    "company": "MongoDB",
+    "role": "Senior Software Engineer, Database Integration & Observability",
+    "url": "https://job-boards.greenhouse.io/embed/job_app?for=mongodb&token=8352433",
+    "resume": "/workspace/resumes/tailored/2026-11-14/Susmitha_MongoDB_Senior_Software_Engineer_Database_Integration_Observability.docx",
+    "kit": "/workspace/applications/ready/2026-11-14/MongoDB_SUBMIT_KIT.md",
+    "needs_salary": false,
+    "ok": false,
+    "blockers": [
+      "MongoDB verification failed: age fail-closed: first_published=2026-11-05T14:17:34-05:00"
+    ],
+    "computer_use_prompt": "",
+    "ats": "greenhouse"
+  },
+  {
+    "key": "mux",
+    "company": "mux",
+    "role": "Senior Data Engineer",
+    "url": "https://jobs.ashbyhq.com/mux/bf4007f4-3610-4a67-acd6-0e7a7f11dbbe",
+    "resume": "/workspace/resumes/tailored/2026-11-14/Susmitha_mux_Senior_Data_Engineer.docx",
+    "kit": "/workspace/applications/ready/2026-11-14/mux_SUBMIT_KIT.md",
+    "needs_salary": false,
+    "ok": false,
+    "blockers": [
+      "mux verification failed: age fail-closed: publishedAt=2026-11-03T21:57:56.538+00:00"
+    ],
+    "computer_use_prompt": "",
+    "ats": "ashby"
+  },
+  {
+    "key": "machinify",
+    "company": "Machinify",
+    "role": "Senior Data Engineer",
+    "url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4478208009",
+    "resume": "/workspace/resumes/tailored/2026-11-14/Susmitha_Machinify_Senior_Data_Engineer_.docx",
+    "kit": "/workspace/applications/ready/2026-11-14/Machinify_SUBMIT_KIT.md",
+    "needs_salary": false,
+    "ok": false,
+    "blockers": [
+      "Machinify verification failed: age fail-closed: first_published=2026-11-03T18:23:56-05:00"
+    ],
+    "computer_use_prompt": "",
+    "ats": "greenhouse"
+  }
+]

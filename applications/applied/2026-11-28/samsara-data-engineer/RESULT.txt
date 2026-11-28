@@ -1,0 +1,11 @@
+status=needs-me
+thank=False
+captcha=True
+url=https://job-boards.greenhouse.io/embed/job_app?for=samsara&token=8141959
+email=dsusmitha55@gmail.com
+company=Samsara
+role=Data Engineer
+score_b=10.0
+sponsorship=No
+apply_url=https://job-boards.greenhouse.io/embed/job_app?for=samsara&token=8141959
+board=https://job-boards.greenhouse.io/samsara/jobs/8141959

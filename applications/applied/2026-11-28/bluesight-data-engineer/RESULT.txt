@@ -1,0 +1,6 @@
+status=needs-me
+blocker=lever_hcaptcha
+captcha=True
+url=https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9/apply
+email=dsusmitha55@gmail.com
+score_b=10.0

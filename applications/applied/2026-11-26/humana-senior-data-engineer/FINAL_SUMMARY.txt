@@ -1,0 +1,67 @@
+Humana Senior Data Engineer - Workday Application Attempt
+==========================================================
+
+Date: Thursday, Nov 26, 2026 at 2:13 PM UTC
+URL: https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Data-Engineer_R-430583
+Resume Score: 9.3/10
+
+STATUS: needs-me
+
+WHAT WAS ATTEMPTED:
+-------------------
+1. ✓ Navigated to Humana job posting page
+2. ✓ Located and clicked purple "Apply" button
+3. ✓ "Start Your Application" modal appeared
+4. ⚠️ Clicked "Sign In" button in modal
+
+BLOCKING ISSUE:
+---------------
+Workday platform (Humana's ATS) requires account creation or sign-in
+for external applicants. After clicking "Apply", a modal appeared with
+"Sign In" as the primary action.
+
+Clicking "Sign In" did not navigate to an application form - instead
+it triggered Workday's authentication flow which requires either:
+- Creating a new Workday account
+- Signing in with existing credentials
+- Using social login (LinkedIn, etc.)
+
+Workday is different from other ATS platforms (Greenhouse, Lever, Ashby,
+Workable) in that it requires user authentication before allowing
+application submission.
+
+RESUME PREPARED:
+----------------
+Tailored resume ready at:
+/workspace/resumes/tailored/2026-11-26/Susmitha_Humana_Senior_Data_Engineer.docx
+
+STANDING ANSWERS READY:
+-----------------------
+- Name: Susmitha Chowdary
+- Email: dsusmitha55@gmail.com  
+- Phone: 9132073787
+- Address: 1601 Scottsdale Ln, Austin TX 78754
+- Current company: Optum
+- Experience: Nearly 5 years
+- Education: MS CS
+- Work auth: Yes
+- Sponsorship: No
+- Salary: 120000
+- Start date: 2 weeks
+
+EVIDENCE FILES:
+---------------
+- modal_visible.png: "Start Your Application" modal
+- after_modal_click.png: State after clicking Sign In
+- RESULT.txt: Status file
+
+RECOMMENDATION:
+---------------
+Manual completion required. Workday applications typically need:
+1. Create Workday account with email/password
+2. Or use "Apply with LinkedIn" if available
+3. Complete multi-step application form
+4. Upload resume and fill all required fields
+
+Alternative: If Humana offers non-Workday application method
+(email, direct form), use that instead.

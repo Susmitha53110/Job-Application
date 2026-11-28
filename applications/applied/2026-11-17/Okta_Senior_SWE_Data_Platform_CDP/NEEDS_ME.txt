@@ -1,0 +1,4 @@
+needs-me=captcha
+role=Senior Software Engineer, Data Platform
+url=https://www.okta.com/company/careers/opportunity/8384001?gh_jid=8384001
+note=Form filled (U.S. Person=No F1-OPT; family/OBA/prior=No; EEO done). reCAPTCHA image challenges failed via CU past noon window. Manual submit needed next window or now if you can solve CAPTCHA.

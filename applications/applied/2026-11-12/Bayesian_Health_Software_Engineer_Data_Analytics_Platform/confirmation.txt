@@ -1,0 +1,24 @@
+Job Title: Software Engineer, Data & Analytics Platform
+Company: Bayesian Health, Inc.
+Application URL: https://jobs.ashbyhq.com/bayesianhealth/3ea2fcfb-9a68-4b8d-a9aa-600a733ef655
+Submission Time: 2026-11-12 (within authorized 08:00-12:00 America/Chicago window)
+ATS: Ashby HQ
+
+Confirmation Message:
+"Success
+Your application was successfully submitted. We'll contact you if there are next steps."
+
+Fields Submitted:
+- Name: Susmitha Chowdary
+- Email: Susmithachowdary67@gmail.com
+- Resume: Susmitha_bayesian.docx (uploaded)
+- Legally authorized to work in US: Yes
+- Require employer sponsorship: No
+- Why good fit: 5-year data engineer experience with production pipelines in healthcare/banking, Azure Data Factory + Databricks, HIPAA-aligned PHI controls, pipeline success improvement 97% → 99.5%, config-driven PySpark framework, honest about gaps in dbt/BI-tool ownership
+- LinkedIn Profile: (left blank per instructions)
+- Years with BI tools: 0
+- Years developing data/analytics platform in production: 5
+- 2-3 most proficient programming languages: Python, SQL, PySpark
+- Location: Austin, Texas, United States
+
+Status: SUCCESSFULLY SUBMITTED

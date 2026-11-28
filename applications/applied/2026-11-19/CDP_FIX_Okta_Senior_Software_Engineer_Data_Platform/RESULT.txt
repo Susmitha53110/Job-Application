@@ -1,0 +1,31 @@
+success=False
+captcha=True
+url=https://job-boards.greenhouse.io/embed/job_app?for=okta&token=8384001
+body=Back to jobs
+New
+Senior Software Engineer, Data Platform
+Bellevue, WA, United States
+Apply
+
+Secure Every Identity, from AI to Human
+
+Identity is the key to unlocking the potential of AI. Okta secures AI by building the trusted, neutral infrastructure that enables organizations to safely embrace this new era. This work requires a relentless drive to solve complex challenges with real-world stakes. We are looking for builders and owners who operate with speed and urgency and execute with excellence.
+
+This is an opportunity to do career-defining work. We're all in on this mission. If you are too, let's talk.
+
+About the Team
+
+The Data Platform team is responsible for the foundational data services, systems, and data products for Okta that benefit our users. Today, the Data Platform team solves challenges and enables:
+
+Streaming analytics 
+Interactive end-user reporting 
+Data and ML platform for Okta to scale
+Telemetry of our products and data
+
+Our elite team is fast, creative and flexible. We encourage ownership. We expect great things from our engineers and reward them with stimulating new projects, new technologies and the chance to have significant equity in a company. Okta is about to change the cloud computing landscape forever. 
+
+About the Position
+
+This is an opportunity for experienced Software Engineers to join our fast growing Data Platform organization that is passionate about scaling high volume, low-latency, distributed data-platform services & data products. In this role, you will get to work with engineers throughout the organization to build foundational infrastructure that allows Okta to scale for years to come. As a member of the Data Platform team, you will be responsible for designing, building, and deploying the systems that power our data analytics and ML. Our analytics infrastructure stack sits on top of many modern technologies, including Kinesis, Flink, ElasticSearch, and Snowflake. 
+
+We are looking for experienced Software Engineers who can hel

@@ -1,0 +1,252 @@
+[
+  {
+    "name": "",
+    "type": "text",
+    "id": "first_name"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "last_name"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "preferred_name"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "email"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "country"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "search",
+    "id": "iti-0__search-input"
+  },
+  {
+    "name": "",
+    "type": "tel",
+    "id": "phone"
+  },
+  {
+    "name": "",
+    "type": "file",
+    "id": "resume"
+  },
+  {
+    "name": "",
+    "type": "file",
+    "id": "cover_letter"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "company-name-0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "title-0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "start-date-month-0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "start-date-year-0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "end-date-month-0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "end-date-year-0"
+  },
+  {
+    "name": "current-role-0",
+    "type": "checkbox",
+    "id": "current-role-0_1"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "school--0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "degree--0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "discipline--0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "start-month--0"
+  },
+  {
+    "name": "",
+    "type": "number",
+    "id": "start-year--0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "end-month--0"
+  },
+  {
+    "name": "",
+    "type": "number",
+    "id": "end-year--0"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658268004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658269004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658270004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658271004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "textarea",
+    "id": "question_20658272004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658273004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658274004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658275004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658276004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658277004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658278004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": ""
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658279004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658280004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "question_20658281004"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "gender"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "hispanic_ethnicity"
+  },
+  {
+    "name": "",
+    "type": "text",
+    "id": "veteran_status"
+  },
+  {
+    "name": "g-recaptcha-response",
+    "type": "textarea",
+    "id": "g-recaptcha-response-100000"
+  }
+]
