@@ -1571,3 +1571,77 @@ Deduped source of truth for prior attempts. One logical row per company+role+url
 2026-11-27 | bluesight | Data Engineer | https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9 | dry-run
 2026-11-27 | bluesight | Senior Data Engineer | https://jobs.lever.co/bluesight/eb53be34-14ee-4bec-9edb-bcd65136c989 | dry-run
 2026-11-27 | Humana | Senior Data Engineer | https://humana.wd5.myworkdayjobs.com/en-US/Humana_External_Career_Site/job/Remote-Nationwide/Senior-Data-Engineer_R-430583 | applied
+2026-11-28 | Tebra | Senior Analytics Engineer | https://job-boards.greenhouse.io/tebra/jobs/4749058005 | dry-run
+2026-11-28 | Cloudflare | Senior Software Engineer, Data Primitives | https://boards.greenhouse.io/cloudflare/jobs/8398753?gh_jid=8398753 | dry-run
+2026-11-28 | Cloudflare | Software Engineer, Data Primitives | https://boards.greenhouse.io/cloudflare/jobs/8398779?gh_jid=8398779 | dry-run
+2026-11-28 | Flatiron Health | Senior Data Analytics Engineer | https://flatiron.com/careers/open-positions/job?gh_jid=8327183 | dry-run
+2026-11-28 | Doximity | Senior Software Engineer, Data Platform | https://job-boards.greenhouse.io/doximity/jobs/8395571 | dry-run
+2026-11-28 | Braze | Senior Analytics Engineer I | https://job-boards.greenhouse.io/braze/jobs/8412517 | dry-run
+2026-11-28 | EnergyHub | Senior Data Engineer, C&I | https://job-boards.greenhouse.io/energyhub/jobs/8947924002 | dry-run
+2026-11-28 | SpaceX | Data Engineer, Application Software | https://boards.greenhouse.io/spacex/jobs/8957969002?gh_jid=8957969002 | dry-run
+2026-11-28 | SpaceX | Data Engineer, Hardware Reliability (Starlink) | https://boards.greenhouse.io/spacex/jobs/8957339002?gh_jid=8957339002 | dry-run
+2026-11-28 | Self Financial | Senior Data Engineer | https://job-boards.greenhouse.io/selffinancial/jobs/6269291004 | dry-run
+2026-11-28 | onX | Senior Data Engineer | https://job-boards.greenhouse.io/onxmaps/jobs/4729260006 | dry-run
+2026-11-28 | CodePath | Senior Data Engineer | https://job-boards.greenhouse.io/codepath/jobs/5307382007 | dry-run
+2026-11-28 | Oddball | Data Engineer | https://job-boards.greenhouse.io/oddball/jobs/8213810003 | dry-run
+2026-11-28 | Oddball | Senior Data Engineer | https://job-boards.greenhouse.io/oddball/jobs/8213809003 | dry-run
+2026-11-28 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/045880a4-82bc-409e-a201-bf763806f487 | dry-run
+2026-11-28 | clera | Senior Data Integration Engineer | https://jobs.ashbyhq.com/Clera/115996bf-b0c0-4054-97bb-61b8de52f668 | dry-run
+2026-11-28 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/b05d842e-f650-4775-9ef4-d3d09d8963ec | dry-run
+2026-11-28 | temporal | Staff Software Engineer, Cloud Data Storage | https://jobs.ashbyhq.com/temporal/ceb3ae3d-3a72-4067-b13d-44350a143195 | dry-run
+2026-11-28 | jobgether | Senior Analytics Engineer | https://jobs.lever.co/jobgether/991d7b28-8870-46bd-a923-8ad27fb8564c | dry-run
+2026-11-28 | jobgether | Senior Data Engineer / Technical Lead | https://jobs.lever.co/jobgether/7386a491-56a3-4caa-ad4e-1cfb35c84a2c | dry-run
+2026-11-28 | jobgether | Senior Software/Data Engineer, Bot Detection | https://jobs.lever.co/jobgether/f81c4e84-0793-439d-9d0d-637db1baa777 | dry-run
+2026-11-28 | jobgether | Staff Analytics Engineer | https://jobs.lever.co/jobgether/18273a14-9eda-48bf-a3d4-6da01a1a22f7 | dry-run
+2026-11-28 | bluesight | Data Engineer | https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9 | dry-run
+2026-11-28 | bluesight | Senior Data Engineer | https://jobs.lever.co/bluesight/eb53be34-14ee-4bec-9edb-bcd65136c989 | dry-run
+2026-11-28 | Kpler | Data Engineer (Natural Gas) | https://builtin.com/job/data-engineer-natural-gas/12592133 | dry-run
+2026-11-28 | Booz Allen Hamilton | Data Engineer, Senior | https://builtin.com/job/data-engineer-senior/12580770 | dry-run
+2026-11-28 | Actionet Inc | Data Engineer | https://builtin.com/job/data-engineer/12577390 | dry-run
+2026-11-28 | Neurohire | Data Engineer | https://builtin.com/job/data-engineer/12592785 | dry-run
+2026-11-28 | General Motors | HR Data Engineer | https://builtin.com/job/hr-data-engineer/12429961 | dry-run
+2026-11-28 | Nbcuniversal | Sr. Data Engineer | https://builtin.com/job/sr-data-engineer/12519147 | dry-run
+2026-11-28 | Guidehouse | Senior Data Engineer – War Data Platform Subject Matter Expert | https://builtin.com/job/senior-data-engineer-war-data-platform-subject-matter-expert/12462310 | dry-run
+2026-11-28 | Codepathorg | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12426000 | dry-run
+2026-11-28 | Self Financial | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12428258 | dry-run
+2026-11-28 | Onxmaps Inc | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12461277 | dry-run
+2026-11-28 | Bright Vision Technologies | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12463332 | dry-run
+2026-11-28 | Bluesight | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12487399 | dry-run
+2026-11-28 | Microsoft | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12490906 | dry-run
+2026-11-28 | Humana | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12491697 | dry-run
+2026-11-28 | Indigrators Solutions Pvt Ltd | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12592700 | dry-run
+2026-11-28 | Anduril Industries | Production Master Data Engineer | https://boards.greenhouse.io/andurilindustries/jobs/5291892007?gh_jid=5291892007 | needs-me
+2026-11-28 | Talkiatry | Analytics Engineer | https://jobs.ashbyhq.com/talkiatry/75a5f6d7-bf9f-40a5-bde3-87e2d8ff8ad3 | needs-me
+2026-11-28 | SpaceX | Data Engineer, Application Software | https://boards.greenhouse.io/spacex/jobs/8957969002?gh_jid=8957969002 | dry-run
+2026-11-28 | SpaceX | Data Engineer, Hardware Reliability (Starlink) | https://boards.greenhouse.io/spacex/jobs/8957339002?gh_jid=8957339002 | dry-run
+2026-11-28 | Self Financial | Senior Data Engineer | https://job-boards.greenhouse.io/selffinancial/jobs/6269291004 | dry-run
+2026-11-28 | onX | Senior Data Engineer | https://job-boards.greenhouse.io/onxmaps/jobs/4729260006 | dry-run
+2026-11-28 | CodePath | Senior Data Engineer | https://job-boards.greenhouse.io/codepath/jobs/5307382007 | dry-run
+2026-11-28 | Oddball | Data Engineer | https://job-boards.greenhouse.io/oddball/jobs/8213810003 | dry-run
+2026-11-28 | Oddball | Senior Data Engineer | https://job-boards.greenhouse.io/oddball/jobs/8213809003 | dry-run
+2026-11-28 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/045880a4-82bc-409e-a201-bf763806f487 | dry-run
+2026-11-28 | clera | Senior Data Engineer | https://jobs.ashbyhq.com/Clera/b05d842e-f650-4775-9ef4-d3d09d8963ec | dry-run
+2026-11-28 | jobgether | Senior Data Engineer / Technical Lead | https://jobs.lever.co/jobgether/7386a491-56a3-4caa-ad4e-1cfb35c84a2c | dry-run
+2026-11-28 | jobgether | Senior Software/Data Engineer, Bot Detection | https://jobs.lever.co/jobgether/f81c4e84-0793-439d-9d0d-637db1baa777 | dry-run
+2026-11-28 | bluesight | Data Engineer | https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9 | dry-run
+2026-11-28 | bluesight | Senior Data Engineer | https://jobs.lever.co/bluesight/eb53be34-14ee-4bec-9edb-bcd65136c989 | dry-run
+2026-11-28 | Kpler | Data Engineer (Natural Gas) | https://builtin.com/job/data-engineer-natural-gas/12592133 | dry-run
+2026-11-28 | Booz Allen Hamilton | Data Engineer, Senior | https://builtin.com/job/data-engineer-senior/12580770 | dry-run
+2026-11-28 | Actionet Inc | Data Engineer | https://builtin.com/job/data-engineer/12577390 | dry-run
+2026-11-28 | Neurohire | Data Engineer | https://builtin.com/job/data-engineer/12592785 | dry-run
+2026-11-28 | General Motors | HR Data Engineer | https://builtin.com/job/hr-data-engineer/12429961 | dry-run
+2026-11-28 | Nbcuniversal | Sr. Data Engineer | https://builtin.com/job/sr-data-engineer/12519147 | dry-run
+2026-11-28 | Guidehouse | Senior Data Engineer – War Data Platform Subject Matter Expert | https://builtin.com/job/senior-data-engineer-war-data-platform-subject-matter-expert/12462310 | dry-run
+2026-11-28 | Codepathorg | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12426000 | dry-run
+2026-11-28 | Self Financial | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12428258 | dry-run
+2026-11-28 | Onxmaps Inc | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12461277 | dry-run
+2026-11-28 | Bright Vision Technologies | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12463332 | dry-run
+2026-11-28 | Bluesight | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12487399 | dry-run
+2026-11-28 | Microsoft | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12490906 | dry-run
+2026-11-28 | Humana | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12491697 | dry-run
+2026-11-28 | Indigrators Solutions Pvt Ltd | Senior Data Engineer | https://builtin.com/job/senior-data-engineer/12592700 | dry-run
+2026-11-28 | SpaceX | Data Engineer, Application Software | https://boards.greenhouse.io/spacex/jobs/8957969002?gh_jid=8957969002 | needs-me
+2026-11-28 | Samsara | Data Engineer | https://job-boards.greenhouse.io/samsara/jobs/8141959 | dry-run
+2026-11-28 | Samsara | Data Engineer | https://job-boards.greenhouse.io/samsara/jobs/8141959 | needs-me: Greenhouse reCAPTCHA/location
+2026-11-28 | bluesight | Data Engineer | https://jobs.lever.co/bluesight/8a3408a8-6909-4b66-92c1-98a5c80ba0a9 | needs-me: Lever hCaptcha
+2026-11-28 | Claritas Rx | Data Engineer | https://apply.workable.com/claritasrx/j/A4D4F1CE37/apply | needs-me: Workable Submit
